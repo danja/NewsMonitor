@@ -1,1 +1,0 @@
-javac -classpath . org/urss/planet/Planet.java

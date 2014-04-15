@@ -1,1 +1,0 @@
-java -classpath . org.urss.planet.Planet
