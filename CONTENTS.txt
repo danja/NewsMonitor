@@ -1,0 +1,35 @@
+Beginning RSS and Atom Programming
+==================================
+
+Source Code from Chapter 31: "Loose Ends, Loosely Coupled"
+
+Overview
+--------
+Looks at various techniques closely associated with syndication - data access, parsing tag soup HTML for autodiscovery, and event notification. Some of the Java code from previous chapters is modified/reused.
+
+Dependencies
+------------
+Java:
+http://java.sun.com/j2se/downloads.html
+
+The chapter makes use of cURL:
+http://curl.haxx.se/
+
+File List
+---------
+trackback.html - standalone HTML trackback pinger
+
+The chapter makes use of the org\urss code used previously, with minor modifications (see book for details).
+Additional:
+
+org\urss\parsers\Link - fairly trivial model of a <link> element
+org\urss\parsers\HtmlHandler - receives calls from the parser and creates Link objects
+org\urss\parsers\HtmlParserDemo - demo class to run the parser
+
+Copyright
+---------
+The code samples here are from the book Beginning RSS and Atom Programming
+by Danny Ayers and Andrew Watt, ISBN: 0-7645-7916-9, published by Wrox,
+copyright (c) 2005 Wiley Publishing Inc. The samples are reproduced here
+by permission of the publisher. No part of the code may be reproduced or
+redistributed without permission of the publisher.

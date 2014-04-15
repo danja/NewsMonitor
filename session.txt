@@ -1,0 +1,52 @@
+iTQL Command Line Interface
+Copyright (C) 2001-2004 Tucana Technologies, Inc.
+
+Type "help ;", then enter for help.
+
+iTQL> create <rmi://localhost/server1#Friends>;
+Successfully created model rmi://localhost/server1#Friends
+iTQL> load <http://planet.xmlhack.com/bloggers.rdf>
+      into <rmi://localhost/server1#Friends>;
+Successfully loaded 177 statements from http://planet.xmlhack.com/bloggers.rdf into rmi://localhost/server1#Friends
+iTQL> alias <http://purl.org/rss/1.0/> as rss;
+alias <http://xmlns.com/foaf/0.1/> as foaf;
+
+Executing Query 1
+Successfully aliased http://purl.org/rss/1.0/ as rss
+
+Executing Query 2
+Successfully aliased http://xmlns.com/foaf/0.1/ as foaf
+
+iTQL> select $subject 
+      from <rmi://localhost/server1#Friends> 
+      where $subject <rdf:type> <rss:channel>;
+No results returned.
+iTQL> alias <http://www.w3.org/1999/02/22-rdf-syntax-ns#> as rdf;
+Successfully aliased http://www.w3.org/1999/02/22-rdf-syntax-ns# as rdf
+iTQL> select $subject 
+      from <rmi://localhost/server1#Friends> 
+      where $subject <rdf:type> <rss:channel>;
+[ http://journal.dajobe.org/journal/comments.rdf ]
+[ http://usefulinc.com/edd/blog/rss ]
+[ http://www.mnot.net/blog/XML/index.rdf ]
+[ http://www.w3.org/2000/08/w3c-synd/home.rss ]
+[ http://norman.walsh.name/index.rss ]
+[ http://www.oreillynet.com/feeds/author/?x-au=166 ]
+[ http://www.oreillynet.com/feeds/author/?x-au=1054 ]
+[ http://www.oreillynet.com/feeds/author/?x-au=1191 ]
+[ http://www.oreillynet.com/feeds/author/?x-au=1712 ]
+[ http://www.oreillynet.com/meerkat/?_fl=rss10&t=ALL&c=47 ]
+[ http://dubinko.info/blog/rss10.xml ]
+[ http://www.adambosworth.net/index.rdf ]
+[ http://seanmcgrath.blogspot.com/rss/seanmcgrath.xml ]
+[ http://tbray.org/ongoing/ongoing.rss ]
+[ http://www.dehora.net/journal/index.rdf ]
+[ http://www.ibiblio.org/xml/today.rss ]
+[ http://sqljunkies.com/WebLog/mrys/Rss.aspx ]
+[ http://www.laurenwood.org/anyway/feed/rss2/ ]
+[ http://today.java.net/pub/q/29?cs_rid=63 ]
+[ http://www.tkachenko.com/blog/index.xml ]
+[ http://www.oreillynet.com/feeds/author/?x-au=896 ]
+[ http://svg.org/feed.rss ]
+22 rows returned.
+iTQL> 

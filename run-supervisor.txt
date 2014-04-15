@@ -1,0 +1,156 @@
+Microsoft Windows 2000 [Version 5.00.2195]
+(C) Copyright 1985-2000 Microsoft Corp.
+
+D:\urss>run-supervisor
+
+D:\urss>set dist=E:\kowari\cvs\kowari\dist
+
+D:\urss>set lib=E:\kowari\cvs\kowari\lib
+
+D:\urss>java -classpath .;E:\kowari\cvs\kowari\dist\kowari-1.0.5.jar;E:\kowari\c
+vs\kowari\dist\itql-1.0.5.jar;E:\kowari\cvs\kowari\dist\driver-1.0.5.jar;E:\kowa
+ri\cvs\kowari\lib\saaj-1.1.jar;E:\kowari\cvs\kowari\lib\log4j-1.2.8.jar; org.urs
+s.social.Supervisor
+http://danja.typepad.com/fecho/atom.xml
+Atom
+
+Creating XML interpreter...
+http://dannyayers.com/feed/rss2
+RSS 2.0
+
+Creating XML interpreter...
+http://martinfowler.com/bliki/bliki.rss
+RSS 2.0
+
+Creating XML interpreter...
+http://example.org/this/is/not/a/feed
+Unknown
+
+http://www.dehora.net/journal/index.rdf
+RSS 1.0
+
+Creating RDF interpreter...
+Checking: http://www.dehora.net/journal/index.rdf
+Connected, interpreting...
+
+Feed: http://www.dehora.net/journal/index.rdf
+type: RSS 1.0
+Writing from RDFInterpreter...
+Checking: http://example.org/this/is/not/a/feed
+Error, feed life lost.
+Checking: http://martinfowler.com/bliki/bliki.rss
+Connected, interpreting...
+
+Feed: http://martinfowler.com/bliki/bliki.rss
+type: RSS 2.0
+Writing from TransformerInterpreter...
+Checking: http://dannyayers.com/feed/rss2
+Connected, interpreting...
+
+Feed: http://dannyayers.com/feed/rss2
+type: RSS 2.0
+Writing from TransformerInterpreter...
+Checking: http://danja.typepad.com/fecho/atom.xml
+Connected, interpreting...
+
+Feed: http://danja.typepad.com/fecho/atom.xml
+type: Atom
+Writing from TransformerInterpreter...
+Checking: http://www.dehora.net/journal/index.rdf
+Checking: http://example.org/this/is/not/a/feed
+Error, feed life lost.
+Checking: http://martinfowler.com/bliki/bliki.rss
+Checking: http://dannyayers.com/feed/rss2
+Checking: http://danja.typepad.com/fecho/atom.xml
+Checking: http://www.dehora.net/journal/index.rdf
+Checking: http://example.org/this/is/not/a/feed
+Checking: http://martinfowler.com/bliki/bliki.rss
+Checking: http://dannyayers.com/feed/rss2
+Checking: http://danja.typepad.com/fecho/atom.xml
+Checking: http://www.dehora.net/journal/index.rdf
+Checking: http://example.org/this/is/not/a/feed
+Checking: http://martinfowler.com/bliki/bliki.rss
+Checking: http://dannyayers.com/feed/rss2
+Checking: http://danja.typepad.com/fecho/atom.xml
+Checking: http://www.dehora.net/journal/index.rdf
+Checking: http://example.org/this/is/not/a/feed
+Checking: http://martinfowler.com/bliki/bliki.rss
+Checking: http://dannyayers.com/feed/rss2
+Connected, interpreting...
+
+Feed: http://dannyayers.com/feed/rss2
+type: RSS 2.0
+Writing from TransformerInterpreter...
+javax.xml.transform.TransformerException: java.io.UTFDataFormatException: Invali
+d byte 1 of 1-byte UTF-8 sequence.
+        at org.apache.xalan.transformer.TransformerImpl.fatalError(TransformerIm
+pl.java:741)
+        at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
+l.java:715)
+        at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
+l.java:1129)
+        at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
+l.java:1107)
+        at org.urss.social.TransformerInterpreter.writeXmlFile(TransformerInterp
+reter.java:59)
+        at org.urss.social.TransformerInterpreter.interpret(TransformerInterpret
+er.java:47)
+        at org.urss.feeds.FeedFetcherImpl.refresh(FeedFetcherImpl.java:53)
+        at org.urss.feeds.FeedSetImpl.refreshAll(FeedSetImpl.java:64)
+        at org.urss.social.Supervisor.main(Supervisor.java:34)
+Caused by: java.io.UTFDataFormatException: Invalid byte 1 of 1-byte UTF-8 sequen
+ce.
+        at org.apache.xerces.impl.io.UTF8Reader.invalidByte(Unknown Source)
+        at org.apache.xerces.impl.io.UTF8Reader.read(Unknown Source)
+        at org.apache.xerces.impl.XMLEntityScanner.load(Unknown Source)
+        at org.apache.xerces.impl.XMLEntityScanner.skipString(Unknown Source)
+        at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown
+ Source)
+        at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+        at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+        at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+        at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+        at org.apache.xml.dtm.ref.DTMManagerDefault.getDTM(DTMManagerDefault.jav
+a:495)
+        at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
+l.java:658)
+        ... 7 more
+---------
+java.io.UTFDataFormatException: Invalid byte 1 of 1-byte UTF-8 sequence.
+        at org.apache.xerces.impl.io.UTF8Reader.invalidByte(Unknown Source)
+        at org.apache.xerces.impl.io.UTF8Reader.read(Unknown Source)
+        at org.apache.xerces.impl.XMLEntityScanner.load(Unknown Source)
+        at org.apache.xerces.impl.XMLEntityScanner.skipString(Unknown Source)
+        at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown
+ Source)
+        at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+        at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+        at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+        at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+        at org.apache.xml.dtm.ref.DTMManagerDefault.getDTM(DTMManagerDefault.jav
+a:495)
+        at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
+l.java:658)
+        at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
+l.java:1129)
+        at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
+l.java:1107)
+        at org.urss.social.TransformerInterpreter.writeXmlFile(TransformerInterp
+reter.java:59)
+        at org.urss.social.TransformerInterpreter.interpret(TransformerInterpret
+er.java:47)
+        at org.urss.feeds.FeedFetcherImpl.refresh(FeedFetcherImpl.java:53)
+        at org.urss.feeds.FeedSetImpl.refreshAll(FeedSetImpl.java:64)
+        at org.urss.social.Supervisor.main(Supervisor.java:34)
+Checking: http://danja.typepad.com/fecho/atom.xml
+Checking: http://www.dehora.net/journal/index.rdf
+Checking: http://example.org/this/is/not/a/feed
+Terminate batch job (Y/N)? y
+
+D:\urss>set dist=E:\kowari\cvs\kowari\dist
+
+D:\urss>set lib=E:\kowari\cvs\kowari\lib
+
+D:\urss>java -classpath .;%dist%\kowari-1.0.5.jar;%dist%\itql-1.0.5.jar;%dist%\d
+river-1.0.5.jar;%lib%\saaj-1.1.jar;%lib%\log4j-1.2.8.jar; org.urss.social.Friend
+lyFeeds
