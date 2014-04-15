@@ -1,1 +1,1 @@
-java -classpath . org.urss.parsers.HtmlParserDemo http://mena.typepad.com/ 
+java -classpath . org.danja.feedreader.parsers.HtmlParserDemo http://mena.typepad.com/ 

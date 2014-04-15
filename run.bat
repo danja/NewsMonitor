@@ -1,1 +1,1 @@
-java -classpath . org.urss.planet.Planet
+java -classpath . org.danja.feedreader.planet.Planet

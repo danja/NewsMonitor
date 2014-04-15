@@ -91,13 +91,13 @@ l.java:715)
 l.java:1129)
         at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
 l.java:1107)
-        at org.urss.social.TransformerInterpreter.writeXmlFile(TransformerInterp
+        at org.danja.feedreader.social.TransformerInterpreter.writeXmlFile(TransformerInterp
 reter.java:59)
-        at org.urss.social.TransformerInterpreter.interpret(TransformerInterpret
+        at org.danja.feedreader.social.TransformerInterpreter.interpret(TransformerInterpret
 er.java:47)
-        at org.urss.feeds.FeedFetcherImpl.refresh(FeedFetcherImpl.java:53)
-        at org.urss.feeds.FeedSetImpl.refreshAll(FeedSetImpl.java:64)
-        at org.urss.social.Supervisor.main(Supervisor.java:34)
+        at org.danja.feedreader.feeds.FeedFetcherImpl.refresh(FeedFetcherImpl.java:53)
+        at org.danja.feedreader.feeds.FeedSetImpl.refreshAll(FeedSetImpl.java:64)
+        at org.danja.feedreader.social.Supervisor.main(Supervisor.java:34)
 Caused by: java.io.UTFDataFormatException: Invalid byte 1 of 1-byte UTF-8 sequen
 ce.
         at org.apache.xerces.impl.io.UTF8Reader.invalidByte(Unknown Source)
@@ -135,13 +135,13 @@ l.java:658)
 l.java:1129)
         at org.apache.xalan.transformer.TransformerImpl.transform(TransformerImp
 l.java:1107)
-        at org.urss.social.TransformerInterpreter.writeXmlFile(TransformerInterp
+        at org.danja.feedreader.social.TransformerInterpreter.writeXmlFile(TransformerInterp
 reter.java:59)
-        at org.urss.social.TransformerInterpreter.interpret(TransformerInterpret
+        at org.danja.feedreader.social.TransformerInterpreter.interpret(TransformerInterpret
 er.java:47)
-        at org.urss.feeds.FeedFetcherImpl.refresh(FeedFetcherImpl.java:53)
-        at org.urss.feeds.FeedSetImpl.refreshAll(FeedSetImpl.java:64)
-        at org.urss.social.Supervisor.main(Supervisor.java:34)
+        at org.danja.feedreader.feeds.FeedFetcherImpl.refresh(FeedFetcherImpl.java:53)
+        at org.danja.feedreader.feeds.FeedSetImpl.refreshAll(FeedSetImpl.java:64)
+        at org.danja.feedreader.social.Supervisor.main(Supervisor.java:34)
 Checking: http://danja.typepad.com/fecho/atom.xml
 Checking: http://www.dehora.net/journal/index.rdf
 Checking: http://example.org/this/is/not/a/feed
@@ -152,5 +152,5 @@ D:\urss>set dist=E:\kowari\cvs\kowari\dist
 D:\urss>set lib=E:\kowari\cvs\kowari\lib
 
 D:\urss>java -classpath .;%dist%\kowari-1.0.5.jar;%dist%\itql-1.0.5.jar;%dist%\d
-river-1.0.5.jar;%lib%\saaj-1.1.jar;%lib%\log4j-1.2.8.jar; org.urss.social.Friend
+river-1.0.5.jar;%lib%\saaj-1.1.jar;%lib%\log4j-1.2.8.jar; org.danja.feedreader.social.Friend
 lyFeeds
