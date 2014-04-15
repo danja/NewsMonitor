@@ -1,0 +1,1 @@
+java -classpath . org.urss.parsers.HtmlParserDemo http://mena.typepad.com/ 

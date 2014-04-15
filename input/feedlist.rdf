@@ -1,0 +1,12 @@
+<rdf:RDF
+  xmlns="http://purl.org/rss/1.0/"
+  xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+
+<channel rdf:about="http://dannyayers.com/feed/rss2" />
+<channel rdf:about="http://martinfowler.com/bliki/bliki.rss" />
+<channel rdf:about="http://www.dehora.net/journal/index.rdf" />
+<channel rdf:about="http://example.org/this/is/not/a/feed" />
+<channel rdf:about="http://danja.typepad.com/fecho/atom.xml" />
+
+</rdf:RDF>

@@ -1,0 +1,24 @@
+java -jar kowari-1.0.5.jar
+
+java -jar itql-1.0.5.jar
+
+create <rmi://localhost/server1#Friends>;
+
+load <http://journal.dajobe.org/journal/2003/07/semblogs/bloggers.rdf>
+      into <rmi://localhost/server1#Friends>;
+
+alias <http://www.w3.org/1999/02/22-rdf-syntax-ns#> as rdf;
+alias <http://purl.org/rss/1.0/> as rss;
+alias <http://xmlns.com/foaf/0.1/> as foaf;
+
+select $subject 
+      from <rmi://localhost/server1#Friends> 
+      where $subject <rdf:type> <rss:channel>;
+
+select $object 
+      from <rmi://localhost/server1#Friends> 
+      where $subject <rdf:type> <foaf:Agent>
+      and $subject <foaf:name> $object;
+
+
+
