@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns="http://purl.org/rss/1.0/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+>
+  <channel rdf:about="http://www.dehora.net/journal/">
+    <title>Bill de hÃra</title>
+    <link>http://www.dehora.net/journal/</link>
+    <description>6862 9C3A FB23 47C7 BFE0 E1BB 53B9 7EED 599F 30C2</description>
+    <dc:date>2011-11-22T18:00:29Z</dc:date>
+    <admin:generatorAgent rdf:resource="http://www.sixapart.com/movabletype/"/>
+    <items>
+      <rdf:Seq>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111122.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111120.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111119.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111118.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111117.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111115.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111114_3.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111114_2.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111114_1.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111114.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111111.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111110.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111109_1.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111109.html/"/>
+                <rdf:li rdf:resource="http://www.dehora.net/journal/2011/11/links_for_20111108_1.html/"/>
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111122.html/">
+    <title>links for 2011-11-22</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111122.html/</link>
+    <dc:date>2011-11-22T18:00:29Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111120.html/">
+    <title>links for 2011-11-20</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111120.html/</link>
+    <dc:date>2011-11-20T09:11:08Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111119.html/">
+    <title>links for 2011-11-19</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111119.html/</link>
+    <dc:date>2011-11-19T19:00:51Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111118.html/">
+    <title>links for 2011-11-18</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111118.html/</link>
+    <dc:date>2011-11-18T20:01:02Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111117.html/">
+    <title>links for 2011-11-17</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111117.html/</link>
+    <dc:date>2011-11-18T04:01:10Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111115.html/">
+    <title>links for 2011-11-15</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111115.html/</link>
+    <dc:date>2011-11-15T13:00:51Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111114_3.html/">
+    <title>links for 2011-11-14</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111114_3.html/</link>
+    <dc:date>2011-11-15T07:10:59Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111114_2.html/">
+    <title>links for 2011-11-14</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111114_2.html/</link>
+    <dc:date>2011-11-15T06:01:10Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111114_1.html/">
+    <title>links for 2011-11-14</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111114_1.html/</link>
+    <dc:date>2011-11-14T21:00:45Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111114.html/">
+    <title>links for 2011-11-14</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111114.html/</link>
+    <dc:date>2011-11-14T20:00:55Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111111.html/">
+    <title>links for 2011-11-11</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111111.html/</link>
+    <dc:date>2011-11-12T07:00:58Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111110.html/">
+    <title>links for 2011-11-10</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111110.html/</link>
+    <dc:date>2011-11-10T14:00:57Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111109_1.html/">
+    <title>links for 2011-11-09</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111109_1.html/</link>
+    <dc:date>2011-11-09T19:20:39Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111109.html/">
+    <title>links for 2011-11-09</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111109.html/</link>
+    <dc:date>2011-11-09T19:10:50Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+    <item rdf:about="http://www.dehora.net/journal/2011/11/links_for_20111108_1.html/">
+    <title>links for 2011-11-08</title>
+    <link>http://www.dehora.net/journal/2011/11/links_for_20111108_1.html/</link>
+    <dc:date>2011-11-09T05:01:37Z</dc:date>
+    <dc:creator>Bill de hÃra</dc:creator>
+    <foaf:maker xmlns:foaf="http://xmlns.com/foaf/0.1/">
+      <foaf:Person>
+        <foaf:nick>Bill de hÃra</foaf:nick>
+        <foaf:homepage rdf:resource="http://www.dehora.net/journal/"/>
+      </foaf:Person>
+    </foaf:maker>
+      
+    <description> What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive? (tags: storage capacity ssd) How GitHub Uses GitHub to Build GitHub (tags: git programming development presentation process github) Data Center Top-of-Rack Architecture...</description>
+    <content:encoded>
+        <![CDATA[<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.tomshardware.com/reviews/ssd-reliability-failure-rate,2923-2.html">What Do We Know About Storage? : Investigation: Is Your SSD More Reliable Than A Hard Drive?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How GitHub Uses GitHub to Build GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/git">git</a> <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/development">development</a> <a href="http://www.delicious.com/dehora/presentation">presentation</a> <a href="http://www.delicious.com/dehora/process">process</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9670/white_paper_c11-522337.html">Data Center Top-of-Rack Architecture DesignÂ  [Cisco Nexus 5000 Series Switches] - Cisco Systems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cisco">cisco</a> <a href="http://www.delicious.com/dehora/network">network</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/top-of-the-rack">top-of-the-rack</a> <a href="http://www.delicious.com/dehora/switch">switch</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://coreyhulen.org/2010/07/28/raid-level-0-setup-on-amazon-ec2-ebs-drives/">Raid Level 0 Setup on Amazon EC2 EBS drives Â« Geekout</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/raid">raid</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.kosmix.com/2011/01/21/cassandra-on-ssd/">Kosmix Blog Â» Blog Archive Â» Cassandra on SSD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cassandra">cassandra</a> <a href="http://www.delicious.com/dehora/ssd">ssd</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.symantec.com/connect/articles/getting-hang-iops">Getting the hang of IOPS | Symantec Connect Community</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/iops">iops</a> <a href="http://www.delicious.com/dehora/capacity">capacity</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunniestudios.com/blog/?p=1863">Why the Best Days of Open Hardware are Yet to Come Â« bunnie&#039;s blog</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/computing">computing</a> <a href="http://www.delicious.com/dehora/hardware">hardware</a> <a href="http://www.delicious.com/dehora/future">future</a> <a href="http://www.delicious.com/dehora/openhardware">openhardware</a> <a href="http://www.delicious.com/dehora/mooreslaw">mooreslaw</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://queue.acm.org/detail.cfm?id=1563874">The Pathologies of Big Data - ACM Queue</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/performance">performance</a> <a href="http://www.delicious.com/dehora/database">database</a> <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/scalability">scalability</a> <a href="http://www.delicious.com/dehora/scaling">scaling</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3184">Persuasive Platypus Â» Blog Archive Â» Introduction to Distributed Filesystems</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/architecture">architecture</a> <a href="http://www.delicious.com/dehora/distributed">distributed</a> <a href="http://www.delicious.com/dehora/cluster">cluster</a> <a href="http://www.delicious.com/dehora/filesystem">filesystem</a> <a href="http://www.delicious.com/dehora/linux">linux</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.networkcomputing.com/servers-storage/229900154?pgno=1">Monolithic Scale-Out NAS Is Out Of Gas - Network Computing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=3259">Persuasive Platypus Â» Blog Archive Â» Fighting FUD Again</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/cloudfs">cloudfs</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/storage">storage</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cleversafe.com/products/architecture/secure">Secure â Cleversafe.com</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/cleversafe">cleversafe</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ceph.newdream.net/wiki/General_architecture">General architecture - Ceph wiki</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ceph">ceph</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="https://github.com/macan/Pomegranate/commits/next">Commit History for macan/Pomegranate - GitHub</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/github">github</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://pl.atyp.us/wordpress/?p=2617">Persuasive Platypus Â» Blog Archive Â» Fighting the MaxiScale FUD</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/storage">storage</a> <a href="http://www.delicious.com/dehora/ibrix">ibrix</a> <a href="http://www.delicious.com/dehora/isilon">isilon</a> <a href="http://www.delicious.com/dehora/maxiscale">maxiscale</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://webcache.googleusercontent.com/search?q=cache:http://camlistore.org/gw/doc/json-signing/json-signing.txt">Camlistore Git - camlistore.git/blob - doc/json-signing/json-signing.txt</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/json">json</a> <a href="http://www.delicious.com/dehora/dsig">dsig</a> <a href="http://www.delicious.com/dehora/signing">signing</a> <a href="http://www.delicious.com/dehora/camlistore">camlistore</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html">HAKMEM -- CONTENTS -- DRAFT, NOT YET PROOFED</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://www.delicious.com/dehora/programming">programming</a> <a href="http://www.delicious.com/dehora/algorithms">algorithms</a> <a href="http://www.delicious.com/dehora/reference">reference</a> <a href="http://www.delicious.com/dehora/software">software</a> <a href="http://www.delicious.com/dehora/development">development</a>)</div>
+            </li></ul>]]>
+        
+    </content:encoded>  
+  </item>
+  
+</rdf:RDF>

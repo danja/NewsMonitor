@@ -1,0 +1,77 @@
+Use case:
+Data:
+Refine:
+Reuse:
+----------------
+
+interlinking
+
+dictionaries:
+Mesh Medical Subject headings
+
+
+make personal diary
+drugs you take
+
+flip domain:
+scan policy, papers
+
+
+relevancy score/ranking
+
+find vocabs for dictionaries 
+
+start with list of euro parliamentary members
+
+opinion mining
+
+generate dictionaries from text found on pages
+
+use case : monitoring opinions etc.
+
+synergies across 
+VIP DB
+get term list
+
+Andreas - guy with the council/gov stuff, Federated Soc Web
+
+
+client bits : search interceptor
+
+start with RSS - easier to RDFize - 
+
+later : user feedback to improve data
+
+(Solr & Lucene are in Stanbol?)
+
+landscaping??
+
+1 month - initial results
+16 May interim
+June? final
+
+google docs
+
+parliament legislation : themes, e.g. animal welfare
+
+-----------------------------
+
+Data Sources
+RDFizing
+
+
+                                                                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+

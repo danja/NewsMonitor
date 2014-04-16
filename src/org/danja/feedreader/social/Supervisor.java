@@ -25,7 +25,7 @@ public class Supervisor {
 
     public static void main(String[] args) {
         Supervisor supervisor = new Supervisor();
-        Set channelURIs = supervisor.loadChannelList("input/feedlist.rdf");
+        Set channelURIs = supervisor.loadChannelList("input/bloggers.rdf");
         FeedSet feeds = supervisor.initFeeds(channelURIs);
 
         while (true) {

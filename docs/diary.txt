@@ -1,0 +1,4 @@
+2014-04-15
+Took my 2005 feedreader code and imported into Eclipse, uploaded to github as project 
+https://github.com/danja/feedreader-prototype
+

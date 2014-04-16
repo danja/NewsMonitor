@@ -24,7 +24,8 @@ public class Planet {
 
     public static void main(String[] args) {
         Planet planet = new Planet();
-        Set channelURIs = planet.loadChannelList("input/feedlist.opml");
+        Set channelURIs = planet.loadChannelList("input/bloggers.rdf");
+        // Set channelURIs = planet.loadChannelList("input/feedlist.opml");
         FeedSet feeds = planet.initFeeds(channelURIs);
         FileEntrySerializer serializer = new FileEntrySerializer();
         serializer.loadDocumentShell("input/shell.xml");
