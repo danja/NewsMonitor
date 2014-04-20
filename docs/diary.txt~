@@ -1,0 +1,16 @@
+2014-04-15
+Took my 2005 feedreader code and imported into Eclipse, uploaded to github as project 
+https://github.com/danja/feedreader-prototype
+
+2014-04-16
+Tweaks to old code, attempted to get fusepool-platform running, started detailed specifications doc
+
+2014-04-17
+Configured a Fuseki store for SPARQL Update, more work on spec doc
+
+2014-04-18
+Tweaks to old code, attempted to get fusepool-platform running, more work on spec doc
+
+
+
+
