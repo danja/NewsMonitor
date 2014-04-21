@@ -14,6 +14,6 @@ public interface FeedParser {
 
     public void parse(InputStream inputStream);
 
-   // added for Planet
+   // added for Poller
   //  public ContentHandler getContentHandler();
 }

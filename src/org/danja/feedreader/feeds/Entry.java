@@ -10,7 +10,7 @@ public interface Entry extends FeedEntity {
 
     public String getContent();
 
-    // added for Planet
+    // added for Poller
     public void setSourceTitle(String feedTitle);
 
     public String getSourceTitle();

@@ -38,7 +38,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
                 + "</p>" + "</div>";
     }
 
-    // added for Planet
+    // added for Poller
     private String sourceTitle;
 
     private String sourceLink;

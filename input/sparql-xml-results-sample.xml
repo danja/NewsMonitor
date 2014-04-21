@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+   <head>
+      <variable name="channel" />
+   </head>
+   <results>
+      <result>
+         <binding name="channel">
+            <uri>http://torrez.us/archives/category/semweb/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://markwatson.com/blog/atom.xml</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://aabs.wordpress.com/category/semanticweb/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.w3.org/blog/data/feed/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://danbri.org/words/category/technology/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://johngoodwin225.wordpress.com/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://fgiasson.com/blog/index.php/category/fredblog/web/semantic-web/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://kasei.us/archives/categories/technology/semantic_web/index.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://dallemang.typepad.com/my_weblog/index.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://buytaert.net/taxonomy/term/61/0/feed</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.snee.com/bobdc.blog/bobdcblog.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.bnode.org/rdfxml/page/en-semweblog</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://captsolo.net/info/xmlsrv/rdf.php?blog=2&amp;cat=3</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://people.w3.org/~djweitzner/blog/?cat=8&amp;feed=rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://journal.dajobe.org/journal/comments.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://usefulinc.com/doap/news/rss</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://tomheath.com/blog/comments/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://trueg.wordpress.com/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://ebiquity.umbc.edu/blogger/category/semanticweb/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://drobilla.net/category/semweb/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://webofdata.wordpress.com/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://norman.walsh.name/index.rss</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://chem-bla-ics.blogspot.com/feeds/posts/default/-/RDF?alt=rss</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.wasab.dk/morten/blog/archives/category/semweb/feed/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blogs.ecs.soton.ac.uk/enakting/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://apassant.net/taxonomy/term/3/feed</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blog.3kbo.com/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blog.semantic-web.at/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.openlinksw.com/weblogs/oerling/gems/index.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://dowhatimean.net/category/semantic-web/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.ldodds.com/blog/index.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blog.aksw.org/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://feeds.feedburner.com/datagraph</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.w3.org/community/rww/feed/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://feeds.feedburner.com/EnterpriseSemantics</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://webofdata.wordpress.com/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blogs.talis.com/nodalities/index.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://dublincore.org/news.rss</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://planetrdf.com/guide/rss.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blog.planetrdf.com/rss.xml</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://times.usefulinc.com/rss</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.jenitennison.com/blog/atom/feed</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blog.seevl.net/category/technology/feed/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://tripletalk.wordpress.com/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://rivuli-development.com/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.johnbreslin.com/blog/category/semantic-web/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://clarkparsia.com/weblog/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://thefigtrees.net/lee/blog/semantic_web/index.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://people.w3.org/~dsr/blog/?feed=rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.madmode.com/feeds/posts/default</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://feeds.feedburner.com/wikier-semantics</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blog.schema.org/feeds/posts/default?alt=rss</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.lassila.org/blog/index.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.openlinksw.com/blog/~kidehen/gems/index.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.andzol.com/?feed=rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.phildawes.net/blog/category/semantic-web/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://dig.csail.mit.edu/breadcrumbs/blog/feed/4</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blog.dbtune.org/feed/rss2</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://planb.nicecupoftea.org/feed/?feed=rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://davidepalmisano.wordpress.com/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://shawfactor.com/tag/semantic/feed/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://linkedjava.blogspot.com/feeds/posts/default</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.deri.ie/fileadmin/feed.rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.wshoy.sidar.org/rss.php</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://decentralyze.com/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://feeds2.feedburner.com/webofdatablog</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://rdfa.info/feed/rdf</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://blog.foaf-project.org/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://tw.rpi.edu/weblog/feed/rdf/</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://ivan-herman.name/category/work-related/semantic-web/feed</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://redlink.co/feed</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://feeds.feedburner.com/learnlinkeddata</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://feeds.feedburner.com/OpenSahara-Blog</uri>
+         </binding>
+      </result>
+      <result>
+         <binding name="channel">
+            <uri>http://www.w3.org/blog/powder?tempskin=_rdf</uri>
+         </binding>
+      </result>
+   </results>
+</sparql>

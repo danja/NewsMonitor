@@ -6,12 +6,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.danja.feedreader.io.OpmlSetReader;
 import org.danja.feedreader.io.SparqlConnector;
 
 /**
  * Read text list from disk, wrap with SPARQL template, push into store
  */
 public class FeedlistLoader {
+	
+//	OpmlSetReader reader = new OpmlSetReader();
+//    return reader.load(filename);
 
 	public static String SPARQL_TEMPLATE = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
 			+ "PREFIX rss: <http://purl.org/rss/1.0/> \n"

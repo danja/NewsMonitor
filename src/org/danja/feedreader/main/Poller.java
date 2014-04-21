@@ -1,5 +1,6 @@
-package org.danja.feedreader.planet;
+package org.danja.feedreader.main;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -12,9 +13,14 @@ import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.Interpreter;
 import org.danja.feedreader.io.OpmlSetReader;
+import org.danja.feedreader.io.SparqlConnector;
+import org.danja.feedreader.io.TextFileReader;
 import org.danja.feedreader.parsers.InterpreterFactory;
+import org.danja.feedreader.planet.FileEntrySerializer;
 
-public class Planet {
+public class Poller {
+	
+	static String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
 
     static int REFRESH_PERIOD = 10000; // milliseconds
 
@@ -23,16 +29,19 @@ public class Planet {
     static EntryList entries = new EntryListImpl(); //++
 
     public static void main(String[] args) {
-        Planet planet = new Planet();
-        Set channelURIs = planet.loadChannelList("input/bloggers.rdf");
+        Poller planet = new Poller();
+        
+       // Set channelURIs = planet.loadChannelList("input/bloggers.rdf");
         // Set channelURIs = planet.loadChannelList("input/feedlist.opml");
+        Set channelURIs = planet.loadChannelList();
+        
         FeedSet feeds = planet.initFeeds(channelURIs);
         FileEntrySerializer serializer = new FileEntrySerializer();
         serializer.loadDocumentShell("input/shell.xml");
 
         while (true) {
             feeds.refreshAll();
-            //    displayStatus(feeds);
+                displayStatus(feeds);
         
             entries.trimList(MAX_ITEMS);
             
@@ -52,9 +61,12 @@ public class Planet {
         }
     }
 
-    public Set loadChannelList(String filename) {
-        OpmlSetReader reader = new OpmlSetReader();
-        return reader.load(filename);
+    public Set loadChannelList() {
+        String query = TextFileReader.read("sparql/get-feedlist.sparql");
+        String xmlList = SparqlConnector.query(QUERY_ENDPOINT, query);
+        System.out.println(xmlList);
+        Set channels = new HashSet();
+        return channels;
     }
 
     public FeedSet initFeeds(Set channelURIs) {

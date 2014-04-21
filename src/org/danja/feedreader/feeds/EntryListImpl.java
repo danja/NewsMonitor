@@ -32,7 +32,7 @@ public class EntryListImpl implements EntryList {
         return (Entry) entries.get(i);
     }
 
-    // added for Planet
+    // added for Poller
     public void trimList(int trimSize) {
         removeDuplicates();
         sort();

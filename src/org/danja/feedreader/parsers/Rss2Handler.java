@@ -11,10 +11,10 @@ import org.xml.sax.helpers.DefaultHandler;
  *  
  */
 
-// Sourced added for Planet
+// Sourced added for Poller
 public class Rss2Handler extends DefaultHandler {
 
-    // added for Planet
+    // added for Poller
     private String sourceURI = "";
 
     private String sourceTitle = "";
@@ -35,7 +35,7 @@ public class Rss2Handler extends DefaultHandler {
 
     private EntryList entries;
 
-    // added for Planet
+    // added for Poller
     private String feedTitle = "";
     private String feedLink = "";
     
@@ -57,12 +57,12 @@ public class Rss2Handler extends DefaultHandler {
             return;
 
         case IN_CHANNEL:
-//          added for Planet
+//          added for Poller
             textBuffer = new StringBuffer();
             if ("item".equals(localName)) {
                 state = IN_ITEM;
                 entry = new EntryImpl();
-//              added for Planet
+//              added for Poller
              
                 entry.setAuthor(author);
                 entry.setSourceTitle(feedTitle); 
@@ -95,7 +95,7 @@ public class Rss2Handler extends DefaultHandler {
                 state = IN_NOTHING;
             }
             
-            // added for Planet
+            // added for Poller
             if ("title".equals(localName)) {
                 feedTitle = textBuffer.toString();
                 return;
@@ -125,7 +125,7 @@ public class Rss2Handler extends DefaultHandler {
                 return;
             }
 
-            // added for Planet
+            // added for Poller
             if ("guid".equals(localName)) {
                 entry.setURIString(textBuffer.toString());
                 return;

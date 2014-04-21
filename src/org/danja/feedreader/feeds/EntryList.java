@@ -13,6 +13,6 @@ public interface EntryList {
 
     public Entry getEntry(int i); 
     
-    // added for Planet
+    // added for Poller
     public void trimList(int trimSize);
 }

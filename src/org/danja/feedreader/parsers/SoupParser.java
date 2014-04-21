@@ -442,7 +442,7 @@ public class SoupParser implements FeedParser, ContentHandler {
         }
     }
 
-    // added for Planet
+    // added for Poller
     // public ContentHandler getContentHandler() {
     //    return contentHandler;
     // }

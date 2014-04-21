@@ -48,7 +48,7 @@ public class XMLReaderParser implements FeedParser {
         }
     }
 
-    // added for Planet
+    // added for Poller
    // public ContentHandler getContentHandler() {
      //   return reader. getContentHandler();
  //   }

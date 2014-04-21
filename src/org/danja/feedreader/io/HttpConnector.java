@@ -12,8 +12,11 @@ import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
 
 /**
- * HTTP connection handler designed primarily for syndication feeds supports
- * Conditional GET and gzip encoding
+ * HTTP connection handler 
+ * 
+ * supports Conditional GET and gzip encoding
+ * 
+ * Note: uses java.net libs
  */
 public class HttpConnector {
 
