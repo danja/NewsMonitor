@@ -14,6 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.danja.feedreader.parsers.SparqlResults.Result;
 
 /**
  *
@@ -21,7 +22,8 @@ import java.util.Set;
 public class SparqlResults {
 
 	private Set variables = new HashSet<String>();
-	private List results = new ArrayList<Result>();
+	// private List results = new ArrayList<Result>();
+	private Results results = new Results();
 	// private Set result = new HashSet<Binding>();
 
 	static int URI_TYPE = 0;
@@ -29,19 +31,29 @@ public class SparqlResults {
 	static int LITERAL_TYPE = 2;
 
 	static String[] types = { "uri", "bnode", "literal" };
-	
+
+	public List<Result> getResults() {
+		return results;
+	}
+
+	public Set<String> getVariables() {
+		return variables;
+	}
+
 	public String toString() {
-//		StringBuffer content = new StringBuffer();
-//		Iterator iterator = result.iterator();
-//		content.append("<results>");
-//		for(int i=0;i<result.size();i++) {
-//			content.append("   <result>");
-//			content.append("      "+result.get(i));
-//			content.append("   </result>");
-//		}
-//		content.append("</results>");
-//		return content.toString();
-		return "SIZE = "+Integer.toString(results.size());
+	//	System.out.println("SparqlResults to string results.size() = "+results.size());
+		return results.toString();
+		// System.out.println("SIZE = "+Integer.toString(results.size()));
+		// StringBuffer content = new StringBuffer();
+		// Iterator iterator = results.iterator();
+		// content.append("<results>");
+		// for(int i=0;i<results.size();i++) {
+		// content.append("\n   <result>");
+		// content.append("\n      "+results.get(i));
+		// content.append("\n   </result>");
+		// }
+		// content.append("</results>");
+		// return content.toString();
 	}
 
 	public Result createResult() {
@@ -56,18 +68,38 @@ public class SparqlResults {
 		variables.add(text);
 	}
 
-	class Result extends HashSet {
+	public void add(Result result) {
+		results.add(result);
+		// System.out.println("size = "+results.size());
+	}
 
+	class Results extends ArrayList {
 		public String toString() {
-			Iterator iterator = iterator();
+		//	System.out.println("Results toString size = "+size());
 			StringBuffer content = new StringBuffer();
-			while (iterator.hasNext()) {
-				content.append(iterator.next());
+			for (int i = 0; i < size(); i++) {
+		//		System.out.println("a" + get(i));
+				content.append(get(i));
 			}
 			return content.toString();
 		}
 	}
-	
+
+	class Result extends HashSet {
+
+		public String toString() {
+		//	System.out.println("Result toString size = "+size());
+			Iterator iterator = iterator();
+			StringBuffer content = new StringBuffer();
+			while (iterator.hasNext()) {
+				content.append("\n<result>");
+				content.append(iterator.next());
+				content.append("\n</result>");
+			}
+			return content.toString();
+		}
+	}
+
 	public class Binding {
 		private String name = null;
 		private String value = null;
@@ -124,9 +156,10 @@ public class SparqlResults {
 		 */
 
 		public String toString() {
-			return "      <binding name=\"" + getName() + "\">"
-					+ "         <" + types[getType()] + ">" + getValue()
-					+ "<" + types[getType()] + ">" + "      <binding>";
+		//	System.out.println("Binding toString");
+			return "\n      <binding name=\"" + getName() + "\">"
+					+ "\n         <" + types[getType()] + ">" + getValue()
+					+ "<" + types[getType()] + ">\n      </binding>";
 		}
 	}
 }
