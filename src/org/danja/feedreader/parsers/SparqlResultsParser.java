@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.io.StringReader;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -52,6 +53,11 @@ public class SparqlResultsParser implements ContentHandler {
 
 	// Custom type conversion methods - see
 	// http://www.ibm.com/developerworks/library/x-tipsaxis/
+	
+	public SparqlResults parse(String string) {
+		InputSource source = new InputSource( new StringReader(string));
+		return parse(source);
+	}
 
 	public SparqlResults parse(File file) {
 		FileReader reader = null;

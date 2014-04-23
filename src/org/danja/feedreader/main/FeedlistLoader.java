@@ -13,9 +13,9 @@ import org.danja.feedreader.io.SparqlConnector;
  * Read text list from disk, wrap with SPARQL template, push into store
  */
 public class FeedlistLoader {
-	
-//	OpmlSetReader reader = new OpmlSetReader();
-//    return reader.load(filename);
+
+	// OpmlSetReader reader = new OpmlSetReader();
+	// return reader.load(filename);
 
 	public static String SPARQL_TEMPLATE = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
 			+ "PREFIX rss: <http://purl.org/rss/1.0/> \n"
@@ -33,10 +33,10 @@ public class FeedlistLoader {
 				handler);
 		String sparql = FeedlistLoader.insertValue(SPARQL_TEMPLATE, "channels",
 				turtleBody);
-		System.out.println("Query = \n" + sparql);
+		// System.out.println("Query = \n" + sparql);
 		int responseCode = SparqlConnector.update(
 				"http://localhost:3030/feedreader/update", sparql);
-		System.out.println(responseCode);
+		// System.out.println(responseCode);
 	}
 
 	/**

@@ -42,7 +42,7 @@ public class SparqlConnector {
 		String queryURL = null;
 		try {
 			queryURL = queryEndpoint+"?query="+ URLEncoder.encode(sparql, "UTF-8");
-			System.out.println("\n\n"+queryURL);
+		//	System.out.println("\n\n"+queryURL);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}

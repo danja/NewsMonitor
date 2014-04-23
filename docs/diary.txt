@@ -17,4 +17,14 @@ started fresh code (FeedlistLoader.java), got fusepool-platform running, more wo
 2014-04-20
 FeedlistLoader now basically working, put spec doc on Web (via Google Drive)
 
+2014-04-21
+Putting together a parser & POJO model of SPARQL XML results. Decided to go with SAX (rather than e.g. using XPath directly), fairly arbitrary choice.
+
+2014-04-22
+Parser & POJO model of SPARQL XML results basically working.
+
+2014-04-23
+
+
+
 

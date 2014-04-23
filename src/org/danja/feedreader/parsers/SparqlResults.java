@@ -73,7 +73,7 @@ public class SparqlResults {
 		// System.out.println("size = "+results.size());
 	}
 
-	class Results extends ArrayList {
+	public class Results extends ArrayList {
 		public String toString() {
 		//	System.out.println("Results toString size = "+size());
 			StringBuffer content = new StringBuffer();
@@ -85,7 +85,7 @@ public class SparqlResults {
 		}
 	}
 
-	class Result extends HashSet {
+	public class Result extends HashSet<Binding> {
 
 		public String toString() {
 		//	System.out.println("Result toString size = "+size());
