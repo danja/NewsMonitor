@@ -20,19 +20,19 @@ public class RDFInterpreterFactory {
         switch (formatHint) {
 
         case FeedConstants.RSS2_BOZO:
-            System.out.println("Creating BOZO interpreter...");
+            System.out.println("Using BOZO interpreter...\n");
         interpreter = new CleanerInterpreter();
             return interpreter;
 
         case FeedConstants.RSS2:
         case FeedConstants.ATOM:
-            System.out.println("Creating XML interpreter...");
+            System.out.println("Using XML (RSS2/Atom) interpreter...\n");
           interpreter = new TransformerInterpreter();
             return interpreter;
  
         case FeedConstants.RSS1:
         case FeedConstants.RDF_OTHER:  
-            System.out.println("Creating RDF interpreter...");
+            System.out.println("Using RDF interpreter...\n");
         interpreter = new WriterInterpreter();
             return interpreter;
             

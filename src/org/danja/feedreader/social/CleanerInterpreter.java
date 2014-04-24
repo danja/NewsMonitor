@@ -1,4 +1,5 @@
 /*
+ * 
  * Danny Ayers Oct 31, 2004 http://dannyayers.com
  *  
  */
@@ -8,12 +9,12 @@ import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.Interpreter;
 import org.danja.feedreader.parsers.FeedParser;
 import org.danja.feedreader.parsers.ParserInterpreter;
 import org.danja.feedreader.parsers.Rss2Handler;
 import org.danja.feedreader.parsers.SoupParser;
-import org.danja.feedreader.planet.FileEntrySerializer;
 
 public class CleanerInterpreter implements Interpreter {
 

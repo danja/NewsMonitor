@@ -10,14 +10,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.danja.feedreader.planet.EntryDateSorter;
-
 public class EntryListImpl implements EntryList {
 
-    private List entries;
+    private List<Entry> entries;
 
     public EntryListImpl() {
-        entries = new ArrayList();
+        entries = new ArrayList<Entry>();
     }
 
     public void addEntry(Entry entry) {
@@ -35,7 +33,7 @@ public class EntryListImpl implements EntryList {
     // added for Poller
     public void trimList(int trimSize) {
         removeDuplicates();
-        sort();
+        sortByDate();
         if (trimSize > size()) {
             return;
         }
@@ -43,7 +41,7 @@ public class EntryListImpl implements EntryList {
     }
 
     public void removeDuplicates() {
-        Set entryIDs = new HashSet();
+        Set<String> entryIDs = new HashSet<String>();
         String id;
         for (int i = entries.size()-1; i == 0; i--) {
             id = ((Entry) entries.get(i)).getURIString();
@@ -54,7 +52,7 @@ public class EntryListImpl implements EntryList {
         }
     }
 
-    public void sort() {
+    public void sortByDate() {
         EntryDateSorter.sort(entries);
     }
 }

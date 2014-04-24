@@ -16,8 +16,8 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.Interpreter;
-import org.danja.feedreader.planet.FileEntrySerializer;
 
 /**
  * Transforms feed XML (RSS 2.0/Atom) into RDF/XML

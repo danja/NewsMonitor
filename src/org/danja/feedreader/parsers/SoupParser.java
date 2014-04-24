@@ -441,9 +441,4 @@ public class SoupParser implements FeedParser, ContentHandler {
             e.printStackTrace();
         }
     }
-
-    // added for Poller
-    // public ContentHandler getContentHandler() {
-    //    return contentHandler;
-    // }
 }

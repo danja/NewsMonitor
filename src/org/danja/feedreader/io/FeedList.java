@@ -17,7 +17,7 @@ import org.danja.feedreader.parsers.SparqlResultsParser;
 /**
  *
  */
-public class FeedList extends ArrayList<String> {
+public class FeedList  {
 
 	private static String SPARQL_FILENAME = "sparql/get-feedlist.sparql";
 	private static String queryEndpoint = "http://localhost:3030/feedreader/query";
@@ -38,8 +38,12 @@ public class FeedList extends ArrayList<String> {
 		for (int i = 0; i < results.size(); i++) {
 			// System.out.println(results.get(i));
 			String feed = results.get(i).iterator().next().getValue();
-			add(feed);
+			feeds.add(feed);
 		}
+	}
+	
+	public List<String> getFeeds(){
+		return feeds;
 	}
 
 }

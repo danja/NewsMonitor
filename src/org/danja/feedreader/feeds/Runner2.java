@@ -1,3 +1,5 @@
+// RETIRE ME
+
 package org.danja.feedreader.feeds;
 
 import java.util.Iterator;

@@ -1,4 +1,5 @@
-/*
+/* RETIRE ME
+ * 
  * Danny Ayers Aug 22, 2004
  * http://dannyayers.com
  * 
@@ -25,5 +26,4 @@ public class DownloadInterpreter  implements Interpreter{
         System.out.println("SAVING:" + feed.getURIString()+"\n=>"+filename);
         feed.downloadToFile(downloadDir+filename);
     }
-
 }

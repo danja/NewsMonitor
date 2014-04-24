@@ -24,6 +24,9 @@ Putting together a parser & POJO model of SPARQL XML results. Decided to go with
 Parser & POJO model of SPARQL XML results basically working.
 
 2014-04-23
+Setting up Poller
+
+
 
 
 

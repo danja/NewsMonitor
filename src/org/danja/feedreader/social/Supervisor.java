@@ -11,9 +11,9 @@ import org.danja.feedreader.feeds.FeedFetcherImpl;
 import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.ChannelSetReader;
+import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
-import org.danja.feedreader.planet.FileEntrySerializer;
 
 public class Supervisor {
 

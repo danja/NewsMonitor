@@ -1,25 +1,57 @@
-/*
- * Danny Ayers Aug 27, 2004 http://dannyayers.com
- *  
+/**
+ * feedreader-prototype
+ *
+ * Entry.java
+ * 
+ * @author danja
+ * @date Apr 24, 2014
+ *
  */
+
 package org.danja.feedreader.feeds;
 
+/**
+ * Models an RSS item/Atom entry/single blog post
+ */
 public interface Entry extends FeedEntity {
 
+    /**
+     * @param content set the Entry content, typically HTML
+     */
     public void setContent(String content);
 
+    /**
+     * @return get the Entry content, typically HTML
+     */
     public String getContent();
 
-    // added for Poller
+    /**
+     * @param feedTitle set the title of the feed
+     */
     public void setSourceTitle(String feedTitle);
 
+    /**
+     * @return  get the title of the feed
+     */
     public String getSourceTitle();
 
+    /**
+     * @param feedLink set the URL of the feed
+     */
     public void setSourceLink(String feedLink);
 
+    /**
+     * @return  set the URL of the feed
+     */
     public String getSourceLink();
 
+    /**
+     * @param author set the author of the feed
+     */
     public void setAuthor(String author);
     
+    /**
+     * @return get the author of the feed
+     */
     public String getAuthor();
 }
