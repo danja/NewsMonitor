@@ -3,7 +3,7 @@
  * 
  * feedreader-prototype
  *
- * FeedSetImpl.java
+ * FeedListImpl.java
  * 
  * @author danja
  * @date Apr 25, 2014
@@ -11,10 +11,11 @@
  */
 package org.danja.feedreader.feeds;
 
-import java.util.Collection;
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 import org.danja.feedreader.main.Configuration;
@@ -25,54 +26,54 @@ import org.danja.feedreader.main.Main;
  * 
  *  
  */
-public class FeedSetImpl implements FeedSet {
+public class FeedListImpl implements FeedList {
 
-    private LinkedList feedQueue;
+    private LinkedList<Feed> feedQueue;
 
-    public FeedSetImpl() {
-        feedQueue = new LinkedList();
+    public FeedListImpl() {
+        feedQueue = new LinkedList<Feed>();
     }
     
-    public FeedFetcher createFeed(String uri) {
-        return new FeedFetcherImpl(uri);
+    public Feed createFeed(String uri) {
+        return new FeedImpl(uri);
     }
 
     public void addFeed(String uriString) {
         addFeed(uriString, FeedConstants.UNKNOWN);
     }
     
-    public void addFeed(FeedFetcher feed) {
+    public void addFeed(Feed feed) {
         feedQueue.addFirst(feed); // it's shiny new and interesting
     }
 
     public void addFeed(String uriString, char formatHint) {
-        FeedFetcher feed = createFeed(uriString);
+        Feed feed = createFeed(uriString);
         feed.setFormatHint(formatHint);
         addFeed(feed);
     }
 
-    public void addFeeds(FeedSet feeds) {
+    public void addFeeds(FeedList feeds) {
         feedQueue.addAll(feeds.getFeedCollection());
     }
 
-    public Collection getFeedCollection() {
+    public List<Feed> getFeedCollection() {
         return feedQueue;
     }
 
-    public FeedFetcher getNext() {
-        FeedFetcher next = (FeedFetcher) feedQueue.removeFirst();
+    public Feed getNext() {
+        Feed next = (Feed) feedQueue.removeFirst();
         feedQueue.addLast(next);
         return next;
     }
 
     public void refreshAll() {
     	System.out.println("Refresh all...");
-        Set expiring = new HashSet();
-        Iterator iterator = feedQueue.iterator();
-        FeedFetcher feed;
+        Set<Feed> expiring = new HashSet<Feed>();
+        Iterator<Feed> iterator = feedQueue.iterator();
+        Feed feed;
         while (iterator.hasNext()) {
-            feed = (FeedFetcher) iterator.next();
-            System.out.println("\n\nChecking: " + feed.getURIString());
+            feed = (Feed) iterator.next();
+            System.out.println("\n\nChecking: " + feed.getUrl());
             feed.refresh();
             if(feed.shouldExpire()){
                 expiring.add(feed);
@@ -88,8 +89,8 @@ public class FeedSetImpl implements FeedSet {
         }
         iterator = expiring.iterator();
         while (iterator.hasNext()) {
-            feed = (FeedFetcher) iterator.next();
-                System.out.println("Unsubscribing from "+feed.getURIString());
+            feed = (Feed) iterator.next();
+                System.out.println("Unsubscribing from "+feed.getUrl());
                 feedQueue.remove(feed);
         }
     }

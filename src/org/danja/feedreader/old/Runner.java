@@ -5,10 +5,10 @@ package org.danja.feedreader.old;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.danja.feedreader.feeds.FeedFetcher;
-import org.danja.feedreader.feeds.FeedFetcherImpl;
-import org.danja.feedreader.feeds.FeedSet;
-import org.danja.feedreader.feeds.FeedSetImpl;
+import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.feeds.FeedImpl;
+import org.danja.feedreader.feeds.FeedList;
+import org.danja.feedreader.feeds.FeedListImpl;
 import org.danja.feedreader.io.DownloadInterpreter;
 
 public class Runner {
@@ -19,13 +19,13 @@ public class Runner {
 
         ChannelSetReader channelSetReader = new ChannelSetReader();
         Set feedlistURIs = channelSetReader.load(args[0]);
-        FeedSet feeds = new FeedSetImpl();
+        FeedList feeds = new FeedListImpl();
 
         Iterator feedIterator = feedlistURIs.iterator();
-        FeedFetcher feed;
+        Feed feed;
         int nameCounter = 1;
         while (feedIterator.hasNext()) {
-            feed = new FeedFetcherImpl((String) feedIterator.next());
+            feed = new FeedImpl((String) feedIterator.next());
             feed.setTitle("feed_" + Integer.toString(nameCounter++));
             feed.setInterpreter(new DownloadInterpreter(args[1]));
             feed.setRefreshPeriod(REFRESH_PERIOD);
@@ -38,10 +38,10 @@ public class Runner {
         }
     }
 
-    private static void displayStatus(FeedSet feeds) {
+    private static void displayStatus(FeedList feeds) {
         Iterator feedIterator = feeds.getFeedCollection().iterator();
         while (feedIterator.hasNext()) {
-            System.out.println(((FeedFetcher) feedIterator.next()).getStatus());
+            System.out.println(((Feed) feedIterator.next()).getStatus());
         }
         System.out.println("---------------");
     }

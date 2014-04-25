@@ -9,7 +9,7 @@
  */
 package org.danja.feedreader.parsers;
 
-import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.io.Interpreter;
 import org.xml.sax.ContentHandler;
 
@@ -31,7 +31,7 @@ public class ParserInterpreter  implements Interpreter {
         feedParser.setContentHandler(contentHandler);
     }
 
-    public void interpret(FeedFetcher feed) {
+    public void interpret(Feed feed) {
         feedParser.parse(feed.getInputStream());
     }
 }

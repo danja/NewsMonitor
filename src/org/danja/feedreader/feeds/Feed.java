@@ -18,7 +18,7 @@ import org.danja.feedreader.io.Interpreter;
  * syndication-oriented access to HTTP operations
  *  
  */
-public interface FeedFetcher extends FeedEntity {
+public interface Feed extends FeedEntity {
 
     /**
      * Values can be FeedConstants.RSS2 etc.

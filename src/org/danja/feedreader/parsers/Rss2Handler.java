@@ -136,7 +136,7 @@ public class Rss2Handler extends DefaultHandler {
 
             // added for Poller
             if ("guid".equals(localName)) {
-                entry.setURIString(textBuffer.toString());
+                entry.setUrl(textBuffer.toString());
                 return;
             }
             if ("pubDate".equals(localName)) {

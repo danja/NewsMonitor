@@ -51,7 +51,7 @@ public class EntryListImpl implements EntryList {
         Set<String> entryIDs = new HashSet<String>();
         String id;
         for (int i = entries.size()-1; i == 0; i--) {
-            id = ((Entry) entries.get(i)).getURIString();
+            id = ((Entry) entries.get(i)).getUrl();
             if (entryIDs.contains(id)) {
                entries.remove(i);
             }

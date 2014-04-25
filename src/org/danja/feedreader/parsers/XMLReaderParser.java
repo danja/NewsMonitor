@@ -14,7 +14,7 @@ import java.io.InputStream;
 
 import javax.xml.parsers.SAXParserFactory;
 
-import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.Feed;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -28,7 +28,7 @@ public class XMLReaderParser implements FeedParser {
 
     private XMLReader reader = null;
 
-    private FeedFetcher feed;
+    private Feed feed;
 
     private boolean unescape;
 

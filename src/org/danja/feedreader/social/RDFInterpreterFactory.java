@@ -11,7 +11,7 @@ package org.danja.feedreader.social;
 
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.io.Interpreter;
 
 /**
@@ -50,8 +50,8 @@ public class RDFInterpreterFactory {
 		}
 	}
 
-	public static String getFilename(FeedFetcher feed) {
-		String feedFilename = feed.getURIString();
+	public static String getFilename(Feed feed) {
+		String feedFilename = feed.getUrl();
 		feedFilename = feedFilename.substring(7);
 		return feedFilename.replace('/', '_');
 	}

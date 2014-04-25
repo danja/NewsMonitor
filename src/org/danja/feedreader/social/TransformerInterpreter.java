@@ -20,7 +20,7 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.Interpreter;
 
@@ -42,11 +42,11 @@ public class TransformerInterpreter implements Interpreter {
 
     }
 
-    public void interpret(FeedFetcher feed) {
+    public void interpret(Feed feed) {
         InputStream inputStream = feed.getInputStream();
         String filename = "data/" + RDFInterpreterFactory.getFilename(feed);
         
-        System.out.println("\nFeed: "+feed.getURIString());
+        System.out.println("\nFeed: "+feed.getUrl());
         System.out.println("type: "+ FeedConstants.formatName(feed.getFormatHint()));
         System.out.println("Writing from TransformerInterpreter...");
         

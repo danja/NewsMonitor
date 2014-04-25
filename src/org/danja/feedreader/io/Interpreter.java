@@ -10,7 +10,7 @@
  */
 package org.danja.feedreader.io;
 
-import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.Feed;
 
 /**
  * Bridges between feed and parser etc
@@ -18,5 +18,5 @@ import org.danja.feedreader.feeds.FeedFetcher;
  */
 public interface Interpreter  { 
 
-    public void interpret(FeedFetcher feed);
+    public void interpret(Feed feed);
 }

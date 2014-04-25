@@ -14,7 +14,7 @@ package org.danja.feedreader.feeds;
  */
 public class FeedEntityBase implements FeedEntity {
 
-    private String uriString = "";
+    private String url = "";
 
     private String description = "";
 
@@ -28,15 +28,15 @@ public class FeedEntityBase implements FeedEntity {
     }
 
     public FeedEntityBase(String uriString) {
-        this.uriString = uriString;
+        this.url = uriString;
     }
 
-    public void setURIString(String uriString) {
-        this.uriString = uriString;
+    public void setUrl(String uriString) {
+        this.url = uriString;
     }
 
-    public String getURIString() {
-        return uriString;
+    public String getUrl() {
+        return url;
     }
 
     public void setTitle(String title) {

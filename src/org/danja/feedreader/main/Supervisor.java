@@ -16,10 +16,10 @@ import java.util.Set;
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.feeds.FeedFetcher;
-import org.danja.feedreader.feeds.FeedFetcherImpl;
-import org.danja.feedreader.feeds.FeedSet;
-import org.danja.feedreader.feeds.FeedSetImpl;
+import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.feeds.FeedImpl;
+import org.danja.feedreader.feeds.FeedList;
+import org.danja.feedreader.feeds.FeedListImpl;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
@@ -38,7 +38,7 @@ public class Supervisor {
     public static void main(String[] args) {
         Supervisor supervisor = new Supervisor();
         Set channelURIs = supervisor.loadChannelList("input/bloggers.rdf");
-        FeedSet feeds = supervisor.initFeeds(channelURIs);
+        FeedList feeds = supervisor.initFeeds(channelURIs);
 
         while (true) {
             feeds.refreshAll();
@@ -50,10 +50,10 @@ public class Supervisor {
         return reader.load(filename);
     }
 
-    public FeedSet initFeeds(Set channelURIs) {
-        FeedSet feeds = new FeedSetImpl();
+    public FeedList initFeeds(Set channelURIs) {
+        FeedList feeds = new FeedListImpl();
         Iterator channelIterator = channelURIs.iterator();
-        FeedFetcher feedFetcher;
+        Feed feedFetcher;
         Interpreter interpreter;
         String uriString;
         FormatSniffer sniffer = new FormatSniffer();
@@ -75,7 +75,7 @@ public class Supervisor {
             System.out.println(uriString + "\n"
                     + FeedConstants.formatName(format) + "\n");
 
-            feedFetcher = new FeedFetcherImpl(uriString);
+            feedFetcher = new FeedImpl(uriString);
             feedFetcher.setFormatHint(format);
             interpreter = RDFInterpreterFactory.createInterpreter(format,
                     entries); // changed for Social

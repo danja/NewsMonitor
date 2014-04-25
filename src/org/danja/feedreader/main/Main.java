@@ -11,8 +11,8 @@ package org.danja.feedreader.main;
 import java.util.List;
 import java.util.Set;
 
+import org.danja.feedreader.feeds.FeedUrls;
 import org.danja.feedreader.feeds.FeedList;
-import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.main.FeedListLoader.LineHandler;
@@ -44,7 +44,7 @@ public class Main {
 		// Set channelURIs = planet.loadChannelList("input/bloggers.rdf");
 		// Set channelURIs = planet.loadChannelList("input/feedlist.opml");
 
-		// FeedSet feedSet =
+		// FeedList feedSet =
 		poller.initFeeds();
 
 		poller.start();
@@ -57,7 +57,7 @@ public class Main {
 	}
 
 	private List<String> getFeeds() {
-		FeedList feedList = new FeedList();
+		FeedUrls feedList = new FeedUrls();
 		feedList.load();
 		return feedList.getFeeds();
 	}

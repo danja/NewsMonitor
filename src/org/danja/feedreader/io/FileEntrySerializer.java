@@ -57,7 +57,7 @@ public class FileEntrySerializer {
 
     public void addEntry(Entry entry) {
         Element item = doc.createElement("item");
-        item.appendChild(simpleElement("guid", entry.getURIString()));
+        item.appendChild(simpleElement("guid", entry.getUrl()));
         item.appendChild(simpleElement("title", entry.getTitle()));
         item.appendChild(simpleElement("description", unescape(entry
                 .getContent())));

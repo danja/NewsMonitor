@@ -10,14 +10,14 @@
 package org.danja.feedreader.social;
 
 import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.io.Interpreter;
 
 
 public class WriterInterpreter implements Interpreter {
 
-    public void interpret(FeedFetcher feed) {
-        System.out.println("\nFeed: "+feed.getURIString());
+    public void interpret(Feed feed) {
+        System.out.println("\nFeed: "+feed.getUrl());
         System.out.println("type: "+ FeedConstants.formatName(feed.getFormatHint()));
         System.out.println("Writing from RDFInterpreter...");
         feed.downloadToFile("data/"+RDFInterpreterFactory.getFilename(feed));

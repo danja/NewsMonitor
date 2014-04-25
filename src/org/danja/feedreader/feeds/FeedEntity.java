@@ -15,9 +15,9 @@ package org.danja.feedreader.feeds;
  */
 public interface FeedEntity {
 
-    public void setURIString(String uri);
+    public void setUrl(String url);
 
-    public String getURIString();
+    public String getUrl();
 
     public void setTitle(String title);
 

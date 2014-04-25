@@ -19,7 +19,7 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.Feed;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
@@ -93,7 +93,7 @@ public class SoupParser implements FeedParser, ContentHandler {
 
     boolean firstInTag = false;
 
-    private FeedFetcher feed;
+    private Feed feed;
 
     private boolean unescape;
 
@@ -428,7 +428,7 @@ public class SoupParser implements FeedParser, ContentHandler {
         parseData(buffer.toString());
     }
 
-    public void setFeed(FeedFetcher feed) {
+    public void setFeed(Feed feed) {
         this.feed = feed;
 
     }

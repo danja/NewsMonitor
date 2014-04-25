@@ -2,7 +2,7 @@
  * TODO rename
  * feedreader-prototype
  *
- * FeedFetcherImpl.java
+ * FeedImpl.java
  * 
  * @author danja
  * @date Apr 25, 2014
@@ -20,7 +20,7 @@ import org.danja.feedreader.io.Interpreter;
  * Models a feed, wrapped around HttpConnection
  *  
  */
-public class FeedFetcherImpl extends FeedEntityBase implements FeedFetcher,
+public class FeedImpl extends FeedEntityBase implements Feed,
         FeedEntity {
 
     private long lastRefresh;
@@ -41,8 +41,8 @@ public class FeedFetcherImpl extends FeedEntityBase implements FeedFetcher,
 
     private Interpreter interpreter;
 
-    public FeedFetcherImpl(String uri) {
-        super(uri);
+    public FeedImpl(String url) {
+        setUrl(url);
     }
 
 
@@ -52,7 +52,7 @@ public class FeedFetcherImpl extends FeedEntityBase implements FeedFetcher,
             return false;
         }
         if (httpConnector == null) {
-            httpConnector = new HttpConnector(getURIString());
+            httpConnector = new HttpConnector(getUrl());
         }
         isNew = httpConnector.load();
 
