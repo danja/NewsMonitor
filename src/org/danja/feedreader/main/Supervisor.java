@@ -18,12 +18,12 @@ import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedFetcher;
 import org.danja.feedreader.feeds.FeedFetcherImpl;
+import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
 import org.danja.feedreader.old.ChannelSetReader;
-import org.danja.feedreader.old.FeedSet;
 import org.danja.feedreader.social.FormatSniffer;
 import org.danja.feedreader.social.RDFInterpreterFactory;
 

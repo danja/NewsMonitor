@@ -212,15 +212,15 @@ g.parse(URI_of_HTML_file, format="html")&lt;/pre&gt;
 <rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://ivan-herman.name/2012/04/17/linked-data-on-the-web-workshop-lyon/">
 <rss:title>Linked Data on the Web Workshop, Lyon</rss:title>
 <rss:link>http://ivan-herman.name/2012/04/17/linked-data-on-the-web-workshop-lyon/</rss:link>
-<dc:subject>Work Related</dc:subject>
 <dc:subject>Semantic Web</dc:subject>
-<dc:subject>RDFa</dc:subject>
-<dc:subject>SPARQL</dc:subject>
-<dc:subject>OWL</dc:subject>
-<dc:subject>Resource Description Framework</dc:subject>
-<dc:subject>Linked Data</dc:subject>
+<dc:subject>Work Related</dc:subject>
 <dc:subject>Access Control</dc:subject>
+<dc:subject>Linked Data</dc:subject>
 <dc:subject>microdata</dc:subject>
+<dc:subject>OWL</dc:subject>
+<dc:subject>RDFa</dc:subject>
+<dc:subject>Resource Description Framework</dc:subject>
+<dc:subject>SPARQL</dc:subject>
 <rss:description>(See the Workshop’s home page for details.) The LDOW20** series have become more than workshops; they are really a small conferences. I did not count the number of participants (the meeting room had a fairly odd shape which made it a bit difficult) but I think it was largely over a hundred. Nice to see… [&amp;#8230;]&lt;img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=ivan-herman.name&amp;#038;blog=557157&amp;#038;post=863&amp;#038;subd=ivanherman&amp;#038;ref=&amp;#038;feed=1" width="1" height="1" /&gt;</rss:description>
 <dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:media="http://search.yahoo.com/mrss/">Ivan Herman</dc:creator>
 <content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:media="http://search.yahoo.com/mrss/">&lt;p&gt;(See the &lt;a href="http://events.linkeddata.org/ldow2012/"&gt;Workshop’s home page&lt;/a&gt; for details.)&lt;/p&gt;

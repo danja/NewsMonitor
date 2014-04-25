@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>markwatson.com/blog</title>
+  <link href="http://markwatson.com/blog"/>
+  <link type="application/atom+xml" rel="self" href="http://markwatson.com/blog/atom.xml"/>
+  <updated>2014-04-14T12:04:41-07:00</updated>
+  <id>http://markwatson.com/blog</id>
+  <author>
+    <name>Mark Watson</name>
+    <email>markw@markwatson.com</email>
+  </author>
+
+  
+  <entry>
+    <id>http://markwatson.com/blog/2014-04/learning-haskell</id>
+    <link type="text/html" rel="alternate" href="http://markwatson.com/blog/2014-04/learning-haskell.html"/>
+    <title>I am still trying to learn Haskell</title>
+    <updated>2014-04-14T00:00:00-07:00</updated>
+    <author>
+      <name>Mark Watson</name>
+      <uri>http://markwatson.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;I am still trying to learn Haskell&lt;/h1&gt;
+&lt;div class=&#39;post&#39;&gt;
+
+&lt;p&gt;I started studying Haskell again a few months ago and since I finished my &lt;a href=&quot;https://leanpub.com/aijavascript&quot; target=&quot;new&quot;&gt;new book&lt;/a&gt; last weekend, studying Haskell using the &lt;a href=&quot;https://www.fpcomplete.com&quot; target=&quot;new&quot;&gt;excellent learning resources at FPComplete&lt;/a&gt; has been my primary non-working geek activity.&lt;/p&gt;
+&lt;p&gt;In the last four or five years I have bought four Haskell books, made some effort to learn Haskell, had fun, and indirectly improved my Clojure and Scala chops - but, Haskell has never before really &#39;clicked&#39; for me.&lt;/p&gt;
+&lt;p&gt;FPComplete has several good tutorials on Haskell that are live web pages: you do the example exercises in the text by using the &#39;Open in IDE&#39; links. Reading and then immediately trying to solve problems with what you just read is a great way to learn.&lt;p&gt;
+&lt;p&gt;You can use large parts of FPComplete for free, but I signed up for their Personal Plan so I could use their online IDE for my own private projects. The people at FPComplete wrote their web apps for their IDE and for the interactive lessons using Haskell (of course!). I have tried &lt;a href=&quot;https://www.nitrous.io&quot; target=&quot;new&quot;&gt;nitrous.io&lt;/a&gt;&#39;s online IDE for Node.js, Ruby, and Python which is also fairly nice, but it is not quite as effective as FPComplete. Google also has a web based IDE that is used internally (also very nice!) so there is evidence that web based IDEs have real traction.&lt;/p&gt;
+&lt;p&gt;While entering code in the FPComplete web based IDE it is really helpful to get constant feedback that the edited code is free from compiler errors; if there are errors then you get feedback for making corrections. Running code is fast, even though this relies on remote FPComplete servers. Github integration works well (as it also does for nitrous.io). I set up Emacs with haskell-mode years ago, and I also like it very much. I find myself using the FPComplete IDE for about half of my Haskell hacking and Emacs for the other half.&lt;/p&gt;
+&lt;/div&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://markwatson.com/blog/2014-04/my-javascript-book</id>
+    <link type="text/html" rel="alternate" href="http://markwatson.com/blog/2014-04/my-javascript-book.html"/>
+    <title>My new book &quot;Build Intelligent Systems with JavaScript&quot;</title>
+    <updated>2014-04-12T00:00:00-07:00</updated>
+    <author>
+      <name>Mark Watson</name>
+      <uri>http://markwatson.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;My new book &quot;Build Intelligent Systems with JavaScript&quot;&lt;/h1&gt;
+&lt;div class=&#39;post&#39;&gt;
+
+&lt;p&gt;I have been working on this book since last summer. You can get &lt;a href=&quot;https://leanpub.com/aijavascript&quot; target=&quot;new&quot;&gt;more information here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In some sense I wrote this book for my own requirements. I the last 20+ years I have written information processing systems in Common Lisp, Java, Clojure, and Ruby. Last year I became interested in JavaScript largely because of web frameworks like Express.js and Meteor.js. I then started hacking on some of the same types of problems that I used to use Lisp languages for, and enjoyed using JavaScript.&lt;/p&gt;
+&lt;p&gt;I started writing small snippets of code in JavaScript for accessing data stores, doing simple NLP, and general information processing. While I was motivated by my own projects I also thought that other people might find the material useful.&lt;/p&gt;
+&lt;/div&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://markwatson.com/blog/2014-04/java8-clojure</id>
+    <link type="text/html" rel="alternate" href="http://markwatson.com/blog/2014-04/java8-clojure.html"/>
+    <title>Java 8 and Clojure</title>
+    <updated>2014-04-05T00:00:00-07:00</updated>
+    <author>
+      <name>Mark Watson</name>
+      <uri>http://markwatson.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;Java 8 and Clojure&lt;/h1&gt;
+&lt;div class=&#39;post&#39;&gt;
+
+&lt;p&gt;I have to admit that I have often been lazy about converting Java code to Clojure. Several of my side projects have &lt;b&gt;:java-source-paths&lt;/b&gt; set in my project.clj file and I just copy in the bits of old Java code that I am too lazy to convert. In some way I justify this because it is so easy to mix and match Clojure and Java code and the lein build process works well and I have never had any problems.&lt;/p&gt;
+&lt;p&gt;One thing that does not work, as far as I know, is mixing Java 8 lambdas with Clojure. That may happen sometime, but not a big deal for me. Mixing in my favorite Java 8 addition (streams) with Clojure is also not so important to me since it would not bring much to the table for Clojure developers.&lt;/p&gt;
+&lt;p&gt;I am far from being a &quot;Clojure purist&quot; (or any other single language) but one thing that really strikes me after using Clojure for about one third of my development over the last 4 or 5 years is that it is such a practical language for getting stuff done.&lt;/p&gt;
+&lt;/div&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://markwatson.com/blog/2014-04/trying-google-cloud</id>
+    <link type="text/html" rel="alternate" href="http://markwatson.com/blog/2014-04/trying-google-cloud.html"/>
+    <title>Trying out the Google Cloud Platform</title>
+    <updated>2014-04-02T00:00:00-07:00</updated>
+    <author>
+      <name>Mark Watson</name>
+      <uri>http://markwatson.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;Trying out the Google Cloud Platform&lt;/h1&gt;
+&lt;div class=&#39;post&#39;&gt;
+
+&lt;p&gt;I watched the Google Cloud Platform webcast last week and a few days later I received a $500 credit that I need to use in the next three months. The side project I am working on right now is in Clojure. A few years ago I wrote a few small test web apps in Clojure for AppEngine but the loading request time (i.e., the time to serve a request for a cold instance) was several seconds - not so good. With the free credit, I am experimenting now with a Compute Engine instance to run the prototype Clojure web app, just running with &quot;lein trampoline ...&quot;&lt;/p&gt;
+
+&lt;p&gt;In the past several years I have experimented a lot with AppEngine. With Java (and using Objectify as a datastore API) loading request time was very quick (about a second) and I wrote a GWT application, hosted my knowledgebooks.com site, and wrote several Google Wave robots hosted on AppEngine. I don&#39;t much use Python but I did do one Python AppEngine app for a customer several years ago and that was a nice experience.&lt;/p&gt;
+
+&lt;p&gt;Compared to leasing a physical server or an plain old VPS, using a Google&#39;s and Amazon&#39;s offerings are expensive, even with recent discounts for Google Cloud Platform and Amazon AWS. For AWS the win is all of the ancillary services like S3, DynamoDB, CloudFront, RDS, etc. Google Cloud Platform is catching up with AWS in the range of services and with similar pricing I think that the competition will come down to two things: developer happiness and support. I really like AWS and every major consulting customer (except for Google, and that makes sense :-) I have had in the last 6 years has at least partially used AWS. So, understanding that I love AWS, I can list some advantages of the Google Cloud Platform without you thinking that I am dis&#39;ing on AWS:&lt;ul&gt;&lt;li&gt;The Google Cloud Platform web console seems to be faster and more responsive (but the command line tools for each service seem comparable).&lt;/li&gt;&lt;li&gt;I really like the online log viewing on  Google Cloud Platform which can collect all logs for a project in one place - a big win.&lt;/li&gt;&lt;li&gt;Using  Google Cloud Platform reminds me of working as a contractor at Google last year when I really enjoyed using their  internal systems. Not exactly the same at all, but a pleasant reminder of using what has to be one of the best software development platforms (e.g., all source code to everything immediately accessible, working off of trunk, incredible tools for viewing logs and tracking down problems, etc.)&lt;/li&gt;&lt;li&gt;Immediate scaling, as needed&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;For developers competition between Amazon and Google (and other contenders like IBM) is a great thing. The only thing that I think is very important is keeping in mind the cost savings from leasing raw servers or commodity VPS (ignoring the higher costs of devops). At the other end of the cost spectrum, for some applications, going &quot;gold carpet&quot; for PaaS offerings like &lt;a href=&quot;http://fpcomplete.com&quot; target=&quot;new&quot;&gt;FP Complete&lt;/a&gt; (I am a happy customer) for Haskell development and deployment to managed servers or Heroku still makes a lot of sense - it just depends on cost/time tradeoffs.&lt;/p&gt;
+&lt;/div&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://markwatson.com/blog/2014-03/java8</id>
+    <link type="text/html" rel="alternate" href="http://markwatson.com/blog/2014-03/java8.html"/>
+    <title>Great joy in the world - Java 8 released</title>
+    <updated>2014-03-18T00:00:00-07:00</updated>
+    <author>
+      <name>Mark Watson</name>
+      <uri>http://markwatson.com/</uri>
+    </author>
+    <content type="html">&lt;h1&gt;Great joy in the world - Java 8 released&lt;/h1&gt;
+&lt;div class=&#39;post&#39;&gt;
+
+&lt;p&gt;I have been using pre-release versions of Java 8 for a long time but it is great to have an official release. &lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/index.html&quot; target=&quot;new&quot;&gt;You can get it here.&lt;/a&gt;
+  &lt;/p&gt;
+&lt;p&gt;I have found that lambdas and streams have been very useful features.&lt;/p&gt;
+&lt;p&gt;Many people, myself included, worried about the future of Java when Oracle bought the bones of Sun Microsystems. I must say now that I think Oracle has been doing a good job supporting Java.&lt;/p&gt;
+&lt;p&gt;I would like to convert most of my open source Java projects to Java 8, taking advantage of new features as appropriate. The problem is that I hate to break backwards compatibility for people who aren&#39;t going to update soon. I probably should not update the code examples for my Java books either.&lt;/p&gt;
+&lt;/div&gt;
+
+</content>
+  </entry>
+  
+ 
+</feed>

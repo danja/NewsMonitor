@@ -72,15 +72,10 @@ public class HttpConnector {
         HttpURLConnection connection = null;
         responseCode = -1;
         dead = true;
-        try {
-            connection = connect();
-        } catch (IOException e) {
-            e.printStackTrace(); // TODO log error
-            dead = true;
-            return false;
-        }
+        connection = connect();
         try {
             responseCode = connection.getResponseCode();
+            System.out.println("Response Code : "+responseCode); // TODO handle response code here
         } catch (IOException e1) {
             e1.printStackTrace(); // TODO log error
             dead = false;
@@ -91,7 +86,7 @@ public class HttpConnector {
             dead = false;
             return false;
         }
-        System.out.println("Response Code : "+responseCode); // TODO handle response code here
+        
         InputStream inputStream = null;
         try {
             inputStream = getInputStream(connection);
@@ -100,13 +95,20 @@ public class HttpConnector {
              e2.printStackTrace(); // TODO log error
             return false;
         }
+        
         dead = false;
         return true;
     }
 
-    public HttpURLConnection connect() throws IOException {
+    public HttpURLConnection connect() {
 
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        HttpURLConnection connection = null;
+		try {
+			connection = (HttpURLConnection) url.openConnection();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         connection.setReadTimeout(Configuration.READ_TIMEOUT);
         connection.setConnectTimeout(Configuration.CONNECT_TIMEOUT);
@@ -121,7 +123,12 @@ public class HttpConnector {
             connection.addRequestProperty("If-Modified-Since",
                     previousLastModified);
         }
-        connection.connect();
+        try {
+			connection.connect();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         return connection;
     }
 

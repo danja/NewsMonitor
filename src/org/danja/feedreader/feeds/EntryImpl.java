@@ -10,6 +10,7 @@
 package org.danja.feedreader.feeds;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.io.Writer;
@@ -124,6 +125,11 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 		InputStream inputStream = new ByteArrayInputStream(content.getBytes());
 		Writer stringWriter = new StringWriter();
 		tidy.clean(inputStream, stringWriter);
-		return stringWriter.toString();
+		try {
+			inputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return "CONTENT="+stringWriter.toString();
 	}
 }

@@ -7,6 +7,7 @@ import java.util.Set;
 
 import org.danja.feedreader.feeds.FeedFetcher;
 import org.danja.feedreader.feeds.FeedFetcherImpl;
+import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.DownloadInterpreter;
 

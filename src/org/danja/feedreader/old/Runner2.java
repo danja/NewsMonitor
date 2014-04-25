@@ -9,6 +9,7 @@ import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedFetcher;
 import org.danja.feedreader.feeds.FeedFetcherImpl;
+import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.Interpreter;
 import org.danja.feedreader.parsers.InterpreterFactory;

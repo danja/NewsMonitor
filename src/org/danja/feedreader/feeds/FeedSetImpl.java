@@ -1,5 +1,6 @@
 /**
- * TODO RETIRE
+ * TODO revisit
+ * 
  * feedreader-prototype
  *
  * FeedSetImpl.java
@@ -17,7 +18,7 @@ import java.util.LinkedList;
 import java.util.Set;
 
 import org.danja.feedreader.main.Configuration;
-import org.danja.feedreader.old.FeedSet;
+import org.danja.feedreader.main.Main;
 
 /**
  * Implements set of feeds
@@ -65,6 +66,7 @@ public class FeedSetImpl implements FeedSet {
     }
 
     public void refreshAll() {
+    	System.out.println("Refresh all...");
         Set expiring = new HashSet();
         Iterator iterator = feedQueue.iterator();
         FeedFetcher feed;
@@ -80,6 +82,9 @@ public class FeedSetImpl implements FeedSet {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+        }
+        if(Main.POLLER_NO_LOOP) {
+        	System.exit(1);;
         }
         iterator = expiring.iterator();
         while (iterator.hasNext()) {

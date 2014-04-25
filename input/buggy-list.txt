@@ -1,0 +1,2 @@
+http://dallemang.typepad.com/my_weblog/index.rdf
+http://kasei.us/archives/categories/technology/semantic_web/index.rdf

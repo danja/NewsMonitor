@@ -60,8 +60,6 @@ http://blog.foaf-project.org/feed/rdf/
 http://www.w3.org/blog/powder?tempskin=_rdf
 http://torrez.us/archives/category/semweb/feed/rdf
 http://markwatson.com/blog/atom.xml
-http://kasei.us/archives/categories/technology/semantic_web/index.rdf
-http://dallemang.typepad.com/my_weblog/index.rdf
 http://www.snee.com/bobdc.blog/bobdcblog.rdf
 http://trueg.wordpress.com/feed/rdf
 http://blog.aksw.org/feed/rdf/

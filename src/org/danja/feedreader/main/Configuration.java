@@ -14,12 +14,14 @@ package org.danja.feedreader.main;
  */
 public class Configuration {
 	
+	// public static String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
+	
     public static final int CONNECT_TIMEOUT = 5000; // milliseconds
     public static final int READ_TIMEOUT = 5000; // milliseconds
     
 	private static int REFRESH_PERIOD = 10000; // milliseconds
     
-	public static int PER_FEED_SLEEP_PERIOD = 1000; /// ????
+	public static int PER_FEED_SLEEP_PERIOD = 0; /// ????
 
     private static int MAX_ITEMS = 5;
     

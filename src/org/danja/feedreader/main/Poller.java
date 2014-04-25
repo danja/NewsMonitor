@@ -18,11 +18,11 @@ import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedFetcher;
 import org.danja.feedreader.feeds.FeedFetcherImpl;
+import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
-import org.danja.feedreader.old.FeedSet;
 import org.danja.feedreader.parsers.InterpreterFactory;
 import org.danja.feedreader.social.FormatSniffer;
 import org.danja.feedreader.social.RDFInterpreterFactory;
@@ -47,6 +47,7 @@ public class Poller implements Runnable {
         HttpConnector connector;
         char format;
         
+        System.out.println("feedURIs.size() = "+feedURIs.size());
         for(int i=0;i<feedURIs.size();i++) {
             uriString = feedURIs.get(i);
             connector = new HttpConnector(uriString);
@@ -57,7 +58,7 @@ public class Poller implements Runnable {
             	System.out.println("Stream unavailable.");
                 format = FeedConstants.UNKNOWN;
             }
-
+            System.out.println("FormatNumber... : "+format);
             System.out.println("\nFeed : "+uriString);
             		System.out.println("Format : "+FeedConstants.formatName(format));
             
@@ -67,6 +68,7 @@ public class Poller implements Runnable {
                     entries); 
             feedFetcher.setInterpreter(interpreter);
             feedFetcher.setRefreshPeriod(Configuration.getPollerPeriod()); // TODO move
+            System.out.println("feedFetcher = "+feedFetcher);
             feedSet.addFeed(feedFetcher);
         }
         return feedSet;
@@ -86,16 +88,17 @@ public class Poller implements Runnable {
     public void run() {
     	running = true;
         while (running) {
+        	System.out.println("RUNNING!");
             feedSet.refreshAll();
                 displayStatus(feedSet);
-        
+                System.out.println("1entries.size() = "+entries.size());
             entries.trimList(Configuration.getMaxItems());
             
             FileEntrySerializer serializer = new FileEntrySerializer();
             serializer.loadDocumentShell("input/shell.xml");
             
            serializer.clearEntries();
-       
+           System.out.println("entries.size() = "+entries.size());
             for (int i = 0; i < entries.size(); i++) {
                 serializer.addEntry(entries.getEntry(i));
             }

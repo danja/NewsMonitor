@@ -9,6 +9,7 @@
  */
 package org.danja.feedreader.social;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 import javax.xml.parsers.SAXParserFactory;
@@ -38,9 +39,15 @@ public class FormatSniffer extends DefaultHandler{
         InputSource inputSource = new InputSource(inputStream);
         try {
             reader.parse(inputSource); // TODO TIMEOUT HERE!?
+            
         } catch (Exception e) { // whatever the problem, there's no XML available
             return FeedConstants.RSS2_BOZO;
         }
+        try {
+			inputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
         return format; // 
     }
     

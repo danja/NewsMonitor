@@ -12,17 +12,17 @@ import java.util.List;
 import java.util.Set;
 
 import org.danja.feedreader.feeds.FeedList;
+import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.main.FeedListLoader.LineHandler;
-import org.danja.feedreader.old.FeedSet;
 
 /**
  *
  */
 public class Main {
 
-	static String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
+	public static final boolean POLLER_NO_LOOP = false; // for debugging
 
 	/**
 	 * @param args
@@ -33,6 +33,8 @@ public class Main {
 
 		// load seed list from file into store
 		main.loadSeedFeedList();
+		
+		// TODO doesn't appear to be refreshing
 
 		Poller poller = new Poller();
 
@@ -46,11 +48,11 @@ public class Main {
 		poller.initFeeds();
 
 		poller.start();
-		try {
-			Thread.sleep(60000); // wait a minute
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(60000); // wait a minute
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		// poller.stop();
 	}
 
@@ -63,7 +65,8 @@ public class Main {
 	public void loadSeedFeedList() {
 		FeedListLoader loader = new FeedListLoader();
 		LineHandler handler = loader.new LineHandler();
-		String turtleBody = loader.readFile("input/rdf-bloggers-feedlist.txt",
+		// TODO move to config
+		String turtleBody = loader.readFile("input/short-list.txt", // buggy-list.txt rdf-bloggers-feedlist.txt
 				handler);
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);

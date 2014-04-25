@@ -10,6 +10,7 @@
 package org.danja.feedreader.social;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 
 import javax.xml.transform.Result;
@@ -62,10 +63,15 @@ public class TransformerInterpreter implements Interpreter {
             Transformer transformer = FileEntrySerializer.getTransformer(xslFilename);
 
             transformer.transform(source, result);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
+        try {
+			inputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        
     }
 
 }
