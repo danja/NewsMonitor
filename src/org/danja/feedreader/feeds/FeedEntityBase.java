@@ -1,7 +1,16 @@
+/**
+ * feedreader-prototype
+ *
+ * FeedEntityBase.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.feeds;
 
 /**
- * Characteritics common to several components of a feed
+ * Characteristics common to components of a feed
  */
 public class FeedEntityBase implements FeedEntity {
 

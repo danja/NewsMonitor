@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:admin="http://webns.net/mvcb/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+ xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+ xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://bnode.org/blog/sw_en">
+    <title>Semantic Web Posts</title>
+    <link>http://bnode.org/blog/sw_en</link>
+    <description>Posts about RDF and related Technologies.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2012-10-17T15:00Z</dc:date>
+    <admin:generatorAgent rdf:resource="http://semsol.com/#0.2.0"/>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://bnode.org/blog/2012/10/17/data-web-ux-challenges-supporting-different-roles"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2012/09/19/moving-forward-back-to-self-employment"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2011/08/18/joining-talis"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2011/07/13/want-to-hire-me"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2011/06/06/schema-org-threat-or-opportunity"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2011/05/26/upgrading-an-outdated-centos-vserver-to-php-5-3-with-json-enabled"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2011/01/10/2011-resolutions-and-decisions"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2010/12/15/semantic-wysiwyg-in-place-editing-with-swipe"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2010/09/17/is-the-semantic-web-layer-cake-starting-to-crumble"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2010/08/13/dynamic-semantic-publishing-for-any-blog-part-2-linked-readwriteweb"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2010/07/30/dynamic-semantic-publishing-for-any-blog-part-1"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2010/07/28/linked-data-entity-extraction-with-zemanta-and-opencalais"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2010/05/10/contextual-configuration-semantic-web-development-for-visually-minded-webmasters"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2010/05/01/trice-semantic-richtext-editor"/>
+        <rdf:li rdf:resource="http://bnode.org/blog/2010/04/15/could-having-two-rdf-in-htmls-actually-be-handy"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+
+
+  <item rdf:about="http://bnode.org/blog/2012/10/17/data-web-ux-challenges-supporting-different-roles">
+    <title>Data Web UX Challenges: Supporting different Roles</title>
+    <link>http://bnode.org/blog/2012/10/17/data-web-ux-challenges-supporting-different-roles</link>
+    <description>The challenge around offering the best tools for the task context.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2012-10-17T15:00Z</dc:date>
+    <dct:created>2012-10-17T13:22:34Z</dct:created>
+    <dct:modified>2012-10-17T15:10:41Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>data web</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>roles</dc:subject>
+    <dc:subject>ux</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2012/10/17/data-web-ux-challenges-supporting-different-roles"/>
+    <content:encoded>
+      <![CDATA[
+Some hasty User Experience (UX) thoughts inspired by books I'm currently reading, and adapted to the Data Web context:<br />
+<br />
+Despite a blurry separation between roles in software creation, there often is a personal tendency either towards Information Architecture and Business Analysis or towards Interaction and User Interface Design. In the Data Web space, tool developers and demonstrator creators still seem to be stronger in the former than the latter.<br />
+<br />
+Now how do you get from here to there (where &quot;there&quot; equals more user-friendliness)? Maybe getting a better picture of the different roles your tool has to satisfy can help. As well as deciding on the target audience in case of an end-user-facing application. For example:
+<ul><li>Data Providers: main focus is getting a schema and related data published without loss of quality.</li>
+<li>Data Engineers: cares deeply about schema mappings.</li>
+<li>Information Architects: agile schema change management.</li>
+<li>Interaction Designer: simple APIs to integrate real data into highly customizable templates at the post-mockup stage.</li>
+<li>Content and Data Editors: convenient editing tools.</li>
+<li>...</li></ul>
+<br />
+You should need less roles to describe the target user group for a particular application (or this is a sign that your focus may be too wide):
+<ul><li>Curator: convenient editing tools.</li>
+<li>Citizen: wants to be heard, wants browsing tools.</li>
+<li>Data Journalists: want navigation and convenient extraction tools.</li>
+<li>Data Analyst: comparisons and insight generation.</li>
+<li>...</li></ul>
+<br />
+For an end-user application, you can often narrow down the target audience and then create a highly tailored user experience. Less so for a tool. And it gets even harder when your tool implements a specification whose purpose is to broaden the reach of a technology. Like the Semantic Web and its younger relative Linked Data. They both want to simplify Knowledge Management to a level that it can work across the Web. The early adopters in this space range from AI pros to front-end enhancers.<br />
+<br />
+I think it's worth spending the time to ensure the best possible experience for each of the roles you can identify for your app or tool. Even if this means that you have to create several tools that operate against the same source. Let's say you use RDFa or microdata in your HTML templates. You may then need separate visual access methods for Data Engineers and Interaction Designers. Similarly, you may please you product development team with a bespoke API, while the labs team appreciates a bleeding-edge SPARQL endpoint to explore new options.<br />
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2012/09/19/moving-forward-back-to-self-employment">
+    <title>Moving forward back to Self-Employment</title>
+    <link>http://bnode.org/blog/2012/09/19/moving-forward-back-to-self-employment</link>
+    <description>I'm self-employed again after an inspiring year at Talis.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2012-09-19T16:40Z</dc:date>
+    <dct:created>2012-09-19T07:04:05Z</dct:created>
+    <dct:modified>2012-09-19T16:39:28Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>job</dc:subject>
+    <dc:subject>life</dc:subject>
+    <dc:subject>talis</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>work</dc:subject>
+    <dc:subject>information interaction</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2012/09/19/moving-forward-back-to-self-employment"/>
+    <content:encoded>
+      <![CDATA[
+My time at <a href="http://talis-systems.com/">Talis Systems</a> officially ended last week. I joined the team during <a href="http://talis-systems.com/2012/07/refocusing-our-efforts-and-investments/">painful times</a>, but I'm glad (and proud) to have been a Talisian at least for one year. I have had a few freelance gigs with Talis before, but being part of the team was a whole different thing. And I could frequently travel to the UK, immprooff my inklish, and discover the nice city of Birmingham. There's a reason why they have that G in GB.<br />
+<br />
+Work-wise, I probably learned more in the last 12 months than during the previous 5 years combined - hat tip to <a href="http://julianhigman.com/">Julian</a>, <a href="http://ldodds.com/">Leigh</a> and all the other (Ex-)Talis folks. And much of that goes beyond just technical skills. I don't want to bore you, but you can definitely learn a lot about your path through life when you get the opportunity to look at it from a different perspective. Apparently, I first had to become an employee working in a foreign city to see the bigger picture around why I boarded that Semantic Web roller coaster in the first place and where it overlaps with my own ideas and interests.<br />
+<br />
+So I am going back to self-employment. And I am also going to stay in the emerging Data Web market. But I'll approach some things differently this time.<br />
+<br />
+First, change of attitude. To contribute in a personally more healthy way again. I won't argue about technical details and specifications any more. That just turns me into a grumpy person (belated apologies). I doubt that promoting products by advertising their underlying technologies is the best way for establishing and growing a market anyway. That's like trying to heat a room by just burning a lot of matches. Promising, with renewed anticipation after each match, but useless without some larger fire in the end. I would like to help spark off these larger fires. Without constantly burning my fingers (OK, enough fire imagery ;-).<br />
+<br />
+The second change is related, and it is about focus. While I still see many people using the ARC2 toolkit, I have had more encouraging feedback and signs of demand recently around my work for end users (including app developers, in a sense). So my new mission is to improve &quot;information interaction&quot; on the Web, and I'll be offering services in that area.<br />
+<br />
+And it looks like I'm off to a good start. I am already fully booked for the next months.
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2011/08/18/joining-talis">
+    <title>I'm joining Talis!</title>
+    <link>http://bnode.org/blog/2011/08/18/joining-talis</link>
+    <description>I'll start working for Talis' Kasabi team</description>
+    <dc:language>en</dc:language>
+    <dc:date>2011-08-18T09:00Z</dc:date>
+    <dct:created>2011-08-18T07:36:07Z</dct:created>
+    <dct:modified>2011-08-18T10:05:27Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>drupal</dc:subject>
+    <dc:subject>kasabi</dc:subject>
+    <dc:subject>job</dc:subject>
+    <dc:subject>talis</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2011/08/18/joining-talis"/>
+    <content:encoded>
+      <![CDATA[
+<img src="http://bnode.org/media/2011/08/18/kasabi.gif" class="fr" title="KASABI data marketplace" alt="KASABI data marketplace" /> I received a number of very interesting job offers when I <a href="http://bnode.org/blog/2011/07/13/want-to-hire-me">began searching</a> for something new last month, but there was one company that stood out, and that is <a href="http://talis.com/">Talis</a>. Not only do I know many people there already, I also find Talis' new strategic focus and products very promising. In addition, they know and use some of my tools already, and I've successfully worked on Talis projects with Leigh and Keith before. The job interview almost felt like coming home (and the new office is just great).<br />
+<br />
+So I'm very happy to say that I'm going to become part of the <a href="http://kasabi.com/">Kasabi</a> data marketplace <a href="http://beta.kasabi.com/team">team</a> in September where I'll help create and drupalise data management and data market tools.<br />
+<br />
+<img src="http://bnode.org/media/2011/08/18/beenode.gif" class="fl" title="BeeNode" alt="BeeNode" /> I will have to get up to speed with a lot of new things, and the legal and travel costs overhead for Talis is significant, so I hope I can turn this into a smart investment for them as quickly as possible. I'll even rename my blog if necessary... ;-) For those wondering about the future of my other projects, I'll write about them in a separate post soon.<br />
+<br />
+Can't wait to start!
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2011/07/13/want-to-hire-me">
+    <title>Want to hire me?</title>
+    <link>http://bnode.org/blog/2011/07/13/want-to-hire-me</link>
+    <description>Seriously. I am looking for a full-time job.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2011-07-13T16:10Z</dc:date>
+    <dct:created>2011-07-13T16:14:36Z</dct:created>
+    <dct:modified>2011-07-13T16:19:03Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>php</dc:subject>
+    <dc:subject>web</dc:subject>
+    <dc:subject>javascript</dc:subject>
+    <dc:subject>job</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2011/07/13/want-to-hire-me"/>
+    <content:encoded>
+      <![CDATA[
+I have been happily working as a self-employed semantic web developer for the last seven years. With steady progress, I dare to say, but the market is still evolving a little bit too slowly for me (well, at least here in Germany) and I can't invest any longer. So I am looking for new challenges and an employer who would like to utilize my web technology experience (semantic or not). I have created a new <a href="http://bnowack.de/">personal online profile</a> with detailed information about me, my skills, and my work.<br />
+<br />
+My dream job would be in the social and/or data web area, I'm particularly interested in front-end development for data-centric or stream-oriented environments. I also love implementing technical specifications (probably some gene defect).<br />
+<br />
+The potential show-stopper: I can't really relocate, for private reasons. I am happy to (tele)commute or travel, though. And I am looking for a full-time employment (or a full-time, longer-term contract). I am already applying for jobs, mainly here in DÃ¼sseldorf so far, but I thought I'd send out this post as well. You never know :)
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2011/06/06/schema-org-threat-or-opportunity">
+    <title>Schema.org - Threat or Opportunity?</title>
+    <link>http://bnode.org/blog/2011/06/06/schema-org-threat-or-opportunity</link>
+    <description>Some thoughts about the impact of Schema.org</description>
+    <dc:language>en</dc:language>
+    <dc:date>2011-06-06T16:20Z</dc:date>
+    <dct:created>2011-06-06T08:27:57Z</dct:created>
+    <dct:modified>2011-06-23T10:24:31Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>semtech</dc:subject>
+    <dc:subject>seo</dc:subject>
+    <dc:subject>yahoo</dc:subject>
+    <dc:subject>rdf</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>bing</dc:subject>
+    <dc:subject>rdfa</dc:subject>
+    <dc:subject>schema.org</dc:subject>
+    <dc:subject>google</dc:subject>
+    <dc:subject>microdata</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2011/06/06/schema-org-threat-or-opportunity"/>
+    <content:encoded>
+      <![CDATA[
+I only wanted to track <a href="http://semtech2011.semanticweb.com/">SemTech</a> chatter but it seems all semantics-related tweet streams are discussing just one thing right now: <a href="http://schema.org/">Schema.org</a>. So I apparently will have to build a #semtech filtering app, but I couldn't resist and had a close look at Schema.org, too. And just like everybody else, I'll join the fun of polluting the web with yet another opinion about its potential impact on the Semantic Web initiative and related efforts.<br />
+<br />
+
+<h4>What exactly is Schema.org?</h4>
+<ul><li>It is a list of instructions for adding structured data to HTML pages.</li>
+<li>Webmasters can choose from a long, but finite list of types and properties.</li>
+<li>Data-enhanced web pages trigger richer displays in Google/Bing/Yahoo search result pages.</li></ul>
+<br />
+
+<h4>Why the uproar?</h4>
+<ul><li>Schema.org proposes the use of Microdata, a rather new RDF format that was not developed by the RDF community.</li>
+<li>Schema.org introduces a new vocabulary which doesn't re-use terms from existing RDF schemas.</li></ul>
+<br />
+
+<h4>Who can benefit from it?</h4>
+<ul><li>The web, because the simple template-like instructions on schema.org will boost the amount of structured data, similar to Facebook's <a href="http://ogp.me/">Open Graph Protocol</a>.</li>
+<li>The semantic web market, by offering complementing as well as extending/competing solutions. </li>
+<li>SEO people, because they can offer their service with less effort. </li>
+<li>Website owners, who can more reliably customize their search engine displays and increase CTRs. </li>
+<li>Possibly HTML5 (doctype) deployment, because the supported structures are based on HTML5's <a href="http://www.w3.org/TR/microdata/">Microdata</a>. </li>
+<li>Verticals around popular topics (Music, Food, ...) because the format shakeout will make their parser writers' lifes easier. </li>
+<li>Verticals who manage to successfully establish a schema.org extension (e.g. Job Offers). </li>
+<li>The search engine companies involved, because extracting (known) structures can be less expensive and more accurate than NLP and statistical analysis. Controlling the vocabulary also means being able to tailor it to semantic advertising needs, integrating the schema.org taxonomy with AdWords would make a lot of (business) sense. And finally, the search engines can more easily generate their own verticals now (as Google has already successfully done with shopping and recipe browsers), making it harder for specialized aggregators to gain market share. </li>
+<li>Spammers, unless the search engines manage to integrate the structured markup with their exisitng stats-based anti-spam algorithms. </li></ul>
+<br />
+
+<h4>Who might be threatened and how could they respond?</h4>
+<ul><li>Microformats and overlapping RDF vocabularies such as FOAF (<a href="http://chatlogs.planetrdf.com/swig/2011-06-06.html#T17-24-40">unlikely</a>) or GoodRelations, which Schema.org already calls &quot;earlier work&quot;. Even if they continue to be supported for the time being, implementers will switch to schema.org vocabulary terms. One opportunity for RDF schema providers lies in grounding their terms in the schema.org taxonomy and highlighting use cases beyond the simple SEO/Ad objectives of Schema.org. RDF vocabs excel in the long tail, and there are many opportunities left (especially for <a href="http://schema.org/AutomotiveBusiness">non-motorcycle businesses</a> ;-). This will best work out if there are finally going to be applications that utilize these advanced data structures. If the main consumers continue to be search engines, there is little incentive to invest in higher granularity. </li>
+<li>The RDFa community. They <em>think</em> they are under attack here, and I wonder if Manu is <a href="http://manu.sporny.org/2011/false-choice/">overreacting</a> perhaps? Hey, if they had <a href="http://bnode.org/blog/2010/01/26/microdata-semantic-markup-for-both-rdfers-and-non-rdfers">listened to me</a> they wouldn't have this problem now, but they had several reasons to stick to their approach and I don't think these arguments get simply wiped away by Schema.org. They may have to spend some energy now on keeping Facebook on board, but there are enough other RDFa adopters that they shouldn't be worried too much. And, like the RDF vocab providers, they should highlight use cases beyond SEO. The good news is that potential spam problems, which are more likely to occur in the SEO context, will now get associated with Microdata, not RDFa. And the Schema.org graph can be manipulated by any site owner while Facebook's interest graph is built by authenticated users. Maybe the RDFa community shouldn't have taken the SEO train in the first place anyway. Now Schema.org simply stole the steam. After all, one possible future of the semantic web was to creatively destroy centralized search engines, and not to suck up to them. So maybe Schema.org can be interpreted as a kick in the back to get back on track. </li>
+<li>The general RDF community, but unnecessarily so. RDFers kicked off a global movement which they can be proud of, but they will have to accept that they <a href="http://twitter.com/#!/Carnage4Life/status/76999010413592577">no longer dictate</a> how the semantic web is going to look like. Schema.org seems to be a syntax fight, but Microdata maps nicely to RDF, which RDFers often ignore (that's why <a href="http://schema.rdfs.org/">schema.rdfs.org</a> was so easy to set up). The real wakeup call is less obvious. I'm sure that until now, many RDFers didn't notice that a core RDF principle is dying. RDFers used to think that distinct identifiers for pages and their topics are needed. This assumption was already proved wrong when Facebook started their page-based OGP effort. Now, with Schema.org's canonical URLs, we have a second, independent group that is building a semantic web truly layered on top of the existing web, without identifier mirrors (and so far without causing any <a href="http://dfdf.inesc-id.pt/tr/web-arch#sec2">URI identity crisis</a>). This evolving semantic web is closer to the existing web than the current linked data layer, and probably even more compatible with OWL, too. There is a lot we can learn. Instead of becoming protective, the RDF community should adapt and simplify their offerings if they want to keep their niches relevant. Luckily, this is already happening, as e.g. the <a href="http://code.google.com/p/linked-data-api/">Linked Data API</a> demonstrates. And I'm very happy to see <a href="http://ivan-herman.name/">Ivan Herman</a> increasingly speaking/writing about the need to finally connect web developers with the semantic web community.</li>
+<li>Early adopters in the CMS market. Projects like <a href="http://drupal.org/">Drupal</a> and <a href="http://www.iks-project.eu/">IKS</a> have put non-trivial resources into integrating machine-readable markup, and most of them are using RDFa. Microdata, in my experience, is easier to tame in a CMS than RDFa, especially when it comes to JavaScript operations. But whether semantic CMSs should add support for (or switch to) Schema.org microdata and their vocabulary depends more on whether they want/need to utilize SEO as a (short-term) selling proposition. Again, this will also depend on application developer demands.<br />
+</li></ul>
+<br />
+
+<h4>What about Facebook?</h4>
+Probably the more interesting aspect of this story, what will Facebook do? Their interest graph combined with linked data has big potential, not only for semantic advertising. And Facebook is interested in getting as many of their hooks into websites as possible. Switching to Microdata and/or aligning their types with Schema.org's vocabulary could make sense. Webmasters would probably welcome such a consolidation step as well. On the other hand, Facebook is known for wanting to keep things under their own control, too, so the chance of them adopting Schema.org and Microdata is rather low. This could well turn into an RSS-dejavu with a small set of formats (OGP-RDFa, full RDFa, Schema.org-Microdata, full Microdata) fighting for publisher and developer attention.<br />
+<br />
+
+<h4>Conclusion</h4>
+I am glad that Microdata finally gets some deserved attention and that someone acknowledged the need for a format that is easy to write <em>and</em> to consume. Yes, we'll get another wave of &quot;see, RDF is too complicated&quot; discussions, but we should be used to them by now. I expect RDF toolkits to simply integrate Microdata parsers soon-ish (if we're good at one thing then it's writing parsers), and the Linked Data community gets <a href="http://googlewebmastercentral.blogspot.com/2011/06/introducing-schemaorg-search-engines.html?showComment=1307089163586#c562436905078018499">just another taxonomy to link to</a>. Schema.org owns the SEO use case now, but it's also a nice starting point for our more distributed vision. The semantic web vision is bigger than data formats and it's definitely bigger than SEO. The enterprise market which RDF has mainly been targetting recently is a whole different beast anyway. No kittens killed. Now go build some apps, please ;-)
+
+
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2011/05/26/upgrading-an-outdated-centos-vserver-to-php-5-3-with-json-enabled">
+    <title>Upgrading an outdated CentOS-VServer to PHP 5.3 with JSON enabled</title>
+    <link>http://bnode.org/blog/2011/05/26/upgrading-an-outdated-centos-vserver-to-php-5-3-with-json-enabled</link>
+    <description>A very easy way to switch from a restricted PHP 5.2.6 to PHP 5.3.6 without destroying Plesk.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2011-05-26T08:25Z</dc:date>
+    <dct:created>2011-05-26T08:13:37Z</dct:created>
+    <dct:modified>2011-05-26T11:38:30Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>jiffybox</dc:subject>
+    <dc:subject>domainfactory</dc:subject>
+    <dc:subject>hosting</dc:subject>
+    <dc:subject>php53</dc:subject>
+    <dc:subject>sqlite</dc:subject>
+    <dc:subject>json</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2011/05/26/upgrading-an-outdated-centos-vserver-to-php-5-3-with-json-enabled"/>
+    <content:encoded>
+      <![CDATA[
+I'm slowly migrating my servers away from 1&amp;1 to <a href="http://df.eu/">DomainFactory</a>, a more modern hosting provider here in Germany. Slowly, because 1&amp;1 has long-running contracts and I will have to keep a few machines until the end of the year.<br />
+<br />
+So I still have a spare 1&amp;1 VServer running a slightly outdated CentOS 5.4 or so which I would like to use for site previews and tests. Among other things, I'm exploring the possibilities of a simplified lib for Semantic Web development, which involves some of the newer features of PHP 5.3 in combination with JSON-based data processing (and possibly SQLite). Unfortunately, my VServer didn't provide either, and the server initialization panel doesn't offer any current OS, possibly due to the bundled Plesk.<br />
+<br />
+Although I did manage to upgrade either CentOS or PHP via yum, each time I ended up with a broken Plesk. Day-long story shorter: I eventually found <a href="http://www.webtatic.com/packages/php53/">a nice and simple guide at webtatic.com</a> that worked just fine. The trick is to keep the CentOS as-is (Plesk apparently has issues with certain versions of SSL) and to update PHP with 5.3 packages that still use the pre-5.3 naming scheme (i.e. &quot;php-common&quot; instead of &quot;php53-common&quot; etc.). This way you won't get module and dependency conflicts; the new PHP is just handled as a basic update :)<br />
+<br />
+Here is a quick summary of the commands needed (via <a href="http://www.webtatic.com/packages/php53/">webtatic</a>):<br />
+<pre class="code">rpm -Uvh http://repo.webtatic.com/yum/centos/5/latest.rpm
+yum --enablerepo=webtatic update php
+</pre>
+And that's it. The only thing still missing is SQLite, which I didn't manage to get to work. The PDO extension is there, but PHP itself was initially configured as '--without-sqlite3'. For SQLite experiments, I will probably try <a href="http://jiffybox.de/">JiffyBox</a>, which I played with a little yesterday and which looks very promising.<br />
+<br />
+<strong>Update: </strong> <a href="http://bnode.org/blog/2011/05/26/how-to-add-a-missing-sqlite-extension-to-an-existing-php-system-centos">SQLite is now working, too</a>.
+
+
+<br />
+  
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2011/01/10/2011-resolutions-and-decisions">
+    <title>2011 Resolutions and Decisions</title>
+    <link>http://bnode.org/blog/2011/01/10/2011-resolutions-and-decisions</link>
+    <description>I'm shifting focus from infrastructure and research to solutions and customer projects.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2011-01-10T09:50Z</dc:date>
+    <dct:created>2011-01-10T09:15:14Z</dct:created>
+    <dct:modified>2011-01-10T10:11:50Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>resolutions</dc:subject>
+    <dc:subject>arc</dc:subject>
+    <dc:subject>2011</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2011/01/10/2011-resolutions-and-decisions"/>
+    <content:encoded>
+      <![CDATA[
+All right, this post could easily have become another rant about the ever-growing complexity of RDF specifications, but I'll turn it into a big shout-out to the Semantic Web community instead. After <a href="http://arc.semsol.org/community/arc-dev/archives/2011/01/4D25D65D.2020207@semsol.com">announcing</a> the end of investing further time into ARC's open-source branch, I received so many nice tweets and mails that I was reminded of why I started the project in the first place: The positive vibe in the community, and the shared vision. Thank you very much everybody for the friendly reactions, I'm definitely very moved.<br />
+<br />
+Some explanations: I still share the vision of machine-readable, integration-ready web content, but I have to face the fact that the current approach is getting too expensive for web agencies like <a href="http://semsol.com/">mine</a>. Luckily, I could spot a few areas where customer demands meet the cost-efficient implementation of certain spec subsets. (Those don't include comprehensive RDF infrastructure and free services here, though. At least not yet, and I just won't make further bets). The good news: I will continue working with semantic web technologies, and I'm personally very happy to switch focus from rather frustrating spec chasing to customer-oriented solutions and <a href="http://semsol.com/prospect">products with defined purposes</a>. The downside: I have to discontinue a couple of projects and services in order to concentrate my energy and reduce (opportunity) costs. These are:
+<ul><li>The ARC website, mailing list, and other forms of free support. The code and documentation get <a href="https://github.com/semsol/arc2">a new home on GitHub</a>, though. The user community is already thinking about setting up a mailing list on their own. Development of ARC is going to continue internally, based on client projects (it's not dying).</li>
+<li>Trice as an open-source project (lesson learned from ARC)</li>
+<li>Semantic CrunchBase. I had a number of users but no paying ones. It was also one those projects that happily burn your marketing budget while at the same time having only negative effects on the company's image because the funds are too small to provide a reliable service (similar to the flaky DBPedia SPARQL service which makes the underlying RDF store look like a crappy product although it is absolutely not).</li>
+<li>Knowee, Smesher and similar half-implemented and unfunded ideas.</li></ul>
+
+Looking forward to a more simplified and streamlined 2011. Lots of success to all of you, and thanks again for the nice mails!
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2010/12/15/semantic-wysiwyg-in-place-editing-with-swipe">
+    <title>Semantic WYSIWYG in-place editing with Swipe</title>
+    <link>http://bnode.org/blog/2010/12/15/semantic-wysiwyg-in-place-editing-with-swipe</link>
+    <description>Introducing Swipe, Paggr's Microdata editor.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2010-12-15T17:40Z</dc:date>
+    <dct:created>2010-12-15T16:35:07Z</dct:created>
+    <dct:modified>2010-12-15T17:51:08Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>rte</dc:subject>
+    <dc:subject>paggr</dc:subject>
+    <dc:subject>html5</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>microdata</dc:subject>
+    <dc:subject>cms</dc:subject>
+    <dc:subject>swipe</dc:subject>
+    <dc:subject>wysiwyg</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2010/12/15/semantic-wysiwyg-in-place-editing-with-swipe"/>
+    <content:encoded>
+      <![CDATA[
+Several months ago (ugh, time flies) I <a href="http://bnode.org/blog/2010/05/01/trice-semantic-richtext-editor">posted a screencast</a> demo'ing a semantic HTML editor. Back then I used a combination of client-side and server-side components, which I have to admit led to quite a number of unnecessary server round-trips.<br />
+<br />
+In the meantime, <a href="http://aloha-editor.org/">others have shown</a> that powerful client-side editors can be implemented on top of HTML5, and so I've now rewritten the whole thing and turned it into a pure JavaScript tool as well. It now supports inline WYSIWYG editing and <a href="http://www.w3.org/TR/microdata/">HTML5 Microdata</a> annotations.<br />
+<br />
+The code is still at beta stage, but today I put up an early <a href="http://swipe.semsol.com/">demo website</a> which I'll use as a sandbox. The editor is called Swipe (like the dance move, but it's an acronym, too). What makes Swipe special is its ability to detect the caret coordinates even when the cursor is inside a text node, which is usually not possible with W3C range objects. This little difference enables several new possibilities, like precise in-place annotations or &quot;linked-data-as-you-type&quot; functionality for user-friendly entity suggestions. More to come soon...<br />
+<br />
+<a href="http://swipe.semsol.com/"><img src="http://swipe.semsol.com/media/2010/12/swipe_richtext_editor.gif" title="Swipe - Semantic WYSIWYG in-place editor" alt="Swipe - Semantic WYSIWYG in-place editor" /></a><br />
+
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2010/09/17/is-the-semantic-web-layer-cake-starting-to-crumble">
+    <title>Is the Semantic Web Layer Cake starting to crumble?</title>
+    <link>http://bnode.org/blog/2010/09/17/is-the-semantic-web-layer-cake-starting-to-crumble</link>
+    <description>Some thoughts about the ever-growing number of RDF specs.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2010-09-17T12:30Z</dc:date>
+    <dct:created>2010-09-17T09:48:41Z</dct:created>
+    <dct:modified>2010-09-20T07:02:28Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>sparql</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>layer cake</dc:subject>
+    <dc:subject>complexity</dc:subject>
+    <dc:subject>arc</dc:subject>
+    <dc:subject>w3c</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2010/09/17/is-the-semantic-web-layer-cake-starting-to-crumble"/>
+    <content:encoded>
+      <![CDATA[
+I recently read an article about how negative assertions about something are automatically getting associated with the person who made them. For example, if you say negative things about your competitor's products, people will subconsciously link these negative sentiments directly with you. A psychology thing. So, my recent rants about the RDF spec mania at the W3C have already lead to an all-time low karma level in the RDF community, and I'm trying hard to keep away from discussions about RDFa 1.1 or RDF Next Steps etc. to not make things worse. (Believe it or not, not all Germans enjoy being negative ;)<br />
+<br />
+Now, why another post on this topic? <a href="http://arc.semsol.org/">ARC2</a>'s development is currently on hold as my long-time investor/girlfriend pulled the plug on it and (rightly so) wants me to focus on my commercial products. With ARC spreading, the maintenance costs are rising, too. There are some options around paid support, sponsoring and donations that I'm pondering, but for now the mails in my inbox are piling up, and one particular question people keep asking is whether ARC is going to support upcoming SPARQL 1.1 or if I'm going to boycott it and perhaps think that the W3C specs are preventing the semantic web from gaining momentum. Short answer (both times): To a certain extent, yes.<br />
+<br />
+Funnily, this isn't so much a question about developers wanting to implement SPARQL 1.1, but rather if they actually <em>can</em> implement it, in an efficient way. SPARQL 1.1 standardizes a couple of much-needed features that we had in ARC's proprietary <a href="http://arc.semsol.org/docs/v2/sparql+">SPARQL+</a> for a couple of years. Things like aggregates and full CRUD which I managed to implement in a fast-enough way for my client projects. But when it comes to all the other features in SPARQL 1.1, the suggestions coming out of the &quot;RDF 2.0&quot; initiative, and the general growth of the stack, I do wonder if the RDF community is about to over<s>cook</s>bake its technology layer cake.<br />
+<br />
+Not that any particular spec was bad or useless, but it is becoming increasingly hard for implementors to keep up. Who can honestly justify the investment in the layer cake if it takes a year to digest it, another year to implement a reasonable portion of it, and then a new spec obsoletes the expensive work? The main traction the Semantic Web effort is seeing happens around <a href="http://linkeddata.org/">Linked Data</a>, which uses <a href="http://bnode.org/blog/2009/07/08/the-semantic-web-not-a-piece-of-cake">only a fraction of the stack</a>, and interestingly in a way non-compliant with other W3C recommendations such as OWL, because the latter doesn't provide the needed means for actual symbol linking (or didn't explain it good enough).<br />
+<br />
+A central problem could be lack of targeting, and lack of formulating the target audience of a particular spec. 37signals once said that <a href="http://gettingreal.37signals.com/ch04_Make_Opinionated_Software.php">good software is opinionated</a>. The RDF community is doing the exact opposite and seems to desperately try to please everyone. The groups follow the throw-it-out-and-see-what-sticks approach. And every new spec is thrown on the stack, with none of them having a helpful description for orientation. No one is taking the time to reduce confusion, to properly explain who is meant to implement the spec, who is meant to use the spec, and how the spec relates to other ones. Sure, new specs raise the market entrance barrier and thus help the few early vendors to keep competition away. But if the market growth gets delayed this way, it may die, or at least an unnecessary number of startups do. (Siderean is one example, their products were amazing. Another one is Radar Networks, which suffered from management issues, but they might have survived if they had spent less money trying to implement an OWL engine for Twine.)<br />
+<br />
+For the fun of it, here are some micro-summaries for RDF specs, how I as a web developer understand them:
+<ul><li><strong>RDF</strong>: &quot;A schema-less key-value system that integrates with the web.&quot; (Oha!)</li>
+<li><strong>RSS 1.0</strong>: &quot;Rich data streams.&quot; (This is the stuff the thought leaders then said would never be needed, and which now inefficiently have to be squeezed into Atom extensions. Deppen!)</li>
+<li><strong>OWL 1</strong>: &quot;Dumbing down KR-style modeling and inference to the web coder level&quot; (I really liked that approach, it attracted me to the SemWeb idea in the first place, even though I later discovered that RDF Schema is sufficient in many cases.)</li>
+<li><strong>SPARQL 1.0</strong>: &quot;A webby SQL with support for remote databases and without complex JOIN syntax.&quot; (Love it!)</li>
+<li><strong>GRDDL</strong>: &quot;For HTML developers who are also XSLT nerds.&quot; (A failure, possibly because the target audience was too small, or because HTML creators didn't care for XML processing requirements. Or the chained processing of remote documents was simply too complex.)</li>
+<li><strong>OWL 2</strong>: &quot;Made for the people who created it, and maybe AI students.&quot; (Never needed any of its features that I couldn't have more easily with simple SPARQL scripts. I think some people need and use it, though.)</li>
+<li><strong>RIF</strong>: &quot;Even more features than OWL2, and yet another syntax&quot;. Alternative summary (for a good ROFL): &quot;<a href="http://www.readwriteweb.com/archives/w3c_pleased_with_semantic_web_adoption.php">Perfect for Facebook's Open Graph</a>&quot;. (No use case here. Again, YMMV.)</li>
+<li><strong>RDFa 1.1</strong>: I actually stopped following it, but here is one by Scott Gilbertson: &quot;<a href="http://www.webmonkey.com/2010/09/microdata-html5s-best-kept-secret/">a bit like asking what time it is and having someone tell you how to build a watch</a>&quot;</li>
+<li><strong>SPARQL 1.1</strong>: &quot;Getting at par with enterprise databases, at any cost.&quot; (A slap in the face of web developers. Too many features that are not implementable in any reasonable time, nor in its entirety, nor with user-satisfying performance. Profiles for feature subsets could still save it, though).</li>
+<li><strong>Microdata</strong>: &quot;RDF-in-HTML made easy for CMS developers and JavaScript coders&quot; (Not sure if it'll succeed, but it works well for me.).</li>
+<li><strong>SKOS</strong>: &quot;An interesting alternative to RDFS and OWL and a possible bridge to the Web 2.0 world.&quot; (Wish I had time to explore SKOS-centric app development, the potential could be huge.)
+</li></ul>
+<br />
+I <a href="http://lists.w3.org/Archives/Public/semantic-web/2010Jul/0137.html">still believe</a> that the lower-end adoption issue could be solved by a set of smaller layer cakes, each baked for and marketed to a defined and well-understood target audience. If the W3C groups continue to add to the same cake, it's going to crumble apart sooner or later, and the higher layers are going to bury the foundations. Nobody is going to taste from it at all then.<br />
+<br />
+Ben Lavender  <a href="http://bhuga.net/2009/11/w3c-going-wrong-direction-sparql-11">formulated his  concerns</a> already several months ago.<br />
+<br />
+<a href="http://www.flickr.com/photos/danbri/428172848/"><img src="http://farm1.static.flickr.com/172/428172848_83a59aa3bc_d.jpg" title="The truth about the Semantic Web... by Dan Brickley" alt="The truth about the Semantic Web... by Dan Brickley" /></a><br />
+<em>Picture: &quot;<a href="http://www.flickr.com/photos/danbri/428172848/">The truth about the Semantic Web...</a>&quot; by <a href="http://danbri.org/">Dan Brickley</a></em><br />
+<br />
+And to answer the ARC-related question in more detail, too: Next step is collecting enough funds to test and release a PHP 5.3 E_STRICT version (Thanks so much to all donaters so far, we'll get there!). SPARQL 1.1 compatibility will come, but only for those parts that can be mapped to relational DB functionality. The REST API is on my list, too. Empty graphs, don't think so (which app would need them?). Sub-queries, most probably not. Federated queries, sure, as soon as someone figures out how to do production-ready remote JOINs ;-)<br />
+ <br />
+<strong>Update</strong>: This article has been called unfair and misleading, and I have to agree. I know that spec work is hard, that it's easy to complain from the sideline, and that frustration is part of compromise-driven specifications. Wake-up calls have to be a little louder to be heard, though, but I apologize for the toe-stepping. It is not directed against any person in particular.<br />
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2010/08/13/dynamic-semantic-publishing-for-any-blog-part-2-linked-readwriteweb">
+    <title>Dynamic Semantic Publishing for any Blog (Part 2: Linked ReadWriteWeb)</title>
+    <link>http://bnode.org/blog/2010/08/13/dynamic-semantic-publishing-for-any-blog-part-2-linked-readwriteweb</link>
+    <description>A DSP proof of concept using ReadWriteWeb.com data.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2010-08-13T21:20Z</dc:date>
+    <dct:created>2010-08-13T20:07:10Z</dct:created>
+    <dct:modified>2010-08-13T21:13:56Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>paggr</dc:subject>
+    <dc:subject>semsol</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>readwriteweb</dc:subject>
+    <dc:subject>blogdb</dc:subject>
+    <dc:subject>prospect</dc:subject>
+    <dc:subject>linked data</dc:subject>
+    <dc:subject>entity hubs</dc:subject>
+    <dc:subject>dynamic semantic publishing</dc:subject>
+    <dc:subject>bbc</dc:subject>
+    <dc:subject>arc</dc:subject>
+    <dc:subject>trice</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2010/08/13/dynamic-semantic-publishing-for-any-blog-part-2-linked-readwriteweb"/>
+    <content:encoded>
+      <![CDATA[
+The <a href="http://bnode.org/blog/2010/07/30/dynamic-semantic-publishing-for-any-blog-part-1">previous post</a> described a generic approach to BBC-style &quot;Dynamic Semantic Publishing&quot;, where I wondered if it could be applied to basically any weblog.<br />
+<br />
+During the last days I spent some time on a test evaluation and demo system using data from the popular <a href="http://readwriteweb.com/">ReadWriteWeb tech blog</a>. The application is not public (I don't want to upset the content owners and don't have any spare server anyway), but you can watch a <a href="http://www.youtube.com/watch?v=6sHx2ghiifs">screencast</a> (embedded below).<br />
+<br />
+The application I created is a semantic dashboard which generates dynamic entity hubs and allows you to explore RWW data via multiple dimensions. To be honest, I was pretty surprised myself by the dynamics of the data. When I switched back to the official site after using the dashboard for some time, I totally missed the advanced filtering options.<br />
+<br />
+<object width="600" height="420"><param name="movie" value="http://www.youtube.com/v/6sHx2ghiifs&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6sHx2ghiifs&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="600" height="420"></embed></object>
+<br />
+<br />
+In case you are interested in the technical details, fasten your data seatbelt and read on.<br />
+<br />
+
+<h4>Behind the scenes</h4>
+As mentioned, the framework is supposed to make it easy for site maintainers and should work with plain HTML as input. Direct access to internal data structures of the source system (database tables, post/author/commenter identifiers etc.) should not be needed. Even RDF experts don't have much experience with side effects of semantic systems directly hooked into running applications. And with RDF encouraging loosely coupled components anyway, it makes sense to keep the semantification on a separate machine.<br />
+<br />
+In order to implement the process, I used <a href="http://trice.semsol.org/">Trice</a> (once again), which supports simple agents out of the box. The bot-based approach already worked quite nicely in <a href="http://talis.com/">Talis</a>' <a href="http://fanhu.bz/">FanHubz</a> demonstrator, so I followed this route here, too. For &quot;Linked RWW&quot;, I only needed a very small number of bots, though.<br />
+<br />
+<img src="http://bnode.org/media/2010/08/rww_bot_console.gif" title="Trice Bot Console" alt="Trice Bot Console" /><br />
+<br />
+Here is a quick re-cap of the <a href="http://bnode.org/media/2010/08/dsp_architecture.gif">proposed dynamic semantic publishing process</a>, followed by a detailed description of the individual components:
+<ul><li>Index and monitor the archives pages, build a registry of post URLs.</li>
+<li>Load and parse posts into raw structures (title, author, content, ...).</li>
+<li>Extract named entities from each post's main content section.</li>
+<li>Build a site-optimized schema (an &quot;ontology&quot;) from the data structures generated so far.</li>
+<li>Align the extracted data structures with the target ontology.</li>
+<li>Re-purpose the final dataset (widgets, entity hubs, semantic ads, authoring tools)</li></ul>
+<br />
+
+<h4>Archives indexer and monitor</h4>
+The archives indexer fetches the <a href="http://www.readwriteweb.com/archives.php">by-month archives</a>, extracts all link URLs matching the &quot;YYYY/MM&quot; pattern, and saves them in an <a href="http://arc.semsol.org/">ARC Store</a>.<br />
+<br />
+The implementation of this bot was straightforward (less than 100 lines of PHP code, including support for pagination); this is clearly something that can be turned into a standard component for common blog engines very easily. The result is a complete list of archives pages (so far still without any post URLs) which can be accessed through the RDF store's built-in SPARQL API:<br />
+<br />
+<img src="http://bnode.org/media/2010/08/rww_archives_rdf.gif" title="Archives triples via SPARQL" alt="Archives triples via SPARQL" /><br />
+<br />
+A second bot (the archives monitor) receives either a not-yet-crawled index page (if available) or the most current archives page as a starting point. Each post link of that page is then extracted and used to build a registry of post URLs. The monitoring bot is called every 10 minutes and keeps track of new posts.<br />
+<br />
+
+<h4>Post loader and parser</h4>
+In order to later process post data at a finer granularity than the page level, we have to extract sub-structures such as title, author, publication date, tags, and so on. This is the harder part because most blogs don't use Linked Data-ready HTML in the form of Microdata or RDFa. Luckily, blogs are template-driven and we can use DOM paths to identify individual post sections, similar to how tools like the <a href="http://open.dapper.net/">Dapper Data Mapper</a> work. However, given the flexibility and customization options of modern blog engines, certain extensions are still needed. In the RWW case I needed site-specific code to expand multi-page posts, to extract a machine-friendly publication date, Facebook Likes and Tweetmeme counts, and to generate site-wide identifiers for authors and commenters.<br />
+<br />
+Writing this bot took several hours and almost 500 lines of code (after re-factoring), but the reward is a nicely structured blog database that can already be explored with an off-the-shelf RDF browser. At this stage we could already use the SPARQL API to easily create dynamic widgets such as &quot;related entries&quot; (via tags or categories), &quot;other posts by same author&quot;, &quot;most active commenters per category&quot;, or &quot;most popular authors&quot; (as shown in the example in the image below).<br />
+<br />
+<img src="http://bnode.org/media/2010/08/rww_post_structures.gif" title="Raw post structures" alt="Raw post structures" /><br />
+<br />
+
+<h4>Named entity extraction</h4>
+Now, the next bot can take each post's main content and <a href="http://bnode.org/blog/2010/07/28/linked-data-entity-extraction-with-zemanta-and-opencalais">enhance it with Zemanta and OpenCalais</a> (or any other entity recognition tool that produces RDF). The result of this step is a semantified, but rather messy dataset, with attributes from half a dozen RDF vocabularies.<br />
+<br />
+
+<h4>Schema/Ontology identification</h4>
+Luckily, RDF was designed for working with multi-source data, and thanks to the SPARQL standard, we can use general purpose software to help us find our way through the enhanced assets. I used <a href="http://semsol.com/prospect">a faceted browser</a> to identify the site's main entity types (click on the image below for the full-size version).<br />
+<br />
+<a href="http://bnode.org/media/2010/08/rww_prospect.gif"><img src="http://bnode.org/media/2010/08/rww_prospect_small.gif" title="RWW through Paggr Prospect" alt="RWW through Paggr Prospect" /></a><br />
+<br />
+Although spotting inconsistencies (like Richard MacManus appearing multiple times in the &quot;author&quot; facet) is easier with a visual browser, a simple, generic SPARQL query can alternatively do the job, too:<br />
+<br />
+<img src="http://bnode.org/media/2010/08/rww_types.gif" title="RWW entity types" alt="RWW entity types" /><br />
+<br />
+
+<h4>Specifying the target ontology</h4>
+The central entity types extracted from RWW posts are Organizations, People, Products, Locations, and Technologies. Together with the initial structures, we can now draft a consolidated RWW target ontology, as illustrated below. Each node gets its own identifier (a URI) and can thus be a bridge to the public <a href="http://linkeddata.org/">Linked Data</a> cloud, for example to import a company's competitor information.<br />
+<br />
+<img src="http://bnode.org/media/2010/08/rww_ont.gif" title="RWW ontology" alt="RWW ontology" /><br />
+<br />
+
+<h4>Aligning the data with the target ontology</h4>
+In this step, we are again using a software agent and break things down into smaller operations. These sub-tasks require some RDF and Linked Data experience, but basically, we are just manipulating the graph structure, which can be done quite comfortably with a SPARQL 1.1 processor that supports INSERT and DELETE commands. Here are some example operations that I applied to the RWW data:
+<ul><li>Consolidate author aliases (&quot;richard-macmanus-1 = richard-macmanus-2&quot; etc.).</li>
+<li>Normalize author tags, Zemanta tags, OpenCalais tags, and OpenCalais &quot;industry terms&quot; to a single &quot;tag&quot; field.</li>
+<li>Consolidate the various type identifiers into canonical ones.</li>
+<li>For each untyped entity, retrieve typing and label information from the Linked Data cloud (e.g. DBPedia, Freebase, or Semantic CrunchBase) and try to map them to the target ontology. </li>
+<li>Try to consolidate &quot;obviously identical&quot; entities (I cheated by merging on labels here and there, but it worked).</li></ul>
+Data alignment and QA is an iterative process (and a slightly slippery slope). The quality of public linked data varies, but the cloud is very powerful. Each optimization step adds to the network effects and you constantly discover new consolidation options. I spent just a few hours on the inferencer, after all, the Linked RWW demo is just meant to be a proof of concept.<br />
+<br />
+After this step, we're basically done. From now on, the bots can operate autonomously and we can (finally) build our dynamic semantic publishing apps, like the <a href="http://paggr.com/">Paggr</a> Dashboard presented in the <a href="http://www.youtube.com/watch?v=6sHx2ghiifs">video</a> above.<br />
+<br />
+<a href="http://bnode.org/media/2010/08/rww_dashboard.gif"><img src="http://bnode.org/media/2010/08/rww_dashboard_small.gif" title="Dynamic RWW Entity Hub" alt="Dynamic RWW Entity Hub" /></a><br />
+ <br />
+
+<h4>Conclusion</h4>
+Dynamic Semantic Publishing on mainstream websites is still new, and there are no complete off-the-shelf solutions on the market yet. Many of the individual components needed, however, are available. Additionally, the manual effort to integrate the tools is no longer incalculable research, but is getting closer to predictable &quot;standard&quot; development effort. If you are perhaps interested in a solution similar to the ones described in this post, please <a href="http://semsol.com/contact">get in touch</a>.
+ 
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2010/07/30/dynamic-semantic-publishing-for-any-blog-part-1">
+    <title>Dynamic Semantic Publishing for any Blog (Part 1)</title>
+    <link>http://bnode.org/blog/2010/07/30/dynamic-semantic-publishing-for-any-blog-part-1</link>
+    <description>Bringing automated semantic page generation a la BBC to standard web environments.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2010-08-02T09:55Z</dc:date>
+    <dct:created>2010-07-30T07:13:17Z</dct:created>
+    <dct:modified>2010-08-14T16:23:53Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>semsol</dc:subject>
+    <dc:subject>trice</dc:subject>
+    <dc:subject>entity hubs</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>arc</dc:subject>
+    <dc:subject>bbc</dc:subject>
+    <dc:subject>prospect</dc:subject>
+    <dc:subject>dynamic semantic publishing</dc:subject>
+    <dc:subject>readwriteweb</dc:subject>
+    <dc:subject>linked data</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2010/07/30/dynamic-semantic-publishing-for-any-blog-part-1"/>
+    <content:encoded>
+      <![CDATA[
+&quot;Dynamic Semantic Publishing&quot; is a new technical term which was <a href="http://www.bbc.co.uk/blogs/bbcinternet/2010/07/bbc_world_cup_2010_dynamic_sem.html">introduced by the BBC's online team</a> a few weeks ago. It describes the idea of utilizing <a href="http://linkeddata.org/">Linked Data</a> technology to automate the aggregation and publication of interrelated content objects. The <a href="http://news.bbc.co.uk/sport1/hi/football/world_cup_2010/default.stm">BBC's World Cup website</a> was the first large mainstream website to use this method. It provides hundreds of automatically generated, topically composed pages for individual football entities (players, teams, groups) and related articles.<br />
+<br />
+Now, the added value of such linked &quot;entity hubs&quot; would clearly be very interesting for other websites and blogs as well. They are multi-dimensional entry points to a site and provide a much better and more user-engaging way to explore content than the usual flat archives pages, which normally don't have dimensions beyond date, tag, and author. Additionally, HTML aggregations with embedded Linked Data identifiers can improve search engine rankings, and they enable semantic ad placement, which are attractive by-products.<br />
+<br />
+<img src="http://bnode.org/media/2010/08/entity_hubs.gif" title="Entity hub examples" alt="Entity hub examples" /><br />
+<br />
+The architecture used by the BBC is optimized for their internal publishing workflow and thus not necessarily suited for small and medium-scale media outlets. So I've <a href="http://bnode.org/blog/2010/07/28/linked-data-entity-extraction-with-zemanta-and-opencalais">started</a> thinking about a lightweight version of the BBC infrastructure, one that would integrate more easily with typical web server environments and widespread blog engines.<br />
+<br />
+
+<h4>How could a generalized approach to dynamic semantic publishing look like?</h4>
+We should assume setups where direct access to a blog's database tables is not available. Working with already published posts requires a template detector and custom parsers, but it lowers the entry barrier for blog owners significantly. And content importers can be reused to a large extent when sites are based on standard blog engines such as WordPress or Movable Type.<br />
+<br />
+The graphic below (<a href="http://bnode.org/media/2010/08/dsp_architecture.gif">large version</a>) illustrates a possible, generalized approach to dynamic semantic publishing.<br />
+
+<a href="http://bnode.org/media/2010/08/dsp_architecture.gif"><img src="http://bnode.org/media/2010/08/dsp_architecture_small.gif" title="Dynamic Semantic Publishing" alt="Dynamic Semantic Publishing" /></a><br />
+<br />
+Process explanation:
+<ul><li><strong>Step 1</strong>: A blog-specific crawling agent indexes articles linked from central archives pages. The index is stored as RDF, which enables the easy expansion of post URLs to richly annotated content objects.</li>
+<li><strong>Step 2</strong>: Not-yet-imported posts from the generated blog index are parsed into core structural elements such as title, author, date of publication, main content, comments, Tweet counters, Facebook Likes, and so on. The semi-structured post information is added to the triple store for later processing by other agents and scripts. Again, we need site (or blog engine)-specific code to extract the various possible structures. This step could be accelerated by using an interactive extractor builder, though.</li>
+<li><strong>Step 3</strong>: Post contents are passed to APIs like <a href="http://opencalais.com/">OpenCalais</a> or <a href="http://zemanta.com/">Zemanta</a> in order to extract stable and re-usable entity identifiers. The resulting data is added to the RDF Store.</li>
+<li>After the initial semantification in step 3, a generic RDF data browser can be used to explore the extracted information. This simplifies general consistency checks and the identification of the site-specific ontology (concepts and how they are related). Alternatively, this could be done (in a less comfortable way) via the RDF store's SPARQL API.</li>
+<li><strong>Step 4</strong>: Once we have a general idea of the target schema (entity types and their relations), custom SPARQL agents process the data and populate the ontology. They can optionally access and utilize public data.</li>
+<li>After step 4, the rich resulting graph data allows the creation of context-aware widgets. These widgets (&quot;Related articles&quot;, &quot;Authors for this topic&quot;, &quot;Product experts&quot;, &quot;Top commenters&quot;, &quot;Related technologies&quot;, etc.) can now be used to build user-facing applications and tools.</li>
+<li><strong>Use case 1</strong>: Entity hubs for things like authors, products, people, organizations, commenters, or other domain-specific concepts.</li>
+<li><strong>Use case 2</strong>: Improving the source blog. The typical &quot;Related articles&quot; sections in standard blog engines, for example, don't take social data such as Facebook Likes or re-tweets into account. Often, they are just based on explicitly defined tags. With the enhanced blog data, we can generate aggregations driven by rich semantic criteria.</li>
+<li><strong>Use case 3</strong>: Authoring extensions: After all, the automated entity extraction APIs are not perfect. With the site-wide ontology in place, we could provide content creators with convenient annotation tools to manually highlight some text and then associate the selection with a typed entity from the RDF store. Or they could add their own concepts to the ontology and share it with other authors. The manual annotations help increase the quality of the entity hubs and blog widgets.
+</li></ul>
+<br />
+
+<h4>Does it work?</h4>
+I explored this approach to dynamic semantic publishing with nearly nine thousand articles from <a href="http://readwriteweb.com/">ReadWriteWeb</a>. <a href="http://bnode.org/blog/2010/08/13/dynamic-semantic-publishing-for-any-blog-part-2-linked-readwriteweb">In the next post</a>, I'll describe a &quot;Linked RWW&quot; demo which combines <a href="http://trice.semsol.org/">Trice</a> bots, <a href="http://arc.semsol.org/">ARC</a>, <a href="http://semsol.com/prospect">Prospect</a>, and the <a href="http://bnode.org/blog/2010/07/28/linked-data-entity-extraction-with-zemanta-and-opencalais">handy semantic APIs provided by OpenCalais and Zemanta</a>.<br />
+<br />
+
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2010/07/28/linked-data-entity-extraction-with-zemanta-and-opencalais">
+    <title>Linked Data Entity Extraction with Zemanta and OpenCalais</title>
+    <link>http://bnode.org/blog/2010/07/28/linked-data-entity-extraction-with-zemanta-and-opencalais</link>
+    <description>A comparison of the NER APIs by Zemanta and OpenCalais.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2010-07-28T09:50Z</dc:date>
+    <dct:created>2010-07-28T07:44:58Z</dct:created>
+    <dct:modified>2010-07-29T07:27:15Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>rww</dc:subject>
+    <dc:subject>rdf</dc:subject>
+    <dc:subject>linkeddata</dc:subject>
+    <dc:subject>nlp</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>zemanta</dc:subject>
+    <dc:subject>prospect</dc:subject>
+    <dc:subject>blogdb</dc:subject>
+    <dc:subject>readwriteweb</dc:subject>
+    <dc:subject>ner</dc:subject>
+    <dc:subject>opencalais</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2010/07/28/linked-data-entity-extraction-with-zemanta-and-opencalais"/>
+    <content:encoded>
+      <![CDATA[
+I had another look at the Named Entity Extraction APIs by <a href="http://zemanta.com/">Zemanta</a> and <a href="http://www.opencalais.com/">OpenCalais</a> for some product launch demos. My <a href="http://bnode.org/blog/2009/01/16/connecting-the-lod-dots-with-calais-4-0-and-zemanta">first test from last year</a> concentrated more on the Zemanta API. This time I had a closer look at both services, trying to identify the &quot;better one&quot; for &quot;BlogDB&quot;, a semi-automatic blog semantifier.<br />
+<br />
+My main need is a service that receives a cleaned-up plain text version of a blog post and returns normalized tags and reusable entity identifiers. So, the findings in this post are rather technical and just related to the BlogDB requirements. I ignored features which could well be essential for others, such as Zemanta's &quot;related articles and photos&quot; feature, or OpenCalais' entity relations (&quot;X hired Y&quot; etc.).<br />
+<br />
+
+<h4>Terms and restrictions of the free API</h4>
+<ul><li>The API terms are pretty similar (the wording is actually almost identical). You need an API key and both services can be used commercially as long as you give attribution and don't proxy/resell the service. </li>
+<li>OpenCalais gives you more free API calls out of the box  than Zemanta (50.000 vs. 1.000 per day). You can get a free upgrade to 10.000 Zemanta calls via a simple email, though (or excessive API use; AndraÅ¾ auto-upgraded my API limit when he noticed my <a href="http://bnode.org/blog/2009/01/16/connecting-the-lod-dots-with-calais-4-0-and-zemanta">crazy HDStreams test</a> back then ;-).</li>
+<li>OpenCalais lets you process larger content chunks (up to 100K, vs. 8K at Zemanta).</li></ul>
+<br />
+
+<h4>Calling the API</h4>
+<ul><li>Both interfaces are simple and well-documented. Calls to the OpenCalais API are a tiny bit more complicated as you have to encode certain parameters in an XML string. Zemanta uses simple query string arguments. I've added the respective PHP snippets below, the complexity difference is negligible.
+<pre class="code">function getCalaisResult($id, $text) {
+  $parms = '
+    &lt;c:params xmlns:c=&quot;http://s.opencalais.com/1/pred/&quot;
+              xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt;
+      &lt;c:processingDirectives
+        c:contentType=&quot;TEXT/RAW&quot;
+        c:outputFormat=&quot;XML/RDF&quot;
+        c:calculateRelevanceScore=&quot;true&quot;
+        c:enableMetadataType=&quot;SocialTags&quot;
+        c:docRDFaccessible=&quot;false&quot;
+        c:omitOutputtingOriginalText=&quot;true&quot;
+        &gt;&lt;/c:processingDirectives&gt;
+      &lt;c:userDirectives
+        c:allowDistribution=&quot;false&quot;
+        c:allowSearch=&quot;false&quot;
+        c:externalID=&quot;' . $id . '&quot;
+        c:submitter=&quot;http://semsol.com/&quot;
+        &gt;&lt;/c:userDirectives&gt;
+      &lt;c:externalMetadata&gt;&lt;/c:externalMetadata&gt;
+    &lt;/c:params&gt;
+  ';
+  $args = array(
+    'licenseID' =&gt; $this-&gt;a['calais_key'],
+    'content' =&gt; urlencode($text),
+    'paramsXML' =&gt; urlencode(trim($parms))
+  );
+  $qs = substr($this-&gt;qs($args), 1);
+  $url = 'http://api.opencalais.com/enlighten/rest/';
+  return $this-&gt;getAPIResult($url, $qs);
+}
+</pre>
+<pre class="code">function getZemantaResult($id, $text) {
+  $args = array(
+    'method' =&gt; 'zemanta.suggest',
+    'api_key' =&gt; $this-&gt;a['zemanta_key'],
+    'text' =&gt; urlencode($text),
+    'format' =&gt; 'rdfxml',
+    'return_rdf_links' =&gt; '1',
+    'return_articles' =&gt; '0',
+    'return_categories' =&gt; '0',
+    'return_images' =&gt; '0',
+    'emphasis' =&gt; '0',
+  );
+  $qs = substr($this-&gt;qs($args), 1);
+  $url = 'http://api.zemanta.com/services/rest/0.0/';
+  return $this-&gt;getAPIResult($url, $qs);
+}
+</pre> </li>
+<li>The actual API call is then a simple POST:<pre class="code">function getAPIResult($url, $qs) {
+  ARC2::inc('Reader');
+  $reader = new ARC2_Reader($this-&gt;a, $this);
+  $reader-&gt;setHTTPMethod('POST');
+  $reader-&gt;setCustomHeaders(&quot;Content-Type: application/x-www-form-urlencoded&quot;);
+  $reader-&gt;setMessageBody($qs);
+  $reader-&gt;activate($url);
+  $r = '';
+  while ($d = $reader-&gt;readStream()) {
+    $r .= $d;
+  }
+  $reader-&gt;closeStream();
+  return $r;
+}
+</pre></li>
+<li>Both APIs are fast.
+</li></ul>
+<br />
+
+<h4>API result processing</h4>
+<ul><li>The APIs return rather verbose data, as they have to stuff in a lot of meta-data such as confidence scores, text positions, internal and external identifiers, etc. But they also offer RDF as one possible result format, so I could store the response data as a simple graph and then use SPARQL queries to extract the relevant information (tags and named entities). Below is the query code for Linked Data entity extraction from Zemanta's RDF. As you can see, the graph structure isn't trivial, but still understandable:
+<pre class="code">SELECT DISTINCT ?id ?obj ?cnf ?name
+FROM &lt;' . $g . '&gt; WHERE {
+  ?rec a z:Recognition ;
+       z:object ?obj ;
+       z:confidence ?cnf .
+  ?obj z:target ?id .
+  ?id z:targetType &lt;http://s.zemanta.com/targets#rdf&gt; ;
+      z:title ?name .
+  FILTER(?cnf &gt;= 0.4)
+} ORDER BY ?id
+</pre>
+</li></ul>
+<br />
+
+<h4>Extracting normalized tags</h4>
+<ul><li>OpenCalais results contain a section with so-called &quot;SocialTags&quot; which are directly usable as plain-text tags. </li>
+<li>The tag structures in the Zemanta result are called &quot;Keywords&quot;. In my tests they only contained a subset of the detected entities, and so I decided to use the labels associated with detected entities instead. This worked well, but the respective query is more complex.</li></ul>
+<br />
+
+<h4>Extracting entities</h4>
+<ul><li>In general, OpenCalais results can be directly utilized more easily. They contain stable identifiers and the identifiers come with type information and other attributes such as stock symbols. The API result directly tells you how many Persons, Companies, Products, etc. were detected. And the URIs of these entity types are all from a single (OpenCalais) namespace. If you are not a Linked Data pro, this simplifies things a lot. You only have to support a simple list of entity types to build a working semantic application. If you want to leverage the wider <a href="http://linkeddata.org/">Linked Open Data</a> cloud, however, the OpenCalais response is just a first entry point. It doesn't contain community URIs. You have to use the OpenCalais website to first retrieve disambiguation information, which may then (often involving another request) lead you to the decentralized Linked Data identifiers.</li>
+<li>Zemanta responses, in contrast, do not (yet, AndraÅ¾ told me they are working on it) contain entity types at all. You always need an additional request to retrieve type information (unless you are doing nasty URI inspection, which is what I did with detected URIs from <a href="http://cb.semsol.org/">Semantic CrunchBase</a>). The retrieval of type information is done via Open Data servers, so you have to be able to deal with the usual down-times of these non-commercial services.</li>
+<li>Zemanta results are very &quot;webby&quot; and full of community URIs. They even include sameAs information. This can be a bit overwhelming if you are not an RDFer, e.g. looking up a <a href="http://dbpedia.org/">DBPedia</a> URI will often give you dozens of entity types, and you need some experience to match them with your internal type hierarchy. But for an open data developer, the hooks provided by Zemanta are a dream come true. </li>
+<li>With Zemanta associating shared URIs with all detected entities, I noticed network effects kicking in a couple of times. I used <a href="http://readwriteweb.com/">RWW</a> articles for the test, and in one post, for example, OpenCalais could detect the company &quot;Starbucks&quot; and &quot;Howard Schultz&quot; as their &quot;CEO&quot;, but their public RDF (when I looked up the &quot;Howard Schultz&quot; URI) didn't persist this linkage. The detection scope was limited to the passed snippet. Zemanta, on the other hand, directly gave me Linked Data URIs for both &quot;Starbucks&quot; and &quot;Howard Schultz&quot;, and these identifiers make it possible to re-establish the relation between the two entities at any time. This is a very powerful feature.
+</li></ul>
+<br />
+
+<h4>Summary</h4>
+Both APIs are great. The quality of the entity extractors is awesome. For the RWW posts, which deal a lot with Web topics, Zemanta seemed to have a couple of extra detections (such as &quot;ReadWriteWeb&quot; as company). As usual, some owl:sameAs information is wrong, and Zemanta uses incorrect Semantic CrunchBase URIs (&quot;.rdf#self&quot; instead of &quot;#self&quot; // <em>Update: to be fixed in the next Zemanta API revision</em>), but I blame us (the RDF community), not the API providers, for not making these things easier to implement.<br />
+<br />
+In the end, I decided to use both APIs in combination, with an optional post-processing step that builds a consolidated, internal ontology from the detected entities (OpenCalais has two Company types which could be merged, for example). Maybe I can make a <a href="http://semsol.com/prospect">Prospect</a> demo from the RWW data public, not sure if they would allow this. It's really impressive how much value the entity extraction services can add to blog data, though (see the screenshot below, which shows a pivot operation on products mentioned in posts by Sarah Perez). I'll write a bit more about the possibilities in another post.<br />
+<br />
+<a href="http://bnode.org/media/2010/07/blogdb_rww.gif"><img src="http://bnode.org/media/2010/07/blogdb_rww_small.gif" title="RWW posts via BlogDB" alt="RWW posts via BlogDB" /></a>
+
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2010/05/10/contextual-configuration-semantic-web-development-for-visually-minded-webmasters">
+    <title>Contextual configuration - Semantic Web development for visually minded webmasters</title>
+    <link>http://bnode.org/blog/2010/05/10/contextual-configuration-semantic-web-development-for-visually-minded-webmasters</link>
+    <description>A short screencast demonstrating contextual configuration via widgets in semsol's RDF CMS.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2010-05-21T12:40Z</dc:date>
+    <dct:created>2010-05-10T09:22:30Z</dct:created>
+    <dct:modified>2010-05-21T13:06:11Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>ux</dc:subject>
+    <dc:subject>paggr</dc:subject>
+    <dc:subject>widgets</dc:subject>
+    <dc:subject>cms</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>faceted browser</dc:subject>
+    <dc:subject>prospect</dc:subject>
+    <dc:subject>configuration</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2010/05/10/contextual-configuration-semantic-web-development-for-visually-minded-webmasters"/>
+    <content:encoded>
+      <![CDATA[
+Let's face it, building semantic web sites and apps is still far from easy. And to some extent, this is due to the configuration overhead. The RDF stack is built around declarative languages (for simplified integration at various levels), and as a consequence, configuration directives often end up in some form of declarative format, too. While fleshing out an RDF-powered website, you have to declare a ton of things. From namespace abbreviations to data sources and API endpoints, from vocabularies to identifier mappings, from queries to object templates, and what have you.<br />
+<br />
+Sadly, many of these configurations are needed to style the user interface, and because of RDF's open world context, designers have to know much more about the data model and possible variations than usually necessary. Or webmasters have to deal with design work. Not ideal either. If we want to bring RDF to mainstream web developers, we have to simplify the creation of user-optimized apps. The value proposition of semantics in the context of information overload is pretty clear, and some form of data integration is becoming mandatory for any modern website. But the entry barrier caused by large and complicated configuration files (Fresnel anyone?) is still too high. How can we get from our powerful, largely generic systems to end-user-optimized apps? Or the other way round: How can we support frontend-oriented web development with our flexible tools and freely mashable data sets? (Let me quickly mention Drupal here, which is doing a great job at near-seamlessly integrating RDF. OK, back to the post.)<br />
+<br />
+Enter RDF widgets. Widgets have obvious backend-related benefits like accessing, combining and re-purposing information from remote sources within a manageable code sandbox. But they can also greatly support frontend developers. They simplify page layouting and incremental site building with instant visual feedback (add a widget, test, add another one, re-arrange, etc.). And, more importantly in the RDF case, they can offer a way to iteratively configure a system with very little technical overhead. Configuration options could not only be scoped to the widget at hand, but also to the <em>context</em> where the widget is currently viewed. Let's say you are building an RDF browser and need resource templates for all kinds of items. With contextual configuration, you could simply browse the site and at any position in the ontology or navigation hierarchy, you would just open a configuration dialog and define a custom template, if needed. Such an approach could enable systems that worked out of the box (raw, but usable) and which could then be continually optimized, possibly even by site users.<br />
+<br />
+A lot of &quot;could&quot; and &quot;would&quot; in the paragraphs above, and the idea may sound quite abstract without actually seeing it. To illustrate the point I'm trying to make I've prepared a short video (embedded below). It uses <a href="http://cb.semsol.org/">Semantic CrunchBase</a> and <a href="http://semsol.com/prospect">Paggr Prospect</a> (our new faceted browser builder) as an example use case for in-context configuration.<br />
+<br />
+And if you are interested in using one of our solutions for your own projects, <a href="http://semsol.com/contact">please get in touch</a>!<br />
+<br />
+<br />
+<object width="550" height="385"><param name="movie" value="http://www.youtube.com/v/Sz8ohHDViL8&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Sz8ohHDViL8&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="550" height="385"></embed></object>
+<br />
+Paggr Prospect (part 1) <br />
+<br />
+<object width="550" height="385"><param name="movie" value="http://www.youtube.com/v/_yO_dEn0g0g&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/_yO_dEn0g0g&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="550" height="385"></embed></object>
+<br />
+Paggr Prospect (part 2)<br />
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2010/05/01/trice-semantic-richtext-editor">
+    <title>Trice' Semantic Richtext Editor</title>
+    <link>http://bnode.org/blog/2010/05/01/trice-semantic-richtext-editor</link>
+    <description>A screencast demonstrating the structured RTE bundled with the Trice CMS</description>
+    <dc:language>en</dc:language>
+    <dc:date>2010-05-01T16:35Z</dc:date>
+    <dct:created>2010-05-01T13:44:02Z</dct:created>
+    <dct:modified>2010-05-03T09:44:47Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>trice</dc:subject>
+    <dc:subject>markup</dc:subject>
+    <dc:subject>linkeddata</dc:subject>
+    <dc:subject>cms</dc:subject>
+    <dc:subject>editor</dc:subject>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>html5</dc:subject>
+    <dc:subject>rdfa</dc:subject>
+    <dc:subject>rte</dc:subject>
+    <dc:subject>microdata</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2010/05/01/trice-semantic-richtext-editor"/>
+    <content:encoded>
+      <![CDATA[
+In my <a href="http://bnode.org/blog/2010/04/15/could-having-two-rdf-in-htmls-actually-be-handy">previous post</a> I mentioned that I'm building a Linked Data CMS. One of its components is a rich-text editor that allows the creation (and embedding) of structured markup.<br />
+<br />
+An earlier version supported limited Microdata annotations, but now I've switched the mechanism and use an intermediate, but even simpler approach based on HTML5's handy data-* attributes. This lets you build almost arbitrary markup with the editor, including Microformats, Microdata, or RDFa. I don't know yet when the CMS will be publicly available (3 sites are under development right now), but as mentioned, I'd be happy about another pilot project or two. Below is a video demonstrating the editor and its easy customization options.<br />
+<br />
+<object width="550" height="385"><param name="movie" value="http://www.youtube.com/v/bn8DmFGk9rA&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/bn8DmFGk9rA&hl=en_US&fs=1&rel=0&color1=0x006699&color2=0x54abd6" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="550" height="385"></embed></object>
+
+
+      ]]>
+    </content:encoded>
+  </item>
+
+  <item rdf:about="http://bnode.org/blog/2010/04/15/could-having-two-rdf-in-htmls-actually-be-handy">
+    <title>Could having two RDF-in-HTMLs actually be handy?</title>
+    <link>http://bnode.org/blog/2010/04/15/could-having-two-rdf-in-htmls-actually-be-handy</link>
+    <description>A combination of  RDFa and Microdata would allow for separate semantic layers.</description>
+    <dc:language>en</dc:language>
+    <dc:date>2010-04-15T10:30Z</dc:date>
+    <dct:created>2010-04-15T08:33:03Z</dct:created>
+    <dct:modified>2010-05-10T08:15:05Z</dct:modified>
+    <dc:creator>Benjamin Nowack</dc:creator>
+    <dc:subject>semanticweb</dc:subject>
+    <dc:subject>rdfa</dc:subject>
+    <dc:subject>microdata</dc:subject>
+    <dc:subject>widgets</dc:subject>
+    <dc:subject>paggr</dc:subject>
+    <dc:subject>rdf</dc:subject>
+    <dc:subject>cms</dc:subject>
+    <dc:subject>stepbystep</dc:subject>
+    <dc:subject>trice</dc:subject>
+    <trackback:ping rdf:resource="http://bnode.org/blog/tb/2010/04/15/could-having-two-rdf-in-htmls-actually-be-handy"/>
+    <content:encoded>
+      <![CDATA[
+Apart from grumpy rants about the complexity of W3C's RDF specs and <a href="http://twitter.com/bengee/status/11886421732">semantic richtext editing excitement</a>, I haven't blogged or tweeted a lot recently. That's partly because there finally is increased demand for the stuff I'm doing at <a href="http://semsol.com/">semsol</a> (agency-style SemWeb development), but also because I've been working hard on getting my tools in a state where they feel more like typical Web frameworks and apps. <a href="http://talis.com/">Talis</a>' <a href="http://fanhu.bz/">Fanhu.bz</a> is an example where (I think) we found a good balance between powerful RDF capabilities (data re-purposing, remote models, data augmentation, a crazy army of inference bots) and a non-technical UI (simplistic visual browser, Twitter-based annotation interfaces).<br />
+<br />
+Another example is something I've been working on during the last months: I somehow managed to combine essential parts of <a href="http://paggr.com/">Paggr</a> (a drag&amp;drop portal system based on RDF- and SPARQL-based widgets) with an RDF CMS (I'm currently looking for pilot projects). And although I decided to switch entirely to <a href="http://www.w3.org/TR/microdata/">Microdata</a> for semantic markup after exploring it during the FanHubz project, I wonder if there might be room for having two separate semantic layers in this sort of widget-based websites. Here is why:<br />
+<br />
+As mentioned, I've taken a widget-like approach for the CMS. Each page section is a resource on its own that can be defined and extended by the web developer, it can be styled by themers, and it can be re-arranged and configured by the webmaster. In the RDF CMS context, widgets can easily integrate remote data, and when the integrated information is exposed as machine-readable data in the front-end, we can get beyond the &quot;just-visual&quot; integration of current widget pages and <a href="http://bnode.org/blog/2009/06/04/eswc-2009-linked-data-dashboards">bring truly connectable and reusable information to the user interface</a>.<br />
+<br />
+Ideally, both the widgets' structural data and the content can be re-purposed by other apps. Just like in the early days of the Web, we could re-introduce a copy &amp; paste culture of things for people to include in their own sites. With the difference that RDF simplifies copy-by-reference and source attribution. And both developers and end-users could be part of the game this time.<br />
+<br />
+Anyway, one technical issue I encountered is when you have a page that contains multiple page items, but describes a single resource. With a single markup layer (say Microdata), you get a single tree where the context of the hierarchy is constantly switching between structural elements and content items (page structure -&gt; main content -&gt; page layout -&gt; widget structure -&gt; widget content). If you want to describe a single resource, you have to repeatedly re-introduce the triple subject (&quot;this is about the page structure&quot;, &quot;this is about the main page topic&quot;). The first screenshot below shows the different (grey) widget areas in the editing view of the CMS. In the second screenshot, you can see that the displayed information (the marked calendar date, the flyer image, and the description) in the main area and the sidebar is about a single resource (an event).<br />
+<br />
+<img src="http://bnode.org/media/2010/04/trice_cms_editing.gif" title="Trice CMS Editor" alt="Trice CMS Editor" /><br />
+<small>Trice CMS editing view</small><br />
+<br />
+<img src="http://bnode.org/media/2010/04/trice_cms_view.gif" title="Trice CMS Editor" alt="Trice CMS Editor" /><br />
+<small>Trice CMS page view with inline widgets describing one resource</small><br />
+<br />
+If I used two separate semantic layers, e.g. RDFa for the content (the event description) and Microdata for the structural elements (column widths, widget template URIs, widget instance URIs), I could describe the resource and the structure without repeating the event subject in each page item.<br />
+<br />
+To be honest, I'm not sure yet if this is really a problem, but I thought writing it down could kick off some thought processes (which now tend towards &quot;No&quot;). Keeping triples as stand-alone-ish as possible may actually be an advantage (even if subject URIs have to be repeated). No semantic markup solution so far provides full containment for reliable copy &amp; paste, but explicit subjects (or &quot;itemid&quot;s in Microdata-speak) could bring us a little closer.<br />
+<br />
+Conclusions? Err.., none yet. But hey, did you see the cool CMS screenshots?
+
+
+
+      ]]>
+    </content:encoded>
+  </item>
+
+</rdf:RDF>

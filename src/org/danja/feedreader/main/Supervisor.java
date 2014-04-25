@@ -1,4 +1,14 @@
-package org.danja.feedreader.social;
+/**
+ * TODO retire
+ * feedreader-prototype
+ *
+ * Entry.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
+package org.danja.feedreader.main;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -14,6 +24,8 @@ import org.danja.feedreader.io.ChannelSetReader;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
+import org.danja.feedreader.social.FormatSniffer;
+import org.danja.feedreader.social.RDFInterpreterFactory;
 
 public class Supervisor {
 

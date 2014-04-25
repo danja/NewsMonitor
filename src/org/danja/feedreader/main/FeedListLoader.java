@@ -1,3 +1,12 @@
+/**
+ * feedreader-prototype
+ *
+ * FeedListLoader.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.main;
 
 import java.io.BufferedReader;

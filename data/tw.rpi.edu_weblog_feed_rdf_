@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	>
+<channel rdf:about="http://tw.rpi.edu/weblog">
+	<title>The Tetherless World Weblog</title>
+	<link>http://tw.rpi.edu/weblog</link>
+	<description>Everything about Web Science</description>
+	<dc:date>2014-04-09T18:06:22Z</dc:date>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="http://wordpress.org/?v=3.9" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2014/01/14/open-source-software-science-reproducibility/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2014/01/05/agu-fall-meeting-notes-part-1-two-levels-of-conversations/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2013/12/21/miscellaneous-of-my-agu-meeting/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2013/12/20/odip-workshop-notes-part-1-a-unique-viewpoint-of-data-citation/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2013/12/19/what-is-ontology/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2013/09/24/fake-open-access-publication-in-now-days-and-my-suggestion/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2013/01/24/esip-winter-meeting-2013/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2013/01/15/three-reasons-to-attend-esip-winter-meeting/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2012/12/11/survival-and-thriving-at-agu-fall-meeting-2012/"/>
+					<rdf:li rdf:resource="http://tw.rpi.edu/weblog/2012/10/29/syntactic-normalization-of-the-btc2012-dataset/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://tw.rpi.edu/weblog/2014/01/14/open-source-software-science-reproducibility/">
+	<title>Open Source Software &amp; Science Reproducibility</title>
+	<link>http://tw.rpi.edu/weblog/2014/01/14/open-source-software-science-reproducibility/</link>
+	<dc:date>2014-01-14T21:28:43Z</dc:date>
+	<dc:creator><![CDATA[Massimo Di Stefano]]></dc:creator>
+			<dc:subject><![CDATA[Blog]]></dc:subject>
+		<dc:subject><![CDATA[cloud computing]]></dc:subject>
+		<dc:subject><![CDATA[Data Science]]></dc:subject>
+		<dc:subject><![CDATA[open data]]></dc:subject>
+		<dc:subject><![CDATA[tetherless world]]></dc:subject>
+		<dc:subject><![CDATA[visualization]]></dc:subject>
+		<dc:subject><![CDATA[Web Science]]></dc:subject>
+	<description><![CDATA[This year my contribution to the AGU fall meeting 2013 was all about the development of Open Source Software to enable the reproducibility of scientific products, with both a Poster and an Oral presentation. The AGU was the perfect opportunity to share my ideas on a topic that is one of my main interests. This [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>This year my contribution to the AGU fall meeting 2013 was all about the development of Open Source Software to enable the reproducibility of scientific products, with both a <a href="http://tw.rpi.edu/web/doc/agufm/2013/reproducibilityinoceansciences">Poster</a> and an <a href="http://tw.rpi.edu/web/doc/AGUFM2013-H52E-06">Oral presentation</a>. The AGU was the perfect opportunity to share my ideas on a topic that is one of my main interests.</p>
+<p>This was my 2nd time at AGU, but my first time with an oral presentation which turned in a real challenge!</p>
+<p>The main issue was a combination of 2 factors : I had decided to generate the slideshow in realtime as HTML from an online <a href="http://ipython.org/notebook.html">IPython Notebook</a>. I thought it would be cool to show this functionality, as well as the work itself. Unfortunately, I was dependent on an internet connection at the time of the presentation, but alas, at AGU the presenter computer doesn&#8217;t have internet connection! Definitely not the best conditions for a web based slideshow generated &#8220;<i>on-the-fly</i>&#8221; by the execution of an IPython Notebook.</p>
+<p>I found out about the lack of connectivity only 2 days before my presentation. I must have misunderstood the <a href="http://fallmeeting.agu.org/2013/scientific-program-2/oral-session-presenter-guidelines/">AGU oral presentation guidelines</a>, but when I didnât find an explicit mention of the lack of an internet connection, I took it for granted that that wouldnât be an issue. Big mistake!</p>
+<p>I decided it would be safer to prepare a power-point presentation, and some time later, I had one. Deep breath; I would be safe. Butâ¦ what a disappointment !</p>
+<p>I was so excited about the idea of showing my work running in realtime instead of showing a static (somewhat boring) pptÂ  presentation!!!</p>
+<p>I kept thinking about alternative solutions, though, and an idea quickly came to me. If the lack of internet stands in the way of an interactive, realtime demo there should be no problem in running a static HTML slideshows instead; at least that is what I thought â¦</p>
+<p>I used the IPython â<a href="http://ipython.org/ipython-doc/rel-1.0.0/interactive/nbconvert.html">nbconvert</a>&#8221; utility and its âconvert to slide&#8221; option, and I successfully converted my workflow from an interactive IPython notebook running in slideshow mode to a static HTML5 slideshows, yeah! The audience wouldnât get to see how this was done, but at least they would get to see the result.</p>
+<p>Happy with the final HTML presentation I finally went to the âAGUâs Speaker Ready Roomâ to upload and test my presentation. Unfortunately, my HTML presentation would not run offline. The lack of internet was giving me troubles with missing JavaScript files, missing fonts, images-urls to be replaced with path to static files, broken hyperlinks etc â¦ it was not as easy as I thought.</p>
+<p>It took more than 3 hours to fix all the bugs on account of a really slow internet connection running from my phone, but finally i got my presentation perfectlyÂ  running off line on the AGU computers !</p>
+<p>In the end, my talk ran very smoothly. <a href="http://orion.tw.rpi.edu/~epifanio/AGU-2013/AGU-2013-H52E02-MDS.slides.html#/">A complete workflow for &#8220;catchments characterization&#8221;</a> using exclusively open source software, running online and fully reproducible thanks to the use of open source software and an <a href="http://www.grassbook.org/data_menu3rd.php">open dataset</a>! I felt really good, as I think I successfully got my message across, both in words and in actions.</p>
+<p>To top it all off, my presentation came just at the right time. Before me, two other presentations during my session had mentioned the use of the IPython Notebook as open source software tool to enable reproducibility of scientific work. They had highlighted that it shows great potential and that it deserves further investigation. I think my presentation gave them even more proof of that! Even the chairman acknowledged this when he stated: âBefore we heard about it, but now we <i>saw it in action!â</i><i> </i>I felt very proud of what I had done. The effort I put into running the HTML slideshow definitely paid off!!!</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2014/01/05/agu-fall-meeting-notes-part-1-two-levels-of-conversations/">
+	<title>AGU fall meeting notes &#8211; part 1 &#8211; two levels of conversations</title>
+	<link>http://tw.rpi.edu/weblog/2014/01/05/agu-fall-meeting-notes-part-1-two-levels-of-conversations/</link>
+	<dc:date>2014-01-05T22:36:57Z</dc:date>
+	<dc:creator><![CDATA[fulinyun]]></dc:creator>
+			<dc:subject><![CDATA[tetherless world]]></dc:subject>
+	<description><![CDATA[I mentioned that I&#8217;ve talked with two kinds of people &#8211; researchers and managers &#8211; during ODIP workshop #2 and AGU fall meeting 2013 in my last post, and here comes the definitions I left out. By researchers, I mean people who are workers in the community &#8212; those who deal with technical details, think [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>I mentioned that I&#8217;ve talked with two kinds of people &#8211; <em>researchers</em> and <em>managers</em> &#8211; during ODIP workshop #2 and AGU fall meeting 2013 in my <a href="http://tw.rpi.edu/weblog/2013/12/20/odip-workshop-notes-part-1-a-unique-viewpoint-of-data-citation/">last post</a>, and here comes the definitions I left out.</p>
+<p>By <em>researchers</em>, I mean people who are workers in the community &#8212; those who deal with technical details, think of novel approaches to problems, and fulfill ideas proposed by the <em>managers</em>.</p>
+<p><em>Managers</em>, on the other hand, are those who deal with people and make proposals to find social and financial support for workers. They may also do some marketing job to find customers for the products created.</p>
+<p>Conversations with <em>researchers </em>(I probably didn&#8217;t pick the best word because people called researchers usually do both research and management) are usually very technical &#8212; approaches, architectures, frameworks, software, parameters, scalability, maintainability, etc. I currently is very biased towards the technical side of research and feel very comfortable in such kind of conversations.</p>
+<p>Quite a lot of times, however, I find myself totally lost in conversations with <em>managers </em>&#8211; when they talk about funding, grants, recruiting, outreach, and names of people and institutions I&#8217;ve never heard of. I realize I didn&#8217;t pay enough attention to the managing side of research, which is equally important, if not more than, the technical side. Managers&#8217; work of building and maintaining the supply chains and sales channels for research products is indispensable for research institutes and the academic community as a whole to function properly.</p>
+<p>As a PhD student I didn&#8217;t get many opportunities to get involved in managing jobs, but in order to let people use the products that we are developing and we believe useful, I think I need to learn beyond the worker&#8217;s part and get to understand how the whole academic business works, and talking with managers at the ODIP workshop and AGU fall meeting certainly is a good starting point!</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2013/12/21/miscellaneous-of-my-agu-meeting/">
+	<title>Miscellaneous of my AGU meeting</title>
+	<link>http://tw.rpi.edu/weblog/2013/12/21/miscellaneous-of-my-agu-meeting/</link>
+	<dc:date>2013-12-22T03:57:03Z</dc:date>
+	<dc:creator><![CDATA[Yu(Yanning) Chen]]></dc:creator>
+			<dc:subject><![CDATA[tetherless world]]></dc:subject>
+	<description><![CDATA[Don&#8217;t remember exactly how many times Â I have been to bay area, especially for summer interns.Â The foggy and windy San Francisco is nothing new to me, but the AGU meeting is like an adventure that I could never imagine what I will come across. I knew from lab-mates that AGU is a huge events, over [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>Don&#8217;t remember exactly how many times Â I have been to bay area, especially for summer interns.Â The foggy and windy San Francisco is nothing new to me, but the AGU meeting is like an adventure that I could never imagine what I will come across. I knew from lab-mates that AGU is a huge events, over 20,000 attendants from numerous of domains, it is nevertheless until the time I register at the moscone center west that I realize its overwhelming diversity. To be honest, as I talk to some students in the student breakfast, I literally &#8220;know&#8221; what are their background, such as biological chemistry, but essentially the problem and the approaches are never friendly to me. Initially, I try to show appreciation, as a sign of politeness however I never feel really any spontaneous reflection from the conversation. I told myself I need to get out of something from this 7 days conversation, something useful for both parties of the conversation.</p>
+<p>Therefore, I decided to take charge of the conversation, asking questions like: I am working on A, which tries to solve general problems such as B and C, does that benefit what you are working on? Basically, I regard most of the conversation to be a good survey if something I did will make their lives much easier. One reason is from my observation that domain scientist, which category most attendant falls into, are using some information technologies, such as matlab or R or excel but they are not satisfied. For most of the scientists, as general users, might not know exactly what they want since otherwise they will just build the tool! In most cases, they are looking for some magical tools that can do things better, just like the first time automobile is invented where most people think they need faster horses. From this observation, I had several great conversations with a couple of scientist on problem I am working on and it turns out that these conversations really help me a lot!</p>
+<p>Data integration:<br />
+One topic people are talking about is data integration. Essentially, this is the problem of ontology and vocabulary matching, where many efforts haven been made on aligning heterogenous of schemas and the corresponding keywords in the schema. Just as the project I am working on with Cyndy Chandler and Adam Shepherd form WHOI, domain data scientists from US, EU and Australia try to align part of their research data with a commonly accepted vocabulary entry, which is called the NERC that is something looks like http://vocab.nerc.ac.uk/collection/L06/current/. Most of the work by now is through manual aligning, therefore I am here to apply some natural language processing trick to align the terms based on their metadata such as description and definitions. Some folks are working on this already, but not a completely automatic process,where they try to provide a guideline tool for the scientist when they are not sure which terms to use when devising their dataset. They learn the &#8220;recommended&#8221; terms by putting a large set of vocabularies that let them cluster using the LDA tricks. However, I really doubt whether it would work as LDA is simply for unsupervised learning which means we can&#8217;t specify what data to put into the same category. Then it means we disregard an important aspect of the dataset, which is not a good approach to an appropriate model. Besides I have more concern regarding the applicability of this work, as most scientist are familiar with what vocabularies to use and those who didn&#8217;t might not be the domain scientists. Usually, computer scientist will be under supervision of those domain scientist while creating these dataset, so it is still not necessary for them to use this vocabulary guideline service. Anyways, bringing some AI techniques to this domain is always a good trial.</p>
+<p>Data exploration and data portals:<br />
+Another trend is that many people are concerning about building data portal. A lot of them are featured with facet search, map based search and filtering. As I see a number of posters from George Mason, I just realized that they are doing the same thing as S2S however the generation of those facets and user-interface are generated by hard-query and xml file. They are not concerning using the ontology as the guideline for the hierarchy of the user interface. But as I briefed something on our work of S2S, they become very interested and eager to try out if there is source code and enough documents available for the S2S framework. I showed them our work on DCO, not a perfect one but already articulate the idea. They even suggest to create a user community for the s2s framework such that whenever there is a question or they would like to contribute a widget, there is a place they can discuss and commit the code. Besides George Mason, there are also other schools that raise the same suggestion.</p>
+<p>Big data analysis:<br />
+Lots of people are talking about big data analysis, ranging from NASA to small institutes. What I really expect from the talk is the technical aspect of what&#8217;s the scale of their dataset and how they solve the problem using parallelism, redundancy etc. However, most of the talk are discussing the hierarchy of their system, key components without much detail on what&#8217;s the data looks like, any problems they come across and how are those problem solved. It might be because the audiences for this meeting are more with domain backgrounds that doesn&#8217;t really know or even concern those technical details.</p>
+<p>Service Computing:<br />
+The best thing I found about this meeting is that there are several people that working towards the same goal as I do but with slightly different approach. It&#8217;s good because it shows what I are interested is meaningful and there is still room for me as we are not doing exactly the same thing. One professor I talked with is Prof. Jia Zhang from Carnegie Mellon. What she is working on is to facilitate the scientist to reuse data, practices and algorithms such that preventing reinventing the wheels and more importantly accelerating the process of adopting someone else work to save time and effort. Moreover, she also developed an service recommendation system for scientists. The system will be able to suggest specific algorithms based on input metadata and goal. The algorithm workflow is figured out based on path-finding algorithms. However, something they haven&#8217;t done yet is providing a web-based platform to execute the workflow and they are not using reasoning engine to find the path. I talked some of my work, idea and thoughts and how I will approach the problem using some semantic web technologies. We areÂ both happy after the conversion because although the goal is the same but the approach is slightly different, so there is a good source of reference and collaborations.</p>
+<p>Looking forward:</p>
+<p>After the meeting, I have a clearer picture of the significance of my work, possible directions, and potential collaborators etc. One regret is that I didn&#8217;t give any presentation on any of my work so this is a really good catalyst for me to get down to my work and contribute some of my work to this community in the future year.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2013/12/20/odip-workshop-notes-part-1-a-unique-viewpoint-of-data-citation/">
+	<title>ODIP workshop notes &#8211; part 1 &#8211; a unique viewpoint of data citation</title>
+	<link>http://tw.rpi.edu/weblog/2013/12/20/odip-workshop-notes-part-1-a-unique-viewpoint-of-data-citation/</link>
+	<dc:date>2013-12-20T16:43:30Z</dc:date>
+	<dc:creator><![CDATA[fulinyun]]></dc:creator>
+			<dc:subject><![CDATA[tetherless world]]></dc:subject>
+	<description><![CDATA[During the last two weeks I&#8217;ve been on this exciting journey to attend ODIP workshop #2 plus AGU fall meeting 2013. I&#8217;ve been talking with both researchers and managers (definitions will come in a later blog) and taking notes of both what we&#8217;ve been talking about and what I&#8217;ve been thinking of. This is the [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>During the last two weeks I&#8217;ve been on this exciting journey to attend <a href="http://www.odip.eu/content/content.asp?menu=0290000_000000" target="_blank">ODIP workshop #2</a> plus <a href="https://fallmeeting.agu.org/2013/" target="_blank">AGU fall meeting 2013</a>. I&#8217;ve been talking with both researchers and managers (definitions will come in a later blog) and taking notes of both what we&#8217;ve been talking about and what I&#8217;ve been thinking of. This is the first time I feel that I would like to write something so much. I&#8217;ll split my stories and thoughts into multiple parts to make each of them really coherent.</p>
+<p>So here is the first story, it&#8217;s about the process of producing scientific time series data, presented by Justin Buck from <a href="http://www.bodc.ac.uk/">BODC</a> at ODIP workshop #2. I cannot find his slides now so I recreated one of his plot in the slides from my memory as follows.</p>
+<p><a href="http://tw.rpi.edu/weblog/wp-content/uploads/2013/12/justin-buck-data-producing-process.png"><img class="alignnone size-medium wp-image-1987" alt="justin-buck-data-producing-process" src="http://tw.rpi.edu/weblog/wp-content/uploads/2013/12/justin-buck-data-producing-process-300x292.png" width="300" height="292" /></a></p>
+<p>Most of the data are recorded at almost the same time as they are observed, shown as blue crosses in the above figure. Some data are missed at observation time, so they need to be filled in later if possible, shown as green crosses. Finally, corrections are made to the data for various reasons, as the red cross indicates.</p>
+<p>Justin presented this data producing process in the context of data citation. He then continued to point out three kinds of data citations based on the ever-changing nature of the data to cite:</p>
+<ol>
+<li>cite a time slice, which includes data recording, adding and editing logs within a certain period of time along the time series;</li>
+<li>cite a snapshot, which is the &#8220;as is&#8221; data at a certain time point;</li>
+<li>cite the continuum, which includes every change made to the data set up till a certain time.</li>
+</ol>
+<p>Very interesting viewpoint of data citation.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2013/12/19/what-is-ontology/">
+	<title>What is ontology?</title>
+	<link>http://tw.rpi.edu/weblog/2013/12/19/what-is-ontology/</link>
+	<dc:date>2013-12-19T21:47:22Z</dc:date>
+	<dc:creator><![CDATA[Xiaogang Ma]]></dc:creator>
+			<dc:subject><![CDATA[Data Science]]></dc:subject>
+		<dc:subject><![CDATA[open data]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[tetherless world]]></dc:subject>
+		<dc:subject><![CDATA[Web Science]]></dc:subject>
+		<dc:subject><![CDATA[Earth and space science informatics]]></dc:subject>
+		<dc:subject><![CDATA[ontology]]></dc:subject>
+		<dc:subject><![CDATA[ontology spectrum]]></dc:subject>
+	<description><![CDATA[The topic of a blog in my mind, after five days at the American Geophysical Union 2013 Fall Meeting discussing Earth and space science informatics, is to give an introduction of ontology to researchers in Earth and environmental sciences and beyond. To attract your interest, I would say that ontology is the invisible hand behind [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>The topic of a blog in my mind, after five days at the American Geophysical Union 2013 Fall Meeting discussing Earth and space science informatics, is to give an introduction of ontology to researchers in Earth and environmental sciences and beyond.</p>
+<p>To attract your interest, I would say that ontology is the invisible hand behind anything. (It took me a few minutes to think about whether I should add an âanâ before the âontologyâ here. For reasons see below.) </p>
+<p>First letâs see the etymology of the word âontologyâ. According to Wiktionary (<a href="http://en.wiktionary.org/wiki/ontology">http://en.wiktionary.org/wiki/ontology</a>), ontology is âoriginally Latin ontologia (1606, Ogdoas Scholastica, by Jacob Lorhard (Lorhardus)), from Ancient Greek á½¤Î½ (Ån, âonâ), present participle of Îµá¼°Î¼Î¯ (eimi, âbeing, existing, essenceâ) + Î»ÏÎ³Î¿Ï (logos, âaccountâ).â </p>
+<p>Second letâs see the definition of the word. It is also interesting to see that Wiktionary claims that in philosophy the word âontologyâ can be either uncountable or countable. For the former, ontology is defined by Wiktionary as âThe branch of metaphysics that addresses the nature or essential characteristics of being and of things that exist; the study of being.â This definition is more or less the same as another one done by the Oxford English Dictionary, âThe science or study of being; that branch of metaphysics concerned with the nature or essence of being or existence.â That Oxford definition was used in my PhD defense (<a href="http://www.slideshare.net/MarshallXMa/ontology-spectrum-for-geological-data-interoperability-phddefence">http://www.slideshare.net/MarshallXMa/ontology-spectrum-for-geological-data-interoperability-phddefence</a>). For the countable âontologyâ, Wiktionary defines it as âThe theory of a particular philosopher or school of thought concerning the fundamental types of entity in the universe.â I had not done any work relevant to that definition yet but I just found Oxford also has a similar definition âAs a count noun: a theory or conception relating to the nature of being.â </p>
+<p>The word metaphysics is mentioned in the definition of ontology as an unaccountable noun. In now days when people talk about metaphysics they often refer to Aristotle (384 â 322 BCE). If you (especially those who are working for a Doctor of PHILOSOPHY ;-)) are interested in his study you can read the two most famous books 1) Politics: A Treatise on Government and 2) The Ethics of Aristotle by him on the Gutenberg website (<a href="http://www.gutenberg.org/ebooks/author/2747">http://www.gutenberg.org/ebooks/author/2747</a>). The story does not stop here. In a famous Chinese book, I Ching (or the Book of Changes, c. 450 â 250 BCE), there are also topics about metaphysics, such as a sentence which is my personal favorite: âWhat is above form is called Tao; what is within form is called tool.â </p>
+<p>The philosophical meaning of the word ontology is the background and for most cases in the domain of Earth and space science informatics we care more about another meaning of the word: ontology as a countable noun in computer science. Before discussing definition of ontology as a computer science word, letâs first see how hot this word is in recent years. I did a few searches with the topic âontologyâ in isiknowledge.com (on Dec 19, 2013), which showed that there are about 44884 publications for all years, and publication numbers for separate periods are 1470/1945â1995, 1498/1995â2000, ~7901/2000â2005, ~24528/2005â2010, and ~16891/2010â2013. If I refined the results by limiting to the research area âComputer Scienceâ, the results are: ~22251/all years, 114/1945â1995, 673/1995â2000, ~5095/2000â2005, ~14316/2005â2010, and ~5971/2010â2013. And there are a big number of publications that applied informatics and were filtered out by the keyword âComputer Scienceâ. From those results we can see many meanings, one is that works with the computer science âontologyâ has been increasing significantly since 2000. </p>
+<p>For the definition of the computer science word âontologyâ, many people have cited the publications of T.R. Gruber (1993, 1995, see: <a href="http://dx.doi.org/10.1006/knac.1993.1008">http://dx.doi.org/10.1006/knac.1993.1008</a> and <a href="http://dx.doi.org/10.1006/ijhc.1995.1081">http://dx.doi.org/10.1006/ijhc.1995.1081</a>): âAn ontology is an explicit specification of a conceptualizationâ. Middle 1990s is the golden age for discussing the definition of ontology. N. Guarino (1997, see: <a href="http://dx.doi.org/10.1006/ijhc.1996.0091">http://dx.doi.org/10.1006/ijhc.1996.0091</a>) made a nice review of the definition of âontologyâ, in which I think one key point he discussed was the âshared conceptualizationâ feature of an ontology. So in my PhD dissertation (Ma, 2011, see: <a href="http://www.itc.nl/library/papers_2011/phd/ma.pdf">http://www.itc.nl/library/papers_2011/phd/ma.pdf</a>) I tried to re-address the definition of the computer science âontologyâ: âOntologies in computer science are defined as shared conceptualizations of domain knowledge (Gruber, 1995; Guarino, 1997b)â¦â      </p>
+<p>Third, after seeing the definition of ontology, letâs focus on how to put a computer science âontologyâ into practice, especially in the domain of Earth and space science informatics. Early 2000s is the golden age for that work. McGuinness (2003, see: <a href="http://www-ksl.stanford.edu/people/dlm/papers/ontologies-come-of-age-mit-press-%28with-citation%29.htm">http://www-ksl.stanford.edu/people/dlm/papers/ontologies-come-of-age-mit-press-%28with-citation%29.htm</a>) made a wonderful discussion of the ontology spectrum. McGuinness also made a footnote to that spectrum figure: âThis spectrum arose out of a conversation in preparation for an ontology panel at AAAI â99.  The panelists (Gruninger, Lehman, McGuinness, Ushold, and Welty), chosen because of their years of experience in ontologies found that they encountered many forms of specifications that different people termed ontologies. McGuinness refined the picture to the one included here.â When I was doing my PhD I read this note and I tried to find a few other publications by people in the panelists listed by McGuinness, and I did find a few that also discussed the ontology spectrum, for example:<br />
+Welty, C., 2002. Ontology-driven conceptual modeling. In: Pidduck, A.B., Mylopoulos, J., Woo, C.C., Ozsu, M.T. (Eds.), Advanced Information Systems Engineering, Lecture Notes in Computer Science, vol. 2348. Springer-Verlag, Berlin &amp; Heidelberg, Germany, pp. 3-3. Lecture slides available at: <a href="http://www.cs.toronto.edu/caise02/cwelty.pdf">http://www.cs.toronto.edu/caise02/cwelty.pdf</a><br />
+Obrst, L., 2003. Ontologies for semantically interoperable systems. In: Proceedings of the Twelfth International Conference on Information and Knowledge Management, New Orleans, LA, USA, 366-369.<br />
+Uschold, M., Gruninger, M., 2004. Ontologies and semantics for seamless connectivity. SIGMOD Record 33 (4), 58â64.<br />
+Borgo, S., Guarino, N., Vieu, L., 2005. Formal ontology for semanticists. In: Lecture notes of the 17th European Summer School in Logic, Language and Information (ESSLLI 2005), Edinburgh, Scotland, 12pp. <a href="http://www.loa-cnr.it/Tutorials/ESSLLI1.pdf">http://www.loa-cnr.it/Tutorials/ESSLLI1.pdf</a></p>
+<p><a href="http://tw.rpi.edu/weblog/wp-content/uploads/2013/12/OS1.gif"><img src="http://tw.rpi.edu/weblog/wp-content/uploads/2013/12/OS1.gif" alt="OS1" width="600" height="450" class="alignnone size-medium wp-image-1973" /></a><br />
+An ontology spectrum (from McGuinness 2003)</p>
+<p>To help myself understand the ontology spectrum better, I redrew the diagram (see below) in my PhD dissertation. Very recently (Dec 03, 2013) Jim McGusker, a PhD student with McGuinness, made a thorough explanation of the spectrum in his blog (see: <a href="http://info.5amsolutions.com/blog/bid/154967/6-Points-Along-the-Ontology-Spectrum">http://info.5amsolutions.com/blog/bid/154967/6-Points-Along-the-Ontology-Spectrum</a>). </p>
+<p><a href="http://tw.rpi.edu/weblog/wp-content/uploads/2013/12/OS2.png"><img src="http://tw.rpi.edu/weblog/wp-content/uploads/2013/12/OS2.png" alt="OS2" width="600" height="224" class="alignnone size-medium wp-image-1974" /></a><br />
+Ontology spectrum (adapted from Borgo et al., 2005; McGuinness, 2003; Obrst, 2003; Uschold and Gruninger, 2004; Welty, 2002). Texts in italics explain a typical relationship in each ontology type (from Ma 2011)</p>
+<p>Finally, I would like to share a few examples for different types of ontologies following the spectrum:</p>
+<p>Catalog/Glossary:<br />
+Neuendorf, K.K.E., Mehl, J.J.P., Jackson, J.A., 2005. Glossary of Geology, 5th edition. American Geological Institute: Alexandria, VA, USA, p. 800. See latest version at: <a href="http://www.agiweb.org/pubs/glossary/">http://www.agiweb.org/pubs/glossary/ </a></p>
+<p>Taxonomy:<br />
+BGS Rock Classification Scheme, see: <a href="https://www.bgs.ac.uk/bgsrcs/">https://www.bgs.ac.uk/bgsrcs/</a></p>
+<p>Thesaurus:<br />
+AQSIQ, 1988. GB/T 9649-1988 The Terminology Classification Codes of Geology and Mineral Resources. General Administration of Quality Supervision, Inspection and Quarantine of P.R. China (AQSIQ). Standards Press of China, Beijing, China. 1937 pp. </p>
+<p>Conceptual Schema:<br />
+NADM Steering Committee, 2004. NADM Conceptual Model 1.0âA conceptual model for geologic map information: U.S. Geological Survey Open-File Report 2004-1334, North American Geologic Map Data Model (NADM) Steering Committee, Reston, VA, USA, 58 pp. See: <a href="http://pubs.usgs.gov/of/2004/1334">http://pubs.usgs.gov/of/2004/1334 </a></p>
+<p>Ontologies encoded in RDF format:<br />
+Semantic Web for Earth and Environmental Terminology (SWEET). See: <a href="http://sweet.jpl.nasa.gov/">http://sweet.jpl.nasa.gov/ </a></p>
+<p>Now a short wrap up about what is ontology:<br />
+For fun: the invisible hand behind anything;<br />
+In philosophy: (uncountable) the science or study of being; that branch of metaphysics concerned with the nature or essence of being or existence; (countable) a theory or conception relating to the nature of being;<br />
+In computer science: shared conceptualization of domain knowledge.</p>
+<p>To put ontologies (computer science) into practice, keep in mind an ontology spectrum with enriching meanings: catalog/glossary -&gt; taxonomy -&gt; thesaurus -&gt; conceptual schema -&gt; formal constraints.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2013/09/24/fake-open-access-publication-in-now-days-and-my-suggestion/">
+	<title>FAKE open access publications in now days and my suggestion</title>
+	<link>http://tw.rpi.edu/weblog/2013/09/24/fake-open-access-publication-in-now-days-and-my-suggestion/</link>
+	<dc:date>2013-09-24T20:56:37Z</dc:date>
+	<dc:creator><![CDATA[Xiaogang Ma]]></dc:creator>
+			<dc:subject><![CDATA[Data Science]]></dc:subject>
+		<dc:subject><![CDATA[linked data]]></dc:subject>
+		<dc:subject><![CDATA[tetherless world]]></dc:subject>
+		<dc:subject><![CDATA[Web Science]]></dc:subject>
+	<description><![CDATA[Open Access in now days is such a *FAKE* idea. It is the author&#8217;s paper, not the publisher&#8217;s. Currently what a reader pays is for the typesetting according to the format of a publisher. A author can make his own manuscript (not the pdf from the publisher) anywhere online for access. Now a author pays [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>Open Access in now days is such a *FAKE* idea. It is the author&#8217;s paper, not the publisher&#8217;s. Currently what a reader pays is for the typesetting according to the format of a publisher. A author can make his own manuscript (not the pdf from the publisher) anywhere online for access. Now a author pays hundreds to a publisher for Open Access to his paper. I URGE, publishers should provide a *FREE* function that allows a author registers a link to his author-made version of a paper on the landing page of the DOI of a published paper. This is the *TRUE* Open Access. What most readers need is the meaning of a paper, not the typesetting. If one do cares the typesetting, he can pay a subscription to get the publisher&#8217;s version. University or institutional libraries should build facilities and functionalities that support employees to register and upload author-made versions of publications &#8211; to improve the visibility and accessibility of the academic work of the institution itself.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2013/01/24/esip-winter-meeting-2013/">
+	<title>ESIP Winter Meeting 2013</title>
+	<link>http://tw.rpi.edu/weblog/2013/01/24/esip-winter-meeting-2013/</link>
+	<dc:date>2013-01-24T05:06:42Z</dc:date>
+	<dc:creator><![CDATA[zhengj3]]></dc:creator>
+			<dc:subject><![CDATA[Blog]]></dc:subject>
+		<dc:subject><![CDATA[Data Science]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[tetherless world]]></dc:subject>
+	<description><![CDATA[I presented a poster about how can we use Semantic Web Technology to help building an information model and information system for National Climate Assessment (NCA). NCA is a report which integrates, evaluates, and interprets the findings of climate change and impacts on affected industries such as agriculture, natural environment, energy production and use, etc. [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>I presented a poster about how can we use Semantic Web Technology to help building an information model and information system for National Climate Assessment (NCA). NCA is a report which integrates, evaluates, and interprets the findings of climate change and impacts on affected industries such as agriculture, natural environment, energy production and use, etc. One of the problem of building an information system for NCA is that NCA uses information from wide range of information sources and covered many climate related topic, this makes it difficult for users to find and identify information they needed. Using Semantic Web Technology, we created a well-structured ontology, where relationship between NCA-realted entities, concepts are well-defined. We also use other Semantic Technologies such as Prov-O, SPARQL-endpoints, and ontology-based facet browsers can to help solve the problem.</p>
+<p>Overall, the presentation went well. Few people found particular interest on how we leverages GCMD keywords and Clean Vocabulary when building the information system for NCA, and what benefits can they bring to NCA report information system. Other people also found Facet Search System interesting, especially on applying it on the Geo-related data.</p>
+<p>I also attended Semantic Web-related sessions. One of them was discussing how can we use Semantic Web Technology to help solving &#8220;Tool Match&#8221; problem. Using OWL ontology to encode the rules and concepts about tools and datasets, and then use description logic reasoners to perform Tool Match. Another one was giving tutorial on Semantic Web technology to the ESIP community. It is nice to see Semantic Web Technology really helps different communities to solve various problems and people are becoming more and more interested on this technology.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2013/01/15/three-reasons-to-attend-esip-winter-meeting/">
+	<title>Three reasons to attend ESIP winter meeting</title>
+	<link>http://tw.rpi.edu/weblog/2013/01/15/three-reasons-to-attend-esip-winter-meeting/</link>
+	<dc:date>2013-01-15T19:46:57Z</dc:date>
+	<dc:creator><![CDATA[Xiaogang Ma]]></dc:creator>
+			<dc:subject><![CDATA[Data Science]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[tetherless world]]></dc:subject>
+		<dc:subject><![CDATA[visualization]]></dc:subject>
+		<dc:subject><![CDATA[Web Science]]></dc:subject>
+	<description><![CDATA[Erin Robinson has posted 10 reasons to attend the ESIP winter meeting. I want to provide some feed-backs from the point of view of myself. Interaction: ESIP meetings are different from a normal conference with sessions of presentation and Q/A. Its sessions are more like break-outs and workshops and require interactions from the audience. Topics: [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>Erin Robinson has posted <a href="http://esipfed.org/node/1212">10 reasons</a> to attend the ESIP winter meeting. I want to provide some feed-backs from the point of view of myself.</p>
+<p>Interaction: ESIP meetings are different from a normal conference with sessions of presentation and Q/A. Its sessions are more like break-outs and workshops and require interactions from the audience.</p>
+<p>Topics: ESIP meetings cover various topics standing in the fore-front of geo-informatics, cyberinfrastructure and semantic web. It is easy to find a session or poster that could be of interest to you.</p>
+<p>Location: Normally the ESIP winter meeting will be held at Washington DC. It&#8217;s a city full of museums, good food and other interesting stuff. Take a short visit during the meeting time! </p>
+<p>I want to share a image which combines a part of my ESIP 2013 winter meeting poster and a photo taken at the National Museum of Natural History (they share a common topic of geologic time scale). </p>
+<p><a href="http://tw.rpi.edu/weblog/2013/01/15/three-reasons-to-attend-esip-winter-meeting/capture/" rel="attachment wp-att-1919"><img src="http://tw.rpi.edu/weblog/wp-content/uploads/2013/01/Capture-300x256.png" alt="Capture" width="300" height="256" class="alignnone size-medium wp-image-1919" /></a></p>
+<p>An additional information is for students in the field of semantics and/or geoinformatics. You may apply the <a href="http://wiki.esipfed.org/index.php/Raskin_Scholarship">Rob Raskin scholarship</a>.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2012/12/11/survival-and-thriving-at-agu-fall-meeting-2012/">
+	<title>Survival and thriving at AGU Fall Meeting 2012</title>
+	<link>http://tw.rpi.edu/weblog/2012/12/11/survival-and-thriving-at-agu-fall-meeting-2012/</link>
+	<dc:date>2012-12-11T18:59:07Z</dc:date>
+	<dc:creator><![CDATA[Xiaogang Ma]]></dc:creator>
+			<dc:subject><![CDATA[Data Science]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[tetherless world]]></dc:subject>
+		<dc:subject><![CDATA[visualization]]></dc:subject>
+		<dc:subject><![CDATA[Web Science]]></dc:subject>
+		<dc:subject><![CDATA[AGU]]></dc:subject>
+		<dc:subject><![CDATA[Conference]]></dc:subject>
+		<dc:subject><![CDATA[Geoinformatics]]></dc:subject>
+		<dc:subject><![CDATA[Geoscience]]></dc:subject>
+	<description><![CDATA[AGU Fall Meeting, if I am correct, is the biggest conference in the field of geosciences. For the year 2012 there were over 22000 people participated in the event. Yet, a conference is more than the number of attendees. AGU is not a single combination of a number of academic meeting sessions. There are various [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>AGU Fall Meeting, if I am correct, is the biggest conference in the field of geosciences. For the year 2012 there were over 22000 people participated in the event. Yet, a conference is more than the number of attendees. AGU is not a single combination of a number of academic meeting sessions. There are various workshops, seminars, town halls, exhibitions and social activities together with it.<br />
+I once read an article written by the president of UNISCO (two years ago?), in which it is mentioned that the number of earth scientists across the world is about 440000. This is a tiny number comparing with the global population. While approaching San Francisco and Moscone Center, the city and venue of AGU, I could feel the number of earth scientists around me is increasing sharply. Especially along the 4th street to Moscone Center, what one can see during the AGU week should be called a deluge of earth scientists. Personally, I had an interesting feeling â am I driven by the deluge, or I am a part of it?<br />
+Back to the conference itself, it is a big conference so I (1) focused on sessions in the division of Earth and Space Science Informatics (ESSI), and prepared my personal schedule for posters and presentations I was interested. I also set (2) in-person meetings with people with whom we want to discuss some issues related to the research projects DCO-DS and GCIS-IMSAP at TW. There were (3) a number of other workshops and activities together with AGU, such as the workshop of Data Management 101 for Early Career Scientists, the workshop about NSF system, the ESSI reception, the Ignite Talk, etc. Some of them cannot be easily found on the AGU web site, but are informed through different channels. Many thanks to people in those email lists (e.g., AGU-ESSI, ESIP-SW) I joined for sending me the messages.<br />
+I gave two presentations on Friday: a poster for the modeling works in the GCIS-IMSAP project (Jin is first author), and an oral presentation on the exploratory visualization of earth science data with semantic web technologies. For the first one, David Arctur suggested that we may bring some geospatial components into the model framework. Stephan discussed that if we use GCMD keywords for GCIS, then in the GCMD keywords there is a part of it is for geospatial descriptions. While I was introducing the searching function in our plan for the GCIS-IMSAP project, Deana Pennington suggested we may also consider the user tag functions, that is, a reader can create tags in the NCA report for further use, while this may also be supported by some Semantic Web technologies. I also discussed the GCMD keywords with Tyler Stevens, a researcher in the GCMD keywords, on how to make GCMD keywords more open for use. He likes our feedback and already provided some information.<br />
+My oral presentation was based on some work originated from my PhD study. This work used datasets on the server of the British Geological Survey. I got some updates from Timothy McCormick, the Information Sector Manager (Geology) at BGS, on their Linked Data works of lithology. He suggested me to do some further work using their datasets and services. Luis Bermudez and David Arctur from Open Geospatial Consortium (OGC) suggested me to do more work on semantic web and Web Feature Service (WFS) and Sensor Web, and they suggested TW to obtain a membership at OGC to get fresh first-hand progress of OGC works.<br />
+AGU is a big event, a schedule is necessary, as those described above. And, there are also many other interesting side-events. Almost every day I crossed by some old friends, for some of them I had lost contact for more than seven years! The exhibit is great and I collected a bag of earth and space science cards, posters and toys for my son â is he going to be an earth scientist?<br />
+There is more to say about a seven-day conference with over 22000 participants. I have to stop here. For those issues related to specific research topics and projects at TW we will have further discussion in the separate groups soon.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://tw.rpi.edu/weblog/2012/10/29/syntactic-normalization-of-the-btc2012-dataset/">
+	<title>Syntactic Normalization of the BTC2012 Dataset</title>
+	<link>http://tw.rpi.edu/weblog/2012/10/29/syntactic-normalization-of-the-btc2012-dataset/</link>
+	<dc:date>2012-10-30T03:32:07Z</dc:date>
+	<dc:creator><![CDATA[Jesse Weaver]]></dc:creator>
+			<dc:subject><![CDATA[tetherless world]]></dc:subject>
+	<description><![CDATA[[UPDATE: There was a bug in the code causing too many exceptions to be thrown for bad UTF-8 encoding. Â See the comment below for details.] I recently normalized (meaning to be discussed) the 2012-09-02 version of the BTC2012 dataset for the purposes of later experimentation. In the process, I gathered some statistics that seem somewhat [&#8230;]]]></description>
+	<content:encoded><![CDATA[<p>[UPDATE: There was a bug in the code causing too many exceptions to be thrown for bad UTF-8 encoding. Â See the <a href="http://tw.rpi.edu/weblog/2012/10/29/syntactic-normalization-of-the-btc2012-dataset/comment-page-1/#comment-4947">comment</a> below for details.]</p>
+<p>I recently normalized (meaning to be discussed) <a href="http://km.aifb.kit.edu/projects/btc-2012/">the 2012-09-02 version of the BTC2012 dataset</a> for the purposes of later experimentation. In the process, I gathered some statistics that seem somewhat interesting. Perhaps these insights will be useful to others.</p>
+<p>The normalization process &#8212; at a high level &#8212; consists of the following steps:</p>
+<ol>
+<li>Strip out the quad position of the BTC2012 N-quads files to generate N-triples files. Â Note that there is no removal of duplicate triples.</li>
+<li>For each line in the N-triples files:
+<ul>
+<li>Parse it, throwing an exception if an error is encountered.</li>
+<li>Normalize each part in order of subject, predicate, object. If an error is encountered, throw an exception, ignoring remaining parts.</li>
+<li>Output triple as normalized.</li>
+</ul>
+</li>
+</ol>
+<p>The base code (not including the main function) used is available under the Apache 2.0 permissive license <a href="http://github.com/jrweave/jrweave">here</a>, except this particular experiment updated the files in ucs/scripts and lang/scripts to be the latest UCS 6.2.0 and language tag repository, respectively. Â I wrote this code because I was tired of dealing with library dependencies on supercomputers with non-standard operating systems.</p>
+<h4>Errors</h4>
+<p>Table 1 shows (non-unique) triple counts. Input triples are those resulting from merely stripping out the quad position. Error triples are those for which problems occurred during parsing or normalization. Output triples are those remaining and considered part of the normalized BTC2012 dataset. Table 2 lists the sources of the errors in the error triples, that is, whether errors were found in the subject, predicate, object, or possibly an unknown position. Recall that once an error is found, the rest of the triple is ignored. That is, if an error is found in the subject, then the predicate and object are not checked. Similarly, if an error is found in the predicate, then the object is not checked.</p>
+<table>
+<tbody>
+<tr>
+<td colspan="2" align="center"><strong>Table 1</strong></td>
+</tr>
+<tr>
+<td>Input</td>
+<td align="right">1,436,545,545</td>
+</tr>
+<tr>
+<td>Error</td>
+<td align="right">6,484</td>
+</tr>
+<tr>
+<td>Output</td>
+<td align="right">1,436,539,061</td>
+</tr>
+</tbody>
+</table>
+<p>[UPDATE: Removing duplicates from the output triples, there areÂ 1,056,169,984 unique triples.]</p>
+<table>
+<tbody>
+<tr>
+<td colspan="2" align="center"><strong>Table 2</strong></td>
+</tr>
+<tr>
+<td>Subject</td>
+<td align="right">1,152</td>
+</tr>
+<tr>
+<td>Predicate</td>
+<td align="right">156</td>
+</tr>
+<tr>
+<td>Object</td>
+<td align="right">1,198</td>
+</tr>
+<tr>
+<td>Unknown</td>
+<td align="right">3,978</td>
+</tr>
+</tbody>
+</table>
+<div id="attachment_1855" style="width: 310px" class="wp-caption alignright"><a href="http://tw.rpi.edu/weblog/wp-content/uploads/2012/10/errors1.png"><img class="size-medium wp-image-1855" src="http://tw.rpi.edu/weblog/wp-content/uploads/2012/10/errors1-300x180.png" alt="Pie chart of errors broken down by cause" width="300" height="180" /></a><p class="wp-caption-text">Figure 1</p></div>
+<p>Figure 1 breaks down the errors by cause. Errors from subjects and predicates were always malformed IRIs. The sources of all of the UTF-8 errors and some (86) of the invalid codepoint errors were unknown. The rest of the errors came from the object position of triples. Explanation of the legend in figure 1 follows.</p>
+<ul>
+<li>&#8220;BAD UTF8&#8243; simply means that data in the triple which was assumed to be UTF-8 encoded was not validly encoded.</li>
+<li>&#8220;MALFORMED IRI&#8221; means that an IRI was found (either a RDF term that is an IRI or a datatype IRI in a typed literal) that was not a valid IRI according to <a href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>.</li>
+<li>&#8220;RELATIVE IRI&#8221; merely means that the IRI is relative, which is not allowed in N-quads or N-triples formats.</li>
+<li>&#8220;BAD CODEPOINT&#8221; means that a codepoint was encountered that was not defined in UCS 6.2.0.</li>
+<li>&#8220;BAD DELIMITERS&#8221; means that RDF terms were encountered that were not properly delimited. For example, an IRI starting with &#8216;&lt;&#8217; but not ending with &#8216;&gt;&#8217;.</li>
+<li>&#8220;BAD LANGTAG&#8221; accounts for malformed language tags according to <a href="http://www.ietf.org/rfc/rfc5646.txt">RFC 5646</a>.</li>
+<li>&#8220;HEXTUPLE&#8221; accounts for the odd condition in which two triples were placed on the same line.</li>
+</ul>
+<p>The complete list of malformed IRIs can be found <a href="http://www.cs.rpi.edu/~weavej3/btc2012/rank-malformed-iris.txt">here</a>, and the top 10 are listed in table 3. Most of the top 10 are malformed because they contain square brackets in the query portion of the IRI. The 5th and 10th ones are malformed because they contain spaces. The 4th one is malformed because the fragment contains a &#8216;#&#8217;.</p>
+<table>
+<tbody>
+<tr>
+<td colspan="2" align="center"><strong>Table 3</strong></td>
+</tr>
+<tr>
+<td>354</td>
+<td>&lt;http://lastfm.rdfize.com/?artistName=[Me]&gt;</td>
+</tr>
+<tr>
+<td>291</td>
+<td>&lt;http://lastfm.rdfize.com/?artistName=[:SITD:]&gt;</td>
+</tr>
+<tr>
+<td>278</td>
+<td>&lt;http://lastfm.rdfize.com/?artistName=[x]-Rx&gt;</td>
+</tr>
+<tr>
+<td>155</td>
+<td>&lt;http://usefulinc.com/ns/doap#http://purl.org/NET/cpan-uri/terms#released-by&gt;</td>
+</tr>
+<tr>
+<td>116</td>
+<td>&lt;official homepage&gt;</td>
+</tr>
+<tr>
+<td>80</td>
+<td>&lt;http://lastfm.rdfize.com/?artistName=The+[hated]+Tomorrow&gt;</td>
+</tr>
+<tr>
+<td>66</td>
+<td>&lt;http://lastfm.rdfize.com/?artistName=%C3%98+[Phase]&gt;</td>
+</tr>
+<tr>
+<td>33</td>
+<td>&lt;http://lastfm.rdfize.com/?artistName=MLE[e]&gt;</td>
+</tr>
+<tr>
+<td>27</td>
+<td>&lt;http://lastfm.rdfize.com/?artistName=Beard]+.&gt;</td>
+</tr>
+<tr>
+<td>24</td>
+<td>&lt;social network&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>The complete list of relative IRIs can be found <a href="http://www.cs.rpi.edu/~weavej3/btc2012/rank-relative-iris.txt">here</a>, and they are also listed in table 4.</p>
+<table>
+<tbody>
+<tr>
+<td colspan="2" align="center"><strong>Table 4</strong></td>
+</tr>
+<tr>
+<td>452</td>
+<td>&lt;Last.fm&gt;</td>
+</tr>
+<tr>
+<td>97</td>
+<td>&lt;myspace&gt;</td>
+</tr>
+<tr>
+<td>15</td>
+<td>&lt;microblog&gt;</td>
+</tr>
+<tr>
+<td>10</td>
+<td>&lt;composer&gt;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>&lt;youtube&gt;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>&lt;biography&gt;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&lt;wikipedia&gt;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&lt;class&gt;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&lt;array&gt;</td>
+</tr>
+<tr>
+<td>1</td>
+<td>&lt;html&gt;</td>
+</tr>
+<tr>
+<td>1</td>
+<td>&lt;fanpage&gt;</td>
+</tr>
+<tr>
+<td>1</td>
+<td>&lt;datetime&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>All 18 of the malformed language tags are the same: fr_1793. The apparent problem is the use of an underscore rather than a hyphen. Â That particular statistic along with the &#8220;hextuples&#8221; can be found <a href="http://www.cs.rpi.edu/~weavej3/btc2012/rank-badlangs-hextuples.txt">here</a> (with hextuples reported like bad language tags). The full list of invalid codepoints can be found <a href="http://www.cs.rpi.edu/~weavej3/btc2012/rank-invalid-codepoints.txt">here</a>, and the full list of invalid UTF-8 encodings can be found <a href="http://www.cs.rpi.edu/~weavej3/btc2012/rank-invalid-utf.txt">here</a>. (Each line in the latter has the format &#8220;N B:H&#8221; where N is the number of occurrences, B is the byte position of the UTF-8-encoded character, and H is the value of that byte in hexadecimal format.)</p>
+<h4>RDF Terms</h4>
+<div id="attachment_1870" style="width: 310px" class="wp-caption alignright"><a href="http://tw.rpi.edu/weblog/wp-content/uploads/2012/10/term.png"><img class="size-medium wp-image-1870" src="http://tw.rpi.edu/weblog/wp-content/uploads/2012/10/term-300x180.png" alt="Pie chart of terms broken down by types" width="300" height="180" /></a><p class="wp-caption-text">Figure 2</p></div>
+<p>Figure 2 shows the breakdown of RDF terms. The astute observer will notice that there are more terms than could possibly be used in the normalized triples. This is due to the normalization process. If an error occurs in the predicate position of a triple, statistics are still collected for the valid subject. If an error occurs in the object position of a triple, statistics are still collected for the valid subject and predicate. Â Not surprisingly, IRIs account for about 76% of the RDF terms, blank nodes about 11% of the RDF terms, language-tagged literals about 7% of the RDF terms, typed literals about 3% of the RDF terms, and simple literals about 3% of the RDF terms.</p>
+<p>There is a particular syntactical error that was not reported as an error above, and that is validation of blank node labels. According to <a href="http://www.w3.org/TR/rdf-testcases/#name">the latest standardization of N-triples</a>, blank node labels must be alpha-numeric. However, 1,696 blank node labels were not alpha-numeric, although they were all NFC-normalized UTF-8-encoded Unicode strings. (These statistics apply only to blank node labels without any other errors.)</p>
+<p>579,710,373 (99.998%) of the literals had lexical representations that were NFC normalized.</p>
+<h4>IRIs</h4>
+<div id="attachment_1871" style="width: 310px" class="wp-caption alignright"><a href="http://tw.rpi.edu/weblog/wp-content/uploads/2012/10/hash-slash.png"><img class="size-medium wp-image-1871" src="http://tw.rpi.edu/weblog/wp-content/uploads/2012/10/hash-slash-300x180.png" alt="Breakdown of IRIs into hash, slash, or other" width="300" height="180" /></a><p class="wp-caption-text">Figure 3</p></div>
+<p>Now we consider IRIs, not only as RDF terms, but also as datatype IRIs in RDF typed literals. Collectively, there are 3,401,695,106 of them accounted for in the statistics. Figure 3 gives the breakdown into hash, slash, and other IRIs. An IRI was classified as follows.</p>
+<ol>
+<li>If the scheme is neither http nor https, then classify as other.</li>
+<li>If there is a fragment, then classify as hash.</li>
+<li>If the path contains a slash, then classify as slash.</li>
+<li>Otherwise, classify as other.</li>
+</ol>
+<p>About 65% of IRIs were slash, 35% of IRIs were hash, and nearly 0% were &#8220;other&#8221;. (Note that these statistics reflect nothing about dereferencing behavior but only syntactic appearance.)</p>
+<p>Presence of different parts is accounted for in table 5. Since every valid IRI in an RDF dataset must be absolute, every IRI has a scheme and (possibly zero-length) path. Table 5 reports the number of IRIs having a certain, optional part.</p>
+<table>
+<tbody>
+<tr>
+<td colspan="3" align="center"><strong>Table 5</strong></td>
+</tr>
+<tr>
+<td>User Info</td>
+<td align="right">76</td>
+<td align="right">0.000%</td>
+</tr>
+<tr>
+<td>Host</td>
+<td align="right">3,400,896,910</td>
+<td align="right">99.977%</td>
+</tr>
+<tr>
+<td>Port</td>
+<td align="right">99,181</td>
+<td align="right">0.003%</td>
+</tr>
+<tr>
+<td>Query</td>
+<td align="right">11,378,327</td>
+<td align="right">0.334%</td>
+</tr>
+<tr>
+<td>Fragment</td>
+<td align="right">1,173,631,334</td>
+<td align="right">34.501%</td>
+</tr>
+</tbody>
+</table>
+<p>IRIs were normalized by doing the following:</p>
+<ol>
+<li>Percent-<em>un</em>encoding any unnecessarily percent-encoded characters.</li>
+<li>Performing NFC normalization.</li>
+<li>Resolving/normalizing the path (e.g., /./a becomes /a).</li>
+<li>Lower-casing the scheme and host.</li>
+</ol>
+<p>An IRI was considered &#8220;urified&#8221; (turned into a normalized <em>URI</em>) if it was normalized and then had all its iprivate and ucschars percent-encoded. (See <a href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a> for details.) It is sometimes the case that an IRI has the same normal form and urified form, but not always. Table 6 gives the count of IRIs that were already normalized, urified, or both.</p>
+<table>
+<tbody>
+<tr>
+<td colspan="3" align="center"><strong>Table 6</strong></td>
+</tr>
+<tr>
+<td>Normalized</td>
+<td align="right">3,355,505,000</td>
+<td align="right">98.642%</td>
+</tr>
+<tr>
+<td>Urified</td>
+<td align="right">3,401,113,730</td>
+<td align="right">99.983%</td>
+</tr>
+<tr>
+<td>Both</td>
+<td align="right">3,354,982,405</td>
+<td align="right">98.627%</td>
+</tr>
+</tbody>
+</table>
+<h4>Language Tags</h4>
+<p>Table 7 gives the counts for language tags containing certain, optional parts. Every language tag must either contain a primary tag, be a purely private-use tag, or be a grandfathered tag (either regular or irregular). (See <a href="http://www.ietf.org/rfc/rfc5646.txt">RFC 5646</a> for details.) No grandfathered tags were found. In gathering statistics, no check was made for primary tags in order to distinguish between typical tags and purely private-use tags. Thus, in table 7, the count for tags containing a private-use portion includes counts for any purely private-use tags.</p>
+<table>
+<tbody>
+<tr>
+<td colspan="3" align="center"><strong>Table 7</strong></td>
+</tr>
+<tr>
+<td>Script</td>
+<td align="right">2,724</td>
+<td align="right">0.001%</td>
+</tr>
+<tr>
+<td>Region</td>
+<td align="right">98,700</td>
+<td align="right">0.032%</td>
+</tr>
+<tr>
+<td>Variants</td>
+<td align="right">105</td>
+<td align="right">0.000%</td>
+</tr>
+<tr>
+<td>Extensions</td>
+<td align="right">0</td>
+<td align="right">0.000%</td>
+</tr>
+<tr>
+<td>Private Use</td>
+<td align="right">31</td>
+<td align="right">0.000%</td>
+</tr>
+</tbody>
+</table>
+<p>Language tags were normalized by the following process (again, see <a href="http://www.ietf.org/rfc/rfc5646.txt">RFC 5646</a> for details):</p>
+<ol>
+<li>Sort extensions by singletons.</li>
+<li>Replace redundant and grandfathered tags with preferred values.</li>
+<li>Replace subtags with preferred values.</li>
+</ol>
+<p>In addition to having a normal form, language tags also have an &#8220;extlang&#8221; form. Sometimes the normal form and the extlang form are the same, but not always. Table 8 presents the relevant counts.</p>
+<table>
+<tbody>
+<tr>
+<td colspan="3" align="center"><strong>Table 8</strong></td>
+</tr>
+<tr>
+<td>Normalized</td>
+<td align="right">304,176,025</td>
+<td align="right">99.99997%</td>
+</tr>
+<tr>
+<td>Exlangified</td>
+<td align="right">304,175,898</td>
+<td align="right">99.99993%</td>
+</tr>
+<tr>
+<td>Both</td>
+<td align="right">304,175,898</td>
+<td align="right">99.99993%</td>
+</tr>
+</tbody>
+</table>
+<h4>Raw Statistics</h4>
+<p>The aggregated raw statistics can be found <a href="http://www.cs.rpi.edu/~weavej3/btc2012/stats.txt">here</a>, and the raw statistics for each BTC2012 data file along with printed exceptions can be found <a href="http://www.cs.rpi.edu/~weavej3/btc2012/stats/">here</a>. This blog post has provided some additional interpretation of the raw statistics that is not readily apparent. If you happen to come across any exceptions that you think are unfounded, please let me know so that I can do the appropriate debugging.</p>
+]]></content:encoded>
+	</item>
+</rdf:RDF>

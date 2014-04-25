@@ -1,3 +1,12 @@
+/**
+ * feedreader-prototype
+ *
+ * HttpConnector.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.io;
 
 import java.io.File;
@@ -16,7 +25,7 @@ import java.util.zip.InflaterInputStream;
  * 
  * supports Conditional GET and gzip encoding
  * 
- * Note: uses java.net libs
+ * Note: uses java.net libs, not Apache
  */
 public class HttpConnector {
 

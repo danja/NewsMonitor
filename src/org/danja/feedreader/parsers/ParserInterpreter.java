@@ -1,7 +1,11 @@
-/*
- * Danny Ayers Aug 31, 2004
- * http://dannyayers.com
+/**
+ * feedreader-prototype
+ *
+ * ParserInterpreter.java
  * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.parsers;
 
@@ -10,7 +14,6 @@ import org.danja.feedreader.io.Interpreter;
 import org.xml.sax.ContentHandler;
 
 /**
- * @author danny
  *  
  */
 public class ParserInterpreter  implements Interpreter { 

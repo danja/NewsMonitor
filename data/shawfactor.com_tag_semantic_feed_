@@ -1,0 +1,79 @@
+<rdf:RDF xmlns:admin="http://webns.net/mvcb/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<!-- version="RSS 2.0" -->
+<rss:channel xmlns:rss="http://purl.org/rss/1.0/" rdf:about="">
+<rss:title>Shawfactor » Semantic</rss:title>
+<rss:link>http://shawfactor.com</rss:link>
+<rss:description>Believe in the power of the Factor</rss:description>
+<dc:language>en-US</dc:language>
+<sy:updatePeriod xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">hourly</sy:updatePeriod>
+<sy:updateFrequency xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">1</sy:updateFrequency>
+<rss:items>
+<rdf:Seq>
+<rdf:li rdf:resource="http://shawfactor.com/b/gn3"/>
+<rdf:li rdf:resource="http://shawfactor.com/b/gea"/>
+<rdf:li rdf:resource="http://shawfactor.com/b/gaG"/>
+</rdf:Seq>
+</rss:items>
+</rss:channel>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://shawfactor.com/b/gn3">
+<rss:title>Visualising RDF with Incontext</rss:title>
+<rss:link>http://shawfactor.com/b/gn3</rss:link>
+<dc:subject>Programming</dc:subject>
+<dc:subject>LocalHero</dc:subject>
+<dc:subject>plugin</dc:subject>
+<dc:subject>RDF</dc:subject>
+<dc:subject>Semantic</dc:subject>
+<dc:subject>WordPress</dc:subject>
+<rss:description/>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">shawfactor</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;Surfing around the internet I recently discovered &lt;a href="http://surffoundation.nl"&gt;SURF&lt;/a&gt;&amp;#8216;s &lt;a href="http://wiki.surffoundation.nl/display/vp/4.3+%27InContext%27+Visualiser"&gt;InContext Visualiser&lt;/a&gt;, which I think is a neat way to visualise of RDF relationships, especially OAI-ORE aggregated publications&lt;/p&gt;
+&lt;p&gt;&lt;span id="more-150423"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I also discovered that people have already created a set of WordPress plugins (see: &lt;a title="Semantic Words" href="http://ep-books.ehumanities.nl/"&gt;http://ep-books.ehumanities.nl/&lt;/a&gt; ) to visualise books and other similar publications. However blogs do not fit into a book/chapter model.&lt;/p&gt;
+&lt;p&gt;However given there is already a schema for publishing &lt;a title="SIOC Project" href="http://sioc-project.org/"&gt;blog data&lt;/a&gt; and my &lt;a title="lh rdf" href="http://wordpress.org/extend/plugins/lh-rdf/"&gt;lh-rdf&lt;/a&gt; plugin already exposes most publicly available WordPress blog data as RDF using that format. It was an obvious next step to get the visualiser working with the LH RDF output. I have done so and hopefully you think the output is cool.&lt;/p&gt;
+&lt;p&gt;&lt;a title="Incontext example" href="http://shawfactor.com/visualiser-test/"&gt;http://shawfactor.com/visualiser-test/&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://shawfactor.com/b/gea">
+<rss:title>Introducing LH Tools</rss:title>
+<rss:link>http://shawfactor.com/b/gea</rss:link>
+<dc:subject>Featured</dc:subject>
+<dc:subject>LocalHero</dc:subject>
+<dc:subject>plugin</dc:subject>
+<dc:subject>RDF</dc:subject>
+<dc:subject>Semantic</dc:subject>
+<dc:subject>WordPress</dc:subject>
+<rss:description>A RDF Store and SPARQL Endpoint for WP.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">shawfactor</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;Intoducing LH Tools.&lt;/p&gt;
+&lt;p&gt;LH Tools is a WordPress extension that adds an (&lt;a title="Arc2" href="https://github.com/semsol/arc2"&gt;ARC-based&lt;/a&gt;) RDF Store and SPARQL Endpoint to the WordPress blogging system. The store is kept separate from the WP tables (i.e. it&amp;#8217;s not a wrapper), but you can use WP&amp;#8217;s nice admin screens to configure it, it and embed it using the large number of developer-friendly hooks that WP offers. It is based on the original work by &lt;a title="RDF Tools" href="http://www.bnode.org/blog/2008/01/15/rdf-tools-an-rdf-store-for-wordpress"&gt;Ben Nowack&lt;/a&gt;.&lt;br /&gt;
+&lt;span id="more-149975"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;If are interested you can read about it here: &lt;a title="LH Tools info" href="http://localhero.biz/plugins/lh-tools/"&gt;http://localhero.biz/plugins/lh-tools/&lt;/a&gt;&lt;br /&gt;
+and download it here: &lt;a title="LH Tools download" href="http://wordpress.org/extend/plugins/lh-tools/"&gt;http://wordpress.org/extend/plugins/lh-tools/&lt;/a&gt;. And interrogate this sites local endpoint here:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://shawfactor.com/wp-content/plugins/lh-tools/"&gt;http://shawfactor.com/wp-content/plugins/lh-tools/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Whilst this can be used on a standalone basis, it is most useful when combined with the other LH (LocalHero) plugins:&lt;/p&gt;
+&lt;p&gt;LH RDF: &lt;a href="http://localhero.biz/plugins/lh-rdf/"&gt;http://localhero.biz/plugins/lh-rdf/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Which exposes a large part of the WordPress data as sematic rdf content&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;LH Relationships: &lt;a href="http://localhero.biz/plugins/lh-relationships/"&gt;http://localhero.biz/plugins/lh-relationships/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Which enables semantic linking between wordpress posts, pages, categories, and other objects. These three extensions used in combination enable a true semantic CMS and I&amp;#8217;m curious what can be done now. I&amp;#8217;ll add additional documentation and proof of concepts of what is possible in time.&lt;/p&gt;
+</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://shawfactor.com/b/gaG">
+<rss:title>LH Relationships wordpress plugin</rss:title>
+<rss:link>http://shawfactor.com/b/gaG</rss:link>
+<dc:subject>Programming</dc:subject>
+<dc:subject>LocalHero</dc:subject>
+<dc:subject>plugin</dc:subject>
+<dc:subject>RDF</dc:subject>
+<dc:subject>Semantic</dc:subject>
+<dc:subject>WordPress</dc:subject>
+<rss:description/>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">shawfactor</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;Intoducing LH Relationships.&lt;/p&gt;
+&lt;p&gt;LH Relationships is a WordPress plugin that enables the creation of true post to post relationships. More information for the rationale driving this is available &lt;a href="http://shawfactor.com/2011/09/29/the-structural-weaknesses-of-wordpress/"&gt;here.&lt;/a&gt; It was built as a core part of the &lt;a href="http://localhero.biz/about/"&gt;LocalHero&lt;/a&gt; project.&lt;/p&gt;
+&lt;p&gt;&lt;span id="more-149716"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;If are interested you can read about it here: &lt;a href="http://localhero.biz/plugins/lh-relationships/"&gt;http://localhero.biz/plugins/lh-relationships/&lt;/a&gt;&lt;br /&gt;
+and download it here: &lt;a href="http://wordpress.org/extend/plugins/lh-relationships/"&gt;http://wordpress.org/extend/plugins/lh-relationships/&lt;/a&gt;.&lt;/p&gt;
+</content:encoded>
+</rss:item>
+</rdf:RDF>

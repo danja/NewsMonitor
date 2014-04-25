@@ -1,8 +1,12 @@
-/* RETIRE ME
+/**
+ * TODO revisit
+ * feedreader-prototype
+ *
+ * DonloadInterpreter.java
  * 
- * Danny Ayers Aug 22, 2004
- * http://dannyayers.com
- * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.io;
 
@@ -13,7 +17,6 @@ import org.danja.feedreader.feeds.FeedFetcher;
  */
 public class DownloadInterpreter  implements Interpreter{
 
-    // CHANGED!! was extends DefaultHandler
     
     private String  downloadDir;
     

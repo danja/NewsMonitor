@@ -1,7 +1,11 @@
-/*
- * Danny Ayers Aug 27, 2004
- * http://dannyayers.com
+/**
+ * feedreader-prototype
+ *
+ * EntryListImpl.java
  * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.feeds;
 

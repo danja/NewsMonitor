@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+<channel rdf:about="http://aabs.wordpress.com">
+	<title>The Wandering Glitch &#187; SemanticWeb</title>
+	<link>http://aabs.wordpress.com</link>
+	<description>Simplex Sigillum Veri</description>
+	<dc:date>2014-04-24T12:37:01Z</dc:date>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="http://wordpress.com/" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2012/03/10/859/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2011/05/14/preparing-a-project-gutenberg-book-for-use-on-a-6-ereader/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2011/04/11/some-pictures-of-carlton-gardens/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2010/08/31/note-to-self-convert-utf-8-w-bom-to-ascii-wix-db-using-gnu-uconv/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2010/03/10/programming-with-petri-nets/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2009/12/08/quantum-reasoners-hold-key-to-future-web/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2009/11/13/semantic-overflow-highlights-i/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2009/10/27/www-semanticoverflow-com-the-web-2-0-qa-site-for-all-things-web-3-0/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2009/03/20/quote-of-the-day-chris-sells-on-cocktail-parties/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2009/02/27/australian-port-a-new-wmd/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/11/18/relational-modeling-not-as-we-know-it/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/11/14/patternmatching/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/09/23/object-orientation-not-as-we-know-it/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/09/15/new-resources-for-linqtordf/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/08/27/not-another-mapping-markup-language/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/08/26/564/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/08/22/semantic-development-environments/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/08/02/white-paper-exploiting-the-rdf-based-linked-data-web-using-net-via-linq/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/08/01/announcing-linqtordf-v08/"/>
+					<rdf:li rdf:resource="http://aabs.wordpress.com/2008/06/09/linqtordf-v071-and-rdfmetal/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://aabs.wordpress.com/2012/03/10/859/">
+	<title></title>
+	<link>http://aabs.wordpress.com/2012/03/10/859/</link>
+	<dc:date>2012-03-10T08:48:16Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[Originally posted on <a href="http://rochestersage.org/2012/03/05/i-want-my-kids-to-fail/">Rochester SAGE - Supporting Advanced &#38; Gifted Education</a>:<br />I&#8217;ve missed more than 9000 shots in my career. I&#8217;ve lost almost 300 games. 26 times, I&#8217;ve been trusted to take the game winning shot and missed. I&#8217;ve failed over and over and over again in my life.Â  And that is why I succeed.&#8230;<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=859&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2011/05/14/preparing-a-project-gutenberg-book-for-use-on-a-6-ereader/">
+	<title>Preparing a Project Gutenberg ebook for use on a 6&#8243; ereader</title>
+	<link>http://aabs.wordpress.com/2011/05/14/preparing-a-project-gutenberg-book-for-use-on-a-6-ereader/</link>
+	<dc:date>2011-05-14T06:49:05Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[bebook]]></dc:subject>
+		<dc:subject><![CDATA[gutenberg]]></dc:subject>
+		<dc:subject><![CDATA[gutenmark]]></dc:subject>
+		<dc:subject><![CDATA[LaTeX]]></dc:subject>
+	<description><![CDATA[For a while I&#8217;ve been trying to find a nice way to convert project Gutenberg books to look pleasant on a BeBook One. I&#8217;ve finally hit on the perfect combination of tools, that produces documents ideally suited to 6&#8243; eInk ebook readers like my BeBook. The tool chain involves using GutenMark to convert the file [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=753&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2011/04/11/some-pictures-of-carlton-gardens/">
+	<title>Some pictures of Carlton Gardens</title>
+	<link>http://aabs.wordpress.com/2011/04/11/some-pictures-of-carlton-gardens/</link>
+	<dc:date>2011-04-10T23:43:42Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[Carlton Gardens, a set on Flickr. This was my first outing with the Pentax K-x that I got recently. In these pictures, I&#8217;m trying to get to grips with the camera, so I didn&#8217;t have any particular objective other than to take pictures. The light was so harsh it was very difficult for me to [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=750&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2010/08/31/note-to-self-convert-utf-8-w-bom-to-ascii-wix-db-using-gnu-uconv/">
+	<title>Note to Self: Convert UTF-8 w/ BOM to ASCII (WIX + DB) using GNU uconv</title>
+	<link>http://aabs.wordpress.com/2010/08/31/note-to-self-convert-utf-8-w-bom-to-ascii-wix-db-using-gnu-uconv/</link>
+	<dc:date>2010-08-31T00:02:34Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[BOM]]></dc:subject>
+		<dc:subject><![CDATA[encoding]]></dc:subject>
+		<dc:subject><![CDATA[uconv]]></dc:subject>
+		<dc:subject><![CDATA[WIX]]></dc:subject>
+	<description><![CDATA[This one took me a long time to work out, and it took a non-latin alphabet user (Russian) to point me at the right tools. Yet again, I&#8217;m guilty of being a complacent anglophone. I was producing a database installer project using WIX 3.5, and ran into all sorts of inexplicable problems, which I finally [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=735&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2010/03/10/programming-with-petri-nets/">
+	<title>Automata-Based Programming With Petri Nets &#8211; Part 1</title>
+	<link>http://aabs.wordpress.com/2010/03/10/programming-with-petri-nets/</link>
+	<dc:date>2010-03-10T11:11:13Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[programming]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[CompSci]]></dc:subject>
+		<dc:subject><![CDATA[Computer Science]]></dc:subject>
+		<dc:subject><![CDATA[Petri Nets]]></dc:subject>
+	<description><![CDATA[Petri Nets are extremely powerful and expressive, but they are not as widely used as state machines. That's a pity, they allow us to solve problems beyond the reach of state machines. This post is the first in a mini-series on software development with Petri Nets. All of the code for a full feature-complete Petri Net library is available online at on GitHub. You're welcome to take a copy, play with it and use it in your own projects.<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=686&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2009/12/08/quantum-reasoners-hold-key-to-future-web/">
+	<title>Quantum Reasoners Hold Key to Future Web</title>
+	<link>http://aabs.wordpress.com/2009/12/08/quantum-reasoners-hold-key-to-future-web/</link>
+	<dc:date>2009-12-07T14:09:36Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[science]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[artificial intelligence]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[semweb]]></dc:subject>
+		<dc:subject><![CDATA[software]]></dc:subject>
+		<dc:subject><![CDATA[web3.0]]></dc:subject>
+	<description><![CDATA[Last year, a company called DWave Systems announced their quantum computer (the &#8216;Orion&#8217;) &#8211; another milestone on the road to practical quantum computing. Their controversial claims seem worthy in their own right but they are particularly important to the semantic web (SW) community. The significance to the SW community was that their quantum computer solved [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=614&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2009/11/13/semantic-overflow-highlights-i/">
+	<title>Semantic Overflow Highlights I</title>
+	<link>http://aabs.wordpress.com/2009/11/13/semantic-overflow-highlights-i/</link>
+	<dc:date>2009-11-12T21:47:33Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[semantic-overflow]]></dc:subject>
+		<dc:subject><![CDATA[web3.0]]></dc:subject>
+	<description><![CDATA[Semantic Overflow has been active for a couple of weeks. We now have 155 users and 53 questions. We&#8217;ve already had some very interesting questions and some excellent detailed and thoughtful responses. I thought, on Egon&#8217;s instigation, toÂ  bring together, from the site&#8217;s BI stats, some of the highlights of last week. The best loved [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=669&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2009/10/27/www-semanticoverflow-com-the-web-2-0-qa-site-for-all-things-web-3-0/">
+	<title>www.SemanticOverflow.com &#8211; the Web 2.0 Q&amp;A site for all things Web 3.0.</title>
+	<link>http://aabs.wordpress.com/2009/10/27/www-semanticoverflow-com-the-web-2-0-qa-site-for-all-things-web-3-0/</link>
+	<dc:date>2009-10-27T11:32:02Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[www.SemanticOverflow.com is a new site based on the hugely popular StackOverflow.com, devoted to Q&#38;A on anything related to the semantic web. The site is very new (created today) and I&#8217;m trying to get as many people to visit as I can, so please come and post your questions and together we&#8217;ll create a thriving community [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=654&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2009/03/20/quote-of-the-day-chris-sells-on-cocktail-parties/">
+	<title>Quote of the Day &#8211; Chris Sells on Cocktail Parties</title>
+	<link>http://aabs.wordpress.com/2009/03/20/quote-of-the-day-chris-sells-on-cocktail-parties/</link>
+	<dc:date>2009-03-19T22:52:09Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[I can relate to this: I&#8217;ll take a lake of fire any day over more than three strangers in a room with which I share no common task and with whom I&#8217;m expected to socialize How to express this to my wife without her thinking that I am suffering from a combination of acrophobia and [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=620&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2009/02/27/australian-port-a-new-wmd/">
+	<title>Australian Port &#8211; a new WMD?</title>
+	<link>http://aabs.wordpress.com/2009/02/27/australian-port-a-new-wmd/</link>
+	<dc:date>2009-02-26T23:27:12Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[Proving that Cockroaches are not indestructible, Kerry neatly (if inadvertently) demonstrated that Australian port is capable of killing things that heat, cold and lethal levels of ionizing radiation cannot. Of course Kerry was gagging for days just at the thought that the thing had been in her glass all along â it probably hadnât â [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=619&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/11/18/relational-modeling-not-as-we-know-it/">
+	<title>Relational Modeling? Not as we know it!</title>
+	<link>http://aabs.wordpress.com/2008/11/18/relational-modeling-not-as-we-know-it/</link>
+	<dc:date>2008-11-18T11:11:20Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[programming]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[databases]]></dc:subject>
+		<dc:subject><![CDATA[semweb]]></dc:subject>
+	<description><![CDATA[... there's plenty of ways that RDF specifically addresses the problems it seeks to address - data interchange, standards definition, KR, mashups - in a distributed web-wide way. RDBMSs address the problems that were faced by programmers at the coal face in the 60s and 70s - Efficient, Standardized, platform-independent data storage and retrieval. The imperative that created a need for RDBMSs in the 60s is not going away, so I doubt databases will be going away any time soon either. In fact they can be exposed to the world as triples without too much trouble. The problem is that developers need more than just data storage and retrieval. They need <i>intelligent</i> data storage and retrieval.<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=611&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/11/14/patternmatching/">
+	<title>Pattern Matching in C#</title>
+	<link>http://aabs.wordpress.com/2008/11/14/patternmatching/</link>
+	<dc:date>2008-11-13T22:46:23Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[I recently used Matthew Podwyszocki&#8217;s pattern matching classes for a top level exception handler in an App I&#8217;m writing. Matthew&#8217;s classes are a really nice fluent interface attaching predicates to functions generating results. I used it as a class factory to select between handlers for exceptions. Here&#8217;s an example of how I used it: ExceptionHandler [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=605&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/09/23/object-orientation-not-as-we-know-it/">
+	<title>Object Orientation? Not as we know it.</title>
+	<link>http://aabs.wordpress.com/2008/09/23/object-orientation-not-as-we-know-it/</link>
+	<dc:date>2008-09-23T12:27:27Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[I thought I&#8217;d start with a lyric: That one&#8217;s my mother and That one&#8217;s my father and The one in the hat, that&#8217;s me. You could be forgiven for wondering what Ani Difranco has to do with this blog&#8217;s usual themes, but rest assured, I won&#8217;t stray too far. My theme today is the limitations [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=581&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/09/15/new-resources-for-linqtordf/">
+	<title>New Resources for LinqToRdf</title>
+	<link>http://aabs.wordpress.com/2008/09/15/new-resources-for-linqtordf/</link>
+	<dc:date>2008-09-15T03:10:06Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[.NET]]></dc:subject>
+		<dc:subject><![CDATA[programming]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[articles]]></dc:subject>
+		<dc:subject><![CDATA[LinqToRdf]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[semweb]]></dc:subject>
+	<description><![CDATA[John Mueller recently sent through a link to a series of articles on working with RDF. As well as being a useful introduction to working with RDF, they use LinqToRdf for code examples. Modeling your Data with RDF (Part 1) Understanding and Using Resource Description Framework Files (Part 2) They provide information on hosting RDF [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=578&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/08/27/not-another-mapping-markup-language/">
+	<title>Not another mapping markup language!</title>
+	<link>http://aabs.wordpress.com/2008/08/27/not-another-mapping-markup-language/</link>
+	<dc:date>2008-08-27T04:03:14Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[.NET]]></dc:subject>
+		<dc:subject><![CDATA[programming]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[C#]]></dc:subject>
+		<dc:subject><![CDATA[databases]]></dc:subject>
+		<dc:subject><![CDATA[Java]]></dc:subject>
+		<dc:subject><![CDATA[LINQ]]></dc:subject>
+		<dc:subject><![CDATA[LinqToRdf]]></dc:subject>
+		<dc:subject><![CDATA[mapping]]></dc:subject>
+		<dc:subject><![CDATA[mashups]]></dc:subject>
+		<dc:subject><![CDATA[ORM]]></dc:subject>
+		<dc:subject><![CDATA[RDB2RDF]]></dc:subject>
+		<dc:subject><![CDATA[semweb]]></dc:subject>
+		<dc:subject><![CDATA[web3.0]]></dc:subject>
+	<description><![CDATA[Kingsley Idehen has again graciously given LinqToRdf some much needed link-love. He mentioned it in a post that was primarily concerned with the issues of mapping between the ontology, relational and object domains. His assertion is that LinqtoRdf, being an offshoot of an ORM related initiative, is reversing the natural order of mappings. He believes [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=566&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/08/26/564/">
+	<title>What this blog is about</title>
+	<link>http://aabs.wordpress.com/2008/08/26/564/</link>
+	<dc:date>2008-08-25T22:39:46Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=564&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/08/22/semantic-development-environments/">
+	<title>Semantic Development Environments</title>
+	<link>http://aabs.wordpress.com/2008/08/22/semantic-development-environments/</link>
+	<dc:date>2008-08-22T11:06:32Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[.NET]]></dc:subject>
+		<dc:subject><![CDATA[programming]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[GGG]]></dc:subject>
+		<dc:subject><![CDATA[ideas]]></dc:subject>
+		<dc:subject><![CDATA[lintordf]]></dc:subject>
+		<dc:subject><![CDATA[venture altruism]]></dc:subject>
+		<dc:subject><![CDATA[web3.0]]></dc:subject>
+	<description><![CDATA[The semantic web is a GOOD THING by definition &#8211; anything that enables us to create smarter software without also having to create Byzantine application software must be a step in the right direction. The problem is &#8211; many people have trouble translating the generic term &#8220;smarter&#8221; into a concrete idea of what they would [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=555&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/08/02/white-paper-exploiting-the-rdf-based-linked-data-web-using-net-via-linq/">
+	<title>White Paper: Exploiting the RDF-based Linked Data Web using .NET via LINQ</title>
+	<link>http://aabs.wordpress.com/2008/08/02/white-paper-exploiting-the-rdf-based-linked-data-web-using-net-via-linq/</link>
+	<dc:date>2008-08-01T21:44:03Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[OpenLinkÂ has recently posted an excellent white paper on using LinqToRdf with Virtuoso and the Virtuoso Sponger: Recently OpenLink has been investigating LinqToRdf, an exciting project from Andrew Matthews which aims to bring the Semantic Web to .NET. Because of their language bindings and heritage, existing RDF APIs such as Sesame, Jena and Redland predominantly favour [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=551&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/08/01/announcing-linqtordf-v08/">
+	<title>Announcing LinqToRdf v0.8</title>
+	<link>http://aabs.wordpress.com/2008/08/01/announcing-linqtordf-v08/</link>
+	<dc:date>2008-08-01T13:04:12Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[.NET]]></dc:subject>
+		<dc:subject><![CDATA[programming]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+		<dc:subject><![CDATA[C#]]></dc:subject>
+		<dc:subject><![CDATA[LinqToRdf]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[semweb]]></dc:subject>
+		<dc:subject><![CDATA[web3]]></dc:subject>
+		<dc:subject><![CDATA[web3.0]]></dc:subject>
+	<description><![CDATA[I&#8217;m very pleased to announce the release of version 0.8 of LinqToRdf. This release is significant for a couple of reasons. Firstly, because it provides a preview release of RdfMetal and secondly because it is the first release containing changes contributed by someone other than yours truly. The changes in this instance being provided by [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=546&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+<item rdf:about="http://aabs.wordpress.com/2008/06/09/linqtordf-v071-and-rdfmetal/">
+	<title>LinqToRdf v0.7.1 and RdfMetal</title>
+	<link>http://aabs.wordpress.com/2008/06/09/linqtordf-v071-and-rdfmetal/</link>
+	<dc:date>2008-06-09T12:20:08Z</dc:date>
+	<dc:creator><![CDATA[aabs]]></dc:creator>
+			<dc:subject><![CDATA[.NET]]></dc:subject>
+		<dc:subject><![CDATA[programming]]></dc:subject>
+		<dc:subject><![CDATA[science]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SemanticWeb]]></dc:subject>
+	<description><![CDATA[I&#8217;ve just uploaded version 0.7.1 of LinqToRdf. This bug fix release corrects an issue I introduced in version 0.7. The issue only seemed to affect some machines and stems from the use of the GAC by the WIX installer (to the best of my knowledge). I&#8217;ve abandoned GAC installation and gone back to the original [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=aabs.wordpress.com&#038;blog=155386&#038;post=539&#038;subd=aabs&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	</item>
+</rdf:RDF>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	>
+<channel rdf:about="http://drobilla.net">
+	<title>drobilla.net &#187; Semantic Web</title>
+	<link>http://drobilla.net</link>
+	<description></description>
+	<dc:date>2014-04-15T01:12:07Z</dc:date>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="http://wordpress.org/?v=3.8.2" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://drobilla.net/2013/02/18/sord-0-12-0/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/12/22/serd-0-18-2/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/10/14/sord-0-10-4/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/09/08/how-to-define-a-datatype-in-rdf/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/08/23/sratom-0-4-0/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/08/23/sord-0-10-0/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/08/23/serd-0-18-0/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/04/18/lilv-0-14-0/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/04/18/sratom-0-2-0/"/>
+					<rdf:li rdf:resource="http://drobilla.net/2012/04/18/sord-0-8-0/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://drobilla.net/2013/02/18/sord-0-12-0/">
+	<title>Sord 0.12.0</title>
+	<link>http://drobilla.net/2013/02/18/sord-0-12-0/</link>
+	<dc:date>2013-02-18T21:29:09Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[Hacking]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Sord 0.12.0 is out. Sord is a lightweight C library for storing RDF statements in memory. Changes: Add sord_get() for easily getting single property values sord_validate: Pass type check when range is xsd:anyURI and value is a URI sord_validate: Support &#8230; <a href="http://drobilla.net/2013/02/18/sord-0-12-0/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p><a href="http://download.drobilla.net/sord-0.12.0.tar.bz2">Sord 0.12.0</a> is out.  <a href="http://drobilla.net/software/sord">Sord</a> is a lightweight C library for storing RDF statements in memory.</p>
+<p>Changes:</p>
+<ul>
+<li>Add sord_get() for easily getting single property values</li>
+<li>sord_validate: Pass type check when range is xsd:anyURI and value is a URI</li>
+<li>sord_validate: Support any subClassOf rdf:Property, not just baked-in ones</li>
+<li>sordmm.hpp: Add convenient constructors for decimal and integer literals</li>
+<li>sordmm.hpp: Add Node::to_serd_node()</li>
+<li>sordmm.hpp: Don&#8217;t automatically add RDF namespace prefix to world</li>
+<li>Update to waf 1.7.9 and autowaf r90 (install docs to versioned directory)</li>
+</ul>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=1026&amp;md5=5407deb723935dd0e40578290ae697cc" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/12/22/serd-0-18-2/">
+	<title>Serd 0.18.2</title>
+	<link>http://drobilla.net/2012/12/22/serd-0-18-2/</link>
+	<dc:date>2012-12-23T02:44:20Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Serd 0.18.2 is out. Serd is a lightweight, high-performance, dependency-free C library for RDF syntax which supports reading and writing Turtle and NTriples. This release fixes a few potential crashes caused by garbage input, and incorrect abbreviation of rdf:type in &#8230; <a href="http://drobilla.net/2012/12/22/serd-0-18-2/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p><a href="http://download.drobilla.net/serd-0.18.2.tar.bz2">Serd 0.18.2</a> is out.  <a href="http://drobilla.net/software/serd">Serd</a> is a lightweight, high-performance, dependency-free C library for RDF syntax which supports reading and writing Turtle and NTriples.</p>
+<p>This release fixes a few potential crashes caused by garbage input, and incorrect abbreviation of rdf:type in subject and object position.</p>
+<p>Changes:</p>
+<ul>
+<li>Fix crash when serd_node_new_decimal is called with infinity or NaN</li>
+<li>Fix crash when resolving against non-standard base URIs</li>
+<li>Fix bug that caused &#8220;a&#8221; abbreviation in non-predicate position</li>
+<li>Disable timestamps in HTML documentation for reproducible build</li>
+<li>Fix clashing symbol &#8220;error&#8221; in amalgamation build</li>
+<li>Update to waf 1.7.8 and autowaf r90 (install docs to versioned directory)</li>
+</ul>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=928&amp;md5=fe7d9200dbdc98b8cc8fc0c927be0419" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/10/14/sord-0-10-4/">
+	<title>Sord 0.10.4</title>
+	<link>http://drobilla.net/2012/10/14/sord-0-10-4/</link>
+	<dc:date>2012-10-14T22:33:21Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Sord 0.10.4 is out. Sord is a lightweight C library for storing RDF statements in memory. This release updates sord_validate to properly implement datatype validation as described in my previous post. Changes: Implement better data type validation in sord_validate conformant &#8230; <a href="http://drobilla.net/2012/10/14/sord-0-10-4/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p><a href="http://download.drobilla.net/sord-0.10.4.tar.bz2">Sord 0.10.4</a> is out.  <a href="http://drobilla.net/software/sord">Sord</a> is a lightweight C library for storing RDF statements in memory.</p>
+<p>This release updates sord_validate to properly implement datatype validation as described in <a href="http://drobilla.net/2012/09/08/how-to-define-a-datatype-in-rdf/">my previous post</a>.</p>
+<p>Changes:</p>
+<ul>
+<li>Implement better data type validation in sord_validate conformant with the XSD and OWL specifications</li>
+<li>Fix memory leaks in sord_validate</li>
+<li>Install sord_validate man page</li>
+<li>Disable timestamps in HTML documentation for reproducible build</li>
+</ul>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=830&amp;md5=3b255a88a19885ec325dce1f68578c1f" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/09/08/how-to-define-a-datatype-in-rdf/">
+	<title>How to define a datatype in RDF</title>
+	<link>http://drobilla.net/2012/09/08/how-to-define-a-datatype-in-rdf/</link>
+	<dc:date>2012-09-08T20:42:45Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[datatype]]></dc:subject>
+		<dc:subject><![CDATA[owl]]></dc:subject>
+		<dc:subject><![CDATA[rdf]]></dc:subject>
+		<dc:subject><![CDATA[regexp]]></dc:subject>
+		<dc:subject><![CDATA[regular expression]]></dc:subject>
+		<dc:subject><![CDATA[restriction]]></dc:subject>
+		<dc:subject><![CDATA[turtle]]></dc:subject>
+		<dc:subject><![CDATA[xml]]></dc:subject>
+		<dc:subject><![CDATA[xsd]]></dc:subject>
+	<description><![CDATA[I had to do some digging around to figure out how to define a new Datatype with restrictions in RDF, so I thought it might make a useful post to save someone else the trouble in the future. RDF datatypes &#8230; <a href="http://drobilla.net/2012/09/08/how-to-define-a-datatype-in-rdf/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p>I had to do some digging around to figure out how to define a new Datatype with restrictions in <a href="http://www.w3.org/TR/rdf-concepts/">RDF</a>, so I thought it might make a useful post to save someone else the trouble in the future.</p>
+<p>RDF datatypes are based on <a href="http://www.w3.org/TR/xmlschema11-2/">XSD datatypes</a>, which are often used directly.  Unfortunately, most implementations simply have the XSD types baked in and do not support or validate new datatype descriptions (though at least <a href="http://drobilla.net/software/sord"><code>sord_validate</code></a> can).  Regardless, it is sometimes necessary to define a datatype with a specific restriction so it can be machine validated.  It&#8217;s a bit tricky to figure out how to do this, since everything is buried in specifications that aren&#8217;t as triple oriented as they should be.  So, here is an example of defining a datatype restricted by regular expression in Turtle, derived from the OWL documentation:</p>
+<pre>
+&lt;http://example.org/CSymbol&gt;
+	a rdfs:Datatype ;
+	rdfs:comment "A symbol in the C programming language" ;
+	owl:onDatatype xsd:string ;
+	owl:withRestrictions (
+		[
+			xsd:pattern "[_a-zA-Z][_a-zA-Z0-9]*"
+		]
+	) .
+</pre>
+<p>The XSD specification defines several <q>constraining facets</q> you can use in this way.  See the XSD specification for details, but the most obvious and useful for RDF are: xsd:length, xsd:minLength, xsd:maxLength, xsd:pattern, xsd:maxInclusive, xsd:maxExclusive, xsd:minInclusive, xsd:minExclusive.  For example, you can define a numeric type with restricted range like so:</p>
+<pre>
+&lt;http://example.org/AnswerishInteger&gt;
+	a rdfs:Datatype ;
+	rdfs:comment "An integer between 24 and 42 inclusive" ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions (
+		[
+			xsd:minInclusive 24
+		] [
+			xsd:maxInclusive 42
+		]
+	) .
+</pre>
+<p>Defining datatypes in this way and using them as the rdfs:range for properties is a good idea because it describes which values are valid in a machine readable way.  This makes it possible for simple <em>generic</em> tools to validate data, ensuring that all literals are valid values for the property they describe.</p>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=808&amp;md5=0d5373c24ea00d77e9b3578a2d234ac2" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/08/23/sratom-0-4-0/">
+	<title>Sratom 0.4.0</title>
+	<link>http://drobilla.net/2012/08/23/sratom-0-4-0/</link>
+	<dc:date>2012-08-23T05:33:19Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[LAD]]></dc:subject>
+		<dc:subject><![CDATA[LV2]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Sratom 0.4.0 is out. Sratom is a small C library for serialising LV2 atoms to/from Turtle. This release fixes reading objects with several rdf:type properties, and adds support for serialising blank nodes more elegantly, particularly useful for serialising messages to &#8230; <a href="http://drobilla.net/2012/08/23/sratom-0-4-0/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p><a href="http://download.drobilla.net/sratom-0.4.0.tar.bz2">Sratom 0.4.0</a> is out. <a href="http://drobilla.net/software/sratom">Sratom</a> is a small C library for serialising <a href="http://lv2plug.in/ns/ext/atom">LV2 atoms</a> to/from <a href="http://www.w3.org/TR/turtle/">Turtle</a>.</p>
+<p>This release fixes reading objects with several rdf:type properties, and adds support for serialising blank nodes more elegantly, particularly useful for serialising messages to and from plugins for human inspection, storage, or network transmission.  API has been added, but it remains backwards compatible with all previous releases.</p>
+<p>Changes:</p>
+<ul>
+<li>Correctly read objects with several rdf:type properties</li>
+<li>Support writing Object Atoms as top level descriptions if subject and predicate are not given</li>
+<li>Fix various hyper-strict warnings</li>
+<li>Upgrade to waf 1.7.2</li>
+</ul>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=773&amp;md5=d97b624e10ea118a181ed8569785706d" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/08/23/sord-0-10-0/">
+	<title>Sord 0.10.0</title>
+	<link>http://drobilla.net/2012/08/23/sord-0-10-0/</link>
+	<dc:date>2012-08-23T04:40:36Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[LAD]]></dc:subject>
+		<dc:subject><![CDATA[LV2]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Sord 0.10.0 is out. Sord is a lightweight C library for storing RDF statements in memory. This release contains significant performance improvements, fixes problems with static builds, and adds to the API, though it remains compatible with all previous versions. &#8230; <a href="http://drobilla.net/2012/08/23/sord-0-10-0/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p><a href="http://download.drobilla.net/sord-0.10.0.tar.bz2">Sord 0.10.0</a> is out.  <a href="http://drobilla.net/software/sord">Sord</a> is a lightweight C library for storing RDF statements in memory.</p>
+<p>This release contains significant performance improvements, fixes problems with static builds, and adds to the API, though it remains compatible with all previous versions.</p>
+<p>Changes:</p>
+<ul>
+<li>Add error callback to world for custom error reporting
+<li>Performance and space (per node) improvements
+<li>SSE4.2 accelerated hashing for node interning, where available
+<li>Make all &#8216;zix&#8217; symbols private to avoid symbol clashes in static builds
+<li>Remove problematic &#8220;Loaded n statements&#8221; output from serdi
+<li>Strip down API documentation to a single clean page
+<li>Fix various hyper-strict warnings
+<li>Do not require a C++ compiler to build
+<li>Add option to build utilities as static binaries
+<li>Upgrade to waf 1.7.2
+<li>sordmm.hpp: Add indices and graphs parameters to Model constructor
+<li>sordmm.hpp: Remove overzealous URI scheme assertion
+<li>sordmm.hpp: Correctly handle Sord::Node self-assignment
+</ul>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=770&amp;md5=dd855a471289bf8c83334d9fb14a1504" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/08/23/serd-0-18-0/">
+	<title>Serd 0.18.0</title>
+	<link>http://drobilla.net/2012/08/23/serd-0-18-0/</link>
+	<dc:date>2012-08-23T04:36:20Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[LAD]]></dc:subject>
+		<dc:subject><![CDATA[LV2]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Serd 0.18.0 is out. Serd is a lightweight dependency-free C library for RDF syntax which supports reading and writing Turtle and NTriples. This release contains numerous improvements and makes additions to the API, but remains backwards compatible with all previous &#8230; <a href="http://drobilla.net/2012/08/23/serd-0-18-0/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p><a href="http://download.drobilla.net/serd-0.18.0.tar.bz2">Serd 0.18.0</a> is out.  <a href="http://drobilla.net/software/serd">Serd</a> is a lightweight dependency-free C library for RDF syntax which supports reading and writing Turtle and NTriples.</p>
+<p>This release contains numerous improvements and makes additions to the API, but remains backwards compatible with all previous releases.</p>
+<p>Changes:</p>
+<ul>
+<li>Support digits at start of local names as per new Turtle grammar</li>
+<li>Add incremental read interface suitable for reading from infinite streams</li>
+<li>Add -e option to serdi to use incremental reading</li>
+<li>Add error callback to reader and writer for custom error reporting</li>
+<li>Add -q option to serdi to suppress all non-data output, e.g. errors</li>
+<li>Reset indent when finishing a write</li>
+<li>Report write size correctly when invalid UTF-8 is encountered and a replacement character is written</li>
+<li>Strip down API documentation to a single clean page</li>
+<li>Fix various hyper-strict warnings</li>
+<li>Do not require a C++ compiler to build</li>
+<li>Add option to build utilities as static binaries</li>
+<li>Upgrade to waf 1.7.2</li>
+<li>Support digits at start of local names as per new Turtle grammar</li>
+</ul>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=766&amp;md5=1191ed3d69cf5ab90edcec41c84d4b58" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/04/18/lilv-0-14-0/">
+	<title>Lilv 0.14.0</title>
+	<link>http://drobilla.net/2012/04/18/lilv-0-14-0/</link>
+	<dc:date>2012-04-19T00:55:17Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[Hacking]]></dc:subject>
+		<dc:subject><![CDATA[LAD]]></dc:subject>
+		<dc:subject><![CDATA[LV2]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Lilv 0.14.0 is out. Lilv is a library to make the use of LV2 plugins as simple as possible for applications. This release includes many improvements, most notably built-in support for saving/restoring plugin state (including powerful non-destructive saving of plugin &#8230; <a href="http://drobilla.net/2012/04/18/lilv-0-14-0/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p><a href="http://download.drobilla.net/lilv-0.14.0.tar.bz2">Lilv 0.14.0</a> is out.  <a href="http://drobilla.net/software/lilv">Lilv</a> is a library to make the use of <a href="http://lv2plug.in">LV2</a> plugins as simple as possible for applications.</p>
+<p>This release includes many improvements, most notably built-in support for saving/restoring plugin state (including powerful non-destructive saving of plugin state which contains files), as well as many bug and portability fixes.</p>
+<p>Changes:</p>
+<ul>
+<li>Add lilv_plugin_get_extension_data</li>
+<li>Use path variables in pkgconfig files</li>
+<li>Install man page to DATADIR (e.g. PREFIX/share/man, not PREFIX/man)</li>
+<li>Make Lilv::uri_to_path static inline (fix linking errors)</li>
+<li>Use correct URI for dcterms:replaces (for hiding old plugins): &#8220;http://purl.org/dc/terms/replaces&#8221;</li>
+<li>Fix compilation on BSD</li>
+<li>Only load dynmanifest libraries once per bundle, not once per plugin</li>
+<li>Fix lilv_world_find_nodes to work with wildcard subjects</li>
+<li>Add lilv_plugin_get_related to get resources related to plugins that are not directly rdfs:seeAlso linked (e.g. presets)</li>
+<li>Add lilv_world_load_resource for related resources (e.g. presets)</li>
+<li>Print presets in lv2info</li>
+<li>Remove locale smashing kludges and use new serd functions for converting nodes to/from numbers.</li>
+<li>Add LilvState API for handling plugin state.  This makes it simple to save and restore plugin state both in memory and on disk, as well as save presets in a host-sharable way since the disk format is identical to the LV2 presets format.</li>
+<li>Update old references to lv2_list (now lv2ls)</li>
+<li>Support compilation as C++ under MSVC++.</li>
+<li>Remove use of wordexp.</li>
+<li>Add lilv_plugin_get_port_by_designation() and lilv_port_get_index() as an improved generic alternative to lilv_plugin_get_latency_port_index().</li>
+<li>Add lilv_plugin_get_project() and get author information from project if it is not given directly on the plugin.</li>
+</ul>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=625&amp;md5=a5329c1b5613fb0f7a5cdf6e4fbf1f9f" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/04/18/sratom-0-2-0/">
+	<title>Sratom 0.2.0</title>
+	<link>http://drobilla.net/2012/04/18/sratom-0-2-0/</link>
+	<dc:date>2012-04-19T00:23:41Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[Hacking]]></dc:subject>
+		<dc:subject><![CDATA[LAD]]></dc:subject>
+		<dc:subject><![CDATA[LV2]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Sratom is a new C library for serialising LV2 atoms to/from Turtle. It is intended to be a full serialisation solution for LV2 atoms, allowing implementations to serialise binary atoms to strings and read them back again. This is particularly &#8230; <a href="http://drobilla.net/2012/04/18/sratom-0-2-0/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p>Sratom is a new C library for serialising <a href="http://lv2plug.in/ns/ext/atom">LV2 atoms</a> to/from <a href="http://www.w3.org/TR/turtle/">Turtle</a>.  It is intended to be a full serialisation solution for LV2 atoms, allowing implementations to serialise binary atoms to strings and read them back again.  This is particularly useful for saving plugin state, or implementing plugin control with network transparency.  Sratom uses <a href="http://drobilla.net/software/serd">Serd</a> and <a href="http://drobilla.net/software/sord">Sord</a> to do the work, it is a small library implemented in a single source file, suitable for direct inclusion in projects if avoiding a dependency is desired.</p>
+<p><a href="http://download.drobilla.net/sratom-0.2.0.tar.bz2">Download Sratom 0.2.0</a></p>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=615&amp;md5=811c25c639369a738997969a64f2fe70" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://drobilla.net/2012/04/18/sord-0-8-0/">
+	<title>Sord 0.8.0</title>
+	<link>http://drobilla.net/2012/04/18/sord-0-8-0/</link>
+	<dc:date>2012-04-18T05:40:42Z</dc:date>
+	<dc:creator><![CDATA[David Robillard]]></dc:creator>
+			<dc:subject><![CDATA[Hacking]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description><![CDATA[Sord 0.8.0 is out. Sord is a lightweight C library for storing RDF statements in memory. This release fixes some minor bugs, adds some convenient API (though the API is compatible with all previous releases), and adds a sord_validate tool &#8230; <a href="http://drobilla.net/2012/04/18/sord-0-8-0/">Continue reading <span class="meta-nav">&#8594;</span></a>]]></description>
+	<content:encoded><![CDATA[<p><a href="http://download.drobilla.net/sord-0.8.0.tar.bz2">Sord 0.8.0</a> is out.  <a href="http://drobilla.net/software/sord">Sord</a> is a lightweight C library for storing RDF statements in memory.</p>
+<p>This release fixes some minor bugs, adds some convenient API (though the API is compatible with all previous releases), and adds a sord_validate tool which can be used to validate RDF data against RDFS/OWL schemas.</p>
+<p>Changes:</p>
+<ul>
+<li>Use path variables in pkgconfig files</li>
+<li>Install man page to DATADIR (e.g. PREFIX/share/man, not PREFIX/man)</li>
+<li>Tolerate serd passing NULL nodes to reader callback (serd 0.6.0)</li>
+<li>Fix comparison of typed literals</li>
+<li>Take advantage of interning in sord_node_equals()</li>
+<li>Support compilation as C++ under MSVC++.</li>
+<li>Add sord_iter_get_node()</li>
+<li>Refuse to intern relative URIs in sord_new_uri*()</li>
+<li>Add sord_new_relative_uri()</li>
+<li>Add SordInserter for writing to a model via Serd sink functions.</li>
+<li>Add convenient sord_search(), sord_ask(), and sord_count()</li>
+<li>Add sord_validate tool for validating data against RDF/OWL schemas</li>
+</ul>
+ <p><a href="http://drobilla.net/blog/?flattrss_redirect&amp;id=601&amp;md5=a9af4e7756f42f8bf00bd11ebb7261f7" title="Flattr" target="_blank"><img src="http://drobilla.net/blog/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+</rdf:RDF>
+
+<!-- Dynamic page generated in 0.449 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-04-24 08:23:00 -->

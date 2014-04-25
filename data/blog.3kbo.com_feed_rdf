@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	>
+<channel rdf:about="http://blog.3kbo.com">
+	<title>3kbo</title>
+	<link>http://blog.3kbo.com</link>
+	<description>Building Semantic Web Applications</description>
+	<dc:date>2013-11-19T21:12:46Z</dc:date>
+	<admin:generatorAgent rdf:resource="http://wordpress.org/?v=2.8.5" />
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+		<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2011/12/17/different-perspective/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2011/11/17/linked-data-soa-software-development-process/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2011/07/19/customizing-gate-grammars/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2011/07/10/using-the-neon-toolkit-and-annie-to-demonstrate-extracting-rdf-from-natural-language/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2011/05/29/lift-persistence/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2011/04/24/scala-lift-maven-eclips/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2011/03/12/drupal7-rdfa-xmlliteral/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2010/11/10/simple-html5-rdfa-example/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2010/08/10/developing-a-semantic-web-strategy/"/>
+					<rdf:li rdf:resource="http://blog.3kbo.com/2010/03/13/groovy-talis-rdf-upload/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://blog.3kbo.com/2011/12/17/different-perspective/">
+	<title>Using Linked Data to provide a different perspective on Software Architecture</title>
+	<link>http://blog.3kbo.com/2011/12/17/different-perspective/</link>
+	 <dc:date>2011-12-17T23:04:13Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[Linked Data]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[SOA]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description>As outlined in my previous post Linked Data and the SOA Software Development Process I am interested in using Linked Data to provided a more detailed view ofÂ  SOA services.
+A coupled of scenarios during the past week highlighted the value of the approach and also that it would benefit with extending the scope to include [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2011/11/17/linked-data-soa-software-development-process/">
+	<title>Linked Data and the SOA Software Development Process</title>
+	<link>http://blog.3kbo.com/2011/11/17/linked-data-soa-software-development-process/</link>
+	 <dc:date>2011-11-17T05:44:13Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[GATE]]></dc:subject>
+		<dc:subject><![CDATA[Groovy]]></dc:subject>
+		<dc:subject><![CDATA[Java]]></dc:subject>
+		<dc:subject><![CDATA[Linked Data]]></dc:subject>
+		<dc:subject><![CDATA[Natural Language Processing]]></dc:subject>
+		<dc:subject><![CDATA[OWL]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[Rails]]></dc:subject>
+		<dc:subject><![CDATA[SOA]]></dc:subject>
+		<dc:subject><![CDATA[Subversion]]></dc:subject>
+		<dc:subject><![CDATA[Tomcat]]></dc:subject>
+		<dc:subject><![CDATA[Virtuoso]]></dc:subject>
+		<dc:subject><![CDATA[WSDL]]></dc:subject>
+		<dc:subject><![CDATA[Weblogic]]></dc:subject>
+		<dc:subject><![CDATA[XML]]></dc:subject>
+		<dc:subject><![CDATA[RDFizing]]></dc:subject>
+		<dc:subject><![CDATA[Web Services]]></dc:subject>
+	<description>We have quite a rigorous SOA software development process however the full value of the collected information is not being realized because the artifacts are stored in disconnected information silos. So far attempts to introduce tools which could improve the situation (e.g. zAgile Teamwork and Semantic  Media  Wiki) have been unsuccessful, possibly because [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2011/07/19/customizing-gate-grammars/">
+	<title>Customizing GATE grammars</title>
+	<link>http://blog.3kbo.com/2011/07/19/customizing-gate-grammars/</link>
+	 <dc:date>2011-07-19T23:11:34Z</dc:date>
+	<dc:creator>Lesley</dc:creator>
+			<dc:subject><![CDATA[ANNIE]]></dc:subject>
+		<dc:subject><![CDATA[GATE]]></dc:subject>
+		<dc:subject><![CDATA[Natural Language Processing]]></dc:subject>
+	<description>GATEÂ is a tool for natural language processing of unstructured text.Â  It includes an information extraction system called ANNIE which provides a basic set of annotations over documents, including parts of speech, word tokens and it is also able to recognize locations, cities, people etc.
+For example, GATE can identify a bit of text as referencingÂ a particular [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2011/07/10/using-the-neon-toolkit-and-annie-to-demonstrate-extracting-rdf-from-natural-language/">
+	<title>Using the Neon Toolkit and ANNIE to demonstrate extracting RDF from Natural Language</title>
+	<link>http://blog.3kbo.com/2011/07/10/using-the-neon-toolkit-and-annie-to-demonstrate-extracting-rdf-from-natural-language/</link>
+	 <dc:date>2011-07-10T06:57:27Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[ANNIE]]></dc:subject>
+		<dc:subject><![CDATA[GATE]]></dc:subject>
+		<dc:subject><![CDATA[Natural Language Processing]]></dc:subject>
+		<dc:subject><![CDATA[Neon Toolkit]]></dc:subject>
+		<dc:subject><![CDATA[Ontology]]></dc:subject>
+		<dc:subject><![CDATA[OpenCalais]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+	<description>The Neon Toolkit is an open source ontology engineering environment providing an extensive set of plug-ins for various ontology engineering activities.
+One such plugin is the GATE web services plugin which adds Natural Language Entity Recognition functionality from the GATE (General Architecture for Text Engineering) framework.
+The GATE web services plugin can be quickly added to the [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2011/05/29/lift-persistence/">
+	<title>Configuring Persistence for Lift Web Applications</title>
+	<link>http://blog.3kbo.com/2011/05/29/lift-persistence/</link>
+	 <dc:date>2011-05-29T22:03:12Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[Cloudbees]]></dc:subject>
+		<dc:subject><![CDATA[JDBC]]></dc:subject>
+		<dc:subject><![CDATA[JNDI]]></dc:subject>
+		<dc:subject><![CDATA[Java]]></dc:subject>
+		<dc:subject><![CDATA[Jetty]]></dc:subject>
+		<dc:subject><![CDATA[Lift]]></dc:subject>
+		<dc:subject><![CDATA[Maven]]></dc:subject>
+		<dc:subject><![CDATA[MySQL]]></dc:subject>
+		<dc:subject><![CDATA[Postgres]]></dc:subject>
+		<dc:subject><![CDATA[Scala]]></dc:subject>
+		<dc:subject><![CDATA[Tomcat]]></dc:subject>
+	<description>Generating a basic Lift web application using Maven (see Using Maven and Eclipse to generate Scala Lift Web Applications) creates a project that by default uses a H2 database. The generated application provides three obvious options for configuring persistence. The starting point is Boot.scala (located in src/main/scala/bootstrap/liftweb/Boot.scala).
+In examples below we look at:
+
+how H2 is specified [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2011/04/24/scala-lift-maven-eclips/">
+	<title>Using Maven and Eclipse to generate Scala Lift Web Applications</title>
+	<link>http://blog.3kbo.com/2011/04/24/scala-lift-maven-eclips/</link>
+	 <dc:date>2011-04-24T07:24:57Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[Eclipse]]></dc:subject>
+		<dc:subject><![CDATA[HTML5]]></dc:subject>
+		<dc:subject><![CDATA[Java]]></dc:subject>
+		<dc:subject><![CDATA[Lift]]></dc:subject>
+		<dc:subject><![CDATA[Maven]]></dc:subject>
+		<dc:subject><![CDATA[Scala]]></dc:subject>
+		<dc:subject><![CDATA[XHTML]]></dc:subject>
+	<description>The Lift web framework is built on top of Scala which in turn runs on the Java Platform. Lift applications are built as WAR files and deployed to servlet containers such as Tomcat and Jetty.
+The Maven archtetypes for Lift and the Scala IDE for Eclipse make it easy for a Java developer to start building [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2011/03/12/drupal7-rdfa-xmlliteral/">
+	<title>Drupal7 RDFa XMLLiteral content processing</title>
+	<link>http://blog.3kbo.com/2011/03/12/drupal7-rdfa-xmlliteral/</link>
+	 <dc:date>2011-03-13T00:53:43Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[Drupal7]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[RDFa]]></dc:subject>
+		<dc:subject><![CDATA[SIOC]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[Drupal 7]]></dc:subject>
+	<description>Drupal 7 supports RDFa 1.0 as part of the core product. RDFa 1.0 is the current specification but RDFa 1.1 is to be released shortly.
+RDFa 1.0 metadata can be parsed using the RDFa Distiller and Parser while the RDFa Distiller and Parser (Test Version for RDFa 1.1) can be used to extract RDFa 1.1.
+Creating a [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2010/11/10/simple-html5-rdfa-example/">
+	<title>A Simple HTML5 RDFa Example</title>
+	<link>http://blog.3kbo.com/2010/11/10/simple-html5-rdfa-example/</link>
+	 <dc:date>2010-11-10T07:26:19Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[HTML5]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[RDFa]]></dc:subject>
+		<dc:subject><![CDATA[Sparql]]></dc:subject>
+	<description>As part of learning HTML5 and RDFa I put together a Simple HTML5 RDFa Example, using a photo  Irene took of Minoan Figurines during a trip to Crete for the main content.
+
+Identifying Things
+Using RDFa I wanted to generate RDF statements about:
+
+the example itself
+the article on Crete
+the photo of the Minoan Figurines
+and Irene and myself [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2010/08/10/developing-a-semantic-web-strategy/">
+	<title>Developing a Semantic Web Strategy</title>
+	<link>http://blog.3kbo.com/2010/08/10/developing-a-semantic-web-strategy/</link>
+	 <dc:date>2010-08-10T05:51:03Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[Linked Data]]></dc:subject>
+		<dc:subject><![CDATA[OWL]]></dc:subject>
+		<dc:subject><![CDATA[Ontology]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[Workshop]]></dc:subject>
+		<dc:subject><![CDATA[eCommerce]]></dc:subject>
+	<description>In the last chapter of his book &#8220;Pull: The Power of the Semantic Web to Transform Your Business&#8221; David Siegel outlines some steps for developing a successful Semantic Web strategy for your business or organization.
+One approach that worked for me recently was to organize a meeting titled &#8220;Developing a Semantic Web Strategy&#8221;Â  and invite along [...]</description>
+	</item>
+<item rdf:about="http://blog.3kbo.com/2010/03/13/groovy-talis-rdf-upload/">
+	<title>Using Groovy to Upload RDF files to the Talis Platform</title>
+	<link>http://blog.3kbo.com/2010/03/13/groovy-talis-rdf-upload/</link>
+	 <dc:date>2010-03-14T00:14:21Z</dc:date>
+	<dc:creator>richard</dc:creator>
+			<dc:subject><![CDATA[Groovy]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[REST]]></dc:subject>
+		<dc:subject><![CDATA[RESTful]]></dc:subject>
+		<dc:subject><![CDATA[Talis]]></dc:subject>
+	<description>The Talis Platform provides free stores for developers to host RDF data online. Each store has its own SPARQL end point for querying the RDF data.
+Options for uploading individual RDF files into a store include:
+
+Using curl, e.g. curl -d @data.rdf &#8211;digest -u &#8220;user:password&#8221; -H content-type:application/rdf+xml http://api.talis.com/stores/mystore/meta
+and the Talis Platform Store Admin.
+
+A nice to have option [...]</description>
+	</item>
+</rdf:RDF>

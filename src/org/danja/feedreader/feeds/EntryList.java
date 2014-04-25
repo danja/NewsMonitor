@@ -1,7 +1,7 @@
 /**
  * feedreader-prototype
  *
- * EntryImpl.java
+ * EntryList.java
  * 
  * @author danja
  * @date Apr 24, 2014

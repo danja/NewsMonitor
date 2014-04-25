@@ -1,3 +1,12 @@
+/**
+ * feedreader-prototype
+ *
+ * SparqlConnector.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.io;
 
 import java.io.BufferedReader;

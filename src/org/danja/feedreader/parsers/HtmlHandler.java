@@ -1,6 +1,11 @@
-/*
- * Danny Ayers Dec 15, 2004 http://dannyayers.com
- *  
+/**
+ * feedreader-prototype
+ *
+ * HtmlHandler.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.parsers;
 

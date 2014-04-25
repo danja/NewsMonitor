@@ -1,3 +1,12 @@
+/**
+ * feedreader-prototype
+ *
+ * FeedFetcherImpl.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.feeds;
 
 import java.io.InputStream;
@@ -8,8 +17,6 @@ import org.danja.feedreader.io.Interpreter;
 
 /**
  * Models a feed, wrapped around HttpConnection
- * 
- * @version $Revision$
  *  
  */
 public class FeedFetcherImpl extends FeedEntityBase implements FeedFetcher,
@@ -50,6 +57,7 @@ public class FeedFetcherImpl extends FeedEntityBase implements FeedFetcher,
 
         if (isNew) {
             System.out.println("Connected, interpreting...");
+            
             interpreter.interpret(this);
             lives = MAX_LIVES;
         } else {

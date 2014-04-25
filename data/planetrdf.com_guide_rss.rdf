@@ -1,0 +1,110 @@
+<?xml version="1.0"  encoding="iso-8859-1"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+  <channel rdf:about="http://planetrdf.com/guide/rss.rdf">
+    <title>Dave Beckett's RDF Resource Guide</title>
+    <link>http://planetrdf.com/guide/</link>
+    <description>A comprehensive guide to resources about RDF.</description>
+    <dc:creator>Dave Beckett</dc:creator>
+    <dc:date>2005-09-23</dc:date>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <sy:updateBase>2001-01-01T12:00+00:00</sy:updateBase>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2005-02-26-00:00:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2005-02-24-00:00:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2004-12-13-00:00:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2004-11-12-00:00:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2004-09-23-00:00:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2003-03-05-13:47:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2004-09-15-00:00:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2003-03-05-13:42:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2004-09-21-00:00:00" />
+        <rdf:li rdf:resource="http://planetrdf.com/guide/#2001-09-05-11:04:00" />
+      </rdf:Seq>
+    </items>
+  </channel>
+      <item rdf:about="http://planetrdf.com/guide/#2005-02-26-00:00:00">
+        <title>Metadesk RDF authoring tool</title>
+        <dc:title>Metadesk RDF authoring tool</dc:title>
+        <link>http://planetrdf.com/guide/#2005-02-26-00:00:00</link>
+        <description>from ISI, USA.  An authoring tool emphasising entry of facts, rather than construction of ontologies.  MS Windows only binary (Java jars and DLLs).  License: unknown</description>
+        <dc:description>from ISI, USA.  An authoring tool emphasising entry of facts, rather than construction of ontologies.  MS Windows only binary (Java jars and DLLs).  License: unknown</dc:description>
+        <dc:date>2005-02-26</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2005-02-24-00:00:00">
+        <title>NG4J - Named Graphs API for Jena</title>
+        <dc:title>NG4J - Named Graphs API for Jena</dc:title>
+        <link>http://planetrdf.com/guide/#2005-02-24-00:00:00</link>
+        <description>by Chris Bizer.  An extension to the Java Jena Semantic Web framework for parsing, manipulating and serializing sets of Named Graph.  Includes APIs for named graph operations, readers, writers and  parsers and serializers for the TriG and TriX formats. See also the Named Graph Paper (PDF) and the sourceforge project for downloads.  License: BSD.  Version 0.4 announced</description>
+        <dc:description>by Chris Bizer.  An extension to the Java Jena Semantic Web framework for parsing, manipulating and serializing sets of Named Graph.  Includes APIs for named graph operations, readers, writers and  parsers and serializers for the TriG and TriX formats. See also the Named Graph Paper (PDF) and the sourceforge project for downloads.  License: BSD.  Version 0.4 announced</dc:description>
+        <dc:date>2005-02-24</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2004-12-13-00:00:00">
+        <title>pOWL Semantic Web Development Platform</title>
+        <dc:title>pOWL Semantic Web Development Platform</dc:title>
+        <link>http://planetrdf.com/guide/#2004-12-13-00:00:00</link>
+        <description>by S&#195;&#182;ren Auer.  A PHP toolkit for the semantic web consisting of the RAP RDF API, RDFS and OWL support from pOWL including editing and querying with RDQL and full-text, multiple languages, versioning support, plug-ins and a web application framework.  License: GPL.  Version 0.8 released</description>
+        <dc:description>by S&#195;&#182;ren Auer.  A PHP toolkit for the semantic web consisting of the RAP RDF API, RDFS and OWL support from pOWL including editing and querying with RDQL and full-text, multiple languages, versioning support, plug-ins and a web application framework.  License: GPL.  Version 0.8 released</dc:description>
+        <dc:date>2004-12-13</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2004-11-12-00:00:00">
+        <title>SMART: System for Managing Applications based on RDF Technology</title>
+        <dc:title>SMART: System for Managing Applications based on RDF Technology</dc:title>
+        <link>http://planetrdf.com/guide/#2004-11-12-00:00:00</link>
+        <description>by Andrey Guskov and Vladimir Shraibman.  An application to aid the creation of documents described with RDF, implemented as Java servlets using Jena and GraphViz (optionally).  License: unknown.  Version 1.5.2 released</description>
+        <dc:description>by Andrey Guskov and Vladimir Shraibman.  An application to aid the creation of documents described with RDF, implemented as Java servlets using Jena and GraphViz (optionally).  License: unknown.  Version 1.5.2 released</dc:description>
+        <dc:date>2004-11-12</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2004-09-23-00:00:00">
+        <title>Ontaria</title>
+        <dc:title>Ontaria</dc:title>
+        <link>http://planetrdf.com/guide/#2004-09-23-00:00:00</link>
+        <description>by Sandro Hawke.  A web-based browser for ontologies and other RDF data.  First announced</description>
+        <dc:description>by Sandro Hawke.  A web-based browser for ontologies and other RDF data.  First announced</dc:description>
+        <dc:date>2004-09-23</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2003-03-05-13:47:00">
+        <title>RDF Gateway</title>
+        <dc:title>RDF Gateway</dc:title>
+        <link>http://planetrdf.com/guide/#2003-03-05-13:47:00</link>
+        <description>by Intellidimension - a semantic web platform for MS Windows XP/NT/2000 allowing managing of data as RDF including an application server, web server and deductive RDF database.  The main features are an SQL-style RDF query language, inference engine, datatypes, full text search, application development environment with ASP-like server pages, integration of many external data sources, web and non-web interfaces. Commercial application with 60-day evaluation version.  Version 2.1 with many changes announced</description>
+        <dc:description>by Intellidimension - a semantic web platform for MS Windows XP/NT/2000 allowing managing of data as RDF including an application server, web server and deductive RDF database.  The main features are an SQL-style RDF query language, inference engine, datatypes, full text search, application development environment with ASP-like server pages, integration of many external data sources, web and non-web interfaces. Commercial application with 60-day evaluation version.  Version 2.1 with many changes announced</dc:description>
+        <dc:date>2004-09-15</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2004-09-15-00:00:00">
+        <title>Swoogle</title>
+        <dc:title>Swoogle</dc:title>
+        <link>http://planetrdf.com/guide/#2004-09-15-00:00:00</link>
+        <description>crawler-based indexing and retrieval service for the semantic web from Tim Finin, UMBC, USA</description>
+        <dc:description>crawler-based indexing and retrieval service for the semantic web from Tim Finin, UMBC, USA</dc:description>
+        <dc:date>2004-09-15</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2003-03-05-13:42:00">
+        <title>RAP - RDF API for PHP</title>
+        <dc:title>RAP - RDF API for PHP</dc:title>
+        <link>http://planetrdf.com/guide/#2003-03-05-13:42:00</link>
+        <description>by Chris Bizer.  A pure PHP package for manipulating RDF models, querying them with RDQL,  parsing/serializing the RDF/XML, N3 and N-Triples syntaxes and providing a network server for NetAPI.  See also the online demo. License: GPL.  Version 0.8.1 with speed improvements, improved indexing and searching, new unit test suite and other bug fixes announced</description>
+        <dc:description>by Chris Bizer.  A pure PHP package for manipulating RDF models, querying them with RDQL,  parsing/serializing the RDF/XML, N3 and N-Triples syntaxes and providing a network server for NetAPI.  See also the online demo. License: GPL.  Version 0.8.1 with speed improvements, improved indexing and searching, new unit test suite and other bug fixes announced</dc:description>
+        <dc:date>2004-08-24</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2004-09-21-00:00:00">
+        <title>VIVID (Visual Variable-depth Information Display)</title>
+        <dc:title>VIVID (Visual Variable-depth Information Display)</dc:title>
+        <link>http://planetrdf.com/guide/#2004-09-21-00:00:00</link>
+        <description>browser for OWL and RDF using densely-packed presentations by Baoshi Yan, ISI, USA.  License: unknown. Version 1.01 announced</description>
+        <dc:description>browser for OWL and RDF using densely-packed presentations by Baoshi Yan, ISI, USA.  License: unknown. Version 1.01 announced</dc:description>
+        <dc:date>2004-08-20</dc:date>
+      </item>
+      <item rdf:about="http://planetrdf.com/guide/#2001-09-05-11:04:00">
+        <title>RDFStore Perl/C RDF API and Storage</title>
+        <dc:title>RDFStore Perl/C RDF API and Storage</dc:title>
+        <link>http://planetrdf.com/guide/#2001-09-05-11:04:00</link>
+        <description>by Alberto Reggiori.  A system for managing RDF model databases, storing them in databases, natively, free-text searching and indexing, parsing and serialising, querying with RDQL.  See also the demos, native store description and downloads area. Version 0.50 with major rewrite into mostly C, new native store and indexing model announced</description>
+        <dc:description>by Alberto Reggiori.  A system for managing RDF model databases, storing them in databases, natively, free-text searching and indexing, parsing and serialising, querying with RDQL.  See also the demos, native store description and downloads area. Version 0.50 with major rewrite into mostly C, new native store and indexing model announced</dc:description>
+        <dc:date>2004-08-19</dc:date>
+      </item>
+</rdf:RDF>

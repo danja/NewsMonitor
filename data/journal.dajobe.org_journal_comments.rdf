@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	>
+<channel rdf:about="http://journal.dajobe.org/journal">
+	<title>Dave Beckett - Journalblog &#187; comment</title>
+	<link>http://journal.dajobe.org/journal</link>
+	<description>Hacking the semantic linked data web</description>
+	<dc:date>2013-06-25T04:34:00Z</dc:date>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="http://wordpress.org/?v=3.5-alpha-21589" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2013/06/24/open-to-rackspace/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2012/05/10/undugg/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2011/08/15/releases-tweets/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/12/05/rasqal-0921-and-sparql-11-query-aggregation/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/11/07/end-of-life-of-raptor-v1-end-of-support-for-raptor-v1-in-rasqal-and-librdf/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/10/24/writing-an-rdf-query-engine-twice/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/09/25/redland-librdf-1-0-11-released/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/08/26/leaving-yahoo-joining-digg/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/08/22/rasqal-rdf-query-library-0-9-20/"/>
+					<rdf:li rdf:resource="http://journal.dajobe.org/journal/posts/2010/08/16/raptor-rdf-syntax-library-v2-beta-1/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2013/06/24/open-to-rackspace/">
+	<title>Open to Rackspace</title>
+	<link>http://journal.dajobe.org/journal/posts/2013/06/24/open-to-rackspace/</link>
+	 <dc:date>2013-06-25T04:34:00Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>I&#8217;m happy to announce that today I started work at Rackspace in San Francisco in a senior engineering role. I am excited anticipating these aspects: The company: a fun, fast moving organization with a culture of innovation and openness The people: lots of smart engineers and devops to work with The technologies: Openstack cloud, Hadoop [...]</description>
+	<content:encoded><![CDATA[<p>I&#8217;m happy to announce that today I started work at <a href="http://www.rackspace.com/">Rackspace</a> in San Francisco in a senior engineering role.  I am excited anticipating these aspects:</p>
+<ol>
+<li><em>The company</em>: a fun, fast moving organization with a culture of innovation and openness</li>
+<li><em>The people</em>: lots of smart engineers and devops to work with</li>
+<li><em>The technologies</em>: Openstack cloud, Hadoop big data and lots more</li>
+<li><em>The place</em>: San Francisco technology world and nearby Silicon Valley</li>
+</ol>
+<p>My personal technology interests and coding projects such as <a href="http://planetrdf.com/">Planet RDF</a>, the <a href="http://librdf.org/">Redland librdf libraries</a> and <a href="http://librdf.org/flickcurl/">Flickcurl</a> will continue in my own time.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2012/05/10/undugg/">
+	<title>Undugg</title>
+	<link>http://journal.dajobe.org/journal/posts/2012/05/10/undugg/</link>
+	 <dc:date>2012-05-10T15:20:35Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>Digg just announced that Digg Engineering Team Joins SocialCode and The Washington Post reported SocialCode hires 15 employees from Digg.com This acquihire does NOT include me. I will be changing jobs shortly but have nothing further to announce at this time. I wish my former Digg colleagues the best of luck in their new roles. [...]</description>
+	<content:encoded><![CDATA[<p>Digg just announced that <a href="http://about.digg.com/blog/digg-engineering-team-joins-socialcode">Digg Engineering Team Joins SocialCode</a> and The Washington Post reported <a href="http://www.washingtonpost.com/business/technology/socialcode-hires-15-employees-from-diggcom/2012/05/10/gIQAP2xBFU_story.html">SocialCode hires 15 employees from Digg.com</a>
+</p>
+<p>This acquihire does <b>NOT</b> include me.  I will be changing jobs shortly but have nothing further to announce at this time.</p>
+<p>I wish my former Digg colleagues the best of luck in their new roles.  I had a great time at Digg and learned a lot about working in a small company, social news, analytics, public APIs and the technology stack there.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2011/08/15/releases-tweets/">
+	<title>Releases = Tweets</title>
+	<link>http://journal.dajobe.org/journal/posts/2011/08/15/releases-tweets/</link>
+	 <dc:date>2011-08-15T19:25:24Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>I got tired of posting release announcements to my blog so I just emailed the announcements to the redland-dev list, tweeted a link to it from @dajobe and announced it on Freshmeat which a lot of places still pick up.. Here are the tweets for the 13 releases I didn&#8217;t blog since the start of [...]</description>
+	<content:encoded><![CDATA[<p>I got tired of posting release announcements to my blog so I just
+emailed the announcements to the redland-dev list, tweeted a link to it from
+<a href="http://twitter.com/dajobe">@dajobe</a> and announced it on
+<a href="http://freshmeat.net/">Freshmeat</a> which a lot of places still
+pick up..</p>
+<p>Here are the tweets for the 13 releases I didn&#8217;t blog since the start of 2011:</p>
+<ul>
+<li><a href="http://twitter.com/dajobe/statuses/22067543342583808">3 Jan</a>: Released Raptor RDF syntax library 2.0.0 at <a href="http://librdf.org/raptor/">http://librdf.org/raptor/</a> only 10 years in the making :)</li>
+<li><a href="http://twitter.com/dajobe/statuses/25445721041797120">12 Jan</a>: Released Rasqal RDF Query Library 0.9.22: Raptor 2 only, ABI/API break, 16 new SPARQL Query 1.1 builtins and more <a href="http://bit.ly/fzb9xW">http://bit.ly/fzb9xW</a> #rdf</li>
+<li><a href="http://twitter.com/dajobe/statuses/30821383483170816">27 Jan</a>: Rasqal 0.9.23 RDF query library released with SPARQL update query structure fixes (for @theno23 and 4store ): <a href="http://bit.ly/gVDp57">http://bit.ly/gVDp57</a></li>
+<li><a href="http://twitter.com/dajobe/statuses/32517983658053632">1 Feb</a>: Released Redland librdf 1.0.13 C RDF API and Triplestores with Raptor 2 support + more <a href="http://bit.ly/hOr4HA">http://bit.ly/hOr4HA</a></li>
+<li><a href="http://twitter.com/dajobe/statuses/40284240134275072">22 Feb</a>: Released Rasqal RDF Query Library 0.9.25 with many SPARQL 1.1 new things and fixes. RAND() and BIND() away!  <a href="http://bit.ly/flFDH1">http://bit.ly/flFDH1</a></li>
+<li><a href="http://twitter.com/dajobe/statuses/49586506406428672">20 Mar</a>: Raptor RDF Syntax Library 2.0.1 released with minor fixes for N-Quads serialializer and internal librdfa parser <a href="http://bit.ly/fT3aPX">http://bit.ly/fT3aPX</a></li>
+<li><a href="http://twitter.com/dajobe/statuses/51837377345359872">26 Mar</a>: Released my Flickcurl C API to Flickr 1.21 with some bug fixes and Raptor V2 support (optional) See <a href="http://bit.ly/f7QncO">http://bit.ly/f7QncO</a></li>
+<li><a href="http://twitter.com/dajobe/statuses/76138679390834688">1 Jun</a>: Released Raptor 2.0.3 RDF syntax library: a minor release adding raptor2.h header, Turtle / TRiG and ohter fixes.  <a href="http://bit.ly/jHKaB8">http://bit.ly/jHKaB8</a></li>
+<li><a href="http://twitter.com/dajobe/statuses/85538605770088448">27 Jun</a>: Rasqal RDF query library 0.9.26 released with better UNION execution, SPARQL 1.1 MD5, SHA* digests and more <a href="http://bit.ly/lI7lDW">http://bit.ly/lI7lDW</a></li>
+<li><a href="http://twitter.com/dajobe/statuses/94895518483890176">23 Jul</a>: Released Redland librdf RDF API / triplestore C library 1.0.14: core code cleanups, bug fixes and a few new APIs.  <a href="http://bit.ly/qqV1Rb">http://bit.ly/qqV1Rb</a></li>
+<li><a href="http://twitter.com/dajobe/statuses/95737448893657089">25 Jul</a>: Raptor RDF Syntax C library 2.0.4 released with YAJL V2, and latest curl support, SSL client certs, bug fixes and more <a href="http://bit.ly/oCIIDd">http://bit.ly/oCIIDd</a></li>
+</ul>
+<p><small>(yes 13; I didn&#8217;t tweet 2 of them: Rasqal 0.9.24 and Raptor 2.0.2)</small></p>
+<p>You know it&#8217;s quite tricky to collapse months of changelogs (GIT
+history) into release notes, compress it further into a news summary
+of a few lines and even harder to compress that into less than 140
+characters.  It is way less if you include room for a link url and
+space for retweeting and sometimes need a hashtag for context.
+</p>
+<p>So how do you measure a release? Let&#8217;s try!
+</p>
+<h2 id="tarballs">Tarballs</h2>
+<p>Released tarball files from the
+<a href="http://download.librdf.org/source/">Redland download site</a>.
+</p>
+<div style='text-align: center '>
+<table border="0" cellpadding="0" cellspacing="0" style='margin-left: auto; margin-right: auto; text-align: center; ' id='tblTarball' summary='Table of release tarballs by date showing differences in tarball sizes over time'>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; ; border-left:1px solid #CCC; '>date</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>package</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>old<br />
+version</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>new<br />
+version</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>old<br />
+tarball size</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>new<br />
+tarball size</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>tarball<br />
+byte diff</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>tarball<br />
+%diff</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-03</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.4.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.0</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,651,843</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,635,566</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>-16,277</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>-0.99%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-12</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,356,923</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,398,581</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+41,658</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>3.07%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-27</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,398,581</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,404,087</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+5,506</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>0.39%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-30</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.24</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,404,087</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,412,165</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+8,078</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>0.58%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-02-01</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>redland</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.12</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.13</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,552,241</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,554,764</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+2,523</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>0.16%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-02-22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.24</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,412,165</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,429,683</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+17,518</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1.24%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.0</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.1</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,635,566</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,637,928</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+2,362</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>0.14%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.1</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.2</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,637,928</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,633,744</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>-4,184</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>-0.26%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-26</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>flickcurl</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,775,246</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,775,999</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+753</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>0.04%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-06-01</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.2</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.3</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,633,744</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,652,679</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+18,935</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1.16%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-06-27</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.26</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,429,683</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,451,819</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+22,136</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1.55%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-07-23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.3</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.4</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,652,679</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,660,320</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+7,641</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>0.46%</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-07-25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>redland</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.13</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.14</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,554,764</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,581,695</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>+26,931</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1.73%</td>
+</tr>
+</table>
+</div>
+<div style='text-align: center '>
+<a href="http://journal.dajobe.org/journal/wp-content/uploads/2011/08/tarball-pdiff.png"><img src="http://journal.dajobe.org/journal/wp-content/uploads/2011/08/tarball-pdiff-small.png" width="700" height="248" alt="Barchart of %diffs between tarball releases.  Noticeable differences are raptor 2.0.0 with a big negative change and rasqal 0.9.22 with largest increase." /></a>
+<br />
+<small>Click image to embiggen</small>
+</div>
+<p>Releases that stand out here are Raptor 2.0.0 which was a major
+release with lots of changes and Rasqal 0.9.21; that changed a lot
+upwards and it was both an API break as well as lots of new
+functionality.
+</p>
+<h2 id="sources">Sources</h2>
+<p>Taken from my <a href="https://github.com/dajobe">GitHub
+repositories</a> extracting the tagged releases, excluding
+<code>ChangeLog*</code> files, and running diffstat over the output
+of a recursive <code>diff -uRN</code>.</p>
+<div style='text-align: center '>
+<table border="0" cellpadding="0" cellspacing="0" style='margin-left: auto; margin-right: auto; text-align: center; ' id='tblSources' summary='Table of sources code analysis listing files changed and source lines inserted, deletd and in net'>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; ; border-left:1px solid #CCC; '>date</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>package</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>old<br />
+version</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>new<br />
+version</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>source<br />
+files<br />
+changed</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>source<br />
+lines<br />
+inserted</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>source<br />
+lines<br />
+deleted</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>source<br />
+lines<br />
+net</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-03</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.4.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.0</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>215</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>34,018</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>30,348</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>64,366</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-12</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>94</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>11,641</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5,712</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>17,353</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-27</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5,663</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5,199</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>10,862</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-30</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.24</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>48</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,107</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>227</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,334</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-02-01</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>redland</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.12</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.13</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>96</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>3,721</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5,627</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>9,348</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-02-22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.24</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>64</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>3,857</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,333</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5,190</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.0</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.1</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>42</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>6,163</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5,833</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>11,996</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.1</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.2</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>9</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>55</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>12</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>67</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-26</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>flickcurl</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>19</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>737</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>308</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,045</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-06-01</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.2</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.3</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>88</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>2,827</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>2,232</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5,059</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-06-27</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.26</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>116</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>7,130</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>4,272</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>11,402</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-07-23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.3</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.4</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>33</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>808</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>103</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>911</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-07-25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>redland</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.13</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.14</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>75</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>3,681</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5,477</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>9,158</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '></td>
+<td></td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '></td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight: bold '>Total</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>924</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>81,408</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>66,683</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>148,091</td>
+</tr>
+</table>
+</div>
+<div style='text-align: center '>
+<a href="http://journal.dajobe.org/journal/wp-content/uploads/2011/08/sources-net-lines.png"><img src="http://journal.dajobe.org/journal/wp-content/uploads/2011/08/sources-net-lines-small.png" width="700" height="311" alt="Barchart of number of source lines changed (insertions + deletions) in each release.  Raptor 2.0.0 stands out as much larger than all the others, nearly combined." /></a>
+<br />
+<small>Click image to embiggen</small>
+</div>
+<p>Again Raptor 2.0.0 stands out as changing a huge number of files
+and lines.  Also you can see the mistake that was Raptor 2.0.1 being
+corrected the same day with Raptor 2.0.2 with a few changes.  This
+didn&#8217;t seem to get tweeted.  However also note that several of the
+Rasqal releases like 0.9.22 and 0.9.26 changed many files.  The
+&#8216;source lines net&#8217; column is the addition of the insert and deletes
+although some of those lines are the same.</p>
+<h2 id="words">Words</h2>
+<p>Words from the changelog, the release notes and the news post
+comparing the number of words in the rendered output.</p>
+<table border="0" cellpadding="0" cellspacing="0" style='margin-left: auto; margin-right: auto; text-align: center; ' id='tblWords' summary='Table of words used in the changelog, release notes and news for the releases over time with ratios between them'>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; ; border-left:1px solid #CCC; '>date</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>package</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>old<br />
+version</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>new<br />
+version</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>changelog<br />
+words</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>release<br />
+note<br />
+words</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>changelog<br />
+to release<br />
+word ratio</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>news<br />
+words</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight:bold; text-align:left; vertical-align:bottom; border-top:1px solid #CCC; '>changelog<br />
+to news<br />
+word ratio</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-03</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.4.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.0</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>15,411</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>2,709</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>5.69</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>365</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>42.22</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-12</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>3,465</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,199</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>2.89</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>162</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>21.39</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-27</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>318</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>135</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>2.36</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>52</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>6.12</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-01-30</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.24</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>450</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>254</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1.77</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>59</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>7.63</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-02-01</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>redland</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.12</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.13</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>778</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>235</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>3.31</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>73</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>10.66</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-02-22</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.24</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,649</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>558</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>2.96</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>136</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>12.13</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.0</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.1</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>247</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>76</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>3.25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>50</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>4.94</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.1</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.2</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>42</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>27</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1.56</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>42</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1.00</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-03-26</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>flickcurl</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.20</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.21</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>119</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>-</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>-</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>68</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>-</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-06-01</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.2</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.3</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>872</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>266</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>3.28</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>28</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>31.14</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-06-27</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>rasqal</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>0.9.26</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>4,410</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>970</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>4.55</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>96</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>45.94</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-07-23</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>raptor</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.3</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>2.0.4</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>517</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>345</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1.50</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>77</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>6.71</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '>2011-07-25</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>redland</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.13</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; '>1.0.14</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,347</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>620</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>2.17</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>88</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>15.31</td>
+</tr>
+<tr>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:left; ; border-left:1px solid #CCC; '></td>
+<td></td>
+<td></td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; font-weight: bold '>Total</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>29,625</td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>7,394</td>
+<td></td>
+<td style='padding:0 3px; background-color:#fff; border-top:0px none; border-left:0px none; border-bottom:1px solid #CCC; border-right:1px solid #CCC; ; text-align:right; '>1,296</td>
+<td></td>
+</tr>
+</table>
+<div style='text-align: center '>
+<a href="http://journal.dajobe.org/journal/wp-content/uploads/2011/08/words-ratio.png"><img src="http://journal.dajobe.org/journal/wp-content/uploads/2011/08/words-ratio-small.png" width="700" height="366" alt="Bar chart of the ratio of the number of words in the changelog to those in the release news.  Rasqal 0.9.26 and Raptor 2.0.0 are the argest but the tiny Raptor 2.0.2 bug fix is also notable." /></a>
+<br />
+<small>Click image to embiggen</small>
+</div>
+<p>So now we get to words.  Yes, lots of words, most of them by
+me. Starting with the changelog which is a hand edited version of the
+SVN and later GIT changes was over 15K words for Raptor 2.0.0.  And
+that gets boiled down lots into release notes, news and then a terse
+tweet.  Since the changelog corresponds roughly to source changes but
+the news to user visible changes like APIs, you can see that the
+oddities are again Rasqal 0.9.26 where there were lots of changes but
+not so much news; it was mostly internal work.
+</p>
+<p>Now I need to go summarise this blog post in a tweet:
+<code>Releases = Tweets in 1156 words http://bit.ly/n88ZIQ </code></p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2010/12/05/rasqal-0921-and-sparql-11-query-aggregation/">
+	<title>Rasqal 0.9.21 and SPARQL 1.1 Query aggregation</title>
+	<link>http://journal.dajobe.org/journal/posts/2010/12/05/rasqal-0921-and-sparql-11-query-aggregation/</link>
+	 <dc:date>2010-12-06T01:24:14Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>Rasqal 0.9.21 was just released on Saturday 2010-12-04 (announcement) containing the following new features: Updated to handle aggregate expression execution as defined by the SPARQL 1.1 Query W3C working draft of 14 October 2010 Executes grouping of results: GROUP BY Executes aggregate expressions: AVG, COUNT, GROUP_CONCAT, MAX, MIN, SAMPLE, SUM Executes filtering of aggregate expressions: [...]</description>
+	<content:encoded><![CDATA[<p>Rasqal 0.9.21 was just released on Saturday 2010-12-04
+(<a href="http://lists.w3.org/Archives/Public/semantic-web/2010Dec/0055.html">announcement</a>)
+containing the following new features:</p>
+<ul>
+<li>Updated to handle aggregate expression execution as defined by the
+<a href="http://www.w3.org/TR/2010/WD-sparql11-query-20101014/">SPARQL 1.1 Query</a> W3C working draft of 14 October 2010</li>
+<li>Executes grouping of results: <code>GROUP BY</code></li>
+<li>Executes aggregate expressions: <code>AVG</code>, <code>COUNT</code>, <code>GROUP_CONCAT</code>, <code>MAX</code>, <code>MIN</code>, <code>SAMPLE</code>, <code>SUM</code></li>
+<li>Executes filtering of aggregate expressions: <code>HAVING</code></li>
+<li>Parses new syntax: <code>BINDINGS</code>, <code>isNUMERIC()</code>, <code>MINUS</code>, sub <code>SELECT</code> and <code>SERVICE</code>.</li>
+<li>The syntax format for parsing data graphs at URIs can be explictly declared.</li>
+<li>The <code>roqet</code> utility can execute queries over SPARQL HTTP Protocol and operate over data from stdin.</li>
+<li>Added several new APIs</li>
+<li>Fixed Issue: <a href="http://bugs.librdf.org/mantis/view.php?id=388">#0000388</a></li>
+</ul>
+<p>See the <a href="http://librdf.org/rasqal/RELEASE.html#rel0_9_21">Rasqal 0.9.21 Release Notes</a> for the full details of the changes.</p>
+<p>I&#8217;d like to emphasis a couple of the changes to the <code>roqet(1)</code> utility program: you can now use it to query over data from standard input, i.e. use it as a filter, but only if you are querying over one graph.  You can also specify the format of the data graphs either on standard input or from URIs, if the format can&#8217;t be determined or guessed from the mime type, name or bytes.  Finally <code>roqet(1)</code> can execute remote queries at a SPARQL Protocol HTTP service, sometimes called a &#8220;SPARQL endpoint&#8221;.</p>
+<p>The new support for SPARQL Query 1.1 aggregate queries (and other
+features) led me to make comments to the SPARQL working group about
+the latest SPARQL Query 1.1 working draft based on the implementation
+experience.  The comments (below) were based on the implementation
+I previously outlined in
+<a href="http://journal.dajobe.org/journal/posts/2010/10/24/writing-an-rdf-query-engine-twice/">Writing an RDF query engine. Twice</a>
+at the end of October 2010.
+</p>
+<p>The implementation work to create the new features was substantial
+but relatively simple to describe: new rowsources were added for each
+of the aggregation operations and then included in the execution plan when the
+query structure indicated their presence after parsing.  There was some additional
+glue code that needed to be add to allow rows to indicate their
+presence in a group; a simple integer group ID was sufficient and
+the ID value has no semantics, just a check for a change of ID
+is enough to know a group started or ended.
+</p>
+<p>I also introduced an internal variable to bind the result of
+SELECT aggregate expressions after grouping (<code>$$aggID$$</code>
+which are illegal names in sparql).  I then used that to replace the
+aggregate expression in the SELECT and the HAVING expressions and
+used the normal evaluation mechanisms.  As I understand it, the
+SPARQL WG is now considering adding a way to name these explicitly
+in the GROUP statement.  A happy coincidence since I had implemented
+it without knowing that.
+</p>
+<p>To prepare this I did think about the approach a lot and developed
+a couple of diagrams for the grouping and aggregation rowsources that
+might help to understand how they work, how they can be implemented
+and tested as standalone unit modules, which they were.
+</p>
+<div style="text-align: center">
+<span><b>Rasqal Group By Rowsource</b></span><br />
+<img src="http://journal.dajobe.org/journal/wp-content/uploads/2010/12/Group-By-Rowsource.png" alt="Diagram showing input and outputs of group by rowsource in Rasqal." title="Group By Rowsource" width="742" height="536" class="aligncenter size-full wp-image-3873" />
+</div>
+<p>As always, the above isn&#8217;t quite how it is implemented.  There is no group by node if there is an implicit group when <code>GROUP BY</code> is missing but an aggregate expression is used; instead the Rasqal rowsource class synthesizes 1 group around the incoming row, when grouping is requested.</p>
+<div style="text-align: center">
+<span><b>Rasqal Aggregation Rowsource</b></span><br />
+<img src="http://journal.dajobe.org/journal/wp-content/uploads/2010/12/Aggregation-Rowsources.png" alt="Diagram showing inputs and outputs of Rasqal aggregation rowsource." title="Aggregation Rowsource" width="763" height="528" class="aligncenter size-full wp-image-3875" />
+</div>
+<p>This shows the guts of the aggregate expression evaluation where internal variables are introduced, substituted into the <code>SELECT</code> and <code>HAVING</code> expressions and then created as the aggregate expressions are executed over the groups.
+</p>
+<p>The rest of this post are my detailed thoughts on this draft of SPARQL 1.1 Query as <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg-comments/2010Dec/0001.html">posted</a> to the SPARQL WG comments list but turned into HTML markup here.</p>
+<hr />
+<p><b>
+<a href="http://lists.w3.org/Archives/Public/public-rdf-dawg-comments/2010Dec/0001.html">Dave Beckett comments on SPARQL 1.1 Query Language W3C WD 2010-10-14</a>
+</b></p>
+<p>These are my personal comments (not speaking for any past or current
+employer) on:
+<a href="http://www.w3.org/TR/2010/WD-sparql11-query-20101014/">SPARQL 1.1 Query Language W3C Working Draft 14 October 2010</a>
+</p>
+<p>My comments are based on the work I did to add some SPARQL 1.1 query
+and update support to my
+<a href="http://librdf.org/rasqal/">Rasqal RDF query library</a>
+(engine and API)
+in version 0.9.21 just released 2010-12-04 as
+<a href="http://lists.w3.org/Archives/Public/semantic-web/2010Dec/0055.html">announced</a>.  
+</p>
+<p>Some background to my work is given in a blog post:
+<a href="http://journal.dajobe.org/journal/posts/2010/10/24/writing-an-rdf-query-engine-twice/">Writing an RDF query engine. Twice</a>
+</p>
+<h2>I. General comments</h2>
+<p>I felt the specification introduced more optional features bundled
+together, where it was not entirely clear what the combination of
+those features would do.  For example a query with no aggregate
+expression but has a <code>GROUP BY</code> and <code>HAVING</code> is
+allowed by the syntax and the main document doesn&#8217;t say if it&#8217;s
+allowed or what it means.
+</p>
+<p>I found it hard to assemble all the pieces from the mathematical
+explanations into something I could code.
+</p>
+<p>The spec has several terms in the grammar not in the query
+document.  After asking, these turned out to be federated query
+(<code>BINDINGS</code>), or update (LOAD, &#8230;) but these are not
+pointed out or linked to clearly although there is mention of the
+documents in the status section.  Please make these more clear.
+</p>
+<p>I decided to concentrate on the new Aggregates feature since I had
+already implemented <code>SELECT</code> expressions, leaving
+<em>Subqueries</em> and <em>Negation</em> to later.  <em>Property
+paths</em> should be in the list of new features in the status
+section at the of the document.
+</p>
+<p><em>&#8220;SPARQL 1.1 Uniform HTTP Protocol for Managing RDF Graphs&#8221;</em>
+is rather a long title; what does &#8216;Uniform&#8217; or &#8216;HTTP&#8217; add?  SOAP is dead.
+suggest <em>&#8220;SPARQL 1.1 RDF Graph Management Protocol&#8221;</em>
+or RDF dataset
+</p>
+<p>With all the additions especially property paths (a new query
+language), update (data management language) and federated query
+(remote query support) and I understand ~30 additional keywords are
+being added beyond this draft for functions and operators, I see this
+as a major change to SPARQL 1.0, more of a SPARQL 2.  You should
+consider renaming it.
+</p>
+<h2>II. Aggregates</h2>
+<p>I found the math in the aggregation and grouping sections rather
+hard to understand so I also looked what MySQL and SQLite did, and
+wrote my own diagram based on the data flow:</p>
+<p style="text-align: center">
+<img src="http://www.dajobe.org/2009/11/sparql11/SPARQL%201.1%20Execution.png" width="762" height="551" alt="Guessed dataflow of SPARQL 1.1 query engine in executing a query" />
+<br />
+See <a href="http://www.dajobe.org/2009/11/sparql11/">http://www.dajobe.org/2009/11/sparql11/</a>
+</p>
+<p>so for me it was easier to see the individual components/stages
+(which roughly correspond to SPARQL algebra terms).
+</p>
+<p>I had to make several of my own tests with my guess on what the
+answers should be.  With all the pieces for aggregate expressions:
+grouping, aggregate expression, distinct, having, counting (count *
+vs count(expr)) there needs to be several tests with good coverage.
+</p>
+<p>I felt aggregate functions can be broken down into these parts</p>
+<ol>
+<li>selecting of aggregate function value</li>
+<li>grouping of results &#8211; optional; explicit, implicit when agg func present</li>
+<li>execution of aggregate functions &#8211; optional; with some special cases</li>
+<li>filtering of group results with having &#8211; optional</li>
+</ol>
+<p>(following my diagram above)</p>
+<p>As it is clear they are all optional, it probably is worth explaining
+what it means when they are absent, such as group by + having with
+no aggregate expression as mentioned above.
+</p>
+<h2>III. Bindings is a new syntax</h2>
+<p><code>BINDINGS</code> essentially gives a new way to write down a variable
+bindings result set.  Even though it is discussed in the federated
+query spec about using it for <code>SERVICE</code>, it&#8217;s not restricted to that by
+the grammar or specifications.
+</p>
+<p><code>BINDINGS</code> in the query grammar
+(<a href="http://www.w3.org/TR/2010/WD-sparql11-query-20101014/#rBindingsClause">rBindingsClause</a>)
+I previously asked about
+<a href="http://lists.w3.org/Archives/Public/public-rdf-dawg-comments/2010Oct/0044.html">on 2010-10-15</a>
+and this comment is an extension of that comment.
+</p>
+<p>So as I read it this is a valid &#8216;query&#8217; which does no real execution
+but just returns a set.
+</p>
+<pre>
+SELECT * WHERE BINDINGS ?var1 ?var2 {
+  ( "var1-value1"  "var2-value1" )
+  ( "var1-value2"  "var2-value2" )
+}
+</pre>
+<p>or if you really must you can leave out the <code>WHERE</code>:</p>
+<pre>
+SELECT * BINDINGS {
+  ( "var1-value1"  "var2-value1" )
+  ( "var1-value2"  "var2-value2" )
+}
+</pre>
+<p>My question is to ask if this is correct and to clarify in the
+spec the intended use, whether or not it is intended for use with
+<code>SERVICE</code> only.
+</p>
+<h2>IV. Section-by-section comments</h2>
+<h3>Section: Status of this Document</h3>
+<p>Should mention property paths as new since that is a major addition
+after SPARQL 1.0
+</p>
+<p>Please link to the documents in the status, these are just text.
+</p>
+<h3>Sections 1-8</h3>
+<p>Skipped, they are same as SPARQL 1.0 I hope
+</p>
+<h3>9 Property Paths</h3>
+<p>I am unlikely to ever implement any of this, it&#8217;s a second query
+language inside SPARQL.  How many systems implemented this before
+the SPARQL 1.1 work was started?
+</p>
+<h3>10 Aggregates</h3>
+<p>I took all the examples in this section and turned them into test
+cases where possible.
+</p>
+<h3>10.2</h3>
+<p>The explanation of errors and ListEvalE is rather opaque.  It is
+still not clear to me what is done with errors in GROUP BY, HAVING
+and arguments to aggregate expressions.  Some are skipped, some
+are ignored and return NULL.  Examples and tests will enable checking
+this but the spec needs to be clearer.
+</p>
+<p>Definition: Group and Aggregation were hard for me to understand.
+The input to Aggregation being a &#8216;scalar&#8217; meaning actually a set of
+key:value pairs was confusing.  It is not also not clear if those
+are a set or an ordered set of parameters.  This is only used today
+for the &#8216;separator&#8217; with GROUP_CONCAT.
+</p>
+<h3>10.2.1 HAVING</h3>
+<p>What happens when there is an expression error?
+</p>
+<p>What variables and expressions can be used here and what is their scope?
+</p>
+<h3>10.2.2 Set Functions</h3>
+<p>Another confusing section.  I mostly ignored this and did what SQL did.
+</p>
+<p>None of the functions that I can tell, ever use &#8216;err&#8217;.
+</p>
+<h3>10.2.3 Mapping from Abstract Syntax to Algebra</h3>
+<p>scalarvals argument is used here &#8211; I think this is called &#8216;scalar&#8217; earlier.
+</p>
+<h3>Un-numbered Section after 10.2.3: Joining Aggregate Values</h3>
+<p>Never figured out what this was trying to define but my code executes
+the example.
+</p>
+<h3>11. Subqueries</h3>
+<p>(Ignored in my current work)</p>
+<h3>12 RDF Dataset</h3>
+<p>(Same as SPARQL 1.0 I assume so no comments)
+</p>
+<h3>13 Basic Federated Query</h3>
+<p>Yes, please merge in the text here.
+</p>
+<h3>14 Solution Sequences and Modifiers</h3>
+<p>( Aside: This is one of those SPARQL parts where everything mentioned is
+optional. Otherwise this section has no change from SPARQL 1.0, I am just
+mentioning it as a pointer of a trend. )
+</p>
+<h3>15. Query Forms</h3>
+<p>No comments.
+</p>
+<h3>16. Testing Values</h3>
+<h3>16.3 Operator Mapping</h3>
+<p>Is it worth noting the new operators in SPARQL 1.1?
+</p>
+<p>Operators: implemented isNUMERIC()
+</p>
+<h3>16.4 Operators Definitions</h3>
+<p>My current state of implementation of new to SPARQL 1.1 expressions</p>
+<ul>
+<li>16.4.16 IF &#8211; implemented</li>
+<li>16.4.17 IN &#8211; implemented</li>
+<li>16.4.18 NOT IN &#8211; implemented</li>
+<li>16.4.19 IRI &#8211; implemented</li>
+<li>16.4.20 URI &#8211; implemented</li>
+<li>16.4.21 BNODE &#8211; implemented</li>
+<li>16.4.22 STRDT &#8211; implemented</li>
+<li>16.4.23 STRLANG &#8211; implemented</li>
+</ul>
+<p>No comments on the above
+</p>
+<h3>16.4.24 NOT EXISTS and EXISTS</h3>
+<p>I am lumping these together with sub-<code>SELECT</code> to implement.
+My concern here is that the syntax gets super-complex since all the graph
+pattern syntax can now appear inside any expression syntax.
+</p>
+<p><em>There is a filter operator &#8220;exists&#8221; that &#8230;</em>
+</p>
+<p>Does this imply these can only appear in <code>FILTER</code>
+expressions?  Please clarify.
+</p>
+<h3>17 Definition of SPARQL</h3>
+<p>I looked at the 17.2.3 for aggregate queries and it was more helpful
+than the math earlier.  The pseudo code in Step 4 is a bit too
+unclear.  Is that an example implementation or the required one?
+</p>
+<h3>17.6 Extending SPARQL Basic Graph Matching</h3>
+<p>Ignored.
+</p>
+<h3>18 SPARQL Grammar</h3>
+<p>Clearly this is not complete; there are lots of notes to update it.
+</p>
+<h3>19 Conformance</h3>
+<p>If property paths are not removed, please add a conformance level
+that includes SPARQL 1.1 without property paths.
+</p>
+<p>Does SPARQL 1.1 Query require implementation of the dependent specs -
+federated query and update?  Looks to me that protocol may also be
+dependent?
+</p>
+<hr />
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2010/11/07/end-of-life-of-raptor-v1-end-of-support-for-raptor-v1-in-rasqal-and-librdf/">
+	<title>End of life of Raptor V1.  End of support for Raptor V1 in Rasqal and librdf</title>
+	<link>http://journal.dajobe.org/journal/posts/2010/11/07/end-of-life-of-raptor-v1-end-of-support-for-raptor-v1-in-rasqal-and-librdf/</link>
+	 <dc:date>2010-11-07T22:49:54Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>Raptor V1 was last released in January 2010 and Raptor V2 seems pretty stable and working. I am therefore announcing that from early 2011, Raptor V2 will replace Raptor V1 and be a requirement for Rasqal and librdf. End of life timeline Now Raptor V1 last release remains 1.4.21 of 2010-01-30 Raptor V2 release 2.0.0 [...]</description>
+	<content:encoded><![CDATA[<p><a href="http://librdf.org/">Raptor</a> V1 was last
+<a href="http://journal.dajobe.org/journal/posts/2010/01/30/raptor-1421-raptor2-git/">released in January 2010</a>
+and Raptor V2 seems pretty stable and working.  I am
+therefore announcing that from early 2011, Raptor V2 will replace
+Raptor V1 and be a requirement for
+<a href="http://librdf.org/rasqal/">Rasqal</a> and
+<a href="http://librdf.org/">librdf</a>.</p>
+<h2>End of life timeline</h2>
+<p><b>Now</b></p>
+<ol>
+<li>Raptor V1 last release remains
+<a href="http://librdf.org/raptor/NEWS.html#D2010-01-30-V1.4.21">1.4.21 of 2010-01-30</a></li>
+<li>Raptor V2 release 2.0.0 will happen &#8220;soon&#8221;.</li>
+<li>The next Rasqal release will support Raptor V1 and Raptor V2.</li>
+<li>The next librdf release will support Raptor V1 and Raptor V2
+(and requires Rasqal built with the same Raptor version).</li>
+</ol>
+<p><b>2011</b></p>
+<ol>
+<li>The next Rasqal release will support Raptor V2 only.</li>
+<li>The next librdf release will support Raptor V2 only
+(and require a Rasqal built with Raptor V2).</li>
+</ol>
+<p>In the style of open source I&#8217;ve been using for the Redland libraries,
+which might be described as &#8220;release when it&#8217;s ready, not release by date&#8221;,
+these dates may slip a little but the intention is that Raptor V2 becomes
+the mainline.</p>
+<p>I do NOT rule out that there will be another Raptor V1 release but it will
+be ONLY for security issues.  It will contain minimal changes and not add 
+any new features or fix any other type of bug.</p>
+<h2>Developer Actions</h2>
+<p>If you use the Raptor V1 ABI/API directly, you will need to
+upgrade.  If you want to write conditional code, that&#8217;s possible.
+The redland librdf GIT source (or 1.0.12) uses the approach of macros
+that rewrite V2 into V1 forms and I recommend this way since dropping
+Raptor V1 support then amounts to removing the macros.
+</p>
+<p>The
+<a href="http://librdf.org/raptor/api/">Raptor V2 API documentation</a>
+has a detailed
+<a href="http://librdf.org/raptor/api/raptor-changes.html">section on the changes</a>
+and there is also an
+<a href="http://librdf.org/raptor/UPGRADING.html">upgrading document</a>
+plus it points to a perl script docs/upgrade-script.pl (also in the Raptor
+V2 distribution) that automates some of the work (renames mostly) and
+leaves markers where a human has to fix.</p>
+<p>The Raptor V1 API documentation will remain in a frozen state available
+at
+<a href="http://librdf.org/raptor/api-1.4/">http://librdf.org/raptor/api-1.4/</a>
+</p>
+<h2>Packager Actions</h2>
+<p>If you are a packager of the redland libraries, you need to prepare for the
+Raptor V1 / Raptor V2 transition which can vary depending on your
+distribution&#8217;s standards.  The two versions share two files: the rapper
+binary and the rapper.1 man page.  I do not want to rename them to rapper2
+etc. since rapper is a well known utility name in RDF and I want &#8216;rapper&#8217;
+to provide the latest version.</p>
+<p>In the Debian packaging which I maintain, these are already planned to be
+in separate packages so that both libraries can be installed and you can
+choose the raptor-utils2 package over raptor-utils (V1).</p>
+<p>In other distributions where everything is in one package (BSD Ports
+for example) you may have to move the rapper/rapper.1 files to the
+raptor V2 package and create a new raptor1 package without them.
+i.e. something like this</p>
+<dl>
+<dt><b>Raptor V1 package 1.4.21-X:</b></dt>
+<dd>
+  <code>/usr/lib/libraptor1.so.1</code>* &#8230;<br />
+  (no <code>/usr/bin/rapper</code> or <code>/usr/share/man/man1/rapper.1</code> )
+</dd>
+<dt><b>Raptor V2 package 2.0.0-1:</b></dt>
+<dd>
+   <code>/usr/lib/libraptor2.so.0</code>* &#8230;<br />
+   <code>/usr/bin/rapper</code><br />
+   <code>/usr/share/man/man1/rapper.1</code><br />
+   conflicts with older raptor1 packages before 1.4.21-X
+</dd>
+</dl>
+<p>The other thing to deal with is that when Rasqal is built against
+Raptor V2, it has internal change that mean librdf has to also be built
+against rasqal-with-raptor2.  This needs enforcing with packaging
+dependencies.</p>
+<p>This packaging work can be done/started as soon as Raptor V2 2.0.0
+is released which will be &#8220;soon&#8221;.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2010/10/24/writing-an-rdf-query-engine-twice/">
+	<title>Writing an RDF query engine.  Twice</title>
+	<link>http://journal.dajobe.org/journal/posts/2010/10/24/writing-an-rdf-query-engine-twice/</link>
+	 <dc:date>2010-10-24T22:00:15Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>&#8220;You&#8217;ll end up writing a database&#8221; said Dan Brickley prophetically in early 2000. He was of course, correct. What started as an RDF/XML parser and a BerkeleyDB-based triple store and API, ended up as a much more complex system that I named Redland with the librdf API. It does indeed have persistence, transactions (when using [...]</description>
+	<content:encoded><![CDATA[<p>&#8220;You&#8217;ll end up writing a database&#8221; said Dan Brickley prophetically in early 2000.  He was of course, correct.  What started as an RDF/XML parser and a BerkeleyDB-based triple store and API, ended up as a much more complex system that I named <a href="http://librdf.org/">Redland</a> with the <code>librdf</code> API.  It does indeed have persistence, transactions (when using a relational database) and querying.  However, RDF query is not quite the same thing as SQL since the data model is schemaless and graph centric so when RDQL and later SPARQL came along, Redland gained a query engine component in 2003 named <a href="http://librdf.org/rasqal/">Rasqal</a>: the <strong>R</strong>DF <strong>S</strong>yntax and <strong>Q</strong>uery <strong>L</strong>ibrary for Redland.  I still consider it not a 1.0 library after over 7 years of work.</p>
+<h2>Query Engine The First</h2>
+<p>The first query engine was written to execute <a href="http://www.w3.org/Submission/RDQL/">RDQL</a> which today looks like a relatively simple query language.  There is one type of <code>SELECT</code> query returning sequences of sets of variable bindings in a tabular result like SQL.  The query is a fixed pattern and doesn&#8217;t allow any optional, union or conditional pattern matching.  This was relatively easy to implement in what I&#8217;ve called a <i>static</i> execution model:</p>
+<ol>
+<li>Break the query up into a sequence of <i>triple patterns</i>: triples that can include variables in any position which will be found by matching against triples.  A triple pattern returns a sequence of sets of variable bindings.</li>
+<li>Match each of the triple patterns in order, top to bottom, to bind the variables.</li>
+<li>If there is a query condition like <code>?var &gt; 10</code> then check that it evaluates true.</li>
+<li>Return the result.</li>
+<li>Repeat at step #2.</li>
+</ol>
+<p>The only state that needed saving was where in the sequence of triple patterns that the execution had got to &#8211; pretty much an integer, so that the looping could continue.  When a particular triple pattern was exhausted it was reset, the previous one incremented and the execution continued.
+</p>
+<p>This worked well and executes all of RDQL no problem.  In particular it was a <i>lazy execution model</i> &#8211; it only did work when the application asked for an additional result.  However, in 2004 RDF query standardisation started and the language grew.</p>
+<h2>Enter The Sparkle</h2>
+<p>The new standard RDF query language which was named SPARQL had many additions to the static patterns of the RDQL model, in particular it added <code>OPTIONAL</code> which allowed optionally (sic) matching an inner set of triple patterns (a <i>graph pattern</i>) and binding more variables.  This is useful in querying heterogeneous data when there are sometimes useful bits of data that can be returned but not every graph has it.</p>
+<p>This meant that the engine had to be able to match multiple graph patterns &#8211; the outer one and any inner optional graph pattern &#8211; as well as be able to reset execution of graph patterns, when optionals were retried.  Optionals could also be nested to an arbitrary depth.</p>
+<p>This combination meant that the state that had to be preserved for getting the next result became a lot more complex than an integer.  Query engine #1 was updated to handle 1 level of nesting and a combination of outer fixed graph pattern plus one optional graph pattern.  This mostly worked but it was clear that having the entire query have a fixed state model was not going to work when the query was getting more complex and <i>dynamic</i>.  So query engine #1 could not handle the full SPARQL Optional model and would never implement Union which required more state tracking.
+</p>
+<p>This meant that Query Engine #1 (QE1) needed replacing.</p>
+<h2>Query Engine The Second</h2>
+<p>The first step was a lot of refactoring.  In QE1 there was a lot of shared state that needed pulling apart: the query itself (graph patterns, conditions, the result of the parse tree), the engine that executed it and the query result (sequence of rows of variable bindings).  That needed pulling apart so that the query engine could be changed independent of the query or results.</p>
+<p>Rasqal 0.9.15 at the end of 2007 was the first release with the start of the refactoring.  During the work for that release it also became clear that an API and ABI break was necessary as well to introduce a Rasqal world object, to enable proper resource tracking &#8211; a lesson hard learnt.  This was introduced in 0.9.16.</p>
+<p>There were plenty of other changes to Rasqal going on outside the query engine model such as supporting reading and writing result formats, providing result ordering and distincting, completing the value expression and datatype handling data and general resilience fixes.</p>
+<p>The goals of the refactoring were to produce a new query engine that was able to execute a more dynamic query, be broken into understandable components even for complex queries, be testable in small pieces and to continue to execute all the queries that QE1 could do.  It should also continue to be a lazy-evaluation model where the user could request a single result and the engine should do the minimum work in order to return it.
+</p>
+<h2>Row Sources and SPARQL</h2>
+<p>The new query engine was designed around a new concept: a <i>row source</i>.  This is an active object that on request, would return a row of variable bindings.  It generates what corresponds to a row in a SQL result.  This active object is the key for implementing the lazy evaluation.  At the top level of the query execution, there would be basically one call to <code>top_row_source.getRow()</code> which itself calls inner rowsources&#8217; <code>getRow()</code> in order to execute the query to return the next result.</p>
+<p>Each rowsource would correspond approximately to a SPARQL algebra concept, and since the algebra had a well defined way to turn a query structure into an executable structure, or query plan, the query engine&#8217;s main role in preparation of the query was to become a SPARQL query algebra implementation.  The algebra concepts were added to Rasqal enabling turning the hierarchical graph pattern structure into algebra concepts and performing the optimization and algebra transformations in the specification.  These transformations were tested and validated against the examples in the specification.  The resulting tree of &#8220;top down&#8221; algebra structures were then used to build the &#8220;bottom up&#8221; rowsource tree.</p>
+<p>The rowsource concept also allowed breaking up the complete query engine execution into understandable and testable chunks.  The rowsources implemented at this time include:</p>
+<ul>
+<li><b>Assignment</b>: allowing binding of a new variable from an input rowsource</li>
+<li><b>Distinct</b>: apply distinctness to an input rowsource</li>
+<li><b>Empty</b>: returns no rows; used in legitimate queries as well as in transformations</li>
+<li><b>Filter</b>: evaluates an expression for each row in an input rowsource and passes on those that return True.</li>
+<li><b>Graph</b>: matches against a graph URI and/or bind a graph variable</li>
+<li><b>Join</b>: (left-)joins two inner rowsources, used for OPTIONAL.</li>
+<li><b>Project</b>: projects a subset of input row variables to output row</li>
+<li><b>Row Sequence</b>: generates a rowsource from a static set of rows</li>
+<li><b>Sort</b>: sort an input rowsource by a list of order expressions</li>
+<li><b>Triples</b>: match a triple pattern against a graph and generate a row.  This is the fundamental triple pattern or Basic Graph Pattern (BGP) in SPARQL terms.</li>
+<li><b>Union</b>: return results from the two input rowsources, in order</li>
+</ul>
+<p>The QE1 entry point was refactored to look like getRow() and the query engines were tested against each other. In the end QE2 was identical, and eventually QE2 was improved such that it passed more DAWG SPARQL tests that than QE1.</p>
+<p>So in summary QE2 works like this:</p>
+<ul>
+<li>Parse the query string into a hierarchy of graph patterns such as basic, optional, graph, group, union, filter etc.  (This is done in <code>rasqal_query_prepare()</code>)</li>
+<li>Create a SPARQL algebra expression from the graph pattern tree that describes how to evaluate the query. (This is in <code>rasqal_query_execute()</code> calling QE2 )</li>
+<li>Invert the algebra expression to a hierarchy of rowsources where the top rowsource getRow() call will evaluate the entire query (Ditto)</li>
+</ul>
+<p>(If you want to see some of the internals on a real query, run <code>roqet -d debug query.rq</code> from roqet built in maintainer mode and both the query structure and algebra version will be generated.</p>
+<p>The big advantage from a maintenance point of view is that it is divided into small understandable components that can be easily added to.</p>
+<p>The result was released in Rasqal 0.9.17 at the end of 2009; 15 months after the previous release.  It&#8217;s tempting to say nobody noticed the new query engine except that it did more work.  There is no way to use the old query engine except by a <code>configure</code> argument when building it.  The QE1 code is never called and should be removed from the sources.</p>
+<h2>Example execution</h2>
+<p>When QE2 is called by the command line utility <a href="http://librdf.org/rasqal/roqet.html">roqet</a>, there is a lot going on inside Rasqal and <a href="http://librdf.org/raptor/">Raptor</a>.  A simplified version of what goes on when a query like this is run:</p>
+<pre>
+$ cat example.rq
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+SELECT ?name ?website
+FROM   &lt;http://planetrdf.com/bloggers.rdf&gt;
+WHERE { ?person foaf:weblog ?website ;
+                foaf:name ?name .
+        ?website a foaf:Document
+      }
+ORDER BY ?name
+
+$ roqet example.rq 
+roqet: Querying from file example.rq
+roqet: Query has a variable bindings result
+result: [name=string("AKSW Group - University of Leipzig"), website=uri&lt;http://blog.aksw.org/&gt;]
+...
+</pre>
+<p>is described in the following picture if you follow the numbers in order:</p>
+<p><img src="http://journal.dajobe.org/journal/wp-content/uploads/2010/10/roqet-execute-example-simple.png" alt="" title="Roqet query execution example" width="467" height="465" class="aligncenter size-medium wp-image-3852" /></p>
+<p>This doesn&#8217;t include details of content negotiation, base URIs, result formatting, or the internals of the query execution described above.</p>
+<h2>SPARQL 1.1</h2>
+<p>Now it is the end of 2010 and SPARQL 1.1 work is underway to update the original <a href="http://www.w3.org/TR/2008/REC-rdf-sparql-query-20080115/">SPARQL Query</a> which was complete in January 2008.  It is a substantial new version that adds greatly to the language. In the <a href="http://www.w3.org/TR/2010/WD-sparql11-query-20101014/">SPARQL 1.1 2010-10-14 draft version</a> it adds (these items may or may not be in the final version):</p>
+<ul>
+<li>Assignment with <code>BIND(expr AS ?var)</code></li>
+<li>Aggregate expressions such as <code>SUM()</code>, <code>COUNT()</code> including grouping and group filtering with <code>HAVING</code></li>
+<li>Negation between graph patterns using <code>MINUS</code>.</li>
+<li>Property path triple matching.</li>
+<li>Computed select expressions: <code>SELECT ... (expr AS ?var)</code></li>
+<li>Federated queries using <code>SERVICE</code> to make SPARQL HTTP query requests</li>
+<li>Sub <code>SELECT</code> and <code>BINDINGS</code> to allow queries/results inside queries.</li>
+<li>Updates allowing insertion, deletion and modification of graphs via queries as well as other graph and dataset management</li>
+</ul>
+<p>The above is my reading of the major items in the latest draft SPARQL 1.1 query language or it&#8217;s dependent required specifications.</p>
+<h2>Rasqal next steps</h2>
+<p>So does SPARQL 1.1 mean Rasqal Query Engine 3?  Not yet, although the Rasqal API is still changing too much to call it stable and another API/ABI break is possible.  There&#8217;s also the question of making an <i>optimizing</i> query engine, a more substantial activity.  At this time, I&#8217;m not motivated to implement property paths since it seems like a lot of work and there are other pieces I want to do first.  <a href="http://github.com/dajobe/rasqal">Rasqal in GIT</a> handles most of the syntax and is working towards implementing most of the execution of aggregate expressions, sub selects and SERVICE although no dates yet. I work on Rasqal in my spare time when I feel like it, so maybe it won&#8217;t be mature with a stable API (which would be a 1.0) until SPARQL 2 rolls by.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2010/09/25/redland-librdf-1-0-11-released/">
+	<title>Redland librdf 1.0.11 released</title>
+	<link>http://journal.dajobe.org/journal/posts/2010/09/25/redland-librdf-1-0-11-released/</link>
+	 <dc:date>2010-09-25T21:44:05Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>I have just released Redland librdf library version 1.0.11 which has been in progress for some time, delayed by the large amount of work to get out Raptor V2 as well as initial SPARQL 1.1 draft work for Rasqal 0.9.20. The main features in this release are as follows: Virtuoso storage backend querying now fully [...]</description>
+	<content:encoded><![CDATA[<p>I have just released <a href="http://librdf.org/">Redland librdf</a> library version 1.0.11 which has been in progress for some time, delayed by the large amount of work to get out <a href="http://journal.dajobe.org/journal/posts/2010/08/16/raptor-rdf-syntax-library-v2-beta-1/">Raptor V2</a> as well as initial SPARQL 1.1 draft work for <a href="http://journal.dajobe.org/journal/posts/2010/08/22/rasqal-rdf-query-library-0-9-20/">Rasqal 0.9.20</a>.</p>
+<p>The main features in this release are as follows:</p>
+<ul>
+<li>Virtuoso storage backend querying now fully works.</li>
+<li>Several new convenience APIs were added and others deprecated.</li>
+<li>Support building with Raptor V2 API if configured with <code>--with-raptor2</code>.</li>
+<li>Exports more functions to SWIG language bindings.</li>
+<li>Switched to GIT version control <a href="http://github.com/dajobe/librdf">hosted by GitHub</a>.</li>
+<li>Fixed Issues:
+<a href="http://bugs.librdf.org/mantis/view.php?id=124">#0000124</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=284">#0000284</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=321">#0000321</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=322">#0000322</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=334">#0000334</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=338">#0000338</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=341">#0000341</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=344">#0000344</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=350">#0000350</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=363">#0000363</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=366">#0000366</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=371">#0000371</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=380">#0000380</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=382">#0000382</a> and
+<a href="http://bugs.librdf.org/mantis/view.php?id=383">#0000383</a>
+</li>
+</ul>
+<p>See the <a href="http://librdf.org/RELEASE.html#rel1_0_11">Redland librdf 1.0.11 Release Notes</a> for the full details of the changes.</p>
+<p>Note that the <a href="http://librdf.org/bindings/">Redland language bindings</a> 1.0.10.1 works fine with Redland librdf 1.0.11 but the bindings will soon have a release to match.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2010/08/26/leaving-yahoo-joining-digg/">
+	<title>Leaving Yahoo &#8211; Joining Digg</title>
+	<link>http://journal.dajobe.org/journal/posts/2010/08/26/leaving-yahoo-joining-digg/</link>
+	 <dc:date>2010-08-26T20:44:41Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>I&#8217;m heading to a new adventure at Digg in San Francisco to be a lead software engineer working on APIs and syndication. I&#8217;ve been at Yahoo! nearly 5 years so it is both a happy and sad time for me, and I wish all the excellent people I worked with the best of luck in [...]</description>
+	<content:encoded><![CDATA[<p>I&#8217;m heading to a new adventure at <a href="http://digg.com/">Digg</a> in San Francisco to be a lead software engineer working on APIs and syndication.</p>
+<p>I&#8217;ve been at Yahoo! nearly 5 years so it is both a happy and sad time for me, and I wish all the excellent people I worked with the best of luck in future.</p>
+<p>Here is a summary of the main changes:</p>
+<ul>
+<li>Silicon Valley -&gt; San Francisco</li>
+<li>15,000 staff -&gt; 100 staff</li>
+<li>Architect -&gt; Software engineer</li>
+<li>strategizing, meeting -&gt; coding</li>
+<li>Powerpoint, OmniGraffle, twiki -&gt; emacs, eclipse, &#8230;?</li>
+<li>(No coding!) -&gt; Python, Java, Hadoop, Cassandra, &#8230;?</li>
+<li>Sunny days -&gt; Foggy days</li>
+<li>15 min commute -&gt; 2.5hr commute (until I move to SF)</li>
+<li>Public company -&gt; private company</li>
+</ul>
+<p>Exciting!</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2010/08/22/rasqal-rdf-query-library-0-9-20/">
+	<title>Rasqal RDF Query Library 0.9.20</title>
+	<link>http://journal.dajobe.org/journal/posts/2010/08/22/rasqal-rdf-query-library-0-9-20/</link>
+	 <dc:date>2010-08-22T21:33:22Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+	<description>I just released a new version of my Rasqal RDF Query Library for two main new features: Support more of the new W3C SPARQL working drafts of 1 June 2010 for SPARQL 1.1 Query and SPARQL 1.1 Update. Support building with Raptor V2 API as well as Raptor V1 API.. The main change is to [...]</description>
+	<content:encoded><![CDATA[<p>I just released a new version of my <a href="http://librdf.org/rasqal/">Rasqal RDF Query Library</a> for two main new features:</p>
+<ol>
+<li>Support more of the new W3C SPARQL working drafts of 1 June 2010 for <a href="http://www.w3.org/TR/2010/WD-sparql11-query-20100601/">SPARQL 1.1 Query</a>
+and
+<a href="http://www.w3.org/TR/2010/WD-sparql11-update-20100601/">SPARQL 1.1 Update</a>.</li>
+<li>Support building with <a href="http://librdf.org/raptor/">Raptor</a> V2 API as well as Raptor V1 API..</li>
+</ol>
+<p>The main change is to start to add to Rasqal&#8217;s APIs and query engine changes for the new SPARQL 1.1 working drafts.  This release adds support the syntax for all the changes for Query and Update.  The new draft syntax is available via the &#8216;laqrs&#8217; query language name, until the SPARQL 1.1 syntax is finalized.  The &#8216;sparql&#8217; query language provides SPARQL 1.0 support.</p>
+<p>On Query 1.1, the addition is primarily syntax and API support for the new syntax.  There is expression execution for the new functions <code>IF()</code>, <code>URI()</code>, <code>STRLANG()</code>, <code>STRDT()</code>, <code>BNODE()</code>, <code>IN()</code> and <code>NOT IN()</code> which are noew usable as part of the normal expression grammar.  The existing aggregate function support was extended to add the new <code>SAMPLE()</code> and <code>GROUP_CONCAT()</code> but remains syntax-only.  Finally the new <code>GROUP BY</code> with <code>HAVING</code> conditions were added to the syntax and had consequent API updates but no query engine execution of them.
+</p>
+<p>For Update 1.1 the full set of update operations syntax were added and they create API structures. Note, however there seem to be some ambiguities in the draft syntax especially around multiple optional tokens in a row near <code>WITH</code> which are particularly hard to implement in flex and bison (aka &#8220;lex and yacc&#8221;).</p>
+<p>The main non-SPARQL 1.1 related change is to allow building Rasqal with Raptor V2 APIs rather than V1.  Raptor V2 is in beta so this is not a final API and is thus not the default build, it has to be enabled with <code>--enable-raptor2</code> with configure.  When raptor V2 is stable (2.0.0), Rasqal will require it.
+</p>
+<p>The changes to Rasqal in this release, in summary, are:</p>
+<ul>
+<li>Updated to handle more of the new syntax defined by the
+<a href="http://www.w3.org/TR/2010/WD-sparql11-query-20100601/">SPARQL 1.1 Query</a>
+and
+<a href="http://www.w3.org/TR/2010/WD-sparql11-update-20100601/">SPARQL 1.1 Update</a>
+W3C working drafts of 1 June 2010</li>
+<li>Added execution support for new SPARQL 1.1 query built-in expressions IF(), URI(), STRLANG(), STRDT(), BNODE(), IN() and NOT IN().</li>
+<li>Added an &#8216;html&#8217; query result table format from patch by Nicholas J Humfrey</li>
+<li>Added API support for group by <code>HAVING</code> expressions.</li>
+<li>Added XSD Date comparison support.</li>
+<li>Support building with <a href="http://librdf.org/raptor/">Raptor</a> V2 API if configured with <code>--with-raptor2</code>.</li>
+<li>Many other bug fixes and improvements were made.</li>
+<li>Fixed Issues:
+<a href="http://bugs.librdf.org/mantis/view.php?id=352">#0000352</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=353">#0000353</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=354">#0000354</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=360">#0000360</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=374">#0000374</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=377">#0000377</a> and
+<a href="http://bugs.librdf.org/mantis/view.php?id=378">#0000378</a>
+</li>
+</ul>
+<p>See the <a href="http://librdf.org/rasqal/RELEASE.html#rel0_9_20">Rasqal 0.9.20 Release Notes</a>
+for the full details of the changes.</p>
+<p>Get it at <a href="http://download.librdf.org/source/rasqal-0.9.20.tar.gz">http://download.librdf.org/source/rasqal-0.9.20.tar.gz</a>.
+</p>
+<p>PS The source code control has also moved to GIT and hosted at <a href="http://github.com/dajobe/rasqal">GitHub</a>.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://journal.dajobe.org/journal/posts/2010/08/16/raptor-rdf-syntax-library-v2-beta-1/">
+	<title>Raptor RDF Syntax Library V2 beta 1</title>
+	<link>http://journal.dajobe.org/journal/posts/2010/08/16/raptor-rdf-syntax-library-v2-beta-1/</link>
+	 <dc:date>2010-08-17T05:19:40Z</dc:date>
+	<dc:creator>Dave Beckett</dc:creator>
+			<dc:subject><![CDATA[comment]]></dc:subject>
+		<dc:subject><![CDATA[raptor]]></dc:subject>
+	<description>Today I released the first beta version of Raptor 2. This is the culmination of about 9 months work refactoring the Raptor 1 codebase. In hindsight, I should have done this years ago, but I knew it would be a lot of work, and it was. The reasoning behind doing this is multi-fold, but basically [...]</description>
+	<content:encoded><![CDATA[<p>Today I released the first beta version of Raptor 2.  This is the culmination of about 9 months work refactoring the Raptor 1 codebase.  In hindsight, I should have done this years ago, but I knew it would be a lot of work, and it was.</p>
+<p>The reasoning behind doing this is multi-fold, but basically the code had a lot of cruft and bad design choices that couldn&#8217;t be removed without breaking the APIs in lots of ways, and at some point it&#8217;s easier to just do it all at once, and that&#8217;s where we are now.</p>
+<p>Cruft meant removing stuff deprecated for a long time but also renaming all the functions to follow the same &#8220;objects in C&#8221; style used throughout Redland&#8217;s libraries which has standard naming forms:</p>
+<ul>
+<li><code>raptor_</code>class<code>_</code><em>method</em><code>()</code></li>
+<li>Constructors: <code>raptor_new_</code><em>class</em><code>()</code> (core constructor or 1 arg constructor) and <code>raptor_new_</code><em>class</em><code>_from_</code><em>extras</em><code>()</code></li>
+<li>Copy constructor: <code>raptor_</code><em>class</em><code>_copy()</code></li>
+<li>Destructors: <code>raptor_free_</code><em>class</em><code>()</code></li>
+</ul>
+<p>The major addition was a <code>raptor_world</code> object that is used as a single object to hold on to all shared resources and configuration.  This was a design pattern I put in librdf and Rasqal but for some reason, never considered it for raptor.  This turned out to be a mistake since I had to then pass around a lot of parameters and configuration to individual object instances, more than was really needed.  Examples of this include the error handling which added two parameters to several constructors.  The error handling, now expanded to a general log mechanism after librdf&#8217;s handles multiple structured log record types and the logging policy is once-per-world.</p>
+<p>The addition of the world object meant that each constructor for an object in raptor now takes that object, so it can get access to the shared configuration and resources.  That itself meant the change was extensive, broad in scope.  The single place to manage resources means it&#8217;s easier to ensure proper cleanup and deal with library-wide issues.</p>
+<p>One other pain point was Raptor&#8217;s simplistic (but functional!) URI class.  It manipulated URIs as plain old C strings (<code>char*</code>).  I knew from building librdf, that this could be more efficient by interning the strings so a URI for a particular string is held only once, and reference counted.  I used the already built raptor AVL-Tree to implement it, and as a bonus, moved that AVL Tree to the public API, so it can be reused (<a href="http://librdf.org/rasqal/">Rasqal</a> has a copy of the implementation).  The resulting reference-counted URIs mean that after URI construction, comparison and copying are very cheap &#8211; and given that this is RDF, those are done a lot.  The old URI code also had a swappable implementation which added a lot of complexity to the code and that has gone now, since the new implementation is more sophisticated.  There is probably more work that can be done here to make this URI work better, such as caching the URI structure so that it&#8217;s quicker to generate relative URIs.  Also one day I should really validate that all the URIs built are legal to the syntax.</p>
+<p>Another long term problem was the triple itself, which I had called &#8216;statement&#8217; way back when I was creating it.  Unfortunately a <code>raptor_statement</code> had hard-coded the RDF specifics &#8211; the subject can only be URI or blank node, predicate can only be a URI etc.  That meant the code was twisty.  That has been replaced by an array of 3 or 4 raptor terms (URI or blank node or literal) so it can handle both triples, quads and any possible extension beyond RDF (2004), although today none of the current parsers or serializers expect non-RDF statements.  That change also made a lot of the internal code simpler to understand and quicker.  The RDF terms were also introduced in a reference count manner, along with adding reference counting to the statements, it meant that passing triples around which used to involve a lot of copying, is now a simple integer increment of the reference.  More speed!
+</p>
+<p>That sorted out the fundamentals of statements, terms and URIs and changed pretty much every piece of code that touched them in all the parsers and serializers and core code.</p>
+<p>There were a few pieces of new work added &#8211; two new serializers and
+one new parser.  Two of those were written by Nicholas J Humfrey
+who is now a core committer.</p>
+<p>I&#8217;d also like to call out thanks to Lauri Aalto for keeping
+raptor, rasqal and librdf relatively buildable while I was
+refactoring and breaking things.  He wrote the code to make Rasqal
+and librdf build and work with raptor V1 and V2 at the same time.
+</p>
+<p>Other work included updating all the reference documentation, tutorials, examples and sundry documentation for the new APIs including admin code to automate some of the documentation so it always included accurate details about formats.</p>
+<p>There is lots more that changed in detail, listed in the <a href="http://librdf.org/raptor/RELEASE.html#rel1_9_0">Raptor 1.9.0 Release Notes</a>, help on <a href="http://librdf.org/raptor/UPGRADING.html">upgrading</a> and there&#8217;s even a perl script <code>docs/upgrade-script.pl</code> thrown in (generated by another perl script!) that may help with applying the changes.  The reference manual contains a full <a href="http://librdf.org/raptor/api/raptor-changes.html">reference on changes between raptor 1.4.21 and 1.9.0</a> in the form of old / new mappings with explanations.</p>
+<p>I know that Raptor 2 is not going to place Raptor 1 for applications for some time, so this is a separately installed library with a new location for the header file and a new shared library base.  However, once this hits 2.0.0 it&#8217;ll be a dependency of Rasqal and librdf.</p>
+<p>Summary of release:</p>
+<ul>
+<li>Removed all deprecated functions and typedefs.</li>
+<li>Renamed all functions to the standard <code>raptor_</code><em>class</em><code>_</code><em>method</em><code>()</code> form.</li>
+<li>All constructors take a <code>raptor_world</code> argument.</li>
+<li>URIs are interned and there is no longer a swappable implementation.</li>
+<li>Statement is now an array of 3-4 RDF Terms to support triples and quads.</li>
+<li>World object owns logging, blank node ID generation and describing syntaxes.</li>
+<li>Features are now called options and have typed values.</li>
+<li>GRDDL parser now saves and restores shared libxslt state.</li>
+<li>Added serializers for HTML &#8216;html&#8217; and N-Quads &#8216;nquads&#8217;.</li>
+<li>Added parser &#8216;json&#8217; for JSON-Resource centric and JSON-Triples.</li>
+<li>Switched to GIT version control <a href="http://github.com/dajobe/raptor">hosted by GitHub</a>.</li>
+<li>Added memory-based AVL-Tree to the public API.</li>
+<li>Fixed reported <a href="http://bugs.librdf.org/">issues</a>:
+<p><a href="http://bugs.librdf.org/mantis/view.php?id=357">0000357</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=361">0000361</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=369">0000369</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=370">0000370</a>,
+<a href="http://bugs.librdf.org/mantis/view.php?id=373">0000373</a> and
+<a href="http://bugs.librdf.org/mantis/view.php?id=379">0000379</a>
+</li>
+</ul>
+<p>It turns out that after all that, the resulting libraries for raptor 2 are actually 4% smaller than raptor 1 when installed (Debian, i386):</p>
+<pre>
+ -rw-r--r-- 1 root root 379780 Mar 10 06:59 /usr/lib/libraptor.so
+ -rw-r--r-- 1 root root 364448 Aug 16 17:30 /usr/lib/libraptor2.so
+</pre>
+<p>The gzipped tarball itself is as small as raptor 1.4.17 from 2008!</p>
+<p>Get it at <a href="http://download.librdf.org/source/raptor2-1.9.0.tar.gz">http://download.librdf.org/source/raptor2-1.9.0.tar.gz</a></p>
+<p>PS The source code control has also moved to GIT and 
+<a href="http://github.com/dajobe/raptor">hosted at GitHub</a>.</p>
+]]></content:encoded>
+	</item>
+</rdf:RDF>

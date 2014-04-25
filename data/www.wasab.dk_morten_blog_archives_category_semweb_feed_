@@ -1,0 +1,120 @@
+<rdf:RDF xmlns:admin="http://webns.net/mvcb/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<!-- version="RSS 2.0" -->
+<rss:channel xmlns:rss="http://purl.org/rss/1.0/" rdf:about="">
+<rss:title>Binary Relations » SemWeb</rss:title>
+<rss:link>http://mortenhf.dk/blog</rss:link>
+<rss:description>Reflections on the web</rss:description>
+<dc:language>en-US</dc:language>
+<sy:updatePeriod xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">hourly</sy:updatePeriod>
+<sy:updateFrequency xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">1</sy:updateFrequency>
+<rss:items>
+<rdf:Seq>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2009/07/calendar-challenges/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2009/03/the-web-is-20-today/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2008/10/social/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2008/04/introducing-spog/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2008/01/sparql-in-4-lines-of-php/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2008/01/doap-from-the-bazaar/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2008/01/named-graph-exchange/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2007/12/authorization-by-codepiction/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2007/06/freebase/"/>
+<rdf:li rdf:resource="http://mortenhf.dk/blog/2007/04/dbpedia-hack-night/"/>
+</rdf:Seq>
+</rss:items>
+</rss:channel>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2009/07/calendar-challenges/">
+<rss:title>Calendar Challenges</rss:title>
+<rss:link>http://mortenhf.dk/blog/2009/07/calendar-challenges/</rss:link>
+<dc:subject>SemWeb</dc:subject>
+<dc:subject>Travelling</dc:subject>
+<rss:description>The one with a wish list.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2009/03/the-web-is-20-today/">
+<rss:title>The Web is 20 Today!</rss:title>
+<rss:link>http://mortenhf.dk/blog/2009/03/the-web-is-20-today/</rss:link>
+<dc:subject>SemWeb</dc:subject>
+<dc:subject>Web</dc:subject>
+<rss:description>The one with congratulations.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2008/10/social/">
+<rss:title>Social?</rss:title>
+<rss:link>http://mortenhf.dk/blog/2008/10/social/</rss:link>
+<dc:subject>FOAF</dc:subject>
+<dc:subject>Humour</dc:subject>
+<dc:subject>SemWeb</dc:subject>
+<dc:subject>Web</dc:subject>
+<rss:description>The one with an i18n paradox.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2008/04/introducing-spog/">
+<rss:title>Introducing SPO(G)</rss:title>
+<rss:link>http://mortenhf.dk/blog/2008/04/introducing-spog/</rss:link>
+<dc:subject>ARC</dc:subject>
+<dc:subject>PHP</dc:subject>
+<dc:subject>RDF</dc:subject>
+<dc:subject>SPARQL</dc:subject>
+<rss:description>The one with yet another mechanism for echange of named graphs.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2008/01/sparql-in-4-lines-of-php/">
+<rss:title>SPARQL Endpoint</rss:title>
+<rss:link>http://mortenhf.dk/blog/2008/01/sparql-in-4-lines-of-php/</rss:link>
+<dc:subject>ARC</dc:subject>
+<dc:subject>PHP</dc:subject>
+<dc:subject>SPARQL</dc:subject>
+<rss:description>The one with a simplification and an extension.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2008/01/doap-from-the-bazaar/">
+<rss:title>DOAP from the Bazaar</rss:title>
+<rss:link>http://mortenhf.dk/blog/2008/01/doap-from-the-bazaar/</rss:link>
+<dc:subject>Python</dc:subject>
+<dc:subject>RDF</dc:subject>
+<dc:subject>Release</dc:subject>
+<rss:description>The one with yet another generator for a bzr repository.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2008/01/named-graph-exchange/">
+<rss:title>Named Graph Exchange</rss:title>
+<rss:link>http://mortenhf.dk/blog/2008/01/named-graph-exchange/</rss:link>
+<dc:subject>ARC</dc:subject>
+<dc:subject>Perl</dc:subject>
+<dc:subject>PHP</dc:subject>
+<dc:subject>RDF</dc:subject>
+<dc:subject>Redland</dc:subject>
+<dc:subject>Release</dc:subject>
+<rss:description>The one with another implementation of quads-in-zips.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2007/12/authorization-by-codepiction/">
+<rss:title>Authorization by Codepiction</rss:title>
+<rss:link>http://mortenhf.dk/blog/2007/12/authorization-by-codepiction/</rss:link>
+<dc:subject>FOAF</dc:subject>
+<dc:subject>Image Description</dc:subject>
+<dc:subject>RDF</dc:subject>
+<dc:subject>SPARQL</dc:subject>
+<rss:description>The one with a method for access control.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2007/06/freebase/">
+<rss:title>Freebase invites</rss:title>
+<rss:link>http://mortenhf.dk/blog/2007/06/freebase/</rss:link>
+<dc:subject>Databases</dc:subject>
+<dc:subject>SemWeb</dc:subject>
+<dc:subject>Web</dc:subject>
+<rss:description>The one with an offer.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://mortenhf.dk/blog/2007/04/dbpedia-hack-night/">
+<rss:title>DBpedia Hack Night</rss:title>
+<rss:link>http://mortenhf.dk/blog/2007/04/dbpedia-hack-night/</rss:link>
+<dc:subject>RDF</dc:subject>
+<dc:subject>SemWeb</dc:subject>
+<dc:subject>SPARQL</dc:subject>
+<dc:subject>Travelling</dc:subject>
+<rss:description>The one with a Copenhagen gathering.</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Morten Høybye Frederiksen</dc:creator>
+</rss:item>
+</rdf:RDF>

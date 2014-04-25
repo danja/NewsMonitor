@@ -19,6 +19,7 @@ import org.danja.feedreader.parsers.SparqlResultsParser;
  */
 public class FeedList  {
 
+	// TODO move to config
 	private static String SPARQL_FILENAME = "sparql/get-feedlist.sparql";
 	private static String queryEndpoint = "http://localhost:3030/feedreader/query";
 	private List<String> feeds = new ArrayList();

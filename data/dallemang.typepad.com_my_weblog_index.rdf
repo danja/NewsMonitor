@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="http://dallemang.typepad.com/my_weblog/">
+<title>S is for Semantics</title>
+<link>http://dallemang.typepad.com/my_weblog/</link>
+<description>Check out our book on the Semantic Web!
+.  Now in Second Edition!
+</description>
+<dc:language>en-US</dc:language>
+<dc:creator></dc:creator>
+<dc:date>2011-06-06T12:39:58-04:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.typepad.com/" />
+
+
+<items>
+<rdf:Seq><rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2011/06/stop-press-microdata-in-topbraid.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2011/05/i-got-my-advance-copy-of-the-second-edition-in-the-mail-last-week-this-includes-a-whole-new-chapter-on-sparql-lots-of-new-e.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2011/04/looks-like-datagov-hasnt-been-cut-as-much-as-we-feared-but-im-still-going-to-try-to-rectify-my-lack-of-blogging-about-it-by.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2011/04/datagov-shutdown-is-my-fault.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2011/02/errata-in-working-ontologist.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2010/08/graphical-creation-of-sparql-queries.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2010/08/extending-owl-rl-.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2010/08/facebook-ogp-for-svsw.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2010/04/japanese-edition-of-working-ontologist.html" />
+<rdf:li rdf:resource="http://dallemang.typepad.com/my_weblog/2010/02/book-review-pull.html" />
+</rdf:Seq>
+</items>
+
+</channel>
+
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2011/06/stop-press-microdata-in-topbraid.html">
+<title>Stop Press: Microdata in TopBraid</title>
+<link>http://dallemang.typepad.com/my_weblog/2011/06/stop-press-microdata-in-topbraid.html</link>
+<description>Back during the RSS wars, there was heated disagreement about the format for RSS - among the disagreements was whether RSS should be RDF-based or not. The history is sordid, but from the point of view of someone building a...</description>
+<content:encoded>&lt;p&gt;Back during the &lt;a href=&quot;http://mobile.eweek.com/c/a/Messaging-and-Collaboration/RSS-Backer-Seeks-Merged-Syndication-Format/&quot; target=&quot;_self&quot; title=&quot;RSS Wars&quot;&gt;RSS wars&lt;/a&gt;, there was heated disagreement about the format for RSS - among the disagreements was whether RSS should be RDF-based or not.&amp;#0160; The history is sordid, but from the point of view of someone building a linked data hub like the TopBraid Suite, we could be agnostic about this.&amp;#0160; Sure, it was great that RSS 1.0 was formatted as good RDF, so that any RDF reader could read it.&amp;#0160; But the formats aren&amp;#39;t that different - at the time, I found a rosetta stone (Yahoo! was publishing identical feeds in four formats; RSS 0.9x, 1.0, 2.0 and Atom), and gave it to one of my programmers, asking him to create an RSS importer for the TopBraid Suite that would turn all of them into the same triples.&amp;#0160; It took him less than a week to turn this out, then a bit longer to test it against lots of feeds.&amp;#0160; For years now, TopBraid Suite has been able to read feeds in all these formats.&lt;/p&gt;
+&lt;p&gt;When the recent announcement of schema.org and microdata came out, the obvious knee-jerk reaction was that the Big Three had rejected RFDa, and this was a knife-in-the-back to Semantic markup efforts.&amp;#0160; There are some good arguments out there that microdata could do with some adjustment, but again, from the viewpoint of a hub vendor, I figured we could afford to be agnostic.&amp;#0160; I said as much in response to questions during my OWLED keynote yesterday.&amp;#0160;&lt;/p&gt;
+&lt;p&gt;Since that time (i.e., in the past 24 hours), &lt;a href=&quot;http://composing-the-semantic-web.blogspot.com/&quot; target=&quot;_self&quot; title=&quot;Holger&quot;&gt;Holger &lt;/a&gt;has done the same thing for microdata that we did years ago for RSS - he&amp;#39;s made TopBraid Composer into what he calls &amp;quot;a full-blown Microdata web site editor.&amp;quot;&amp;#0160; So far, it hasn&amp;#39;t been documented or even rolled out to the rest of us, but he does have a screenshot:&lt;/p&gt;
+&lt;p&gt;&amp;#0160;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://knublauch.com/images/Microdata-TopBraidComposer.png&quot; target=&quot;_self&quot; title=&quot;TopBraid Composer Microdata Screenshot&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://knublauch.com/images/Microdata-TopBraidComposer.png&quot; width=&quot;600px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;He might get around to blogging more details himself as they develop. Here&amp;#39;s a bit of a preview of the functionality as he describes it:&lt;/p&gt;
+&lt;p&gt;&amp;quot;[it] will scan the Microdata triples from all HTML files inside of the same project or folder, including sub-folders. The triples can then be viewed in any of TopBraid&amp;#39;s features, e.g. forms, graphs and SPARQL queries. The editing is done on the integrated Eclipse HTML editors, and changes are automatically applied to the RDF graph whenever an HTML file is saved.&amp;quot;&lt;/p&gt;
+&lt;p&gt;This doesn&amp;#39;t mean I&amp;#39;m ready to endorse microdata (as if anyone cares if I do or not), but we can read it and manage it as linked data anyway.&lt;/p&gt;</content:encoded>
+
+
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2011-06-06T12:39:58-04:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2011/05/i-got-my-advance-copy-of-the-second-edition-in-the-mail-last-week-this-includes-a-whole-new-chapter-on-sparql-lots-of-new-e.html">
+<title>Semantic Web for the Working Ontologist - second edition</title>
+<link>http://dallemang.typepad.com/my_weblog/2011/05/i-got-my-advance-copy-of-the-second-edition-in-the-mail-last-week-this-includes-a-whole-new-chapter-on-sparql-lots-of-new-e.html</link>
+<description>I got my advance copy of the second edition in the mail last week. This includes a whole new chapter on SPARQL, lots of new examples (ODP, Good Relations, QUDT, and an improved treatment of OBO), and now SKOS gets...</description>
+<content:encoded>&lt;p&gt;I got my advance copy of the second edition in the mail last week. This includes a whole new chapter on SPARQL, lots of new examples (ODP, Good Relations, QUDT, and an improved treatment of OBO), and now SKOS gets its own chapter. It appears to be available &lt;a href=&quot;http://www.amazon.com/Semantic-Web-Working-Ontologist-Second/dp/0123859654/ref=sr_1_2?ie=UTF8&amp;amp;s=books&amp;amp;qid=1306859398&amp;amp;sr=8-2&quot; title=&quot;Second Edition&quot;&gt;on Amazon&lt;/a&gt;&lt;a&gt; now. &lt;br /&gt; &lt;br /&gt; &lt;/a&gt;&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e2015432abfff3970c-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;TheBookS&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e2015432abfff3970c&quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e2015432abfff3970c-800wi&quot; title=&quot;TheBookS&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content:encoded>
+
+
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2011-05-31T12:32:49-04:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2011/04/looks-like-datagov-hasnt-been-cut-as-much-as-we-feared-but-im-still-going-to-try-to-rectify-my-lack-of-blogging-about-it-by.html">
+<title></title>
+<link>http://dallemang.typepad.com/my_weblog/2011/04/looks-like-datagov-hasnt-been-cut-as-much-as-we-feared-but-im-still-going-to-try-to-rectify-my-lack-of-blogging-about-it-by.html</link>
+<description>Looks like Data.gov hasn&#39;t been cut as much as we feared. But I&#39;m still going to try to rectify my lack of blogging about it by including this video - shows how to mashup some USASpending feeds with the Federal...</description>
+<content:encoded>&lt;p&gt;Looks like Data.gov hasn&amp;#39;t been cut as much as we feared. But I&amp;#39;m still going to try to rectify my lack of blogging about it by including this video - shows how to mashup some USASpending feeds with the Federal Enterprise Architecture. Based on an exercise we did at ISWC09.&lt;br/&gt;&lt;/p&gt;
+
+&lt;p class=&quot;asset asset-video&quot;&gt;
+	&lt;iframe src=&quot;http://player.vimeo.com/video/22756495&quot; width=&quot;560&quot; height=&quot;434&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+</content:encoded>
+
+
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2011-04-22T19:43:15-04:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2011/04/datagov-shutdown-is-my-fault.html">
+<title>Data.gov shutdown is my fault</title>
+<link>http://dallemang.typepad.com/my_weblog/2011/04/datagov-shutdown-is-my-fault.html</link>
+<description>About a year ago, Kingsley and I conjectured in a Twitter chat that history would remember the Obama administration for its advanced in government transparency. Kingsley proposed this position; my response was that I hoped he was right. Now that...</description>
+<content:encoded>&lt;p&gt;About a year ago, Kingsley and I conjectured in a Twitter chat that history would remember the Obama administration for its advanced in government transparency.&amp;#0160; Kingsley proposed this position; my response was that I hoped he was right.&amp;#0160;&lt;/p&gt;
+&lt;p&gt;Now that Congress has decided to fix the nation&amp;#39;s budget crisis by &lt;a href=&quot;http://www.federalnewsradio.com/?nid=35&amp;amp;sid=2327798&quot; target=&quot;_self&quot; title=&quot;OMB Prepares for data sites to go dark&quot;&gt;cutting a $35 million from transparency projects that have already saved a few billion dollars&lt;/a&gt;, it seems unlikely that history will agree with Kingsley.&amp;#0160; And I am to blame.&lt;/p&gt;
+&lt;p&gt;Why me?&amp;#0160; Because I have been a user of these sites since shortly after they were set up.&amp;#0160; Back in 2009, I led a workshop in how to use usaspending dashboard data, combined with the FEA, to gain insight into government IT spending. Last year, I put together a demo using data.gov sources to track violations to fair housing code for minorities of various types.&amp;#0160; Just this past week, I have used data.gov data to put together an &lt;a href=&quot;http://edw2011.wilshireconferences.com/sessionPop.cfm?confid=52&amp;amp;proposalid=3759&quot; target=&quot;_self&quot; title=&quot;Tutorial Session at EDW&quot;&gt;exercise &lt;/a&gt;that will debut next week at &lt;a href=&quot;http://edw2011.wilshireconferences.com/&quot; target=&quot;_self&quot; title=&quot;Enterprise Data World&quot;&gt;Enterprise Data World&lt;/a&gt;.&amp;#0160; I have any number of complaints about these data sites that I will share with other curmudgeons and naysayers, but in the spirit of improving them, not removing them.&lt;/p&gt;
+&lt;p&gt;So why am I to blame for the closure of data.gov and the rest of its family?&amp;#0160; Because I haven&amp;#39;t blogged about these things.&amp;#0160; I haven&amp;#39;t done the marketing to let people know how amazing it is that our government has the guts to respect the principles of freedom it is supposed to defend, that it will show its dirty underwear to the world.&amp;#0160; I promised Kinsley last fall that I&amp;#39;d be blogging about the housing data solution - but I have yet to do it (blogging is hard!).&amp;#0160; I did write up a chapter for the second edition of &lt;em&gt;Working Ontologist&lt;/em&gt; about data.gov, singing its praises, but that doesn&amp;#39;t come out till June.&amp;#0160; (I also used Elizabeth Taylor as an example of a &amp;quot;living actress&amp;quot;.&amp;#0160; Here&amp;#39;s a new curse: &amp;quot;May Dean write about you in his book&amp;quot;)&lt;/p&gt;
+&lt;p&gt;It is perhaps a bit ironic that at a time when our government announces severe budget shortfalls and is coming under close scrutiny by its citizens, one of its actions is to shut down easy access to government budget data.&amp;#0160; Sign the petition to &lt;a href=&quot;http://sunlightfoundation.com/savethedata/&quot; target=&quot;_self&quot; title=&quot;Save the Data&quot;&gt;save the data&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+
+
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2011-04-01T12:57:03-04:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2011/02/errata-in-working-ontologist.html">
+<title>Errata in Working Ontologist</title>
+<link>http://dallemang.typepad.com/my_weblog/2011/02/errata-in-working-ontologist.html</link>
+<description>Many thanks to everyone who submitted errata at workingontologist.org over the past two years. It was a lot of work to incorporate all those changes into the second edition, but it will be a lot better for it.</description>
+<content:encoded>&lt;p&gt;Many thanks to everyone who submitted errata at &lt;a href=&quot;http://WorkingOntologist.org/&quot; target=&quot;_self&quot; title=&quot;Working Ontologist&quot;&gt;workingontologist.org&lt;/a&gt; over the past two years.&amp;#0160; It was a lot of work to incorporate all those changes into the second edition, but it will be a lot better for it.&amp;#0160;&lt;/p&gt;</content:encoded>
+
+
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2011-02-12T16:20:10-05:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2010/08/graphical-creation-of-sparql-queries.html">
+<title>Graphical &quot;more like this&quot; Query Building</title>
+<link>http://dallemang.typepad.com/my_weblog/2010/08/graphical-creation-of-sparql-queries.html</link>
+<description>I promised in an earlier blog post to talk about how to create queries over OWL in RDF. So here it is. As Ivan alluded in his comment, there are some syntax issues with talking about OWL restrictions in RDF....</description>
+<content:encoded>&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;I promised in an&amp;#0160;&lt;a href=&quot;http://dallemang.typepad.com/my_weblog/2010/08/extending-owl-rl-.html&quot; style=&quot;color: blue ! important; text-decoration: underline ! important; cursor: text ! important;&quot;&gt;earlier blog post&lt;/a&gt;&amp;#0160;to talk about how to create queries over OWL in RDF. &amp;#0160;So here it is.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;As Ivan alluded in his comment, there are some syntax issues with talking about OWL restrictions in RDF. &amp;#0160;What is he referring to? &amp;#0160;Well, let&amp;#39;s take the same example in the last blog post, a datatype restriction about things with age&amp;gt;=21. &amp;#0160;We could write this in Manchester Syntax as&amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;hasAge only xsd:integer [&amp;gt;=21]&lt;/p&gt;
+
+&lt;p&gt;But the OWL/RDF rendition of this is where the &amp;#39;arcane&amp;#39; syntax comes in.&amp;#0160; We can see it just by looking at the source code in turtle, where it looks like this:&lt;/p&gt;&lt;pre&gt;[] a owl:Restriction ;&lt;br /&gt; owl:allValuesFrom&lt;br /&gt; [ a rdfs:Datatype ;&lt;br /&gt; owl:onDatatype xsd:integer ;&lt;br /&gt; owl:withRestrictions&lt;br /&gt; ([ xsd:minInclusive 21])&lt;br /&gt; ] ;&lt;br /&gt; owl:onProperty :hasAge .&lt;/pre&gt;&lt;p&gt;In the last blog entry, we saw a rule that would match this sort of definition, so that we could classify persons of appropriate ages as Adults.&amp;#0160; That rule looked like this:&lt;/p&gt;&lt;p&gt;CONSTRUCT {&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?x a ?restriction .&lt;br /&gt;}&lt;br /&gt;WHERE {&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?datatype owl:onDatatype xsd:integer .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?datatype owl:withRestrictions ?var .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?datatype a rdfs:Datatype .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?restriction owl:allValuesFrom ?datatype .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?restriction a owl:Restriction .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?restriction owl:onProperty ?datatypeproperty .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?var rdf:first ?var1 .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?var1 xsd:minInclusive ?mval .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; ?x ?datatypeproperty ?val .&lt;br /&gt;&amp;#0160;&amp;#0160;&amp;#0160; FILTER (?val &amp;gt;= ?mval) .&lt;br /&gt;}&lt;/p&gt;&lt;p&gt;How do you write a rule like that?&amp;#0160; By looking up in the standard how to express datatype restrictions, and how to link those to restricted value sets, and . . . . if that seems labor intensive and error-prone to you, then you&amp;#39;re right.&amp;#0160; It is. &lt;/p&gt;
+
+&lt;p&gt;But we can use a power-tool to help make this happen. The power tools aren&amp;#39;t included in the free version of TopBraid Composer, so if you want to follow along here, you&amp;#39;ll need the&amp;#0160;&lt;a href=&quot;http://topquadrant.com/products/TB_download.html&quot; style=&quot;color: blue ! important; text-decoration: underline ! important; cursor: text ! important;&quot;&gt;Maestro Edition&lt;/a&gt;; a 30-day trial is available for free.&lt;/p&gt;
+
+&lt;p&gt;Start by loading&amp;#0160;&lt;a href=&quot;http://workingontologist.org/Examples/adult.rdf&quot; style=&quot;color: blue ! important; text-decoration: underline ! important; cursor: text ! important;&quot;&gt;http://workingontologist.org/Examples/adult.rdf&lt;/a&gt;&amp;#0160;into Composer, just as shown&amp;#0160;&lt;a href=&quot;http://dallemang.typepad.com/my_weblog/2010/08/extending-owl-rl-.html&quot; style=&quot;color: blue ! important; text-decoration: underline ! important; cursor: text ! important;&quot;&gt;before&lt;/a&gt;, and open it. We&amp;#39;re going to use the model itself as a prototype to create a query. Let&amp;#39;s start by looking at an example of the restriction we want to match - look at the definition of Adult in the model:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e20133f364057d970b-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;Man&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e20133f364057d970b image-full &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e20133f364057d970b-800wi&quot; title=&quot;Man&quot; /&gt;&lt;/a&gt;&amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;You can type it in just like that. &amp;#0160;But that doesn&amp;#39;t help us write a SPARQL query to match any restriction of this form. &amp;#0160;How can we do that? &amp;#0160; If you click on &amp;quot;Graph&amp;quot; at the bottom of the pane, you can explore this definition, in RDF. &amp;#0160;If you drill down to the Datatype Restriction itself, you get a view like the top of this figure:&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e20133f3640689970b-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;Minequery&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e20133f3640689970b image-full &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e20133f3640689970b-800wi&quot; title=&quot;Minequery&quot; /&gt;&lt;/a&gt;&amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;This is just a graphic representation of triples in the model - you can see all the structure of the RDF representation of the restriction.&amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;Now comes the fun part - let&amp;#39;s turn this image into a query (which, to avoid suspense, is already shown at the bottom of the figure). &amp;#0160;We want a query that will match &amp;quot;things like this&amp;quot; restriction. &amp;#0160;What does &amp;quot;like this&amp;quot; mean? &amp;#0160;That&amp;#39;s what we have to specify - there are some aspects of this example that should be included in the match (like the fact that it is a owl:Restriction, on a rdfs:Datatype xsd:integer, and that it is a owl:minInclusive restriction), and others should not be included in the match (that the property is :hasAge; after all, we this to match for restrictions on any property). &amp;#0160;So, we select the things that we want to keep in the query, marked with a small &amp;quot;x&amp;quot; (you can set/reset the &amp;quot;x&amp;quot; by clicking on the small box in each node in the graph). &amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;Once you have selected the aspects that specify what you mean by &amp;quot;like this&amp;quot; (a Datatype Restriction, on some property, with minInclusive over xsd:integers), you can generate the query automatically by clicking the&amp;#0160;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e2013486883106970c-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;Star&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e2013486883106970c &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e2013486883106970c-800wi&quot; title=&quot;Star&quot; /&gt;&lt;/a&gt;button. &amp;#0160;You can see the generated query at the bottom of the figure.&amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;All the generator did was to take the triples shown in the figure, and render them in the query. &amp;#0160;Selected nodes (with &amp;quot;x&amp;quot;) appear in the query as themselves; unselected nodes (no &amp;quot;x&amp;quot;) become variables.&amp;#0160; Properties always show up as themselves. &amp;#0160; Best guesses are made for meaningful variable names; it uses type information for the guesses. &amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;There are a few differences between the generated query and the WHERE clause of the rule:&lt;/p&gt;
+&lt;pre&gt;WHERE {&lt;br /&gt; ?datatype owl:onDatatype xsd:integer .&lt;br /&gt; ?datatype owl:withRestrictions ?var .&lt;br /&gt; ?datatype a rdfs:Datatype .&lt;br /&gt; ?restriction owl:allValuesFrom ?datatype .&lt;br /&gt; ?restriction a owl:Restriction .&lt;br /&gt; ?restriction owl:onProperty ?datatypeproperty .&lt;br /&gt; ?var rdf:first ?var1 .&lt;br /&gt; ?var1 xsd:minInclusive ?mval .&lt;br /&gt; ?x ?datatypeproperty ?val .&lt;br /&gt; FILTER (?val &amp;gt;= ?mval) .&lt;br /&gt;}&lt;/pre&gt;
+
+
+&lt;p&gt;
+
+The first difference is ordering of triples - the generator isn&amp;#39;t very fussy about the order in which triples are generated, so it is different each time (if you are following along at home, your generated query will probably be different from the one shown here, and also from the rule). &amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;The second difference is the inclusion of a triple to match data, to wit:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt; ?x ?datatypeproperty ?val .&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;After all, in a rule, we want to say &amp;quot;when some data satisfies this restriction, ...&amp;quot; This clause uses the same variable for the property (?datatypeproperty) as used in the rest of the query.&amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;The final difference has to do with the constant &amp;quot;21&amp;quot;. &amp;#0160;The generated query&amp;#0160;includes&amp;#0160;the constant, whereas the rule turns it into a variable (?mval) and adds a filter to compare it to the actual data (?val). &amp;#0160;After all, the value &amp;quot;21&amp;quot; comes from the model, and shouldn&amp;#39;t be built in to the rule.&amp;#0160;&lt;/p&gt;
+
+&lt;p&gt;So yes, these modifications have to be made by hand (using the SPARQL editor, where the generator put the query). &amp;#0160;The query generator should be seen as a power tool; you still need an operator who knows how to use it, but it simplifies a lot of the heavy lifting for query writing. &amp;#0160;In this case, we have a rule with 10 clauses (9 triples and a filter). &amp;#0160;The generator created seven of the triples, and most of the eighth one; the human only had to write the last two clauses. &amp;#0160;That is, the power tool took care of the &amp;quot;arcane syntax&amp;quot; that Ivan referred to, leaving the human to figure out what they really want the rule to mean. &lt;/p&gt;&lt;p&gt;I use this feature of TopBraid Composer all the time, in this pattern.&amp;#0160; I want to write a query that matches some &amp;#39;arcane&amp;#39; bit of RDF (e.g., from dbpedia, the OWL in RDF standard, the XML DOM, SKOS, etc.). Instead of trying to write a query from scratch, I find (or even build) an example of the thing I want to match.&amp;#0160; Then I generate the query - automatically guaranteeing that I didn&amp;#39;t leave out any triples, that I got all the namespaces and property names correct, that I didn&amp;#39;t accidentally collide bnodes by giving them the same variable name, etc.&amp;#0160; Then I beat up the result to create the query that I really want - in which I define what I want to do with the match.&amp;#0160; &lt;/p&gt;&lt;p&gt;So when you see an elaborate query with dozens of triples in it, and you wonder what sort of geek can write or maintain such a thing, keep in mind that it might not have been written at all; it might have been generated from an example. &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</content:encoded>
+
+
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2010-08-29T12:17:09-04:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2010/08/extending-owl-rl-.html">
+<title>Extending OWL RL </title>
+<link>http://dallemang.typepad.com/my_weblog/2010/08/extending-owl-rl-.html</link>
+<description>I&#39;ve always been a fan of describing OWL in terms of rules. When introducing a someone to a new technology, it is nice to be able to describe it simply (a lesson that facebook taught us again recently). And while...</description>
+<content:encoded>I&amp;#39;ve always been a fan of describing OWL in terms of rules. When introducing a someone to a new technology, it is nice to be able to describe it simply (a lesson that &lt;a href=&quot;http://dallemang.typepad.com/my_weblog/2010/08/facebook-ogp-for-svsw.html&quot;&gt;facebook taught us again recently&lt;/a&gt;). And while it is a bit of a white lie to say that OWL is defined just by a set of rules, it makes it very easy to explain what something in OWL (or RDFS) means, by stating a rule that it follows. 
+&lt;p&gt;
+I&amp;#39;ve actually been using a rule-based definition of OWL for years now, starting back at &lt;a href=&quot;http://www.intellidimension.com/&quot;&gt;Intellidimension&lt;/a&gt; years ago, and then using &lt;a href=&quot;http://www.ontotext.com/owlim/&quot;&gt;OWLIM&lt;/a&gt;, and nowadays &lt;a href=&quot;http://spinrdf.org/&quot;&gt;SPIN&lt;/a&gt;. All of these technologies have been &amp;#39;approximating&amp;#39; OWL for years using variations of Datalog technology - implementing OWL as a set of rules.
+&lt;/p&gt;&lt;p&gt;
+While OWL 2&amp;#39;s creation of three profiles and a subset hardly counts as keeping the standard simple, I have to say I appreciate the legitimacy that the OWL 2 RL profile has given to a practice that many of us (more than just the ones I have listed) have been doing for years now - of using rule-based systems to process OWL. And the RIF folks have even done us the favor of writing out &lt;a href=&quot;http://www.w3.org/2005/rules/wiki/OWLRL&quot;&gt;just what rules OWL 2 RL is made of&lt;/a&gt;. 
+&lt;/p&gt;&lt;p&gt;
+One of the things I have always liked about this approach is the flexibility it gives the system builder in trading off performance vs. expressiveness in the modeling language. You don&amp;#39;t need someValuesFrom restrictions? Fine - take those rules out, and speed up the system. I&amp;#39;ve taken systems from intractable 20-minute response times down to almost instant by fine-tuning the rule system, while still maintaining the same semantics - because my model didn&amp;#39;t use the discarded rules. 
+&lt;/p&gt;&lt;p&gt;
+But today I want to talk about another advantage of this approach - that you can extend your model semantics as well. Suppose there is something in OWL-Full that you want to use, but it doesn&amp;#39;t appear in the OWL 2 RL list of rules? What can you do about it? You could switch approaches, and use another style of reasoner, but then you lose the advantage of being able to tune your rule base. Another approach is to encode just the extensions that you want in rules. 
+&lt;/p&gt;&lt;p&gt;
+Let&amp;#39;s take a simple example of this, using SPIN as our rule language. You can follow along yourself if you like - all you need is the &lt;a href=&quot;http://topquadrant.com/products/TB_install.php&quot;&gt;Free Edition&lt;/a&gt; of TopBraid Composer.
+&lt;/p&gt;&lt;p&gt;
+OWL-Full allows something called &lt;a href=&quot;http://www.w3.org/TR/2009/REC-owl2-quick-reference-20091027/#Data_Ranges&quot;&gt;Data Range Expressions&lt;/a&gt;, in which you can define a range to be a set of values. A simple example of this is the notion of Adult, that is a person who has an age greater or equal to 21. An example of a model with this definition can be found at &lt;a href=&quot;http://www.workingontologist.org/Examples/adult.rdf&quot;&gt;http://www.workingontologist.org/Examples/adult.rdf&lt;/a&gt;.
+&lt;/p&gt;&lt;p&gt;
+You can import this file into TopBraid Composer by right-clicking on the TopBraid project, selecting &amp;quot;Import RDF or OWL File from the Web&amp;quot; and pasting in the URL of the model, http://www.workingontologist.org/Examples/adult.rdf (see first figure).&amp;#0160;&lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a1c3970c-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;CreateFile&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e201348678a1c3970c image-full &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a1c3970c-800wi&quot; title=&quot;CreateFile&quot; /&gt;&lt;/a&gt; &lt;br /&gt; &lt;/p&gt;&lt;p&gt;Open the file adult.rdf by double-clicking, then expand owl:Thing to see the ontology. Click on &amp;quot;Adult&amp;quot; to see its definition - a Person who hasAge only from values greater or equal to 21 (see second figure). &lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e20133f3547ac1970b-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;OpenAdult&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e20133f3547ac1970b image-full &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e20133f3547ac1970b-800wi&quot; title=&quot;OpenAdult&quot; /&gt;&lt;/a&gt; &lt;br /&gt; &lt;/p&gt;&lt;p&gt;
+Notice that there are also three instances of the class Person - with ages 23, 18 and 45. Evidently, two of these are adults, and one is not. &lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a295970c-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;Persons&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e201348678a295970c image-full &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a295970c-800wi&quot; title=&quot;Persons&quot; /&gt;&lt;/a&gt; &lt;br /&gt; &lt;/p&gt;&lt;p&gt;
+Now we run SPIN inferences (by pressing the&amp;#0160;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a30f970c-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;Inference&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e201348678a30f970c &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a30f970c-800wi&quot; title=&quot;Inference&quot; /&gt;&lt;/a&gt; button), and we see that indeed just the people of appropriate age are classified as Adults. &lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a57d970c-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;Done&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e201348678a57d970c image-full &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a57d970c-800wi&quot; title=&quot;Done&quot; /&gt;&lt;/a&gt; &lt;br /&gt; &lt;/p&gt;&lt;p&gt;
+&lt;strong&gt;How did this work?
+&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;
+SPIN works by expressing the rules for OWL in SPARQL. Thanks to the RIF effort, mentioned above, we at TopQuadrant were able to write out all the OWL 2 RL rules in SPIN (since SPARQL has the same expressive power as RIF). This example simply imported these rules from &lt;a href=&quot;http://topbraid.org/spin/owlrl-all&quot;&gt;http://topbraid.org/spin/owlrl-all&lt;/a&gt;. The SPIN inferencer finds these rules, and executes them when you press the &lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a30f970c-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;Inference&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e201348678a30f970c &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a30f970c-800wi&quot; title=&quot;Inference&quot; /&gt;&lt;/a&gt; button. We can see one of these rules in the following figure - it is a familiar rule, telling us how rdfs:subPropertyOf works. &lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e20133f3547f1f970b-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;SubPRule&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e20133f3547f1f970b image-full &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e20133f3547f1f970b-800wi&quot; title=&quot;SubPRule&quot; /&gt;&lt;/a&gt; &lt;br /&gt; &lt;/p&gt;&lt;p&gt;
+But that doesn&amp;#39;t explain the whole thing - if you know OWL 2 RL well, you know that DataRange Expressions are not part of the OWL 2 RL profile. There are good technical reasons why it was left out, but that doesn&amp;#39;t keep us from wanting to do these inferences. So we express them in SPARQL and add them in to our rule set for the SPIN inferencer to work on. One such rule is shown in the next figure; &lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a543970c-pi&quot; style=&quot;display: inline;&quot;&gt;&lt;img alt=&quot;MinInclusive&quot; border=&quot;0&quot; class=&quot;asset asset-image at-xid-6a00d8347f455f69e201348678a543970c image-full &quot; src=&quot;http://dallemang.typepad.com/.a/6a00d8347f455f69e201348678a543970c-800wi&quot; title=&quot;MinInclusive&quot; /&gt;&lt;/a&gt; &lt;br /&gt; most of the rule matches the RDF rendition of the OWL data restriction. It matches restrictions of xsd:integer, where all the values come from the set defined by minexclusive for some value (in our case, 21). When all these things match, then we assert that the instance is a member of the restriction. 
+&lt;/p&gt;&lt;p&gt;
+So in the case of :Person_1 who is 23 years old, the property :hasAge matches the variable ?datatypeproperty, and 21 matches the variable ?mval, while the actual age 23 matches the variable ?val. Since 23 &amp;gt; 21, ?val &amp;gt; ?mval, and the rule matches. Hence, :Person_1 is a member of the restriction, and by the rest of the rules from OWL-RL, is an :Adult. 
+&lt;/p&gt;&lt;p&gt;
+This approach to OWL gives a lot of control to the modeler; they can use standard models (like the OWL 2 RL model we used here), but they can also augment this reasoning with new rules that do just as much inferencing as is needed for the application. These new rules can be consistent with the standard OWL-Full rules, or they could even be domain-specific business rules. In any case, the power lies in the hands of the modeler. In the particular case of SPIN, we have the added advantage that the modeler can write these rules in the standard SPARQL language. 
+&lt;/p&gt;</content:encoded>
+
+
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2010-08-26T00:25:14-04:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2010/08/facebook-ogp-for-svsw.html">
+<title>Facebook OGP for SVSW</title>
+<link>http://dallemang.typepad.com/my_weblog/2010/08/facebook-ogp-for-svsw.html</link>
+<description>I went to the Silicon Valley Semantic Web Meetup last night about Facebook&#39;s Open Graph Protocol. The presentation by Austin Haugen and Paul Tarjan was short and sweet and gave the best overview of OGP that I have seen. It...</description>
+<content:encoded>&lt;p&gt;I went to the &lt;a href=&quot;http://www.meetup.com/semweb-26/calendar/14170551/?from=list&amp;amp;offset=0&quot;&gt;Silicon Valley Semantic Web Meetup&lt;/a&gt; last night about Facebook&amp;#39;s Open Graph Protocol. The presentation by Austin Haugen and Paul Tarjan was short and sweet and gave the best overview of OGP that I have seen. It included a live demo of using OGP to link a page into facebook - it only took a couple minutes, but made it very clear what was and wasn&amp;#39;t going on. &lt;/p&gt;&lt;p&gt;On the one hand, I see why Jim Hendler has said that the more he sees of OGP, the better he likes it; these guys really &amp;#39;get&amp;#39; the Semantic Web, they understand what it means to link a page in a web of data rather than just point to it, and they can demonstrate it very cleanly inside the facebook infrastructure.&amp;#0160; &lt;/p&gt;&lt;p&gt;But on the other hand, when I asked the speakers how I could query the Open Graph, their answer was, for us linked data fans, a bit disappointing (though I applaud the speakers for their honesty).&amp;#0160; Not only is there no way to query the graph, there won&amp;#39;t be one any time soon.&amp;#0160; One speaker went so far as to say, &amp;quot;we&amp;#39;re sort of faking the semantic web here; there&amp;#39;s no Virtuoso behind this.&amp;quot;&amp;#0160; &lt;/p&gt;&lt;p&gt;My hopes of using Facebook as a sort of clearinghouse of interesting RDF data for classes, demos, etc. were dashed right away.&amp;#0160;&amp;#0160;&lt;/p&gt;&lt;p&gt;My question attracted a number of discussions afterward, many of which had a cynical edge; one fellow said to me that it is clear that facebook doesn&amp;#39;t really understand or care about the Semantic Web; they just want a way to drive more traffic to their site, and that the techies just made it &lt;em&gt;look &lt;/em&gt;like Semantic Web to jump on the buzzword bandwagon.&amp;#0160; I guess it&amp;#39;s nice that we&amp;#39;re a buzzword bandwagon now, that someone like facebook wants to be part of.&amp;#0160; The discussion also wandered to speculations about Google&amp;#39;s intentions with our darling Metaweb, and what plans the not-evil giant has for her. &lt;/p&gt;&lt;p&gt;Be this as it may (and of course it is true to some extent; after all, facebook lives in a capitalist economy, so making money has to be a big part of what drives their decisions), that didn&amp;#39;t stop me from putting a facebook &amp;quot;like&amp;quot; button on &lt;a href=&quot;http://www.workingontologist.org/&quot;&gt;workingontologist.org &lt;/a&gt;.&lt;/p&gt;&lt;p&gt;On the other hand (how many hands do I have now?), one can see a 
+motivation for facebook to include a query interface to the Open Graph 
+Protocol - after all, they do want to encourage a cottage industry of 
+app builders to add functionality to their site. And we know how 
+successful RDF has been in doing that - just look at SearchMonkey...., 
+oh wait.&amp;#0160; Maybe not. &lt;/p&gt;&lt;p&gt;One of the things I found most informative about the talk came in the discussion in response to various questions about design decisions.&amp;#0160; From the point of view of metatags, the &lt;a href=&quot;http://opengraphprotocol.org/&quot;&gt;Open Graph Protocol&lt;/a&gt; is really simple; just a handful of required tags with a simplified syntax (simpler even than standard RDFa).&amp;#0160; Even so, facebook user studies showed that this was almost too complicated.&amp;#0160; Even very small complications - additional namespaces, some slightly twisty syntax from RDFa - were found to have a severe damping effect on technology adoption.&amp;#0160; It seems that even the levels of simplicity we argue for in our &lt;a href=&quot;http://www.semanticuniverse.com/topquadrant-monthly-column/group-blog-entry-building-competency-semantic-web-technology-%E2%80%93-part-ii.ht&quot;&gt;Semantic Universe blog entry on technology adoption&lt;/a&gt; are not enough; for some audiences, simple really has to be simple.&amp;#0160; This is a tough pill for any technologist to swallow; looking at OGP makes it look as if the baby has been thrown out with the bathwater.&amp;#0160; But there are now hundreds of millions of new &amp;#39;like&amp;#39; buttons around the web; simplicity pays off.&amp;#0160; As another commenter pointed out, regardless of the purity (or lack thereof) of the facebook approach, OGP has still made the biggest splash in terms of bringing semantic web to the attention of the public at large.&amp;#0160; So who&amp;#39;s the bandwagon, and who&amp;#39;s riding?&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</content:encoded>
+
+
+<dc:subject>Web/Tech</dc:subject>
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2010-08-24T13:06:18-04:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2010/04/japanese-edition-of-working-ontologist.html">
+<title>Japanese Edition of Working Ontologist</title>
+<link>http://dallemang.typepad.com/my_weblog/2010/04/japanese-edition-of-working-ontologist.html</link>
+<description>Translation of Semantic Web for the Working Ontologist now available in Japanese!</description>
+<content:encoded>Translation of Semantic Web for the Working Ontologist now available in Japanese! &lt;img alt=&quot;Working Ontologist cover in Japanese&quot; src=&quot;http://sphotos.ak.fbcdn.net/hphotos-ak-snc3/hs394.snc3/23977_405337652812_682372812_5028156_7906024_n.jpg&quot; width=&quot;300&quot; /&gt;</content:encoded>
+
+
+<dc:subject>Books</dc:subject>
+<dc:subject>Web/Tech</dc:subject>
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2010-04-05T12:43:10-04:00</dc:date>
+</item>
+<item rdf:about="http://dallemang.typepad.com/my_weblog/2010/02/book-review-pull.html">
+<title>Book Review - Pull</title>
+<link>http://dallemang.typepad.com/my_weblog/2010/02/book-review-pull.html</link>
+<description>Pull - the power of the Semantic Web to Transform your Business I really wanted to hate this book. A book about the Semantic Web for &#39;business&#39;. With a pretentious title. I expected misinformation and fluff. That was the only...</description>
+<content:encoded>&lt;a href=&quot;http://www.amazon.com/Pull-Power-Semantic-Transform-Business/dp/1591842778/ref=sr_1_2?ie=UTF8&amp;amp;s=books&amp;amp;qid=1266794195&amp;amp;sr=8-2&quot;&gt;Pull - the power of the Semantic Web to Transform your Business&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;I really wanted to hate this book.&amp;#0160; A book about the Semantic Web for &amp;#39;business&amp;#39;.&amp;#0160; With a pretentious title.&amp;#0160; I expected misinformation and fluff. &lt;br /&gt;&lt;br /&gt;That was the only disappointment about this book.&amp;#0160; From about the third page, I came to realize that Siegel not only knows Semantic Web technology well, he also knows how to do research.&amp;#0160; Among other things, this book is a treasure trove of relevant technology trends, all cited and referenced. The notes alone are worth the purchase price. &lt;br /&gt;&lt;br /&gt;I expected a hodge-podge of technology promises like the ones we usually hear - just like Google, but better.&amp;#0160; Will make sense of all your documents, so you don&amp;#39;t have to.&amp;#0160; What I got instead was a coherent story of a future information culture - as different from what we know today, as today&amp;#39;s world is different from what we knew before the web.&amp;#0160; &lt;br /&gt;&lt;br /&gt;This isn&amp;#39;t written as a business book, but as a futurist book.&amp;#0160; In many ways, the apparently pretentious title is actually conservative - in the Future Siegel paints, a lot more things are transformed than just your business.&amp;#0160; But I have to say, had he called it &amp;quot;The Semantic Web will Change your Life,&amp;quot; I might not have picked it up.&amp;#0160; &lt;br /&gt;&lt;br /&gt;This book goes into sophisticated detail on a lot of points I have made at various points in my own blog, but it does it in more depth and more courage than I have done.&amp;#0160; You&amp;#39;ll find out why the Semantic Web vision doesn&amp;#39;t fit into Google&amp;#39;s current business model.&amp;#0160; Why Natural Language Processing is interesting, but tangential.&amp;#0160; Why IBM is still around, and will be for a while.&amp;#0160; And a whole lot more.&amp;#0160; I have recommended this book to just about everyone I know.&amp;#0160; &lt;br /&gt;&lt;br /&gt;If you read this book, and you don&amp;#39;t have a few ideas about start-ups you might try, then you know you really don&amp;#39;t have an entrepreneurial bone in your body.&amp;#0160; This is what the Semantic Web can really be. &lt;br /&gt;</content:encoded>
+
+
+<dc:subject>Books</dc:subject>
+
+<dc:creator>Dean Allemang</dc:creator>
+<dc:date>2010-02-21T18:20:43-05:00</dc:date>
+</item>
+
+
+</rdf:RDF>
+
+<!-- ph=1 -->

@@ -1,14 +1,21 @@
+/**
+ * feedreader-prototype
+ *
+ * Interpreter.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.io;
 
 import org.danja.feedreader.feeds.FeedFetcher;
 
 /**
  * Bridges between feed and parser etc
- * 
- * @version $Revision$
  *  
  */
-public interface Interpreter  { // CHANGED!! was extends ContentHandler
+public interface Interpreter  { 
 
     public void interpret(FeedFetcher feed);
 }

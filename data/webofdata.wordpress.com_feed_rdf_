@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+<channel rdf:about="http://webofdata.wordpress.com">
+	<title>Web of Data</title>
+	<link>http://webofdata.wordpress.com</link>
+	<description>data and computing at scale</description>
+	<dc:date>2014-04-24T12:30:56Z</dc:date>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="http://wordpress.com/" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2013/03/24/cloud-encryption-support/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2013/03/10/elephant-filet/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2013/01/01/mapr-europe-and-me/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2012/11/08/hosted-mapreduce-hadoop/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2012/11/05/mapreduce-for-kids/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2012/09/20/denormalising-graph-shaped-data/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2012/09/02/large-scale-interactive-analysis/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2012/07/08/schema-org-webintents-awesomeness/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2012/05/10/turning-tabular-data-into-entities/"/>
+					<rdf:li rdf:resource="http://webofdata.wordpress.com/2012/04/02/linked-data-best-of-two-worlds/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://webofdata.wordpress.com/2013/03/24/cloud-encryption-support/">
+	<title>Cloud Cipher Capabilities</title>
+	<link>http://webofdata.wordpress.com/2013/03/24/cloud-encryption-support/</link>
+	<dc:date>2013-03-24T16:44:55Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Big Data]]></dc:subject>
+		<dc:subject><![CDATA[Cloud Computing]]></dc:subject>
+		<dc:subject><![CDATA[FYI]]></dc:subject>
+		<dc:subject><![CDATA[AWS]]></dc:subject>
+		<dc:subject><![CDATA[cloud]]></dc:subject>
+		<dc:subject><![CDATA[encryption]]></dc:subject>
+		<dc:subject><![CDATA[Hadoop]]></dc:subject>
+		<dc:subject><![CDATA[IaaS]]></dc:subject>
+		<dc:subject><![CDATA[PaaS]]></dc:subject>
+		<dc:subject><![CDATA[SaaS]]></dc:subject>
+		<dc:subject><![CDATA[security]]></dc:subject>
+		<dc:subject><![CDATA[SSL]]></dc:subject>
+		<dc:subject><![CDATA[storage]]></dc:subject>
+	<description><![CDATA[Where I'm reviewing support for encryption in the context of IaaS&#124;PaaS&#124;SaaS cloud service offerings as well as concerning Hadoop. While the motivation for encryption might differ, the primary question is if systems support this (transparently) or if developers are forced to code this in the application logic. <a href="http://webofdata.wordpress.com/2013/03/24/cloud-encryption-support/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=856&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p><em>&#8230; or, the lack of it.</em></p>
+<p>A recent discussion at a customer made me having a closer look around support for encryption in the context of XaaS cloud service offerings as well as concerning Hadoop. In general, this can be broken down into over-the-wire (cf. SSL/<a href="http://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>) and back-end encryption. While the former is widely used, the latter is rather seldom to find.</p>
+<p>Different reasons might exits why one wants to encrypt her data, ranging from preserving a competitive advantage to end-user privacy issues. No matter why someone wants to encrypt the data, the question is do systems support this (transparently) or are developers forced to code this in the application logic.</p>
+<p><strong>IaaS-level</strong>. Especially in this category, file storage for app development, one would expect wide support for built-in encryption.</p>
+<ul>
+<li>Amazon&#8217;s S3 indeed provides <a href="http://aws.amazon.com/about-aws/whats-new/2011/10/04/amazon-s3-announces-server-side-encryption-support/">server-side support for encryption</a></li>
+<li>Google Storage <a href="https://developers.google.com/storage/docs/developer-guide">does not encrypt files</a></li>
+<li>Same for Rackspace&#8217;s Cloud Files &#8211; <a href="http://www.rackspace.com/knowledge_center/product-faq/cloud-files">no encryption</a>, ATM</li>
+<li>As well as for Microsoft&#8217;s Azure storage &#8211; <a href="http://social.msdn.microsoft.com/Forums/en-US/windowsazuresecurity/thread/d8b461bd-87c4-4552-99ed-aab9faa16457">not encrypting files</a></li>
+<li>And last but not least, HP Cloud&#8217;s Object Storage is in good company by <a href="https://docs.hpcloud.com/api/object-storage">not supporting encryption</a></li>
+</ul>
+<p>On the <strong>PaaS level</strong> things look pretty much the same: for example, <a href="http://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</a> provides no support for encryption of the data (unless you consider S3) and concerning Google&#8217;s App Engine, <a href="http://stackoverflow.com/questions/6040673/encrypting-user-data-on-app-engine">good practices for data encryption</a> only seem to emerge.</p>
+<p>Offerings on the <strong>SaaS level</strong> provide an equally poor picture:</p>
+<ul>
+<li>Dropbox offers encryption <a href="https://www.dropbox.com/help/27/en">via S3</a>.</li>
+<li>Google Drive and Microsoft Skydrive seem to not offer any encryption options for storage.</li>
+<li>Apple&#8217;s iCloud is a notable exception: not only does it provide support but also <a href="http://support.apple.com/kb/ht4865">nicely explains it</a>.</li>
+<li>For many if not most of the above SaaS-level offerings there are plug-ins that enable encryption, such as provided by <a href="http://www.syncdocs.com/how-to-set-up-google-drive-encryption/">Syncdocs</a> or <a href="http://www.cloudfogger.com/en/">CloudFlogger</a></li>
+</ul>
+<p>In <strong>Hadoop-land</strong> things also look rather <a href="http://stackoverflow.com/questions/7649936/using-encryption-with-hadoop">sobering</a>; there are few activities around making HDFS or the likes do encryption such as <a href="https://launchpad.net/ecryptfs">ecryptfs</a> or <a href="http://www.gazzang.com/encrypt-hadoop">Gazzang&#8217;s</a> offering. Last but not least: for Hadoop in the cloud, encryption is available via AWS&#8217;s EMR by using S3.</p><br />Filed under: <a href='http://webofdata.wordpress.com/category/big-data/'>Big Data</a>, <a href='http://webofdata.wordpress.com/category/cloud-computing/'>Cloud Computing</a>, <a href='http://webofdata.wordpress.com/category/fyi/'>FYI</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/856/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/856/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=856&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2013/03/10/elephant-filet/">
+	<title>Elephant filet</title>
+	<link>http://webofdata.wordpress.com/2013/03/10/elephant-filet/</link>
+	<dc:date>2013-03-10T13:37:46Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Big Data]]></dc:subject>
+		<dc:subject><![CDATA[Cloud Computing]]></dc:subject>
+		<dc:subject><![CDATA[FYI]]></dc:subject>
+		<dc:subject><![CDATA[NoSQL]]></dc:subject>
+		<dc:subject><![CDATA[Hadoop]]></dc:subject>
+		<dc:subject><![CDATA[multitenancy]]></dc:subject>
+		<dc:subject><![CDATA[performance]]></dc:subject>
+		<dc:subject><![CDATA[SDN]]></dc:subject>
+		<dc:subject><![CDATA[sharing]]></dc:subject>
+		<dc:subject><![CDATA[throughput]]></dc:subject>
+		<dc:subject><![CDATA[utilisation]]></dc:subject>
+	<description><![CDATA[In situations where Hadoop is used in a shared setup we witness two competing forces:  the user expects performance vs. the view of the cluster owner who aims to optimise throughput and maximise utilisation. In the post, Michael elaborates a bit on challenges and solutions on this topic.  <a href="http://webofdata.wordpress.com/2013/03/10/elephant-filet/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=843&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>End of January I participated in a panel discussion on <a title="Big Data Architecture, Sizing and Scaling: From Basics to Warehouse Scale" href="https://www.ciscolive365.com/connect/sessionDetail.ww?SESSION_ID=6169" target="_blank">Big Data</a>, held during the <a href="http://www.computerweekly.com/guides/Cisco-Live-London-2013" target="_blank">CISCO live</a> event in London. One of my fellow panelists, I believe it was Sean McKeown of CISCO, said there something along the line:</p>
+<blockquote><p>&#8230; ideally the cluster is at 99% utilisation, concerning CPU, I/O, and network &#8230;</p></blockquote>
+<p>This stuck in my head and I gave it some thoughts. In the following I will elaborate a bit on this in the context of where Hadoop is used in a shared setup, for example in <a href="http://webofdata.wordpress.com/2012/11/08/hosted-mapreduce-hadoop/" target="_blank">hosted offerings</a> or, say, within an enterprise that runs different systems such as Storm, Lucene/Solr, and Hadoop on one cluster.</p>
+<p>In essence, we witness two competing forces: from the perspective of a single user who expects performance vs. the view of the cluster owner or operator who wants to optimise throughput and maximise utilisation. If you&#8217;re not familiar with these terms you might want to read up on Cary Millsap&#8217;s Thinking Clearly About Performance (<a href="http://cacm.acm.org/magazines/2010/9/98033-thinking-clearly-about-performance-part-1/fulltext" target="_blank">part 1</a> | <a href="http://cacm.acm.org/magazines/2010/10/99486-thinking-clearly-about-performance-part-2/fulltext" target="_blank">part 2</a>).</p>
+<p>Now, in such as shared setup we may experience a spectrum of loads: from compute intensive over I/O intensive to communication intensive, illustrated in the following, not overly scientific figure:<br />
+<a href="http://webofdata.files.wordpress.com/2013/03/shared-hadoop.png"><img class="aligncenter size-large wp-image-844" alt="Utilisations" src="http://webofdata.files.wordpress.com/2013/03/shared-hadoop.png?w=750&#038;h=498" width="750" height="498" /></a></p>
+<p>Here are a some observations and thoughts for potential starting points of deeper research or experiments.</p>
+<p><strong>Multitenancy</strong>. We see more and more deployments that require <a href="http://www.mapr.com/company/press-releases/mapr-enables-hadoop-as-a-service-with-multi-tenancy-security-and-end-to-end-management" target="_blank">strong</a> <a href="http://www.slideshare.net/treasure-data/hadoop-meets-cloud-with-multitenancy-16107610" target="_blank">support</a> <a href="http://extremehadoop.wordpress.com/tag/multitenant/" target="_blank">for</a> multitenancy; check out the <a href="http://hadoop.apache.org/docs/r1.1.1/capacity_scheduler.html" target="_blank">CapacityScheduler</a>, learn from <a href="http://developer.yahoo.com/blogs/hadoop/posts/2010/08/apache_hadoop_best_practices_a/" target="_blank">best practices</a> or use a distribution that natively supports the specification of <a href="http://www.mapr.com/doc/display/MapR/Node+Topology" target="_blank">topologies</a>. Additionally, you might still want to keep an eye on <a href="http://serengeti.cloudfoundry.com/" target="_blank">Serengeti</a> &#8211; VMware&#8217;s Hadoop virtualisation project &#8211; that seems to have gone quiet in the past months, but I still have hope for it.</p>
+<p><strong>Software Defined Networks (SDN)</strong>. See Wikipedia&#8217;s <a href="http://en.wikipedia.org/wiki/Software-defined_networking" target="_blank">definition</a> for it, it&#8217;s not too bad. CISCO, for example, is <a href="http://blogs.cisco.com/tag/software-defined-networking/" target="_blank">very active</a> in this area and only recently there was a special issue in the recent IEEE Communications Magazine (<a href="http://dl.comsoc.org/comsocdl/?publication=TOC2631&amp;label=IEEE%20Communications%20Magazine%2C%202013%20February" target="_blank">February 2013</a>) covering SDN research. I can perfectly see &#8211; and indeed this was also briefly discussed on our CISCO live panel back in January &#8211; how SDN can enable new ways to optimise throughput and performance. Imagine a SDN that is dynamically workload-aware in the sense of that it knows the difference of a node that runs a <a href="http://wiki.apache.org/hadoop/TaskTracker">task tracker</a> vs. a <a href="http://wiki.apache.org/hadoop/DataNode">data node</a> vs. a <a href="http://wiki.apache.org/solr/SolrCloud">Solr shard</a> &#8211; it should be possible to transparently better the operational parameters and everyone involved, both the users as well as the cluster owner benefit from it.</p>
+<p>As usual, I&#8217;m very interested in what you think about the topic and looking forward learning about resources in this space from you.</p><br />Filed under: <a href='http://webofdata.wordpress.com/category/big-data/'>Big Data</a>, <a href='http://webofdata.wordpress.com/category/cloud-computing/'>Cloud Computing</a>, <a href='http://webofdata.wordpress.com/category/fyi/'>FYI</a>, <a href='http://webofdata.wordpress.com/category/nosql/'>NoSQL</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/843/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/843/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=843&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2013/01/01/mapr-europe-and-me/">
+	<title>MapR, Europe and me</title>
+	<link>http://webofdata.wordpress.com/2013/01/01/mapr-europe-and-me/</link>
+	<dc:date>2013-01-01T20:39:46Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Announcement]]></dc:subject>
+		<dc:subject><![CDATA[Big Data]]></dc:subject>
+		<dc:subject><![CDATA[FYI]]></dc:subject>
+		<dc:subject><![CDATA[NoSQL]]></dc:subject>
+		<dc:subject><![CDATA[Apache]]></dc:subject>
+		<dc:subject><![CDATA[Drill]]></dc:subject>
+		<dc:subject><![CDATA[Hadoop]]></dc:subject>
+		<dc:subject><![CDATA[mapr]]></dc:subject>
+	<description><![CDATA[You might have already heard that MapR, the leading provider of enterprise-grade Hadoop and friends, is launching its European operations. Guess what? I&#8217;m joining MapR Europe as of January 2013 in the role of Chief Data Engineer EMEA and will support our technical and sales teams throughout Europe. Pretty exciting times ahead! As an aside: &#8230; <a href="http://webofdata.wordpress.com/2013/01/01/mapr-europe-and-me/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=837&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p><a href="http://www.mapr.com"><img class="alignright  wp-image-841" alt="MapR" src="http://webofdata.files.wordpress.com/2013/01/mapr.jpeg?w=252&#038;h=148" width="252" height="148" /></a>You might have already heard that <a href="http://www.mapr.com/">MapR</a>, the leading provider of enterprise-grade Hadoop and friends, is launching its <a href="http://www.mapr.com/company/press-releases/mapr-launches-european-operation">European operations</a>.</p>
+<p><em>Guess what?</em> I&#8217;m joining MapR Europe as of January 2013 in the role of Chief Data Engineer EMEA and will support our technical and sales teams throughout Europe. Pretty exciting times ahead!</p>
+<p>As an aside: as I recently <a href="http://webofdata.wordpress.com/2012/09/02/large-scale-interactive-analysis/">pointed out</a>, I very much believe that Apache Drill and Hadoop offer great synergies and if you want to learn more about this come and join us at the Hadoop Summit where my Drill talk has been accepted for the <a href="http://hadoopsummit.org/amsterdam/sessions/">Hadoop Futures</a> session.</p><br />Filed under: <a href='http://webofdata.wordpress.com/category/announcement/'>Announcement</a>, <a href='http://webofdata.wordpress.com/category/big-data/'>Big Data</a>, <a href='http://webofdata.wordpress.com/category/fyi/'>FYI</a>, <a href='http://webofdata.wordpress.com/category/nosql/'>NoSQL</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/837/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/837/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=837&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2012/11/08/hosted-mapreduce-hadoop/">
+	<title>Hosted MapReduce and Hadoop offerings</title>
+	<link>http://webofdata.wordpress.com/2012/11/08/hosted-mapreduce-hadoop/</link>
+	<dc:date>2012-11-08T09:34:47Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Big Data]]></dc:subject>
+		<dc:subject><![CDATA[Cloud Computing]]></dc:subject>
+		<dc:subject><![CDATA[FYI]]></dc:subject>
+		<dc:subject><![CDATA[Amazon]]></dc:subject>
+		<dc:subject><![CDATA[Azure]]></dc:subject>
+		<dc:subject><![CDATA[Compute Engine]]></dc:subject>
+		<dc:subject><![CDATA[EMR]]></dc:subject>
+		<dc:subject><![CDATA[Google]]></dc:subject>
+		<dc:subject><![CDATA[Hadoop]]></dc:subject>
+		<dc:subject><![CDATA[MapReduce]]></dc:subject>
+		<dc:subject><![CDATA[Microsoft]]></dc:subject>
+		<dc:subject><![CDATA[SaaS]]></dc:subject>
+	<description><![CDATA[Today&#8217;s question is: where are we regarding MapReduce/Hadoop in the cloud? That is, what are the offerings of Hadoop-as-a-Service or other hosted MapReduce implementations, currently? A year ago, InfoQ ran a story Hadoop-as-a-Service from Amazon, Cloudera, Microsoft and IBM which will serve us as a baseline here. This article contains the following statement: According to &#8230; <a href="http://webofdata.wordpress.com/2012/11/08/hosted-mapreduce-hadoop/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=820&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p><a href="http://webofdata.files.wordpress.com/2012/11/mr-in-the-cloud.png"><img class=" wp-image-822 alignleft" title="Hadoop in the cloud" alt="Hadoop in the cloud" src="http://webofdata.files.wordpress.com/2012/11/mr-in-the-cloud.png?w=224&#038;h=134" height="134" width="224" /></a></p>
+<p>Today&#8217;s question is: <em>where are we regarding MapReduce/Hadoop in the cloud?</em> That is, what are the offerings of Hadoop-as-a-Service or other hosted MapReduce implementations, currently?</p>
+<p>A year ago, InfoQ ran a story <a href="http://www.infoq.com/news/2011/10/Hadoop-as-a-Service" target="_blank">Hadoop-as-a-Service from Amazon, Cloudera, Microsoft and IBM</a> which will serve us as a baseline here. This article contains the following statement:</p>
+<blockquote><p>According to a 2011 TDWI survey, 34% of the companies use big data analytics to help them making decisions. Big data and Hadoop seem to be playing an important role in the future.</p></blockquote>
+<p>One year later, we learn from a recent MarketsAndMarkets study, <a href="http://www.marketsandmarkets.com/Market-Reports/hadoop-market-766.html" target="_blank">Hadoop &amp; Big Data Analytics Market &#8211; Trends, Geographical Analysis &amp; Worldwide Market Forecasts (2012 â 2017)</a> that &#8230;</p>
+<blockquote><p>The Hadoop market in 2012 is worth $1.5 billion and is expected to grow to about $13.9 billion by 2017, at a [Compound Annual Growth Rate] of 54.9% from 2012 to 2017.</p></blockquote>
+<p>In the past year there have also been some quite <a href="http://gigaom.com/2012/08/13/considerations-for-hadoop-in-the-cloud/" target="_blank">vivid</a> <a href="http://cloudconexpoconference2012.sched.org/event/7a61ae390b77c773c1808e977d93f44c#.UJoBS2morOI" target="_blank">discussions</a> around the topic &#8216;Hadoop in the cloud&#8217;.</p>
+<p>So, here are some current offerings and announcements I&#8217;m aware of:</p>
+<ul>
+<li>Amazon&#8217;s Elastic MapReduce (<a href="http://aws.amazon.com/elasticmapreduce/" target="_blank">EMR</a>), featuring MapR&#8217;s rock-solid and fast <a href="http://aws.amazon.com/elasticmapreduce/mapr/" target="_blank">Hadoop distribution</a>.</li>
+<li>Google&#8217;s App Engine, a PaaS offering, allows for <a href="https://developers.google.com/appengine/docs/python/dataprocessing/overview" target="_blank">experimental MapReduce processing in Python</a>.</li>
+<li>Microsoft&#8217;s Azure, also a PaaS offering, now has <a href="https://www.hadooponazure.com/" target="_blank">Hadoop support</a>.</li>
+<li>VMware has launched <a href="http://serengeti.cloudfoundry.com/">Project Serengeti</a> to enable rapid deployment of Hadoop clusters in their Cloud Foundry environment.</li>
+<li>HStreaming&#8217;s Cloud Beta <a href="http://www.hstreaming.com/products/cloud/" target="_blank">hooked up with AWS</a> as well.</li>
+<li>There is a report on a <a href="http://jaigak.blogspot.ie/2012/07/paas-on-hadoop-yarn-idea-and-prototype.html" target="_blank">PaaS on Hadoop Yarn &#8211; Idea and Prototype</a> available.</li>
+</ul>
+<p>&#8230; and now it&#8217;s up to you dear reader &#8211; I would appreciate it if you could point me to more offerings and/or announcements you know of, concerning MapReduce and Hadoop in the cloud!</p><br />Filed under: <a href='http://webofdata.wordpress.com/category/big-data/'>Big Data</a>, <a href='http://webofdata.wordpress.com/category/cloud-computing/'>Cloud Computing</a>, <a href='http://webofdata.wordpress.com/category/fyi/'>FYI</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/820/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/820/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=820&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2012/11/05/mapreduce-for-kids/">
+	<title>MapReduce for and with the kids</title>
+	<link>http://webofdata.wordpress.com/2012/11/05/mapreduce-for-kids/</link>
+	<dc:date>2012-11-05T11:22:21Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Big Data]]></dc:subject>
+		<dc:subject><![CDATA[Cloud Computing]]></dc:subject>
+		<dc:subject><![CDATA[Experiment]]></dc:subject>
+		<dc:subject><![CDATA[NoSQL]]></dc:subject>
+		<dc:subject><![CDATA[MapReduce]]></dc:subject>
+	<description><![CDATA[Last week was Halloween and of course we went trick-or-treating with our three kids which resulted in piles of sweets in the living room. Powered by the sugar, the kids would stay up late to count their harvest and while I was observing them at it, I was wondering if it possible to explain the &#8230; <a href="http://webofdata.wordpress.com/2012/11/05/mapreduce-for-kids/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=808&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>Last week was Halloween and of course we went trick-or-treating with our three kids which resulted in piles of sweets in the living room. Powered by the sugar, the kids would stay up late to count their harvest and while I was observing them at it, I was wondering if it possible to explain the <a href="http://research.google.com/archive/mapreduce.html">MapReduce</a> paradigm to them, or even better: <strong>doing</strong> MapReduce with them. </p>
+<p>Now, it turns out that Halloween and counting kinds of sweets are a perfect setup. Have a look at the following:</p>
+<p><a href="http://webofdata.files.wordpress.com/2012/11/mr-halloween.png"><img class="aligncenter size-medium wp-image-810" title="MapReduce for counting kinds of sweet after Halloween harvest." alt="MapReduce for counting kinds of sweet after Halloween harvest." src="http://webofdata.files.wordpress.com/2012/11/mr-halloween.png?w=300"  /></a></p>
+<p>So, the goal was to figure how many sweets of a certain kind (like, Twix) we now have available overall, for consumption. </p>
+<p>We started off with every child having her or his pile of sweets in front of them. Now, in the first step I&#8217;d ask the kids to shout how many of the sweet X they have in their own pile. So one kid would go like <em>I&#8217;ve got 4 fizzers</em>, etc. &#8230; and then we&#8217;d gather all the same sweets and their respective counts together. Second, we&#8217;d add up the individual counts for each kind of sweet which would give us the desired result: number of X in total.</p>
+<p><em>Lesson learned: MapReduce is a child&#8217;s play. Making kids sharing sweets is certainly not &#8211; believe me, I speak out of experience</em> <span class='wp-smiley emoji emoji-wink' title=';)'>;)</span></p><br />Filed under: <a href='http://webofdata.wordpress.com/category/big-data/'>Big Data</a>, <a href='http://webofdata.wordpress.com/category/cloud-computing/'>Cloud Computing</a>, <a href='http://webofdata.wordpress.com/category/experiment/'>Experiment</a>, <a href='http://webofdata.wordpress.com/category/nosql/'>NoSQL</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/808/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/808/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=808&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2012/09/20/denormalising-graph-shaped-data/">
+	<title>Denormalizing graph-shaped data</title>
+	<link>http://webofdata.wordpress.com/2012/09/20/denormalising-graph-shaped-data/</link>
+	<dc:date>2012-09-20T10:26:23Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Big Data]]></dc:subject>
+		<dc:subject><![CDATA[Cloud Computing]]></dc:subject>
+		<dc:subject><![CDATA[Idea]]></dc:subject>
+		<dc:subject><![CDATA[Linked Data]]></dc:subject>
+		<dc:subject><![CDATA[NoSQL]]></dc:subject>
+		<dc:subject><![CDATA[denormalization]]></dc:subject>
+		<dc:subject><![CDATA[graphdb]]></dc:subject>
+	<description><![CDATA[As nicely pointed out byÂ Ilya Katsov: Denormalization can be defined as the copying of the same data into multiple documents or tables in order to simplify/optimize query processing or to fit the userâs data into a particular data model. So, I was wondering, why is &#8211; in Ilya&#8217;s write-up &#8211; denormalization not considered to be &#8230; <a href="http://webofdata.wordpress.com/2012/09/20/denormalising-graph-shaped-data/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=803&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>As nicely <a href="http://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/">pointed out</a> byÂ Ilya Katsov:</p>
+<blockquote><p>Denormalization can be defined as the copying of the same data into multiple documents or tables in order to simplify/optimize query processing or to fit the userâs data into a particular data model.</p></blockquote>
+<p>So, I was wondering, why is &#8211; in Ilya&#8217;s write-up &#8211; <strong>denormalization</strong> not considered to be applicable for GraphDBs?</p>
+<p>I suppose the main reason is that the relationships (or links as we use to call them in the Linked Data world) are typically not resolved or dereferenced, which means <a href="https://github.com/tinkerpop/gremlin/wiki">traversing</a> the graph is fast, but for a number of <a href="http://www.ovaistariq.net/199/databases-normalization-or-denormalization-which-is-the-better-technique/">operations</a> such as range queries, denormalized data would be better.</p>
+<p>Now, the question is: can we achieve this in GraphDBs, incl. <a href="http://www.garshol.priv.no/blog/231.html">RDF stores</a>?Â I would hope so. Here are some design ideas:</p>
+<ul>
+<li>Up-front: when inserting new data items (nodes), immediately dereference the links (embedded links).</li>
+<li>Query-time: apply database <a href="http://www.cwi.nl/2010/1082/databasecracking">cracking</a>.</li>
+</ul>
+<p>Here is the question for you, dear reader: <em>are you aware of people doing this? My google skills have failed me so far &#8211; happy to learn about it in greater detail!</em></p><br />Filed under: <a href='http://webofdata.wordpress.com/category/big-data/'>Big Data</a>, <a href='http://webofdata.wordpress.com/category/cloud-computing/'>Cloud Computing</a>, <a href='http://webofdata.wordpress.com/category/idea/'>Idea</a>, <a href='http://webofdata.wordpress.com/category/linked-data/'>Linked Data</a>, <a href='http://webofdata.wordpress.com/category/nosql/'>NoSQL</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/803/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/803/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=803&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2012/09/02/large-scale-interactive-analysis/">
+	<title>Interactive analysis of large-scale datasets</title>
+	<link>http://webofdata.wordpress.com/2012/09/02/large-scale-interactive-analysis/</link>
+	<dc:date>2012-09-02T19:23:07Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Big Data]]></dc:subject>
+		<dc:subject><![CDATA[Cloud Computing]]></dc:subject>
+		<dc:subject><![CDATA[FYI]]></dc:subject>
+		<dc:subject><![CDATA[NoSQL]]></dc:subject>
+		<dc:subject><![CDATA[analysis]]></dc:subject>
+		<dc:subject><![CDATA[Apache]]></dc:subject>
+		<dc:subject><![CDATA[BigQuery]]></dc:subject>
+		<dc:subject><![CDATA[datastore]]></dc:subject>
+		<dc:subject><![CDATA[Dremel]]></dc:subject>
+		<dc:subject><![CDATA[Drill]]></dc:subject>
+		<dc:subject><![CDATA[Hadoop]]></dc:subject>
+		<dc:subject><![CDATA[interactive]]></dc:subject>
+		<dc:subject><![CDATA[large-sc]]></dc:subject>
+		<dc:subject><![CDATA[MapReduce]]></dc:subject>
+	<description><![CDATA[The value of large-scale datasets &#8211; stemming from IoT sensors, end-user and business transactions, social networks, search engine logs, etc. &#8211; apparently lies in the patterns buried deep inside them. Being able to identify these patterns, analyzing them is vital. Be it for detecting fraud, determining a new customer segment or predicting a trend. As &#8230; <a href="http://webofdata.wordpress.com/2012/09/02/large-scale-interactive-analysis/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=790&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>The value of large-scale datasets &#8211; stemming from IoT sensors, end-user and business transactions, social networks, search engine logs, etc. &#8211; apparently lies in the patterns buried deep inside them. Being able to identify these patterns, analyzing them is vital. Be it for detecting fraud, determining a new customer segment or predicting a trend. As we&#8217;re moving from the billions to trillions of records (or: from the terabyte to peta- and exabyte scale) the more &#8216;traditional&#8217; methods, including MapReduce seem to have reached the end of their capabilities. The question is: what now?</p>
+<p>But a second issue has to be addressed as well: in contrast to what current large-scale data processing solutions provide for in batch-mode (arbitrarily but in line with the state-of-the-art defined as any query that takes longer than 10 sec to execute) the need for <strong>interactive analysis</strong> increases. Complementary, <a href="http://en.wikipedia.org/wiki/Visual_analytics">visual analytics</a> may or may not be helpful but come with their <a title="The Top 10 Challenges in Extreme-Scale  Visual Analytics (IEEE Computer Graphics and Applications)" href="http://www.computer.org/cms/Computer.org/ComputingNow/homepage/2012/0812/W_CG_TheTop10Challenges.pdf">own set of challenges</a>.</p>
+<p>Recently, a proposal for a new Apache Incubator group called <a href="http://wiki.apache.org/incubator/DrillProposal">Drill</a> has been made. This group aims at building a:</p>
+<blockquote><p>&#8230; distributed system for interactive analysis of large-scale datasets [...] It is a design goal to scale to 10,000 servers or more and to be able to process petabyes of data and trillions of records in seconds.</p></blockquote>
+<p>Drill&#8217;s design is supposed to be informed by Google&#8217;s <a href="http://research.google.com/pubs/pub36632.html">Dremel</a> and wants to efficiently process nested data (think: <a href="http://code.google.com/p/protobuf/">Protocol Buffers</a>). You can learn more about requirements and design considerations from Tomer Shiran&#8217;s <a href="http://wiki.apache.org/incubator/DrillProposal?action=AttachFile&amp;do=get&amp;target=Drill+slides.pdf">slide set</a>.</p>
+<p>In order to better understand where Drill fits in in the overall picture, have a look at the following (admittedly naÃ¯ve) plot that tries to place it in relation to well-known and deployed data processing systems:</p>
+<p><a href="http://webofdata.files.wordpress.com/2012/09/a-comparison-of-large-scale-data-processing-systems.png"><img class="aligncenter size-full wp-image-799" title="A comparison of large-scale data processing systems" src="http://webofdata.files.wordpress.com/2012/09/a-comparison-of-large-scale-data-processing-systems.png?w=750&#038;h=527" alt="" width="750" height="527" /></a></p>
+<p>BTW, if you want to test-drive Dremel, you can do this already today; it&#8217;s an <a href="http://en.wikipedia.org/wiki/Cloud_computing#Infrastructure_as_a_service_.28IaaS.29">IaaS</a> service offered in Google&#8217;s cloud computing suite, called <a href="https://developers.google.com/bigquery/">BigQuery</a>.</p><br />Filed under: <a href='http://webofdata.wordpress.com/category/big-data/'>Big Data</a>, <a href='http://webofdata.wordpress.com/category/cloud-computing/'>Cloud Computing</a>, <a href='http://webofdata.wordpress.com/category/fyi/'>FYI</a>, <a href='http://webofdata.wordpress.com/category/nosql/'>NoSQL</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/790/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/790/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=790&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2012/07/08/schema-org-webintents-awesomeness/">
+	<title>Schema.org + WebIntents = Awesomeness</title>
+	<link>http://webofdata.wordpress.com/2012/07/08/schema-org-webintents-awesomeness/</link>
+	<dc:date>2012-07-08T18:21:19Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Experiment]]></dc:subject>
+		<dc:subject><![CDATA[Idea]]></dc:subject>
+		<dc:subject><![CDATA[Linked Data]]></dc:subject>
+		<dc:subject><![CDATA[W3C]]></dc:subject>
+		<dc:subject><![CDATA[Schema.org]]></dc:subject>
+		<dc:subject><![CDATA[WebIntents]]></dc:subject>
+	<description><![CDATA[Imagine you search for a camera, say a Canon EOS 60D, and in addition to the usual search results you&#8217;re as well offered a choice of actions you can perform on it, for example share the result with a friend, write a review for the item or, why not directly buy it? Sounds far fetched? &#8230; <a href="http://webofdata.wordpress.com/2012/07/08/schema-org-webintents-awesomeness/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=778&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>Imagine you search for a camera, say a Canon EOS 60D, and in addition to the usual search results you&#8217;re as well offered a choice of actions you can perform on it, for example <em>share</em> the result with a friend, write a <em>review</em> for the item or, why not directly <em>buy</em> it?</p>
+<p><a href="http://webofdata.files.wordpress.com/2012/07/ser.png"><img src="http://webofdata.files.wordpress.com/2012/07/ser.png?w=750&#038;h=363" alt="Enhancing SERP with actions" title="Enhancing SERP with actions" width="750" height="363" class="aligncenter size-full wp-image-781" /></a></p>
+<p>Sounds far fetched? Not at all. In fact, all the necessary components are available and deployed. With <a href="http://schema.org/">Schema.org</a> we have a way to describe the things we publish on our Web pages, such as books or cameras and with <a href="http://webintents.org/">WebIntents</a> we have a technology at hand that allows us to interact with these things in a flexible way.</p>
+<p>Here are some starting points in case you want to dive into WebIntents a bit:</p>
+<ul>
+<li>Check out the WebIntents <a href="http://demos.webintents.org/">demos</a> and learn about the <a href="http://usecases.webintents.org/">use cases</a>.</li>
+<li>During the recent Google IO 2012 there was a <a href="http://webintents-io12.appspot.com/#1">session on WebIntents</a>.</li>
+<li>A SitePoint <a href="http://www.sitepoint.com/podcast-169-web-intents/">podcast on WebIntents</a> is available.</li>
+<li>The Chrome Web Store has a number of <a href="https://chrome.google.com/webstore/category/collection/webintent_apps">apps that support WebIntents</a>.</li>
+<li>There is a <a href="http://www.w3.org/TR/web-intents/">W3C Working Draft</a> for the core specification as well as a W3C Wiki page that discusses <a href="http://www.w3.org/wiki/WebIntents/schema.org_Types">passing schema.org data through WebIntents</a>.</li>
+</ul>
+<p>PS: I started to develop a <a href="https://github.com/mhausenblas/intent.iom">proof of concept</a> for mapping Schema.org terms to WebIntents and will report on the progress, here. Stay tuned!</p><br />Filed under: <a href='http://webofdata.wordpress.com/category/experiment/'>Experiment</a>, <a href='http://webofdata.wordpress.com/category/idea/'>Idea</a>, <a href='http://webofdata.wordpress.com/category/linked-data/'>Linked Data</a>, <a href='http://webofdata.wordpress.com/category/w3c/'>W3C</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/778/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/778/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=778&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2012/05/10/turning-tabular-data-into-entities/">
+	<title>Turning tabular data into entities</title>
+	<link>http://webofdata.wordpress.com/2012/05/10/turning-tabular-data-into-entities/</link>
+	<dc:date>2012-05-10T15:03:40Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[demo]]></dc:subject>
+		<dc:subject><![CDATA[Experiment]]></dc:subject>
+		<dc:subject><![CDATA[FYI]]></dc:subject>
+		<dc:subject><![CDATA[CSV]]></dc:subject>
+		<dc:subject><![CDATA[Hypermedia]]></dc:subject>
+		<dc:subject><![CDATA[JSON]]></dc:subject>
+	<description><![CDATA[Two widely used data formats on the Web are CSV and JSON. In order to enable fine-grained access in an hypermedia-oriented fashion I&#8217;ve started to work on Tride, a mapping language that takes one or more CSV files as inputs and produces a set of (connected) JSON documents. In the 2 min demo video I &#8230; <a href="http://webofdata.wordpress.com/2012/05/10/turning-tabular-data-into-entities/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=763&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>Two widely used data formats on the Web are CSV and JSON. In order to enable fine-grained access in an hypermedia-oriented fashion I&#8217;ve started to work on <a href="https://github.com/mhausenblas/tride">Tride</a>, a mapping language that takes one or more CSV files as inputs and produces a set of (connected) JSON documents. </p>
+<span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='640' height='480' src='http://www.youtube.com/embed/Z6ueSqwgaYU?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' frameborder='0'></iframe></span>
+<p>In the 2 min <a href="http://youtu.be/Z6ueSqwgaYU">demo video</a> I use two CSV files (<a href="https://github.com/mhausenblas/tride/blob/master/test/people.csv">people.csv</a> and <a href="https://github.com/mhausenblas/tride/blob/master/test/group.csv">group.csv</a>) as well as a mapping file (<a href="https://github.com/mhausenblas/tride/blob/master/test/group-map.json">group-map.json</a>) to produce a set of interconnected JSON documents.</p>
+<p>So, the following mapping file:<br />
+<code></p>
+<pre>{
+ "input" : [
+  { "name" : "people", "src" : "people.csv" },
+  { "name" : "group", "src" : "group.csv" }
+ ],
+ "map" : {
+  "people" : {
+   "base" : "http://localhost:8000/people/",
+   "output" : "../out/people/",
+   "with" : { 
+    "fname" : "people.first-name", 
+    "lname" : "people.last-name",
+    "member" : "link:people.group-id to:group.ID"
+   }
+  },
+  "group" : {
+   "base" : "http://localhost:8000/group/",
+    "output" : "../out/group/",
+    "with" : {
+     "title" : "group.title",
+     "homepage" : "group.homepage",
+     "members" : "where:people.group-id=group.ID link:group.ID to:people.ID"
+    }
+   }
+ }
+}</pre>
+<p></code></p>
+<p>&#8230; produces JSON documents representing groups. One concrete example output is shown below:<br />
+<a href="http://webofdata.files.wordpress.com/2012/05/example-group-doc.png"><img src="http://webofdata.files.wordpress.com/2012/05/example-group-doc.png?w=750&#038;h=240" alt="" title="Example JSON document representing a group" width="750" height="240" class="alignleft size-full wp-image-774" /></a></p><br />Filed under: <a href='http://webofdata.wordpress.com/category/demo/'>demo</a>, <a href='http://webofdata.wordpress.com/category/experiment/'>Experiment</a>, <a href='http://webofdata.wordpress.com/category/fyi/'>FYI</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/763/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/763/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=763&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://webofdata.wordpress.com/2012/04/02/linked-data-best-of-two-worlds/">
+	<title>Linked Data &#8211; the best of two worlds</title>
+	<link>http://webofdata.wordpress.com/2012/04/02/linked-data-best-of-two-worlds/</link>
+	<dc:date>2012-04-02T06:06:04Z</dc:date>
+	<dc:creator><![CDATA[mhausenblas]]></dc:creator>
+			<dc:subject><![CDATA[Big Data]]></dc:subject>
+		<dc:subject><![CDATA[FYI]]></dc:subject>
+		<dc:subject><![CDATA[Linked Data]]></dc:subject>
+		<dc:subject><![CDATA[NoSQL]]></dc:subject>
+		<dc:subject><![CDATA[Atom]]></dc:subject>
+		<dc:subject><![CDATA[HTTP]]></dc:subject>
+		<dc:subject><![CDATA[JSON]]></dc:subject>
+		<dc:subject><![CDATA[microdata]]></dc:subject>
+		<dc:subject><![CDATA[OData]]></dc:subject>
+		<dc:subject><![CDATA[OODB]]></dc:subject>
+		<dc:subject><![CDATA[RDB]]></dc:subject>
+		<dc:subject><![CDATA[Schema.org]]></dc:subject>
+		<dc:subject><![CDATA[URI]]></dc:subject>
+	<description><![CDATA[On the one hand you have structured data sources such as relational DB, NoSQL datastores or OODBs and the like that allow you to query and manipulate data in a structured way. This typically involves schemata (either upfront with RDB or sort of dynamically with NoSQL that defines the data layout and the types of &#8230; <a href="http://webofdata.wordpress.com/2012/04/02/linked-data-best-of-two-worlds/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=759&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>On the one hand you have <strong>structured data sources</strong> such as relational DB, <a href="http://nosql-database.org/">NoSQL datastores</a> or <a href="http://www.odbms.org/">OODBs</a> and the like that allow you to query and manipulate data in a structured way. This typically involves <strong>schemata</strong> (either upfront with RDB or sort of dynamically <a href="http://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/">with NoSQL</a> that defines the data layout and the types of the fields), a notion of <strong>object identity</strong> (for example a unique row ID in RDB or a document ID in a document store) and with it to be able to refer to data items in different containers (e.g. a foreign key in a RDB) as well as  the possibility to create and use indices to speed up look-up/query.</p>
+<p>On the other hand you have the Web, a globally distributed hypermedia system, mainly for consumption by humans. There the main primitives are: an <a href="http://googleblog.blogspot.com/2008/07/we-knew-web-was-big.html">enormous collection</a> of hyperlinked documents over the Internet with millions of servers and billions of clients (desktop, mobile devices, etc.), in its core based on simple standards: URL, HTTP, HTML.</p>
+<p>Now, the idea with Linked Data is a simple one: take the best of both worlds and combine it, yielding large-scale structured data (incl. schema and object identity to allow straightforward manipulation) based on established Web standards (in order to benefit from the deployed infrastructure).</p>
+<p>Sounds easy? In fact it is. The devil is in the detail. As with any piece of technology, once you start implementing it, questions arise. For example, must Linked Data be solely based on RDF or are other wire formats such as <a href="http://jsonauts.github.com/">JSON</a>, <a href="http://www.w3.org/TR/microdata/">Microdata</a> or <a href="http://www.odata.org/">Atom</a> &#8216;allowed&#8217;? Should we use distributed vocabulary management (as mandated by the Semantic Web) or is it OK to use <a href="http://schema.org">Schema.org</a>? Depending on whom you ask you currently may get different answers but in this case I lean towards diversity &#8211; at the end of the day what matters are URIs (object identity), HTTP (data access) and <strong>some</strong> way to represent the data in a structured format.</p><br />Filed under: <a href='http://webofdata.wordpress.com/category/big-data/'>Big Data</a>, <a href='http://webofdata.wordpress.com/category/fyi/'>FYI</a>, <a href='http://webofdata.wordpress.com/category/linked-data/'>Linked Data</a>, <a href='http://webofdata.wordpress.com/category/nosql/'>NoSQL</a>  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/webofdata.wordpress.com/759/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/webofdata.wordpress.com/759/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=webofdata.wordpress.com&#038;blog=6169642&#038;post=759&#038;subd=webofdata&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+</rdf:RDF>

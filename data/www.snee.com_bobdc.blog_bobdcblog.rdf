@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns="http://purl.org/rss/1.0/"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:annotate="http://purl.org/rss/1.0/modules/annotate/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:cc="http://web.resource.org/cc/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+ > 
+
+<!-- MovableType tempalte based on Ben Hammersley's from
+http://www.oreillynet.com/pub/a/javascript/2003/02/28/rss.html -->
+
+  <channel rdf:about="http://www.snee.com/bobdc.blog/">
+    <title>bobdc.blog</title>
+    <link>http://www.snee.com/bobdc.blog/</link>
+    <description>Bob DuCharme&apos;s weblog, mostly on technology for representing and linking information.</description>
+    <dc:language>en-us</dc:language>
+    <dc:creator>Bob DuCharme</dc:creator>
+    <dc:date>2014-04-21T08:35:38-05:00</dc:date>
+    <admin:generatorAgent 
+        rdf:resource="http://www.movabletype.org/?v=4.32-en" />
+    <admin:errorReportsTo rdf:resource="mailto:bob@snee.com"/>
+
+    
+
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://www.snee.com/bobdc.blog/2014/04/rdf-lists-and-sparql.html" />
+      
+        <rdf:li rdf:resource="http://www.snee.com/bobdc.blog/2014/03/easier-querying-of-strings-wit.html" />
+      
+        <rdf:li rdf:resource="http://www.snee.com/bobdc.blog/2014/02/querying-my-own-mp3-image-and.html" />
+      
+        <rdf:li rdf:resource="http://www.snee.com/bobdc.blog/2014/01/storing-and-querying-rdf-in-ne.html" />
+      
+        <rdf:li rdf:resource="http://www.snee.com/bobdc.blog/2013/12/storing-and-querying-rdf-in-no.html" />
+      
+        <rdf:li rdf:resource="http://www.snee.com/bobdc.blog/2013/11/using-sparql-queries-from-nati.html" />
+      </rdf:Seq>
+    </items>
+
+  </channel>
+
+  
+    <item rdf:about="http://www.snee.com/bobdc.blog/2014/04/rdf-lists-and-sparql.html">
+    <title>RDF lists and SPARQL</title>
+    <link>http://www.snee.com/bobdc.blog/2014/04/rdf-lists-and-sparql.html</link>
+    <description>Not great, but not terrible, and a bit better with SPARQL 1.1</description>
+    <dc:subject>SPARQL</dc:subject>
+    <dc:creator>Bob</dc:creator>
+    <dc:date>2014-04-21T08:35:38-05:00</dc:date>
+    <content:encoded>Not great, but not terrible, and a bit better with SPARQL 1.1</content:encoded>
+
+    
+
+    
+
+    
+    </item>
+  
+    <item rdf:about="http://www.snee.com/bobdc.blog/2014/03/easier-querying-of-strings-wit.html">
+    <title>Easier querying of strings with RDF 1.1</title>
+    <link>http://www.snee.com/bobdc.blog/2014/03/easier-querying-of-strings-wit.html</link>
+    <description>In which a spoonful of syntactic sugar makes the string querying go down a bit easier.</description>
+    <dc:subject>SPARQL</dc:subject>
+    <dc:creator>Bob</dc:creator>
+    <dc:date>2014-03-08T10:09:38-05:00</dc:date>
+    <content:encoded>In which a spoonful of syntactic sugar makes the string querying go down a bit easier.</content:encoded>
+
+    
+
+    
+
+    
+    </item>
+  
+    <item rdf:about="http://www.snee.com/bobdc.blog/2014/02/querying-my-own-mp3-image-and.html">
+    <title>Querying my own MP3, image, and other file metadata with SPARQL</title>
+    <link>http://www.snee.com/bobdc.blog/2014/02/querying-my-own-mp3-image-and.html</link>
+    <description>And a standard part of Ubuntu.</description>
+    <dc:subject>SPARQL</dc:subject>
+    <dc:creator>Bob</dc:creator>
+    <dc:date>2014-02-09T11:31:20-05:00</dc:date>
+    <content:encoded>And a standard part of Ubuntu.</content:encoded>
+
+    
+
+    
+
+    
+    </item>
+  
+    <item rdf:about="http://www.snee.com/bobdc.blog/2014/01/storing-and-querying-rdf-in-ne.html">
+    <title>Storing and querying RDF in Neo4j</title>
+    <link>http://www.snee.com/bobdc.blog/2014/01/storing-and-querying-rdf-in-ne.html</link>
+    <description>Hands-on experience with another NoSQL database manager.</description>
+    <dc:subject>SPARQL</dc:subject>
+    <dc:creator>Bob</dc:creator>
+    <dc:date>2014-01-07T08:56:28-05:00</dc:date>
+    <content:encoded>Hands-on experience with another NoSQL database manager.</content:encoded>
+
+    
+
+    
+
+    
+    </item>
+  
+    <item rdf:about="http://www.snee.com/bobdc.blog/2013/12/storing-and-querying-rdf-in-no.html">
+    <title>Storing (and querying) RDF in NoSQL database managers</title>
+    <link>http://www.snee.com/bobdc.blog/2013/12/storing-and-querying-rdf-in-no.html</link>
+    <description>Interesting progress, carefully measured.</description>
+    <dc:subject>triplestores</dc:subject>
+    <dc:creator>Bob</dc:creator>
+    <dc:date>2013-12-04T08:36:31-05:00</dc:date>
+    <content:encoded>Interesting progress, carefully measured.</content:encoded>
+
+    
+
+    
+
+    
+    </item>
+  
+    <item rdf:about="http://www.snee.com/bobdc.blog/2013/11/using-sparql-queries-from-nati.html">
+    <title>Using SPARQL queries from native Android apps</title>
+    <link>http://www.snee.com/bobdc.blog/2013/11/using-sparql-queries-from-nati.html</link>
+    <description>With a free, kid-friendly development kit.</description>
+    <dc:subject>SPARQL</dc:subject>
+    <dc:creator>Bob</dc:creator>
+    <dc:date>2013-11-09T09:13:54-05:00</dc:date>
+    <content:encoded>With a free, kid-friendly development kit.</content:encoded>
+
+    
+
+    
+
+    
+    </item>
+  
+</rdf:RDF>

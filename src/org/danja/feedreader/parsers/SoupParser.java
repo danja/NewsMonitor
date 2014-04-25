@@ -1,3 +1,12 @@
+/**
+ * feedreader-prototype
+ *
+ * SoupParser.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.parsers;
 
 import java.io.File;

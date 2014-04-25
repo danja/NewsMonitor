@@ -1,3 +1,12 @@
+/**
+ * feedreader-prototype
+ *
+ * RDFInterpreterFactory.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.social;
 
 import org.danja.feedreader.feeds.EntryList;

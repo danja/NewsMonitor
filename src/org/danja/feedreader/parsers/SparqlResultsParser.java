@@ -1,3 +1,12 @@
+/**
+ * feedreader-prototype
+ *
+ * SparqlResultsParser.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.parsers;
 
 import java.io.File;
@@ -21,6 +30,8 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 /**
  * SAX-based SPARQL XML Result Set format parser
+ * 
+ * see @link http://www.w3.org/TR/rdf-sparql-XMLres/ 
  */
 public class SparqlResultsParser implements ContentHandler {
 

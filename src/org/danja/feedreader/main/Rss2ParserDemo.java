@@ -1,6 +1,11 @@
-/*
- * Danny Ayers Aug 18, 2004 http://dannyayers.com
- *  
+/**
+ * feedreader-prototype
+ *
+ * Rss2ParserDemo.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.main;
 

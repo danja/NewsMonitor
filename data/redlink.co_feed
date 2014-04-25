@@ -1,0 +1,336 @@
+<rdf:RDF xmlns:admin="http://webns.net/mvcb/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<!-- version="RSS 2.0" -->
+<rss:channel xmlns:rss="http://purl.org/rss/1.0/" rdf:about="">
+<rss:title>redlink</rss:title>
+<rss:link>http://redlink.co</rss:link>
+<rss:description>REDLINK GmbH</rss:description>
+<dc:language>en-US</dc:language>
+<sy:updatePeriod xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">hourly</sy:updatePeriod>
+<sy:updateFrequency xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">1</sy:updateFrequency>
+<rss:items>
+<rdf:Seq>
+<rdf:li rdf:resource="http://redlink.co/add-semantic-to-your-application/"/>
+<rdf:li rdf:resource="http://redlink.co/adding-semantic-search-to-apache-solr/"/>
+<rdf:li rdf:resource="http://redlink.co/enterprise-search-europe-2014/"/>
+<rdf:li rdf:resource="http://redlink.co/wordlift-3-0-preview/"/>
+<rdf:li rdf:resource="http://redlink.co/asfs-active-projects-apache-marmotta/"/>
+<rdf:li rdf:resource="http://redlink.co/semantic-content-management/"/>
+<rdf:li rdf:resource="http://redlink.co/apache-marmotta/"/>
+<rdf:li rdf:resource="http://redlink.co/semanticweb-com-redlink/"/>
+<rdf:li rdf:resource="http://redlink.co/machine-linking-german/"/>
+<rdf:li rdf:resource="http://redlink.co/partnership-machine-linking/"/>
+</rdf:Seq>
+</rss:items>
+</rss:channel>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/add-semantic-to-your-application/">
+<rss:title>Build your first Semantic Application with Redlink</rss:title>
+<rss:link>http://redlink.co/add-semantic-to-your-application/</rss:link>
+<dc:subject>Blog</dc:subject>
+<dc:subject>Webinar</dc:subject>
+<dc:subject>Apache Marmotta</dc:subject>
+<dc:subject>Apache Stanbol</dc:subject>
+<dc:subject>Redlink Dashboard</dc:subject>
+<dc:subject>semantic technologies</dc:subject>
+<dc:subject>webinar</dc:subject>
+<rss:description>ur motivation is to bring the power of and to a wider audience of IT integrators, and hence end-users. To deliver on this promise we are keenly aware that the complexity of such technologies need to be kept under the hood while keeping you focused on what is important, i.e. how to add value to [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">John Pereira</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;span class="dropcap3"&gt; O &lt;/span&gt;ur motivation is to bring the power of &lt;span class="highlight"&gt;&lt;strong&gt;content analysis &lt;/strong&gt;&lt;/span&gt; and &lt;span class="highlight"&gt;&lt;strong&gt;linked data technologies&lt;/strong&gt;&lt;/span&gt; to a wider audience of IT integrators, and hence end-users. To deliver on this promise we are keenly aware that the complexity of such technologies need to be kept under the hood while keeping you focused on what is important, i.e. how to add value to your data.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;In this screencast we show how easy it is for non-experts to setup their first Redlink App that analyses content based on a customised dataset (user dictionary). With this simple App you can automatically analyse all your legacy data according to the facts that are most important to your business needs. This is our first version of the Redlink dashboard and we are hard at work on the new version that promises to put more powerful content analysis features at your fingertips.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class="lightbox-photo"&gt;
+&lt;a class="image-overlay fancybox-media" href="https://vimeo.com/90250867" title="VIDEO - Create your first Redlink App!"&gt;
+&lt;img class="aligncenter" src=" http://redlink.co/wp-content/uploads/2014/04/play3.jpg" alt="VIDEO - Create your first Redlink App!" /&gt;&lt;span&gt;&lt;i class="icon-pictures"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;If you&amp;#8217;re interested in participating in our private beta, &lt;a class='href' onclick="scmodal('http://redlink.co/sign-up/', 'div.content div.container', 'div.page-title h1', 1000, 325, false)" href='javascript:void(0);'&gt; &lt;strong&gt;register to get involved&lt;/strong&gt; &lt;/a&gt;
+&lt;h4&gt;Lead the innovation of Content Analysis and Open Source&lt;/h4&gt;
+&lt;p&gt;Since our inception last year, we have been focused on leading the delivery of &lt;span class="highlight"&gt; &lt;strong&gt;semantic technologies&lt;/strong&gt; &lt;/span&gt; as &lt;span class="highlight"&gt;&lt;strong&gt;a full data platform&lt;/strong&gt;&lt;/span&gt; completely based on &lt;strong&gt;open standards&lt;/strong&gt;. Thanks to the contributions of so many to &lt;strong&gt;&lt;a title="Apache Stanbol" href="http://redlink.co/portfolio/apache-stanbol/"&gt;Apache Stanbol&lt;/a&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;a title="Apache Marmotta" href="http://redlink.co/portfolio/apache-marmotta/"&gt;Apache Marmotta&lt;/a&gt;&lt;/strong&gt;. These contributions address critical requirements and here at Redlink our goal is to make these technologies &lt;strong&gt;accessible&lt;/strong&gt; and &lt;strong&gt;enterprise ready&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4&gt;Extend and enable the ecosystem. A modern approach to NLP&lt;/h4&gt;
+&lt;p&gt;We are also focused on enabling a broader ecosystem of NLP vendors and we have deep engineering and go-to-market partnerships with research institutions and startups active in the content analysis market to extend Redlink content analysis capabilities even further.&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;&lt;a class='mt-button large with-icon square' onclick="scmodal('http://redlink.co/sign-up/', 'div.content div.container', 'div.page-title h1', 1000, 325, false)" href='javascript:void(0);'&gt; Register to our Private Beta &lt;i class="icon-ok"&gt;&lt;/i&gt; &lt;/a&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;input type="hidden" name="postId" value="2865" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/adding-semantic-search-to-apache-solr/">
+<rss:title>Adding Semantic Search to Apache Solr™</rss:title>
+<rss:link>http://redlink.co/adding-semantic-search-to-apache-solr/</rss:link>
+<dc:subject>Blog</dc:subject>
+<dc:subject>Webinar</dc:subject>
+<dc:subject>apache solr</dc:subject>
+<dc:subject>content analysis api</dc:subject>
+<dc:subject>semantic search</dc:subject>
+<rss:description>To add semantic capabilities to Apache Solr, developers need to install the Redlink Solr Plugin which relies on the Analysis API. The Plugin enhances documents by extracting named entities and facts during Solr updates. Adding the Plugin into an existing Solr repository can be done within minutes, avoiding any major integration effort. he global enterprise [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Andrea Volpini</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;To add semantic capabilities to Apache Solr, developers need to install the &lt;a href="http://dev.redlink.io/plugins/solr"&gt;Redlink Solr Plugin&lt;/a&gt; which relies on the &lt;a href="http://dev.redlink.io/api/1.0-BETA.html#content-analysis"&gt;Analysis API&lt;/a&gt;. The Plugin enhances documents by extracting named entities and facts during Solr updates. Adding the Plugin into an existing Solr repository can be done within minutes, avoiding any major integration effort.&lt;/p&gt;
+&lt;div class="divider"&gt;&lt;/div&gt;
+&lt;span class="dropcap3"&gt; T &lt;/span&gt;he global enterprise search market reached revenues of more than US$1.47bn in 2012 and this figure has been forecasted by Frost &amp;amp; Sullivan will reach US$4.68bn by 2019.&lt;/p&gt;
+&lt;p&gt;As Search vendors are looking beyond meta-data tagging and towards deep-content analysis algorithms and pattern detection, Search users are becoming more aware of the effectiveness of conceptual and semantic search.&lt;/p&gt;
+&lt;h3 class="line-header"&gt;&lt;span&gt; Redlink Apache Solr Plugin &lt;/span&gt;&lt;/h3&gt;
+&lt;div class="lightbox-photo"&gt;
+&lt;a class="image-overlay fancybox-media" href="https://vimeo.com/90064360" title="VIDEO - Introducing the Redlink Apache Solr Plugin"&gt;
+&lt;img class="aligncenter" src="http://redlink.co/wp-content/uploads/2014/03/play2.jpg" alt="VIDEO - Introducing the Redlink Apache Solr Plugin" /&gt;&lt;span&gt;&lt;i class="icon-pictures"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;Here at Redlink we see this demand coming from various verticals such as the public sector willing to provide better access to documents and public knowledge bases to eCommerce platform providers willing to increase the effectiveness of their platforms in terms of sales volume and revenues.&lt;/p&gt;
+&lt;p&gt;We designed the Solr Plugin with these requirements in mind to add Semantic Search to &lt;a title="Apache Solr" href="http://redlink.co/portfolio/apache-solr/"&gt;Apache Solr&lt;strong&gt;™&lt;/strong&gt;&lt;/a&gt; the popular, fast and Open Source enterprise search platform from the Apache Lucene&lt;strong&gt;™&lt;/strong&gt; project.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://redlink.co/wp-content/uploads/2013/02/Apache-Solr-288x176.jpg"&gt;&lt;img class="alignleft  wp-image-873" alt="Apache-Solr-288x176" src="http://redlink.co/wp-content/uploads/2013/02/Apache-Solr-288x176.jpg" width="161" height="99" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To add semantic capabilities to Apache Solr, as described by &lt;a title="Thomas Kurz" href="http://redlink.co/teammembers/thomas-kurz/"&gt;Thomas Kurz&lt;/a&gt; in this screencast, the &lt;strong&gt;Redlink Solr Plugin&lt;/strong&gt; uses our &lt;a title="Redlink Content Analysis API Documentation" href="http://dev.redlink.io/api/1.0-BETA.html#content-analysis"&gt;Analysis API&lt;/a&gt;. The Plugin enhances documents by extracting named entities and facts during Solr updates. Adding the Plugin into an existing Solr repository can be done within minutes, avoiding any major integration effort.&lt;/p&gt;
+&lt;p&gt;To display &lt;em&gt;cutting edge results using faceted search&lt;/em&gt; and &lt;em&gt;autosuggest&lt;/em&gt; you can simply add &lt;strong&gt;Redlink Semantic Technology&lt;/strong&gt; with &lt;em&gt;a 5 minute installation&lt;/em&gt; and &lt;em&gt;a valid API Key&lt;/em&gt;: &lt;a class='href' onclick="scmodal('http://redlink.co/sign-up/', 'div.content div.container', 'div.page-title h1', 1000, 325, false)" href='javascript:void(0);'&gt; &lt;strong&gt;register to get one&lt;/strong&gt; &lt;/a&gt; and &lt;strong&gt;&lt;a title="Adding Semantic to Apache Solr" href="http://dev.redlink.io/plugins/solr"&gt;download the plugin&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a title="Thomas Kurz" href="http://redlink.co/teammembers/thomas-kurz/"&gt;Thomas Kurz&lt;/a&gt; is co-founder and search expert of Redlink and he will be attending &lt;a title="Meet Redlink at Enterprise Search Europe 2014" href="http://redlink.co/enterprise-search-europe-2014/"&gt;&lt;strong&gt;Enterprise Search Europe 2014&lt;/strong&gt;&lt;/a&gt; on the 29th and 30th of April 2014 in London.&lt;/p&gt;
+&lt;input type="hidden" name="postId" value="2810" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/enterprise-search-europe-2014/">
+<rss:title>Meet Redlink at Enterprise Search Europe 2014</rss:title>
+<rss:link>http://redlink.co/enterprise-search-europe-2014/</rss:link>
+<dc:subject>Blog</dc:subject>
+<dc:subject>Events</dc:subject>
+<dc:subject>News</dc:subject>
+<dc:subject>2014</dc:subject>
+<dc:subject>enterprise search</dc:subject>
+<dc:subject>event</dc:subject>
+<dc:subject>ses</dc:subject>
+<rss:description>Effective enterprise search is critical to deal with ever-increasing volumes of information. Redlink will be showcasing semantic search and how to improve accuracy by understanding  the contextual meaning of content and search terms. Join us at Enterprise Search Europe 2014 to make your organisation’s content easily searchable, findable and deliverable and to get the most out [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Andrea Volpini</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;&lt;strong&gt;Effective enterprise search is critical to deal with ever-increasing volumes of information. Redlink will be showcasing semantic search and how to improve accuracy by understanding  the contextual meaning of content and search terms.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Join us at &lt;a href="http://www.enterprisesearcheurope.com/"&gt;&lt;strong&gt;Enterprise Search Europe 2014&lt;/strong&gt;&lt;/a&gt; to make your organisation’s content easily searchable, findable and deliverable and to get the most out of existing search applications while leveraging on &lt;em&gt;semantic processing&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The conference takes place in &lt;strong&gt;London&lt;/strong&gt; (Park Plaza Victoria) on the &lt;strong&gt;29th &lt;/strong&gt;and&lt;strong&gt; 30th of April&lt;/strong&gt; &lt;strong&gt;2014. &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a title="Aingaran Pillai" href="http://redlink.co/teammembers/aingaran-pillai/"&gt;Aingaran Pillai&lt;/a&gt; and &lt;a title="Thomas Kurz" href="http://redlink.co/teammembers/thomas-kurz/"&gt;Thomas Kurz&lt;/a&gt; from the Redlink team will be attending the event and we&amp;#8217;ll be happy to set-up a meeting with your organisation for demonstrating our technology.&lt;/p&gt;
+&lt;a target="_self" class="mt-button medium black square" href="http://redlink.co/contact-us/"&gt; Reserve a Meeting  &lt;i class="icon-email"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;input type="hidden" name="postId" value="2750" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/wordlift-3-0-preview/">
+<rss:title>Introducing WordLift 3.0: Dynamic Semantic Publishing for WordPress</rss:title>
+<rss:link>http://redlink.co/wordlift-3-0-preview/</rss:link>
+<dc:subject>Blog</dc:subject>
+<dc:subject>Events</dc:subject>
+<dc:subject>News</dc:subject>
+<dc:subject>Webinar</dc:subject>
+<dc:subject>lod2014</dc:subject>
+<dc:subject>wordlift</dc:subject>
+<rss:description>ith the introduction of WordLift 3.0 (currently in beta testing) creating entity-centric web contents with WordPress has became extremely easy. WordLift helps web editors seamlessly re-organise contents by telling them how each content is related to other published materials and how it relates to the data available in the Linked Open Data Cloud.   WordLift 3.0 uses natural language processing and metadata extraction (using the Redlink [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Andrea Volpini</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;&lt;strong&gt;&lt;span class="dropcap3"&gt;W&lt;/span&gt;ith the introduction of WordLift 3.0 (currently in beta testing) creating entity-centric web contents with WordPress has became extremely easy.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;/strong&gt;&lt;strong&gt;WordLift helps web editors seamlessly re-organise contents by telling them how each content is related to other published materials and how it relates to the data available in the &lt;a href="http://linkeddata.org/"&gt;Linked Open Data Cloud&lt;/a&gt;.  &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;WordLift 3.0 uses &lt;em&gt;natural language processing&lt;/em&gt; and &lt;em&gt;metadata extraction&lt;/em&gt; (&lt;strong&gt;using the Redlink APIs for &lt;a title="text analysis - API description" href="http://dev.redlink.io/api/1.0-BETA.html#content-analysis"&gt;Content Analysis&lt;/a&gt; and &lt;a title="linked data management API" href="http://dev.redlink.io/api/1.0-BETA.html#linked-data"&gt;Linked Data Publishing&lt;/a&gt;) &lt;/strong&gt;to help publishers categorize content and enrich metadata by pulling information from publicly available Linked Data resources.&lt;/p&gt;
+&lt;h3 class="line-header"&gt;&lt;span&gt; The Entity Search Revolution &lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;In September 2013 Google announced that it had rolled out a brand new algorithm – &amp;#8220;Hummingbird&amp;#8221; – the month before. The name was chosen with care – the Hummingbird is very fast, and extremely precise. Hummingbird is a major move towards semantic search for Google and a big change in commercial search engines in general. As for Bing, Yandex and Yahoo! with Hummingbird named entities are become increasingly important.&lt;/p&gt;
+&lt;p&gt;Google has greatly improved its understanding of user  intention &amp;#8211; especially for long-tail searches. The search query, and the relations between words in the search query, is now targeted, identified and interpreted.&lt;/p&gt;
+&lt;p&gt;As search engines get better at understanding the search intent of their users it becomes extremely important to publish and curate contents that are truly relevant using &lt;strong&gt;entities-based information architectures&lt;/strong&gt; rather than pages and menus.&lt;/p&gt;
+&lt;h3 class="line-header"&gt;&lt;span&gt; The Preview of WordLift 3.0 &lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;We had the opportunity to present a preview of &lt;strong&gt;WordLift 3.0&lt;/strong&gt; at the &lt;a href="http://w3c.it/events/2014/lod2014/"&gt;&lt;strong&gt;Linked Open Data 2014&lt;/strong&gt;&lt;/a&gt; event in Rome, Italy (an event organised by the &lt;a href="http://w3c.it/events/2014/lod2014/"&gt;W3C Italy&lt;/a&gt;). Here is our presentation and the screencast.&lt;/p&gt;
+&lt;p&gt;&lt;iframe width="425" height="355" style="border-style: solid; border-color: #cccccc; border-bottom-width: 0px; margin-bottom: 5px; max-width: 100%;" src="http://www.slideshare.net/slideshow/embed_code/31428622?rel=0" allowfullscreen="" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;div style="margin-bottom: 5px;"&gt;&lt;strong&gt; &lt;a title="WordLift 3.0 - Dynamic Semantic Publishing for WordPress " href="https://www.slideshare.net/cyberandy/wordlift-30-dynamic-semantic-publishing-for-wordpress" target="_blank"&gt;WordLift 3.0 &amp;#8211; Dynamic Semantic Publishing for WordPress&lt;/a&gt;.&lt;/strong&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div style="margin-bottom: 5px;"&gt;
+&lt;p&gt;To begin testing our new release click the button below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a target="_self" class="mt-button medium black square" href="http://join.wordlift.it"&gt; Join WordLift &lt;/a&gt;
+&lt;input type="hidden" name="postId" value="2774" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/asfs-active-projects-apache-marmotta/">
+<rss:title>Did you know that one of the ASF’s most active projects is Apache Marmotta™?</rss:title>
+<rss:link>http://redlink.co/asfs-active-projects-apache-marmotta/</rss:link>
+<dc:subject>Apache Marmotta</dc:subject>
+<dc:subject>Blog</dc:subject>
+<rss:description>Sally Khudair Vice President of the Apache Software Foundation in a recent blog talks about the progress of Apache Marmotta. He begins by pointing out that Apache Marmotta is currently one of the most active ASF projects. He goes on to explain: &amp;#8220;Apache Marmotta was created to provide an Open Source implementation of Linked Data technologies [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">John Pereira</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;Sally Khudair Vice President of the &lt;a href="http://www.apache.org"&gt;Apache Software Foundation&lt;/a&gt; in a &lt;a href="http://www.globenewswire.com/news-release/2013/12/10/595835/10060945/en/The-ASF-asks-Have-you-met-Apache-tm-Marmotta-tm.html"&gt;recent blog&lt;/a&gt; talks about the progress of Apache Marmotta. He begins by pointing out that Apache Marmotta is currently one of the most active &lt;a href="https://www.ohloh.net/orgs/apache/projects"&gt;ASF projects&lt;/a&gt;. He goes on to explain:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&amp;#8220;Apache Marmotta was created to provide an Open Source implementation of Linked Data technologies in general, and &lt;a href="http://www.w3.org/TR/ldp/"&gt;Linked Data Platform&lt;/a&gt; in particular. Usually organizations who want to use this technology need to assemble together different pieces of software, with the obvious problems derived, both technical and legal. Apache Marmotta satisfies that need of the industry, supporting almost any use-case with a permissive Open Source license&amp;#8221;.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Redlink is using Apache Marmotta and our team is doing an amazing job to push the LDP standard as open-source. In addition our goal is to make these technologies widely available via easy-to-use APIs. Stay tuned to test our APIs.&lt;/p&gt;
+&lt;input type="hidden" name="postId" value="2545" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/semantic-content-management/">
+<rss:title>Introducing Semantic Content Management</rss:title>
+<rss:link>http://redlink.co/semantic-content-management/</rss:link>
+<dc:subject>Blog</dc:subject>
+<dc:subject>linked data</dc:subject>
+<dc:subject>nlp</dc:subject>
+<dc:subject>semantic search</dc:subject>
+<dc:subject>semantic technologies</dc:subject>
+<dc:subject>semantic web</dc:subject>
+<rss:description>n 2001, in a publication at Scientific American that has become legendary, Tim Berners-Lee, the father of the World Wide Web, coined the term Semantic Web for the first time. In those days, Berners-Lee considered that The Semantic Web will bring structure to the meaningful content of Web pages, creating an environment where software agents roaming from page to page can [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Rafa Haro</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;div class="callout-box clearfix"&gt;
+ Article first published on the &lt;a title="Semantic Content Management" href=" http://www.zaizi.com/blog/introducing-semantic-content-management-from-redlink"&gt;Zaizi&amp;#8217;s blog&lt;/a&gt;. &lt;/div&gt;
+&lt;span class="dropcap3"&gt; I &lt;/span&gt;n 2001, in &lt;a href="http://www.scientificamerican.com/article.cfm?id=the-semantic-web" data-cke-saved-href="http://www.scientificamerican.com/article.cfm?id=the-semantic-web"&gt;a publication at Scientific American&lt;/a&gt; that has become legendary, &lt;a href="http://www.w3.org/People/Berners-Lee/" data-cke-saved-href="http://www.w3.org/People/Berners-Lee/"&gt;Tim Berners-Lee&lt;/a&gt;, the father of the World Wide Web, coined the term &lt;a href="http://semanticweb.org/wiki/Main_Page" data-cke-saved-href="http://semanticweb.org/wiki/Main_Page"&gt;Semantic Web&lt;/a&gt; for the first time. In those days, Berners-Lee considered that&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;The Semantic Web will bring structure to the meaningful content of Web pages, creating an environment where software agents roaming from page to page can readily carry out sophisticated tasks for users [.....]. The Semantic Web is not a separate Web but an extension of the current one, in which information is given well-defined meaning, better enabling computers and people to work in cooperation&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Certainly, the &amp;#8220;classic&amp;#8221; Web has always suffered from some limitations, mainly related to the lack of knowledge expressiveness. Since &lt;a href="http://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" data-cke-saved-href="http://en.wikipedia.org/wiki/History_of_the_World_Wide_Web"&gt;its beginnings&lt;/a&gt; and still nowadays, most of the Web&amp;#8217;s content is created and published for being consumed by humans and not for being processed by machines, despite the fact that current machines are perfectly able to manage big amounts of data.  This kind of &lt;strong&gt;unstructured content &lt;/strong&gt;is quite difficult to process, mine, relate and categorize. In summary, it is difficult to &lt;strong&gt;extract value&lt;/strong&gt; from it. The Semantic Web (also known as Web of Data) is all about making &lt;strong&gt;content machine-readable&lt;/strong&gt;, allowing software agents to automatically accomplish complex tasks using that data and helping search engines to better understand what they are indexing for later providing more accurate results to the users.&lt;span id="more-2502"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Towards the Web of Data&lt;/h2&gt;
+&lt;p&gt;Structured Content is not a brand-new term, although you might find it now everywhere. Any content represented using a predefined model is structured: a database, an XML file or a spreadsheet are good examples. Structured content is easy to process by machines because every single fact is perfectly defined as well as its relationships with other facts. Representation&amp;#8217;s standards in the Web (HTML, CSS&amp;#8230;) don&amp;#8217;t structure the content, they just define the way the content is going to be displayed. Also, the hyperlinked structure of the Web doesn&amp;#8217;t provide any sense regarding why two web pages are connected. The current Web is an enormous graph of connected pages through unspecified links. When a webpage links to another, a machine can know that the first one is promoting the second, but it can&amp;#8217;t know why.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img class="aligncenter" alt="Classic Web vs Semantic Web" src="http://www.w3.org/2001/12/semweb-fin/current-vs-sw.png" data-cke-saved-src="http://www.w3.org/2001/12/semweb-fin/current-vs-sw.png" /&gt;&lt;/p&gt;
+&lt;p&gt;In the Semantic Web, each node of the graph is univocally identified, as well as its relationships with the rest of nodes. Thinking about web content, these nodes may be viewed as concepts or entities, ensuring that they are not just words in a document but are tied to a unique definition that everyone can find on the Web. To make the Web of Data a reality, it is important to have the huge amount of data on the Web available in a standard format. Furthermore, not only does the Semantic Web need access to data, but relationships among data should be made available too.&lt;/p&gt;
+&lt;h3&gt;Linked Data&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://linkeddata.org/" data-cke-saved-href="http://linkeddata.org/"&gt;Linked Data&lt;/a&gt; has been the natural evolution of the right graph in the above figure. According to &lt;a href="http://linkeddata.org/" data-cke-saved-href="http://linkeddata.org/"&gt;linkeddata.org&lt;/a&gt;&lt;em&gt;, the term Linked Data refers to a set of best practices for publishing and connecting structured data on the Web. &lt;/em&gt;In a practical sense, Linked Data is a huge graph of interrelated datasets from different domains on the Web, that is, an enormous database of the world knowledge. Some well know examples of such datasets are &lt;a href="http://dbpedia.org/" data-cke-saved-href="http://dbpedia.org/"&gt;DBpedia&lt;/a&gt;, a machine-readable version of Wikipedia, &lt;a href="http://www.freebase.com/" data-cke-saved-href="http://www.freebase.com/"&gt;Freebase&lt;/a&gt;, a database of well-known people, places, and things and &lt;a href="http://www.geonames.org/" data-cke-saved-href="http://www.geonames.org/"&gt;Geonames&lt;/a&gt;, a worldwide geographical database.&lt;/p&gt;
+&lt;p&gt;&lt;img class="aligncenter" alt="Part of the Linked Open Data Cloud" src="http://linkeddata.org/static/images/lod-datasets_2009-07-14_cropped.png" width="495" height="368" data-cke-saved-src="http://linkeddata.org/static/images/lod-datasets_2009-07-14_cropped.png" /&gt;&lt;/p&gt;
+&lt;h2&gt;Why creating structured content is important?&lt;/h2&gt;
+&lt;p&gt;As we will see in this post structuring content is not a trivial task and it might be worth spend some time and highlight the benefits of embracing this approach:&lt;/p&gt;
+&lt;div class="list-disc"&gt;
+&lt;ul&gt;
+&lt;li&gt; &lt;strong&gt;Make sense of your content&lt;/strong&gt;: content is finally put in context thanks to its underlying knowledge (each piece of information will be labeled as an entity. Besides annotating your content with your custom datasets, linking your content with the Linked Data cloud would allow to automatically take advantage of the information contained there in your site).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data interoperability&lt;/strong&gt;: in the Web of Data, common standards are used for structuring the content. Let&amp;#8217;s think for example on content aggregators or products comparators. Nowadays, e-commerce companies need to pay to include their products catalogs in such sites. If all e-commerce frameworks publish those catalogs using the same standard, a simple query would be enough for comparing the prices of the same product.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content Discovery: &lt;/strong&gt;semantic information can help search engines to better understand what the content they index is about. Current major search engines are promoting the use of microformats for annotating the content with entities and concepts. Microformats are just another way to represent semantic data, using HTML and XHTML for embedding it in the content. Search engines can parse this information and understand better the meaning of the web pages. For example, &lt;a href="http://schema.org/" data-cke-saved-href="http://schema.org/"&gt;schema.org&lt;/a&gt; is an effort between Google, Bing, Yahoo! and Yandex for building a common vocabulary that all sites should use for markup the content. Schema.org provides then a way to describe and categorize &amp;#8220;real world&amp;#8221; things like Persons, Organizations. Places, Movies, Events and so on, within the content. This information is used by their algorithms for improving and also contextualizing the results for the users using for example &lt;a href="https://support.google.com/webmasters/answer/99170" data-cke-saved-href="https://support.google.com/webmasters/answer/99170"&gt;Rich-Snippets&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img class="aligncenter" alt="Google Rich Snippets" src="https://www.google.com/help/hc/images/webmasters/webmasters_99170_rsreview_en.png" data-cke-saved-src="https://www.google.com/help/hc/images/webmasters/webmasters_99170_rsreview_en.png" /&gt;&lt;/p&gt;
+&lt;h2&gt;How do you structure your content?&lt;/h2&gt;
+&lt;p&gt;Nowadays regardless of the introduction of these technologies by Google, Facebook, IBM and many other big tech players, still over 80% of the published content is unstructured. There are several reasons that explain this situation but the most important one is that human curation is far too expensive and structuring content is a job that only machines can handle. &lt;a href="http://redlink.co/" data-cke-saved-href="http://redlink.co/"&gt;Redlink&lt;/a&gt; was founded to provide a solution for this problem and to democratise semantic technologies  providing a &lt;strong&gt;Publishing Knowledge Graph &lt;/strong&gt;solution for Enterprises and online publishers (just like Google, Facebook and Bing have their own Knowledge Graph we believe every company shall create its own). Completely built on top of three Open Source pillars from the Apache Software Foundation (&lt;a href="http://stanbol.apache.org/" data-cke-saved-href="http://stanbol.apache.org/"&gt;Apache Stanbol&lt;/a&gt;, &lt;a href="http://marmotta.apache.org/" data-cke-saved-href="http://marmotta.apache.org/"&gt;Apache Marmotta&lt;/a&gt; and &lt;a href="http://lucene.apache.org/solr/" data-cke-saved-href="http://lucene.apache.org/solr/"&gt;Apache Solr&lt;/a&gt;), the &lt;a href="http://redlink.co/products/develop/" data-cke-saved-href="http://redlink.co/products/develop/"&gt;Redlink Platform&lt;/a&gt; provides a wide range of cloud services for &lt;strong&gt;Content Enrichment&lt;/strong&gt;, &lt;strong&gt;Linked Data Publishing&lt;/strong&gt; and &lt;strong&gt;Semantic Search&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Content Enrichment&lt;/h3&gt;
+&lt;p&gt;Redlink can structure your content by extracting entities and concepts and linking them with Linked Data datasets or your custom datasets. The extracted data can be represented using any format from the Semantic Web standards, even using microformats like &lt;a href="https://support.google.com/webmasters/answer/146898" data-cke-saved-href="https://support.google.com/webmasters/answer/146898"&gt;RDFa&lt;/a&gt; and the already mentioned schema.org for improving SEO. Redlink enhances the content by applying some different analysis process that can include:&lt;/p&gt;
+&lt;div class="list-disc"&gt;
+&lt;ul&gt;
+&lt;li&gt;Language Detection&lt;/li&gt;
+&lt;li&gt;Named Entity Recognition&lt;/li&gt;
+&lt;li&gt;Nouns Recognition&lt;/li&gt;
+&lt;li&gt;Entity Linking&lt;/li&gt;
+&lt;li&gt;Topic Annotation&lt;/li&gt;
+&lt;li&gt;Sentiment Analysis&lt;/li&gt;
+&lt;li&gt;Content Classification&lt;/li&gt;
+&lt;li&gt;Third-party analysis engines like &lt;a href="http://redlink.co/partnership-machine-linking/" data-cke-saved-href="http://redlink.co/partnership-machine-linking/"&gt;Machine Linking&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;Linking your content with datasets from the Linked Data cloud also allows you to use as your convenience the information contained in such resources.&lt;/p&gt;
+&lt;p&gt;&lt;img class="aligncenter" alt="" src="http://www.zaizi.com/sites/default/files/images/ContentEnrichment.png" width="664" height="372" data-cke-saved-src="/sites/default/files/images/ContentEnrichment.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;Linked Data Publishing&lt;/h3&gt;
+&lt;p&gt;Redlink  helps in managing your company&amp;#8217;s datasets as semantic data and publishing them as part of the Linked Data cloud, assuring proper connections with other datasets and assuring that your data is reachable and query-able efficiently. Even if you are not planning to publish your data in that way, managing it as semantic data can provide  benefits like using it for Content Enrichment as well as Categorisation and Semantic Search.&lt;/p&gt;
+&lt;h3&gt;Semantic Search&lt;/h3&gt;
+&lt;p&gt;Redlink provides an easy to use Semantic Search solution built on top of the well-known information retrieval framework Apache Solr. Besides it can apply all the features already provided by Solr (like faceting, autocompletion, highlighting, spell cheking and so on) both over enterprise content and custom datasets, Redlink&amp;#8217;s Search services can also take advantage of the extracted entities/concepts in your content for automatically creating semantic indexes where documents are annotated with contextual information. This information can be used for improving content organisation and discovery.&lt;/p&gt;
+&lt;h3&gt;A simple use case: Semantic e-Commerce&lt;/h3&gt;
+&lt;p&gt;An e-commerce site may be interested in Semantic Publishing using the Redlink technology. Product catalogs can be imported as Semantic Knowledge Base and published using Linked Data principles, which would allow third-party agents to easily aggregate them. For example they can be published directly into the Google Knowledge Graph. The datasets can be then used for enriching and indexing copy content, product reviews or social networks, extracting mentions to the products and for instance analysing what the customers are saying about them. A powerful Semantic Search over the catalogs can also be provided.&lt;/p&gt;
+&lt;h2&gt;How we can help you!&lt;/h2&gt;
+&lt;p&gt;After several years spent in research and development of the core-technologies we&amp;#8217;re setting up a cloud infrastructure providing semantic technologies to help online publishers move from web pages to datasets.&lt;/p&gt;
+&lt;p&gt;In the next blog post we will introduce a Redlink based solution developed by Zaizi for enabling Semantic Publishing and Semantic Content Management on Drupal.&lt;/p&gt;
+&lt;a target="_self" class="mt-button small black square" href="http://redlink.co/contact-us/"&gt; Get in contact  &lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;input type="hidden" name="postId" value="2502" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/apache-marmotta/">
+<rss:title>Apache Marmotta is now a Top Level Apache Project</rss:title>
+<rss:link>http://redlink.co/apache-marmotta/</rss:link>
+<dc:subject>Apache Marmotta</dc:subject>
+<dc:subject>Blog</dc:subject>
+<rss:description>We are excited to announce that with the recent resolution of the board of directors of the Apache Software Foundation (ASF), the incubating project Apache Marmotta becomes a top-level project of the ASF. The idea behind Apache Marmotta of providing an Open Platform for Linked Data has been many years in the making. Therefore I [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Sebastian Schaffert</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;We are excited to announce that with the &lt;a href="http://markmail.org/message/tc5vrsmady3mdo42"&gt;recent resolution of the board of directors of the Apache Software Foundation&lt;/a&gt; (ASF), the incubating project Apache Marmotta becomes a top-level project of the ASF.&lt;/p&gt;
+&lt;p&gt;The idea behind &lt;a href="http://marmotta.apache.org/"&gt;Apache Marmotta&lt;/a&gt; of providing an Open Platform for Linked Data has been many years in the making. Therefore I would like to take this opportunity to provide a short history of &lt;a href="http://marmotta.apache.org/"&gt;Apache Marmotta&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span id="more-2435"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Short History of Apache Marmotta&lt;/strong&gt;&lt;/p&gt;
+&lt;div id="attachment_2436" class="wp-caption alignleft" style="width: 232px"&gt;&lt;a href="http://www.kiwi-project.eu/"&gt;&lt;img class="size-medium wp-image-2436 " title="KiWi Demo Award" alt="KiWi Demo Award" src="http://redlink.co/wp-content/uploads/2013/11/Screen-Shot-2013-11-22-at-11.55.54-222x300.png" width="222" height="300" /&gt;&lt;/a&gt;&lt;p class="wp-caption-text"&gt;KiWi Demo Award&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;The early days: KiWi&lt;/strong&gt;&lt;br /&gt;
+The core work on the technology essentially started with a EU funded project called KiWi (&lt;a href="http://www.kiwi-project.eu/"&gt;Knowledge in a Wiki)&lt;/a&gt; in 2008. KiWi investigated the idea of “Semantic Wikis” and aimed at combining easily editable web content with semantic web technologies to provide data to both human and machine users. KiWi was a very successful applied research project: the founding team of Marmotta &amp;#8211; &lt;a href="http://redlink.co/teammembers/sebastian-schaffert/"&gt;Sebastian Schaffert&lt;/a&gt; and &lt;a href="http://redlink.co/teammembers/thomas-kurz/"&gt;Thomas Kurz&lt;/a&gt; &amp;#8211; presented the idea of KiWi and Linked Data at a series of conferences. Highlights have been the &lt;a href="http://www.eswc2009.org/"&gt;6th European Semantic Web Conference in Heraklion, Greece&lt;/a&gt;, in June 2009 where we won the “Best Demonstration Award” and the demo at the &lt;a href="http://iswc2010.semanticweb.org/accepted-poster-demo/535"&gt;International Semantic Web Conference 2010 in Shanghai, China&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the current &lt;a href="http://marmotta.apache.org/source-repository.html"&gt;source code of Marmotta&lt;/a&gt; you can still find some of the components that originated in the &lt;a href="http://www.kiwi-project.eu/"&gt;KiWi project&lt;/a&gt;, most notably the triple store together with its rule-based reasoner and versioning &amp;#8211; of course now with several iterations of improvement and code rewriting to make it more stable and reliable so that now it can handle billions of triples with ease.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Teenage Years: Salzburg NewMediaLab and the Linked Media Framework&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The next big step after KiWi was the “&lt;a href="http://www.newmedialab.at/en/"&gt;Salzburg NewMediaLab&lt;/a&gt;” starting 2010, where the goal was to bring these technologies from research into real use with selected industry partners. Being a typical research project, KiWi featured many very advanced and experimental ideas that were cool to show but not stable enough to be used by thousands of users. So we decided that we need to take apart the complex KiWi system and take out the technologies that were stable enough. Also, we realised that most companies already have their content management system in place, so it does not make sense to replace it with a new system but rather augment their existing system with semantic technologies. Born was the “&lt;a href="http://lmf.googlecode.com "&gt;Linked Media Framework&lt;/a&gt;” or LMF.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="http://lmf.googlecode.com "&gt;Linked Media Framework&lt;/a&gt; took from KiWi the mentioned triple store and the semantic search functionality, and replaced the experimental content analysis of KiWi with the more reliable &lt;a href="http://stanbol.apache.org/"&gt;Apache Stanbol&lt;/a&gt;, which was anyways developed in the same team. The result was a sophisticated Linked Data application server, which is now in production use at several partners, e.g. the search engine of &lt;a href="http://search.salzburg.com/"&gt;SalzburgerNachrichten&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;At around this time (summer 2012), we also found out that there is some conceptual work going on at the World Wide Web Consortium regarding the specification of a “&lt;a href="http://www.w3.org/2012/ldp/wiki/Main_Page"&gt;Linked Data Platform&lt;/a&gt;” that does not only allow read access to a Linked Data server but also would support creating and updating data. In a way, we realised,&lt;/p&gt;
+&lt;p&gt;&lt;img class=" wp-image-2439 alignright" title="Linked Media Framework" alt="Linked Media Framework" src="http://redlink.co/wp-content/uploads/2013/11/Screen-Shot-2013-11-25-at-08.09.41.png" width="257" height="114" /&gt;&lt;/p&gt;
+&lt;p&gt;they were writing a specification about something quite similar than we had already developed and running. So we decided that it would make sense to separate the Linked Data part from content analysis and search again and publish it as a separate project, as an implementation of the Linked Data Platform.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Growing up: The Apache Way&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Realising that this could become a useful tool for a wide range of users and developers out there and seeing the success of Apache Stanbol, we decided that the best way would be to start a second project at the Apache Software Foundation, and contribute our existing code as a starting point. We proposed it as “Apache Linda” (for “LINked DAta”) at the&lt;a href="http://archive.apachecon.com/c/"&gt; ApacheCon Europe in Sinsheim&lt;/a&gt; (Germany) in November 2012. &lt;a href="http://redlink.co/teammembers/sergio-fernandez/"&gt;Sergio Fernández&lt;/a&gt; presented there &lt;a href="http://www.slideshare.net/Wikier/incubating-apache-linda"&gt;our idea&lt;/a&gt;, getting good feedback, so a couple of weeks later we finally submitted the proposal for incubation.&lt;/p&gt;
+&lt;p&gt;While we thought that Apache Linda is the greatest and best name for a project ever, we quickly learned that things are never so easy: over the short history of Computer Science, there have already been several projects called “&lt;a href="https://en.wikipedia.org/wiki/Linda_%28coordination_language%29"&gt;Linda&lt;/a&gt;”, and some of them apparently still raise negative feelings when thinking about them. So we had to find a new and better name. Now, anyone who ever had to think about a good name for a project knows how hard this can be. Long story made short: &lt;a href="http://markmail.org/message/xfvnx6dmyum75api"&gt;in the end we decided for “Marmotta&lt;/a&gt;”. Why? Because it is the Italian name for an animal that lives in the mountains around us. It digs big tunnel systems underground. It whistles. It is very social. It is very cute. Many Apache projects use animal names. And best of all: there was never a project called “Marmotta”!&lt;/p&gt;
+&lt;p&gt;So it came that Apache Marmotta became an &lt;a href="http://wiki.apache.org/incubator/MarmottaProposal"&gt;incubation project&lt;/a&gt; at the &lt;a href="http://www.apache.org/"&gt;Apache Software Foundation&lt;/a&gt; (ASF) in December 2012. We found great mentors in Andy Seaborne (of Jena), Fabian Christ (of Stanbol) and Nandana Mihindukulasooriya and started moving and polishing our code and clarifying legal issues to conform to the strict ASF guidelines. And we also got our first external committers: Raffaele Palmieri and Peter Ansell (of Sesame).&lt;/p&gt;
+&lt;p&gt;After 7 failed vote attempts, we finally managed with the &lt;a href="http://marmotta.apache.org/download.html"&gt;first release&lt;/a&gt; (3.0.0-incubating) of our software under the roof of the ASF on 24th April 2013. Luckily, the &lt;a href="http://marmotta.apache.org/download.html"&gt;second release&lt;/a&gt; (3.1.0-incubating) in October 2013 went much smoother and our mentors were insisting more and more that we leave the podling and graduate as top level project. &lt;img src='http://redlink.co/wp-includes/images/smilies/icon_wink.gif' alt=';-)' class='wp-smiley' /&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Graduation: Apache Marmotta, MSc&lt;/strong&gt;&lt;/p&gt;
+&lt;div id="attachment_2463" class="wp-caption alignleft" style="width: 281px"&gt;&lt;a href="http://redlink.co/wp-content/uploads/2013/11/Screen-Shot-2013-11-25-at-08.40.55.png"&gt;&lt;img class="size-full wp-image-2463 " alt="Graduated Apache Marmotta" src="http://redlink.co/wp-content/uploads/2013/11/Screen-Shot-2013-11-25-at-08.40.55.png" width="271" height="109" /&gt;&lt;/a&gt;&lt;p class="wp-caption-text"&gt;Graduated Apache Marmotta&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;After the &lt;a href="http://marmotta.apache.org/download.html"&gt;3.1.0-incubating release&lt;/a&gt;, things suddenly went on quickly. We decided it would be time to attempt graduation, as there were no further issues left to be clarified. We voted for &lt;a href="http://redlink.co/teammembers/jakob-frank/"&gt;Jakob Frank&lt;/a&gt; as Vice President, because he is most familiar with all the guidelines and with his formal background would be a good representative for the project in the ASF board. And Jakob prepared a proposal for the incubator board, which was voted on unanimously. He submitted our proposal for graduation to the ASF board, which decided on 20th November (again unanimously) that we are ready!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Road Ahead&lt;/strong&gt;&lt;br /&gt;
+Plans for the future? Well, after graduation the “the serious side of life” starts. Apache Marmotta is looking for volunteers to join the growing community. Contributions in bug-reports, usage hints, documentation and of course code patches &lt;a href="http://marmotta.apache.org/development.html"&gt;are welcome on any of the project’s mailing lists.&lt;/a&gt;&lt;/p&gt;
+&lt;input type="hidden" name="postId" value="2435" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/semanticweb-com-redlink/">
+<rss:title>Semanticweb.com: Redlink Brings The Semantic Web To Integrators</rss:title>
+<rss:link>http://redlink.co/semanticweb-com-redlink/</rss:link>
+<dc:subject>News</dc:subject>
+<rss:description>Appeared on semanticweb.com on November 11, 2013. An article by Jennifer Zaino -  A cloud-based platform for semantic enrichment, linked data publishing and search technologies is underway now at startup Redlink, which bills it as the world’s first project of its kind. Read the full Article on Semanticweb.com   </rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Andrea Volpini</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p&gt;Appeared on &lt;a href="http://semanticweb.com/redlink-brings-semantic-web-integrators/"&gt;semanticweb.com&lt;/a&gt; on November 11, 2013. An article by &lt;strong&gt;&lt;a href="http://semanticweb.com/author/jennyzaino/"&gt;Jennifer Zaino&lt;/a&gt; - &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A cloud-based platform for semantic enrichment, linked data publishing and search technologies is underway now at startup Redlink, which bills it as the world’s first project of its kind. &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=" alignnone" alt="Redlink logo" src="http://semanticweb.com/wp-content/uploads/sites/2/2013/11/relink.jpg" width="486" height="130" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;a href="http://semanticweb.com/redlink-brings-semantic-web-integrators/"&gt;Read the full Article on Semanticweb.com&lt;/a&gt; &lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://semanticweb.com/redlink-brings-semantic-web-integrators/"&gt; &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;input type="hidden" name="postId" value="2422" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/machine-linking-german/">
+<rss:title>Redlink und Machine Linking formen Partnerschaft für semantisches Enterprise Content Management</rss:title>
+<rss:link>http://redlink.co/machine-linking-german/</rss:link>
+<dc:subject>News</dc:subject>
+<dc:subject>Press Releases</dc:subject>
+<rss:description>Pressemeldung, Wien, 30. Oktober 2013  ährend dem Pioneers Festival, dem Europäischen Startup-Festival in Wien, kündigen Redlink und Machine Linking eine strategische Partnerschaft an, um Semantisches Content Enrichment and Discovery für Enterprise-Projekte bereitzustellen. &amp;#8220;Wir waren auf der Suche nach einem hochwertigen Anbieter für mehrsprachige Text- und Inhaltsanalyse. Nach sorgfältigem Benchmarking haben wir uns für Machine Linking [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">Andrea Volpini</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p dir="ltr"&gt;&lt;a target="_self" class="mt-button small black square" href="http://redlink.co/partnership-machine-linking/"&gt; English Version &lt;/a&gt;
+&lt;p dir="ltr"&gt;&lt;strong&gt;Pressemeldung, Wien, 30. Oktober 2013 &lt;/strong&gt;&lt;/p&gt;
+&lt;span class="dropcap3"&gt;W&lt;/span&gt;ährend dem Pioneers Festival, dem Europäischen Startup-Festival in Wien, kündigen Redlink und Machine Linking eine strategische Partnerschaft an, um Semantisches Content Enrichment and Discovery für Enterprise-Projekte bereitzustellen.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p dir="ltr"&gt;&amp;#8220;Wir waren auf der Suche nach einem hochwertigen Anbieter für mehrsprachige Text- und Inhaltsanalyse. Nach sorgfältigem Benchmarking haben wir uns für Machine Linking entschieden, einem jungen Startup mit einem starken Sprachportfolio und ausgezeichneten Funktionen für Annotationen und Begriffsklärung (Disambiguation). Dadurch baut Redlink sein Angebot von einfach einzusetzenden und interoperablen semantischen Komponenten aus&amp;#8221;, sagt Andrea Volpini, Marketing Director von Redlink.&lt;/p&gt;
+&lt;p dir="ltr"&gt;Paolo Lombardi, Mitgründer von Machine Linking, kommentiert, dass &amp;#8220;wir uns dazu entschieden haben, ausschießlich Top-Qualität in der semantischen Verarbeitung anzubieten. Der Markt ist sehr kompetitiv und ein Startup kann nur dann erfolgreich sein, wenn es sich auf bestimmte Kernaufgaben konzentriert und dabei Spitzenqualität liefert. Für den Enterprise-Markt haben wir in Redlink eine perfekte Ergänzung im Hinblick auf internationale Ausrichtung und Erfahrung in der Umsetzung gefunden.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p dir="ltr"&gt;In den vergangenen Monaten haben Redlink und Machine Linking Integrationen und Tests durchgeführt. Ein Produkt-Release für Content-Analyse und semantischem Tagging für den News- und Media-Publishing-Sektor ist bis Ende 2013 vorgesehen.&lt;/p&gt;
+&lt;h2&gt;Über Redlink&lt;/h2&gt;
+&lt;p dir="ltr"&gt;&lt;strong&gt;Redlink GmbH&lt;/strong&gt; (&lt;a href="http://redlink.co"&gt;http://redlink.co&lt;/a&gt;), mit Hauptsitz in Österreich, hilft Unternehmen dabei, Daten semantisch anzureichern, zu verlinken und zu suchen und dadurch die große Mengen von unstrukturierten Daten sinnvoller zu nutzen. Redlink ist das Unternehmen hinter den Open-Source-Projekten Apache Stanbol und Apache Marmotta und ist einem breiten Einsatz semantischer Technologien für Mission-Critical Anwendungen verpflichtet.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;a style="font-size: 13px; line-height: 19px;" href="http://redlink.co/wp-content/uploads/2013/03/logo-redlink-31.png"&gt;&lt;img class="alignnone  wp-image-1032" alt="redlink logo" src="http://redlink.co/wp-content/uploads/2013/03/logo-redlink-31-300x81.png" width="243" height="66" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Über Machine Linking&lt;/h2&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;strong&gt;Machine Linking srl&lt;/strong&gt; (&lt;a href="http://machinelinking.com"&gt;http://machinelinking.com&lt;/a&gt;) ist ein Startup in Trient, Italien, welches durch Mitarbeiter des internationalen Forschungsinstituts FBK im Jahr 2012 gegründet wurde. Es bietet mehrsprachige semantische Services über ein SaaS-API an.&lt;/p&gt;
+&lt;p&gt;Machine Linking unterstützt die DBPedia Community durch das AIRPedia Projekt für die automatische Verbesserung von Webseiten mit Machine-Learning Algorithmen.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;a style="font-size: 13px; line-height: 19px;" href="http://redlink.co/wp-content/uploads/2013/10/machinelinking-logo-1.jpg"&gt;&lt;img alt="machinelinking-logo-1" src="http://redlink.co/wp-content/uploads/2013/10/machinelinking-logo-1.jpg" width="240" height="141" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="callout-box clearfix"&gt;
+
+&lt;h4&gt;Medienkontakte&lt;/h4&gt;
+&lt;p dir="ltr"&gt;&lt;a title="John Pereira" href="http://redlink.co/teammembers/john-pereira/"&gt;John Pereira&lt;/a&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;Redlink GmbH&lt;/p&gt;
+&lt;p dir="ltr"&gt;+43 660 277 1228&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;a style="font-size: 13px; line-height: 19px;" href="mailto:john.pereira@redlink.co"&gt;john.pereira@redlink.co&lt;/a&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;
+&lt;p dir="ltr"&gt;&lt;a href="http://www.machinelinking.com/wp/about-us/" target="_blank"&gt;Alfiero Santarelli&lt;/a&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;Machine Linking S.r.l&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;a href="mailto:info@machinelinking.it"&gt;info@machinelinking.it&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;input type="hidden" name="postId" value="2401" /&gt;</content:encoded>
+</rss:item>
+<rss:item xmlns:rss="http://purl.org/rss/1.0/" rdf:about="http://redlink.co/partnership-machine-linking/">
+<rss:title>Redlink and Machine Linking form partnership on semantic content management for the enterprise</rss:title>
+<rss:link>http://redlink.co/partnership-machine-linking/</rss:link>
+<dc:subject>News</dc:subject>
+<dc:subject>Press Releases</dc:subject>
+<dc:subject>machine linking</dc:subject>
+<dc:subject>nlp</dc:subject>
+<dc:subject>partnership</dc:subject>
+<dc:subject>pioneers</dc:subject>
+<rss:description>Press release, Vienna, Austria - October 30, 2013 uring the Pioneers Festival (http://pioneers.io), the European Startup Festival taking place in Austria, Redlink and Machine Linking announced their strategic partnership to provide top quality semantic content enrichment and discovery for enterprise projects. Machine Linking and Redlink are two innovative startups focusing on the enterprise linked data sector and [...]</rss:description>
+<dc:creator xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">John Pereira</dc:creator>
+<content:encoded xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">&lt;p dir="ltr"&gt;&lt;a target="_self" class="mt-button small black square" href="http://redlink.co/machine-linking-german/"&gt; German Version &lt;/a&gt;
+&lt;p dir="ltr"&gt;&lt;strong&gt;Press release, Vienna, Austria - October 30, 2013&lt;/strong&gt;&lt;/p&gt;
+&lt;span class="dropcap3"&gt; D &lt;/span&gt;uring the Pioneers Festival (http://pioneers.io), the European Startup Festival taking place in Austria, Redlink and Machine Linking announced their strategic partnership to provide top quality semantic content enrichment and discovery for enterprise projects.&lt;/p&gt;
+&lt;p dir="ltr"&gt;Machine Linking and Redlink are two&lt;em&gt; innovative startups&lt;/em&gt; focusing on the &lt;em&gt;enterprise linked data sector&lt;/em&gt; and working on joint international business opportunities.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p dir="ltr"&gt;&amp;#8220;We are looking for multilingual Natural Language Processing providers delivering high quality content processing. After careful benchmarking and consideration we chose to partner with Machine Linking, a startup with a strong language portfolio and state-of-the-art annotation and disambiguation features. This helps Redlink to extend its offering for easy-to-deploy interoperable semantic components&amp;#8221;, said Andrea Volpini, marketing director of Redlink.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p dir="ltr"&gt;Paolo Lombardi, co-founder of Machine Linking, commented that &amp;#8220;we have taken the path of top-quality semantic processing: the market space is competitive, and a startup like ours can have a future only by focusing on a specific set of tasks and by delivering world-class experience. For the enterprise market we have chosen to rely on experienced partners with a wider offering and Redlink is a perfect match in terms of providing a complete semantic processing workflow and international orientation.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p dir="ltr"&gt;Redlink and Machine Linking have been performing integration and joint tests in the past months. A product release focused on content analysis and semantic tagging for the news and media publishing is due end of 2013.&lt;/p&gt;
+&lt;div id="attachment_2415" class="wp-caption aligncenter" style="width: 310px"&gt;&lt;a href="http://redlink.co/wp-content/uploads/2013/10/ML-web.jpg"&gt;&lt;img class="size-medium wp-image-2415 " alt="Deal done! " src="http://redlink.co/wp-content/uploads/2013/10/ML-web-300x170.jpg" width="300" height="170" /&gt;&lt;/a&gt;&lt;p class="wp-caption-text"&gt;Deal done!&lt;/p&gt;&lt;/div&gt;
+&lt;h2&gt;About Redlink&lt;/h2&gt;
+&lt;p dir="ltr"&gt;&lt;strong&gt;Redlink GmbH&lt;/strong&gt;  (&lt;a href="http://redlink.co/"&gt;http://redlink.co&lt;/a&gt;), headquartered in Austria, helps enterprises make sense of their data by semantically enriching, linking and searching the vast amounts of unstructured data. Redlink is the company behind the open source projects Apache Stanbol and Apache Marmotta, and is committed to the wide adoption of open source semantic technologies to support a broad set of mission-critical and real-time production uses.&lt;/p&gt;
+&lt;p&gt;&lt;a style="font-size: 13px; line-height: 19px;" href="http://redlink.co/wp-content/uploads/2013/03/logo-redlink-31.png"&gt;&lt;img class="alignnone  wp-image-1032" alt="redlink logo" src="http://redlink.co/wp-content/uploads/2013/03/logo-redlink-31-300x81.png" width="243" height="66" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;About Machine Linking&lt;/h2&gt;
+&lt;p&gt;&lt;strong style="font-size: 13px; line-height: 19px;"&gt;Machine Linking srl&lt;/strong&gt;&lt;span&gt; (&lt;/span&gt;&lt;a style="font-size: 13px; line-height: 19px;" href="http://machinelinking.com/"&gt;http://machinelinking.com&lt;/a&gt;&lt;span&gt;) is a startup based in &lt;span about="urn:enhancement-d4cd35be-9c48-ab4d-527b-27f979af9cad" class="textannotation highlight" id="urn:enhancement-d4cd35be-9c48-ab4d-527b-27f979af9cad" typeof="http://fise.iks-project.eu/ontology/TextAnnotation"&gt;Trento, Italy&lt;/span&gt;&lt;/span&gt;&lt;span&gt; founded in 2012 by collaborators of the international research institute FBK. It provides multilingual semantic services through a SaaS API. Machine Linking is contributing to the &lt;span about="urn:enhancement-581c516e-857d-81ee-8c1c-d4dbd71f868b" class="textannotation highlight" id="urn:enhancement-581c516e-857d-81ee-8c1c-d4dbd71f868b" typeof="http://fise.iks-project.eu/ontology/TextAnnotation"&gt;DBPedia&lt;/span&gt; &lt;/span&gt;&lt;span&gt;community through the AIRPedia project, automatically enhancing classes and pages via machine learning algorithms.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://redlink.co/wp-content/uploads/2013/10/machinelinking-logo-1.jpg"&gt;&lt;img alt="machinelinking-logo-1" src="http://redlink.co/wp-content/uploads/2013/10/machinelinking-logo-1.jpg" width="240" height="141" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="callout-box clearfix"&gt;
+
+&lt;h4&gt;Media Contacts&lt;/h4&gt;
+&lt;p dir="ltr"&gt;&lt;a title="John Pereira" href="http://redlink.co/teammembers/john-pereira/"&gt;John Pereira&lt;/a&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;Redlink GmbH&lt;/p&gt;
+&lt;p dir="ltr"&gt;+43 660 277 1228&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;a style="font-size: 13px; line-height: 19px;" href="mailto:john.pereira@redlink.co"&gt;john.pereira@redlink.co&lt;/a&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;
+&lt;p dir="ltr"&gt;&lt;a title="Andrea Volpini" href="http://redlink.co/andreavolpini/"&gt;Andrea Volpini&lt;/a&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;Redlink GmbH&lt;/p&gt;
+&lt;p dir="ltr"&gt;+39 348 761 7242&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;a href="mailto:andrea.volpini@redlink.co"&gt;andrea.volpini@redlink.co&lt;/a&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;
+&lt;p dir="ltr"&gt;&lt;a href="http://www.machinelinking.com/wp/about-us/" target="_blank"&gt;Alfiero Santarelli&lt;/a&gt;&lt;/p&gt;
+&lt;p dir="ltr"&gt;Machine Linking S.r.l&lt;/p&gt;
+&lt;p dir="ltr"&gt;&lt;a href="mailto:info@machinelinking.it"&gt;info@machinelinking.it&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;input type="hidden" name="postId" value="2386" /&gt;</content:encoded>
+</rss:item>
+</rdf:RDF>

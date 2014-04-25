@@ -1,7 +1,12 @@
-/*
- * Danny Ayers Oct 24, 2004
- * http://dannyayers.com
+/**
+ * TODO revisit
+ * feedreader-prototype
+ *
+ * FileEntrySerializer.java
  * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.io;
 

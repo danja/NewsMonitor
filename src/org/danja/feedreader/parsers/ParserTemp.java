@@ -1,6 +1,12 @@
-/*
- * Danny Ayers Aug 18, 2004 http://dannyayers.com
- *  
+/**
+ * TODO revisit
+ * feedreader-prototype
+ *
+ * ParserTemp.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.parsers;
 

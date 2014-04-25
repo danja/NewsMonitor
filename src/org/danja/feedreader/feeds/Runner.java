@@ -1,4 +1,4 @@
-/** @todo RETIREME
+/** TODO RETIREME
 */
 package org.danja.feedreader.feeds;
 

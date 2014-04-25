@@ -1,7 +1,11 @@
-/*
- * Danny Ayers Oct 30, 2004
- * http://dannyayers.com
+/**
+ * feedreader-prototype
+ *
+ * FormatSniffer.java
  * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.social;
 

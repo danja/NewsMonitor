@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <foaf:PersonalProfileDocument rdf:about="">
+    <foaf:maker rdf:resource="http://www.jenitennison.com/#me"/>
+    <foaf:primaryTopic rdf:resource="http://www.jenitennison.com/#me"/>
+  </foaf:PersonalProfileDocument>
+  <foaf:Person rdf:about="http://www.jenitennison.com/#me">
+    <foaf:name>Jeni Tennison</foaf:name>
+    <foaf:honorificPrefix>Dr</foaf:honorificPrefix>
+    <foaf:givenName>Jeni</foaf:givenName>
+    <foaf:familyName>Tennison</foaf:familyName>
+    <foaf:nick>JeniT</foaf:nick>
+    <foaf:myersBriggs>INFP</foaf:myersBriggs>
+    <foaf:birthday>05-30</foaf:birthday>
+    <foaf:mbox rdf:resource="mailto:jeni@jenitennison.com" />
+    <foaf:openid rdf:resource="http://www.jenitennison.com/" />
+    <foaf:msnChatID>jeni@jenitennison.com</foaf:msnChatID>
+    <foaf:skypeID>jenitennison</foaf:skypeID>
+    <foaf:homepage rdf:resource="http://www.jenitennison.com/"/>
+    <foaf:weblog rdf:resource="http://www.jenitennison.com/blog/" />
+    <foaf:weblog rdf:resource="http://jenit.posterous.com/" />
+    <foaf:account>
+      <foaf:OnlineAccount rdf:resource="http://www.twitter.com/JeniT">
+        <foaf:accountServiceHomepage rdf:resource="http://www.twitter.com/"/>
+        <foaf:accountName>JeniT</foaf:accountName>
+      </foaf:OnlineAccount>
+    </foaf:account>
+    <foaf:account>
+      <foaf:OnlineAccount rdf:resource="http://uk.linkedin.com/in/jenit">
+        <foaf:accountServiceHomepage rdf:resource="http://www.linkedin.com/"/>
+        <foaf:accountName>jeni@jenitennison.com</foaf:accountName>
+      </foaf:OnlineAccount>
+    </foaf:account>
+    <owl:sameAs rdf:resource="http://semantictweet.com/JeniT#me" />
+  </foaf:Person>
+</rdf:RDF>

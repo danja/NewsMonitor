@@ -1,7 +1,11 @@
-/*
+/**
+ * feedreader-prototype
+ *
+ * CleanerInterpreter.java
  * 
- * Danny Ayers Oct 31, 2004 http://dannyayers.com
- *  
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.social;
 

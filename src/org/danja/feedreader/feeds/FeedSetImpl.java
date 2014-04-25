@@ -1,3 +1,13 @@
+/**
+ * TODO RETIRE
+ * feedreader-prototype
+ *
+ * FeedSetImpl.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.feeds;
 
 import java.util.Collection;
@@ -6,16 +16,15 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Set;
 
+import org.danja.feedreader.main.Configuration;
+
 /**
  * Implements set of feeds
  * 
- * @version $Revision$
  *  
  */
 public class FeedSetImpl implements FeedSet {
 
-    private final int SLEEP_PERIOD = 1000;
-    
     private LinkedList feedQueue;
 
     public FeedSetImpl() {
@@ -60,13 +69,13 @@ public class FeedSetImpl implements FeedSet {
         FeedFetcher feed;
         while (iterator.hasNext()) {
             feed = (FeedFetcher) iterator.next();
-            System.out.println("Checking: " + feed.getURIString());
+            System.out.println("\n\nChecking: " + feed.getURIString());
             feed.refresh();
             if(feed.shouldExpire()){
                 expiring.add(feed);
             }
             try {
-                Thread.sleep(SLEEP_PERIOD);
+                Thread.sleep(Configuration.PER_FEED_SLEEP_PERIOD);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

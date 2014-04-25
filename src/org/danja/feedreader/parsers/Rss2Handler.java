@@ -1,3 +1,12 @@
+/**
+ * feedreader-prototype
+ *
+ * RSS2Handler.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.parsers;
 
 import org.danja.feedreader.feeds.Entry;

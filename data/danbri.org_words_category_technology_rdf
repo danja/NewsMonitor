@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	>
+<channel rdf:about="http://danbri.org/words">
+	<title>danbri&#039;s foaf stories &#187; Technology</title>
+	<link>http://danbri.org/words</link>
+	<description>An occasional blog.</description>
+	<dc:date>2014-01-13T13:40:00Z</dc:date>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="http://wordpress.org/?v=3.0.4" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://danbri.org/words/2014/01/10/855"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2013/01/13/815"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2012/07/23/800"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2012/07/18/793"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2012/07/18/788"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2012/07/10/783"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2012/07/03/779"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2011/12/08/761"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2011/11/03/753"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2011/10/11/720"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2011/06/20/717"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2011/06/19/711"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2011/05/11/701"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2011/05/10/675"/>
+					<rdf:li rdf:resource="http://danbri.org/words/2011/02/01/658"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://danbri.org/words/2014/01/10/855">
+	<title>OpenStreetMap for disaster response &#8211; raw notes from Harry Wood talk</title>
+	<link>http://danbri.org/words/2014/01/10/855</link>
+	 <dc:date>2014-01-10T15:52:01Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[General]]></dc:subject>
+		<dc:subject><![CDATA[Geo]]></dc:subject>
+	<description>Very raw, sometimes verbatim but doubtless flawed notes from Harry Wood&#8216;s excellent talk at Open Data Institute in London. #odifridays Many thanks to Harry for a great talk and to ODI for putting together these lunchtime lectures. The ODI have also published slides and audio from the talk. &#8220;An introduction to OpenStreetMap, the UK born [...]</description>
+	<content:encoded><![CDATA[<p>Very raw, sometimes verbatim but doubtless flawed notes from <a href="https://twitter.com/harry_wood">Harry Wood</a>&#8216;s excellent talk at Open Data Institute in London. #odifridays</p>
+<p>Many thanks to Harry for a great talk and to ODI for putting together these <a href="http://theodi.org/lunchtime-lectures">lunchtime lectures</a>. The ODI have also published <a href="slides/audio http://theodi.org/lunchtime-lectures/friday-lunchtime-lecture-typhoon-crisis-mapping-with-openstreetmap">slides and audio</a> from the talk.</p>
+<div id="_mcePaste">&#8220;An introduction to OpenStreetMap, the UK born project to map the world as open data, and a look at how volunteer mappers helped with disasterÂ response in the Philippines after Typhoon Haiyan, with Harry Wood . Harry is a developer at transportAPI.com, and is on the board of the Humanitarian OpenStreetMap Team.&#8221;</div>
+<div></div>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Note: this is un-checked, very raw notes that I typed while listening. There will be mistakes and confusions; my fault not Harry&#8217;s!</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Typhoons &#8230;phillipines area hammered during typhoon season. The typhoons often meander off, don&#8217;t hit coast. But this one hit, and fast, &#8230; so a big storm surge. Fastest wind speeds on record &#8216;biggest storm ever&#8217;.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">[shows video clip]</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">More than 6000 died. Role of mapping in disaster responses: food shelter etc; can donate money directly for giving food. Â Info / logistics challenge re delivering aid. Lots of &#8216;where?&#8217; questions. Where are people suffering most;? Where to deliver aid to? team locations etc.Â <span style="line-height: 1.15; font-size: 13px;">Huge value of maps for disaster response.</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Q: who has edited OSM? A: lots of hands raised.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Maps &#8230; GIS / vector data will always be a bit complex, but we try to dumb it down. The data model is also v stripped down, just tagged nodes and ways. e.g. a pub is a node with amenity=pub. It&#8217;s also renderable map -&gt; viewed as a map on openstreetmap.org, &#8230; but we play down that aspect a bit, since there are other map providers around e.g. Google.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="line-height: 1.15; font-size: 13px;">But the maps are a important aspect of disaster response.</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">OSM editing -&gt; appear on map can take ~ 10 mins.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">This is quite a technical hit. There&#8217;s a rendering server here in London; aspect of providing a feedback loop (editing -&gt; new map). Â A shared commons for geo data.Â <span style="line-height: 1.15; font-size: 13px;">AID orgs get excited &#8230; coming together sharing same platform. OSM is very much about raw data too, not just the maps. So this is different to pure map providers, &#8230; entirely open access to the raw data.</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">In terms of the humanitarian response, &#8230; agencies can take the data unencumbered, use it offline. It is open data. there is an exciting open data story for OSM.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">As humanitarian work, it can be a problem that we allow commercial re-use &#8211; [not all orgs welcome that]</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Community + Raw vector data + simple editing + Updated map &#8212; these 4 elements make it very attractive to humanitarian work.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Haiti in 2010, collab came together very quickly, for the two worst-hit cities (port au Prince and &#8230;). This speed was v useful for aid orgs; those orgs were printing it out, in tents, response centres. People used it on the web too, Ushahidi too, ie they&#8217;re a bit more accurate due to these improvements.</p>
+<p>&#8220;my favourite use: &#8221; &#8230; a Garmin handheld GPS unit, &#8230; loaded with data from open ecosystem, used offline Â quintessential use case of raw data from OSM but also life-saving. Since haiti, there have been other disasters. Not all of these so suited to OSM helping out &#8211; e.g. massive pakistan floods, &#8230; harder to map such a larger area. Couldn&#8217;t get imagery for that entire area.</p>
+<p>To some extent there are pakistan maps already; less so for Haiti. Similarly re Japan, already were maps.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">re Sendai tsunami, .. yes there were free maps; yes there were high quality official maps, &#8230; but could you get hold of recently updated freely avail high quality maps? so still some role there.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Since then, organizing more: Tasking Manager, tasks.hotosm.org</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 13px; line-height: 19px;">A common Q: &#8216;where to start mapping?&#8217;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Way of coordinating for a large area. Drop a grid, get people to acquire a square, &#8230; load into editor, &#8216;done&#8217; when done. This workflow came into its own during Philippines. Sometimes in resp to an aid agency request, &#8230; or as we have imagery, â¦ Visualizing changesets, .. bounding boxes slide, Philippines editing traffic [slide] brand new, made last night, Â &#8230; got up to almost 300 users involved on 1 day.Â <span style="line-height: 1.15; font-size: 13px;">No of changes (philippines) ~ 40,000 edits.</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="line-height: 1.15; font-size: 13px;"><br />
+</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Peak in interest corresponds in interest, corresponds to general interest [shows google trends], though shows a slightly longer attention span. Want the spike further over to the left,&#8230; the sooner the better, e.g. as aid agencies may be taking a snapshot of our data, &#8230;</p>
+<p>Graph showing new users &#8230; ppl who appear to have registered during the time of the disaster response, Â shows also &#8216;old timers&#8217; getting engaged earlier, few days lag for the newer users.</p>
+<p>We have a humanitarian mapping style, &#8230; not the default OSM view Â we tweaked it slightly &#8211; e.g. toÂ <span style="line-height: 1.15; font-size: 13px;">show a red outline around buildings appear to be damaged. Getting mappers to look at post-disaster imagery, e.g. buildings that have been swept away with water. More examples of data getting used: map posters popular with aid agencies; they fly out now with a cardboard roll full of osm posters. In particular red cross heavily involved.</span></p>
+<p><span style="line-height: 1.15; font-size: 13px;"> </span><span style="line-height: 1.15; font-size: 13px;">In UK office down in Moorgate, used tasking manager there, contributing to OSM to improve the printouts they were getting. Ways to help: hot.openstreetmap.org/donate; comms, blogging, coordination, wiki, promo videos and tutorials, imagery warping / tiling / hosting;</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">software dev&#8217;t, use the open data; build tools to work with it, &#8230;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Gateway skill: learn to map!</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">[end]</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">A Quick demo.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 15px; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Shows tasking manager UI from tasks.hotosm.org</p>
+</li>
+<li style="list-style-type: disc; font-size: 15px; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">colour coded squares either mapped, or mapped and validated by a 2nd reviewer</p>
+</li>
+<li style="list-style-type: disc; font-size: 15px; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">click to acquire a square, then to invoke OSM editor of choice e.g. JOSM</p>
+</li>
+<li style="list-style-type: disc; font-size: 15px; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">alternative &#8211; edit directly in website via js-based UI</p>
+</li>
+<li style="list-style-type: disc; font-size: 15px; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">we tend to teach new users the JOSM GUI</p>
+</li>
+<li style="list-style-type: disc; font-size: 15px; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">shows workflow of marking a road (nodes/ways) picking up from work in &#8216;someone else&#8217;s square&#8217;</p>
+</li>
+</ul>
+<p>Comment from a Nigel of mapaction <a style="line-height: 1.15; text-decoration: none;" href="http://www.mapaction.org/">http://www.mapaction.org/</a> v supportive, &#8216;used it all the time&#8217;. &#8216;last few emergencies, â¦ this stuff is pervasive, if it wasn&#8217;t there we&#8217;d be really struggling&#8217;.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Comment from Andrew Bâ¦ (british red cross) the volunteer aspect as well, â¦ between us and mapaction, it&#8217;s the volunteers that make it happen, &#8230;</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Q to audience, for Haiyan, lessons?</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Andew points to row of British red cross mapping volunteers &#8211; &#8216;we&#8217;re coordinating w/ US red cross, federation, â¦ Â they&#8217;re dealing with those in the area; whereas Nigel is using it on the ground in this area that&#8217;s going out tomorrow. We were doing situational reports, who-what-where-when eg risk vs need vs capabilities, â¦ understanding that kind of stuff.Â <span style="line-height: 1.15; font-size: 13px;">This gives us underlying map, to support all this.</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Q re coordination. Nigel of mapaction &#8220;Maps are coordination glue&#8221;; Harry Â &#8221;everything has a location aspect.&#8221;</p>
+<p>Ed Parsons Q: &#8220;v interested Â in task manager element â¦ if you had the info before, that&#8217;s hugely valuable how successful ? how do you motivate ppl to map an area they&#8217;ve not thought about?</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Harry: many people motivated by seeing it on the news, &#8230;in Â a way a shame as better if happens ahead of time, â¦ work on that under disaster risk reduction.Â <span style="line-height: 1.15; font-size: 13px;">e.g. in Indonesia we have extensive mapping work, as it lies on a fault line, risk assessment, â¦ </span><span style="line-height: 1.15; font-size: 13px;">trying to get a map of every building, get people to draw around buildings . But there&#8217;s less enthusiasm for these things before they&#8217;re needed.</span></p>
+<p>Harry: gratifying that tasking manager is software we&#8217;ve dev&#8217;t reasonably, that HOT as an org has matured as a community, we have etiquette ar ound using the tasking manager, fell into place naturally.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Ivan (doctors without borders): 2nds Nigel&#8217;s point Â re lifesaving we have years, decades of health data. People telling us where ppl are from â¦Â <span style="line-height: 1.15; font-size: 13px;">To understand epidemic patterns â¦ in haiti we couldn&#8217;t find src of the outbreaks (despite Snow/cholera analogy) â¦ because we can&#8217;t get raw usable data that correlates to what people report as their place of origin and where they got sick. Wokring w/ OSM. Some success in Phillipines, â¦ more challenge in Congo &amp; other area. Aim to be able to correlate places reported from walk-in patients to a real world place, and get into forecasting and preventative medicine. Struggling to achieve in these situations what europe had 150 years ago.</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="line-height: 1.15; font-size: 13px;"><br />
+</span></p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Harry: importance of geocoding from names</p>
+<p>Ivan: every person in the world has some description for where they liveÂ <span style="line-height: 1.15; font-size: 13px;">If it&#8217;s a streetname/number that&#8217;s easy; if its&#8217; directions from a b-b tree that&#8217;s harder. But can make a start, ideally 1-200M, but kilometers better than nothing. We sit on piles of data that we can&#8217;t correlate to anything so far.</span></p>
+<p>Biggest single impediment is access to imagery? get other providers to do as BIngâ¦</p>
+<p>Harry: the challenge for imagery providers is that it is worth money, which is why they put satellites or fly the planes, so can&#8217;t eat away at that too much. OFten you&#8217;ll see data made availaable temporarily after emergency . For example re Pakistan, downgraded/fuzzy quality data was shared. There are some agreements in place, â¦ us govt put in place frameworks to source data. For example that the imagery can only be used in an OSM editor. But need to be able to derrive vector data from it (hence there are issues with using Google imagery in this way).</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Luke Cayley(sp?): <a style="text-decoration: none;" href="https://www.gov.uk/government/organisations/department-for-international-development">https://www.gov.uk/government/organisations/department-for-international-development</a> (missed). concur w/ Nigel, Ivan. Q re imagery: have you tried to get it from European disaster mechanism, Copernicus, which has some provisions for disaster readyness prep.</p>
+<p>Harry: will follow up on this.</p>
+<p>Luke Q: how aid agencies use the raw data in the field to collect data? eg. MSF, â¦ What&#8217;s your feeling for the barriers to making this a well recognised procedure, using OSM as one of the tools to make that happen?</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Harry: did start to discuss re Phillipines, â¦ about data into OSM from on the ground teams. With Haiti streetnames you don&#8217;t get them from the raw imagery so needs on-the-ground gathering. The process for on the ground gathering is pretty mature around OSM, tools, mobile apps etc. But a case of getting ppl interested in doing that. In diaster response situatoin, it is hard to tell peopel they ought to be writing down names of streets.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Q: for DFID Luke, â¦ a number of funds are available. Because OSM is a global public good, it is the kind of thing DFID would tend to be supportive of in funding proposals (but can&#8217;t promise).</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Harry: re diaster situation, often it won&#8217;t be a priority during the diaster to collect street names. All it takes is geo-located photos, a snap of a street sign.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Q from someone  called Chris â¦ you spoke of satellite imagery as source for mapping. Are you exploring use of pro-sumer vs aerial imagery?</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">Harry: Satellite imagery is now approaching aerial photography quality, but remains expensive due to operational cost. Another cost is the vast amount of disk space, bandwidth, hosting costs. These problems are not insurmountable. OSM and HOT have some resources to help here &#8211; &#8216;talk to us&#8217;. Â Aerial imagery historically has been better. If you look at Bing or Google &#8216;satellite&#8217; images they&#8217;re often from planes, so yes, that can help. Also new area of drones over small (but maybe important) areas.</p>
+<p style="line-height: 1.15; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr">
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2013/01/13/815">
+	<title>Remembering Aaron Swartz</title>
+	<link>http://danbri.org/words/2013/01/13/815</link>
+	 <dc:date>2013-01-13T16:43:08Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Activism]]></dc:subject>
+		<dc:subject><![CDATA[Essays]]></dc:subject>
+		<dc:subject><![CDATA[FOAF]]></dc:subject>
+		<dc:subject><![CDATA[History]]></dc:subject>
+		<dc:subject><![CDATA[RSS/Atom]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[swig]]></dc:subject>
+	<description>&#8220;One of the things the Web teaches us is that everything is connected (hyperlinks) and we all should work together (standards). Too often school teaches us that everything is separate (many different &#8216;subjects&#8217;) and that we should all work alone.&#8221; &#8211;Aaron Swartz, April 2001. So Aaron is gone. We were friends a decade ago, and [...]</description>
+	<content:encoded><![CDATA[<blockquote><p><span style="font-family: arial, helvetica, sans-serif; font-size: small; line-height: normal;">&#8220;One of the things the Web teaches us is that everything is connected (hyperlinks) and we all should work together (standards). Too often school teaches us that everything is separate (many different &#8216;subjects&#8217;) and that we should all work alone.&#8221; &#8211;</span><span style="font-size: 13px; line-height: 19px;"><a href="http://web.archive.org/web/20010606020717/http://www.sunday-times.co.uk/news/pages/sti/2001/04/29/stidordor03001.html">Aaron Swartz, April 2001.</a></span></p></blockquote>
+<p>So Aaron is gone. We were friends a decade ago, and drifted out of touch; I thought we&#8217;d cross paths again, but, well, no.</p>
+<p>Update: MIT&#8217;s report is <a href="http://www.theguardian.com/technology/2013/jul/31/aaron-swartz-mit-report-family-critical">published</a>.</p>
+<p>Â I&#8217;ll <a href="http://rememberaaronsw.tumblr.com/">remember</a> him always as the bright kid whoÂ <a href="http://lists.foaf-project.org/pipermail/foaf-dev/2000-August/004214.html">showed up</a> in the early data sharing Web communities around RSS, FOAF and W3C&#8217;s RDF, a dozen years ago:</p>
+<pre style="font-size: 12px; line-height: 18px;">"Hello everyone, I'm Aaron. I'm not _that_ much of a coder, (and I don't know
+much Perl) but I do think what you're doing is pretty cool, so I thought I'd
+hang out here and follow along (and probably pester a bit)."</pre>
+<p>Aaron was from the beginning a powerful combination of smart, creative, collaborative and idealistic, and was drawn to <a href="http://www.aaronsw.com/weblog/mylifewithtim">groups</a> of developers and activists who shared his passion for what the Web could become. He joined <a href="http://www.aaronsw.com/2002/rdf-mediatype.html">and helped </a>the RSS 1.0 and W3C <a href="http://www.w3.org/2001/sw/RDFCore/20010801-f2f/">RDF</a> groups, and more often than not the difference in years didn&#8217;t make a difference. I&#8217;ve seen far more childishness from adults in the standards scene, than I ever saw from young Aaron. <span>TimBL </span><a href="http://lists.w3.org/Archives/Public/semantic-web/2013Jan/0031.html">has it right</a>; &#8220;we have lost one of our own&#8221;. He was something special that &#8216;child genius&#8217; doesn&#8217;t come close to capturing. Aaron was a regular in the early &#8217;24&#215;7 hack-and-chat&#8217; RDF IRC scene, and it&#8217;s fitting that the first lines logged in that group&#8217;s <a href="http://chatlogs.planetrdf.com/rdfig/2001-03-13.html">archives</a> are from him.</p>
+<p>I can&#8217;t help but picture an alternate and fairer universe in which Aaron made it through and got to be the cranky old <a href="http://www.flickr.com/photos/nicecupoftea/2961350638/">geezer</a> at conferences in the distant shiny future. He&#8217;d have made a great <a href="http://w3.gorge.net/love26/book.htm">William Loughborough</a>; a mutual friend and collaborator with whom he shared a tireless impatience at the pace of progress, the need to ask &#8216;<a href="http://lists.w3.org/Archives/Public/www-rdf-interest/2000Oct/0131.html">when</a>?&#8217;, to always <a href="http://blog.demandprogress.org/campaigns">Demand Progress.</a></p>
+<p>I&#8217;ve been reading old IRC chat logs from 2001. Within months of his &#8216;I&#8217;m not _that_ much of a coder&#8217; Aaron was writing Python code for accessing experimental RDF query services (and teaching me how to do it, disclaiming credit, &#8216;However you like is fine&#8230; I don&#8217;t really care.&#8217;). He was writing  <a href="http://logicerror.com/theyrulerdftrialrules">rules</a> in TimBL&#8217;s experimental logic language N3, applying this to modellingÂ <a href="http://www.rdfweb.org/foaf/corp/intro.html">corporate ownership</a> structures rather than as an academic exercise, and as ever <a href="http://www.w3.org/Illustrations/LetsShare.ai.gif">sharing</a> what he knew by  <a href="http://logicerror.com/theyRuleRDFTrial"> writing</a> about his work in the Web. Reading some old chats, we talked about the difficulties of distributed collaboration, debate and disagreement, personalities and their clashes, working groups, and the Web.</p>
+<p>I thought about sharing some of that, but I&#8217;d rather just share him as I choose to remember him:</p>
+<div id="_mcePaste"><span style="font-size: 13px; line-height: 19px;">22:16:58 &lt;AaronSw&gt;	LOL</span></div>
+<div><span style="font-size: 13px; line-height: 19px;"><img class="alignright" title="Aaron at RDFIG F2F 2001" src="http://swordfish.rdfweb.org/photos/2001/03/07/000408.JPG" alt="" width="640" height="480" /></span></div>
+<p><img class="alignright" title="Aaron with Ted and Doug" src="http://www.w3.org/2001/sw/RDFCore/20010801-f2f/Aaron-with-Ted-Doug.jpg" alt="" width="533" height="400" /></p>
+<p><span style="font-size: 13px; line-height: 19px;"><a href="http://danbri.org/words/wp-content/uploads/2013/01/AaronWilliam2958310660_c502041129_o.jpg"><img class="size-full wp-image-818 alignright" title="Aaron and William" src="http://danbri.org/words/wp-content/uploads/2013/01/AaronWilliam2958310660_c502041129_o.jpg" alt="" width="480" height="640" /></a></span></p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2012/07/23/800">
+	<title>Learning WebGL on your iPhone: Radial Blur in GLSL</title>
+	<link>http://danbri.org/words/2012/07/23/800</link>
+	 <dc:date>2012-07-23T11:43:59Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Image Description]]></dc:subject>
+		<dc:subject><![CDATA[Project ideas]]></dc:subject>
+		<dc:subject><![CDATA[Technology]]></dc:subject>
+		<dc:subject><![CDATA[Web Technology]]></dc:subject>
+		<dc:subject><![CDATA[coding]]></dc:subject>
+	<description>A misleading title perhaps, since WebGL isn&#8217;t generally available to iOS platform developers. Hacks aside, if you&#8217;re learning WebGL and have an iPhone it is still a very educational environment. WebGL essentially wraps OpenGL ES in a modern Web browser environment. You can feed data in and out as textures associated with browser canvas areas, [...]</description>
+	<content:encoded><![CDATA[<p>A misleading title perhaps, since WebGL isn&#8217;t generally available to iOS platform developers. <a href="http://atnan.com/blog/2011/11/07/amazing-response-to-my-ios-webgl-hack/">Hacks</a> aside, if you&#8217;re learning WebGL and have an iPhone it is still a very educational environment. WebGL essentially wraps OpenGL ES in a modern Web browser environment. You can feed data in and out as textures associated with browser canvas areas, manipulating data objects either per-vertex or per-pixel by writing &#8216;vertex&#8217; and &#8216;fragment&#8217; shaders in the GLSL language. Although there are fantastic tools out there like <a href="http://mrdoob.github.com/three.js/">Three.js</a> to hide some of these details, sooner or later you&#8217;ll encounter <a href="http://en.wikipedia.org/wiki/GLSL">GLSL</a>. The iPhone, thanks to tools like <a href="http://glslstudio.com/">GLSL Studio</a> and <a href="http://itunes.apple.com/us/app/paragraf/id422685475?mt=8">Paragraf</a>, is a great environment for playing with GLSL. And playing is a great way of learning.</p>
+<p><a title="Radial Blur GLSL by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/7625426836/"><img class="alignright" src="http://farm8.staticflickr.com/7255/7625426836_a3f0543746.jpg" alt="Radial Blur GLSL" width="266" height="400" /></a></p>
+<p>GLSL fragment shaders are all about thinking about visuals &#8220;per-pixel&#8221;. You can get a quick feel for what&#8217;s possible by exploring the <a href="http://glsl.heroku.com/">GLSL Sandbox</a> site. The sandbox lets you live-edit GLSL shaders, which are then applied to a display area with trivial geometry &#8211; the viewing area is just two big triangles. See IÃ±igo Quilez&#8217;s <a href="http://www.iquilezles.org/live/index.htm">livecoding videos</a> or &#8216;<a href="http://www.iquilezles.org/www/material/nvscene2008/nvscene2008.htm">rendering worlds with two triangles</a>&#8216;Â for more inspiration.</p>
+<p>All of which is still rocket science to me, but I was surprised at how accessible some of these ideas and effects can be. Back to the iPhone: using Paragraf, you can write GLSL fragment shaders, whose inputs include multi-touch events and textures from device cameras and photo galleries. This is more than enough to learn the basics of GLSL, even with realtime streaming video. Meanwhile, back in your Web browser, the new WebRTC video standards work is making such streams <a href="http://learningthreejs.com/blog/2012/02/07/live-video-in-webgl/">accessible</a> <a href="http://learningthreejs.com/blog/2012/04/12/video-conference-on-top-of-webgl/">to WebGL</a>.</p>
+<p>Here is a quick example based onÂ <a href="https://twitter.com/BKcore">Thibaut Despoulain</a>&#8216;s recent <a href="http://bkcore.com/blog/tag/WebGL.html">three.js-based tutorials</a> showing techniques for compositing, animation and glow effects in WebGL. Â His <a href="http://bkcore.com/blog/3d/webgl-three-js-volumetric-light-godrays.html">Volumetric Light Approximation</a> post provides a fragment shader for computing <a href="http://bkcore.com/blog/3d/webgl-three-js-volumetric-light-godrays.html">radial blur</a>, see his <a href="http://demo.bkcore.com/threejs/webgl_tron_godrays.html">live demo</a> for a control panel showing all the parameters that can be tweaked. Thanks to Paragraf, we can also adapt that shader to run on a phone, blurring the camera input around the location of the last on-screen touch (&#8216;t1&#8242;). Here is the original, <a href="https://github.com/BKcore/Three.js-experiments-pool/blob/master/r48/js/extras/Shaders.js#L36">embedded</a> within a .js library. And here is a cut down version adapted to use the pre-declared structures from Paragraf (or see <a href="https://gist.github.com/3163175">gist</a> for cleaner copy):</p>
+<pre>
+<div id="_mcePaste">vec3 draw() {</div>
+<div id="_mcePaste">Â  vec2 vUv = p;</div>
+<div id="_mcePaste">Â  float fX=t1.x, fY=t1.y, illuminationDecay = 1.0,</div>
+<div id="_mcePaste">Â  fExposure = 0.2, fDecay = 0.93,</div>
+<div id="_mcePaste">Â  fDensity = .3, fWeight = 0.4, fClamp = 1.0;</div>
+<div id="_mcePaste">Â  const int iSamples = 8;</div>
+<div id="_mcePaste">Â  vec2 delta = vec2(vUv-vec2(fX,fY))/float(iSamples)*fDensity,</div>
+<div id="_mcePaste">       coord = vUv;</div>
+<div id="_mcePaste">Â  vec4 FragColor = vec4(0.0);</div>
+<div id="_mcePaste">Â  for(int i=0; i &lt; iSamples ; i++) Â {</div>
+<div id="_mcePaste">Â  Â  coord -= delta;</div>
+<div id="_mcePaste">Â  Â  vec4 texel = vec4( cam(coord), 0.0);</div>
+<div id="_mcePaste">Â  Â  texel *= illuminationDecay * fWeight;</div>
+<div id="_mcePaste">Â  Â  FragColor += texel;</div>
+<div id="_mcePaste">Â  Â  illuminationDecay *= fDecay;</div>
+<div id="_mcePaste">Â  }</div>
+<div id="_mcePaste">Â  FragColor *= fExposure;</div>
+<div id="_mcePaste">Â  FragColor = clamp(FragColor, 0.0, fClamp);</div>
+<div id="_mcePaste">Â  return(vec3(FragColor));</div>
+<div id="_mcePaste">}</div>
+</pre>
+<p style="text-align: center;"><a title="Cat photo by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/7629158776/"><img class="alignright" src="http://farm8.staticflickr.com/7279/7629158776_627424f0f2.jpg" alt="Cat photo" width="239" height="360" /></a></p>
+<p><a title="Blur by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/7625327794/"><img class="alignright" src="http://farm9.staticflickr.com/8004/7625327794_cd3ec452a4.jpg" alt="Blur" width="239" height="360" /></a></p>
+<p>As I write this, I realise I&#8217;m blurring the lines between &#8216;radial blur&#8217; and its application to create &#8216;god-rays&#8217; in a richer setting. As I say, I&#8217;m not an expert here (and I just post a quick example and two hasty screenshots). My main purpose was rather to communicate that tools for learning more about such things are now quite literally in many people&#8217;s hands. And also that using GLSL for real-time per-pixel processing of smartphone camera input is a really fun way to dig deeper.</p>
+<p><em>At this point I should emphasis that draw() here and other conventions are from Paragraf; see any GLSL or WebGL docs, or the original example here, for details.</em></p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2012/07/18/793">
+	<title>Schema.org and One Hundred Years of Search</title>
+	<link>http://danbri.org/words/2012/07/18/793</link>
+	 <dc:date>2012-07-18T13:08:58Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Essays]]></dc:subject>
+		<dc:subject><![CDATA[History]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[Technology]]></dc:subject>
+		<dc:subject><![CDATA[foaf4lib]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+	<description>A talk from London SemWeb meetup hosted by the BBC Academy in London, Mar 30 2012&#8230;. Slides and video are already in the Web, but I wanted to post this as an excuse to plug the new Web History Community Group that Max and I have just started at W3C. The talk was part of [...]</description>
+	<content:encoded><![CDATA[<p>A talk from London SemWeb meetup hosted by the BBC Academy in London, Mar 30 2012&#8230;.</p>
+<p><a href="http://www.slideshare.net/danbri/schemaorg-and-one-hundred-years-of-search">Slides</a> and <a href="http://www.youtube.com/watch?v=_-6mhdjE1XE">video</a> are already in the Web, but I wanted to post this as an excuse to plug the new <a href="http://www.w3.org/community/webhistory/">Web History Community Group</a> that <a href="http://www.webfoundation.org/author/maxf/">Max</a> and I have just started at W3C. The talk was part of the <a href="http://www.meetup.com/LondonSWGroup/events/56987682/">Libraries, Media and the Semantic Web</a> meetup <a href="http://www.bbc.co.uk/academy/news/view/semantic_web">hosted</a> <a href="http://archiveshub.ac.uk/linkinglives/?p=256">by</a> the BBC in March. It gave an opportunity to run through some forgotten history, linking <a href="http://en.wikipedia.org/wiki/Paul_Otlet">Paul Otlet</a>, the <a href="http://en.wikipedia.org/wiki/Universal_Decimal_Classification">Universal Decimal Classification</a>, <a href="http://schema.org/">schema.org</a> and some 100 year old search logs from Otlet&#8217;s <a href="http://en.wikipedia.org/wiki/Mundaneum">Mundaneum</a>. Having worked with the BBC <a href="http://en.wikipedia.org/wiki/Lonclass">Lonclass</a> system (a descendant of Otlet&#8217;s UDC), and collaborated with the Aida Slavic of the UDC on their publication of Linked Data, I was happy to be given the chance to try to spell out these hidden connections. It also turned out that Google colleagues have been working to <a href="http://googleblog.blogspot.co.uk/2012/03/honoring-and-supporting-belgian.html">support</a> the Mundaneum and the memory of this early work, and I&#8217;m happy that the talk led to discussions with both the Mundaneum and <a href="http://www.computerhistory.org/">Computer History Museum</a> about the new <a href="http://www.w3.org/community/webhistory/">Web History</a> group at W3C.</p>
+<p>So, everything&#8217;s connected. Many thanks to <a href="http://people.lis.illinois.edu/~wrayward/otlet/otletpage.htm">W. Boyd Rayward</a> (Otlet&#8217;s biographer) for sharing the ancient logs that inspired the talk (see slides/video for a few more details). I hope we can find more such things to share in the Web History group, because the history of the Web didn&#8217;t begin with the Web&#8230;</p>
+<p><iframe width="560" height="315" src="http://www.youtube.com/embed/_-6mhdjE1XE" frameborder="0" allowfullscreen></iframe></p>
+<div style="width:512px" id="__ss_12226989"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/danbri/schemaorg-and-one-hundred-years-of-search" title="Schema.org and One Hundred Years of Search" target="_blank">Schema.org and One Hundred Years of Search</a></strong> </p>
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/12226989?rel=0" width="512" height="421" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0" allowfullscreen></iframe>
+<div style="padding:5px 0 12px"> View more presentations from <a href="http://www.slideshare.net/danbri" target="_blank">Dan Brickley</a> </div>
+</p></div>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2012/07/18/788">
+	<title>Inmaps</title>
+	<link>http://danbri.org/words/2012/07/18/788</link>
+	 <dc:date>2012-07-18T12:38:12Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Jobs]]></dc:subject>
+		<dc:subject><![CDATA[Technology]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+		<dc:subject><![CDATA[joost]]></dc:subject>
+	<description>From LinkedIn&#8217;s networking graphing service; see also my map I&#8217;ve been digging around in graph-mining and visualization tools lately, and this use at LinkedIn is one of the few cases where such things actually break through into mainstream usefulness. Well, perhaps not useful, but it&#8217;s nice to see how groups overlap. In my chart here, [...]</description>
+	<content:encoded><![CDATA[<p><a href="http://danbri.org/words/wp-content/uploads/2012/07/inmaps-danbri.png"><img class="alignleft size-large wp-image-789" title="Inmaps" src="http://danbri.org/words/wp-content/uploads/2012/07/inmaps-danbri-1024x612.png" alt="" width="640" height="382" /></a></p>
+<p>From LinkedIn&#8217;s <a href="http://www.quora.com/What-graphing-algorithm-does-Linkedin-inMaps-use">networking graphing service</a>; see also <a href="http://inmaps.linkedinlabs.com/share/Dan_Brickley/86242745944818451049533791776041800800">my map</a></p>
+<p>
+I&#8217;ve been digging around in graph-mining and visualization tools lately, and this use at LinkedIn is one of the few cases where such things actually break through into mainstream usefulness. Well, perhaps not useful, but it&#8217;s nice to see how groups overlap.
+</p>
+<p>
+ In my chart here, the big tight-knit, self-referential cluster on the left is Joost, the TV startup I <a href="http://www.slideshare.net/danbri/introducing-joost-widgets-2007-talk-presentation">joined</a> in 2006/7. At the top there is another tightly-linked community: the W3C team, where I worked 1999-2005. In between is a fuzzier cluster that I can only label &#8216;Web 2&#8242;, &#8216;Social Web&#8217;, &#8230; lots of Web technology standards sort of people. Then there are the linkers, like Max Froumentin and Robin Berjon between the W3C and Joost worlds, or Libby Miller and folk from the Asemantics and Apache scene (Alberto Reggiori, Stefano Mazzocchi) who link Joost through to the Semantic Web scene in the lower right.</p>
+<p>
+The LinkedIn analysis finds distinct clusters that are fairly easy to identify as &#8220;Digital Libraries (Museums, Archives&#8230;)&#8221; and &#8220;Linked Data / RDF / Semantic Web&#8221;, even while being richly interconnected. I&#8217;m not suprised there&#8217;s a cluster for the <a href="http://www.vu.nl/">VU University Amsterdam</a> (even though well-linked to SW and digital libraries). However the presence of a BBC cluster was a surprise; either it shows how closely-knit the BBC community is, or just how much I&#8217;ve been hanging around with them.  And that&#8217;s the intriguing thing; each individual map is just a per-person view, a thin slice through the bigger picture. It must be fun to see the whole dataset&#8230;
+</p>
+<p>
+For more on all this, see <a href="http://www.linkedin.com/company/linkedin/linkedin-inmaps-108249/product">LinkedIn</a> or the <a href="http://inmaps.linkedinlabs.com/">inmaps</a> site.</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2012/07/10/783">
+	<title>Talis</title>
+	<link>http://danbri.org/words/2012/07/10/783</link>
+	 <dc:date>2012-07-10T14:07:03Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[Technology]]></dc:subject>
+	<description>Most of us around RDF and the Semantic Web have by now probably heard the news about Talis; if not, see Leigh Dodds&#8217; blog post. Talis are shutting down their general activities around Semantic Web and Linked Data, including the Kasabi data marketplace. Failures are usually complex and Twitter is already abuzz with punditry, speculation [...]</description>
+	<content:encoded><![CDATA[<p>Most of us around RDF and the Semantic Web have by now probably heard the news about Talis; if not, see <a href="http://blog.ldodds.com/2012/07/09/leaving-talis-2/">Leigh Dodds&#8217; blog post</a>. Talis are shutting down their general activities around Semantic Web and Linked Data, including the Kasabi data marketplace. Failures are usually complex and Twitter is already abuzz with punditry, speculation and ill-judged extrapolation. I just wanted to take a minute aside from all that to say something that I&#8217;ve not got around to before: &#8220;<em>thanks</em>!&#8221;.</p>
+<p>Regardless of the business story, we ought to appreciate on a personal level all the hard work that the team (past and present) at Talis have put into popularising the ideas and technology around Linked Data. Talis had an extraordinarily bright, energetic and committed team, who put great passion into their work &#8211; and into supporting the work of others. All of us in the community around Linked Data have benefitted enormously from this, and will continue to benefit from the various projects and initiatives that Talis have supported. Â Perhaps in a nearby parallel universe, there is a thriving alternate Talis whose efforts benefited the business more, and the commons less. We can only speculate. In this universe, the most appropriate word at this point is just &#8220;thanks&#8221;&#8230;</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2012/07/03/779">
+	<title>Everything Still Looks Like A Graph (but graphs look like maps)</title>
+	<link>http://danbri.org/words/2012/07/03/779</link>
+	 <dc:date>2012-07-03T11:44:48Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Rating and Filtering]]></dc:subject>
+		<dc:subject><![CDATA[coding]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+	<description>Last October I posted a writeup of some experiments that illustrate item-to-item similarities from Apache Mahout using Gephi for visualization. This was under a heading that quotes Ben Fry, &#8220;Everything looks like a graph&#8221; (but almost nothing should ever be drawn as one). There was also some followup discussion on the Gephi project blog. I&#8217;ve [...]</description>
+	<content:encoded><![CDATA[<p>Last October I posted a writeup of some experiments that illustrate item-to-item similarities from Apache Mahout using Gephi for visualization. This was under a heading that quotes Ben Fry, &#8220;<a href="http://danbri.org/words/2011/10/11/720">Everything looks like a graph</a>&#8221; (but almost nothing should ever be drawn as one). There was also some followup discussion on the <a href="https://gephi.org/2011/everything-looks-like-a-graph-but-almost-nothing-should-ever-be-drawn-as-one/">Gephi project blog</a>.</p>
+<p>I&#8217;ve just seen a cluster of related Gephi experiments, which are reinforcing some of my prejudices from last year&#8217;s investigations:</p>
+<ul>
+<li><a href="http://drunks-and-lampposts.com/2012/06/13/graphing-the-history-of-philosophy/">Graphing the History of Philosophy</a></li>
+<li><a href="http://griffsgraphs.wordpress.com/2012/07/03/graphing-every-idea-in-history/">Graphing Every Idea In History</a> (inspired by, and generalising, the former)</li>
+<li><a href="http://blog.ouseful.info/2012/07/03/visualising-related-entries-in-wikipedia-using-gephi/">Visualising related entries in Wikipedia using Gephi</a> (shows SemWeb import plugin for Gephi)</li>
+</ul>
+<p>These are all well worth a read, both for showing the potential and the limitations of Gephi. It&#8217;s not hard to find critiques of the intelligibility or utility of squiggly-but-inspiring network diagrams; Ben Fry&#8217;s point was well made. However I think each of the examples I link here (and my earlier experiments) show there is some potential in such layouts for showing &#8216;similarity neighbourhoods&#8217; in a fairly appealing and intuitive form.</p>
+<p>In the case of the history of Philosophy it feels a little odd using a network diagram since the chronological / timeline aspect is quite important to the notion of a history. But still it manages to group &#8216;like with like&#8217;, to the extent that the inter-node connections probably needn&#8217;t even be shown.</p>
+<p>I&#8217;m a lot more comfortable with taking the &#8216;everything looks like a graph&#8217; route if we&#8217;re essentially generating a similarity landscape. Whether these &#8216;landscapes&#8217; can be made to be stable in the face of dataset changes or re-generation of the visualization is a longer story. Gephi is currently a desktop tool, and as such has memory issues with really large graphs, but I think it shows the potential for landscape-oriented graph visualization. Longer term I expect we&#8217;ll see more of a split between something like Hadoop+Mahout for big data crunching (e.g. see Mahout&#8217;sÂ <a href="https://cwiki.apache.org/MAHOUT/spectral-clustering.html">spectral clustering</a> component which takes node-to-node affinities as input) and something WebGL and browser-based UI for the front-end. It&#8217;s a shame the <a href="http://wiki.gephi.org/index.php/Specification_-_Network_visualization_with_WebGL">Gephi efforts</a> in this direction (<a href="https://gephi.org/2011/gsoc-mid-term-graphgl-network-visualization-with-webgl/">GraphGL</a>) seem to have gone quiet, but for those of you with modern graphics cards and browsers, take a look at alterqualia&#8217;s &#8216;<a href="http://alteredqualia.com/three/examples/webgl_terrain_dynamic.html">dynamic terrain</a>&#8216; WebGL demo to get a feel for how landscape-shaped datasets could be presented&#8230;</p>
+<p>Also btw look at the <a href="http://griffsgraphs.files.wordpress.com/2012/07/big-3.png">griffsgraphs landscape of literature</a>; this was built solely from &#8216;influences&#8217; relationships from Wikipedia&#8230; then compare this with the <a href="http://www.flickr.com/photos/danbri/6230976348/">landscapes</a> I was <a href="http://www.flickr.com/photos/danbri/6230976348/in/set-72157627737423345/">generating</a> last year from Harvard bibliographic data. They were both built solely using subject classification data from Harvard. Now imagine if we could mutate the resulting &#8216;map&#8217; by choosing our own weighting composited across these two sources. Perhaps for the music or movies or TV areas of the map we might composite in other sources, based on activity data analysed by recommendation engine, or just different factual relationships.</p>
+<p>There&#8217;s no single &#8216;correct&#8217; view of the bibliographic landscape; what makes sense for a phd researcher, a job seeker or a schoolkid will naturally vary. This is true also of similarity measures in general, i.e. for see-also lists in plain HTML as well as fancy graph or landscape-based visualizations. There are more than metaphorical comparisons to be drawn with the kind of <a href="http://www.blender.org/development/release-logs/blender-242/blender-composite-nodes/">compositing tools</a> we see in systems like <a href="http://www.blender.org/">Blender</a>, and plenty of opportunities for putting control into end-user rather than engineering hands.</p>
+<p>In just the last year, Harvard (and most recently <a href="http://www.oclc.org/news/releases/2012/201238.htm">OCLC</a>) have released their <a href="http://blogs.law.harvard.edu/dplatechdev/2012/04/24/going-live-with-harvards-catalog/">bibliographic dataset</a> for public re-use, the <a href="http://meta.wikimedia.org/wiki/Wikidata">Wikidata project</a> has launched, and browser support for WebGL has been improving with every release. Despite all the reasonable concerns out there about visualizing <em>graphs as graphs</em>, there&#8217;s a lot to be said for treating graphs as maps&#8230;</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2011/12/08/761">
+	<title>Building R&#8217;s RGL library for OSX Snow Leopard</title>
+	<link>http://danbri.org/words/2011/12/08/761</link>
+	 <dc:date>2011-12-08T16:35:54Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Image Description]]></dc:subject>
+		<dc:subject><![CDATA[Technology]]></dc:subject>
+		<dc:subject><![CDATA[coding]]></dc:subject>
+	<description>RGL is needed for nice interactive 3d plots in R, but a pain to find out how to build on a modern OSX machine. &#8220;The rgl package is a visualization device system forÂ R, using OpenGL as the rendering backend. An rgl device at its core is a real-time 3D engine written in C++. It provides [...]</description>
+	<content:encoded><![CDATA[<p><a href="http://rgl.neoscientists.org/about.shtml">RGL</a> is needed for <a href="http://www.statmethods.net/graphs/scatterplot.html">nice</a> interactive 3d plots in R, but a pain to find out how to build on a modern OSX machine.</p>
+<p><em>&#8220;The rgl package is a visualization device system forÂ <a href="http://www.r-project.org/">R</a>, using OpenGL as the rendering backend. An rgl device at its core is a real-time 3D engine written in C++. It provides an interactive viewpoint navigation facility (mouse + wheel support) and an R programming interface.&#8221;</em></p>
+<p>The following commands worked for me in OSX Snow Leopard:</p>
+<ul>
+<li>svn checkout svn://svn.r-forge.r-project.org/svnroot/rgl</li>
+<li>R CMD INSTALL ./rgl/pkg/rgl &#8211;configure-args=&#8221;&#8211;disable-carbon&#8221; rgl</li>
+</ul>
+<p>Here&#8217;s a test that should give an interactive 3D display if all went well, using a <a href="http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/mtcars.html">built-in dataset</a>:</p>
+<pre>library(rgl)
+cars.data &lt;- as.matrix(sweep(mtcars[, -1], 2, colMeans(mtcars[, -1]))) # <a href="http://www.ats.ucla.edu/stat/r/code/svd_demos.htm">cargo cult'd</a>
+xx &lt;- svd(cars.data %*% t(cars.data))
+xxd &lt;- xx$v %*% sqrt(diag(xx$d))
+x1 &lt;- xxd[, 1]
+y1 &lt;- xxd[, 2]
+z1 &lt;- xxd[, 3]
+<a href="http://www.stat.ucl.ac.be/ISdidactique/Rhelp/library/R.basic/html/plot3d.html">plot3d</a>(x1,y1,z1,col="green", size=4)
+<a href="http://www.stat.ucl.ac.be/ISdidactique/Rhelp/library/R.basic/html/text3d.html">text3d</a>(x1,y1,z1, row.names(mtcars))</pre>
+<p><a href="http://danbri.org/words/wp-content/uploads/2011/12/rgltest.png"><img class="size-full wp-image-766 alignnone" title="RGL demo" src="http://danbri.org/words/wp-content/uploads/2011/12/rgltest.png" alt="" width="598" height="621" /></a></p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2011/11/03/753">
+	<title>Dilbert schematics</title>
+	<link>http://danbri.org/words/2011/11/03/753</link>
+	 <dc:date>2011-11-03T14:29:50Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+	<description>How can we package, manage, mix and merge graph datasets that come from different contexts, without getting our data into a terrible mess? During the last W3C RDF Working Group meeting, we were discussing approaches to packaging up &#8216;graphs&#8217; of data into useful chunks that can be organized and combined. A related question, one always [...]</description>
+	<content:encoded><![CDATA[<p>How can we package, manage, mix and merge graph datasets that come from different contexts, without getting our data into a terrible mess?</p>
+<p>During the last W3C RDF Working Group meeting, we were discussing approaches to packaging up &#8216;graphs&#8217; of data into useful chunks that can be organized and combined. A related question, one always lurking in the background, was also discussed: how do we deal with data that goes out of date? Sometimes it is better to talk about events rather than changeable characteristics of something. So you might know my date of birth, and that is useful forever; with a bit of math and knowledge of today&#8217;s date, you can figure out my current age, whenever needed. So &#8216;date of birth&#8217; on this measure has an attractive characteristic that isn&#8217;t shared by &#8216;age in years&#8217;.</p>
+<p>At any point in time, I have at most one &#8216;age in years&#8217; property; however, you can take two descriptions of me that were at some time true, and merge them to form a messy, self-contradictory description. With this in mind, how far should we be advocating that people model using time-invariant idioms, versus working on better packaging for our data so it is clearer when it was supposed to be true, or which parts might be more volatile?</p>
+<p>The following scenario was <a href="http://lists.w3.org/Archives/Public/public-rdf-wg/2011Oct/0232.html">posted to the RDF group</a> as a way of exploring these tradeoffs. I repeat it here almost unaltered. I often say that RDF describes a simplified &#8211; and sometimes over-simplified &#8211; cartoon universe. So why not describe a real cartoon universe? Pat Hayes <a href="http://lists.w3.org/Archives/Public/public-rdf-wg/2011Nov/0019.html">posted an interesting proposal</a> that explores an approach to these problems; since he cited this scenario, I wrote it up as a blog post.</p>
+<h2>Describing Dilbert: theory and practice</h2>
+<p>Consider an RDF vocabulary for describing office assignments in the cartoon universe inhabited by Dilbert. Beyond the name, the examples here aren&#8217;t tightly linked to the Dilbert cartoon. First I describe the universe, then some ways inÂ which we might summarise what&#8217;s going on using RDF graph descriptions. I would love to get a sense for any &#8216;best practice&#8217; claims here. Personally I see no single best way to deal with this, only different and annoying tradeoffs.</p>
+<p>So &#8212; this is a fictional highly simplified company in which workers each are assigned to occupy exactly one cubicle, and in which every cubicle has at most one assigned worker. CubiclesÂ may also sometimes be empty.</p>
+<ul>
+<li>Every 3 months, the Pointy-haired bossÂ has a strategic re-organization, and re-assigns workers to cubicles.</li>
+<li>He does this in a memo dictated to Dogbert, who will take the boss&#8217;sÂ vague and forgetful instructions and compare themÂ to an Excel spreadsheet. This, cleaned up, eventually becomes anÂ emailed Word .doc sent to the all-staff@ mailing list.</li>
+<li>The word document is basically a table of room moves, it is headedÂ with a date and in bold type &#8220;EFFECTIVEÂ IMMEDIATELY&#8221;, usually mailed out mid-evening and read by staff theÂ next morning.</li>
+<li>In practice, employees move their stuff to the new cubicles over theÂ course of a few days; longer if they&#8217;reÂ on holiday or off sick. Phone numbers are fixed later, hopefully. AsÂ are name badges etc.</li>
+<li>But generally the move takes place the day after the word file isÂ circulated, and at any one point, a givenÂ cubicle can be fairly said to have at most one official occupant worker.</li>
+</ul>
+<p>So let&#8217;s try to model this in RDF/RDFS/OWL.</p>
+<p>First, we can talk about the employees. Let&#8217;s make a class, &#8216;Employee&#8217;.</p>
+<p>In the company systems, each employee has an ID, which is &#8216;e-&#8217; plus anÂ integer. Once assigned, these areÂ never re-assigned, even if the employee leaves or dies.</p>
+<p>We also need to talk about the office space units, the cubes orÂ &#8217;Cubicles&#8217;. Let&#8217;s forget for now thatÂ the furniture is movable, and treat each Cubicle as if it lastsÂ forever. Maybe they are even somehow symbolicÂ cubicle names, and the furniture that embodies them can be movedÂ around to diferent office locations. But weÂ don&#8217;t try modelling that for now.</p>
+<p>In the company systems, each cubicle has an ID, which is &#8216;c-&#8217; plus anÂ integer. Once assigned, these areÂ never re-assigned, even if the cubicle becomes in any sense de-activated.</p>
+<p>Let&#8217;s represent these as IRIs. Three employees, three cubicles.</p>
+<ul>
+<li>http://example.com/e-1</li>
+<li>http://example.com/e-2</li>
+<li>http://example.com/e-3</li>
+<li>http://example.com/c-1000</li>
+<li>http://example.com/c-1001</li>
+<li>http://example.com/c-1002</li>
+</ul>
+<p>We can describe the names of employees. Cubicicles also have informalÂ names. Let&#8217;s say that neither change, ever.</p>
+<ul>
+<li>e-1 name &#8216;Alice&#8217;</li>
+<li>e-2 name &#8216;Bob&#8217;</li>
+<li>e-3 name &#8216;Charlie&#8217;</li>
+<li>c-1000 &#8216;The Einstein Suite&#8217;.</li>
+<li>c-1001 &#8216;The doghouse&#8217;.</li>
+<li>c-1002 &#8216;Helpdesk&#8217;.</li>
+</ul>
+<p>Describing these in RDF is pretty straightforward.</p>
+<p>Let&#8217;s now describe room assignments.</p>
+<p>At the beginning of 2011 Alice (e-1) is in c-1000; Bob (e-2) is in c-1001; Charlie (e-3) is in c-1002. How canÂ we represent this in RDF?</p>
+<p>We define an RDF/RDFS/OWL relationship type aka property, called eg:hasCubicle</p>
+<p>Let&#8217;s say our corporate ontologist comes up with this schematicÂ description of cubicle assignments:</p>
+<ul>
+<li>eg:hasCubicle has a domain of eg:Employee, a range of eg:Cubicle. It is an owl:FunctionalProperty, because any Employee has at mostÂ one Cubicle related via hasCubicle.</li>
+<li>it is an owl:InverseFunctionalProperty, because any Cubicle is theÂ value of hasCubicle for no more than one Employee.</li>
+</ul>
+<p>So&#8230; at beginning of 2011 it would be truthy to assert these RDF claims:</p>
+<ul>
+<li> &lt;<a href="http://example.com/e-1">http://example.com/e-1</a>&gt; &lt;<a href="http://example.com/hasCubicle">http://example.com/hasCubicle</a>&gt; &lt;<a href="http://example.com/c-1000">http://example.com/c-1000</a>&gt; .</li>
+<li> &lt;<a href="http://example.com/e-2">http://example.com/e-2</a>&gt; &lt;<a href="http://example.com/hasCubicle">http://example.com/hasCubicle</a>&gt; &lt;<a href="http://example.com/c-1001">http://example.com/c-1001</a>&gt; .</li>
+<li> &lt;<a href="http://example.com/e-3">http://example.com/e-3</a>&gt; &lt;<a href="http://example.com/hasCubicle">http://example.com/hasCubicle</a>&gt; &lt;<a href="http://example.com/c-1002">http://example.com/c-1002</a>&gt; .</li>
+</ul>
+<p>Now, come March 10th, everyone at the company receives an all-staffÂ email from Dogbert, with cubicle reassignments.Â Amongst other changes, Alice and Bob are swapping cubicles, andÂ Charlie stays in c-1002.</p>
+<p>Within a week or so (let&#8217;s say by March 20th to be sure) The cubicleÂ moves are all made real, in termsÂ of where people are supposed to be based, where they are, and whereÂ their stuff and phone line routings are.</p>
+<p>The fictional world by March 20th 2011 is now truthily described byÂ the following claims:</p>
+<ul>
+<li> &lt;<a href="http://example.com/e-1">http://example.com/e-1</a>&gt; &lt;<a href="http://example.com/hasCubicle">http://example.com/hasCubicle</a>&gt;Â &lt;<a href="http://example.com/c-1001">http://example.com/c-1001</a>&gt; .</li>
+<li> &lt;<a href="http://example.com/e-2">http://example.com/e-2</a>&gt; &lt;<a href="http://example.com/hasCubicle">http://example.com/hasCubicle</a>&gt;Â &lt;<a href="http://example.com/c-1000">http://example.com/c-1000</a>&gt; .</li>
+<li> &lt;<a href="http://example.com/e-3">http://example.com/e-3</a>&gt; &lt;<a href="http://example.com/hasCubicle">http://example.com/hasCubicle</a>&gt;Â &lt;<a href="http://example.com/c-1002">http://example.com/c-1002</a>&gt; .</li>
+</ul>
+<h3>Questions / view from Named Graphs.</h3>
+<p>1. Was it a mistake, bad modelling style etc, to describe things withÂ &#8217;hasCubicle&#8217;? Should we have insteadÂ described a date-stamped &#8216;CubicleAssignmentEvent&#8217; that mentions for example the roles of Dogbert, Alice,Â and some Cubicle? Is there a &#8216;better&#8217; way to describe things? Is thisÂ an acceptable way to describe things?</p>
+<p>2. How should we express then the notion that each employee has atÂ most one cubicle and vice versa? Is this<br />
+appropriate material to try to capture in OWL?</p>
+<p>3. How should a SPARQL store or TriG++ document capture the differentÂ graphs describing the evolving state of theÂ company&#8217;s office-space allocations?</p>
+<p>4. Can we offer any practical but machine-readable metadata that helpsÂ indicate to consuming applications<br />
+the potential problems that might come from merging different graphsÂ that use this modelling style?<br />
+For example, can we write any useful definition for a class ofÂ property &#8220;TimeVolatileProperty&#8221; that could helpÂ people understand risk of merging different RDF graphs using &#8216;hasCubicle&#8217;?</p>
+<p>5. Can the &#8216;snapshot of the world-as-it-now-is&#8217; view and theÂ &#8217;transaction / event log view&#8217; be equal citizens, stored in the sameÂ RDF store, and can metadata / manifest / table of contents info forÂ that store be used to make the information usefully exploitable andÂ reasonably truthy?</p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2011/10/11/720">
+	<title>Linked Literature, Linked TV &#8211; Everything Looks like a Graph</title>
+	<link>http://danbri.org/words/2011/10/11/720</link>
+	 <dc:date>2011-10-11T11:37:43Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Essays]]></dc:subject>
+		<dc:subject><![CDATA[SKOS]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[SocialWeb]]></dc:subject>
+		<dc:subject><![CDATA[World]]></dc:subject>
+		<dc:subject><![CDATA[coding]]></dc:subject>
+		<dc:subject><![CDATA[foaf4lib]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+		<dc:subject><![CDATA[dpla]]></dc:subject>
+	<description>Ben Fry in &#8216;Visualizing Data&#8216;: Graphs can be a powerful way to represent relationships between data, but they are also a very abstract concept, which means that they run the danger of meaning something only to the creator of the graph. Often, simply showing the structure of the data says very little about what itÂ actually [...]</description>
+	<content:encoded><![CDATA[<p><a title="cloud by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6230460521/"><img class="alignright" src="http://farm7.static.flickr.com/6173/6230460521_6680742cce_m.jpg" alt="cloud" width="240" height="240" /></a></p>
+<p><a href="http://twitter.com/#!/ben_fry">Ben Fry</a> in &#8216;<a href="http://www.amazon.com/Visualizing-Data-Explaining-Processing-Environment/dp/0596514557">Visualizing Data</a>&#8216;:</p>
+<blockquote><p>Graphs can be a powerful way to represent relationships between data, but they are also a very abstract concept, which means that they run the danger of meaning something only to the creator of the graph. Often, simply showing the structure of the data says very little about what itÂ actually means, even though it&#8217;s a perfectly accurate means of  representing the data. <em>Everything looks like a graph, but almost nothing should ever be drawn as one</em>.</p>
+<p>There is a tendency when using graphs to become smitten with one&#8217;s own data. Even though a graph of a few hundred nodes quickly becomes unreadable,Â it is often satisfying for the creator because the resulting figure is elegant and complex and may be subjectively beautiful, and the notion that theÂ creator&#8217;s data is &#8220;complex&#8221; fits just fine with the creator&#8217;s own interpretation of it. Graphs have a tendency of making a data set lookÂ sophisticated and important, without having solved the problem of enlightening the viewer.</p></blockquote>
+<p><a title="markets by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6230977880/"><img class="alignright" src="http://farm7.static.flickr.com/6051/6230977880_a78e467d3a.jpg" alt="markets" width="320" height="165" /></a></p>
+<p>Ben Fry is entirely correct.</p>
+<p>I suggest two excuses for this <a href="http://www.flickr.com/photos/danbri/sets/72157627737423345/show/">indulgence</a>: if the visuals are meaningfulÂ only to the creator of the graph, then let&#8217;s make everyone a graph curator. And if the things the data attempts to describe &#8212; <em>for example, 14 million books and the world they in turn describe</em> &#8211;Â are complex and beautiful and under-appreciated in their complexity and interconnectedness, &#8230; then perhaps it is ok to indulge ourselves. When do graphs become maps?</p>
+<p>I report here on some experiments that stem from two collaborations around Linked Data.  All the visuals in the post are views of bibliographic data, based on similarity measures derrived from book / subject keyword associations, with visualization and a little additional analysis using <a href="http://gephi.org/">Gephi</a>. Click-through to Flickr to see larger versions of any image. You can&#8217;t always see the inter-node links, but the presentation is based on graph layout tools.</p>
+<p>Firstly, in my ongoing work in the <a href="http://notube.tv">NoTube project</a>,Â we have been working with TV-related data, ranging from &#8216;social Web&#8217; activity streams, user profiles, TV archive catalogues and classification systems like <a href="http://en.wikipedia.org/wiki/Lonclass">Lonclass</a>. Secondly, over theÂ summer I have been working with theÂ <a href="http://librarylab.law.harvard.edu/">Library Innovation Lab</a> at Harvard, looking at ways of opening up bibliographic catalogues to the Web as Linked Data, and atÂ ways of cross-linking Web materials (e.g. video materials) to a Webbified notion of &#8216;<a href="http://librarylab.law.harvard.edu/dpla/demo/">bookshelf</a>&#8216;.</p>
+<p>In NoTube we have been making use of the <a href="http://mahout.apache.org">Apache Mahout</a> toolkit,Â which provided us with software for collaborative filtering recommendations, clustering and automatic classification. We&#8217;ve barely scratched the surface ofÂ what it can do, but here show some initial results applying Mahout to a 100,000 record subset of Harvard&#8217;s 14 million entry catalogue. Mahout is built to scale, and the experiments here use datasets that are tiny from Mahout&#8217;s perspective.</p>
+<p><a title="gothic_idol by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6230457119/"><img class="alignright" src="http://farm7.static.flickr.com/6101/6230457119_00ba958baa.jpg" alt="gothic_idol" width="320" height="197" /></a></p>
+<p>In NoTube, we used Mahout to compute similarity measures between each pair of items in a catalogue of BBC TV programmes for which we had privileged access toÂ subjective viewer ratings. This was a sparse matrix of around 20,000 viewers, 12,500 broadcast items, with around 1.2 million ratings linking viewer to item. From these,Â after a few rather-too-casual tests using Mahout&#8217;s evaluation measure system, we picked its most promising similarity measure for our data (<code>LogLikelihoodSimilarity</code> or <code>Tanimoto</code>),Â and then for the most similar items, simply dumped out  a huge data file that contained pairs of item numbers, plus a weight.</p>
+<p>There are many many smarter things we could&#8217;ve tried, butÂ in the spirit of &#8216;<a href="http://en.wikipedia.org/wiki/Minimum_viable_product">minimal viable product</a>&#8216;, we didn&#8217;t try them yet. These include making use of additional metadata <a href="http://www.bbc.co.uk/programmes/">published by the BBC</a> in RDF, so we can help out Mahout by letting it know that when Alice loves item_62 and Bob loves item_82127, we also via RDF also knew that they are both in the same TV series and Brand. Why use fancy machine learning to rediscover thingsÂ we already know, and that have been shared in the Web as data? We could make smarter use of metadata here. Secondly we could have used data-derrived or publisher-supplied metadata to explore whether <em>different</em> Mahout techniques work better for different segments of the content (factual vs fiction) or even, as we have also some demographic data, differentÂ groups of users.</p>
+<p><a title="markets by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6230977880/"><img class="alignright" src="http://farm7.static.flickr.com/6051/6230977880_a78e467d3a.jpg" alt="markets" width="320" height="165" /></a></p>
+<p>Anyway, Mahout gave us item-to-item similarity measures for TV. <a href="http://notube.tv/2011/10/10/n-screen-a-second-screen-application-for-small-group-exploration-of-on-demand-content/">Libby has written already</a> about how we used these in &#8216;second screen&#8217; (or &#8216;N-th&#8217; screen, aka N-Screen) prototypesÂ showing the impact that new Web standards might make on tired and outdated notions of &#8220;TV remote control&#8221;.</p>
+<p><em>What if your remote control could personalise a view ofÂ some content collection? What if it could show you similar things based on your viewing behavior, and that of others? What if you could explore the ever-growingÂ space of TV content using simple drag-and-drop metaphors, sending items to your TV or to your friends with simple tablet-based interfaces?</em></p>
+<p><a title="medieval_society by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6230458933/"><img class="alignright" src="http://farm7.static.flickr.com/6153/6230458933_70253b3f3b.jpg" alt="medieval_society" width="400" height="206" /></a></p>
+<p>So that&#8217;s what we&#8217;ve been up to in NoTube. There are prototypes using BBC content (sadly not viewable by everyone due to rights restrictions), but also someÂ experiments with TV materials from the Internet Archive, and some explorations that look at <a href="http://www.ted.com/">TED&#8217;s</a> video collection as an example of Web-based content that (via ted.com and YouTube) are more generally viewable. Since every item in the BBC&#8217;s Archive is catalogued using a library-based classification system (Lonclass, itselfÂ based on UDC) the topic of cross-referencing books and TV has cropped up a few times.</p>
+<p><a title="new_colonialism by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6230979642/"><img class="alignright" src="http://farm7.static.flickr.com/6102/6230979642_ecb8c4505f.jpg" alt="new_colonialism" width="400" height="207" /></a></p>
+<p>Meanwhile, in (the digital Public Library of) America, &#8230; the Harvard Library Innovation Lab team have a huge and fantastic dataset describing 14 millionÂ bibliographic records. I&#8217;m not sure exactly how many are &#8216;books&#8217;; libraries hold all kinds of objects these days. With the Harvard folk I&#8217;ve been trying to helpÂ figure out how we could cross-reference their records with other &#8220;Webby&#8221; sources, such as online video materials. Again using TED as an example, because itÂ is high quality but with very different metadata from the library records. So we&#8217;ve been looking at various tricks and techniques that could help us associate book records with those. So for example, we can find tags for their videos on the TED site, but also on delicious, and on youtube. However taggers and librarians tend to describe thingsÂ quite differently. Tags like &#8220;todo&#8221;, &#8220;inspirational&#8221;, &#8220;design&#8221;, &#8220;development&#8221; or &#8220;science&#8221; don&#8217;t help us pin-point the exact library shelf where a viewer mightÂ go to read more on the topic. Or conversely, they don&#8217;t help the library sites understand where within their online catalogues they could embed useful and engaging &#8220;related link&#8221;Â pointers off to TED.com or YouTube.</p>
+<p>So we turned to other sources. Matching TED speaker names against Wikipedia allows us to find more informationÂ about many TED speakers. For example the <a href="http://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a> entry, which in its Linked Data <a href="http://dbpedia.org/page/Tim_Berners-Lee">form</a> helpfully tells us that this TED speaker is in the categoriesÂ &#8217;Japan_Prize_laureates&#8217;, &#8216;English_inventors&#8217;, &#8217;1955_births&#8217;, &#8216;Internet_pioneers&#8217;. All good to know, but it&#8217;s hard to tell which categories tell us most about ourÂ speaker or video. At least now we&#8217;re in the Linked Data space, we can navigate around to Freebase, VIAF and a growing Web of data-sources. It should be possible at least toÂ associate TimBL&#8217;s TED talks with library records for <a href="http://openlibrary.org/books/OL38986M/Weaving_the_Web">his book</a> (so we annotate one bibliographic entry, from 14 million! &#8230;can&#8217;t we map areas, not items?).</p>
+<p><a title="tv by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6232014056/"><img class="alignright" src="http://farm7.static.flickr.com/6175/6232014056_090b4a4392.jpg" alt="tv" width="350" height="181" /></a></p>
+<p>Can we do better? What if we also associated Tim&#8217;s two TED talk videos with other things in the library that had the same subject classifications or keywords as his book? What ifÂ we could build links between the two collections based not only on published authorship, but on topical information (tags, full text analysis of TED talk transcripts). Can weÂ plan for a world where libraries have access not only to MARC records, but also full text of each of millions of books?</p>
+<p><a title="Screen%20shot%202011-10-11%20at%2010.15.07%20AM by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6233467501/"><img class="alignright" src="http://farm7.static.flickr.com/6100/6233467501_7075bc2eb0.jpg" alt="Screen%20shot%202011-10-11%20at%2010.15.07%20AM" width="400" height="206" /></a></p>
+<p>I&#8217;ve been exploring some of these ideas with David Weinberger, Paul Deschner and Matt Phillips at Harvard, and in NoTube with Libby Miller, Vicky Buser and others.</p>
+<p><a title="edu by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6230976348/"><img class="alignright" src="http://farm7.static.flickr.com/6158/6230976348_2a58015f51.jpg" alt="edu" width="400" height="207" /></a></p>
+<p>Yesterday I took the time to make some visual sanity check of the bibliographic data as processed into a &#8216;similarity space&#8217; in some Mahout experiments. This is a messyÂ first pass at everything, but I figured it is better to blog something and look for collaborations and feedback, than to chase perfection. For me, the big story is in linking TV materials to the gigantic back-story of context, discussion and debate curated by the world&#8217;s libraries. If we can imagine a view of our TV content catalogues,Â and our libraries, as visual maps, with items clustered by similarity, then NoTube has shown that we can build these into the smartphones and tablets that areÂ increasingly being used as TV remote controls.</p>
+<p><a title="Screen%20shot%202011-10-11%20at%2010.12.25%20AM by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6233990814/"><img class="alignright" src="http://farm7.static.flickr.com/6160/6233990814_0b90daaeaa.jpg" alt="Screen%20shot%202011-10-11%20at%2010.12.25%20AM" width="400" height="251" /></a></p>
+<p>And if the device you&#8217;re using to pause/play/stop or rewind your TV also has access to these vast archives as theyÂ open up as Linked Data (as well as GPS location data and your Facebook password), all kinds of possibilities arise for linked, annotated and fact-checked TV, as well as for showing a path for libraries to continue to serve as maps of the entertainment, intellectual and scientific terrain around us.</p>
+<p><a title="Screen%20shot%202011-10-11%20at%2010.16.46%20AM by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6233467669/"><img class="alignright" src="http://farm7.static.flickr.com/6038/6233467669_416946749f.jpg" alt="Screen%20shot%202011-10-11%20at%2010.16.46%20AM" width="400" height="206" /></a></p>
+<p>A brief technical description. Everything you see here was made with Gephi, Mahout and experimental data from the Library Innovation Lab at Harvard, plus a few scripts to glue it all together.</p>
+<p>Mahout was given 100,000 extracts from the Harvard collection. Just main and sub-title, a local ID, and a list of topical phrases (mostly drawn from Library ofÂ Congress Subject Headings, with some local extensions). I don&#8217;t do anything clever with these or their sub-structure or their library-documented inter-relationships. They are treated as atomic codes, and flattened into long pseudo-words such as &#8216;occupational_diseases_prevention_control&#8217; or &#8216;french_literature_16th_century_history_and_criticism&#8217;,<br />
+&#8216;motion_pictures_political_aspects&#8217;, &#8216;songs_high_voice_with_lute&#8217;, &#8216;dance_music_czechoslovakia&#8217;, &#8216;communism_and_culture_soviet_union&#8217;. All of human life is there.</p>
+<p>David Weinberger has been calling this gigantic scope our problem of the &#8216;Taxonomy of Everything&#8217;, and the label fits. By mushing phrases into fake words, I get to re-use someÂ Mahout tools and avoid writing code. The result is a matrix of 100,000 bibliographic entities, by 27684 unique topical codes. Initially I made the simple test ofÂ feeding this as input to Mahout&#8217;s <a href="http://en.wikipedia.org/wiki/K-means_clustering">K-Means clustering</a> implementation. Manually inspecting the most popularÂ topical codes for each cluster (both where k=12 to put all books in 12 clusters, or k=1000 for more fine-grained groupings), I was impressed by the initial results.</p>
+<p><a title="Screen%20shot%202011-10-11%20at%2010.22.37%20AM by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6233467903/"><img class="alignright" src="http://farm7.static.flickr.com/6100/6233467903_550ba3fa3f.jpg" alt="Screen%20shot%202011-10-11%20at%2010.22.37%20AM" width="400" height="274" /></a></p>
+<p>I only have these in crude text-file form. See <a href="http://danbri.org/2011/mahout/hv/_k1000.txt">hv/_k1000.txt</a> and <a href="http://danbri.org/2011/mahout/hv/_twelve.txt">hv/_twelve.txt</a> (plus dictionary, see big file<br />
+<a href="http://danbri.org/2011/mahout/hv/_harv_dict.txt ">_harv_dict.txt</a> ).</p>
+<p>For example, in the 1000-cluster version, we get: &#8216;medical_policy_united_states&#8217;, &#8216;health_care_reform_united_states&#8217;, &#8216;health_policy_united_states&#8217;, &#8216;medical_care_united_states&#8217;,<br />
+&#8216;delivery_of_health_care_united_states&#8217;, &#8216;medical_economics_united_states&#8217;, &#8216;politics_united_states&#8217;, &#8216;health_services_accessibility_united_states&#8217;,Â &#8217;insurance_health_united_states&#8217;, &#8216;economics_medical_united_states&#8217;.</p>
+<p>Or another cluster: &#8216;brain_physiology&#8217;, &#8216;biological_rhythms&#8217;, &#8216;oscillations&#8217;.</p>
+<p>How about: &#8216;museums_collection_management&#8217;, &#8216;museums_history&#8217;, &#8216;archives&#8217;, &#8216;museums_acquisitions&#8217;, &#8216;collectors_and_collecting_history&#8217;?</p>
+<p>Another, conceptually nearby (but that proximity isn&#8217;t visible through this simple clustering approach), &#8216;art_thefts&#8217;, &#8216;theft_from_museums&#8217;, &#8216;archaeological_thefts&#8217;,Â &#8217;art_museums&#8217;, &#8216;cultural_property_protection_law_and_legislation&#8217;, &#8230;</p>
+<p>Ok, I am cherry picking. There is some nonsense in there too, but suprisingly little. And probably some associations that might cause offense. But it shows that the toolingÂ is capable (by looking at book/topic associations) at picking out similarities that are significant. Maybe all of this is also available in LCSH SKOS form already, but I doubt it.Â (A side-goal here is to publish these clusters for re-use elsewhere&#8230;).</p>
+<p><a title="Screen%20shot%202011-10-11%20at%2010.23.22%20AM by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6233991710/"><img class="alignright" src="http://farm7.static.flickr.com/6100/6233991710_74faca926e.jpg" alt="Screen%20shot%202011-10-11%20at%2010.23.22%20AM" width="400" height="279" /></a></p>
+<p>So, what if we take this, and instead compute (a bit like we did in NoTube from ratings data) similarity measures between books?</p>
+<p><a title="Screen%20shot%202011-10-11%20at%2010.24.12%20AM by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6233468607/"><img class="alignright" src="http://farm7.static.flickr.com/6179/6233468607_c0756682ae.jpg" alt="Screen%20shot%202011-10-11%20at%2010.24.12%20AM" width="400" height="272" /></a></p>
+<p>I tried that, without using much of Mahout&#8217;s sophistication. I used its &#8216;rowsimilarityjob&#8217; facility and generated similarity measures for each book, then threw out most of the similaritiesÂ except the top 5, later the top 3, from each book. From this point, I moved things over into the Gephi toolkit (&#8220;photoshop for graphs&#8221;), as I wanted to see how things looked.</p>
+<p><a title="Screen%20shot%202011-10-11%20at%2010.37.06%20AM by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6233468419/"><img class="alignright" src="http://farm7.static.flickr.com/6180/6233468419_cf2c45b3d8.jpg" alt="Screen%20shot%202011-10-11%20at%2010.37.06%20AM" width="400" height="276" /></a></p>
+<p>First results shown here. Nodes are books, links are strong similarity measures. Node labels are titles, or sometimes title + subtitle.  Some (the black-background ones) use Gephi&#8217;s &#8220;modularity detection&#8221; analysis of the link graph. Others (white background) I imported the 1000 clusters from the earlier Mahout experiments. I tried various of the metrics in Gephi and mapped these to node size. This might fairly be called &#8216;playing around&#8217; at this stage, but there is at least a pipeline from raw data (eventually Linked Data I hope) through Mahout to Gephi and some visual maps of literature.</p>
+<p><a title="1k_overview by danbri, on Flickr" href="http://www.flickr.com/photos/danbri/6233990550/"><img class="alignright" src="http://farm7.static.flickr.com/6056/6233990550_ffb261f053.jpg" alt="1k_overview" width="400" height="400" /></a></p>
+<p>What does all this show?</p>
+<p>That if we can find a way to open up bibliographic datasets, there are solid opensource tools out there that can give new ways of exploring the items described in the data. That those tools (e.g. Mahout, Gephi) provide many different ways of computing similarity, clustering, and presenting. There is no single &#8216;right answer&#8217; for how to present literature or TV archive content as a visual map, clustering &#8220;like with like&#8221;, or arranging neighbourhoods. And there is also no restriction that we must work dataset-by-dataset, either. Why not use what we know from movie/TV recommendations to arrange the similarity space for books? Or vice-versa?</p>
+<p>I must emphasise (to return to Ben Fry&#8217;s opening remark) that this is a proof-of-concept. It shows some potential, but it is neither a user interface, nor particularly informative. Gephi as a tool for making such visualizations is powerful, but it too is not a viable interface for navigating TV content. However these tools do give us a glimpse of what is hidden in giant and dull-sounding databases, and some hints for how patterns extracted from these collections could help guide us through literature, TV or more.</p>
+<p>Next steps? There are many things that could be tried; more than I could attempt. I&#8217;d like to get some variant of these 2D maps onto ipad/android tablets, loaded with TV content. I&#8217;d like to continue exploring the bridges between content (eg. TED) and library materials, on tablets and PCs. I&#8217;d like to look at Mahout&#8217;s &#8220;collocated terms&#8221; extraction tools in more details. These allow us to pull out recurring phrases (e.g. &#8220;Zero Sum&#8221;, &#8220;climate change&#8221;, &#8220;golden rule&#8221;, &#8220;high school&#8221;, &#8220;black holes&#8221; were found in <a href="http://danbri.org/2011/mahout/_sorted_ted_filtered.txt">TED transcripts</a>). I&#8217;ve also tried extracting <a href="http://danbri.org/2011/mahout/_sorted_harv_2gram.txt">bi-gram phrases from book titles</a> using the same utility. Such tools offer some prospect of bulk-creating links not just between single items in collections, but between <em>neighbourhood regions</em> in maps such as those shown here. The cross-links will never be perfect, but then what&#8217;s a little serendipity between friends?</p>
+<p>As full text access to book data looms, and TV archives are <a href="http://www.bbc.co.uk/blogs/bbcinternet/2011/10/digital_public_space_partnersh.html">finding their way</a> <a href="http://blog.archive.org/2011/08/24/understanding-911/">online</a>, we&#8217;ll need to find ways of combining user interface, bibliographic and data science skills if we&#8217;re really going to make the most of the treasures that are being shared in the Web. Since I&#8217;ve only fragments of each, I&#8217;m always drawn back to think of this in terms of collaborative work.</p>
+<p>A few years ago, <a href="http://www.netflixprize.com/">Netflix</a> had the vision and cash to pretty much buy the attention of the entire machine learning community for a measly million dollars. Researchers love to have substantive datasets to work with, and the (now retracted) Netflix dataset is still widely sought after. Without a budget to match Netflix&#8217;, could we still somehow offer prizes to help get such attention directed towards analysis and exploitation of linked TV and library data?  We could offer free access to the world&#8217;s literature via a global network of libraries? Except everyone gets that for free already. Maybe we don&#8217;t need prizes.</p>
+<p>Nearby in the Web: <a href="http://notube.tv/2011/10/10/n-screen-a-second-screen-application-for-small-group-exploration-of-on-demand-content/">NoTube N-Screen</a>, <a href="http://www.flickr.com/photos/danbri/sets/72157627737423345/show/">Flickr slideshow</a></p>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2011/06/20/717">
+	<title>Rorschach test: hidden structure or noise?</title>
+	<link>http://danbri.org/words/2011/06/20/717</link>
+	 <dc:date>2011-06-20T15:31:42Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Image Description]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[Technology]]></dc:subject>
+		<dc:subject><![CDATA[Web Technology]]></dc:subject>
+		<dc:subject><![CDATA[coding]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+	<description>Birth of a nation His girl friday Nosferatu Meet John Doe Killer Shews The Amazing Transparent Man Teenagers from Outer Space Last Woman on Earth Voyage to the Planet of Prehistoric Women</description>
+	<content:encoded><![CDATA[<p><a href="http://danbri.org/words/wp-content/uploads/2011/06/Figure2.png"><img class="size-large wp-image-718 alignnone" title="Splurg" src="http://danbri.org/words/wp-content/uploads/2011/06/Figure2-1024x768.png" alt="" width="640" height="480" /></a></p>
+<ul>
+<li><a href="http://www.archive.org/details/dw_griffith_birth_of_a_nation">Birth of a nation</a></li>
+<li><a href="http://www.archive.org/details/his_girl_friday">His girl friday</a></li>
+<li><a href="http://www.archive.org/details/nosferatu">Nosferatu</a></li>
+<li><a href="http://www.archive.org/details/meet_john_doe">Meet John Doe</a></li>
+<li><a href="http://www.archive.org/details/The_Killer_Shrews">Killer Shews</a></li>
+<li><a href="http://www.archive.org/details/The_Amazing_Transparent_Man">The Amazing Transparent Man</a></li>
+<li><a href="http://www.archive.org/details/teenagers_from_outerspace">Teenagers from Outer Space</a></li>
+<li><a href="http://www.archive.org/details/last_woman_on_earth1960">Last Woman on Earth</a></li>
+<li><a href="http://www.archive.org/details/VoyagetothePlanetofPrehistoricWomen">Voyage to the Planet of Prehistoric Women</a></li>
+</ul>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2011/06/19/711">
+	<title>K-means test in Octave</title>
+	<link>http://danbri.org/words/2011/06/19/711</link>
+	 <dc:date>2011-06-19T14:14:04Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Technology]]></dc:subject>
+		<dc:subject><![CDATA[coding]]></dc:subject>
+	<description>Matlab comes with K-means clustering &#8216;out of the box&#8217;. The GNU Octave work-a-like system doesn&#8217;t, and there seem to be quite a few implementations floating around. I picked the first from Google, pretty carelessly, saving as myKmeans.m. These are notes from trying to reproduce this Matlab demo with Octave. Not rocket science but worth writing [...]</description>
+	<content:encoded><![CDATA[<p>Matlab comes with K-means clustering &#8216;out of the box&#8217;. The GNU Octave work-a-like system doesn&#8217;t, and there seem to be quite a few implementations floating around. I picked the <a href="http://www.christianherta.de/kmeans.html">first</a> from Google, pretty carelessly, saving as myKmeans.m. These are notes from trying to reproduce this <a href="http://www.youtube.com/watch?v=aYzjenNNOcc">Matlab demo</a> with Octave. Not rocket science but worth writing down so I can find it again.</p>
+<p><a href="http://danbri.org/words/wp-content/uploads/2011/06/mykmeans.png"><img class="alignright size-medium wp-image-712" title="mykmeans" src="http://danbri.org/words/wp-content/uploads/2011/06/mykmeans-300x234.png" alt="" width="300" height="234" /></a></p>
+<pre>M=4
+W=2
+H=4
+S=500
+a = M * [randn(S,1)+W, randn(S,1)+H];
+b = M * [randn(S,1)+W, randn(S,1)-H];
+c = M * [randn(S,1)-W, randn(S,1)+H];
+d = M * [randn(S,1)-W, randn(S,1)-H];
+e = M * [randn(S,1), randn(S,1)];
+all_data = [a;b;c;d;e];
+plot(a(:,1), a(:,2),'.');
+hold on;
+plot(b(:,1), b(:,2),'r.');
+plot(c(:,1), c(:,2),'g.');
+plot(d(:,1), d(:,2),'k.');
+plot(e(:,1), e(:,2),'c.');
+% using http://www.christianherta.de/kmeans.html as myKmeans.m
+[centroid,pointsInCluster,assignment] = myKmeans(all_data,5)
+scatter(centroid(:,1),centroid(:,2),'x');</pre>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2011/05/11/701">
+	<title>Querying Linked GeoData with R SPARQL client</title>
+	<link>http://danbri.org/words/2011/05/11/701</link>
+	 <dc:date>2011-05-11T13:41:08Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Geo]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[SPARQL]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+	<description>Assuming you already have the R statistics toolkit installed, this should be easy. Install Willem van Hage&#8216;s R SPARQL client. I followed the instructions and it worked, although I had to also install the XML library, which was compiled and installed when I typedÂ install.packages(&#8220;XML&#8220;, repos = &#8220;http://www.omegahat.org/R&#8220;) &#8216; within the R interpreter. Yesterday I set [...]</description>
+	<content:encoded><![CDATA[<div id="_mcePaste">Assuming you already have the R statistics toolkit installed, this should be easy.</div>
+<div>Install <a href="http://www.few.vu.nl/~wrvhage/">Willem van Hage</a>&#8216;s <a href="http://www.few.vu.nl/~wrvhage/R/">R SPARQL client</a>. I followed the instructions and it worked, although I had to also install the XML library, which was compiled and installed when I typedÂ <span style="font-family: arial, sans-serif; line-height: 15px; font-size: x-small;"><em>install</em>.<em>packages</em>(&#8220;<em>XML</em>&#8220;, repos = &#8220;http://www.omegahat.org/<em>R</em>&#8220;) &#8216;</span> within the R interpreter.</div>
+<div></div>
+<div><a href="http://swig.xmlhack.com/2011/05/10/2011-05-10.html#1305021973.421976">Yesterday I set up</a> a simple SPARQL endpoint using Benjamin Nowack&#8217;sÂ <a href="https://github.com/semsol/arc2/">ARC2</a> andÂ RDF data from the <a href="http://www.lieber-ravensburg.de/developer/">Ravensburg</a> dataset. The data includes category information about many points of interest in a German town. We can type the following 5 lines into R and show R consuming SPARQL results from the Web:</div>
+<div>
+<ul>
+<li>library(SPARQL)</li>
+<li>endpoint = &#8220;<a href="http://foaf.tv/hypoid/sparql.php">http://foaf.tv/hypoid/sparql.php</a>&#8220;</li>
+<li>q = &#8220;PREFIX vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt;\nPREFIX foaf:\n&lt;http://xmlns.com/foaf/0.1/&gt;\nPREFIX rv:\n&lt;http://www.wifo-ravensburg.de/rdf/semanticweb.rdf#&gt;\nPREFIX gr:\n&lt;http://purl.org/goodrelations/v1#&gt;\n \nSELECT ?poi ?l ?lon ?lat ?k\nWHERE {\nGRAPH &lt;http://www.heppresearch.com/dev/dump.rdf&gt; {\n?poi\nvcard:geo ?l .\n Â ?l vcard:longitude ?lon .\n Â ?l vcard:latitude ?lat\n.\n ?poi foaf:homepage ?hp .\n?poi rv:kategorie ?k .\n\n}\n}\n&#8221;</li>
+<li>res&lt;-SPARQL(endpoint,q)</li>
+<li>pie(table(res$k))</li>
+</ul>
+</div>
+<p>This is the simplest thing that works to show the data flow. When combined with richer server-side support (eg. OWL tools, or <a href="http://www.swi-prolog.org/pldoc/package/space.html">spatial reasoning</a>) and the capabilities of R plus its other extensions, there is a lot of potential here. A pie chart doesn&#8217;t capture all that, but it does show how to get started&#8230;</p>
+<div><a href="http://danbri.org/words/wp-content/uploads/2011/05/rpie.png"><img class="size-full wp-image-703 aligncenter" title="rpie" src="http://danbri.org/words/wp-content/uploads/2011/05/rpie.png" alt="" width="300" height="211" /></a></div>
+<div></div>
+<div>Note also that you can send any SPARQL query you like, so long as the server understands it and responds using W3C&#8217;s <a href="http://www.w3.org/TR/rdf-sparql-XMLres/">standard XML response</a>. The R library doesn&#8217;t try to interpret the query, so you&#8217;re free to make use of any special features or experimental extensions understood by the server.</div>
+<div></div>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2011/05/10/675">
+	<title>Exploring Linked Data with Gremlin</title>
+	<link>http://danbri.org/words/2011/05/10/675</link>
+	 <dc:date>2011-05-10T19:16:17Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[SPARQL]]></dc:subject>
+		<dc:subject><![CDATA[Semantic Web]]></dc:subject>
+		<dc:subject><![CDATA[Technology]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+		<dc:subject><![CDATA[tv]]></dc:subject>
+	<description>Gremlin is a free Java/Groovy system for traversing graphs, including but not limited to RDF.Â This post is based on example code from Marko Rodriguez (@twarko) and the Gremlin wiki and mailing list. The test run below goes pretty slowly when run with 4 or 5 loops, since it uses the Web as its database, via [...]</description>
+	<content:encoded><![CDATA[<p><a href="http://gremlin.tinkerpop.com">Gremlin</a> is a free Java/<a href="http://en.wikipedia.org/wiki/Groovy_(programming_language)">Groovy</a> system for traversing <a href="http://www.tinkerpop.com">graphs</a>, including but not limited to RDF.Â This post is based on example code from <a href="http://markorodriguez.com">Marko Rodriguez</a> (<a href="http://twitter.com/twarko">@twarko</a>) and the Gremlin wiki and mailing list. The test run below goes pretty slowly when run with 4 or 5 loops, since it uses the Web as its database, via entry-by-entry fetches. In this case it&#8217;s fetching from DBpedia, but I&#8217;ve ran it with a few tweaks against Freebase happily too. The on-demand RDF is handled by the<a href="https://github.com/tinkerpop/gremlin/wiki/LinkedData-Sail"> Linked Data Sail</a> developed by <a href="http://fortytwo.net/">Joshua Shinavier</a>; same thing would work directly against a database too. If you like Gremlin you&#8217;ll also Joshua&#8217;s <a href="http://ripple.fortytwo.net/">Ripple work</a> (see <a href="   http://ripple.googlecode.com/svn/trunk/docs/screencast/index.html ">screencast</a>, <a href="http://code.google.com/p/ripple/">code</a>, <a href="https://github.com/joshsh/ripple/wiki ">wiki</a>).</p>
+<p>Why is this interesting? Don&#8217;t we already have SPARQL? And SPARQL 1.1 even has paths. Â I&#8217;d like to see a bit more convergence with SPARQL, but this is a different style of dealing with graph data.Â The most intriguing difference from SPARQL here is the ability to drop in Turing-complete fragments throughout the &#8216;query&#8217;; for example in the { closure block } shown below. I&#8217;m also, for hard-to-articulate reasons, reminded somehow of Apache&#8217;sÂ <a href="http://wiki.apache.org/pig/PigTutorial">Pig</a> language. Although Pig doesn&#8217;t allow arbitrary script, it does encourage a pipeline perspective on data processing.</p>
+<p>So in this example we start exploring the graph from one vertex, we&#8217;ll call it &#8216;fry&#8217;, representing Stephen Fry&#8217;s dbpedia entry. The idea is to collect up information about actors and their co-starring patterns as recorded in Wikipedia.</p>
+<p>Here is the full setup code needed; it can be run interactively in the Gremlin commandline console. So it runs quickly we loop only twice.</p>
+<p>g = new LinkedDataSailGraph(new MemoryStoreSailGraph())<br />
+fry = g.v(&#8216;http://dbpedia.org/resource/Stephen_Fry&#8217;)<br />
+g.addNamespace(&#8216;wp&#8217;, &#8216;http://dbpedia.org/ontology/&#8217;)<br />
+m = [:]</p>
+<div>From here, everything else is in one line:</div>
+<div>fry.<strong>in</strong>(&#8216;wp:starring&#8217;).<strong>out</strong>(&#8216;wp:starring&#8217;).<strong>groupCount</strong>(m).<strong>loop</strong>(3){it.loops &lt;2}</p>
+<p>This corresponds to a series of steps (which map to TinkerPop / Blueprints / Pipes API calls behind the scenes). I&#8217;ve marked the steps in <strong>bold</strong> here:</p>
+</div>
+<div>
+<ul>
+<li><strong>in:</strong> &#8216;wp:starring&#8217;: from our <a href="http://dbpedia.org/resource/Stephen_Fry">initial vertice</a>, representing Stephen Fry, we step to vertices that point to us with a &#8216;wp:starring&#8217; link</li>
+<li><strong>out</strong>: from those vertices, we follow outgoing edges marked &#8216;wp:starring&#8217; (including those back to Stephen Fry), taking us to things that he and his co-stars starred in, i.e. TV shows and films.</li>
+<li>we then call <strong>groupCount</strong> and pass it our bookkeeping hashtable, &#8216;m&#8217;. It increments a counter based on ID of current vertex or edge. As we revisit the same vertex later, the total counter for that entity goes up.</li>
+<li>from this point, we then go back 3 steps, and recurse several times. Â e.g. &#8220;{ it.loops &lt; 3 }&#8221; (this last is a closure; we can drop any code in here&#8230;)</li>
+</ul>
+</div>
+<p>This maybe gives a flavour. See the <a href="https://github.com/tinkerpop/gremlin/wiki/LinkedData-Sail">Gremlin Wiki </a>for the real goods. The first version of this post was verbose, as I had Gremlin step explictly into graph edges, and back into vertices each time. Gremlin allows edges to have properties, which is useful both for representing non-RDF data, but also for apps to keep annotations on RDF triples. It also exposes &#8216;named graph&#8217; URIs on each edge with an &#8216;ng&#8217; property. You can step from a vertex into an edge with &#8216;inE&#8217;, &#8216;outE&#8217; and other steps; again check the wiki for details.</p>
+<p>From an application and data perspective, the Gremlin system is interesting as it allows quantitatively minded graph explorations to be used alongside classically factual SPARQL. The results below show that it can dig out an actor&#8217;s co-stars (and then take account of their co-stars, and so on). This sort of neighbourhood exploration helps balance out the messyness of much Linked Data; rather than relying on explicitly asserted facts from the dataset, we can also add in derived data that comes from counting things expressed in dozens or hundreds of pages.</p>
+<p>Once the Gremlin loops are finished, we can examine the state of our book-keeping object, &#8216;m&#8217;:</p>
+<p>Back in the gremlin.sh commandline interface (effectively typing in Groovy) we can do this&#8230;</p>
+<p>gremlin&gt; m2 = m.sort{ a,b -&gt; b.value &lt;=&gt; a.value }</p>
+<pre>==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Stephen_Fry">Stephen_Fry</a>]=58
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Hugh_Laurie">Hugh_Laurie</a>]=9
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Tony_Robinson">Tony_Robinson</a>]=6
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Rowan_Atkinson">Rowan_Atkinson</a>]=6
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Miranda_Richardson">Miranda_Richardson</a>]=4
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Tim_McInnerny">Tim_McInnerny</a>]=4
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Tony_Slattery">Tony_Slattery</a>]=3
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/EmmaThompson">Emma_Thompson</a>]=3
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Robbie_Coltrane">Robbie_Coltrane</a>]=3
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/John_Lithgow">John_Lithgow</a>]=2
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Emily_Watson">Emily_Watson</a>]=2
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Colin_Firth">Colin_Firth</a>]=2
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Sandi_Toksvig">Sandi_Toksvig</a>]=1
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/John_Sessions">John_Sessions</a>]=1
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Greg_Proops">Greg_Proops</a>]=1
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Paul_Merton">Paul_Merton</a>]=1
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Mike_McShane">Mike_McShane</a>]=1
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Ryan_Stiles">Ryan_Stiles</a>]=1
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Colin_Mochrie">Colin_Mochrie</a>]=1
+==&gt;v[http://dbpedia.org/resource/<a href="http://en.wikipedia.org/wiki/Josie_Lawrence">Josie_Lawrence</a>]=1</pre>
+<pre>[...]</pre>
+<p>Now how would this look if we looped around a few more times? i.e. re ran our co-star traversal from each of the final vertices we settled on?<br />
+Here are the results from a longer run. The difference you see will depend upon the shape of the graph, the kind of link types you&#8217;re traversing, and so forth. And also, of course, on the nature of the things in the world that the graph describes.Â Here are the Gremlin results when we loop 5 times instead of 2:</p>
+<p><span style="color: #555555; font-family: Arial, Helvetica, sans-serif; line-height: 20px;"> </span></p>
+<pre style="margin-top: 0px; margin-right: 0px; margin-bottom: 18px; margin-left: 0px; outline-width: 0px; outline-style: initial; outline-color: initial; font-size: 15px; vertical-align: baseline; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #f7f7f7; color: #222222; line-height: 18px; font-family: 'Courier 10 Pitch', Courier, monospace; background-position: initial initial; background-repeat: initial initial; padding: 1.5em; border: 0px initial initial;">==&gt;v[http://dbpedia.org/resource/Stephen_Fry]=8160
+==&gt;v[http://dbpedia.org/resource/Hugh_Laurie]=3641
+==&gt;v[http://dbpedia.org/resource/Rowan_Atkinson]=2481
+==&gt;v[http://dbpedia.org/resource/Tony_Robinson]=2168
+==&gt;v[http://dbpedia.org/resource/Miranda_Richardson]=1791
+==&gt;v[http://dbpedia.org/resource/Tim_McInnerny]=1398
+==&gt;v[http://dbpedia.org/resource/Emma_Thompson]=1307
+==&gt;v[http://dbpedia.org/resource/Robbie_Coltrane]=1303
+==&gt;v[http://dbpedia.org/resource/Tony_Slattery]=911
+==&gt;v[http://dbpedia.org/resource/Colin_Firth]=854
+==&gt;v[http://dbpedia.org/resource/John_Lithgow]=732 [...]</pre>
+]]></content:encoded>
+	</item>
+<item rdf:about="http://danbri.org/words/2011/02/01/658">
+	<title>Video Linking: Archives and Encyclopedias</title>
+	<link>http://danbri.org/words/2011/02/01/658</link>
+	 <dc:date>2011-02-01T19:43:50Z</dc:date>
+	<dc:creator>danbri</dc:creator>
+			<dc:subject><![CDATA[Image Description]]></dc:subject>
+		<dc:subject><![CDATA[Project ideas]]></dc:subject>
+		<dc:subject><![CDATA[RDF]]></dc:subject>
+		<dc:subject><![CDATA[SPARQL]]></dc:subject>
+		<dc:subject><![CDATA[Technology]]></dc:subject>
+		<dc:subject><![CDATA[coding]]></dc:subject>
+		<dc:subject><![CDATA[ggg]]></dc:subject>
+		<dc:subject><![CDATA[tv]]></dc:subject>
+	<description>This is a quick visual teaser for some archive.org-related work I&#8217;m doing with NoTube colleagues, and a collaboration with Kingsley Idehen on navigating it. In NoTube we are trying to match people and TV content by using rich linked data representations of both. I love Archive.org and with their help have crawled an experimental subset [...]</description>
+	<content:encoded><![CDATA[<p>This is a quick visual teaser for some <a href="http://archive.org/">archive.org</a>-related work I&#8217;m doing with NoTube colleagues, and a collaboration <a href="http://twitter.com/#!/kidehen/status/32470388189429760">with Kingsley Idehen</a> on navigating it.</p>
+<p>In NoTube we are trying to match people and TV content by using rich linked data representations of both. I love <a href="http://archive.org/">Archive.org</a> and with <a href="http://danbri.org/words/2010/10/27/565">their help</a> have crawled an experimental subset of the video-related metadata for the Archive. I&#8217;ve also used a couple of other sources; Sean P. Aune&#8217;s <a href="http://tech.blorge.com/Structure:%20/2010/08/11/top-40-best-free-legal-movies-you-can-download-right-now/">list</a> of 40 great movies, and the Wikipedia page listing <a href="http://en.wikipedia.org/wiki/List_of_films_in_the_public_domain_in_the_United_States">US public domain films</a>. I fixed, merged and scraped until I had a reasonable <a href="http://buttons.notube.tv/moredata/archive.org/films/_archivemeta.nt">sample dataset</a> for testing.</p>
+<p><img class=" alignright" title="Intertain Lab - projected Pivot" src="http://farm6.static.flickr.com/5138/5410838210_5aa82e5474_m.jpg" alt="" /></p>
+<p>I wanted to test the <a href="http://en.wikipedia.org/wiki/Microsoft_Live_Labs_Pivot">Microsoft Pivot Viewe</a>r (a Silverlight control), and since OpenLink&#8217;s Virtuoso package now has built-in support, I got talking with Kingsley and we ended up with the following demo. Since not everyone has Silverlight, and this is just a rough prototype that may be offline, I&#8217;ve made a few screenshots. The real thing is very visual, with animated zooms and transitions, but screenshots give the basic idea.</p>
+<p>Notes: the core dataset for now is just <em>links</em> between archive.org entries and Wikipedia/dbpedia pages. In NoTube we&#8217;ll also try <a href="http://lupedia.ontotext.com/">Lupedia</a>, <a href="http://www.zemanta.com/">Zemanta</a>, Reuter&#8217;s <a href="http://www.opencalais.com/">OpenCalais</a> services on the Archive.org descriptions to see if they suggest other useful links and categories, as well as any other enrichment sources (delicious tags, machine learning) we can find. There is also more metadata from the Archive that we should also be using.</p>
+<p>This simple preview simply shows how<em> one extra fact</em> per Archived item creates new opportunities for navigation, discovery and understanding. Note that the UI is in no way tuned to be TV, video or archive specific; rather it just lets you explore a group of items by their &#8216;facets&#8217; or common properties. It also reveals that wiki data is rather chaotic, however some fields (release date, runtime, director, star etc.) are reliably present. And of course, since the data is from Wikipedia, users can always fix the data.</p>
+<p>You often hear Linked Data enthusiasts talk about data &#8220;silos&#8221;, and the need to interconnect them. All that means here, is that when collections are linked, then improvements to information on one side of the link bring improvements automatically to the other. When a Wikipedia page about a director, actor or movie is improved, it now also improves our means of navigating Archive.org&#8217;s wonderful collection. And when someone contributes new video or new HTML5-powered players to the Archive, they&#8217;re also enriching the Encyclopedia too.</p>
+<p><a href="http://danbri.org/words/wp-content/uploads/2011/02/archive-pivot-releasedate.png"><img class="alignnone size-large wp-image-660" title="archive-pivot-releasedate" src="http://danbri.org/words/wp-content/uploads/2011/02/archive-pivot-releasedate-1024x515.png" alt="Archive.org films on a timeline by release date according to Wikipedia." width="640" height="321" /></a></p>
+<p>One thing to mention is that everything here comes from the Wikipedia data that is automatically extracted from by <a href="http://dbpedia.org/">DBpedia</a>, and that currently the extractors are not working perfectly on all films. So it should get better in the future. I also added a lot of the image links myself, semi-automatically. For now, this navigation is much more factually-based than topic; however we do have Wikipedia categories for each film, director, studio etc., and these have been mapped to other category systems (formal and informal), so there&#8217;s a lot of other directions to explore.</p>
+<p>What else can we do? How about flip the tiled barchart to organize by the film&#8217;s <em>distributor</em>, and constrain the &#8216;<em>release date</em>&#8216; facet to the 1940s:</p>
+<p><a href="http://danbri.org/words/wp-content/uploads/2011/02/distributors-1940s.png"><img class="alignnone size-large wp-image-662" title="distributors-1940s" src="http://danbri.org/words/wp-content/uploads/2011/02/distributors-1940s-1024x447.png" alt="" width="640" height="279" /></a></p>
+<p>That&#8217;s nice. But remember that with Linked Data, you&#8217;re always dealing with a subset of data. It&#8217;s hard to know (and it&#8217;s hard for the interface designers to show us) when you have all the relevant data in hand. In this case, we can see what this is telling us about the videos currently available within the demo. But does it tell us anything interesting about all the films in the Archive? All the films in the world? Maybe a little, but interpretation is difficult.</p>
+<p>Next: zoom in to a specific item. The legendary <a href="http://www.archive.org/details/Plan_9_from_Outer_Space_1959">Plan 9 from Outer Space</a> (<a href="http://en.wikipedia.org/wiki/Plan_9_from_Outer_Space">wikipedia</a> / <a href="http://dbpedia.org/page/Plan_9_from_Outer_Space">dbpedia</a>).</p>
+<p><em>Note the HTML-based info panel on the right hand side. In this case it&#8217;s automatically generated by Virtuoso from properties of the item. A TV-oriented version would be less generic.</em></p>
+<p><a href="http://danbri.org/words/wp-content/uploads/2011/02/plan9.png"><img class="alignnone size-large wp-image-663" title="plan9" src="http://danbri.org/words/wp-content/uploads/2011/02/plan9-1024x449.png" alt="" width="640" height="280" /></a></p>
+<p>Finally, we can explore the collection by constraining the timeline to show us items organized according to release date, for some facet. Here we show it picking out the career of one Edward J. Kay, at least as far as he shows up as composer of items in this collection:</p>
+<p><a href="http://danbri.org/words/wp-content/uploads/2011/02/when-edward-kay.png"><img class="alignnone size-large wp-image-664" title="when-edward-kay" src="http://danbri.org/words/wp-content/uploads/2011/02/when-edward-kay-1024x450.png" alt="" width="640" height="281" /></a></p>
+<p>Now turning back to Wikipedia to learn about &#8216;Edward J. Kay&#8217;, I find he has no entry (beyond these passing mentions of his name) in the English Wikipedia, despite his work on <a href="http://en.wikipedia.org/wiki/The_Ape_Man">The Ape Man</a>, <a href="http://en.wikipedia.org/wiki/The_Fatal_Hour">The Fatal Hour,</a> and other films. Â While the German Wikipedia does honour him with <a href="http://de.wikipedia.org/wiki/Edward_J._Kay">an entry</a>, I wonder whether this kind of <a href="http://en.wikipedia.org/wiki/Linked_Data">Linked Data</a> navigation will change the dynamics of the &#8216;<a href="http://meta.wikimedia.org/wiki/Deletionism">deletionism</a>&#8216; debates at Wikipedia. Â Firstly by showing that structured data managed elsewhere can enrich the Wikipedia (and vice-versa), removing some pressure for a single Wiki to cover everything. Secondly it provides a tool to stand further back from the data and view things in a larger context; a context where for example Edward J. Kay&#8217;s achievements become clearer.</p>
+<p>Much like <a href="http://www.freebase.com/labs/parallax/">Freebase Parallax</a>, the Pivot viewer hints at a future in which we explore data by navigating from <em>sets of things</em> to other <em>sets of things </em>- like the set of film&#8217;s Edward J. Kay contributed to. Â Pivot doesn&#8217;t yet cover this, but it does very vividly present the potential for this kind of navigation, showing that navigation of films, TV shows and actors may be richer when it embraces more general mechanisms.</p>
+]]></content:encoded>
+	</item>
+</rdf:RDF>

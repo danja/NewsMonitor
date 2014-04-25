@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	>
+<channel rdf:about="http://www.andzol.com">
+	<title>ANDZOL.com</title>
+	<link>http://www.andzol.com</link>
+	<description>by ZoltÃ¡n Andrejkovics</description>
+	<dc:date>2014-01-24T22:38:38Z</dc:date>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="http://wordpress.org/?v=3.1.4" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://www.andzol.com/2013/12/companies-and-institutes-that-deploeyd-ai-technologies-2013/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2013/11/the-digital-assistant-of-the-future/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2013/03/602/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2013/03/needs/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2012/12/the-journey/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2012/02/what-makes-a-good-leader/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2012/01/sopa-and-pipa-what-effect-could-they-cause/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2012/01/motivation-matters/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2011/12/importance-of-passion/"/>
+					<rdf:li rdf:resource="http://www.andzol.com/2011/11/future-tech-vision/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://www.andzol.com/2013/12/companies-and-institutes-that-deploeyd-ai-technologies-2013/">
+	<title>Companies and institutes that deployed AI technologies</title>
+	<link>http://www.andzol.com/2013/12/companies-and-institutes-that-deploeyd-ai-technologies-2013/</link>
+	 <dc:date>2013-12-13T12:53:38Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Artificial Intelligence]]></dc:subject>
+	<description>Abstract Top 10 companies and institutes that started or deployed state of the art AI or Robotics tech in 2013 or plant to release soon in 2014-2015. These researches mainly focus machine learning, natural language processing and robotics. Google Inc. - Machine learning, Self driving cars (Research at Google) Wolfram Alpha LLC - Computational knowledge [...]</description>
+	<content:encoded><![CDATA[<div><strong>Abstract</strong></div>
+<div>Top 10 companies and institutes that started or deployed state of the art AI or Robotics tech in 2013 or plant to release soon in 2014-2015. These researches mainly focus machine learning, natural language processing and robotics.</div>
+<ol>
+<li><strong>Google Inc. - Machine learning, Self driving cars</strong><br />
+(<a href="http://research.google.com/pubs/papers.html" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://research.google.com/pubs/papers.html');" target="_blank">Research at Google</a>)</li>
+<li><strong>Wolfram Alpha LLC - Computational knowledge</strong><br />
+(<a rel="nofollow" href="http://www.wolframalpha.com/" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.wolframalpha.com/');" target="_blank">Computational Knowledge Engine</a>)</li>
+<li><strong>IBM - Watson</strong><br />
+(<a rel="nofollow" href="http://www-03.ibm.com/innovation/us/watson/" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www-03.ibm.com/innovation/us/watson/');" target="_blank">http://www-03.ibm.com/innovation...</a>)</li>
+<li><strong>IBM Almaden and India</strong><br />
+(<a rel="nofollow" href="http://www.kurzweilai.net/ibm-scientists-create-most-comprehensive-map-of-the-brains-network" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.kurzweilai.net/ibm-scientists-create-most-comprehensive-map-of-the-brains-network');" target="_blank">IBM scientists create most comprehensive map of the brainâs network</a>)</li>
+<li><strong>Honda - Asimo</strong><br />
+(<a rel="nofollow" href="http://world.honda.com/ASIMO/" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://world.honda.com/ASIMO/');" target="_blank">The Honda Worldwide ASIMO Site</a>)</li>
+<li><strong>DLR - SpaceBot, robot race</strong><br />
+(<a rel="nofollow" href="http://www.dlr.de/dlr/presse/en/desktopdefault.aspx/tabid-10172/213_read-8688/year-all/#gallery/12905" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.dlr.de/dlr/presse/en/desktopdefault.aspx/tabid-10172/213_read-8688/year-all/#gallery/12905');" target="_blank">Page on Www</a>)</li>
+<li><strong>Evi Technologies Ltd. - EVI</strong><br />
+(<a rel="nofollow" href="http://www.evi.com/" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.evi.com/');" target="_blank">Evi | Ask me anything</a>)</li>
+<li><strong>EPFL - Blue brain project</strong><br />
+(<a rel="nofollow" href="http://bluebrain.epfl.ch/" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://bluebrain.epfl.ch/');" target="_blank">Bluebrain | EPFL</a>)</li>
+<li><strong>MIT - Start</strong><br />
+(<a rel="nofollow" href="http://start.csail.mit.edu/" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://start.csail.mit.edu/');" target="_blank">The START Natural Language Question Answering System</a>)</li>
+<li><strong>Technische UniversitÃ¤t MÃ¼nchen - Mask-bit</strong><br />
+(<a rel="nofollow" href="http://portal.mytum.de/pressestelle/pressemitteilungen/NewsArticle_20111107_151556" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://portal.mytum.de/pressestelle/pressemitteilungen/NewsArticle_20111107_151556');" target="_blank">Mask-Bot: Ein Roboter mit menschlichem Antlitz</a>)</li>
+</ol>
+<p>&nbsp;</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=648&amp;md5=4665c3c2f031d3548a69fd7d943bd118" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2013/11/the-digital-assistant-of-the-future/">
+	<title>The digital assistant of the future</title>
+	<link>http://www.andzol.com/2013/11/the-digital-assistant-of-the-future/</link>
+	 <dc:date>2013-11-22T12:09:52Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description>Abstract We always comply that no intelligent agents are available on the market, but really do we even know what we need in everyday life, what could be a big help for us? This article intents to collect the most important attributes and capabilities that an personal AI assistant should have in the future. âLearnâ [...]</description>
+	<content:encoded><![CDATA[<div><strong>Abstract</strong></div>
+<div>We always comply that no intelligent agents are available on the market, but really do we even know what we need in everyday life, what could be a big help for us? This article intents to collect the most important attributes and capabilities that an personal AI assistant should have in the future.</div>
+<ul>
+<li>â<strong>Learn</strong>â everything I heard, saw and experienced in my life, be always with me, <strong>without further interaction of myself </strong><strong> </strong></li>
+<li><strong>Arrange writing short simple e-mails</strong>, that takes time to write, but includes only basic information (meetings request, pushing additional information)<br />
+<strong><span style="color: #993366;">âDear XY, According to the XY meeting I attach the following documents to this e-mailâ¦â</span></strong></li>
+<li><strong>Remark my ideas</strong> that came suddenly from nothing, and I always forget half of them (the other half I try to note down)<br />
+<strong><span style="color: #993366;">âI saved what you have said in the last minute, the idea name will be âProject Plan Xâ. The date is today 20/12/2013 16:00pm."</span></strong></li>
+<li><strong>Be always available </strong>and<strong> answer on basic questions</strong>, that are obvious for me (for example my colleague asked me where to login to a service, which is quite easy to answer)<br />
+<strong><span style="color: #993366;">âXY, please find the requested information on page (html link), please feel free to ask any other question in this respectâ</span></strong></li>
+<li><strong>Remember me on important events</strong> (birthdays, meetings)<br />
+<strong><span style="color: #993366;">âYour fathers birthday is on the next weekâ</span></strong></li>
+<li><strong>Help with ideas</strong>, when I write a book, or during the work, or even where to buy a present <img src='http://www.andzol.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> <br />
+<strong><span style="color: #993366;">âDo you ever heard about Einsteinâs famous quote âItâs not that Iâm so smart, itâs just that I stay with problems longerâ â</span></strong></li>
+<li><strong>Collect automatically information on the web </strong>what I am interested in. I spend every morning 10-15 minutes to read the latest news, and keep up-to-date. However I want mirror much more resources, I just not able to read all of them, and only the minority of the news are interested me.<br />
+<span style="color: #993366;"><strong>âI would recommend an article in topic âArtifical agentsâ, the title is âNew intelligent AI is produced by IBMâ, the most interesting part of the article is â¦â</strong><br />
+</span></li>
+<li><strong>Have a personality</strong>, at least should act as a male or female. Maybe it can have more detailed personality like being cheeky, cheerful, happy or humorous.<br />
+<strong><span style="color: #993366;">âHow is your mood today, want to hear some inspiring information about your friend? I just looked up on facebook."</span></strong></li>
+<li><strong>Care about my safety and health,</strong> not just eating this or that, but if I drive a car, and it is clear that a bicycle will go straight front of me, help to pay my attention on this event<br />
+<strong><span style="color: #993366;">âBicycle will appear from your rightâ</span></strong></li>
+<li><strong>Be capable to interact with me </strong>and<strong> understand me. </strong>Conversation is important for people, someone who is paying attention on me, always recharges me.<strong><br />
+<span style="color: #993366;">âWhat will we do today (together)? How do you feel yourself?â</span></strong></li>
+</ul>
+<p>&nbsp;</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=625&amp;md5=ba0d61a2f365af28089029eb4489099a" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2013/03/602/">
+	<title>Why does the bad guy always get the pretty girl?</title>
+	<link>http://www.andzol.com/2013/03/602/</link>
+	 <dc:date>2013-03-09T11:00:27Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Psychology]]></dc:subject>
+	<description>âBad guy"Â is a fairlyÂ accurate wording of this type of man. Actually we should identify the attributes of this "Bad guyâ: Definite/confident Initiator Has his own will His job/lifestyle has something that is taboo/dangerous for most of us Unattainable (pissing off girls) Gives strong attention - eye contact (but not in every moment) Have money (indicator [...]</description>
+	<content:encoded><![CDATA[<p>âBad guy"Â is a fairlyÂ accurate wording of this type of man.</p>
+<p>Actually we should identify the attributes of this "Bad guyâ:</p>
+<ul>
+<li>Definite/confident</li>
+<li>Initiator</li>
+<li>Has his own will</li>
+<li>His job/lifestyle has something that is taboo/dangerous for most of us</li>
+<li>Unattainable (pissing off girls)</li>
+<li>Gives strong attention - eye contact (but not in every moment)</li>
+<li>Have money (indicator of success)</li>
+</ul>
+<p>Most of these attributes are that we can call âpower traitsâ, and this makes these guys more attractive than others.</p>
+<p>Attraction and kindness is just two things, but if you are too kind to a woman, she will feel that you are submissive/ subordinate and you do not have your own way, your own will and this suggests, that you are week.</p>
+<p>Excitement is the key factor if you would like to attract girls to you, and these qualities help to build an image of excitement.</p>
+<p><a href="http://www.andzol.com/wp-content/uploads/2013/03/toretto.jpg" onclick=""><img class="size-full wp-image-605 alignnone" title="toretto" src="http://www.andzol.com/wp-content/uploads/2013/03/toretto.jpg" alt="" width="512" height="246" /></a></p>
+<p><a href="http://www.quora.com/Sexuality/Why-does-the-bad-guy-always-get-the-pretty-girl" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.quora.com/Sexuality/Why-does-the-bad-guy-always-get-the-pretty-girl');">Quora link</a></p>
+<p>&nbsp;</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=602&amp;md5=1bb3725c22364e11b838e781cf1cca6f" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2013/03/needs/">
+	<title>Needs from wider perspective  (beyond Maslow)</title>
+	<link>http://www.andzol.com/2013/03/needs/</link>
+	 <dc:date>2013-03-07T13:11:14Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Psychology]]></dc:subject>
+	<description>Abstract This article is a short summary about Needs from a wider perspective, trying to collect the complete list of Needs that is influencing and motivating us from day to day. Needs Everybody wants to find meanings in the life. To fully understand our existence we need to understand our parts that could not be [...]</description>
+	<content:encoded><![CDATA[<p style="text-align: left;"><a href="http://www.andzol.com/wp-content/uploads/2013/03/Basic-Needs.jpg" onclick=""><img class="size-full wp-image-597 alignnone" title="Basic Needs" src="http://www.andzol.com/wp-content/uploads/2013/03/Basic-Needs.jpg" alt="" width="602" height="621" /></a></p>
+<p><strong>Abstract</strong></p>
+<p>This article is a short summary about Needs from a wider perspective, trying to collect the complete list of Needs that is influencing and motivating us from day to day.</p>
+<p><strong>Needs</strong></p>
+<p>Everybody wants to find meanings in the life. To fully understand our existence we need to understand our parts that could not be influenced, or change dramatically these are our needs.</p>
+<p>Do you remember the hierarchy of needs? (Maslow)</p>
+<ol>
+<li>Biological and Physiological needs (air, food, drink, sex, sleep)</li>
+<li>Safety needs (protection, limits, stability)</li>
+<li>Love needs (relationship, work group, friends)</li>
+<li>Esteem needs (status, responsibility, reputation)</li>
+<li>Self-actualization (fulfilment)</li>
+</ol>
+<p>This is an easy categorization of needs, but highlights the different types and the variety. However the above categorization seems to lack some of the important needs that exist in our everyday life.</p>
+<p>To solve this issue we can simply collect the needs that emerges in our life, without any categorization:</p>
+<ol>
+<li>Breath, Sleeping (need for being live)</li>
+<li>Eating, drinking (need for food)</li>
+<li>Home, safety (need for comfort zone)</li>
+<li>Family, friendship (need for community)</li>
+<li>Sexuality, having sex, procreation (need for making love)</li>
+<li>Claim for beauty (need for experience beautiful things)</li>
+<li>Moving, motion, will to act (need for change)</li>
+<li>Ecstasy (need if being in a state of intense feeling - after CsikszentmihÃ¡lyi)</li>
+<li>Need of attention (need for attracting attention)</li>
+<li>Curiosity, Seeking for new things, new feelings for unknown, entertainment (need to learn)</li>
+<li>Self-knowledge, spirituality, understanding life (need for faith)</li>
+<li>Helping each other, altruism</li>
+</ol>
+<p>The needs foster our everyday motivation. Every need stamps from the lack of fulfillment of that specific need, that implicates to raise of the desire to satisfy that. After satisfaction, another need steps forward in order to fulfill it.</p>
+<p>The working mechanism is so damn simple.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p>&nbsp;</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=323&amp;md5=4ba64f8818fd2d0e4b1c885d718ed35f" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2012/12/the-journey/">
+	<title>The Journey</title>
+	<link>http://www.andzol.com/2012/12/the-journey/</link>
+	 <dc:date>2012-12-24T12:15:57Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Enterprice]]></dc:subject>
+		<dc:subject><![CDATA[Psychology]]></dc:subject>
+	<description>Abstract After a long year everybody starts toÂ evaluate his or her achievements, starts thinking what he or she did good or wrong, and asks him- or herself was 2012 a good year? &#160; Others A deep working man could be known by thinking about the future or the past when he or she has some [...]</description>
+	<content:encoded><![CDATA[<p><strong>Abstract</strong></p>
+<p>After a long year everybody starts toÂ evaluate his or her achievements, starts thinking what he or she did good or wrong, and asks him- or herself was 2012 a good year?</p>
+<p>&nbsp;</p>
+<p><strong>Others</strong></p>
+<p>A deep working man could be known by thinking about the future or the past when he or she has some time to rest. IÂ traveledÂ on the plane in the autumn and during the flight I did not cared about the present, how I feel, what I amÂ interestedÂ in. I just wondered about tomorrow: a difficult meeting with difficult topics and no one can you help to solve the issues. This is when you lost yourself a little bit, you do not live in the now.</p>
+<p>After finishing a project or task, you always think was it worth to do this, was it worth toÂ sacrifice more time more effort, was it worth to work over the 4 days holiday? Most of the people stop at this point and they getÂ disappointed. In most cases people have less recognition than they deserve to have. Nobody knows what they did or sacrificed during the year. It is not the mistake of the leaders in most cases it is accidental, that your boss realizes your performance, or even does he or she has time to thank you.</p>
+<p><strong>Yourself</strong></p>
+<p><strong> </strong>At this point we should forget about bosses, shareholders, because everything what is important is You and Your opinion. The story is all about You. You were there when You faced with the hardest times, and You win. You did it. It is a little bit hard to understand why is it so important. We all know that we want to collect as many attention and recognition from other (boss, shareholders,Â parents, friends) as many we can, but suddenly you realize, there is no more recognition in respect you done this year. But the last word has always Your decision.</p>
+<p><strong>The Journey</strong></p>
+<p><a href="http://www.andzol.com/wp-content/uploads/2012/12/journey.jpg" onclick=""><img class="alignright size-full wp-image-581" title="journey" src="http://www.andzol.com/wp-content/uploads/2012/12/journey.jpg" alt="" width="320" height="252" /></a></p>
+<p>Every great journey starts with a decision, that you want to step out from your comfort zone. Remember you start every story with a blank page. Forget what you know about others, what you feel about others, and even what others think about you.</p>
+<p>When you start the journey you let the past behind, you know thatÂ your knowledge will be useless, and you can trust only your experience and intuitions. New persons, new faces will emerge during the story, but so will it be so excited.</p>
+<p>Remember when you arrive to the destination, you will never remember about what it feeled, but you will always remember about the journey, and the adventures in between. If you feel stronger in mind after this year journey, you became more.</p>
+<p>So are You ready to start Your Next Year JOURNEY?</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=578&amp;md5=d9e381cb026faa90aa12b80f401425d3" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2012/02/what-makes-a-good-leader/">
+	<title>What makes a good leader?</title>
+	<link>http://www.andzol.com/2012/02/what-makes-a-good-leader/</link>
+	 <dc:date>2012-02-01T17:33:46Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Enterprice]]></dc:subject>
+		<dc:subject><![CDATA[characteristics]]></dc:subject>
+		<dc:subject><![CDATA[good]]></dc:subject>
+		<dc:subject><![CDATA[leader]]></dc:subject>
+		<dc:subject><![CDATA[leadership]]></dc:subject>
+		<dc:subject><![CDATA[team]]></dc:subject>
+	<description>Abstract This article is a short summary of my experiances about leadership. However these points are very simple to write down every fresh leader should learn these things from one by one, to have deep understanding. &#160; Nature of good leader Always be prepared If you have a meeting with your team, you should always [...]</description>
+	<content:encoded><![CDATA[<p><strong>Abstract</strong></p>
+<p>This article is a short summary of my experiances about leadership. However these points are very simple to write down every fresh leader should learn these things from <strong>one by one</strong>, to have deep understanding.</p>
+<p>&nbsp;</p>
+<p><strong>Nature of good leader</strong></p>
+<p><a href="http://www.andzol.com/wp-content/uploads/2012/02/Jean-Luc-Picard.jpg" onclick=""><img class="alignright size-full wp-image-540" style="border-style: initial; border-color: initial;" title="Jean-Luc-Picard" src="http://www.andzol.com/wp-content/uploads/2012/02/Jean-Luc-Picard.jpg" alt="" width="240" height="303" /></a></p>
+<ul>
+<li><strong>Always be prepared<br />
+</strong>If you have a meeting with your team, you should always spend time to prepare for it</li>
+<li><strong>You are the Hero of your team</strong><br />
+Whether you want it or not, you will be the one who will be followed, you should show always the best of yourself (<strong>if you are unstable, you team will be unstable, if you are focused, your team will be focused</strong>)<br />
+If you do extraordinary job, if you are on time at meetings, if you do late night jobs, if you do your best, your team will follow you</li>
+<li><strong>Give strict but honest valuations</strong><br />
+Saying the hard truth is not always <a>pleasant</a>, but a must<br />
+Focus always on the improvement</li>
+<li>A "<strong>Thank you</strong>" is more important than money</li>
+<li><strong>Listen to your team</strong><br />
+Most of the time, team can solve every problem facing with you, because your problem your teams problem, and your teams problem is yours. Listening carefully will always help to understand their inner thoughts, and yes it can cause further work for the leader, <a>because </a><strong>good leader cares</strong></li>
+<li><strong>Give vision</strong><br />
+Saying day by day what to do to your team members will narrow their focus, and they will some time later just "follow the commands"<br />
+You should give them further vision, a goal, which is consist of not only numbers, but values. Vision, mission, value creating meetings could help to develop these goals. You should be at honest on these meetings as you can, sharing your hopes and what you want to be reality</li>
+<li><a href="http://www.andzol.com/wp-content/uploads/2012/02/dalailama.jpg" onclick=""><img class="alignright size-medium wp-image-551" style="border-style: initial; border-color: initial;" title="dalailama" src="http://www.andzol.com/wp-content/uploads/2012/02/dalailama-300x199.jpg" alt="" width="300" height="199" /></a>Delegate tasks consists of not only to say focused what to do, and what the expacted outcome is, but also <strong>giving theÂ "Why"</strong></li>
+<li><strong>Sit next to your team members<br />
+</strong></li>
+<div>Pair working will help to improve the efficiency of your job expecially when you have complex job and also will help to</div>
+<li><strong>Be calm</strong><br />
+Never loose your head, or if you does do that with a purpose</li>
+<li><strong>Be determined</strong><br />
+Did you ever feelÂ insecureÂ yourself, and did not find the right way? <strong>Just go ahead!</strong></li>
+<li><strong>Self-discipline </strong><br />
+If your want to be the best leader, you should achieve your team to believe that they are the best</li>
+<li><strong>Consequent behaviour</strong> tells strength about your personality to others, you can be wrong, but accept others truth only when it is established</li>
+<li>You should choose between "A" or "B"<br />
+First glance it could be very fun, always giving the final word, but after some time it is not so simple. You should learn how to even giving a decision, because <strong>a bad decision is always better, than no decision. </strong>Taking the risks will do you a great leader</li>
+<li><strong>Don't be a sheep</strong><br />
+Not everything others says is good, even if the majurity is swearing on their lifes, and even if the analisys says that</li>
+</ul>
+<p>...and why this really works? Because we should solve theÂ <a href="http://www.ted.com/talks/dan_pink_on_motivation.html" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.ted.com/talks/dan_pink_on_motivation.html');">candle problem</a></p>
+<p>&nbsp;</p>
+<p><strong>Communication</strong></p>
+<ul>
+<li><strong>Keep eye contact</strong> during converstaion<a href="http://www.andzol.com/wp-content/uploads/2012/02/smile.jpg" onclick=""><img class="alignright size-medium wp-image-559" style="border-style: initial; border-color: initial;" title="smile" src="http://www.andzol.com/wp-content/uploads/2012/02/smile-300x256.jpg" alt="" width="300" height="256" /></a></li>
+<div>You should look always into your collage's eyes</div>
+<li><strong>Listen carefully</strong><br />
+A good leader is a good listener</li>
+<li>Use words like
+<ul>
+<li><strong>"We"</strong> instead of "I" or "You"</li>
+<li><strong>"I trust in Your job"</strong></li>
+</ul>
+</li>
+<li><strong>Your body tells the rest of the story</strong><br />
+Your gestures and body language, are as important as you say in person. <a href="http://www.youtube.com/watch?v=AQENwD-QlRA" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.youtube.com/watch?v=AQENwD-QlRA');">Learn</a> how to controll it.</li>
+<li><strong>Smile</strong><br />
+A smile shows that you like what you are doing</li>
+</ul>
+<p>&nbsp;</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=531&amp;md5=15b6649e555d772839e6f8b41a77d385" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2012/01/sopa-and-pipa-what-effect-could-they-cause/">
+	<title>SOPA and PIPA What effect could they cause?</title>
+	<link>http://www.andzol.com/2012/01/sopa-and-pipa-what-effect-could-they-cause/</link>
+	 <dc:date>2012-01-19T09:02:41Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Internet]]></dc:subject>
+	<description>What they means? SOPA (Stop Online Piracy Act)Â was introduced in theÂ United States House of Representatives on October 26, 2011. PIPA (Protect IP Act)Â is aÂ proposed law with the stated goal of giving the US government and copyright holders additional tools to curb access to "rogue websites dedicated to infringing or counterfeit goods", especially those registered outside [...]</description>
+	<content:encoded><![CDATA[<p><strong>What they means?</strong></p>
+<p><strong>SOPA </strong>(Stop Online Piracy Act)Â was introduced in theÂ <a title="United States House of Representatives" href="http://en.wikipedia.org/wiki/United_States_House_of_Representatives" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://en.wikipedia.org/wiki/United_States_House_of_Representatives');">United States House of Representatives</a> on October 26, 2011.</p>
+<p><strong>PIPA </strong>(Protect IP Act)Â is aÂ <a title="Bill (proposed law)" href="http://en.wikipedia.org/wiki/Bill_(proposed_law)" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://en.wikipedia.org/wiki/Bill_(proposed_law)');">proposed law</a> with the stated goal of giving the US government and copyright holders additional tools to curb access to "rogue websites dedicated to infringing or counterfeit goods", especially those registered outside the U.S.</p>
+<p>Visual Summary</p>
+<p><img class=" alignnone" title="Americancensorship" src="http://americancensorship.org/infographic.png" alt="" /></p>
+<p><strong>Response of the world</strong></p>
+<p>On the 18th of January the world's biggest online pages blacked out for a day to protest against censorship (See images below).</p>
+<p><strong>Google </strong>(Search engine)</p>
+<p><img class="alignnone" title="Google SOPA" src="http://www.geek.com/wp-content/uploads/2012/01/GoogleSOPA-580x378.png" alt="" width="600" height="391" /></p>
+<p><strong>Firefox</strong> (Browser)</p>
+<p><img class="alignnone" title="Firefox SOPA" src="http://i1-news.softpedia-static.com/images/news2/Anti-SOPA-Blackout-Day-Mozilla-org-and-the-Firefox-Homepage-Join-the-Fight-5.png" alt="" width="600" height="455" /></p>
+<p><strong>WordPress </strong>(Blog engine)</p>
+<p><img class="alignnone" title="Wordpress SOPA" src="http://www.ozone3d.net/public/jegx/201201/sopa-wikipedia-blackout-day.jpg" alt="" width="600" height="478" /></p>
+<p><strong>Facebook </strong>(Social network)</p>
+<p>Read <a href="https://www.facebook.com/zuck/posts/10100210345757211" onclick="javascript:pageTracker._trackPageview('/outbound/article/https://www.facebook.com/zuck/posts/10100210345757211');">Facebook page</a> about SOPA:<br />
+<a href="http://www.facebook.com/zuck" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.facebook.com/zuck');"></a></p>
+<blockquote><p><a href="http://www.facebook.com/zuck">Mark Zuckerberg<br />
+</a>The internet is the most powerful tool we have for creating a more open and connected world. We can't let poorly thought out laws get in the way of the internet's development. Facebook opposes SOPA and PIPA, and we will continue to oppose any laws that will hurt the internet.Â The world today needs political leaders who are pro-internet. We have been working with many of these folks for months on better alternatives to these current proposals. I encourage you to learn more about these issues and tell your congressmen that you want them to be pro-internet.</p></blockquote>
+<p><strong>Impact that SOPA and PIPA can cause</strong></p>
+<p><object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/tzqMoOk9NWc?version=3&amp;hl=hu_HU" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed type="application/x-shockwave-flash" width="640" height="360" src="http://www.youtube.com/v/tzqMoOk9NWc?version=3&amp;hl=hu_HU" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<p>Source: khanacademy.org</p>
+<p><strong>When will be any decision?</strong></p>
+<p>On<strong> Jan 24th</strong>, Congress will vote to pass internet censorship in the Senate.</p>
+<p>&nbsp;</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=500&amp;md5=59197e421a626c8b165c6ec71bf4252e" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2012/01/motivation-matters/">
+	<title>Motivation matters</title>
+	<link>http://www.andzol.com/2012/01/motivation-matters/</link>
+	 <dc:date>2012-01-18T12:32:18Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Enterprice]]></dc:subject>
+	<description>Abstract This article wants to clarify some basic approaches about motivation. How the main motivating factors working, and how ot give positive and negative feedback as a leader. &#160; Basic motivation factors Personal allowance (salary) and bonus Produce new things and positive feedback (recognition) Fear Self directions (free use 20% of work time) What motivation [...]</description>
+	<content:encoded><![CDATA[<p><strong>Abstract</strong></p>
+<p>This article wants to clarify some basic approaches about motivation. How the main motivating factors working, and how ot give positive and negative feedback as a leader.</p>
+<p>&nbsp;</p>
+<p><strong>Basic motivation factors<a href="http://www.andzol.com/wp-content/uploads/2012/01/motivatingfactors.jpg" onclick=""><img class="alignright size-full wp-image-454" title="motivatingfactors" src="http://www.andzol.com/wp-content/uploads/2012/01/motivatingfactors.jpg" alt="" width="302" height="503" /></a></strong></p>
+<ol>
+<li>Personal allowance (salary) and bonus</li>
+<li>Produce new things and positive feedback (recognition)</li>
+<li>Fear</li>
+<li>Self directions (free use 20% of work time)</li>
+</ol>
+<p><strong>What motivation factors motivates?</strong></p>
+<ol>
+<li>Personal allowance (salary) and bonus âÂ <span style="color: #333399;"><strong>work length</strong></span></li>
+<li>Produce new things and positive feedback â<span style="color: #008000;"> <strong>work quality</strong></span></li>
+<li>Fear, punishments â<span style="color: #333399;"><strong> work length</strong></span></li>
+<li>Self directionsÂ (free use 20% of work time) â<span style="color: #008000;"><strong> work quality</strong></span></li>
+</ol>
+<p><span style="font-size: 11px; font-weight: bold;">What kind of skills the motivation factors boost?</span></p>
+<p>First see the following video about the "Candle problem"</p>
+<p><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=rrkrvAUbU9Y#!" onclick="javascript:pageTracker._trackPageview('/outbound/article/http://www.youtube.com/watch?feature=player_embedded&amp;v=rrkrvAUbU9Y#!');">TED - Daniel Pink on the surprising science of motivation</a></p>
+<p>Money narrows your focus, and can make any change on your mechanical skills. Real world problems cannot be solved only with mechanical skills</p>
+<ol>
+<li>Personal allowance (salary) and bonus (work length)<span style="color: #800000;"><strong> [boosts mechanical skills]</strong></span></li>
+<li>Produce new things and positive feedback (work quality)<span style="color: #800080;"><strong> [boosts cognitive skills]</strong></span></li>
+<li>Fear, punishments (work length)<strong> [N/A]</strong></li>
+<li>Self directions (free use 20% of work time)Â (work quality)<span style="color: #800080;"><strong> [boosts cognitive skills]</strong></span></li>
+</ol>
+<p><strong>Choose the recognition level in the company</strong></p>
+<p>Recognition level means, when you will say as a leader to the employee that "this is good job".</p>
+<blockquote><p>"This work is mediocre. I would be embarrassed to show this."Â (Steve Jobs)</p></blockquote>
+<p>or</p>
+<blockquote><p>"This is incredible! Really, insanely great! You are a star!" (Steve Jobs)</p></blockquote>
+<p>Working with Steve Jobs means, that you should do extraordinary good work. The level of recognition in this case is <strong>very high</strong>. This working culture suggests that you should outperform your boundaries.</p>
+<p>Excellence, perfect, strong</p>
+<p><strong>Limit negative feedback within the company, teach the leaders to correct feedbacking</strong></p>
+<p>The basic rules of giving negative feedback as a leader are the following:</p>
+<ul>
+<li>Do not stall negative feedbacks, the best time is right after you noticed the bad thing<br />
+(As soon as possible after the event)</li>
+<li>Find private space, give only face to face feedback</li>
+<li>Judge the person's behaviour not the him- or herself<br />
+(Focus on their actions, not on the person)</li>
+<li>Take exact example and be specific, tell what is expected and why is it good to do this way<br />
+(If you say you got bad attitude, you don't give an exact situation where he/her did something wrong)</li>
+<li>Be objective and calm<br />
+(You should focus on personal development, you don't give negative feedback just because, you give negative feedback because you want him/her to develop, be a better person)</li>
+<li>Listen him or her<br />
+(Let him or her to talk, what he or she thinks about the event and example, so you will recognize, what he or she recognized and learned from the talk)</li>
+</ul>
+<p><strong>Give positive feedback</strong></p>
+<p>Yes, you should also give positive feedbacks, because one positive feedback could be stronger than a negative one. We can teach people with positive feedbacks, and there are also some rules of it:</p>
+<ul>
+<li>Give the feedback in public, it should be given publicly</li>
+<li>If you praise someone, you should every time tell, (1) why and (2) how good the job was</li>
+<li>Never mention any negative "but" things during the talk<br />
+(If you say "It was a very good jub, but next time be more specific, with numbers" you will tell with this that, he or she did something wrong, even if the whole job is extraordinary. In this way it's a <strong>negative feedback</strong>)</li>
+<li>Be aware of your or companies recognition level, do not praise someone if the job isn't as good as it should be, or didn't meet the companies recognition level</li>
+</ul>
+<p>&nbsp;</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=378&amp;md5=ebe16edaf87a52e6e1e5a382208e24a0" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2011/12/importance-of-passion/">
+	<title>Importance of Passion</title>
+	<link>http://www.andzol.com/2011/12/importance-of-passion/</link>
+	 <dc:date>2011-12-20T10:51:20Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Enterprice]]></dc:subject>
+	<description>Abstract This article is about a phenomena, that can boost your co-workers during you everyday work. No its not something you can teach them, more than help them to feel it. But the first question is that are you already passionate about your work? The phenomena I work in web development, where personal and team [...]</description>
+	<content:encoded><![CDATA[<p><strong>Abstract</strong></p>
+<p>This article is about a phenomena, that can boost your co-workers during you everyday work. No its not something you can teach them, more than help them to feel it. But the first question is that are you already passionate about your work?</p>
+<p><strong>The phenomena</strong></p>
+<p>I work in web development, where personal and team performance is very important. During everyday development it is an often emerging situation when a lot of script didn't want to work properly, on a scrum review the product fails to operate even and there are lot of small mistakes, that makes the whole picture a great mass.</p>
+<p>If we work in Scrum development or even in classic Project Management we always give User Stories or Tasks to the developers, but we have no really impact on how will these small pieces come togther in one product. Ok we can control them, check them, audit them, but afterwards they will feel themself as a robot, and their creative self disappears. Its a mouse trap: the developers working moreÂ imprecisely, the project managers should use more control, and so on.Â How can we quit from this circle? You should see one clear vision that you feel passionate about it and starting to say WE not you and me.</p>
+<p><strong>How can we evolve productÂ enthusiasm?</strong></p>
+<p>If you belive in your product and in its vision than it is the first step to be passionate about it.</p>
+<p><strong>1.) Ideologies your product!</strong></p>
+<p>Why is your product more than average? If you could not answer this question clearly, your product is not better than the others, than you are in the "long tail" of products.</p>
+<p><a href="http://www.andzol.com/wp-content/uploads/2011/12/long-tail.jpg" onclick=""><img class="alignnone size-medium wp-image-406" title="long tail" src="http://www.andzol.com/wp-content/uploads/2011/12/long-tail-300x181.jpg" alt="" width="300" height="181" /></a></p>
+<p>Never use bullshits like "we are more efficient", "we have more feature".</p>
+<blockquote><p>Google has only two features in their original search engine, (1) it has a really simple interface (one field) and (2) gived relevant search results.</p></blockquote>
+<p>You should not be better than others, you should be the best among the others. Perfection is the key, which will raise you above other companies.</p>
+<p><strong>2.) Use vision building meeting and let all developers to take part!</strong></p>
+<p>It is not a fast meeting you should hold, but you should give time, to people feel more and more enthusiasm about the product.</p>
+<p><strong>3.) Found a new company culture</strong></p>
+<p>The headline of your new company culture should be:</p>
+<blockquote><p>Feel every product your are working on should be a masterpiece</p></blockquote>
+<p>The hardest thing to start this, because you should start it with yourself. You should show the example how to be passionate and focused with your product, you should not satisfied only with the best results.</p>
+<p>Peoples who were passionate</p>
+<p>And finally let me show you some great people, who were passionate about they doing.</p>
+<p><strong>Jamie Oliver</strong></p>
+<p><strong> </strong><a href="http://www.andzol.com/wp-content/uploads/2011/12/jamie-oliver.jpg" onclick=""><img class="alignnone size-medium wp-image-410" style="border-style: initial; border-color: initial;" title="jamie oliver" src="http://www.andzol.com/wp-content/uploads/2011/12/jamie-oliver-300x247.jpg" alt="" width="300" height="247" /></a></p>
+<blockquote><p>"What I've enjoyed most, though, is meeting people who have a real interest in food and sharing ideas with them. Good food is a global thing and I find that there is always something new and amazing to learn - I love it!"</p></blockquote>
+<p><strong>Steve Jobs</strong></p>
+<p><strong></strong><a href="http://www.andzol.com/wp-content/uploads/2011/12/steve-jobs.jpg" onclick=""><img class="alignnone size-full wp-image-409" style="border-style: initial; border-color: initial;" title="steve jobs" src="http://www.andzol.com/wp-content/uploads/2011/12/steve-jobs.jpg" alt="" width="300" height="300" /></a></p>
+<blockquote><p>"We made the buttons on the screen look so good youâll want toÂ <em>lick</em> them."</p></blockquote>
+<p><strong>Steve Irwin</strong></p>
+<p><strong></strong><a href="http://www.andzol.com/wp-content/uploads/2011/12/steve-irwin.jpg" onclick=""><img class="alignnone size-full wp-image-411" style="border-style: initial; border-color: initial;" title="steve irwin" src="http://www.andzol.com/wp-content/uploads/2011/12/steve-irwin.jpg" alt="" width="284" height="177" /></a></p>
+<blockquote><p>"I have no fear of losing my life - if I have to save a koala or a crocodile or a kangaroo or a snake, mate, I will save it."</p></blockquote>
+<p>Could you recognize the common<strong> characteristics</strong> in their attitude?</p>
+<ul>
+<li>They love(d) what they do</li>
+<li>They belive(d) what they do</li>
+<li>They are(were) honest with themself</li>
+<li>They though(t) that it is the best thing they can do</li>
+</ul>
+<p><strong>Final word</strong></p>
+<p><a href="http://www.andzol.com/wp-content/uploads/2011/12/robin-williams.jpg" onclick=""><img class="size-full wp-image-405 alignnone" title="robin williams" src="http://www.andzol.com/wp-content/uploads/2011/12/robin-williams.jpg" alt="" width="240" height="167" /></a></p>
+<p><a href="http://www.andzol.com/wp-content/uploads/2011/12/robin-williams.jpg" onclick=""></a>Do you remember when Robin Williams stand on the table in movieÂ Dead Poets Society? You felt that its not normal, you felt that it should mean something more deeper than just a silly move...</p>
+<p>If you want to feel the same passion you should do also the same: "<strong>stand on your table</strong>".</p>
+<p><a href="http://www.andzol.com/wp-content/uploads/2011/12/dead-poets-society.jpg" onclick=""><img class="alignnone size-full wp-image-408" title="dead poets society" src="http://www.andzol.com/wp-content/uploads/2011/12/dead-poets-society.jpg" alt="" width="518" height="300" /></a></p>
+<p>&nbsp;</p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=401&amp;md5=7a3e7011fcd57a1b38b8e8d8fba835ef" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+<item rdf:about="http://www.andzol.com/2011/11/future-tech-vision/">
+	<title>Future tech vision</title>
+	<link>http://www.andzol.com/2011/11/future-tech-vision/</link>
+	 <dc:date>2011-11-16T08:19:24Z</dc:date>
+	<dc:creator>admin</dc:creator>
+			<dc:subject><![CDATA[Future]]></dc:subject>
+	<description>Shared video</description>
+	<content:encoded><![CDATA[<p><strong>Shared video</strong></p>
+<p><object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/a6cNdhOKwi0?version=3&amp;hl=hu_HU"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/a6cNdhOKwi0?version=3&amp;hl=hu_HU" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+ <p><a href="http://www.andzol.com/?flattrss_redirect&amp;id=391&amp;md5=caee4f10a4d736ca8d22280f0f0fc6dc" title="Flattr" target="_blank"><img src="http://www.andzol.com/wp-content/plugins/flattr/img/flattr-badge-large.png" alt="flattr this!"/></a></p>]]></content:encoded>
+	</item>
+</rdf:RDF>

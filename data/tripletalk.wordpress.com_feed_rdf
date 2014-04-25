@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+	xmlns="http://purl.org/rss/1.0/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin="http://webns.net/mvcb/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+<channel rdf:about="http://tripletalk.wordpress.com">
+	<title>Tripletalk</title>
+	<link>http://tripletalk.wordpress.com</link>
+	<description>Semantic Web and more by Peter Mika</description>
+	<dc:date>2014-04-24T12:30:37Z</dc:date>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<admin:generatorAgent rdf:resource="http://wordpress.com/" />
+	<items>
+		<rdf:Seq>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2011/06/03/welcome-to-schema-org/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2011/02/21/semantic-search-challenge-sponsored-by-yahoo-labs/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2011/01/25/rdfa-deployment-across-the-web/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2010/03/02/semantic-search-workshop-2010-and-a-bit-of-competition/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2009/07/28/welcome-the-new-yahoo-homepage/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2009/06/11/common-tag-semantic-tagging-format-released-today/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2009/05/12/vocamp-sunnyvale-june-18-19-2009/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2009/03/28/upcoming-events-vocampibiza-fows-and-semsearch/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2009/03/12/searchmonkey-simplified/"/>
+					<rdf:li rdf:resource="http://tripletalk.wordpress.com/2009/02/12/yahoo-makes-the-worlds-metadata-available-through-boss/"/>
+				</rdf:Seq>
+	</items>
+</channel>
+<item rdf:about="http://tripletalk.wordpress.com/2011/06/03/welcome-to-schema-org/">
+	<title>Welcome to schema.org</title>
+	<link>http://tripletalk.wordpress.com/2011/06/03/welcome-to-schema-org/</link>
+	<dc:date>2011-06-03T09:44:37Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[Bing, Google, and Yahoo! have announced schema.org yesterday, a collaboration between the three search providers in the area of vocabularies for structured data. As the &#8216;schema guy&#8217; at Yahoo!, I have been part of the very small core team that developed technical content for schema.org. It&#8217;s been an interesting process: if you doubt that achieving [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=81&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>Bing, Google, and Yahoo! have announced <a href="http://schema.org">schema.org</a> yesterday, a collaboration between the three search providers in the area of vocabularies for structured data. As the &#8216;schema guy&#8217; at Yahoo!, I have been part of the very small core team that developed technical content for schema.org. It&#8217;s been an interesting process: if you doubt that achieving an agreement in the search domain is hard, consider that the last time such an agreement happened was apparently sitemaps.org in 2006.</p>
+<p>However, over the years, the lack of agreement on schemas have become such a major pain point for publishers new to the Semantic Web, that eventually cooperation became the only sensible thing to do for the future of the Semantic Web project. Consider that until yesterday any publisher that wanted to provide structured data for Bing, Google, and Yahoo needed to navigate three sets of documentation, and worse, choose between three different schemas and multiple formats (microdata, <a class="zem_slink" title="RDFa" href="http://en.wikipedia.org/wiki/RDFa" rel="wikipedia">RDFa</a>, microformats) and markup their pages using all of them.</p>
+<p>So how did we get here? In my personal view, one of the key problems of the Semantic Web design of the W3C has been that it considered only technical issues, and not the need for a social process that would lead to bootstrap the system with data and schemas. We are now doing better on the data front thanks to large community efforts such as Linked Data. With regard to schemas &#8212; we used to call them ontologies, until we found it scared people away &#8212; the expectation was that they would be developed in a distributed manner and machines would do the hard job of schema matching or somehow agreements would emerge. However, schema matching is a hard problem to automate. Agreements were slow to come due to a lack of space for schema development and discussions. We have tried a number of things in this respect, for example some of you might know that I&#8217;ve been one of the instigators of the <a class="zem_slink" title="VoCamp" href="http://vocamp.org/" rel="homepage" rel="nofollow">VoCamp</a> movement which peaked around 2009. The W3C itself accepted some RDF-based schemas as member submissions, but it didn&#8217;t see itself as the organization that should deal with schemas, and there has been no process for dealing with these submissions either. (As an example, we learned when we started with <a class="zem_slink" title="SearchMonkey" href="http://developer.yahoo.com/searchmonkey/" rel="homepage" rel="nofollow">SearchMonkey</a> that there have been actually two versions of VCard in RDF submitted by two different members of the W3C. This problem has since been resolved.) Other schemas just appeared on websites abandoned by their owners. Finding stable and mature schemas with sufficient adoption has eventually become a major pain point. In the search domain, the situation improved somewhat when search providers preselected some schemas for publishers to use, and started providing specific documentation, with examples and a way to validate webpages. However, as illustrated above, the efforts have been still too fragmented until yesterday.</p>
+<p>Given the above history, I&#8217;m extremely glad that cooperation prevailed in the end and hopefully schema.org will become a central point for vocabularies for the Semantic Web for a long time to come. Note that it will almost certainly not be the only one. schema.org covers the core interests of search providers, i.e. the stuff that people search for the most (hence the somewhat awkward term &#8216;search vocabularies&#8217;). As the simple needs are the most common in search logs, this includes things like addresses of businesses, reviews and recipes. schema.org will hopefully evolve with extensions over time but it may never cover complex domains such as biotechnology, e-government or others where people have been using Semantic Web technology with success. Nor do I think that schema.org is &#8216;perfect&#8217;. Personally, I would have liked to see RDFa used as the syntax for the basic examples, because I consider it more mature, and a superior standard to microdata in many ways. You will notice that RDF(a) in particular would have offered a standard way to extend schema.org schemas and map them to other schemas on the Web. Currently, there is an example of using the schemas in RDFa, but the support for this version of the markup will depend on its adoption.</p>
+<p>Please take a look at schema.org, and if you have comments please consider using the schema.org feedback mechanisms (we have a feedback form as well as a discussion group).</p>
+<div class="zemanta-pixie" style="margin-top:10px;height:15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/" rel="nofollow"><img class="zemanta-pixie-img" style="float:right;" src="http://img.zemanta.com/zemified_e.png?x-id=ee47ce90-1079-421b-9273-1fdc23af6033" alt="Enhanced by Zemanta" /></a></div><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/81/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/81/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=81&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2011/02/21/semantic-search-challenge-sponsored-by-yahoo-labs/">
+	<title>Semantic Search Challenge sponsored by Yahoo! Labs</title>
+	<link>http://tripletalk.wordpress.com/2011/02/21/semantic-search-challenge-sponsored-by-yahoo-labs/</link>
+	<dc:date>2011-02-21T11:43:57Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[Together with my co-chairs Marko Grobelnik, Thanh Tran Duc and Haofen Wang, we again got the opportunity of organizing the 4th Semantic Search Workshop, the premier event for research on retrieving information from structured data collections or text collections annotated with metadata. Like last year, the Workshop will take place at the WWW conference, to [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=72&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p><a href="http://tripletalk.files.wordpress.com/2011/02/hbanner.jpg"><img class="alignright size-medium wp-image-74" title="SemSearch Challenge logo" src="http://tripletalk.files.wordpress.com/2011/02/hbanner.jpg?w=300&#038;h=132" alt="" width="300" height="132" /></a>Together with my co-chairs Marko Grobelnik, Thanh Tran Duc and Haofen Wang, we again got the opportunity of organizing the <a href="http://km.aifb.kit.edu/ws/semsearch11/">4th Semantic Search Workshop</a>, the premier event for research on retrieving information from structured data collections or text collections annotated with metadata. Like last year, the Workshop will take place at the WWW conference, to be held March 29, 2011, in Hyderabad, India. If you wish to submit a paper, there are still a few days left: the deadline is Feb 26, 2011. We welcome both short and long submissions.</p>
+<p>In conjunction with the workshop, and with a number of co-organizers helping us, we are also launchingÂ  a Semantic Search Challenge (sponsored by Yahoo! Labs), which is hosted at <a href="http://semsearch.yahoo.com">semsearch.yahoo.com</a>. The competition will feature two tracks. The first track (entity retrieval) is the same task we evaluated last year: retrieving resources that match a keyword query, where the query contains the name of an entity, with possibly some context (such as &#8220;starbucks barcelona&#8221;). We are adding this year a new task (list retrieval) which represents the next level of difficulty: finding resources that belong to a particular set of entities, such as &#8220;countries in africa&#8221;. These queries are more complex to answer since they don&#8217;t name a particular entity. Unlike in other similar competitions, the task is to retrieve the answers from a real (messy&#8230;) dataset crawled from the Semantic Web. There is a small prize ($500) to win in each track.</p>
+<p>The entry period will start March 1, and run through March 15. Please consider participating in either of these tracks: it&#8217;s early days in Semantic Search, and there is so much to discover.</p><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/72/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/72/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=72&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2011/01/25/rdfa-deployment-across-the-web/">
+	<title>Microformats and RDFa deployment across the Web</title>
+	<link>http://tripletalk.wordpress.com/2011/01/25/rdfa-deployment-across-the-web/</link>
+	<dc:date>2011-01-25T13:27:33Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[I have presented on previous occasions (at Semtech 2009, SemTech 2010, and later at FIA Ghent 2010, see slides for the latter, also in ISWC 2009) some information about microformat and RDFa deployment on the Web. As such information is hard to come by, this has generated some interest from the audience. Unfortunately, Q&#38;A time [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=59&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>I have presented on previous occasions (at Semtech 2009, <a href="http://semtech2010.semanticuniverse.com/">SemTech 2010</a>, and later at <a href="http://fi-ghent.fi-week.eu/">FIA Ghent 2010</a>, see <a href="http://www.slideshare.net/pmika/the-role-of-linked-data-in-search-and-online-media">slides</a> for the latter, also in <a href="http://dx.doi.org/10.1007/978-3-642-04930-9_28">ISWC 2009</a>) some information about microformat and RDFa deployment on the Web. As such information is hard to come by, this has generated some interest from the audience. Unfortunately, Q&amp;A time after presentations is too short to get into details, hence some additional background on how we obtained this data and what it means for the Web. This level of detail is also important to compare this with information from other sources, where things might be measured differently.</p>
+<p>The chart below shows the deployment of certain microformats and RDFa markup on the Web, as percentage of all web pages, based on an analysis of 12 billion web pages indexed by Yahoo! Search. The same analysis has been done at three different time-points and therefore the chart also shows the evolution of deployment.</p>
+<div id="attachment_61" style="width: 490px" class="wp-caption alignnone"><a href="http://tripletalk.files.wordpress.com/2011/01/rdfa-deployment.png"><img class="size-full wp-image-61" title="rdfa-deployment" src="http://tripletalk.files.wordpress.com/2011/01/rdfa-deployment.png?w=480&#038;h=285" alt="" width="480" height="285" /></a><p class="wp-caption-text">Microformats and RDFa deployment on the Web (% of all web pages)</p></div>
+<p>The data is given below in a tabular format.</p>
+<table>
+<tbody>
+<tr>
+<th>Date</th>
+<th>RDFa</th>
+<th>eRDF</th>
+<th> tag</th>
+<th>hcard</th>
+<th> adr</th>
+<th> hatom</th>
+<th> xfn</th>
+<th> geo</th>
+<th> hreview</th>
+</tr>
+<tr>
+<td>09-2008</td>
+<td>0.238</td>
+<td>0.093</td>
+<td>N/A</td>
+<td>1.649</td>
+<td>N/A</td>
+<td>0.476</td>
+<td>0.363</td>
+<td>N/A</td>
+<td>0.051</td>
+</tr>
+<tr>
+<td>03-2009</td>
+<td>0.588</td>
+<td>0.069</td>
+<td>2.657</td>
+<td>2.005</td>
+<td>0.872</td>
+<td>0.790</td>
+<td>0.466</td>
+<td>0.228</td>
+<td>0.069</td>
+</tr>
+<tr>
+<td>10-2010</td>
+<td>3.591</td>
+<td>0.000</td>
+<td>2.289</td>
+<td>1.058</td>
+<td>0.237</td>
+<td>1.177</td>
+<td>0.339</td>
+<td>0.137</td>
+<td>0.159</td>
+</tr>
+</tbody>
+</table>
+<p>There are a couple of comments to make:</p>
+<ul>
+<li>There are many microformats (see <a href="http://microformats.org">microformats.org</a>) and I only include data for the ones that are most common on the Web. To my knowledge at least, all other microformats are less common than the ones listed above.</li>
+<li>eRDF has been a predecessor to RDFa, and has been obsoleted by it. RDFa is more fully featured than eRDF, and has been adopted as a standard by the W3C.</li>
+<li>The data for the tag, adr and geo formats is missing from the first measurement.</li>
+<li>The numbers cannot be aggregated to get a total percentage of URLs with metadata. The reason is that a webpage may contain multiple microformats and/or RDFa markup. In fact, this is almost always the case with the adr and geo microformats, which are typically used as part of hcard. The hcard microformat itself can be part of hatom markup etc.</li>
+<li>Not all data is equally useful, depending on what you are trying to do. The tag microformat, for example, is nothing more than a set of keywords attached to a webpage. RDFa itself covers data using many different ontologies.</li>
+<li>The data doesn&#8217;t include &#8220;trivial&#8221; RDFa usage, i.e. documents that only contain triples from the xhtml namespace. Such triples are often generated by RDFa parsers even when the page author did not intend to use RDFa.</li>
+<li>This data includes all valid RDFa, and not just namespaces or vocabularies supported by Yahoo! or any other company.</li>
+</ul>
+<p>The data shows that the usage of RDFa has increased 510% between March, 2009 and October, 2010, from 0.6% of webpages to 3.6% of webpages (or 430 million webpages in our sample of 12 billion). This is largely thanks to the efforts of the folks at Yahoo! (<a href="http://developer.search.yahoo.com/start">SearchMonkey</a>), Google (<a href="http://googlewebmastercentral.blogspot.com/2009/05/introducing-rich-snippets.html">Rich Snippets</a>) and Facebook (<a href="http://opengraphprotocol.org/">Open Graph</a>), all of whom recommend the usage of RDFa. The deployment of microformats has not advanced significantly in the same period, except for the hatom microformat.</p>
+<p>These results make me optimistic that the Semantic Web is here already in large ways. I don&#8217;t expect that a 100% of webpages will ever adopt microformats or RDFa markup, simply because not all web pages contain structured data. As this seems interesting to watch, I will try to publish updates to the data and include the update chart here or in future presentations.</p>
+<div class="zemanta-pixie" style="margin-top:10px;height:15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border:medium none;float:right;" src="http://img.zemanta.com/zemified_e.png?x-id=a8d43f41-044c-408b-8751-64a9770cf8ca" alt="Enhanced by Zemanta" /></a></div><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/59/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/59/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=59&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2010/03/02/semantic-search-workshop-2010-and-a-bit-of-competition/">
+	<title>Semantic Search Workshop 2010&#8230; and a bit of competition</title>
+	<link>http://tripletalk.wordpress.com/2010/03/02/semantic-search-workshop-2010-and-a-bit-of-competition/</link>
+	<dc:date>2010-03-02T14:49:04Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[Together with my co-organizers Haofen Wang, Thanh Tranh and Marko Grobelnik, we have been again given the fantastic opportunity to organize the next edition of our Semantic Search workshop at WWW 2010,. The papers are due soon (March 6), so it&#8217;s a bit too late to advertize this part of the event, but I definitely [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=56&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>Together with my co-organizers Haofen Wang, Thanh Tranh and Marko Grobelnik, we have been again given the fantastic opportunity to organize the next edition of our <a href="http://http://km.aifb.kit.edu/ws/semsearch10/">Semantic Search workshop at WWW 2010,</a>. The papers are due soon (March 6), so it&#8217;s a bit too late to advertize this part of the event, but I definitely wanted to mention what will hopefully become another key part of the event: the <a href="http://km.aifb.kit.edu/ws/semsearch10/#eva">Evaluation of Entity Search track</a>, a competition we are organizing in conjunction with the workshop.</p>
+<p>We have already noticed last year that our growing field has been lacking a firm ground to evaluate our results, so right after WWW 2009 we have to decided to put serious effort into thinking about the evaluation of Semantic Search. One of our talented interns at Yahoo Research Barcelona, <a href="http://www.cs.uwaterloo.ca/~jpound/">Jeff Pound</a> has spent his time last summer to formalize possible evaluation tasks in semantic search and we have<a href="http://www2010.org/www/program/papers/"> a paper at WWW 2010</a> on this topic. Just as importantly, however, we were joined by other helpful folks (<a href="http://www.ibiblio.org/hhalpin/">Harry Halpin</a>, <a href="http://www.aifb.kit.edu/web/Daniel_M._Herzig/en">Daniel Herzig</a>, <a href="http://www.ltg.ed.ac.uk/~ht/">Henry Thompson</a>) to actually organize a public competition.</p>
+<p>So what does this competition look like? Participants will be given queries sampled from a web search query log provided by the <a href="http://webscope.sandbox.yahoo.com/">Yahoo Webscope program</a>, and have to try to answer those queries using the <a href="http://vmlion25.deri.ie/index.html">Billion Triples Challenge corpus</a> from 2009. The queries that are selected are all entity queries in that they are looking to find information about a single entity. (The queries may contain context information, e.g. <em>peter mika barcelona</em>). The results have to be URIs of resources from the dataset. In short, a competition with keyword queries over structured data (RDF), which also sets it apart from other competitions focused on entity retrieval.</p>
+<p>Everyone interested will have until April 10 to submit results as explained on the website of the workshop. As we don&#8217;t yet know what to expect, there will be no prizes this time&#8230; other than fame and glory!</p><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/56/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/56/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=56&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2009/07/28/welcome-the-new-yahoo-homepage/">
+	<title>Welcome the new Yahoo homepage!</title>
+	<link>http://tripletalk.wordpress.com/2009/07/28/welcome-the-new-yahoo-homepage/</link>
+	<dc:date>2009-07-28T21:04:40Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[And in case you still doubted whether this is a company ran by nerds, watch this video.<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=50&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>And in case you still doubted whether this is a company ran by nerds, <a href="http://video.yahoo.com/watch/5627321/14764066">watch this video</a>.</p><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/50/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/50/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=50&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2009/06/11/common-tag-semantic-tagging-format-released-today/">
+	<title>Common Tag semantic tagging format released today</title>
+	<link>http://tripletalk.wordpress.com/2009/06/11/common-tag-semantic-tagging-format-released-today/</link>
+	<dc:date>2009-06-11T19:37:25Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[The Common Tag format for semantic tagging has been finally released today after almost a year of intense work on it by a group of Web companies active in the semantic technologies area, among them Yahoo. It&#8217;s been great fun working on this and I&#8217;m proud to have been involved: while there have been vocabularies [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=43&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p><a href="http://commontag.org"><img class="alignleft" title="Common Tag logo" src="http://commontag.org/w/images/logo.png" alt="" width="240" height="100" /></a></p>
+<p>The <a href="http://www.commontag.org">Common Tag</a> format for <a class="zem_slink" title="Semantic Web" rel="wikipedia" href="http://en.wikipedia.org/wiki/Semantic_Web">semantic</a> tagging has been finally released today after almost a year of intense work on it by a group of Web companies active in the semantic technologies area, among them Yahoo. It&#8217;s been great fun working on this and I&#8217;m proud to have been involved: while there have been vocabularies before for representing tags in RDF, this effort is different in at least two respects.</p>
+<p>First, a significant effort of time has been spent on making sure the specification meets the needs of all partners involved. The support of these companies for the specification will ensure that developers in the future can rely on a single format for annotation with semantic tags and interchanging <a class="zem_slink" title="Tag (metadata)" rel="wikipedia" href="http://en.wikipedia.org/wiki/Tag_%28metadata%29">tag</a> data. The website already lists a number of applications but I&#8217;m pretty sure that a common tagging format will open entirely new possibilities in searching, navigating and aggregating web content.</p>
+<p>Second, the format has been developed with publishers in mind, in particular in making it as easy as possible to embed semantic tags in HTML using <a class="zem_slink" title="RDFa" rel="homepage" href="http://www.w3.org/TR/xhtml-rdfa-primer/" rel="nofollow">RDFa</a>, a syntax universally embraced by all those involved. The choice for RDF also means that unlike in the case of the rel-tag microformat, Common Tags can be applied to any object, not just documents.</p>
+<p>So, it&#8217;s time for a new era in tagging!</p>
+<div class="zemanta-pixie" style="margin-top:10px;height:15px;"><a class="zemanta-pixie-a" title="Reblog this post [with Zemanta]" href="http://reblog.zemanta.com/zemified/3b08e0c8-6431-4426-b59b-bf3f755cdffc/" rel="nofollow"><img class="zemanta-pixie-img" style="border:medium none;float:right;" src="http://img.zemanta.com/reblog_e.png?x-id=3b08e0c8-6431-4426-b59b-bf3f755cdffc" alt="Reblog this post [with Zemanta]" /></a></div><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/43/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/43/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=43&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2009/05/12/vocamp-sunnyvale-june-18-19-2009/">
+	<title>VoCamp Sunnyvale: June 18-19, 2009</title>
+	<link>http://tripletalk.wordpress.com/2009/05/12/vocamp-sunnyvale-june-18-19-2009/</link>
+	<dc:date>2009-05-12T16:24:25Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[semanticweb]]></dc:subject>
+		<dc:subject><![CDATA[vocamp]]></dc:subject>
+	<description><![CDATA[VoCamps provide the missing social interaction needed for vocabulary creation and management on the Semantic Web: a space where members of the community can discuss the current issues related to vocabularies and semantic interoperability. Unlike Semantic Web meetups which typically take just a few hours and where the discussion focuses on a single presentation, VoCamps [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=38&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>VoCamps provide the missing social interaction needed for vocabulary creation and management on the Semantic Web: a space where members of the community can discuss the current issues related to vocabularies and semantic interoperability. Unlike Semantic Web meetups which typically take just a few hours and where the discussion focuses on a single presentation, VoCamps are two-day events that allow in-depth discussions and working in small groups.</p>
+<p>Following the success of <a href="http://www.ysearchblog.com/2009/04/22/sun-fun-and-search-in-ibiza/">VoCamp Ibiza</a>, we are organizing another similar event at Yahoo, but this time in the US, where VoCamps are now also taking hold. <a href="http://vocamp.org/wiki/VoCampDCMay2009">(VoCampDC</a> will be organized at the end of May and has already reached it&#8217;s full capacity!) This VoCamp will take place in Sunnyvale, directly after the <a href="http://semtech2009.com/">SemTech 2009</a> conference.</p>
+<p>If you would like to join this next edition of the VoCamp series, please sign up on the <a href="http://vocamp.org/wiki/VoCampSunnyvale2009">VoCampSunnyvale2009</a> wiki page! The space is limited, but we will try to expand if necessary. Hope to see many of you in San Jose and Sunnyvale!</p><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/38/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/38/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=38&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2009/03/28/upcoming-events-vocampibiza-fows-and-semsearch/">
+	<title>Upcoming events: VoCampIbiza, FoWS and SemSearch</title>
+	<link>http://tripletalk.wordpress.com/2009/03/28/upcoming-events-vocampibiza-fows-and-semsearch/</link>
+	<dc:date>2009-03-28T16:44:49Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[It&#8217;s rare that I&#8217;m involved involved in organizing three events at the same time, especially that those events take place in a period of two weeks. Nevertheless, I&#8217;m equally excited about each of them for different reasons. The first one will be VoCampIbiza. I have a great feeling about VoCamp,Â  since in the year we [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=36&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>It&#8217;s rare that I&#8217;m involved involved in organizing three events at the same time, especially that those events take place in a period of two weeks. Nevertheless, I&#8217;m equally excited about each of them for different reasons.</p>
+<p>The first one will be <a href="http://vocamp.org/wiki/VoCampIbiza2009">VoCampIbiza</a>. I have a great feeling about VoCamp,Â  since in the year we first discussed the idea with Tom Heath, VoCamps have grown into a movement, even jumping across the Atlantic. Feeling at least partly responsible, I&#8217;ve felt the need to organize at least one such event somewhere nearby. (VoCamps are organized at different times and places unlike regular, local Semantic Web meetups which are also on the rise, see <a href="http://www.meetupalliance.com/SemanticWeb/">check out the Semantic Web meetup alliance</a>)Â  So it&#8217;s going to take happen on Ibiza during April 15-16, on the week before WWW, and if you want to come, you just have to sign up! There is no registration fee and Ibiza is cheap to reach from many places in Europe.</p>
+<p>The second event, the <a href="http://grupoweb.upf.es/fows09/">Future of Web Seach Workshop</a> is a regular yearly get-together organized by Ricardo (Baeza-Yates), but this year it will have a special focus on semantic search. The format is again fairly flexible, no papers, only interesting presentations. (The list of presentations is already fixed and posted on the Website, but the registration is still open if you want to join!) It will take place right after VoCamp, April 17-18, so that&#8217;s again the week before WWW.</p>
+<p>Lastly, there will be the second <a href="http://km.aifb.uni-karlsruhe.de/ws/semsearch09">Semantic Search Workshop</a> taking place at WWW in Madrid on April 21.Â  Together with my co-organizers (Thanh Tran Duc from AIFB in Karlsruhe, Haofen Wang from the Apex Lab and Marko Grobelnik from JSI) we already had the feeling that WWW is probably the best place to take this workshop as the conference naturally brings together researchers from IR and the Semantic Web. The number and quality of papers, as well as the number of participants who have registered so far are certainly very promising indicators!</p><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/36/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/36/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=36&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2009/03/12/searchmonkey-simplified/">
+	<title>SearchMonkey simplified</title>
+	<link>http://tripletalk.wordpress.com/2009/03/12/searchmonkey-simplified/</link>
+	<dc:date>2009-03-12T19:37:31Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[Uncategorized]]></dc:subject>
+	<description><![CDATA[I&#8217;m proud to say that today we have released &#8216;SearchMonkey Objects&#8217;, which might seem like a small step in the evolution of the Monkey (huh!) but we are hoping that it will radically simplify the ramp-up for site owners when it comes to enabling rich, structured results for their websites. So what&#8217;s happening here? Well, [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=33&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>I&#8217;m proud to say that today we have released <a href="http://ysearchblog.com/2009/03/12/embed-videos-games-and-docs-with-searchmonkey-2/">&#8216;SearchMonkey Objects&#8217;</a>, which might seem like a small step in the evolution of the Monkey (huh!) but we are hoping that it will radically simplify the ramp-up for site owners when it comes to enabling rich, structured results for their websites.</p>
+<p>So what&#8217;s happening here? Well, until now if you wanted to have an enhanced result based on metadata, you needed to mark up your site, and then create an application to transform the metadata into a search result presentation.Â  These applications were simple (all they do is map fields in the data to parts of a presentation template) but it still required developers to write PHP code.</p>
+<p>We realized that this could be simpler! In particular, from now on if you provide Yahoo structured data using vocabularies (formats) that we understand, we can create a rich result for you without you having to write a single line of code! Obviously, if you want to customize the presentation to your particular site, you can still do that by writing a presentation application, but if you are happy with the standard treatment, you don&#8217;t have to.</p>
+<p>SearchMonkey Objects is a simple website that not only shows you how to mark up your page for certain types of objects, but it also let&#8217;s you validate immediately if your markup is correct.Â  Again, this is something that many have asked for in the past. The first objects that we support are <a href="http://developer.search.yahoo.com/help/objects/video">Video</a>, <a href="http://developer.search.yahoo.com/help/objects/games">Games</a> and <a href="http://developer.search.yahoo.com/help/objects/documents">Documents</a>, but more are on the way.</p>
+<p>I believe this is an exciting step because it will no doubt lead to a great adoption of RDFa and other forms of semantic markup, bringing us even closer to stucturing the Web. And as always, tell us what you think!</p><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/33/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/33/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=33&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+<item rdf:about="http://tripletalk.wordpress.com/2009/02/12/yahoo-makes-the-worlds-metadata-available-through-boss/">
+	<title>Yahoo makes the World&#8217;s metadata available through BOSS</title>
+	<link>http://tripletalk.wordpress.com/2009/02/12/yahoo-makes-the-worlds-metadata-available-through-boss/</link>
+	<dc:date>2009-02-12T09:06:29Z</dc:date>
+	<dc:creator><![CDATA[tripletalk]]></dc:creator>
+			<dc:subject><![CDATA[microformats]]></dc:subject>
+		<dc:subject><![CDATA[searchmonkey]]></dc:subject>
+		<dc:subject><![CDATA[semanticweb]]></dc:subject>
+		<dc:subject><![CDATA[yahoo]]></dc:subject>
+	<description><![CDATA[I&#8217;m thrilled to spread the news further that we have just made available all public metadata (microformats, eRDF and RDFa data) that we crawl through the BOSS API. See the official announcement and commentaries throughout the Web. This means essentially opening up all public data available to SearchMonkey applications, and thus making it possible for [&#8230;]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=29&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+	<content:encoded><![CDATA[<p>I&#8217;m thrilled to spread the news further that we have just made available all public metadata (microformats, eRDF and RDFa data) that we crawl through the <a href="http://developer.yahoo.com/search/boss/">BOSS API</a>. See the <a href="http://ysearchblog.com/2009/02/11/boss-update-open-monetization-pricing-structured-data-and-more/">official announcement</a> and commentaries throughout the Web.</p>
+<p>This means essentially opening up all public data available to SearchMonkey applications, and thus making it possible for anyone to experiment with various forms of semantic search that go well beyond changing the way abstracts look. Consider for example the <a href="http://tripletalk.wordpress.com/2008/02/20/microsearch/">microsearch prototype</a> I blogged about a few months ago, which showed rich abstracts, plus temporal and geographic visualizations based on metadata. You can now build something like microsearch in a matter of hours, and in a highly scalable fashion. Last, but not least, the terms of the BOSS API allows you to monetize your search engine in any way you want.</p>
+<p>So if you think you can build a better search engine through semantics, this is a great time to start! All we ask is to give us feedback on what you do, minimally by tagging your experiment with the tag &#8216;bossmashup&#8217;.</p><br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/tripletalk.wordpress.com/29/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/tripletalk.wordpress.com/29/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=tripletalk.wordpress.com&#038;blog=1889161&#038;post=29&#038;subd=tripletalk&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+	</item>
+</rdf:RDF>

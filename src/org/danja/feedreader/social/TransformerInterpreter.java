@@ -1,7 +1,11 @@
-/*
- * Danny Ayers Oct 30, 2004
- * http://dannyayers.com
+/**
+ * feedreader-prototype
+ *
+ * TransformerInterpreter.java
  * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
  */
 package org.danja.feedreader.social;
 
@@ -20,7 +24,7 @@ import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.Interpreter;
 
 /**
- * Transforms feed XML (RSS 2.0/Atom) into RDF/XML
+ * Transforms feed XML (RSS 2.0/Atom) into RDF/XML using XSLT
  *  
  */
 public class TransformerInterpreter implements Interpreter {
@@ -29,6 +33,7 @@ public class TransformerInterpreter implements Interpreter {
 
     private Transformer transformer;
 
+    // TODO move to config
     private static final String xslFilename = "templates/feed-rss1.0.xsl";
 
     public TransformerInterpreter() {

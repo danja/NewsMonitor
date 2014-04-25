@@ -2,6 +2,7 @@
  * feedreader-prototype
  *
  * SparqlResults.java
+ * 
  * @author danja
  * @date Apr 21, 2014
  *
@@ -17,7 +18,9 @@ import java.util.Set;
 import org.danja.feedreader.parsers.SparqlResults.Result;
 
 /**
- *
+ * Model of SPARQL XML Results format
+ * 
+ * @link http://www.w3.org/TR/rdf-sparql-XMLres/
  */
 public class SparqlResults {
 
