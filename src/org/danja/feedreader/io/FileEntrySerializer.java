@@ -30,6 +30,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+/**
+ * writes feed to disk
+ */
 public class FileEntrySerializer {
 
     private Document doc;

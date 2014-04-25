@@ -9,11 +9,19 @@
  */
 package org.danja.feedreader.feeds;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.StringWriter;
+import java.io.Writer;
+
+import org.danja.feedreader.content.HtmlTidy;
+
 /**
  *  Implementation of Entry, an RSS item/Atom entry/Blog post model
  */
 public class EntryImpl extends FeedEntityBase implements Entry {
 
+	private HtmlTidy tidy = new HtmlTidy();
 	private String sourceLink = "";
 	  private String sourceTitle = "";
 	 
@@ -31,13 +39,14 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      * Constructor
      */
     public EntryImpl() {
+    	tidy.init();
 	}
 
 	/* (non-Javadoc)
      * @see org.danja.feedreader.feeds.Entry#setContent(java.lang.String)
      */
     public void setContent(String content) {
-        this.content = content;
+        this.content = cleanContent(content);
     }
 
     /* (non-Javadoc)
@@ -103,4 +112,18 @@ public class EntryImpl extends FeedEntityBase implements Entry {
     public String getAuthor() {
         return author;
     }
+
+	/**
+	 * 
+	 * is a big clunky, converting String to stream
+	 * 
+	 * @param content
+	 * @return
+	 */
+	public String cleanContent(String content) {
+		InputStream inputStream = new ByteArrayInputStream(content.getBytes());
+		Writer stringWriter = new StringWriter();
+		tidy.clean(inputStream, stringWriter);
+		return stringWriter.toString();
+	}
 }

@@ -6,11 +6,13 @@
  * @date Apr 23, 2014
  *
  */
-package org.danja.feedreader.io;
+package org.danja.feedreader.feeds;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.danja.feedreader.io.SparqlConnector;
+import org.danja.feedreader.io.TextFileReader;
 import org.danja.feedreader.parsers.SparqlResults.Result;
 import org.danja.feedreader.parsers.SparqlResultsParser;
 

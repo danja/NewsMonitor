@@ -1,11 +1,13 @@
 /** TODO RETIREME
 */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.old;
 
 import java.util.Iterator;
 import java.util.Set;
 
-import org.danja.feedreader.io.ChannelSetReader;
+import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.FeedFetcherImpl;
+import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.DownloadInterpreter;
 
 public class Runner {

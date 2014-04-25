@@ -14,6 +14,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *  implements EntryList, an ordered series of Entry objects
+ */
 public class EntryListImpl implements EntryList {
 
     private List<Entry> entries;

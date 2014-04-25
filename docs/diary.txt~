@@ -24,6 +24,16 @@ Putting together a parser & POJO model of SPARQL XML results. Decided to go with
 Parser & POJO model of SPARQL XML results basically working.
 
 2014-04-23
+Setting up Poller
+
+2014-04-24
+Poller basically working
+
+2014-04-25
+Added JTidy to clean HTML content
+ranintoproblem with timeouts
+
+
 
 
 

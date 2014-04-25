@@ -12,8 +12,7 @@ package org.danja.feedreader.io;
 
 import org.danja.feedreader.feeds.FeedFetcher;
 /**
- * @author danny
- *
+ * Implementation of Interpreter, saves the data from individual feeds to file
  */
 public class DownloadInterpreter  implements Interpreter{
 

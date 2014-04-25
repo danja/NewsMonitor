@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>NewsMonitor Manual</title>
+    <link href="css/spec.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>NewsMonitor Manual</h1>
+    <div id="subtitle"> Fusepool module for discovering and monitoring RSS/Atom
+      feeds on predetermined topics<br>
+      <br>
+    </div>
+    <pre>Updates to this document will be made in-place - this version : 2014-04-25</pre>
+    <div id="sig">
+      <p><a href="https://dannyayers.wordpress.com/">Danny Ayers</a></p>
+      <a href="mailto:danny.ayers@gmail.com">danny.ayers@gmail.com</a></div>
+    <h3>Contents</h3>
+    <div class="contents">
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#install">Installation</a></li>
+        <li><a href="#for_users">For Users</a></li>
+        <li><a href="#for_developers">For Developers</a></li>
+      </ul>
+      <h2><a id="intro">Introduction</a></h2>
+      <h2><a id="install">Installation</a></h2>
+      <ul>
+      </ul>
+    </div>
+    <h2><a id="for_users">For Users</a></h2>
+    <h2><a id="for_developers">For Developers</a></h2>
+    <h3>Contents</h3>
+    <ul>
+      <li><a href="#formats">Feed Formats</a></li>
+    </ul>
+    <div class="contents">
+      <h4><a id="formats">Feed Formats</a></h4>
+      <h5>Species</h5>
+      <p>Syndication feeds are typically published in one of three formats (or
+        their variants) : <a href="http://web.resource.org/rss/1.0/spec">RSS
+          1.0</a>, <a href="http://cyber.law.harvard.edu/rss/rss.html">RSS 2.0</a>
+        and <a href="https://tools.ietf.org/html/rfc4287">Atom</a>. RSS 1.0 is
+        defined as an RDF vocabulary (expressed in RDF/XML), RSS 2.0 and Atom
+        are XML. For integration within NewsMonitor the data contained in these
+        will be converted to a common RDF model.</p>
+      <p>There are various restrictions on the values that can appear in the
+        elements and attributes in the RSS and Atom specifications. These aren’t
+        much for use as constraints, and for modeling purposes most can be
+        reduced to simple strings. More problematic is the way pieces of data
+        are formatted differently, e.g. RSS 1.0 dates follow the W3CDTF (ISO
+        8601) format, whereas RSS 2.0 uses the (obsolete) RFC 822 format.</p>
+      <h5>Invalid Feeds</h5>
+      <p>A large proportion of feeds are invalid according to their declared
+        specification. It is very common to find&nbsp;incorrect media types and
+        encoding errors, and not unusual to find format errors. The media type
+        issue can be sidestepped by simple ignoring the </p>
+      <pre>Content-Type</pre>
+      HTTP header and instead determining format by examining ('sniffing') the
+      feed content. Problems with the format are dealt with by substituting the
+      initial strict XML or RDF/XML parser/reader with a liberal, fault-tolerant
+      one. The NewsMonitor SoupParser (so named akin to HTML <a href="http://en.wikipedia.org/wiki/Tag_soup">Tag
+        Soup</a>) is essentially a partial Java port of the Python <a href="http://sourceforge.net/projects/feedparser/">Universal
+        Feed Parser</a>.<br>
+      <br>
+      Additionally it is common to find invalid HTML markup in the entry/item
+      content of feeds. NewsMonitor deals with this by using the <a href="http://jtidy.sourceforge.net">JTidy</a>
+      library to clean up the markup.<br>
+      <h5>Mappings</h5>
+      <p> </p>
+      <ul>
+      </ul>
+    </div>
+    <table style="width: 884px; height: 263px;" cellpadding="7" cellspacing="0">
+      <colgroup><col width="69"> <col width="99"> <col width="69"> <col width="80">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th> Entity</th>
+          <th> RSS 1.0 </th>
+          <th> RSS 2.0 </th>
+          <th> Atom </th>
+          <th>NewsMonitor Java</th>
+          <th>NewsMonitor RDF</th>
+        </tr>
+        <tr>
+          <td> Feed</td>
+          <td>rss:channel </td>
+          <td>channel </td>
+          <td>atom:feed</td>
+          <td><br>
+          </td>
+          <td>rss:channel<br>
+          </td>
+        </tr>
+        <tr>
+          <td>Entry</td>
+          <td>rss:item</td>
+          <td>item</td>
+          <td>atom:entry</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>dc:title</td>
+          <td>title</td>
+          <td>atom:title</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>dc:date</td>
+          <td>pubDate</td>
+          <td>atom:issued</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Content</td>
+          <td>dc:description, content:encoded</td>
+          <td>description, xhtml:body</td>
+          <td>atom:content</td>
+          <td><br>
+          </td>
+          <td>schema:articleBody</td>
+        </tr>
+        <tr>
+          <td>Author</td>
+          <td>dc:creator</td>
+          <td>author</td>
+          <td>atom:author</td>
+          <td><br>
+          </td>
+          <td>dc:creator</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>feed url?<br>
+    </p>
+    <h5>Namespaces</h5>
+    <ul>
+      <li> <a href="http://web.resource.org/rss/1.0/spec">RSS 1.0</a> -
+        <pre>rss: &lt;http://purl.org/rss/1.0/&gt;</pre>
+      </li>
+      <li>RSS 2.0 - <span style="font-style: italic;">no namespace (for core
+          terms)</span></li>
+      <li> Atom -
+        <pre>atom: http://www.w3.org/2005/Atom&gt;</pre>
+      </li>
+      <li>Dublin Core -
+        <pre>dc: &lt;http://purl.org/dc/elements/1.1/&gt;, dcterms: &lt;http://purl.org/dc/terms/&gt;</pre>
+      </li>
+      <li><a href="http://schema.org/">Schema.org</a>/<a href="http://schema.rdfs.org">schema.rdfs.org</a>
+        -
+        <pre>schema: &lt;http://schema.org/&gt;</pre>
+      </li>
+    </ul>
+  </body>
+</html>

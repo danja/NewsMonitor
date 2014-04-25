@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="lib/httpclient-cache-4.3.3.jar"/>
 	<classpathentry kind="lib" path="lib/httpcore-4.3.2.jar"/>
 	<classpathentry kind="lib" path="lib/httpmime-4.3.3.jar"/>
+	<classpathentry kind="lib" path="lib/jtidy.jar"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>

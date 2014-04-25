@@ -1,3 +1,13 @@
+/**
+ * TODO rename
+ * feedreader-prototype
+ *
+ * xxx.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
 package org.danja.feedreader.feeds;
 
 import java.io.InputStream;
@@ -6,8 +16,6 @@ import org.danja.feedreader.io.Interpreter;
 
 /**
  * syndication-oriented access to HTTP operations
- * 
- * @version $Revision$
  *  
  */
 public interface FeedFetcher extends FeedEntity {

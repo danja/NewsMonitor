@@ -1,9 +1,15 @@
 // TODO RETIRE ME
 
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.old;
 
 import java.util.Iterator;
 
+import org.danja.feedreader.feeds.EntryList;
+import org.danja.feedreader.feeds.EntryListImpl;
+import org.danja.feedreader.feeds.FeedConstants;
+import org.danja.feedreader.feeds.FeedFetcher;
+import org.danja.feedreader.feeds.FeedFetcherImpl;
+import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.Interpreter;
 import org.danja.feedreader.parsers.InterpreterFactory;
 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>NewsMonitor Manual</title>
+    <link href="css/spec.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>NewsMonitor Manual</h1>
+    <h3>Contents</h3>
+    <ul>
+      <li>Introduction</li>
+      <li>For Users</li>
+      <li>For Developers</li>
+    </ul>
+    <h2><a id="for_users">For Users</a></h2>
+    <h2><a id="for_developers">For Developers</a></h2>
+    <h3>Contents</h3>
+    <p>Feed Formats</p>
+    <p>Feed Formats</p>
+    <p>
+    </p>
+    <p class="western" style="margin-bottom: 0in; line-height: 100%"><br>
+    </p>
+    <center>
+      <table cellpadding="7" cellspacing="0" width="375">
+        <colgroup><col width="69"> <col width="99"> <col width="69"> <col width="80">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td>
+                Model
+            </td>
+            <td>
+                RSS 1.0
+            </td>
+            <td>
+                RSS 2.0
+            </td>
+            <td>
+                Atom
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>rss:channel
+            </td>
+            <td>channel
+            </td>
+            <td>atom:feed</td>
+          </tr>
+          <tr>
+            <td>Item</td>
+            <td>rss:item</td>
+            <td>item</td>
+            <td>atom:entry</td>
+          </tr>
+          <tr>
+            <td>Title</td>
+            <td>dc:title</td>
+            <td>title<</td>
+            <td>atom:title</td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td>dc:date</td>
+            <td>pubDate</td>
+            <td>atom:issued</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>dc:description,
+                        content:encoded</td>
+            <td>description, xhtml:body</td>
+            <td>atom:content</td>
+          </tr>
+          <tr>
+            <td>Author</td>
+            <td>dc:creator</td>
+            <td>author</td>
+            <td>atom:author</td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+    <p style="margin-left: 0.2in; margin-bottom: 0.15in; line-height: 0.17in">
+      <font style="font-size: 10pt" size="2">There
+          are various restrictions on the values that can appear in the
+          elements and attributes in the RSS and Atom specifications. But as
+          noted earlier, these aren\92t much for use as constraints, and for
+          modeling purposes most can be reduced to simple strings. What causes
+          a lot of work in practice is that the data appearing in the feeds is
+          expressed in different ways - for example RSS 1.0 dates follow the
+          W3CDTF (ISO 8601) format, whereas RSS 2.0 uses the RFC 822 format.</p>
+  </body>
+</html>

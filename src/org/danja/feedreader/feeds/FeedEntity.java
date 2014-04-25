@@ -9,6 +9,10 @@
  */
 package org.danja.feedreader.feeds;
 
+/**
+ * interface to characteristics common to several components of a feed
+ * TODO extend to more components
+ */
 public interface FeedEntity {
 
     public void setURIString(String uri);

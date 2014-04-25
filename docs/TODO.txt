@@ -1,3 +1,10 @@
 [also check Tasks in Eclipse]
 
-JTidy on content
+timeout on reading/interpreting
+
+logging
+- feed details (tostore)
+- warnings/errors (to system log)
+
+DONE
+JTidy on content 

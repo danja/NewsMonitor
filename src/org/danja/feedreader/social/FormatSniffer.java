@@ -37,7 +37,7 @@ public class FormatSniffer extends DefaultHandler{
         reader.setContentHandler(this);
         InputSource inputSource = new InputSource(inputStream);
         try {
-            reader.parse(inputSource);
+            reader.parse(inputSource); // TODO TIMEOUT HERE!?
         } catch (Exception e) { // whatever the problem, there's no XML available
             return FeedConstants.RSS2_BOZO;
         }

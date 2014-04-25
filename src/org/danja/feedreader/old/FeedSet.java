@@ -8,9 +8,11 @@
  * @date Apr 25, 2014
  *
  */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.old;
 
 import java.util.Collection;
+
+import org.danja.feedreader.feeds.FeedFetcher;
 
 /**
  * Models a set of feeds/connections

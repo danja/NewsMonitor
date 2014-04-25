@@ -18,11 +18,11 @@ import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedFetcher;
 import org.danja.feedreader.feeds.FeedFetcherImpl;
-import org.danja.feedreader.feeds.FeedSet;
 import org.danja.feedreader.feeds.FeedSetImpl;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
+import org.danja.feedreader.old.FeedSet;
 import org.danja.feedreader.parsers.InterpreterFactory;
 import org.danja.feedreader.social.FormatSniffer;
 import org.danja.feedreader.social.RDFInterpreterFactory;
@@ -54,6 +54,7 @@ public class Poller implements Runnable {
             if (streamAvailable) {
                 format = sniffer.sniff(connector.getInputStream());
             } else {
+            	System.out.println("Stream unavailable.");
                 format = FeedConstants.UNKNOWN;
             }
 
@@ -65,7 +66,7 @@ public class Poller implements Runnable {
             interpreter = RDFInterpreterFactory.createInterpreter(format,
                     entries); 
             feedFetcher.setInterpreter(interpreter);
-            feedFetcher.setRefreshPeriod(Configuration.getPollerPeriod());
+            feedFetcher.setRefreshPeriod(Configuration.getPollerPeriod()); // TODO move
             feedSet.addFeed(feedFetcher);
         }
         return feedSet;

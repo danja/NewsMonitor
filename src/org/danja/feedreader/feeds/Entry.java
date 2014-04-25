@@ -54,4 +54,6 @@ public interface Entry extends FeedEntity {
      * @return get the author of the feed
      */
     public String getAuthor();
+    
+    
 }

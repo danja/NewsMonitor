@@ -2,7 +2,7 @@
  * Danny Ayers Aug 18, 2004 http://dannyayers.com
  *  
  */
-package org.danja.feedreader.io;
+package org.danja.feedreader.old;
 
 import java.io.File;
 import java.io.FileInputStream;

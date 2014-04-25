@@ -20,6 +20,8 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
 
+import org.danja.feedreader.main.Configuration;
+
 /**
  * HTTP connection handler 
  * 
@@ -73,14 +75,14 @@ public class HttpConnector {
         try {
             connection = connect();
         } catch (IOException e) {
-            //  e.printStackTrace();
+            e.printStackTrace(); // TODO log error
             dead = true;
             return false;
         }
         try {
             responseCode = connection.getResponseCode();
         } catch (IOException e1) {
-            // e1.printStackTrace();
+            e1.printStackTrace(); // TODO log error
             dead = false;
             return false;
         }
@@ -89,12 +91,13 @@ public class HttpConnector {
             dead = false;
             return false;
         }
+        System.out.println("Response Code : "+responseCode); // TODO handle response code here
         InputStream inputStream = null;
         try {
             inputStream = getInputStream(connection);
         } catch (IOException e2) {
             dead = true;
-            //  e2.printStackTrace();
+             e2.printStackTrace(); // TODO log error
             return false;
         }
         dead = false;
@@ -104,6 +107,9 @@ public class HttpConnector {
     public HttpURLConnection connect() throws IOException {
 
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        
+        connection.setReadTimeout(Configuration.READ_TIMEOUT);
+        connection.setConnectTimeout(Configuration.CONNECT_TIMEOUT);
 
         connection.setRequestProperty("Accept-Encoding", "gzip, deflate");
 

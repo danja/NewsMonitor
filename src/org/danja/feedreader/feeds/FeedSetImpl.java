@@ -17,6 +17,7 @@ import java.util.LinkedList;
 import java.util.Set;
 
 import org.danja.feedreader.main.Configuration;
+import org.danja.feedreader.old.FeedSet;
 
 /**
  * Implements set of feeds
