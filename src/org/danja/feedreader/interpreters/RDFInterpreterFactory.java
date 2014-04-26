@@ -1,7 +1,7 @@
 /**
  * feedreader-prototype
  *
- * InterpreterFactory.java
+ * RDFInterpreterFactory.java
  * 
  * @author danja
  * @date Apr 25, 2014
@@ -20,7 +20,7 @@ import org.danja.feedreader.io.Interpreter;
  * @version $Revision$
  * 
  */
-public class InterpreterFactory {
+public class RDFInterpreterFactory {
 
 	public static Interpreter createInterpreter(char formatHint) {
 		Interpreter interpreter = null;

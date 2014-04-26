@@ -19,11 +19,14 @@ import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.feeds.FeedListImpl;
-import org.danja.feedreader.interpreters.InterpreterFactory;
+import org.danja.feedreader.interpreters.RDFInterpreterFactory;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
 import org.danja.feedreader.parsers.FormatSniffer;
+import org.danja.feedreader.parsers.InterpreterFactory;
+
+
 
 public class Poller implements Runnable {
 
@@ -45,6 +48,7 @@ public class Poller implements Runnable {
 	 * @return
 	 */
 	public FeedList initFeeds() {
+		System.out.println("Poller.initFeeds()");
 		Feed feed;
 		Interpreter interpreter;
 		String url;
@@ -76,9 +80,14 @@ public class Poller implements Runnable {
 			feed.setFormatHint(format);
 			feed.setRefreshPeriod(Config.getPollerPeriod()); 
 			
-			interpreter = InterpreterFactory.createInterpreter(format);
-			feed.setInterpreter(interpreter);
+			// interpreter = RDFInterpreterFactory.createInterpreter(format);
+		//	feed.setInterpreter(interpreter);
 			
+			
+	            interpreter = InterpreterFactory.createInterpreter(format, entries);
+	            System.out.println("Setting interpreter "+interpreter +" to feed "+url);
+	            feed.setInterpreter(interpreter); 
+	  			
 			feedList.addFeed(feed);
 		}
 		return feedList;
@@ -102,13 +111,16 @@ public class Poller implements Runnable {
 			System.out.println("BEFORE feedList.size() "+feedList.size());	
 			feedList.refreshAll();
 			System.out.println("AFTER feedList.size() "+feedList.size());
-			System.out.println(feedList);
+			
+			System.out.println("*** STATUS ***");
 			displayStatus(feedList);
+			
+			System.out.println("FEEDLIST = "+feedList);
 			System.out.println("1entries.size() = " + entries.size());
 			entries.trimList(Config.getMaxItems());
 
 			FileEntrySerializer serializer = new FileEntrySerializer();
-			serializer.loadDocumentShell("input/shell.xml");
+			serializer.loadDocumentShell("input/shell.xml"); // TODO move to Config
 
 			serializer.clearEntries();
 			System.out.println("entries.size() = " + entries.size());

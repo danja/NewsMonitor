@@ -13,6 +13,7 @@ package org.danja.feedreader.feeds;
 import java.io.InputStream;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import org.danja.feedreader.content.Templater;
@@ -161,6 +162,11 @@ public class FeedImpl extends FeedEntityBase implements Feed,
 	public String toTurtle() {
 		Map<String, Object> data = getTemplateDataMap();
 		data.put("type", "rss:channel");
+		Iterator<String> i = data.keySet().iterator();
+		while(i.hasNext()){
+			System.out.println(i.next()+" = "+data.get(i));
+		}
+
 		return Templater.apply("feed-turtle", data);
 	}
 }

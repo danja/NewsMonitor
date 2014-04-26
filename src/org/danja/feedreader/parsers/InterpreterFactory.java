@@ -1,7 +1,7 @@
 /**
  * feedreader-prototype
  *
- * InterpreterFactory.java
+ * RDFInterpreterFactory.java
  * 
  * @author danja
  * @date Apr 25, 2014

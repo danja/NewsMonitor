@@ -44,7 +44,7 @@ public class CleanerInterpreter implements Interpreter {
         for (int i = 0; i < entries.size(); i++) {
             serializer.addEntry(entries.getEntry(i));
         }
-        String filename = "data/" + InterpreterFactory.getFilename(feed);
+        String filename = "data/" + RDFInterpreterFactory.getFilename(feed);
         System.out.println("\nFeed: "+feed.getUrl());
         System.out.println("type: "+ FeedConstants.formatName(feed.getFormatHint()));
         System.out.println("Writing from CleanerInterpreter...");

@@ -20,7 +20,7 @@ import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.feeds.FeedListImpl;
-import org.danja.feedreader.interpreters.InterpreterFactory;
+import org.danja.feedreader.interpreters.RDFInterpreterFactory;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
@@ -76,7 +76,7 @@ public class Supervisor {
 
 //            feedFetcher = new FeedImpl(uriString);
 //            feedFetcher.setFormatHint(format);
-//            interpreter = InterpreterFactory.createInterpreter(format,
+//            interpreter = RDFInterpreterFactory.createInterpreter(format,
 //                    entries); // changed for Social
 //            feedFetcher.setInterpreter(interpreter);
 //            feedFetcher.setRefreshPeriod(REFRESH_PERIOD);

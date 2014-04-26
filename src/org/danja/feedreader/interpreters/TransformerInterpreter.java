@@ -44,7 +44,7 @@ public class TransformerInterpreter implements Interpreter {
 
     public void interpret(Feed feed) {
         InputStream inputStream = feed.getInputStream();
-        String filename = "data/" + InterpreterFactory.getFilename(feed);
+        String filename = "data/" + RDFInterpreterFactory.getFilename(feed);
         
         System.out.println("\nFeed: "+feed.getUrl());
         System.out.println("type: "+ FeedConstants.formatName(feed.getFormatHint()));

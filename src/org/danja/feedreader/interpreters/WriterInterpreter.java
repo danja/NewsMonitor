@@ -19,8 +19,8 @@ public class WriterInterpreter implements Interpreter {
     public void interpret(Feed feed) {
         System.out.println("\nFeed: "+feed.getUrl());
         System.out.println("type: "+ FeedConstants.formatName(feed.getFormatHint()));
-        System.out.println("Writing from RDFInterpreter...");
-        feed.downloadToFile("data/"+InterpreterFactory.getFilename(feed));
+        System.out.println("Writing from WriterInterpreter...");
+        feed.downloadToFile("data/"+RDFInterpreterFactory.getFilename(feed));
     }
 
 }

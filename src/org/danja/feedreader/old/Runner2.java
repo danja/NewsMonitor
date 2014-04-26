@@ -27,7 +27,7 @@ public class Runner2 {
 //        Feed feed1 = new FeedImpl(
 //                "http://martinfowler.com/bliki/bliki.rss");
 //        feed1.setTitle("feed_1");
-//        Interpreter interpreter1 = InterpreterFactory.createInterpreter(
+//        Interpreter interpreter1 = RDFInterpreterFactory.createInterpreter(
 //                FeedConstants.RSS2, entries);
 //        feed1.setInterpreter(interpreter1); // ++
 //        feed1.setRefreshPeriod(REFRESH_PERIOD);
@@ -36,7 +36,7 @@ public class Runner2 {
 //        Feed feed2 = new FeedImpl(
 //                "http://dannyayers.com/feed/rss2");
 //        feed2.setTitle("feed_2");
-//        Interpreter interpreter2 = InterpreterFactory.createInterpreter(
+//        Interpreter interpreter2 = RDFInterpreterFactory.createInterpreter(
 //                FeedConstants.RSS2_BOZO, entries);
 //        feed2.setInterpreter(interpreter2); // ++
 //        feed2.setRefreshPeriod(REFRESH_PERIOD);
