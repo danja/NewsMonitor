@@ -20,7 +20,7 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
 
-import org.danja.feedreader.main.Configuration;
+import org.danja.feedreader.main.Config;
 
 /**
  * HTTP connection handler 
@@ -55,9 +55,13 @@ public class HttpConnector {
         HttpURLConnection.setFollowRedirects(true);
     }
 
-    public HttpConnector(String uri) {
+    public HttpConnector() {
+
+    }
+    
+    public void setUrl(String urlString){
         try {
-            url = new URL(uri);
+            url = new URL(urlString);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -104,14 +108,14 @@ public class HttpConnector {
 
         HttpURLConnection connection = null;
 		try {
+			System.out.println("URL in HttpConnector = "+url);
 			connection = (HttpURLConnection) url.openConnection();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         
-        connection.setReadTimeout(Configuration.READ_TIMEOUT);
-        connection.setConnectTimeout(Configuration.CONNECT_TIMEOUT);
+        connection.setReadTimeout(Config.READ_TIMEOUT);
+        connection.setConnectTimeout(Config.CONNECT_TIMEOUT);
 
         connection.setRequestProperty("Accept-Encoding", "gzip, deflate");
 
@@ -218,7 +222,8 @@ public class HttpConnector {
     }
 
     public static void main(String[] args) {
-        HttpConnector connector = new HttpConnector(args[0]);
+        HttpConnector connector = new HttpConnector();
+        connector.setUrl(args[0]);
         boolean isOk = connector.load();
         if (isOk) {
             connector.downloadToFile("C:/test.xml");

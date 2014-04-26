@@ -23,15 +23,23 @@ public interface FeedEntity {
 
     public String getTitle();
 
-    public void setDescription(String description);
+    
+    public void setContent(String content);
 
-    public String getDescription();
+    public String getContent();
 
-    public void setLink(String link);
+    public void setLink(String link);  // rename to setSiteLink orsimilar
 
     public String getLink();
 
     public void setDate(String date);
 
     public String getDate();
+    
+    /**
+     * Gets an RDF/Turtle representation of the FeedEntity (sans prefixes)
+     * 
+     * @return the Turtle
+     */
+    public String toTurtle();
 }

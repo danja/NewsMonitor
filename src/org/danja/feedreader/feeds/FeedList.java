@@ -44,4 +44,6 @@ public interface FeedList
    public Feed getNext();
 
    public void refreshAll();
+   
+   public int size();
 }

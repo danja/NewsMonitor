@@ -55,5 +55,12 @@ public interface Entry extends FeedEntity {
      */
     public String getAuthor();
     
+    /**
+     * Gets an RDF/Turtle representation of the Entry (sans prefixes)
+     * 
+     * @return the Turtle
+     */
+    public String toTurtle();
     
+    public String toTurtleNoPrefixes();
 }

@@ -14,8 +14,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.danja.feedreader.content.HtmlTidy;
+import org.danja.feedreader.content.Templater;
 
 /**
  *  Implementation of Entry, an RSS item/Atom entry/Blog post model
@@ -61,7 +64,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      * @see java.lang.Object#toString()
      */
     public String toString() {
-        return toHTML();
+        return toTurtle();
     }
 
     /* (non-Javadoc)
@@ -131,5 +134,19 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 			e.printStackTrace();
 		}
 		return "CONTENT="+stringWriter.toString();
+	}
+	
+	@Override
+	public String toTurtle() {
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("body", toTurtleNoPrefixes());
+		return Templater.apply("turtle-prefixes", data);
+	}
+
+	@Override
+	public String toTurtleNoPrefixes() {
+		Map<String, Object> data = getTemplateDataMap();
+		data.put("type", "schema:article");
+		return Templater.apply("entry-turtle-no-prefixes", data);
 	}
 }

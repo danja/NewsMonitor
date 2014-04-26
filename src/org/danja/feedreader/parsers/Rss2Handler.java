@@ -13,6 +13,7 @@ import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.EntryImpl;
 import org.danja.feedreader.feeds.EntryList;
 import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 /**
@@ -23,7 +24,6 @@ import org.xml.sax.helpers.DefaultHandler;
 // Sourced added for Poller
 public class Rss2Handler extends DefaultHandler {
 
-    // added for Poller
     private String sourceURI = "";
 
     private String sourceTitle = "";
@@ -130,6 +130,7 @@ public class Rss2Handler extends DefaultHandler {
                 return;
             }
             if ("description".equals(localName)) {
+            	System.out.println("inRSS2 parser textBuffer.toString() = "+textBuffer.toString());
                 entry.setContent(textBuffer.toString());
                 return;
             }
@@ -157,7 +158,9 @@ public class Rss2Handler extends DefaultHandler {
         }
     }
 
-    
+    public void endDocument() throws SAXException {
+    	System.out.println("Rss2Handler entry = "+entry);
+    }
     
 
 

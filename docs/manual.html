@@ -15,26 +15,54 @@
     <div id="sig">
       <p><a href="https://dannyayers.wordpress.com/">Danny Ayers</a></p>
       <a href="mailto:danny.ayers@gmail.com">danny.ayers@gmail.com</a></div>
-    <h3>Contents</h3>
     <div class="contents">
+      <h2>Contents</h2>
       <ul>
         <li><a href="#intro">Introduction</a></li>
+        <li><a href="#quick_start"><span style="color: #0000cc;">Quick Start</span></a></li>
+        <li><a href="#features">Features</a></li>
         <li><a href="#install">Installation</a></li>
         <li><a href="#for_users">For Users</a></li>
         <li><a href="#for_developers">For Developers</a></li>
       </ul>
-      <h2><a id="intro">Introduction</a></h2>
-      <h2><a id="install">Installation</a></h2>
-      <ul>
-      </ul>
     </div>
+    <h2><br>
+    </h2>
+    <h2><a id="intro">Introduction</a></h2>
+    <h2><a id="quick_start">Quick Start</a></h2>
+    <p>domain?</p>
+    <h2><a id="features">Features</a></h2>
+    <h2><a id="install">Installation</a></h2>
+    <h3><a id="seed_feed_list">Seed Feed List</a></h3>
+    <p>NewsMonitor requires an initial list of topic-relevant feed URLs. This
+      may be provided in a plain text file, for example :</p>
+    <pre><code>
+        # RSS 1.0
+           http://aabs.wordpress.com/category/semanticweb/rdf
+      
+        # RSS2.0
+           http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
+       
+        # RSS 2.0
+           http://www.w3.org/community/rww/feed/
+        
+        # Atom
+           http://www.jenitennison.com/blog/atom/feed
+        
+        # Atom
+           http://markwatson.com/blog/atom.xml
+</code></pre>
+    <p>Lines beginning with '#' are treated as comments. Blank lines and
+      leading/trailing whitespace on URL lines are ignored.</p>
+    <p><br>
+    </p>
     <h2><a id="for_users">For Users</a></h2>
     <h2><a id="for_developers">For Developers</a></h2>
     <h3>Contents</h3>
     <ul>
       <li><a href="#formats">Feed Formats</a></li>
     </ul>
-    <div class="contents">
+    <div>
       <h4><a id="formats">Feed Formats</a></h4>
       <h5>Species</h5>
       <p>Syndication feeds are typically published in one of three formats (or
@@ -71,12 +99,12 @@
       <ul>
       </ul>
     </div>
-    <table style="width: 884px; height: 263px;" cellpadding="7" cellspacing="0">
+    <table style="width: 1106px; height: 267px;" cellpadding="7" cellspacing="0">
       <colgroup><col width="69"> <col width="99"> <col width="69"> <col width="80">
       </colgroup>
       <tbody>
         <tr>
-          <th> Entity</th>
+          <th> Entity\Representation</th>
           <th> RSS 1.0 </th>
           <th> RSS 2.0 </th>
           <th> Atom </th>
@@ -84,84 +112,167 @@
           <th>NewsMonitor RDF</th>
         </tr>
         <tr>
-          <td> Feed</td>
-          <td>rss:channel </td>
-          <td>channel </td>
-          <td>atom:feed</td>
-          <td><br>
+          <td style="text-align: right;"> <span style="font-weight: bold;">Feed</span></td>
+          <td>
+            <pre>rss:channel </pre>
           </td>
-          <td>rss:channel<br>
+          <td>
+            <pre>channel </pre>
           </td>
-        </tr>
-        <tr>
-          <td>Entry</td>
-          <td>rss:item</td>
-          <td>item</td>
-          <td>atom:entry</td>
-          <td><br>
+          <td>
+            <pre>atom:feed</pre>
           </td>
-          <td><br>
+          <td>feed<br>
+          </td>
+          <td>
+            <pre>rss:channel</pre>
+            <pre>     </pre>
           </td>
         </tr>
         <tr>
-          <td>Title</td>
-          <td>dc:title</td>
-          <td>title</td>
-          <td>atom:title</td>
-          <td><br>
+          <td style="text-align: right;"><span style="font-weight: bold;">Entry</span></td>
+          <td>
+            <pre>rss:item</pre>
           </td>
-          <td><br>
+          <td>
+            <pre>item</pre>
           </td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>dc:date</td>
-          <td>pubDate</td>
-          <td>atom:issued</td>
-          <td><br>
+          <td>
+            <pre>atom:entry</pre>
           </td>
-          <td><br>
+          <td>entry<br>
+          </td>
+          <td>
+            <pre>schema:article</pre>
+            <pre>         </pre>
           </td>
         </tr>
         <tr>
-          <td>Content</td>
-          <td>dc:description, content:encoded</td>
-          <td>description, xhtml:body</td>
-          <td>atom:content</td>
-          <td><br>
+          <td style="text-align: right;"><span style="font-weight: bold;">Title</span></td>
+          <td>
+            <pre>dc:title</pre>
           </td>
-          <td>schema:articleBody</td>
+          <td>
+            <pre>title</pre>
+          </td>
+          <td>
+            <pre>atom:title</pre>
+          </td>
+          <td>x.getTitle()<br>
+          </td>
+          <td>
+            <pre>dcterms:title</pre>
+            <pre>         </pre>
+          </td>
         </tr>
         <tr>
-          <td>Author</td>
-          <td>dc:creator</td>
-          <td>author</td>
-          <td>atom:author</td>
+          <td style="text-align: right;"><span style="font-weight: bold;">Date</span></td>
+          <td>
+            <pre>dc:date</pre>
+          </td>
+          <td>
+            <pre>pubDate</pre>
+          </td>
+          <td>
+            <pre>atom:issued</pre>
+          </td>
+          <td>x.getDate()<br>
+          </td>
+          <td>
+            <pre>dcterms:date</pre>
+            <pre>          </pre>
+          </td>
+        </tr>
+        <tr>
+          <td>Source</td>
           <td><br>
           </td>
-          <td>dc:creator</td>
+          <td>link</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td>dcterms:source</td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"><span style="font-weight: bold;">Content</span></td>
+          <td>
+            <pre>dc:description, <br>content:encoded</pre>
+          </td>
+          <td>
+            <pre>description, <br>xhtml:body</pre>
+          </td>
+          <td>
+            <pre>atom:content</pre>
+          </td>
+          <td>x.getContent()<br>
+          </td>
+          <td>
+            <pre>schema:articleBody</pre>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"><span style="font-weight: bold;">Author</span></td>
+          <td>
+            <pre>dc:creator</pre>
+          </td>
+          <td>
+            <pre>author</pre>
+          </td>
+          <td>
+            <pre>atom:author</pre>
+          </td>
+          <td>x.getCreator()<br>
+          </td>
+          <td>
+            <pre>dcterms:creator -&gt; foaf:name </pre>
+          </td>
         </tr>
       </tbody>
     </table>
-    <p>feed url?<br>
-    </p>
+    <p><span style="font-style: italic;">Note</span> : </p>
+    <pre>dcterms:creator</pre>
+    has a range of
+    <pre>dcterms:Agent</pre>
+    , so the text name will be represented as e.g.
+    <pre>&lt;#feed&gt; dcterms:creator [foaf:name "John Smith"] . </pre>
     <h5>Namespaces</h5>
     <ul>
       <li> <a href="http://web.resource.org/rss/1.0/spec">RSS 1.0</a> -
-        <pre>rss: &lt;http://purl.org/rss/1.0/&gt;</pre>
+        <pre>rss: http://purl.org/rss/1.0/</pre>
       </li>
-      <li>RSS 2.0 - <span style="font-style: italic;">no namespace (for core
-          terms)</span></li>
-      <li> Atom -
-        <pre>atom: http://www.w3.org/2005/Atom&gt;</pre>
+      <li><a href="http://cyber.law.harvard.edu/rss/rss.html">RSS 2.0</a> - <span
+          style="font-style: italic;">no namespace (for core terms)</span></li>
+      <li> <a href="https://tools.ietf.org/html/rfc4287">Atom</a> -
+        <pre>atom: http://www.w3.org/2005/Atom</pre>
       </li>
-      <li>Dublin Core -
-        <pre>dc: &lt;http://purl.org/dc/elements/1.1/&gt;, dcterms: &lt;http://purl.org/dc/terms/&gt;</pre>
+      <li><a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>
+        -
+        <pre>dcterms: http://purl.org/dc/terms/</pre>
+      </li>
+      <li><a href="http://xmlns.com/foaf/spec/">FOAF</a> -
+        <pre>foaf: http://xmlns.com/foaf/0.1/</pre>
       </li>
       <li><a href="http://schema.org/">Schema.org</a>/<a href="http://schema.rdfs.org">schema.rdfs.org</a>
         -
-        <pre>schema: &lt;http://schema.org/&gt;</pre>
+        <pre>schema: http://schema.org/</pre>
       </li>
+      <li>NewsMonitor -
+        <pre>nm: http://purl.org/stuff/newsmonitor/</pre>
+      </li>
+    </ul>
+    <h2><a id="newsmonitor_vocab">NewsMonitor Vocabulary</a></h2>
+    <p><br>
+    </p>
+    <ul>
+    </ul>
+    <h2><a id="poller">Poller</a></h2>
+    <h2><a id="extractors">Extractors</a></h2>
+    <h2><a id="discovery">Discovery Engine</a></h2>
+    <h3>Relevance Heuristics</h3>
+    <p>Use a <a href="http://en.wikipedia.org/wiki/Sigmoid_function">Sigmoid
+        Function</a> to normalise values to range 0..1.</p>
+    <ul>
     </ul>
   </body>
 </html>

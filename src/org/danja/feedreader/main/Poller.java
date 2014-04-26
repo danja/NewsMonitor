@@ -11,34 +11,39 @@ package org.danja.feedreader.main;
 
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.EntryListImpl;
-import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.feeds.FeedListImpl;
+import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
-import org.danja.feedreader.parsers.InterpreterFactory;
-import org.danja.feedreader.social.FormatSniffer;
-import org.danja.feedreader.social.RDFInterpreterFactory;
+import org.danja.feedreader.parsers.FormatSniffer;
 
 public class Poller implements Runnable {
 
-	private EntryList entries = new EntryListImpl(); // ++
+	private EntryList entries = new EntryListImpl(); 
 
 	private List<String> feedUrls = null;
 
-	private FeedList feedSet = new FeedListImpl();
+	private FeedList feedList = new FeedListImpl();
 
 	private boolean running = false;
 
 	private Thread thread;
+	
+	private int loopCount = 0;
 
+	/**
+	 * Takes each feed URL on the list and using @see FormatSniffer checks the target type,
+	 * then creates @see Feed objects according to what it finds, adding these to the @see FeedList
+	 * @return
+	 */
 	public FeedList initFeeds() {
 		Feed feed;
 		Interpreter interpreter;
@@ -49,35 +54,39 @@ public class Poller implements Runnable {
 
 		System.out.println("feedUrls.size() = " + feedUrls.size());
 		for (int i = 0; i < feedUrls.size(); i++) {
+			
+			// check the target URL
 			url = feedUrls.get(i);
-			System.out.println("A URL = "+url);
-			connector = new HttpConnector(url);
+			connector = new HttpConnector();
+			connector.setUrl(url);
 			boolean streamAvailable = connector.load();
 			if (streamAvailable) {
+				System.out.println("Sniffing feed : "+url);
 				format = sniffer.sniff(connector.getInputStream());
 			} else {
 				System.out.println("Stream unavailable.");
 				format = FeedConstants.UNKNOWN;
 			}
-			System.out.println("\nFeed : " + url);
-			System.out.println("Format : " + FeedConstants.formatName(format));
-
-			feed = new FeedImpl(url);
+			System.out.println("Format matches : " + FeedConstants.formatName(format));
+			System.out.println("\nCreating object for feed : " + url);
+			
+			// create Feed object
+			feed = new FeedImpl();
+			feed.setUrl(url);
 			feed.setFormatHint(format);
-			interpreter = RDFInterpreterFactory.createInterpreter(format,
-					entries);
+			feed.setRefreshPeriod(Config.getPollerPeriod()); 
+			
+			interpreter = InterpreterFactory.createInterpreter(format);
 			feed.setInterpreter(interpreter);
-			feed.setRefreshPeriod(Configuration.getPollerPeriod()); // TODO move
-			System.out.println("feed URL = " + feed.getUrl());
-			feedSet.addFeed(feed);
+			
+			feedList.addFeed(feed);
 		}
-		return feedSet;
+		return feedList;
 	}
 
 	public void start() {
 		thread = new Thread(this);
 		thread.start();
-		System.out.println("Poller started.");
 	}
 
 	public void stop() {
@@ -88,11 +97,15 @@ public class Poller implements Runnable {
 	public void run() {
 		running = true;
 		while (running) {
-			System.out.println("RUNNING!");
-			feedSet.refreshAll();
-			displayStatus(feedSet);
+			System.out.println("Starting loop #"+ ++loopCount);
+			
+			System.out.println("BEFORE feedList.size() "+feedList.size());	
+			feedList.refreshAll();
+			System.out.println("AFTER feedList.size() "+feedList.size());
+			System.out.println(feedList);
+			displayStatus(feedList);
 			System.out.println("1entries.size() = " + entries.size());
-			entries.trimList(Configuration.getMaxItems());
+			entries.trimList(Config.getMaxItems());
 
 			FileEntrySerializer serializer = new FileEntrySerializer();
 			serializer.loadDocumentShell("input/shell.xml");
@@ -106,10 +119,10 @@ public class Poller implements Runnable {
 			serializer.write("output/rss.xml");
 			System.out.println("Writing HTML...");
 			serializer.transformWrite("output/index.html",
-					"templates/rss2html.xslt");
+					"xslt/rss2html.xslt");
 			System.out.println("Writing RSS 1.0...");
 			serializer.transformWrite("output/feed.rdf",
-					"templates/feed-rss1.0.xsl");
+					"xslt/feed-rss1.0.xsl");
 		}
 		System.out.println("Poller stopped.");
 	}

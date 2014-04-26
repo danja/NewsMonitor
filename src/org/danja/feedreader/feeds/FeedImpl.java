@@ -12,9 +12,13 @@ package org.danja.feedreader.feeds;
 
 import java.io.InputStream;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.Interpreter;
+import org.danja.feedreader.main.Config;
 
 /**
  * Models a feed, wrapped around HttpConnection
@@ -41,8 +45,7 @@ public class FeedImpl extends FeedEntityBase implements Feed,
 
     private Interpreter interpreter;
 
-    public FeedImpl(String url) {
-        setUrl(url);
+    public FeedImpl() {
     }
 
 
@@ -52,13 +55,16 @@ public class FeedImpl extends FeedEntityBase implements Feed,
             return false;
         }
         if (httpConnector == null) {
-            httpConnector = new HttpConnector(getUrl());
+        	httpConnector = new HttpConnector();
+        	String url = getUrl();
+        	System.out.println("URL in FeedImpl.refresh = "+url);
+        	httpConnector.setUrl(url);
         }
         isNew = httpConnector.load();
 
         if (isNew) {
             System.out.println("Connected, interpreting...");
-            
+            System.out.println("interpretor ="+interpreter);
             interpreter.interpret(this);
             lives = MAX_LIVES;
         } else {
@@ -148,4 +154,13 @@ public class FeedImpl extends FeedEntityBase implements Feed,
     public long getLastRefresh() {
         return lastRefresh;
     }
+    
+
+    
+	@Override
+	public String toTurtle() {
+		Map<String, Object> data = getTemplateDataMap();
+		data.put("type", "rss:channel");
+		return Templater.apply("feed-turtle", data);
+	}
 }

@@ -18,7 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import org.danja.feedreader.main.Configuration;
+import org.danja.feedreader.main.Config;
 import org.danja.feedreader.main.Main;
 
 /**
@@ -34,8 +34,10 @@ public class FeedListImpl implements FeedList {
         feedQueue = new LinkedList<Feed>();
     }
     
-    public Feed createFeed(String uri) {
-        return new FeedImpl(uri);
+    public Feed createFeed(String url) {
+        Feed feed = new FeedImpl();
+        feed.setUrl(url);
+        return feed;
     }
 
     public void addFeed(String uriString) {
@@ -72,14 +74,14 @@ public class FeedListImpl implements FeedList {
         Iterator<Feed> iterator = feedQueue.iterator();
         Feed feed;
         while (iterator.hasNext()) {
-            feed = (Feed) iterator.next();
-            System.out.println("\n\nChecking: " + feed.getUrl());
+            feed = iterator.next();
+            System.out.println("\n\nRefreshing : " + feed.getUrl());
             feed.refresh();
             if(feed.shouldExpire()){
                 expiring.add(feed);
             }
             try {
-                Thread.sleep(Configuration.PER_FEED_SLEEP_PERIOD);
+                Thread.sleep(Config.PER_FEED_SLEEP_PERIOD);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -89,9 +91,25 @@ public class FeedListImpl implements FeedList {
         }
         iterator = expiring.iterator();
         while (iterator.hasNext()) {
-            feed = (Feed) iterator.next();
+            feed = iterator.next();
                 System.out.println("Unsubscribing from "+feed.getUrl());
                 feedQueue.remove(feed);
         }
     }
+    
+    public String toString() {
+    	StringBuffer buffer = new StringBuffer();
+    	buffer.append("===Feed List===");
+    	  Iterator<Feed> iterator = feedQueue.iterator();
+         
+          while (iterator.hasNext()) {
+              buffer.append(iterator.next().toString());
+          }
+        return buffer.toString();
+    }
+
+	@Override
+	public int size() {
+		return feedQueue.size();
+	}
 }

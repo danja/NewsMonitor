@@ -39,7 +39,8 @@ public class HtmlParserDemo {
 
             parser.setContentHandler(handler);
 
-            HttpConnector connector = new HttpConnector(uriString);
+            HttpConnector connector = new HttpConnector();
+            connector.setUrl(uriString);
             boolean streamAvailable = connector.load();
             if (streamAvailable) {
                 InputStream inputStream = connector.getInputStream();

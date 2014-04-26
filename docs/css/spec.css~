@@ -9,7 +9,13 @@
 }
 
 .contents {
-    line-height:150%;
+   width:20%;
+   line-height:150%;
+   border: 1px solid #ddd; 
+   margin-left:3%;
+   margin-right:auto;
+   padding-left: 15px;
+   padding-bottom: 5px;
 }
 
 a:link {text-decoration:none;}
@@ -54,7 +60,7 @@ h2 { font: 140% sans-serif;}
 h3 { font: 110% sans-serif;
 font-style:italic; }
 h4 { font: bold 100% sans-serif }
-h5 { font: bold, italic 90% sans-serif }
+h5 { font: bold italic 90% sans-serif }
 h6 { font: small-caps 100% sans-serif }
 
 .hide { display: none }
@@ -70,8 +76,34 @@ p.copyright small { font-size: small }
 a[href]:hover { background: #ffa }
 }
 
-pre { margin-left: 2em;
-display: inline }
+pre { 
+  display: inline;
+  font: 120% Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+ }
+
+pre code {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  display: inline-block;
+  border: 1px solid #cacaca;
+  margin: 0px;
+  line-height: 1.2em;
+  padding: 10px;
+  overflow:auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #FAFAFB;
+}
+
 /*
 p {
   margin-top: 0.6em;

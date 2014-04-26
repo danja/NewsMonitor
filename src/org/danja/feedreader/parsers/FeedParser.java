@@ -20,7 +20,4 @@ public interface FeedParser {
     public void setContentHandler(ContentHandler contentHandler);
 
     public void parse(InputStream inputStream);
-
-   // added for Poller
-  //  public ContentHandler getContentHandler();
 }

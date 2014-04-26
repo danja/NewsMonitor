@@ -37,7 +37,7 @@ public class FileEntrySerializer {
 
     private Document doc;
 
-    private Element channelElement;
+    private Element feedElement;
 
     private static TransformerFactory transformerFactory = TransformerFactory
             .newInstance();
@@ -47,7 +47,7 @@ public class FileEntrySerializer {
 
     public void loadDocumentShell(String filename) {
         doc = loadXml(filename);
-        channelElement = getChannelElement();
+        feedElement = getChannelElement();
     }
 
     public Element getChannelElement() {
@@ -70,7 +70,7 @@ public class FileEntrySerializer {
         Element sourceElement = simpleElement("source", sourceTitle);
         sourceElement.setAttribute("url", entry.getSourceLink());
         item.appendChild(sourceElement);
-        channelElement.appendChild(item);
+        feedElement.appendChild(item);
     }
 
     public String unescape(String content) {
@@ -139,13 +139,13 @@ public class FileEntrySerializer {
     }
 
     public void clearEntries() {
-        NodeList items = channelElement.getElementsByTagName("item");
+        NodeList items = feedElement.getElementsByTagName("item");
         List itemList = new ArrayList();
         for (int i = 0; i < items.getLength(); i++) {
             itemList.add(items.item(i));
         }
         for (int i = 0; i < items.getLength(); i++) {
-            channelElement.removeChild((Element) itemList.get(i));
+            feedElement.removeChild((Element) itemList.get(i));
         }
     }
 

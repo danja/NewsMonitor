@@ -1,5 +1,14 @@
+# RSS 1.0
 http://aabs.wordpress.com/category/semanticweb/rdf
-http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
-http://www.w3.org/community/rww/feed/
+
+# RSS2.0
+# http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
+
+# RSS 2.0
+   http://www.w3.org/community/rww/feed/
+
+# Atom
 http://www.jenitennison.com/blog/atom/feed
-http://markwatson.com/blog/atom.xml
+
+# Atom
+# http://markwatson.com/blog/atom.xml

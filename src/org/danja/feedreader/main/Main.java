@@ -29,9 +29,10 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Main main = new Main();
-		Configuration.load();
+		Config.load();
 
 		// load seed list from file into store
+		System.out.println("Loading seed feed list from file into store...");
 		main.loadSeedFeedList();
 		
 		// TODO doesn't appear to be refreshing
@@ -39,14 +40,17 @@ public class Main {
 		Poller poller = new Poller();
 
 		// load feed list from store into memory, pass to Poller
+		System.out.println("Loading feed list from store...");
 		poller.setFeedList(main.getFeeds());
 
 		// Set channelURIs = planet.loadChannelList("input/bloggers.rdf");
 		// Set channelURIs = planet.loadChannelList("input/feedlist.opml");
 
 		// FeedList feedSet =
+		System.out.println("\n==== Initialising Feeds ====");
 		poller.initFeeds();
 
+		System.out.println("\n==== Starting Poller ====");
 		poller.start();
 //		try {
 //			Thread.sleep(60000); // wait a minute

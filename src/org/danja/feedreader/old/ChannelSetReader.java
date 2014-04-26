@@ -44,7 +44,7 @@ public class ChannelSetReader extends DefaultHandler {
     public void startElement(String namespaceURI, String localName,
             String qName, Attributes attributes) {
 
-        if (namespaceURI.equals(FeedConstants.RSS_NS)
+        if (namespaceURI.equals(FeedConstants.RSS1_NS)
                 && localName.equals("channel")) {
 
             String uriString = attributes.getValue(FeedConstants.RDF_NS,

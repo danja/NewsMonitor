@@ -10,9 +10,13 @@
 package org.danja.feedreader.feeds;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+
+import org.danja.feedreader.content.Templater;
 
 /**
  *  implements EntryList, an ordered series of Entry objects
@@ -61,5 +65,20 @@ public class EntryListImpl implements EntryList {
 
     public void sortByDate() {
         EntryDateSorter.sort(entries);
+    }
+
+	@Override
+	public String toTurtle() {
+		StringBuffer bodyBuffer = new StringBuffer();
+		for(int i=0;i<entries.size();i++){
+			bodyBuffer.append(entries.get(i).toString()+"\n\n");
+		}
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("body", bodyBuffer.toString());
+		return Templater.apply("turtle-prefixes", data);
+	}
+	
+    public String toString() {
+        return toTurtle();
     }
 }

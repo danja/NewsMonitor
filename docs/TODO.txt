@@ -6,5 +6,15 @@ logging
 - feed details (tostore)
 - warnings/errors (to system log)
 
+disable all feeds in store
+
+get pat seperator from system
+
+add @Overrides
+
+test on windows machine
+
+---------------------------------------------------------------
+
 DONE
 JTidy on content 

@@ -56,4 +56,11 @@ public interface Feed extends FeedEntity {
     public void downloadToFile(String filename);
     
     public void setInterpreter(Interpreter interpreter);
+    
+    /**
+     * Gets an RDF/Turtle representation of the EntryList (sans prefixes)
+     * 
+     * @return the Turtle
+     */
+    public String toTurtle();
 }

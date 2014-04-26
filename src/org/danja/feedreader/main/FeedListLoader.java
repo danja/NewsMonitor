@@ -25,6 +25,8 @@ public class FeedListLoader {
 
 	// OpmlSetReader reader = new OpmlSetReader();
 	// return reader.load(filename);
+	
+	private static int urlCount = 0;
 
 	public static String SPARQL_TEMPLATE = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
 			+ "PREFIX rss: <http://purl.org/rss/1.0/> \n"
@@ -73,6 +75,8 @@ public class FeedListLoader {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println(urlCount+" URLs loaded from file");
+		
 		return handler.getTurtleBody();
 	}
 
@@ -91,9 +95,12 @@ public class FeedListLoader {
 		StringBuffer targetBuffer = new StringBuffer();
 
 		public void handle(String line) {
-			String sparql = FeedListLoader.insertValue(CHANNEL_TEMPLATE, "url",
-					line);
-			targetBuffer.append(sparql);
+			if (line.trim().length() != 0 && line.charAt(0) != '#') { // allow comments and blank lines
+				String sparql = FeedListLoader.insertValue(CHANNEL_TEMPLATE,
+						"url", line.trim());
+				targetBuffer.append(sparql);
+				urlCount++;
+			}
 		}
 
 		public String getTurtleBody() {

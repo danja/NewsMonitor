@@ -9,7 +9,7 @@ import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.feeds.FeedListImpl;
-import org.danja.feedreader.io.DownloadInterpreter;
+import org.danja.feedreader.interpreters.DownloadInterpreter;
 
 public class Runner {
 
@@ -24,13 +24,13 @@ public class Runner {
         Iterator feedIterator = feedlistURIs.iterator();
         Feed feed;
         int nameCounter = 1;
-        while (feedIterator.hasNext()) {
-            feed = new FeedImpl((String) feedIterator.next());
-            feed.setTitle("feed_" + Integer.toString(nameCounter++));
-            feed.setInterpreter(new DownloadInterpreter(args[1]));
-            feed.setRefreshPeriod(REFRESH_PERIOD);
-            feeds.addFeed(feed);
-        }
+//        while (feedIterator.hasNext()) {
+//            feed = new FeedImpl((String) feedIterator.next());
+//            feed.setTitle("feed_" + Integer.toString(nameCounter++));
+//            feed.setInterpreter(new DownloadInterpreter(args[1]));
+//            feed.setRefreshPeriod(REFRESH_PERIOD);
+//            feeds.addFeed(feed);
+//        }
 
         while (true) {
             feeds.refreshAll();

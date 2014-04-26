@@ -13,7 +13,7 @@ package org.danja.feedreader.io;
 import org.danja.feedreader.feeds.Feed;
 
 /**
- * Bridges between feed and parser etc
+ * Bridges between feed and parser
  *  
  */
 public interface Interpreter  { 

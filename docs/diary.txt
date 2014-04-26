@@ -33,6 +33,10 @@ Poller basically working
 Added JTidy to clean HTML content
 added timeouts to config
 
+2014-04-26
+added Freemarker for templating
+set up toTurtle() methods on feed entities
+
 
 
 
