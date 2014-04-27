@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<project>
+    
+    <name>Commons FeedParser</name>
+    <groupId>commons-feedparser</groupId>
+    <artifactId>commons-feedparser</artifactId>
+    <logo>/images/feedparser-logo-white.png</logo>
+
+    <url>http://commons.apache.org/feedparser/</url>
+
+    <inceptionYear>2004</inceptionYear>
+
+    <shortDescription>Jakarta FeedParser</shortDescription>
+
+    <description>Jakarta FeedParser</description>
+
+    <currentVersion>0.5-SNAPSHOT</currentVersion>
+
+    <package>org.apache.commons.feedparser</package>
+
+    <organization>
+        <name>Apache Software Foundation</name>
+        <url>http://jakarta.apache.org/</url>
+        <logo>http://jakarta.apache.org/images/jakarta-logo.gif</logo>
+    </organization>
+
+    <shortDescription>Apache Commons FeedParser</shortDescription>
+    
+    <description>
+    </description>
+
+    <siteAddress>jakarta.apache.org</siteAddress>
+    <siteDirectory>/www/commons.apache.org/sandbox/feedparser</siteDirectory>
+    <distributionDirectory>/www/jakarta.apache.org/builds/jakarta-commons/feedparser</distributionDirectory>
+
+    <versions>
+    </versions>
+
+    <branches>
+    </branches>
+
+    <developers>
+
+        <developer>
+            <name>Kevin A. Burton</name>
+            <id>burton</id>
+            <email>burton1--at--rojo.com</email>
+            <organization>Rojo Networks Inc.</organization>
+        </developer>
+        <developer>
+            <name>Martin van den Bemt</name>
+            <id>mvdb</id>
+            <email>martin@mvdb.net</email>
+        </developer>
+        
+    </developers>
+
+    <contributors>
+        <contributor>
+            <name>Brad Neuberg</name>
+        </contributor>
+        <contributor>
+            <name>Joseph Ottinger</name>
+        </contributor>
+        <contributor>
+            <name>Nick Lothian</name>
+        </contributor>
+    </contributors>
+    
+    <dependencies>
+        
+        <dependency>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>b9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.1-beta-6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <properties>
+              <scope>test</scope>
+            </properties>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.0-rc1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xmlrpc</groupId>
+            <artifactId>xmlrpc</artifactId>
+            <version>1.2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>saxpath</groupId>
+            <artifactId>saxpath</artifactId>
+            <version>1.0-FCS</version>
+        </dependency>
+        
+        <!-- these two are required by maven. 
+         !   dIon: TODO: Which version?
+         !-->
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xerces</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        
+    </dependencies>
+
+    <build>
+        <nagEmailAddress>burton1@rojo.com</nagEmailAddress>
+        <sourceDirectory>src/java</sourceDirectory>
+    	<unitTestSourceDirectory>src/test</unitTestSourceDirectory>
+    </build>
+
+    <reports>
+
+        <report>maven-changelog-plugin</report>
+        <report>maven-changes-plugin</report>
+
+        <!--
+        <report>maven-checkstyle-plugin</report>
+             -->
+
+        <!--
+        <report>maven-jcoverage-plugin</report>
+             -->
+
+        <report>maven-developer-activity-plugin</report>
+        <report>maven-file-activity-plugin</report>
+        <report>maven-javadoc-plugin</report>
+
+        <!--
+        <report>maven-junit-report-plugin</report>
+             -->
+
+        <report>maven-jxr-plugin</report>
+        <report>maven-license-plugin</report>
+
+        <!-- TODO PMD -->
+
+    </reports>
+
+</project>

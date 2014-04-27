@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="http://soan.jp/">
+<title>Soanblog 創庵</title>
+<link>http://soan.jp/</link>
+<description>アジアンカフェ「&lt;a href=&quot;http://www.chakama.com/&quot;&gt;茶香間&lt;/a&gt;」も営業中！</description>
+<dc:language>en-us</dc:language>
+<dc:creator></dc:creator>
+<dc:date>2003-10-22T17:50:12+09:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.movabletype.org/?v=2.51" />
+
+<items>
+<rdf:Seq><rdf:li rdf:resource="http://soan.jp/archives/000508.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000507.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000505.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000504.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000503.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000502.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000500.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000499.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000498.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000497.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000485.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000496.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000495.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000494.html" />
+<rdf:li rdf:resource="http://soan.jp/archives/000491.html" />
+</rdf:Seq>
+</items>
+
+</channel>
+
+<item rdf:about="http://soan.jp/archives/000508.html">
+<title>手書きでサイト構築「デニム」</title>
+<link>http://soan.jp/archives/000508.html</link>
+<description>手書きでサイト構築をしていく構造化ツールGroup for User Interface Research - DENIMがバージョンアップしてました。 （とはいえ、今年の３月ですが・・・・古い） とりあえずメモ。～デモビデオ（RealPlayer）...</description>
+<dc:subject>SOFTWARE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-22T17:50:12+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000507.html">
+<title>話しながら作るプレゼンテーションソフト</title>
+<link>http://soan.jp/archives/000507.html</link>
+<description>ことだま タブレットＰＣを使い、音声入力と文字認識をバックグラウンドで使いながら、プレゼン資料を作成するソフトウェア。 音声や文字認識による入力面での革新性だけでなく、位置関係や矢印などの関係性などもすべてドラックするだけで表記され、まさに話をしながら、構造をくみあげていけます。（・・・こういうアイデアってワクワクします。） 詳しくは、デモビデオ（３０Ｍ）にとてもわかりやすく解説されています。 早速タブレットＰＣに入れて活用してレビューしてみたいと思います。...</description>
+<dc:subject>SOFTWARE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-22T17:40:08+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000505.html">
+<title>赤坂うまや</title>
+<link>http://soan.jp/archives/000505.html</link>
+<description>赤坂うまやでＫＮＮ神田さんのイベント。 スケジュール的に行けそうにない予定だったのですが、ぎりぎり間に合い（いや、間に合ってないか）なんとか合流しました。 この赤坂のうまや。ロケーションがなんと神社の鳥居をくぐって、裏道のようなどんつきにあり、まるで神社の境内にあるバーのような演出で風情があって粋でした。 （写真は玄関入ってすぐのところ） イベントに足を踏み入れたときは、会場もすでに出来上がっていて、なかなかの盛り上がりようでした。 その後、家に送りがてら、外苑前のカフェ「オフィス」で、ちょっと朝３時くらいまで語らいあってました。 最近夜遊びがすぎるかな・・・...</description>
+<dc:subject>CAFE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-22T03:38:47+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000504.html">
+<title>TILES CAFE</title>
+<link>http://soan.jp/archives/000504.html</link>
+<description>今日はひさびさにＮＨＫの西門の前にある、Tiles Cafeにいきました。 あいかわらず、ここの角煮や焼きそば、ゴーヤチャンプルは美味しい！気のおけない知人と語らうにはホントいい場所です。 カフェ作るときに、何度も行ってはお店の人にさりげなくインタビューして勉強させてもらった場所。 オススメです。 〒150-0047 東京都渋谷区神山町5-3 スパイシービル1F 03-5453-1288...</description>
+<dc:subject>CAFE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-21T01:51:19+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000503.html">
+<title>コメント欄を狙ったスパムの対策</title>
+<link>http://soan.jp/archives/000503.html</link>
+<description>最近、ＭＴのコメントを狙ったコメントスパムや、ＭＴのコメント欄にあるメールアドレスを抜き取って、ダイレクトメールを送るのが増えているようです。 ■コメントスパム コメントスパムは、来るたびに、kengoさんとメッセンジャーで共有してますが、kengoさんが詳しくまとめてくれています。 ★Preston Wiki - コメントスパム こちらにあるＩＰアドレスは、このサイトにくるものとほとんど一緒なので、ＭＴの設定の「禁止ＩＰ」に入れておくといいと思います。 ■スパム（コメントに書いたメールアドレスが取られる） こちらは、ＭＴに限らず、ウェブサイトに自分のアドレスを書き込んだものが、スパム業者に勝手にもっていかれ、見知らぬ海外のダイレクトメールなどを受け取るというもの。 自衛手段として、いつでも変えられるフリーのメールアドレス（hotmailやyahooメールなど）で書き込む（これもイタチごっこになってしまいますが）がいいと思います。 また、ＭＴの設定側での対策として、テンプレートのコメントテンプレートの設定にある、posted by ～のところにあるＭＴタグを ＜$MTCommentAuthorLink spam_protect=&quot;1&quot; show_email=&quot;0&quot;$＞ にしておくと、メールアドレスのみの投稿者のアドレスを非表示にすることができます。 最近その手のＤＭを受け取る人が増えているようなので、メールアドレスを非表示にしました。 コメントスパムも、メールのスパムや、トラックバックを狙ったものなど色々あると思いますが、せっかく楽しく広がりつつあるブロッグにあまり歓迎されるものではないですよね。被害が増えないことを祈ります。...</description>
+<dc:subject>MOVABLETYPE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-20T00:01:11+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000502.html">
+<title>LOOPS001</title>
+<link>http://soan.jp/archives/000502.html</link>
+<description>LOOPS001 130 bpm [REASON + ACID] Sampling with Rhodes Pad. HOUSE...</description>
+<dc:subject>OTHER</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-19T14:41:51+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000500.html">
+<title>花粉症</title>
+<link>http://soan.jp/archives/000500.html</link>
+<description>突然、昨日鼻水とくしゃみがとまらなくなり、目がかゆくなる症状が・・・花粉症か？！季節外れのような・・・・気のせいでありますように。 花粉症＊ナビ ― 花粉症カレンダー...</description>
+<dc:subject>DIARY</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-17T13:53:17+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000499.html">
+<title>iTunes for windows</title>
+<link>http://soan.jp/archives/000499.html</link>
+<description>Apple - iTunesを早速ダウンロード。 いい！でもCOULDさんも言ってましたが、たしかにMacに移行する理由がひとつ減ってしまったのは複雑な気分・・ WinAmpだってWMPだって、RealOneだって、mp3プレーヤーはあるのに、なぜかこれが一番使い勝手よく感じます。（マック贔屓だからというのもあるけど） ＰＣに入っているのは、同じmp3ファイルなのに、アプリケーションを変えただけで、新たな出会いを感じさせてくれる・・。インターフェイスの効能でしょうか。...</description>
+<dc:subject>SOFTWARE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-17T13:29:24+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000498.html">
+<title>[FLASH]紙的な映像</title>
+<link>http://soan.jp/archives/000498.html</link>
+<description>WEFAIL　[via pya!] 不思議な紙ムービー表現。 こちらも同じくpya!さんから・・PENTRIX 新しいマトリックスムービーかと思いきや・・・...</description>
+<dc:subject>FAN WEBSITE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-17T00:37:35+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000497.html">
+<title>[PHOTO FRIDAY] Translucent</title>
+<link>http://soan.jp/archives/000497.html</link>
+<description> Photo Friday - The Weekly Photo Challenge is &apos;Translucent&apos;. いきなり大雨が降って、雨宿り中。...</description>
+<dc:subject>PHOTO FRIDAY</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-16T14:34:20+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000485.html">
+<title>クサイせりふジェネレーター</title>
+<link>http://soan.jp/archives/000485.html</link>
+<description>クサイせりふジェネレータ とっさに愛の告白をしなくてはならないときに、携帯で検索。 （ひさびさに再発見）...</description>
+<dc:subject>FAN WEBSITE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-15T21:28:37+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000496.html">
+<title>奇妙な楽譜</title>
+<link>http://soan.jp/archives/000496.html</link>
+<description>Score Gallery～芸術的な楽譜。 音を視覚的に記述していくと、こんな記号になるのか・・。...</description>
+<dc:subject>FAN WEBSITE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-15T14:18:33+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000495.html">
+<title>TVチューナ内蔵携帯電話[NEC]</title>
+<link>http://soan.jp/archives/000495.html</link>
+<description>NEC、初のTVチューナ内蔵携帯電話を12月に市場導入～とうとう出ますね。テレビが見られる携帯電話。 外部入力もあるとのこと。期待大。...</description>
+<dc:subject>GADGET</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-15T03:26:49+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000494.html">
+<title>FLASH不思議な世界「チェコアニメ」</title>
+<link>http://soan.jp/archives/000494.html</link>
+<description>知人に教わりました、SAMOROSTというＦＬＡＳＨサイト。Czech Republic（チェコ共和国）のアニメーション。 チェコアニメって世界観がとても好きで、独特の雰囲気を感じさせてくれます。 （色々なところクリックして、先に進んでみてください・・・パズル感覚で楽しいです） そういえば、以前「イタチョコ・システム」（iTachoco System）の作品をマックのフロッピーで買ったことがあり、近い世界観を感じます。・・・（イタチョコのチョコはチェコだったり・・・？勝手な想像ですみません。） もうちょっと明るくなったのがティムバートンでしょうか。 チェコアニメ作品　ビデオ・DVD案内...</description>
+<dc:subject>FAN WEBSITE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-15T02:39:29+09:00</dc:date>
+</item>
+<item rdf:about="http://soan.jp/archives/000491.html">
+<title>TRPGカフェ</title>
+<link>http://soan.jp/archives/000491.html</link>
+<description>屋上暇人倶楽部: TABLETALK CAFE...</description>
+<dc:subject>CAFE</dc:subject>
+<dc:creator>hirosh</dc:creator>
+<dc:date>2003-10-09T13:28:08+09:00</dc:date>
+</item>
+
+
+</rdf:RDF>

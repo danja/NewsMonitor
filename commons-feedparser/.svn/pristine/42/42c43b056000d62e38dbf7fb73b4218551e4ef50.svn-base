@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+
+<feed version="0.3" xml:lang="pt-BR" xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121" rel="service.post" title="Devaneios de um computólogo" type="application/atom+xml"/>
+<link href="http://www.blogger.com/atom/8472121" rel="service.feed" title="Devaneios de um computólogo" type="application/atom+xml"/>
+<title mode="escaped" type="text/html">Devaneios de um computólogo</title>
+<tagline mode="escaped" type="text/html">Aqui falo de Java, Linux, Software Livre, Firefox, WebDesign, Ciência da Computação e coisas afins</tagline>
+<link href="http://tatanka.com.br/blog" rel="alternate" title="Devaneios de um computólogo" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121</id>
+<modified>2005-02-05T05:38:58Z</modified>
+<generator url="http://www.blogger.com/" version="5.15" xml:lang="en-US">Blogger</generator>
+<info mode="xml" type="text/html" xml:lang="en-US">
+<div xmlns="http://www.w3.org/1999/xhtml">This is an Atom formatted XML site feed. It is intended to be viewed in a Newsreader or syndicated to another site. Please visit the <a href="http://help.blogger.com/bin/answer.py?answer=697">Blogger Help</a> for more info.</div>
+</info>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110755490972154940" rel="service.edit" title="Na onda dos convites" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-02-04T20:02:55-02:00</issued>
+<modified>2005-02-05T05:38:55Z</modified>
+<created>2005-02-04T22:08:29Z</created>
+<link href="http://tatanka.com.br/blog/2005/02/na-onda-dos-convites.html" rel="alternate" title="Na onda dos convites" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110755490972154940</id>
+<title mode="escaped" type="text/html">Na onda dos convites</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Estou em busca de um convite para o <a href="http://www.rojo.com/">Rojo</a>. Se você puder me arrumar um, agradeço.
+<br/>
+<br/>E, por falar em convites, já que o GMail liberou geral, lá vão 10 convites:
+<br/>
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-db53a9fb9c-7c124e8c87
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-3a97b9fc88-836b22ecc9
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-29e9f904de-12e4da8914
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-1a40ec6587-b6ed6bfcb3
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-68ade50f81-7df0f590a0
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-a57266c7af-648946f651
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-4cb3dac19c-108619bf22
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-99b42efda8-ba8be40eb6
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-461632be23-5f89343509
+<br/>https://gmail.google.com/gmail/a-3fed3eafee-090425bac4-a00c7a3317
+<br/>
+<br/>
+<span style="font-weight: bold;">Atualização:</span> Consegui o convite pro Rojo; depois faço um post com minhas impressões sobre o serviço.
+<br/>
+</div>
+</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110739586592535205" rel="service.edit" title="Volta e os destaques da semana" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-02-03T03:00:44-02:00</issued>
+<modified>2005-02-03T05:16:44Z</modified>
+<created>2005-02-03T01:57:45Z</created>
+<link href="http://tatanka.com.br/blog/2005/02/volta-e-os-destaques-da-semana.html" rel="alternate" title="Volta e os destaques da semana" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110739586592535205</id>
+<title mode="escaped" type="text/html">Volta e os destaques da semana</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Voltei de viagem! Após essa revigorante semana, estou pronto pra curtir o final das minhas férias :-) (somos folgados lá na USP; aula só em 1° de março!!)
+<br/>
+<br/>Volta de viagem é sinônimo de horas na frente do GMail, do Bloglines e nas revistas que chegaram nesse meio tempo. Então vamos aos destaques da semana!
+<br/>
+<ul>   <li>Estou <span style="font-weight: bold;">fascinado</span> com as [poucas] coisas que li do Fórum Social Mundial sobre Revolução Digital, Liberdade, Software Livre e afins. E estou com uma vontade imensa de ir no Fórum Internacional de Software Livre em junho em Porto Alegre; vamos ver se consigo. [quero escrever um post mais legal sobre tudo isso ainda essa semana]
+<br/>
+<br/>
+</li>   <li>A Mozilla lançou um beta com a <a href="http://www.mozilla.org/projects/xforms/">implementação dos XForms do W3C</a> para seus produtos. O XForms são os novos padrões para formulários Web, com <span style="font-weight: bold;">muito, mas muito</span> poder para fazer Rich Client Apps.
+<br/>
+<br/>
+</li>    <li>
+<a href="http://rfframblings.blogspot.com/2005/01/folksonomies-e-ontologias.html">Folksonomies e Ontologias</a> no blog do Rafael;
+<br/>
+<br/>
+</li>   <li>Uma das coisas mais incrivelmente impossíveis do mundo do WebDesign <span style="font-weight: bold;">aconteceu</span>: O <a href="http://www.msn.com/">Portal da <span style="font-weight: bold;">MSN</span> </a>agora é Tableless e segue os Padrões Web!! Sim, você entendeu direito, é a Microsoft seguindo o W3C. <span style="font-weight: bold;">Inacreditável!</span>
+<br/>E, na rabeira das impossibilidades, a <a href="http://specials.msn.com/letter/billgates.html">carta do Bill Gates sobre o feito</a>. Seria cômica de tanta ironia se não fosse verdade: "remodelamos o MSN para ser mais rápido, simples e mais organizado". O Bill Gates falando isso?!?!!? Só pode ser o fim do mundo mesmo...
+<br/>
+</li>
+<br/>
+<li>
+<a href="http://people.redhat.com/overholt/nativeeclipse/index.html">Aplicações Java usando GTK com o auxílio do Glade</a> (apresentação flash);
+<br/>
+<br/>
+</li>   <li>Atendendo a pedidos, <a href="http://tatanka.com.br/cgi-bin/wiki.cgi?AlgunsEsclarecimentosSobreOAboutMozilla">traduzi o post do Gerv sobre o <span style="font-weight: bold;">about:mozilla</span> sob um ponto de vista Cristão</a>;
+<br/>
+</li> </ul> <ul> <li>
+<a href="http://kb.reflectivesurface.com/br/tutoriais/rubyOnRails/">Tutorial em Português de Rails</a> (lembra? veja uns posts atrás).</li> </ul>Por ora, esse é meu post de volta! Mais novidades virão em outros posts.
+<br/>
+</div>
+</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110671169160871828" rel="service.edit" title="Pra fechar a noite, um aviso" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-01-26T01:51:51-02:00</issued>
+<modified>2005-01-26T03:54:51Z</modified>
+<created>2005-01-26T03:54:51Z</created>
+<link href="http://tatanka.com.br/blog/2005/01/pra-fechar-noite-um-aviso.html" rel="alternate" title="Pra fechar a noite, um aviso" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110671169160871828</id>
+<title mode="escaped" type="text/html">Pra fechar a noite, um aviso</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Finalizando os posts de hoje, aviso que estarei fora até o Carnaval. Como havia dito antes, vai rolar a segunda edição da Viagem para Mongaguá com os amigos da facul; e esse ano tem mais gente. Então, boa(s) semana(s) a todos e até mais.
+<br/>
+<br/>[Recebi pedidos para tradução do texto do Gerv sobre o about:mozilla. Quando eu voltar de viagem eu posto, certo?]
+<br/>
+</div>
+</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110671147477869983" rel="service.edit" title="Rails: desenvolvimento Web com Ruby" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-01-26T01:50:30-02:00</issued>
+<modified>2005-01-26T03:57:30Z</modified>
+<created>2005-01-26T03:51:14Z</created>
+<link href="http://tatanka.com.br/blog/2005/01/rails-desenvolvimento-web-com-ruby.html" rel="alternate" title="Rails: desenvolvimento Web com Ruby" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110671147477869983</id>
+<title mode="escaped" type="text/html">Rails: desenvolvimento Web com Ruby</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Tem circulado por aí alguns comentários sobre o <a href="http://www.rubyonrails.org/">Rails</a>, um framework para desenvolvimento de aplicações Web em <a href="http://www.ruby-lang.org/">Ruby</a> que usam banco de dados. Falou-se tanto que arrisquei assistir o vídeo de demonstração.
+<br/>
+<br/>Magnífico. Só assistindo e lendo sobre pra ver. O Rails é <span style="font-weight: bold;">muito</span> bom. É focado em desenvolvimento rápido de aplicações Web. Então espere todo um ambiente já preparado pra você fazer o mínimo possível e já ter um sistema rodando. No filme, em 10min, eles instalam o Rails, colocam no Apache e escrevem um blog usando MySQL com quase nada de código. É surpreendente.
+<br/>
+<br/>E Ruby é muito legal. Uma linguagem de script totalmente Orientada à Objetos, bastante simples e muito parecida com Python. (Eu já tinha lido sobre, mas nunca usei)
+<br/>
+<br/>Enfim, <a href="http://media.nextangle.com/rails/rails_setup.mov">assista o vídeo</a>, <a href="http://www.rubyonrails.org/">visite o Site</a> e leia <a href="http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html">esse artigo no OnLamp</a>.
+<br/>
+<br/>Gostando, vale a pena navegar por lá e conhecer outras coisas. No <a href="http://weblog.rubyonrails.com/">Blog</a> deles, por exemplo, achei <a href="http://www.zedshaw.com/blog/programming/ruby_xul.html">um cara que fez</a> uma <a href="http://207.237.211.198:3000/recipe/list">aplicação simples</a> usando XUL e o Rails; muito legal.<span class="down" id="formatbar_CreateLink" onmousedown="CheckFormatting(event);FormatbarButton('richeditorframe', this, 8);ButtonMouseDown(this);" onmouseout="ButtonHoverOff(this);" onmouseover="ButtonHoverOn(this);" style="display: block;" title="Link">[como é em XUL, só funciona no Gecko - Firefox, Mozilla, Netscape]
+<br/>
+</span>
+</div>
+</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110670898967723837" rel="service.edit" title="Busca de Vídeos com Yahoo e Google" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-01-26T01:38:49-02:00</issued>
+<modified>2005-01-26T03:09:49Z</modified>
+<created>2005-01-26T03:09:49Z</created>
+<link href="http://tatanka.com.br/blog/2005/01/busca-de-vdeos-com-yahoo-e-google.html" rel="alternate" title="Busca de Vídeos com Yahoo e Google" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110670898967723837</id>
+<title mode="escaped" type="text/html">Busca de Vídeos com Yahoo e Google</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">O Google anunciou ontem o lançamento de uma versão beta do seu <a href="http://video.google.com">buscador de vídeos</a>. Por coincidência, poucas horas antes eu tinha acabado de conhecer a <a href="http://video.search.yahoo.com">busca de vídeos do Yahoo</a> (não sei quando foi o lançamento). Mas, as  ferramentas são completamente diferentes (pelo menos hoje).
+<br/>
+<br/>O Yahoo parece ter desenvolvido uma busca nos moldes das buscas de imagens já existentes. Ou seja, a mídia é catalogada tendo em base o contexto onde ela foi publicada (a página Web); e as buscas são feitas nesses dados e não no vídeo (ou imagem) em si.
+<br/>
+<br/>Já o Google fez um sistema de busca na programação de canais de TV. Aparentemente ele indexa pelo conteúdo dos vídeos da TV e permite buscar assuntos tratados no programa. Na página de resultados, são mostrados screenshots de diversos momentos do programa com umadescrição do que estava acontecendo. É uma tecnologia ainda <span style="font-weight: bold;">muito</span> nova, mas promete grandes coisas; buscas inteligentes em Vídeos e Imagens sempre foram almejadas pela humanidade.
+<br/>
+</div>
+</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110662692330281145" rel="service.edit" title="Aula de JForms com o Lohis" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-01-25T02:21:03-02:00</issued>
+<modified>2005-01-25T04:22:03Z</modified>
+<created>2005-01-25T04:22:03Z</created>
+<link href="http://tatanka.com.br/blog/2005/01/aula-de-jforms-com-o-lohis.html" rel="alternate" title="Aula de JForms com o Lohis" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110662692330281145</id>
+<title mode="escaped" type="text/html">Aula de JForms com o Lohis</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Aconteceu por quase 3h hoje uma aula sobre o projeto <a href="http://www.jforms.org/">JForms</a> com o pessoal de lá, que são brasileiros. Para a aula, foi usado o software <a href="http://www.lohis.com.br/">Lohis</a>, também criado por um brasileiro. Como são duas novidades, vou comentá-las separadamente.
+<br/>
+<br/> <span style="font-weight: bold;">JForms</span>
+<br/> É um projeto open source que pretende criar um completo framework MVC para desenvolvimento de aplicações com Swing. O objetivo é acabar com  a salada que mistura a View (em Swing) com o Controller das aplicações Desktop em Java que normalmente são feitas hoje.
+<br/>
+<br/> Ele tem um modelo baseado no <a href="http://www.opensymphony.com/webwork/">WebWork</a>, com definição de Actions e mapeamento em XML dessas actions com os componentes Swing. O projeto provê os diversos componentes do Swing encapsulados dentro do framework com tudo muito simplificado e limpo (e inclusive alguns componentes adicionais).
+<br/>
+<br/> Ainda não foi lançada nem a primeira versão beta do projeto (hoje ainda estão no beta1-RC1). Muita coisa ainda precisa ser implementada e falta ainda muita documentação. Mas o projeto apresenta um enorme potencial e promete facilitar muito o desenvolvimento em Swing num futuro bastante próximo.
+<br/>
+<br/> <span style="font-weight: bold;">Lohis</span>
+<br/> É um software (em Java também) feito para aulas on-line e desenvolvido por Sérgio Oliveira. Instrutor e alunos conectam-se ao servidor do projeto e assistem a aula que é dada via WebCam e Som. Há um editor de código Java onde é possível acompanhar em tempo real a construção do código durante a palestra. Há também um chat para interação das pessoas e enquetes que são feitas aos participantes durante a aula.
+<br/>
+<br/> Embora ainda em desenvolvimento e aprimoramento, o Lohis é extremamente estável e usável. Seus recursos são completos e permitem aulas muito interessantes e interativas. Foi exemplar na aula de JForms; pretendo participar de mais aulas.
+<br/>
+<br/> ---
+<br/>
+<br/> Parabéns a todos os envolvidos nesses projetos de sucesso.
+<br/>
+<br/>
+<br/>
+</div>
+</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110662513638247125" rel="service.edit" title="Ben Goodger sai da Mozilla e vai para o Google" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-01-25T01:32:53-02:00</issued>
+<modified>2005-02-03T01:49:53Z</modified>
+<created>2005-01-25T03:52:16Z</created>
+<link href="http://tatanka.com.br/blog/2005/01/ben-goodger-sai-da-mozilla-e-vai-para.html" rel="alternate" title="Ben Goodger sai da Mozilla e vai para o Google" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110662513638247125</id>
+<title mode="escaped" type="text/html">Ben Goodger sai da Mozilla e vai para o Google</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<a href="http://weblogs.mozillazine.org/ben/">Ben</a> é o líder e idealizador do <a href="http://www.getfirefox.com/">Mozilla Firefox</a>. Trabalhava para a <a href="http://www.mozilla.org/">Mozilla Foundation</a> até o começo do ano. Hoje, ele <a href="http://weblogs.mozillazine.org/ben/archives/007366.html">anunciou em seu blog</a>, que trabalha já há duas semanas para o <a href="http://www.google.com/">Google</a>. Segundo ele, muda apenas seu empregador; ele continuará sendo líder de desenvolvimento full-time do Firefox até, pelo menos, a versão 2.0.
+<br/>
+<br/>A grande questão é porque ele foi pro Google agora. Não tem muito tempo que surgiram <a href="http://news.bbc.co.uk/2/hi/technology/3680942.stm">boatos</a> sobre um suposto browser que o Google estaria querendo lançar tendo como base o Firefox. Nem o Ben nem ninguém comentaram nada a respeito do que ele fará no Google; apenas tem sido dito que nada mudará (provavelmente apenas a conta bancária dele hehehe).
+<br/>
+<br/>Outro ponto a se comentar é o apoio do Google à comunidade open source (se foi este o real motivo da contratação). Também recentemente o Google foi <a href="http://blog.kowalczyk.info/archives/2004/12/29/google-we-take-it-all-give-nothing-back/">fortemente criticado</a> por usar diversos produtos open source mas não contribuir com a comunidade. Pode ser que a contratação de Ben tenha sido uma indicação no sentido de reverter essa situação.
+<br/>
+<br/>Lembrando que muitos colaboradores (tempo integral ou parcial) da Mozilla Foundation são empregados de outras empresas, como IBM, Oracle, Red Hat, Novell, Sun e,agora, Google. Vamos esperar pra ver como se desenrola essa história.
+<br/>
+<br/>
+<span style="font-weight: bold;">update:</span> mais um! enquanto eu viajava, Darin Fisher também foi pro Google. e os rumores do GoogleBrowser estão crescendo...
+<br/>
+</div>
+</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110651939535674733" rel="service.edit" title="Mozilla/Firefox e os cristãos" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-01-23T20:00:59-02:00</issued>
+<modified>2005-02-03T05:21:59Z</modified>
+<created>2005-01-23T22:29:55Z</created>
+<link href="http://tatanka.com.br/blog/2005/01/mozillafirefox-e-os-cristos.html" rel="alternate" title="Mozilla/Firefox e os cristãos" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110651939535674733</id>
+<title mode="escaped" type="text/html">Mozilla/Firefox e os cristãos</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Bom, esse post não vai ser de interesse da maioria dos meus leitores, mas acho importante publicar. Então, se você é cristão e tem alguma coisa com o Mozilla, Firefox e etc, leia isso.
+<br/>
+<br/>O assunto surgiu quando um amigo meu, de uma grande Comunidade católica e também da área de computação, me disse que gostou do Firefox mas que ele e as pessoas de sua comunidade estavam repudiando o browser ao julgá-lo divulgador de práticas satânicas. Eles estavam pensando em fazer até um comentário público desencorajando os fiéis a usarem o Firefox (que está fazendo um tremendo sucesso) por pensarem que ele continha consagrações demoníacas.
+<br/>
+<br/>Tudo se deu porque eles leram o texto da página <span style="font-weight: bold;">about:mozilla</span> e não entenderam o significado. Aparentemente, o texto trazia um tom profético e obscuro, com termos que seriam usados em rituais satânicos. Eu sabia pouca coisa sobre assunto, apenas o suficiente para discordar e entender a brincadeira sobre a "profecia" da Revolução na Web que a Mozilla está fazendo.
+<br/>
+<br/>Sem muitos argumentos e com poucas referências explícitas na Web, fui atrás de descobrir mais detalhes e ter um posicionamento meio que oficial para evitar que se cometesse uma injustiça. Então, entrei em contato com um dos desenvolvedores da Mozilla Foundation, <a href="http://www.gerv.net/">Gervase Markham</a>. Ele faz parte do chamado "mozilla staff" e é declaradamente cristão (seu blog se chama "Hacking for Christ"), então era a pessoa certa para me ajudar.
+<br/>
+<br/>Bem, o Gerv foi extremamente solícito. Inicialmente eu havia pedido algumas referências sobre o assunto e, após alguns e-mails trocados, ele escreveu um post muito esclarecedor em seu blog. (Thanks, Gerv<span style="font-size:100%;">!)
+<br/>
+<br/>Então, para quem tem alguma dúvida sobre o assunto ou simplesmente tem curiosidade em saber o significado e onde foram baseados os textos do <span style="font-weight: bold;">about:mozilla</span>, recomendo a leitura <a href="http://weblogs.mozillazine.org/gerv/archives/007379.html">neste link</a>.
+<br/>
+<br/>A conclusão final é que aquilo não se passa de uma brincadeira. Uma brincadeira destinada mais a quem está por perto da Comunidade do Mozilla e consegue detectar as diversas sutilezas do texto. Não há qualquer finalidade demoníaca ou coisa do tipo. Cristãos usam, desenvolvem e apóiam o Firefox sem qualquer dúvida sobre isso.
+<br/>
+<br/>[A princípio não irei traduzir este post dele porque acho desnecessário para o público a que ele se destina. Mas, se você tiver qualquer dificuldade ou por qualquer motivo quiser uma versão em português disso tudo, fale comigo sem hesitar.]
+<br/>
+<br/>
+<span style="font-weight: bold;">update:</span> Conforme requisitado, a tradução do post do Gerv está <a href="http://tatanka.com.br/cgi-bin/wiki.cgi?AlgunsEsclarecimentosSobreOAboutMozilla">aqui</a>.
+<br/>
+</span>
+</div>
+</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110627408531701842" rel="service.edit" title="Um pouco de Microsoft pra alegrar nossas vidas" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-01-21T01:05:27-02:00</issued>
+<modified>2005-02-04T05:22:27Z</modified>
+<created>2005-01-21T02:21:25Z</created>
+<link href="http://tatanka.com.br/blog/2005/01/um-pouco-de-microsoft-pra-alegrar.html" rel="alternate" title="Um pouco de Microsoft pra alegrar nossas vidas" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110627408531701842</id>
+<title mode="escaped" type="text/html">Um pouco de Microsoft pra alegrar nossas vidas</title>
+<content mode="escaped" type="text/html" xml:base="http://tatanka.com.br/blog" xml:space="preserve">Passei os últimos dias com um amigo meu tentando me convencer que os produtos da Microsoft estão muito bons, que .Net é melhor que Java, que desenvolver nas plataformas da Microsoft é muito mais produtivo, que Stored Procedures são sensacionais, que o SQL Server 2005 é magnífico, que o Visual Studio é uma IDE de verdade, que Orientação a Objetos é perda de tempo na maioria dos casos, que "Next -&gt; Next -&gt; Finish" é a forma de programar do futuro, que portabilidade é funcionar desde o Windows 95 até o Longhorn.&#13;&lt;br /&gt;&#13;&lt;br /&gt;Lógico que não convenceu. Aliás, quase me fez largar o Java só pra não ter o desgosto de ver minhas aplicações rodando no Windows também (é, às vezes portabilidade é um saco :-) .&#13;&lt;br /&gt;&#13;&lt;br /&gt;Mas, sem ser xiita demais, acho que vivemos em dois mundos diferentes; nós do Java e eles do .Net. Por mais que se diga que C# é quase Java e MSIL é uma cópia dos bytecodes, não consigo ver convergência entre esses 2 nichos de desenvolvedores. Além de serem tecnicamente diferentes, me parece que há um abismo também no nível pessoal. Só eu acho isso, ou pensamos - javeiros e .netianos - completamente diferente em todos os sentidos?&#13;&lt;br /&gt;&#13;&lt;br /&gt;O que eles vêem como vantagem achamos absurdos. O que vemos como vantagens eles acham horrível. Claro, viva a pluraridade! Mas devo me sentir culpado por não ter a menor vontade de encarar os produtos da Microsoft?&#13;&lt;br /&gt;&#13;&lt;br /&gt;Bom, pra concluir este meu pensamento público sobre a gigante de Redmond, lá vai &lt;a href="http://mappoint.msn.com/%28qvk1pz45ruqe1h55xauaojvx%29/directions.aspx?&amp;StartName=Haugesund%2c+Rogaland%2c+Norway&amp;amp;StartLocation=59.40634%2c5.28529&amp;EndName=Trondheim%2c+S%c3%b8r-Tr%c3%b8ndelag%2c+Norway&amp;amp;EndLocation=63.43092%2c10.39206&amp;DataSetLangID=EUR%2c409&amp;amp;RouteType=Quickest&amp;RouteUnit=Miles"&gt;um mapa&lt;/a&gt; retirado do serviço de mapas do MSN. É o &lt;span style="font-weight: bold;"&gt;menor caminho&lt;/span&gt; entre 2 cidades da Noruega, segundo a Microsoft. Para os que não tiverem paciência de contar, a solução passa por 5 países diferentes e atravessa o mar 3 vezes.&#13;&lt;br /&gt;&#13;&lt;br /&gt;PS. Essa divergência com .Not não quer dizer que eu vá fechar os olhos pra Microsoft; um bom gerente de tecnologia entende de tudo. Mas, quero entender só isso de .Not, o suficiente para ser um bom gerente...&#13;&lt;br /&gt;&#13;&lt;br /&gt;&lt;span style="font-weight: bold;"&gt;Atualização:&lt;/span&gt; a MS arrumou aquele absurdo do mapa de tanto que foi falado nos blogs por aí; pena eu nao ter guardado uma screenshot :-P&#13;&lt;br /&gt;</content>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/8472121/110604385732673151" rel="service.edit" title="Xfce 4.2 released!!" type="application/atom+xml"/>
+<author>
+<name>Sergio</name>
+</author>
+<issued>2005-01-18T08:18:17-02:00</issued>
+<modified>2005-01-18T10:24:17Z</modified>
+<created>2005-01-18T10:24:17Z</created>
+<link href="http://tatanka.com.br/blog/2005/01/xfce-42-released.html" rel="alternate" title="Xfce 4.2 released!!" type="text/html"/>
+<id>tag:blogger.com,1999:blog-8472121.post-110604385732673151</id>
+<title mode="escaped" type="text/html">Xfce 4.2 released!!</title>
+<content type="application/xhtml+xml" xml:base="http://tatanka.com.br/blog" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Saiu a versão final do gerenciador de janelas <a href="http://www.xfce.org">Xfce 4.2</a>, aguardada há muito tempo!
+<br/>
+<br/>
+<img src="http://www.xfce.org/images/xfce_desktop.jpg"/>
+<br/>
+<br/>O Xfce é um gerenciador de janelas para Linux super leve e baseado no GTK (o mesmo usado no Gnome). Sem muitas firulas que os grandes - KDE/Gnome - têm, o Xfce consegue ser rápido e objetivo. Eu uso desde que a <a href="http://java.blogger.com.br">Vanessa</a> me recomendou; e recomendo que você dê ao menos uma olhadinha!
+<br/>
+</div>
+</content>
+</entry>
+</feed>

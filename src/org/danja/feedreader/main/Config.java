@@ -20,6 +20,8 @@ public class Config {
 	
     public static final int CONNECT_TIMEOUT = 5000; // milliseconds
     public static final int READ_TIMEOUT = 5000; // milliseconds
+
+	public static final boolean JTIDY_SHOW_WARNINGS = false;
     
 	private static int REFRESH_PERIOD = 10000; // milliseconds
     

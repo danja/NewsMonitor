@@ -1,0 +1,333 @@
+
+
+
+<!-- this has a comment before the XML processing instruction -->
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+
+<feed version="0.3" xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/3187374" rel="service.post" title="saladwithsteve " type="application/x.atom+xml"/>
+<link href="http://www.blogger.com/atom/3187374" rel="service.feed" title="saladwithsteve " type="application/x.atom+xml"/>
+<title mode="escaped" type="text/html">saladwithsteve </title>
+<tagline mode="escaped" type="text/html">enjoying salad since 1978.</tagline>
+<link href="http://saladwithsteve.com/" rel="alternate" title="saladwithsteve " type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374</id>
+<modified>2004-08-24T23:44:54Z</modified>
+<generator url="http://www.blogger.com/" version="5.15">Blogger</generator>
+
+<info mode="xml" type="text/html">
+<div xmlns="http://www.w3.org/1999/xhtml">This is an Atom formatted XML site feed. It is intended to be viewed in a Newsreader or syndicated to another site. Please visit the <a href="http://help.blogger.com/bin/answer.py?answer=697">Blogger Knowledge Base</a> for more info.</div>
+</info>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109332167901730672" rel="service.edit" title="BlogSense - AdSense for Blogs" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-08-23T21:24:40-07:00</issued>
+<modified>2004-08-24T22:05:40Z</modified>
+
+<created>2004-08-24T04:27:59Z</created>
+<link href="http://saladwithsteve.com/2004/08/blogsense-adsense-for-blogs.html" rel="alternate" title="BlogSense - AdSense for Blogs" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109332167901730672</id>
+<title mode="escaped" type="text/html">BlogSense - AdSense for Blogs</title>
+<content mode="escaped" type="text/html" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">&lt;blockquote&gt;&#13;
+&#13;
+&lt;a href="http://www.blogger.com/knowledge/2004/08/theres-adsense-in-my-blog.pyra"&gt;&#13;
+&lt;em&gt;&#13;
+&lt;p&gt;&#13;
+We are going to start paying bloggers.&#13;
+
+&lt;/p&gt; &#13;
+&lt;p&gt;&#13;
+Please note that this program is optional and that it is not required for you to have a Blogger powered blog-all bloggers are invited.&#13;
+&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+&lt;/em&gt;&#13;
+&lt;/a&gt;&#13;
+&lt;/blockquote&gt;</content>
+
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109302647579213952" rel="service.edit" title="My Favorite IPO Headline" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-08-20T11:27:55-07:00</issued>
+<modified>2004-08-20T18:27:55Z</modified>
+<created>2004-08-20T18:27:55Z</created>
+<link href="http://saladwithsteve.com/2004/08/my-favorite-ipo-headline.html" rel="alternate" title="My Favorite IPO Headline" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109302647579213952</id>
+<title mode="escaped" type="text/html">My Favorite IPO Headline</title>
+
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<a href="http://www.forbes.com/technology/feeds/general/2004/08/20/generalcomtex_2004_08_20_ir_0000-5559-KEYWORD.Missing.html?partner=yahoo&amp;referrer=">Forbes.com: 1,000 Google Millionaires Gather For Summer Picnic Today</a>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109237570659478931" rel="service.edit" title="Can't find Framework" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-08-12T22:40:40-07:00</issued>
+<modified>2004-08-13T05:50:40Z</modified>
+<created>2004-08-13T05:41:46Z</created>
+
+<link href="http://saladwithsteve.com/2004/08/cant-find-framework.html" rel="alternate" title="Can't find Framework" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109237570659478931</id>
+<title mode="escaped" type="text/html">Can't find Framework</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">General OS X Porting Note:
+<br/>
+<br/>
+If you run into an error like <code>ld: can't locate framework for: -framework ./module.o</code>, you can bet that it means that the framework wasn't figured out by the configure script properly. Dig for that code in the Makefile, see what variable it's using. If that variable isn't set, set it in the autoconf script (or just hack it into the Makefile and send a note to the developers). 
+<br/>
+<br/>
+In this case I figured that it was supposed to read <code>-framework Python ./module.o</code> so I just needed to set it the <code>Python</code> part. </div>
+
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109228936650329617" rel="service.edit" title="Quickies" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-08-11T22:42:14-07:00</issued>
+<modified>2004-08-20T03:00:14Z</modified>
+<created>2004-08-12T05:42:46Z</created>
+<link href="http://saladwithsteve.com/2004/08/quickies.html" rel="alternate" title="Quickies" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109228936650329617</id>
+
+<title mode="escaped" type="text/html">Quickies</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Berkeley/Stanford <a href="http://roc.cs.berkeley.edu/">ROC</a>'s <a href="http://citebase.eprints.org/cgi-bin/citations?id=oai:arXiv.org:cs/0406005">microrebootable platform</a> would mesh well with <a href="http://www.eecs.harvard.edu/~mdw/proj/seda/">SEDA</a> I feel. You'd just need to separate SEDAs event   
+queues from the stage so you could reboot the stage without losing your events. Since microreboots are supposed to take on the order of milliseconds, throughput is supposed to stay high while latency only increases a little bit. That's the theory anyway.
+<br/>
+<br/>
+Eclipse is bad-ass. I've been having memory problems with Emacs lately (Since there's no XEmacs for OS X yet, I'm stuck with GNU Emacs) and this month's Dr. Dobbs had three articles on Eclipse (a lot for an issue on distributed computing but I guess you can only publish so many articles on Linda) so I decided to try it out. It really is quite nice. I'm going to use it for the next week or so and see if I can kick a decade-long Emacs habit. I've alredy found replacements for my 10 favorite Emacs plugins.
+<br/>
+<br/>
+
+I used Comcast's On Demand cable service tonight. I watched 6 minutes from The Daily Show. The future happened last week apparently; they sent me a piece of snail mail letting me know that I had it and that it was on Channel 1.
+<br/>
+<br/>
+One last thing: if you feel your productivity at work slipping, remember Ole Eichorn's advise and <a href="http://w-uh.com/articles/030308-tyranny_of_email.html">turn your email client off.</a> IM, too. Strangely, it's easy to forget to keep them turned off.</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109181485512887223" rel="service.edit" title="Want to work on Blogger?" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-08-06T10:46:57-07:00</issued>
+
+<modified>2004-08-06T18:46:57Z</modified>
+<created>2004-08-06T17:54:15Z</created>
+<link href="http://saladwithsteve.com/2004/08/want-to-work-on-blogger.html" rel="alternate" title="Want to work on Blogger?" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109181485512887223</id>
+<title mode="escaped" type="text/html">Want to work on Blogger?</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Want to work on Blogger? We just <a href="http://www.google.com/jobs/eng/ui.html#ui_blogger">posted a UI position</a> on Google's job page.
+<br/>
+<br/>
+CW <a href="http://massless.org/?archive=2004/08/want-to-work-on-google-ui-its-hiring">posted about it the other day.</a> Unfortunately, according to his post, you'll have to work with me (even though I'm not a UI engineer). Drop me a mail if you're qualified and interested.
+
+<br/>
+<br/>
+stevej at google.com.
+</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109142445490848374" rel="service.edit" title="Iraq's Child Prisoners " type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-08-01T22:27:05-07:00</issued>
+<modified>2004-08-02T05:29:05Z</modified>
+<created>2004-08-02T05:27:34Z</created>
+
+<link href="http://saladwithsteve.com/2004/08/iraqs-child-prisoners.html" rel="alternate" title="Iraq's Child Prisoners " type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109142445490848374</id>
+<title mode="escaped" type="text/html">Iraq's Child Prisoners </title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<blockquote>
+<a href="http://www.sundayherald.com/43796">A Sunday Herald investigation has discovered that coalition forces are holding more than 100 children in jails such as Abu Ghraib. Witnesses claim that the detainees -- some as young as 10 -- are also being subjected to rape and torture</a>
+</blockquote>
+<br/>
+<br/>
+I heard about this a month ago and it's just now starting to hit the smaller newspapers. Will CNN or the Times ever pick this up? <small>[via <a href="http://simson.net/blog/archives/000105.php">Simson Garfinkel</a>]</small>
+
+</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109122915709358960" rel="service.edit" title="13-digit isbn numbers explained" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-07-30T16:12:00-07:00</issued>
+<modified>2004-07-30T23:17:00Z</modified>
+<created>2004-07-30T23:12:37Z</created>
+<link href="http://saladwithsteve.com/2004/07/13-digit-isbn-numbers-explained.html" rel="alternate" title="13-digit isbn numbers explained" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109122915709358960</id>
+
+<title mode="escaped" type="text/html">13-digit isbn numbers explained</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<a href="http://www.contraversion.com/2004/07/what-we-talk-about-when-we-talk-about.php">Stacy has the low down on the 13-digit ISBN number and why the namespace increase was so small.</a>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109105970497285127" rel="service.edit" title="cubicle farms suck." type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-07-28T17:06:15-07:00</issued>
+<modified>2004-07-29T00:09:15Z</modified>
+
+<created>2004-07-29T00:08:24Z</created>
+<link href="http://saladwithsteve.com/2004/07/cubicle-farms-suck.html" rel="alternate" title="cubicle farms suck." type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109105970497285127</id>
+<title mode="escaped" type="text/html">cubicle farms suck.</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Paul Graham on offices:
+ <blockquote style="font-style: italic;">
+   <span style=";font-family:arial,helvetica;font-size:85%;">After software, the most important tool to a hacker is probably his office. Big companies think the function of office space is to express rank. But hackers use their offices for more than that: they use their office as a place to think in. And if you're a technology company, their thoughts are your product. So making hackers work in a noisy, distracting environment is like having a paint factory where the air is full of soot.
+
+
+
+The cartoon strip Dilbert has a lot to say about cubicles, and with good reason. All the hackers I know despise them. The mere prospect of being interrupted is enough to prevent hackers from working on hard problems. If you want to get real work done in an office with cubicles, you have two options: work at home, or come in early or late or on a weekend, when no one else is there. Don't companies realize this is a sign that something is broken? An office environment is supposed to be something you work in, not something you work despite.</span>
+</blockquote>
+<span style=";font-family:arial,helvetica;font-size:85%;"/>
+</div>
+</content>
+
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109055814212305132" rel="service.edit" title="dual monitors in dos 5.0" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-07-22T21:49:53-07:00</issued>
+<modified>2004-07-23T04:56:53Z</modified>
+<created>2004-07-23T04:49:02Z</created>
+<link href="http://saladwithsteve.com/2004/07/dual-monitors-in-dos-50.html" rel="alternate" title="dual monitors in dos 5.0" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109055814212305132</id>
+<title mode="escaped" type="text/html">dual monitors in dos 5.0</title>
+
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p style="text-indent: 10px;">
+<cite>
+<a href="http://www.randsinrepose.com/archives/2004/07/21/messy_thinking.html">Rands In Repose: Messy Thinking</a>: "Little know fact, if you installed a Hercules video card in your PC, you could do something revolutionary (for PCs). On your primary monitor, you had the windows application that you'd be debugging. On your secondary Hercules monitor, you'd have your debugging information. Given present day technology, this is a serious yawn, but remember, we're talking about the early 90s here. Macs remained spendy and it'd be another eight years before Microsoft landed dual-monitor support in Windows 2000."
+</cite>
+</p>
+<p>
+Yes, I'll confirm this was true at least as early as DOS 5. This was possible because Mono cards and color video cards used different IRQs.
+</p>
+<p>
+I resonate very strongly with this post. Except the part where he became a total Windows nerd, I became a Unix dork. Oh, and he was hacking away at a real job at Borland while I was busy hacking on microcontrollers in my bedroom, listening to the Ramones, getting pneumonia from crawling around in telephone company dumpsters in December, using Turbo Debugger on my second monitor, SysV on my <a href="http://home.att.net/~terminals/images/dec-vt320.jpg">actual vt320 terminal</a>, and just generally being 15 years old.
+</p>
+<p>
+
+Ah, memories.
+</p>
+</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109020785610379351" rel="service.edit" title="captcha is easy to break" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-07-18T18:43:56-07:00</issued>
+<modified>2004-07-19T03:30:56Z</modified>
+<created>2004-07-19T03:30:56Z</created>
+
+<link href="http://saladwithsteve.com/2004/07/captcha-is-easy-to-break.html" rel="alternate" title="captcha is easy to break" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109020785610379351</id>
+<title mode="escaped" type="text/html">captcha is easy to break</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Jay Allen (author of MT-Blacklist) <a href="http://www.jayallen.org/comment_spam/2004/05/mtb_20_and_ip_banning#comment-7670">weighs in</a> on  the arms race with spammers:
+<blockquote>
+If you use a captcha, spammers will use OCR. If you make them answer a question, they'll collect all of the questions and answer them one by one, or even better, post the question on their own porn sites as a "bot protection" question on their <strong>own</strong> sites, hence programmatically getting an answer from another human.
+ </blockquote>
+That last part should have you scared. He's right, CAPTCHA is completely vulnerable to man in the middle. Another good reason to dump CAPTCHA and find something better. 
+
+</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109019003481690440" rel="service.edit" title="Adam Leventhal explains nohup -p" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-07-18T15:33:27-07:00</issued>
+<modified>2004-07-18T22:34:27Z</modified>
+<created>2004-07-18T22:33:54Z</created>
+<link href="http://saladwithsteve.com/2004/07/adam-leventhal-explains-nohup-p.html" rel="alternate" title="Adam Leventhal explains nohup -p" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109019003481690440</id>
+
+<title mode="escaped" type="text/html">Adam Leventhal explains nohup -p</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<a href="http://blogs.sun.com/roller/page/ahl/20040709#inside_nohup_p">Adam Leventhal explains how <code>nohup -p</code> works.</a>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109005138971476609" rel="service.edit" title="adc on gcc" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-07-17T01:03:09-07:00</issued>
+
+<modified>2004-07-17T08:03:09Z</modified>
+<created>2004-07-17T08:03:09Z</created>
+<link href="http://saladwithsteve.com/2004/07/adc-on-gcc.html" rel="alternate" title="adc on gcc" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109005138971476609</id>
+<title mode="escaped" type="text/html">adc on gcc</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<a href="http://developer.apple.com/tools/gcc_overview.html">"The GNU Compiler Collection on Mac OS X"</a>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109002531987445911" rel="service.edit" title="I M P E R I A L V I O L E T . O R G" type="application/x.atom+xml"/>
+<author>
+
+<name>steve jenson</name>
+</author>
+<issued>2004-07-16T17:48:39-07:00</issued>
+<modified>2004-07-17T00:48:39Z</modified>
+<created>2004-07-17T00:48:39Z</created>
+<link href="http://saladwithsteve.com/2004/07/i-m-p-e-r-i-l-v-i-o-l-e-t-o-r-g.html" rel="alternate" title="I M P E R I A L V I O L E T . O R G" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109002531987445911</id>
+<title mode="escaped" type="text/html">I M P E R I A L V I O L E T . O R G</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<a href="http://www.imperialviolet.org/pybloom.html">PyBloom</a> Adam Langley's bloom filter in Python.</div>
+
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/3187374/109001319009457824" rel="service.edit" title="Divmod.Org :: Home" type="application/x.atom+xml"/>
+<author>
+<name>steve jenson</name>
+</author>
+<issued>2004-07-16T14:26:30-07:00</issued>
+<modified>2004-07-16T21:26:30Z</modified>
+<created>2004-07-16T21:26:30Z</created>
+<link href="http://saladwithsteve.com/2004/07/divmodorg-home.html" rel="alternate" title="Divmod.Org :: Home" type="text/html"/>
+<id>tag:blogger.com,1999:blog-3187374.post-109001319009457824</id>
+
+<title mode="escaped" type="text/html">Divmod.Org :: Home</title>
+<content type="application/xhtml+xml" xml:base="http://saladwithsteve.com/" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<a href="http://www.divmod.org/Home/">Divmod.Org</a> These guys are either insanely smart or just insane. I'll let you know after I try some of these libraries.</div>
+</content>
+</entry>
+</feed>

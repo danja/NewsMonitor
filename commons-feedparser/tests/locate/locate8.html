@@ -1,0 +1,41 @@
+<!-- test for basic RSS with an internal RSS 0.90 index.xml link. -->
+
+<html>
+    <head>
+
+   <!--
+
+   http://xml.coverpages.org/draft-ietf-atompub-autodiscovery-00.txt
+
+   o  Element names are not case-sensitive.  For example, clients MUST
+      treat <link ...> the same as <LINK ...>
+   o  Attribute names are not case-sensitive.  For example, clients MUST
+      treat <link rel="alternate" ...> the same as <link REL="alternate"
+      ...>.
+   o  Attributes may appear in any order; the order MUST NOT be
+      considered significant.
+   o  Attribute values MUST be one of the following: enclosed in double
+      quotes, enclosed in single quotes, or not enclosed in quotes at
+      all.
+   o  Attribute values MAY contain leading or trailing spaces, or both.
+      Clients MUST ignore both leading and trailing spaces in attribute
+      valuess.  For example, clients MUST treat all of the following the
+      same way: <link rel="alternate" ...>, <link rel="alternate " ...>,
+      <link rel=" alternate" ...>, and <link rel=" alternate " ...>.
+    -->
+
+        <LINK REL=" alternate " 
+              HREF="../atom.xml"
+              TYPE=" application/atom+xml " 
+              TITLE="ATOM" />
+
+    </head>
+
+    <body>
+
+        <p>
+        </p>
+
+    </body>
+
+</html>

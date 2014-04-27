@@ -1,0 +1,113 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rss version="0.91">
+  	<channel>
+		<title>Salon.com</title>
+		<link>http://www.salon.com</link>
+		<description>Salon makes you think.</description>
+		<language>en-us</language>
+		<copyright>Copyright 2004, Salon.com.</copyright>
+		<pubDate>Mon, 02 Feb 2004 01:37:27 PST</pubDate>
+
+		<image>
+			<title>Salon.com</title>
+			<url>http://www.salon.com/src/rdf_salonlogo.gif</url>
+			<link>http://www.salon.com/</link>
+		</image>
+
+		
+		<item>
+			<title>Monday's must-reads</title>
+			<link>http://www.salon.com/politics/war_room/2004/02/02/mustreads</link>
+			<description></description>
+		</item>
+									
+		<item>
+			<title>In the polls</title>
+			<link>http://www.salon.com/politics/war_room/2004/02/02/polls</link>
+			<description></description>
+		</item>
+									
+		<item>
+			<title>Where in the world is Al Gore?</title>
+			<link>http://www.salon.com/politics/war_room/2004/02/02/gore</link>
+			<description></description>
+		</item>
+									
+		<item>
+			<title>How do you like Kerry now?</title>
+			<link>http://www.salon.com/politics/war_room/2004/02/02/country</link>
+			<description></description>
+		</item>
+									
+		<item>
+			<title>King Kaufman Sports Daily</title>
+			<link>http://www.salon.com/news/sports/col/kaufman/2004/02/02/monday</link>
+			<description>Even Janet Jackson's exposed breast couldn't upstage a classic Super Bowl that, no offense, wasn't all defense.</description>
+		</item>
+									
+		<item>
+			<title>The Democrats' Southern paradox</title>
+			<link>http://www.salon.com/news/feature/2004/02/02/south</link>
+			<description>In the South, black voters may want Anybody but Bush, but whites like what they see in the president -- themselves. It's up to the  Democrats to convince them otherwise.</description>
+		</item>
+									
+		<item>
+			<title>When online advice columnists go bad</title>
+			<link>http://www.salon.com/tech/books/2004/02/02/miss_media</link>
+			<description>In an excerpt from Lynn Harris' new novel, &quot;Miss Media,&quot; a specialist in relationships has a hard time following her own rules.</description>
+		</item>
+						
+		<item>
+			<title>The Fix</title>
+			<link>http://www.salon.com/ent/col/fix/2004/02/02/mon</link>
+			<description>FCC to clamp down on CBS over Super Bowl &quot;stunt.&quot; Plus: The full Janet fallout.</description>
+		</item>
+									
+		<item>
+			<title>I Like to Watch</title>
+			<link>http://www.salon.com/ent/tv/review/2004/02/02/i_like</link>
+			<description>The simple pleasures of watching rad snowboarders and sleazy yuppies trying to impress Donald Trump. Plus: Sick of Campaign '04? Try &quot;Tanner '88.&quot;</description>
+		</item>
+									
+		<item>
+			<title>Why won't this man blink?</title>
+			<link>http://www.salon.com/ent/feature/2004/02/02/blink</link>
+			<description>Rapid blinking suggests nervousness or deceitfulness. So what does it mean when someone -- like Gen. Wesley Clark -- rarely bats an eye?</description>
+		</item>
+									
+		<item>
+			<title>Harpooning Hollywood</title>
+			<link>http://www.salon.com/books/int/2004/02/02/biskind</link>
+			<description>Peter Biskind talks about Harvey Weinstein, Robert Redford, his new book, &quot;Down and Dirty Pictures,&quot; and the wild stories he can't tell about '70s Hollywood.</description>
+		</item>
+						
+		<item>
+			<title>Letters</title>
+			<link>http://www.salon.com/mwt/letters/2004/02/02/laura_bush</link>
+			<description>&quot;The only thing George Bush has going for him is that he's married to Laura.&quot;  Readers respond to Curtis Sittenfeld's love letter to the first lady.</description>
+		</item>
+						
+		<item>
+			<title>My cheatin' heart</title>
+			<link>http://www.salon.com/mwt/col/tenn/2004/02/02/sya_mon</link>
+			<description>Is there a way to find absolution without confessing my sins?
+</description>
+		</item>
+						
+		<item>
+			<title>One strike and you're out of school</title>
+			<link>http://www.salon.com/mwt/feature/2004/02/02/zero_tolerance</link>
+			<description>Youthful suicides, financial ruin, families torn apart for minor infractions: How post-Columbine hysteria is wrecking lives. 
+</description>
+		</item>
+						
+		<item>
+			<title>This Modern World</title>
+			<link>http://www.salon.com/comics/tomo/2004/02/02/tomo</link>
+			<description>Agent Squirrel, dispassionate intelligence analyst, comes up with the goods.</description>
+		</item>
+				
+	</channel>
+</rss>
+

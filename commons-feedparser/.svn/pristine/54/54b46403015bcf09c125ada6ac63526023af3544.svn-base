@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE org.apache.commons.menus SYSTEM '../../commons-build/menus/menus.dtd'>
+<project name="FeedParser">
+    <title>FeedParser</title>
+    <body>
+        <menu name="FeedParser">
+
+            <item name="Overview"                      
+                  href="/index.html" />
+
+            <item name="Downloads"                     
+                  href="/downloads.html"/>
+
+            <item name="API Documentation"             
+                  href="/apidocs/index.html"/>
+
+            <item name="Source XRef (JXR)"
+                  href="/xref/index.html"/>
+
+            <item name="Wiki"                          
+                  href="http://wiki.apache.org/jakarta-commons/FeedParser" />
+
+            <item name="ViewCVS"
+                  href="http://svn.apache.org/viewcvs.cgi/jakarta/commons/dormant/feedparser/" />
+
+        </menu>
+        &common-menus;
+    </body>
+</project>

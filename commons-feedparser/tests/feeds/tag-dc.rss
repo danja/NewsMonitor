@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:admin="http://webns.net/mvcb/"
+xmlns:cc="http://web.resource.org/cc/"
+xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="http://joi.ito.com/">
+<title>Joi Ito&apos;s Web</title>
+<link>http://joi.ito.com/</link>
+<description>Joi Ito&apos;s conversation with the living web.<![CDATA[See also: <a href="http://joi.ito.com/moblog/">Moblog</a> - <a href="http://joiwiki.ito.com/">JoiWiki</a> - <a href="http://joi.ito.com/jp/">Japanese Weblog</a>]]></description>
+<dc:language>en-us</dc:language>
+<dc:creator></dc:creator>
+<dc:date>2005-01-23T11:56:39+09:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.movabletype.org/?v=3.14" />
+
+
+<items>
+<rdf:Seq><rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/23/halley_interviews_dan_gillmor_on_memory_lane.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/23/new_technorati_search_firefox_plugin_from_ratherbiasedcom.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/22/silicon_valley_100.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/20/jib_jab_again.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/20/a_chat_with_akma_about_selfesteem.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/19/defining_privacy.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/19/support_for_nofollow.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/18/ozone_madness.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/17/blogs_help_reform_in_iran.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/15/omidyar_network_cooperation_experiments_reputation_system.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/15/gates_clarifies_is_communists_comment.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/15/geeky_cooking.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/15/technorati_tags.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/15/linkedin_suddenly_popular_at_peoplesoft.html" />
+<rdf:li rdf:resource="http://joi.ito.com/archives/2005/01/13/getting_out_the_vote_in_ramallah.html" />
+</rdf:Seq>
+</items>
+
+</channel>
+
+<item rdf:about="http://joi.ito.com/archives/2005/01/23/halley_interviews_dan_gillmor_on_memory_lane.html">
+<title>Halley interviews Dan Gillmor on Memory Lane</title>
+<link>http://joi.ito.com/archives/2005/01/23/halley_interviews_dan_gillmor_on_memory_lane.html</link>
+<description>
+<![CDATA[<p><a href="http://halleyscomment.blogspot.com/">Halley</a> interviews <a href="http://dangillmor.typepad.com/">Dan Gillmor</a> on <a href="http://www.itconversations.com/shows/detail404.html">Memory Lane</a>. Two of my favorite people. Dan, as usual, presents a balanced view on blogging and journalism.</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/23/halley_interviews_dan_gillmor_on_memory_lane.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/23/halley_interviews_dan_gillmor_on_memory_lane.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Media and Journalism</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-23T11:56:39+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/23/new_technorati_search_firefox_plugin_from_ratherbiasedcom.html">
+<title>New Technorati search Firefox plug-in from ratherbiased.com</title>
+<link>http://joi.ito.com/archives/2005/01/23/new_technorati_search_firefox_plugin_from_ratherbiasedcom.html</link>
+<description>
+<![CDATA[<p><a href="http://ratherbiased.com/news/content/view/636/2/">Firefox plugin for Technorati search</a> from <a href="http://ratherbiased.com/">ratherbiased.com</a>.</p>
+
+<p><i>via <a href="http://www.sifry.com/alerts/archives/000277.html">Sifry</a></i></p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/23/new_technorati_search_firefox_plugin_from_ratherbiasedcom.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/23/new_technorati_search_firefox_plugin_from_ratherbiasedcom.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Search</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-23T11:52:24+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/22/silicon_valley_100.html">
+<title>Silicon Valley 100</title>
+<link>http://joi.ito.com/archives/2005/01/22/silicon_valley_100.html</link>
+<description>
+<![CDATA[<p>Silicon Valley 100 is a project by Auren Hoffman. I was lucky enough to make it on the list. The idea is to make a list of "connectors" and send them new gadgets and products to test. <a href="http://www.msnbc.msn.com/id/6852842/site/newsweek/">Newsweek just did a story about this</a>. I think it is almost like an opt-in focus group. The obvious criticism would be these companies are trying to buy "buzz". The difference between this and some buzz creation companies is 1) it's not stealth 2) they don't tell you what to say. I checked with Auren and he says that we can write whatever we want about the products. When I get a product from Silicon Valley 100, I will state this clearly in any blog post that refers to it and will say what I think. I realize that the fact that we probably get to keep most of the products makes it a bit like bribery, but if it's crap, I'm sure most people will throw it away. I would be most interested in products that are still not on the market where our feedback could be incorporated in the product design. Then our feedback could be more constructive...</p>
+
+<p>Anyway, I'd be curious on people's thoughts.</p>
+
+<p>The first product is a <a href="http://www.brondell.com/">brondell high-tech toilet seat</a>. I told Auren, that this is one product that Japan is a world leader in. <a href="http://joi.ito.com/archives/2003/08/31/washlets_hit_50_penetration.html">I blogged this before</a>, but we have over 50% household penetration. The one in my house and in my office even has anti-stinky gas-gate like air filtration.</p>
+
+<p>UPDATE: Just uploaded <a href="http://joi.ito.com/sounds/aurenjoi.mp3">a 5 min 4.3 MB conversation</a> with Auren Hoffman, the founder of the Silicon Valley 100.</p>
+
+<p>UPDATE 2: <a href="http://www.archive.org/audio/audio-details-db.php?collection=opensource_audio&#38;collectionid=aurenjoi">Uploaded it to archive.org too</a>. Maybe I should put my media files there instead since archive org does the file conversions for me too...</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/22/silicon_valley_100.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/22/silicon_valley_100.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Marketing</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-22T08:10:59+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/20/jib_jab_again.html">
+<title>Jib Jab again</title>
+<link>http://joi.ito.com/archives/2005/01/20/jib_jab_again.html</link>
+<description>
+<![CDATA[<p>In case you missed it - <a href="http://www.jibjab.com/">the new Jib Jab</a>...</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/20/jib_jab_again.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/20/jib_jab_again.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Flash</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-20T14:05:49+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/20/a_chat_with_akma_about_selfesteem.html">
+<title>A chat with AKMA about self-esteem</title>
+<link>http://joi.ito.com/archives/2005/01/20/a_chat_with_akma_about_selfesteem.html</link>
+<description>
+<![CDATA[<p>A few weeks ago, there was an <a href="http://www.sciam.com/article.cfm?articleID=000CB565-F330-11BE-AD0683414B7F0000&#38;ref=sciam&#38;chanID=sa006">article in Scientific American</a> "debunking" the myth of self-esteem. I've never been to therapy in the US so I don't have first hand experience, but my good friend <a href="http://democrats.sen.ca.gov/senator/Vasconcellos/">John Vasconcellos</a> is one of the founders of the movement and my impressions about the movement from him were that it was important and useful. John told me that he thought the definition that they used in the article was different from the one he was using. He said he would get back to me on his thoughts on the article. I found a <a href="http://www.metafilter.com/mefi/38470">thread on MetaFilter about this article</a> so I participated in a discussion there. I was still having trouble thinking through the issue, so I turned to one of my favorite moral guides, <a href="http://akma.disseminary.org/">Reverend AKMA</a>. I decided to record the call and post it here in case anyone is interested in our chat. (<a href="http://joi.ito.com/sounds/joiakma2.mp3">37 min 33 MB mp3</a>)</p>
+
+<p>I think the net-net is that overvaluing or undervaluing yourself is bad. Ways to help people swung too far in either direction are good. The US probably suffers differently, than say Japan, because I think more people in Japan get self-esteem from craft or professionalism compared to the US where I believe self-esteem is more highly linked to money. Creating enclaves of people or communities to help people feel happy about their success measured by different parameters is a good thing and something the Net might be good for.</p>
+
+<p>UPDATE 2: <a href="http://www.archive.org/audio/audio-details-db.php?collection=opensource_audio&#38;collectionid=akmajoi2">Audio available in a variety of formats on Archive.org</a>.</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/20/a_chat_with_akma_about_selfesteem.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/20/a_chat_with_akma_about_selfesteem.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Health and Medicine</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-20T13:17:49+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/19/defining_privacy.html">
+<title>Defining privacy</title>
+<link>http://joi.ito.com/archives/2005/01/19/defining_privacy.html</link>
+<description>
+<![CDATA[<blockquote><div class="personquote">tins ::: Rick Klau's weblog</div>Bonus goofy news item of the week: Paris Hilton&#8217;s <a href="http://www.msnbc.msn.com/id/6836110/">Blackberry was hacked</a>.
+
+<p>Quoth the source for this bombshell:<blockquote><p>&#8220;It&rsquo;s one thing to have people looking at your sex tapes, but having people reading your personal e-mails is a real invasion of privacy.&#8221;</blockquote></blockquote>Clearly, different people have different definitions for invasion of privacy.</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/19/defining_privacy.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/19/defining_privacy.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Privacy</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-19T16:08:36+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/19/support_for_nofollow.html">
+<title>Support for nofollow</title>
+<link>http://joi.ito.com/archives/2005/01/19/support_for_nofollow.html</link>
+<description>
+<![CDATA[<blockquote><div class="personquote">Six Log</div><a href="http://www.sixapart.com/log/2005/01/support_for_nof.shtml">Support for nofollow</a>
+
+<p>Recently, we&#8217;ve reached out to other blog tool vendors to try to coordinate information about comment spam techniques and behaviors. As part of these efforts, we&#8217;ve also begun to talk to search companies about enriching linking semantics to better indicate visitor-submitted content (like comments or TrackBacks).</p></p>
+
+<p>The search team at <a href="http://www.google.com/googleblog/2005/01/preventing-comment-spam.html">Google</a> approached us with the idea of flagging hyperlinks with a <code>rel="nofollow"</code> link attribute in order to alert their search spider that a particular link shouldn&#8217;t be factored into their PageRank calculations. The <a href="http://www.ysearchblog.com/archives/000069.html">Yahoo</a> and <a href="http://blogs.msdn.com/msnsearch/archive/2005/01/18/nofollow_tags.aspx"><span class="caps">MSN</span></a> search teams have also indicated they&#8217;d support this new spec, and we&#8217;ll be implementing and deploying this specification as quickly as possible across all of our platforms around the world.</blockquote>This sounds like a good idea. Take a look at the whole post for more details, but your support would be greatly appreciated.]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/19/support_for_nofollow.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/19/support_for_nofollow.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Search</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-19T09:30:12+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/18/ozone_madness.html">
+<title>O-Zone madness</title>
+<link>http://joi.ito.com/archives/2005/01/18/ozone_madness.html</link>
+<description>
+<![CDATA[<p>There is song called Dragostea Din Tei on the <a href="http://www.amazon.com/exec/obidos/tg/detail/-/B0002Q22A8/chanponorg/">Disco-Zone CD</a> by O-Zone. O-Zone was a little known Euro-dance act from Romania... until <a href="http://ikari0310.hp.infoseek.co.jp/flash/maiyahi.html">someone in Japan syched some flash to it</a>. <a href="http://csx.jp/~damemushi/il/maiyahi.html">Then someone else</a>. Here is the <a href="http://www.musiqueradio.com/videos/vids/ozone-dragostea.htm">original music video</a>. Then <a href="http://www.funpic.hu/swf/numanuma.html">someone made a video</a>. Suddenly, this CD is a hit and many of my friends are ordering it from Amazon. I bet they don't know what hit them.</p>
+
+<p>This reminds me of the <a href="http://joi.ito.com/archives/2005/01/13/potter_potter.html">badger badger/potter potter</a> meme and the <a href="http://joi.ito.com/archives/2003/09/15/irrational_exuberance_a_fanimutation_based_on_yatta_by_happatai.html">Yatta meme</a>. There is some peculiar element of certain songs that gets people's creative juices going. I think they have to be 1) silly, 2) in a foreign language, 3) have that "can't get it out of my head" element. It's the tip of the long tail wagging. Maybe artists should make synching rights available to encourage more of this creative behavior in a mainstream way... or maybe not. ;-P</p>
+
+<p>UPDATE: <a href="http://sethgodin.typepad.com/seths_blog/2005/01/numanuma.html">Seth was just infected by email</a>...</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/18/ozone_madness.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/18/ozone_madness.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Humor</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-18T12:46:17+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/17/blogs_help_reform_in_iran.html">
+<title>Blogs help reform in Iran</title>
+<link>http://joi.ito.com/archives/2005/01/17/blogs_help_reform_in_iran.html</link>
+<description>
+<![CDATA[<blockquote><div class="personquote">Hoder @ MetaFilter</div><a href="http://www.metafilter.com/mefi/38671">Blogs help reform in Iran</a>
+
+<p><a href="http://www.nytimes.com/2005/01/16/international/middleeast/16iran.html">Blogs contribute to political reform in Iran (New York Times):</a> Former vice-president of Iran, <a href="http://www.webneveshteha.com/en/">Mohammad Ali Abtahi</a>, said that he learned through the Internet about the huge gap between government officials and the younger generation.</p>
+
+<p>&quot;We do not understand each other and cannot have a dialogue,&quot; he said. &quot;As government officials, we receive a lot of confidential reports about what goes on in society. But I have felt that I learned a lot more about people and the younger generation by reading their Web logs and receiving about 40 to 50 e-mails every day. This is so different than reading about society in those bulletins from behind our desks.&quot;</blockquote>Now if only Japanese politicians would read blogs and learn about the huge gap between government officials and the younger generation.</p>
+
+<p>Iranian bloggers have done an amazing job and I'm impressed that at least one politician is getting the message and even blogging himself.</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/17/blogs_help_reform_in_iran.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/17/blogs_help_reform_in_iran.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Global Politics</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-17T09:36:02+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/15/omidyar_network_cooperation_experiments_reputation_system.html">
+<title>Omidyar Network cooperation experiments, reputation system</title>
+<link>http://joi.ito.com/archives/2005/01/15/omidyar_network_cooperation_experiments_reputation_system.html</link>
+<description>
+<![CDATA[<blockquote><div class="personquote">Smart Mobs</div><a href="http://www.smartmobs.com/archive/2005/01/13/omidyar_network.html">Omidyar Network cooperation experiments, reputation system</a>
+
+<p><a href="http://www.omidyar.net/group/help/ws/Feedback%20Details/">The Omidyar Network reputation system</a> is a new experiment in designing the social architecture of an online social network. We'll check back in a year and see how the architecture has influenced the Omidyar Network online community.</p>
+
+<p>Something tells me that the <a href="http://www.omidyar.net/group/community-general/news/413/77/">$25,000 offered by the network</a> to its members, to do whatever they agree to do, will energize the experiment.<blockquote><i>When you join omidyar.net, you start with a feedback bank of 10 points. Your feedback bank can be given away, one point at a time, as either positive feedback or negative feedback to any member, workspace or discussion.</p>
+
+<p>As you use omidyar.net, your feedback bank will increase, based on how you use omidyar.net, and what you do. You basically get more "credit" in your feedback bank the more you contribute. If you simply "lurk," which means you don't ever post a comment or start a discussion, etc., your feedback bank will grow far more slowly. If you are an active discussion participant, and you contribute to a group's workspace, your feedback bank will grow more quickly. In fact, even the act of giving feedback will help your feedback bank grow. If someone gives you positive feedback, both your score and your feedback bank will increase by one.</i></blockquote></blockquote>It will be interesting to see if the eBay like reputation system codification works in this situation. I just joined and will be lurking about. See you there.</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/15/omidyar_network_cooperation_experiments_reputation_system.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/15/omidyar_network_cooperation_experiments_reputation_system.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Social Software</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-15T12:42:16+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/15/gates_clarifies_is_communists_comment.html">
+<title>Gates clarifies is &quot;communists&quot; comment</title>
+<link>http://joi.ito.com/archives/2005/01/15/gates_clarifies_is_communists_comment.html</link>
+<description>
+<![CDATA[<p>Bill Gates clarifies his <a href="http://joi.ito.com/archives/2005/01/07/bill_gates_calls_free_culture_advocates_communists.html">comments about free culture people being communists</a> in a <a href="http://www.gizmodo.com/gadgets/portable-media/index.php#gates-interview-part-four-communists-and-drm-029706">Gizmodo interview</a>.</p>
+
+<p><i>via <a href="http://www.lessig.org/blog/archives/002388.shtml">Lessig</a></i></p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/15/gates_clarifies_is_communists_comment.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/15/gates_clarifies_is_communists_comment.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Intellectual Property</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-15T12:37:45+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/15/geeky_cooking.html">
+<title>Geeky cooking</title>
+<link>http://joi.ito.com/archives/2005/01/15/geeky_cooking.html</link>
+<description>
+<![CDATA[<p><a href="http://www.cooksillustrated.com/">Cook's Illustrated</a> is by far my favorite recipe database with their extremely extensive and geeky/scientific approach to cooking. O'Reilly has now launched <a href="http://cookbooks.oreilly.com/food/">Gastronomy for Geeks</a>. It's like a competition of cooks trying to be geeks and geeks trying to be cooks. Which reminds me... I need to go cook some lunch.</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/15/geeky_cooking.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/15/geeky_cooking.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Eating and Cooking</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-15T10:41:40+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/15/technorati_tags.html">
+<title>Technorati tags</title>
+<link>http://joi.ito.com/archives/2005/01/15/technorati_tags.html</link>
+<description>
+<![CDATA[<p>We have <a href="http://www.technorati.com/tag/">tags at Technorati</a> now. <a href="http://www.technorati.com/help/tags.html">Explanation about tags here</a>. Interestingly, a lot of the tags are Japanese...</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/15/technorati_tags.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/15/technorati_tags.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Technorati</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-15T09:44:24+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/15/linkedin_suddenly_popular_at_peoplesoft.html">
+<title>LinkedIn suddenly popular at PeopleSoft</title>
+<link>http://joi.ito.com/archives/2005/01/15/linkedin_suddenly_popular_at_peoplesoft.html</link>
+<description>
+<![CDATA[<blockquote><div class="personquote">Chiara Fox . com</div><a href="http://www.chiarafox.com/archive/001583.html">LinkedIn Craziness</a>
+
+<p>Everyone at PeopleSoft is going a bit nuts with getting their networks up-to-date and whatnot. Not surprising since it's a little more than a month until the axe drops upon most folks here. Invitations to LinkedIn are flying around like nobody's business.</blockquote>If you search for PeopleSoft employees who have joined in the last 30 days, you get over 3,700 results. There are 5,500 or so employees listed in total which is around half of their employees. It probably has something to do with the fact that  6,000 PeopleSoft employees are supposed to get the axe today.</p>
+
+<p>I guess The LinkedIn PeopleSoft Alumni Network will probably be growing soon.<blockquote>PeopleSoft&#174; Alumni Network is a non-profit, volunteer-run, professional networking corporate alumni association for former PeopleSoft employees.</p>
+
+<p>If you are currently employed by Oracle|PeopleSoft, you are not eligible to join the group unless you leave the company or receive a "pink slip".</blockquote></p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/15/linkedin_suddenly_popular_at_peoplesoft.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/15/linkedin_suddenly_popular_at_peoplesoft.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Social Software</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-15T09:02:54+09:00</dc:date>
+</item>
+<item rdf:about="http://joi.ito.com/archives/2005/01/13/getting_out_the_vote_in_ramallah.html">
+<title>Getting out the vote in Ramallah</title>
+<link>http://joi.ito.com/archives/2005/01/13/getting_out_the_vote_in_ramallah.html</link>
+<description>
+<![CDATA[<p><img src="http://joi.ito.com/images/tn_palestinian_elections_ramallah_050.jpg" height="253" width="380" border="1" hspace="4" vspace="4" alt="Tn Palestinian Elections Ramallah 050" /><blockquote><div class="personquote">OneVoice</div><a href="http://blog.onevoicemovement.org/one_voice/2005/01/getting_out_the.html">Getting out the vote in Ramallah</a></p>
+
+<p>More photos are available in the new <a href="http://blog.onevoicemovement.org/photos/palestinian_elections/index.html">Palestinian Elections gallery</a>.</blockquote>Good luck and my cheers for everyone working on getting out the vote in Palestine!</p>]]>
+
+<![CDATA[<a href="http://joi.ito.com/archives/2005/01/13/getting_out_the_vote_in_ramallah.html#comments" title="Comment">Comment</a> - <a href="http://joi.ito.com/archives/2005/01/13/getting_out_the_vote_in_ramallah.html#trackbacks" title="Trackback">TrackBack</a>]]>
+</description>
+<dc:subject>Global Politics</dc:subject>
+<dc:creator>Joi</dc:creator>
+<dc:date>2005-01-13T11:28:28+09:00</dc:date>
+</item>
+
+
+</rdf:RDF>

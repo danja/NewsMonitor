@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="http://www.movabletype.org/" />
+<meta name="robots" content="index,follow" />
+<meta name="dc.creator.e-mail" content="jito@neoteny.com" />
+<meta name="dc.creator.name" content="Joichi Ito" />
+
+<title>Joi Ito's Web: The Italian squat scene</title>
+
+<link rel="stylesheet" href="/_shared/css/global.css" type="text/css" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://joi.ito.com/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://joi.ito.com/index.rdf" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://joi.ito.com/index.xml" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://joi.ito.com/rsd.xml" />
+<link rel="shortcut icon" href="/favicon.png" />
+
+<link rel="start" href="http://joi.ito.com/" title="Home" />
+<link rel="prev" href="http://joi.ito.com/archives/2005/03/13/off_to_rome.html" title="Off to Rome" />
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+var HOST = 'joi.ito.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html"
+    trackback:ping="http://joi.ito.com/mt/mt-touchme.cgi/3338"
+    dc:title="The Italian squat scene"
+    dc:identifier="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html"
+    dc:subject="Joi&apos;s Diary"
+    dc:description="Yesterday, I had a meeting with some of the Italian Indymedia community at a squat. In most countries squatters are considered criminals and local law has very little tolerance for them. In Italy, the squat scene is the center of..."
+    dc:creator="Joi"
+    dc:date="2005-03-14T18:00:51+09:00" />
+</rdf:RDF>
+-->
+
+
+
+
+</head>
+
+<body>
+
+<div id="container">
+	<!-- Banner -->
+<div id="banner">
+	<div class="topnav">
+		<ul>
+			<li>
+				<a href="http://flickr.com/photos/joi/" title="Joi's Flickr Photos">Flickr</a>
+			</li>
+			<li>
+				<a href="http://www.last.fm/user/joi" title="Joi's last.fm profile">last.fm</a>
+			</li>
+			<li>
+				<a href="#" onclick="window.open('http://www.last.fm/expop/index.php?user=joi','expop','toolbar=no, location=no, directories=no,status=no,menubar=no, scrollbars=no, resizable=no, width=530, height=230');return false;" title="Listen to Joi's Personal last.fm music feed">Listen</a>
+			</li>
+		</ul>
+	</div>
+	<div class="topnav">
+		<ul>
+			<li>
+				<a href="http://joiwiki.ito.com/">Joi Wiki</a>
+			</li>
+			<li>
+				<a href="http://joiwiki.ito.com/joiwiki/index.cgi?IrcChannel">#joiito</a>
+			</li>
+		</ul>
+	</div>
+	<a href="http://joi.ito.com/" title="Joi Ito's Web"><img src="/img/logo.gif" width="150" height="40" border="0" alt="Joi Ito's Conversation with the Living Web" /></a> 
+</div>
+<!-- End Banner -->
+<!-- Top Navbar -->
+<ul id="navbar">
+	<li class="right">
+		<a href="http://joi.ito.com/atom.xml" title="Atom Syndication Feed">Atom</a>
+	</li>
+	<li class="right">
+		<a href="http://joi.ito.com/index.rdf" title="RSS 1.0 Syndication Feed">RSS 1.0</a>
+	</li>
+	<li class="right">
+		<a href="http://joi.ito.com/index.xml" title="RSS 2.0 Syndication Feed">RSS 2.0</a>
+	</li>
+	<li>
+		<a href="/" title="joi.ito.com main page">Main</a>
+	</li>
+	<li>
+		<a href="/jp/" title="joi.ito.com in Japanese">Japanese</a>
+	</li>
+	<li>
+		<a href="/moblog/" title="Joi Ito's Moblog">Moblog</a>
+	</li>
+	<li>
+		<a href="http://www.livejournal.com/users/jito/" title="Joi Ito's LiveJournal">LiveJournal</a>
+	</li>
+	<li>
+		<a href="http://joiwiki.ito.com/static/index.cgi?about_joi" title="About Joi Ito">About Joi</a>
+	</li>
+</ul>
+<!-- End Top Navbar -->
+	<div id="center">
+		<div class="content">
+			<ul id="prevnext"> 
+				<li class="left"><a href="http://joi.ito.com/archives/2005/03/13/off_to_rome.html">&laquo; Off to Rome</a></li>
+				<li class="right"></li>
+				<li class="br"></li>
+			</ul>
+			<h2>March 14, 2005</h2>
+			<h3 id="a003533">The Italian squat scene</h3>
+			<p class="posted">
+				<a class="perma" href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html" title="Permalink">18:00 JST</a> &raquo; 
+								<a href="http://joi.ito.com/archives/jois_diary/index.html">Joi's Diary</a>
+				 - 				<a href="http://joi.ito.com/archives/media_and_journalism/index.html">Media and Journalism</a>
+				 - 				<a href="http://joi.ito.com/archives/sharing_economy/index.html">Sharing Economy</a>
+				
+			</p>
+			<div class="entry">
+				<div class="linlineimage"><img src="http://joi.ito.com/images/bugs.jpg" height="200" width="267" border="1" hspace="4" vspace="4" alt="Bugs" /></div>Yesterday, I had a meeting with some of the Italian <a href="http://www.indymedia.org/en/index.shtml">Indymedia</a> community at a squat. In most countries squatters are considered criminals and local law has very little tolerance for them. In Italy, the squat scene is the center of a lot of the sub-culture and alternative media. After years of resistance, many of the squats on property which was owned by the local government have been officially recognized by the municipalities in various degrees. The squats have events including debates and parties. They have kitchens, living quarters, and in the case of the squat I went to last night, a computer lab (called "hacks" this one named "bugs") that teaches people how to switch from Microsoft to Linux and allows free Internet access to anyone who wants to drop by.
+
+<p>After the chat in the bugs hack, we went to dinner at a <em>centro sociale</em> called <em>Casale Podere Rosa</em>. It was similar to a squat except the people don't live there. The place we went to was on the upscale end. The food was excellent and they had lots of posters and pamphlets describing the organic farming methods they used to grow their produce.</p>
+
+<p>Internet penetration in Italy is quite low and the Berlusconi media machine controls most of what people see. On the other hand, the left wing are fighting hand and fist (literally) with the right wing radicals. Free speech was something that people were fighting for, in many cases outside of the law. At a tactical level, my discussion about freedom of expression and our "Infrastructure of Democracy" idea of fighting bad speech with more good speech sounded a bit idealistic. What was interesting to me was the power and the energy of the alternative media movement. It reminds me of my theory on good alternative music. When there is a huge force pressing down on freedoms, sub-cultures with more creativity and power are likely to form.</p>
+				<div id="a003533more">
+				
+				</div>
+			</div>
+			<p class="discuss">
+				<a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#comments">Comments (7)</a>
+				| <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#trackbacks">TrackBack (1)</a>
+				 | <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#technorati" title="Technorati Cosmos for this Entry">Technorati (0)</a>
+			</p>
+			<!-- Discussion -->
+			<div id="discussion">
+				<!-- Comments -->	
+								<h2 id="comments">Comments</h2>
+								<div class="comment">
+					<h3 id="c21678">1- <a href="http://www.joaobambu.com/blog" rel="nofollow">Joao Paglione</a>  @ <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c021678" title="Permalink to comment">March 14, 2005 07:41 PM</a></h3> 
+					<div class="commentbody">
+					<p>I remember traveling in Italy as an exchange student in 1998 and thinking, "Gee, my ancestors were so advanced and now we are so far behind?" </p>
+
+<p>Interesting how in Europe there is the same North-South division as in the rest of the world, yet Italy is also an industrialized country...</p>
+
+<p>Non c'e male et va bene, Joi!</p>
+					</div>
+				</div>
+								<div class="comment">
+					<h3 id="c21680">2- <a href="http://www.linkany.com" rel="nofollow">Eduard</a>  @ <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c021680" title="Permalink to comment">March 14, 2005 07:54 PM</a></h3> 
+					<div class="commentbody">
+					<p>I live in Amsterdam, a very wired city, also obsessed with cycle transport, also very tolerant towards squatting. A squatter group named ASCII has come up with a <a href="http://www.scii.nl/projects/bakscii/" rel="nofollow">mobile wireless cybercafe which can be deployed instantly from a bicycle ("bakfiets", n.e.) in a squatted location</a> :-)</p>
+					</div>
+				</div>
+								<div class="comment">
+					<h3 id="c21682">3- <a href="http://bakerstreetsystems.co.uk" rel="nofollow">Giacomo</a>  @ <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c021682" title="Permalink to comment">March 14, 2005 08:25 PM</a></h3> 
+					<div class="commentbody">
+					<p>technically speaking, squatters are considered criminals in Italy too; the main difference is that down there the law is not quite enforced as one would expect ;) I suppose it's something to do with seeing every day the difference between the Catholic Church "rules" (the poor will go to heaven, only etherosexual monogamy is allowed, sainthood, etc etc) and the actual reality (horribly rich churches, homosexual bishops, corrupted heaven-for-money practices) through the ages... still, I found so hard to live in Italy that I moved away.</p>
+					</div>
+				</div>
+								<div class="comment">
+					<h3 id="c21683">4- <a href="http://joi.ito.com/" rel="nofollow">Joi Ito</a>  @ <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c021683" title="Permalink to comment">March 14, 2005 08:30 PM</a></h3> 
+					<div class="commentbody">
+					<p>Yes. The "rule of law" feels more like just another tool, rather than something holy. It's harder to describe Creative Commons in the this context, but focusing on the communication of the intent of the artist at least makes some sense.</p>
+					</div>
+				</div>
+								<div class="comment">
+					<h3 id="c21684">5- <a href="http://www.joaobambu.com/blog" rel="nofollow">joaobambu</a>  @ <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c021684" title="Permalink to comment">March 14, 2005 09:17 PM</a></h3> 
+					<div class="commentbody">
+					<p>" the main difference is that down there the law is not quite enforced as one would expect . . ."</p>
+
+<p>Come to Brazil. I guess us folks in "San Paolo" can blame our Italian heritage for that? :-P</p>
+					</div>
+				</div>
+								<div class="comment">
+					<h3 id="c21685">6- <a href="http://demandmedia.net/" rel="nofollow">akb</a>  @ <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c021685" title="Permalink to comment">March 14, 2005 10:35 PM</a></h3> 
+					<div class="commentbody">
+					<p>As someone who has organized with Indymedia it is always interesting to watch when the digerati and blog community intersects with social movements.  Lessig's trip to the World Social Forum was another good example of this.  There is a vibrant community that has been fighting for social change under the information freedom banner for many years.    Particaptory journalism, rejection of strong copyright culture, developin world solidarity, structural critique of the mainstream media, etc, etc. Indymedia has been doing it since Seattle in 1999 and yet it barely registers on most digerati's radar.  Occassionally Dan Gilmour or Howard Rheingold will hold there noses when mentioning Indymedia but even that is pretty rare.</p>
+
+<p>Its been particularly ironic as some blogging communities have adopted Indymedia's taglines ("Media revolution", "Become the media", "Ourmedia", etc) but without as complete a political media critique.  Given how little experience there appears to be with organizing for social change in the blogging / digerati community I find this pretty surprising.  To my mind there's a lot that they have to learn from projects like Indymedia.  Its good to see that there is some listening going on.<br />
+</p>
+					</div>
+				</div>
+								<div class="comment">
+					<h3 id="c21693">7- <a href="http://www.glome.org/" rel="nofollow">Trevor Hill</a>  @ <a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c021693" title="Permalink to comment">March 15, 2005 02:53 AM</a></h3> 
+					<div class="commentbody">
+					<p>Joi - have you read God Emperor of Dune?  The premise is related to what you describe - an emperor who opresses the people in order to induce them to rise up and create a more thriving culture.</p>
+					</div>
+				</div>
+				
+				
+												<h2>Post a comment</h2>	
+								<form method="post" action="http://joi.ito.com/mt/mt-talk2me.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+				<input type="hidden" name="static" value="1" />
+				<input type="hidden" name="entry_id" value="3533" />
+				<div class="commbox">
+					<div class="signin">
+												<script type="text/javascript" src="http://joi.ito.com/mt/mt-talk2me.cgi?__mode=cmtr_name_js"></script>
+						<script language="javascript" type="text/javascript">
+						<!--
+						if (commenter_name) {
+							document.write('Thanks for signing in, ', commenter_name, '. Now you can comment. (<a href="http://joi.ito.com/mt/mt-talk2me.cgi?__mode=handle_sign_in&static=1&entry_id=3533&logout=1">sign out</a>)');
+						} else {
+							document.write('If you have a TypeKey identity, you can <a href="https://www.typekey.com/t/typekey/login?&t=rtynCNcwr7ioFN3gMYHY&v=1.1&_return=http://joi.ito.com/mt/mt-talk2me.cgi%3f__mode=handle_sign_in%26static=1%26entry_id=3533"> sign in</a> to use it here.');
+						}
+						// -->
+						</script>
+						
+					</div>
+					<div class="remember">Remember Me?<br /><input type="radio" id="remember" onClick="rememberMe(this.form)" name="bakecookie" /><label for="remember">Yes</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;" /><label for="forget">No</label><br style="clear: both;" /></div>
+					<div class="row"><span class="label">Name</span><input tabindex="1" id="author" name="author" /></div>
+												<script language="javascript" type="text/javascript">
+						<!--
+						if (commenter_name) {
+							document.getElementById('name_email').style.display = 'none';
+						}
+						// -->
+						</script>
+						
+					<div class="row"><span class="label">E-mail</span><input tabindex="2" id="email" name="email" /></div>
+					<div class="row"><span class="label">URL</span><input tabindex="3" type="text" name="url" id="url" /></div>
+				</div>
+				<textarea tabindex="4" id="text" name="text" wrap="virtual"></textarea>
+				<div class="commbox">
+					<input type="submit" name="preview" tabindex="5" value="&nbsp;Preview&nbsp;" />
+					<input type="submit" name="post" tabindex="6" value="&nbsp;Post&nbsp;" />
+				</div>
+				</form>
+				<!--(you may use HTML tags for style)-->
+				
+				
+				
+				<script type="text/javascript" language="javascript">
+				<!--
+				if (document.comments_form.email != undefined)
+					document.comments_form.email.value = getCookie("mtcmtmail");
+				if (document.comments_form.author != undefined)
+					document.comments_form.author.value = getCookie("mtcmtauth");
+				if (document.comments_form.url != undefined)
+					document.comments_form.url.value = getCookie("mtcmthome");
+				if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+					document.comments_form.bakecookie[0].checked = true;
+				} else {
+					document.comments_form.bakecookie[1].checked = true;
+				}
+				//-->
+				</script>
+				
+				
+				<!-- End Comments -->
+
+				<!-- Trackbacks -->
+												<h2 id="trackbacks">Trackbacks to this entry</h2>
+								<div class="comment">
+					<a href="http://www.willy.com" rel="nofollow">http://www.willy.com</a> from <br /><a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#p4109" rel="nofollow">March 14, 2005 07:42 PM</a>
+					<div class="commentbody">
+					
+					</div>
+				</div>
+				
+				
+				<h2 id="trackbacks">Trackback to this entry</h2>
+				<div class="commbox">
+				<a href="http://joi.ito.com/mt/mt-touchme.cgi/3338" title="Trackback URI for this entry">http://joi.ito.com/mt/mt-touchme.cgi/3338</a>
+				</div>
+				
+				<!-- End Trackbacks -->
+
+				<!-- Technorati -->
+				<h2 id="technorati"><a href="http://www.technorati.com/cosmos/links.html?url=http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html" title="Technorati Cosmos for this Entry">Technorati</a> Inbound Links</h2>
+				
+				<!-- End Technorati -->
+
+			</div>
+			<br /><br />
+			<!-- End Discussion -->
+		</div>
+		<!-- End Content -->
+	</div>
+	<!-- End Center -->
+	<div id="sidebar">
+	<div id="moblog">
+<div id="motitle">Moblog</div>
+<div id="modate">Mar 15 03:25 JST</div>
+<a href="http://joi.ito.com/moblog/" title="Most recent moblog picture"><img src="http://joi.ito.com/moblog/pics/full/20050314132541-Image(302).jpg" width="228" border="0" alt=""></a>
+</div>
+<h5>Random Faceroll</h5>
+<div class="sidebox2">
+	<script language="javascript" type="text/javascript" src="http://rpc.blogrolling.com/display.php?r=32092d9463ad2bd3ab1110c85ece273e"></script>
+</div>
+
+<h5>Conferences & Events</h5>
+<div class="sidebox2">
+	<script language="javascript" type="text/javascript" src="http://rpc.blogrolling.com/display.php?r=eb4a57702a54d2c0e3c6ba8e46953500"></script>
+</div>
+
+<h5>Birthdayroll</h5>
+<div class="sidebox">
+	<div class="bdayroll">
+				<a href="http://joi.ito.com/bday.html" title="Register your birthday">Register your birthday</a>
+	</div>
+</div>
+
+<h5>Listening</h5>
+<div class="sidebox">
+	<dl class="last">
+<dt>Scissor Sisters</dt><dd><a href="http://mm.musicbrainz.org/artist/4236d929-9a81-4c8e-97c3-8d3306780f50.html">Skins (bonus tracks)</a></dd>
+<dt>Scissor Sisters</dt><dd><a href="http://mm.musicbrainz.org/artist/4236d929-9a81-4c8e-97c3-8d3306780f50.html">It Can't Come Quickly Enough</a></dd>
+<dt>Señor Coconut</dt><dd><a href="http://mm.musicbrainz.org/artist/ba07ae41-8e41-4411-bcf6-e37e4864d821.html">Smooth Operator (Mambo ChaChaCha)</a></dd>
+<dt>Señor Coconut</dt><dd><a href="http://mm.musicbrainz.org/artist/ba07ae41-8e41-4411-bcf6-e37e4864d821.html">Smoke On The Water (Chachacha)</a></dd>
+<dt>Señor Coconut</dt><dd><a href="http://mm.musicbrainz.org/artist/ba07ae41-8e41-4411-bcf6-e37e4864d821.html">Riders On The Storm (Merengue)</a></dd>
+<dt>Señor Coconut</dt><dd><a href="http://mm.musicbrainz.org/artist/ba07ae41-8e41-4411-bcf6-e37e4864d821.html">Oxygene (Part II) (Mambo Chachacha)</a></dd>
+<dt>Señor Coconut</dt><dd><a href="http://mm.musicbrainz.org/artist/ba07ae41-8e41-4411-bcf6-e37e4864d821.html">Negra Mi ChaChaCha  (Chachacha)</a></dd>
+<dt>Señor Coconut</dt><dd><a href="http://mm.musicbrainz.org/artist/ba07ae41-8e41-4411-bcf6-e37e4864d821.html">Las Maracas De Machin (ChaChaCha)</a></dd>
+<dt>Scissor Sisters</dt><dd><a href="http://mm.musicbrainz.org/artist/4236d929-9a81-4c8e-97c3-8d3306780f50.html">Get It Get It</a></dd>
+<dt>Señor Coconut</dt><dd><a href="http://mm.musicbrainz.org/artist/ba07ae41-8e41-4411-bcf6-e37e4864d821.html">El Rey De Las Galletas (Guaguanco)</a></dd>
+<dt>Señor Coconut</dt><dd><a href="http://mm.musicbrainz.org/artist/ba07ae41-8e41-4411-bcf6-e37e4864d821.html">Blue Eyes (Bolero)</a></dd>
+</dl>
+Last updated:<br/>3/13, 16:30:02 GMT
+ 
+</div>
+
+<script type="text/javascript">
+<!--
+function toggle(id){
+	dl = "dl_" + id;
+	dlElement = document.getElementById(dl);
+	if (dlElement)
+	{
+		if(dlElement.className == "closed")
+			dlElement.className = "sidebox";
+		else
+			dlElement.className = "closed";
+	}
+/*	for (i=1; i<10; i++)
+	{
+		if (("item" + i) != id)
+			document.getElementById("dl_item" + i).className = "closed";
+	} */
+}
+//-->
+</script>
+
+<h5><a href="javascript:toggle('item4')" title="Technorati inbound links" onmouseover="(window.status='Technorati inbound links'); return true">Technorati inbound links</a></h5>
+<div id="dl_item4" class="closed">
+		<a class="commentlink" href="http://kstyle.s57.xrea.com"><p class="commentdate">&#916;=-2:47</p><p class="commentauthor">&rsaquo;  K STYLE WEBSITE :: B...</p></a>
+		<a class="commentlink" href="http://joaos.blogspot.com"><p class="commentdate">&#916;=-3:46</p><p class="commentauthor">&rsaquo;   joÃ£o's (we) blog [...</p></a>
+		<a class="commentlink" href="http://www.gapingvoid.com"><p class="commentdate">&#916;=-4:13</p><p class="commentauthor">&rsaquo;  gapingvoid...</p></a>
+		<a class="commentlink" href="http://www.martin-probst.com"><p class="commentdate">&#916;=-4:39</p><p class="commentauthor">&rsaquo;  Martins Notepad...</p></a>
+		<a class="commentlink" href="http://antoniofumero.blogspot.com"><p class="commentdate">&#916;=-4:40</p><p class="commentauthor">&rsaquo;  Antoine's Blog on Bu...</p></a>
+		<a class="commentlink" href="http://daily.delusions.de"><p class="commentdate">&#916;=-6:55</p><p class="commentauthor">&rsaquo;  daily delusions...</p></a>
+		<a class="commentlink" href="http://paolo.evectors.it"><p class="commentdate">&#916;=-6:47</p><p class="commentauthor">&rsaquo;  Paolo Valdemarin Web...</p></a>
+		<a class="commentlink" href="http://www.gadgetguy.de"><p class="commentdate">&#916;=-7:6</p><p class="commentauthor">&rsaquo;  www.gadgetguy.de - T...</p></a>
+		<a class="commentlink" href="http://hmestrum.blogs.com"><p class="commentdate">&#916;=-7:45</p><p class="commentauthor">&rsaquo;  Hans on Experience...</p></a>
+		<a class="commentlink" href="http://periodistas21.blogspot.com"><p class="commentdate">&#916;=-8:12</p><p class="commentauthor">&rsaquo;  Periodistas 21...</p></a>
+		<a class="commentlink" href="http://rezwanul.blogspot.com"><p class="commentdate">&#916;=-8:50</p><p class="commentauthor">&rsaquo;   The 3rd world view...</p></a>
+		<a class="commentlink" href="http://www.ecuaderno.com"><p class="commentdate">&#916;=-9:29</p><p class="commentauthor">&rsaquo;  eCuaderno v.2.0: Cib...</p></a>
+		<a class="commentlink" href="http://james.seng.sg"><p class="commentdate">&#916;=-9:34</p><p class="commentauthor">&rsaquo;  James Seng's Blog...</p></a>
+		<a class="commentlink" href="http://mayumix.blogspot.com"><p class="commentdate">&#916;=-9:54</p><p class="commentauthor">&rsaquo;  mayumical....ex Mayu...</p></a>
+		<a class="commentlink" href="http://www.hebig.com"><p class="commentdate">&#916;=-10:2</p><p class="commentauthor">&rsaquo;  Heiko Hebig | hebig....</p></a>
+		<a class="commentlink" href="http://kas.felinity.net"><p class="commentdate">&#916;=-10:40</p><p class="commentauthor">&rsaquo;  KasLog...</p></a>
+		<a class="commentlink" href="http://blankbaby.typepad.com"><p class="commentdate">&#916;=-11:13</p><p class="commentauthor">&rsaquo;  Blankbaby...</p></a>
+		<a class="commentlink" href="http://blog.d-fantasista.net"><p class="commentdate">&#916;=-13:6</p><p class="commentauthor">&rsaquo;  ã‚°ãƒ¬ãƒ¼ãƒˆãƒ»ãƒžãƒ...</p></a>
+		<a class="commentlink" href="http://sdhurley.blogspot.com"><p class="commentdate">&#916;=-13:59</p><p class="commentauthor">&rsaquo;  Name This Thing...</p></a>
+		<a class="commentlink" href="http://www.newestindustry.org"><p class="commentdate">&#916;=-14:58</p><p class="commentauthor">&rsaquo;  The Newest Industry...</p></a>
+		<a class="commentlink" href="http://sohosad.journalmine.com/blog"><p class="commentdate">&#916;=-18:51</p><p class="commentauthor">&rsaquo;  SOHOSAD :: Main Page...</p></a>
+		<a class="commentlink" href="http://lamediahostia.blogspot.com"><p class="commentdate">&#916;=-19:3</p><p class="commentauthor">&rsaquo;  La media hostia...</p></a>
+		<a class="commentlink" href="http://kingleonard.blogspot.com"><p class="commentdate">&#916;=-19:16</p><p class="commentauthor">&rsaquo;  King Leonard - The W...</p></a>
+		<a class="commentlink" href="http://www.bruner.net/links"><p class="commentdate">&#916;=-19:57</p><p class="commentauthor">&rsaquo;  Bruner Links Blog: R...</p></a>
+		<a class="commentlink" href="http://odograph.com"><p class="commentdate">&#916;=-20:24</p><p class="commentauthor">&rsaquo;  Odograph.com...</p></a>
+	
+	<br />
+		<p class="commenttitle">Total: 2389 blogs &amp; 4719 links<br />
+	Rank: 71</p>
+	
+</div>
+
+<!-- Begin BlogNav Sidebar -->
+<h5><a href="javascript:toggle('item0')" title="New Comments" onmouseover="(window.status='New Comments'); return true">New Comments</a></h5>
+<div id="dl_item0" class="closed">
+		<p class="commenttitle"><a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html" title="The Italian squat scene">The Italian squat sc...</a></p>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c21693" title="Trevor Hill's comment on The Italian squat scene"><p class="commentdate">Mar 15, 02:03</p><p class="commentauthor">&rsaquo;  Trevor Hill</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c21685" title="akb's comment on The Italian squat scene"><p class="commentdate">Mar 14, 22:03</p><p class="commentauthor">&rsaquo;  akb</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c21684" title="joaobambu's comment on The Italian squat scene"><p class="commentdate">Mar 14, 21:03</p><p class="commentauthor">&rsaquo;  joaobambu</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html#c21683" title="Joi Ito's comment on The Italian squat scene"><p class="commentdate">Mar 14, 20:03</p><p class="commentauthor">&rsaquo;  Joi Ito</p></a>
+	
+		<p class="commenttitle"><a href="http://joi.ito.com/archives/2005/03/12/whatsinyourbag.html" title="whatsinyourbag">whatsinyourbag...</a></p>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/12/whatsinyourbag.html#c21691" title="MostlyVowels's comment on whatsinyourbag"><p class="commentdate">Mar 15, 01:03</p><p class="commentauthor">&rsaquo;  MostlyVowels</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/12/whatsinyourbag.html#c21686" title="kakyou's comment on whatsinyourbag"><p class="commentdate">Mar 14, 22:03</p><p class="commentauthor">&rsaquo;  kakyou</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/12/whatsinyourbag.html#c21681" title="Joi Ito's comment on whatsinyourbag"><p class="commentdate">Mar 14, 20:03</p><p class="commentauthor">&rsaquo;  Joi Ito</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/12/whatsinyourbag.html#c21677" title="david's comment on whatsinyourbag"><p class="commentdate">Mar 14, 19:03</p><p class="commentauthor">&rsaquo;  david</p></a>
+	
+		<p class="commenttitle"><a href="http://joi.ito.com/archives/2005/03/12/more_notes_from_atocha.html" title="More notes from Atocha">More notes from Atoc...</a></p>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/12/more_notes_from_atocha.html#c21689" title="daniel luke's comment on More notes from Atocha"><p class="commentdate">Mar 15, 01:03</p><p class="commentauthor">&rsaquo;  daniel luke</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/12/more_notes_from_atocha.html#c21674" title="steven streight aka vaspers the grate's comment on More notes from Atocha"><p class="commentdate">Mar 14, 14:03</p><p class="commentauthor">&rsaquo;  steven streight aka vaspers the grate</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/12/more_notes_from_atocha.html#c21650" title="Trevor Hill's comment on More notes from Atocha"><p class="commentdate">Mar 13, 05:03</p><p class="commentauthor">&rsaquo;  Trevor Hill</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/12/more_notes_from_atocha.html#c21628" title="Dave's comment on More notes from Atocha"><p class="commentdate">Mar 12, 08:03</p><p class="commentauthor">&rsaquo;  Dave</p></a>
+	
+		<p class="commenttitle"><a href="http://joi.ito.com/archives/2005/03/08/lessig_on_democracy_in_europe.html" title="Lessig on democracy in Europe">Lessig on democracy ...</a></p>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/08/lessig_on_democracy_in_europe.html#c21688" title="Antoin O Lachtnain's comment on Lessig on democracy in Europe"><p class="commentdate">Mar 14, 23:03</p><p class="commentauthor">&rsaquo;  Antoin O Lachtnain</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/08/lessig_on_democracy_in_europe.html#c21540" title="Doug Thacker's comment on Lessig on democracy in Europe"><p class="commentdate">Mar 09, 16:03</p><p class="commentauthor">&rsaquo;  Doug Thacker</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/08/lessig_on_democracy_in_europe.html#c21539" title="Doug Thacker's comment on Lessig on democracy in Europe"><p class="commentdate">Mar 09, 16:03</p><p class="commentauthor">&rsaquo;  Doug Thacker</p></a>
+		<a class="commentlink" href="http://joi.ito.com/archives/2005/03/08/lessig_on_democracy_in_europe.html#c21536" title="michiel's comment on Lessig on democracy in Europe"><p class="commentdate">Mar 09, 13:03</p><p class="commentauthor">&rsaquo;  michiel</p></a>
+	
+	
+</div>
+
+<h5><a href="javascript:toggle('item1')" title="Monthly archives" onmouseover="(window.status='Monthly archives'); return true">Monthly archives</a></h5>
+<div id="dl_item1" class="closed">
+	<ul><li><a href="http://joi.ito.com/archives/2005/03/index.html">&rsaquo; March 2005</a></li><li><a href="http://joi.ito.com/archives/2005/02/index.html">&rsaquo; February 2005</a></li><li><a href="http://joi.ito.com/archives/2005/01/index.html">&rsaquo; January 2005</a></li><li><a href="http://joi.ito.com/archives/2004/12/index.html">&rsaquo; December 2004</a></li><li><a href="http://joi.ito.com/archives/2004/11/index.html">&rsaquo; November 2004</a></li><li><a href="http://joi.ito.com/archives/2004/10/index.html">&rsaquo; October 2004</a></li><li><a href="http://joi.ito.com/archives/2004/09/index.html">&rsaquo; September 2004</a></li><li><a href="http://joi.ito.com/archives/2004/08/index.html">&rsaquo; August 2004</a></li><li><a href="http://joi.ito.com/archives/2004/07/index.html">&rsaquo; July 2004</a></li><li><a href="http://joi.ito.com/archives/2004/06/index.html">&rsaquo; June 2004</a></li><li><a href="http://joi.ito.com/archives/2004/05/index.html">&rsaquo; May 2004</a></li><li><a href="http://joi.ito.com/archives/2004/04/index.html">&rsaquo; April 2004</a></li><li><a href="http://joi.ito.com/archives/2004/03/index.html">&rsaquo; March 2004</a></li><li><a href="http://joi.ito.com/archives/2004/02/index.html">&rsaquo; February 2004</a></li><li><a href="http://joi.ito.com/archives/2004/01/index.html">&rsaquo; January 2004</a></li><li><a href="http://joi.ito.com/archives/2003/12/index.html">&rsaquo; December 2003</a></li><li><a href="http://joi.ito.com/archives/2003/11/index.html">&rsaquo; November 2003</a></li><li><a href="http://joi.ito.com/archives/2003/10/index.html">&rsaquo; October 2003</a></li><li><a href="http://joi.ito.com/archives/2003/09/index.html">&rsaquo; September 2003</a></li><li><a href="http://joi.ito.com/archives/2003/08/index.html">&rsaquo; August 2003</a></li><li><a href="http://joi.ito.com/archives/2003/07/index.html">&rsaquo; July 2003</a></li><li><a href="http://joi.ito.com/archives/2003/06/index.html">&rsaquo; June 2003</a></li><li><a href="http://joi.ito.com/archives/2003/05/index.html">&rsaquo; May 2003</a></li><li><a href="http://joi.ito.com/archives/2003/04/index.html">&rsaquo; April 2003</a></li><li><a href="http://joi.ito.com/archives/2003/03/index.html">&rsaquo; March 2003</a></li><li><a href="http://joi.ito.com/archives/2003/02/index.html">&rsaquo; February 2003</a></li><li><a href="http://joi.ito.com/archives/2003/01/index.html">&rsaquo; January 2003</a></li><li><a href="http://joi.ito.com/archives/2002/12/index.html">&rsaquo; December 2002</a></li><li><a href="http://joi.ito.com/archives/2002/11/index.html">&rsaquo; November 2002</a></li><li><a href="http://joi.ito.com/archives/2002/10/index.html">&rsaquo; October 2002</a></li><li><a href="http://joi.ito.com/archives/2002/09/index.html">&rsaquo; September 2002</a></li><li><a href="http://joi.ito.com/archives/2002/08/index.html">&rsaquo; August 2002</a></li><li><a href="http://joi.ito.com/archives/2002/07/index.html">&rsaquo; July 2002</a></li><li><a href="http://joi.ito.com/archives/2002/06/index.html">&rsaquo; June 2002</a></li><li><a href="http://joi.ito.com/archives/2002/05/index.html">&rsaquo; May 2002</a></li><li><a href="http://joi.ito.com/archives/2002/04/index.html">&rsaquo; April 2002</a></li><li><a href="http://joi.ito.com/archives/2001/12/index.html">&rsaquo; December 2001</a></li><li><a href="http://joi.ito.com/archives/2001/10/index.html">&rsaquo; October 2001</a></li><li><a href="http://joi.ito.com/archives/2001/07/index.html">&rsaquo; July 2001</a></li><li><a href="http://joi.ito.com/archives/2001/02/index.html">&rsaquo; February 2001</a></li><li><a href="http://joi.ito.com/archives/2001/01/index.html">&rsaquo; January 2001</a></li><li><a href="http://joi.ito.com/archives/2000/12/index.html">&rsaquo; December 2000</a></li><li><a href="http://joi.ito.com/archives/2000/11/index.html">&rsaquo; November 2000</a></li><li><a href="http://joi.ito.com/archives/2000/10/index.html">&rsaquo; October 2000</a></li><li><a href="http://joi.ito.com/archives/2000/09/index.html">&rsaquo; September 2000</a></li><li><a href="http://joi.ito.com/archives/2000/08/index.html">&rsaquo; August 2000</a></li><li><a href="http://joi.ito.com/archives/2000/07/index.html">&rsaquo; July 2000</a></li><li><a href="http://joi.ito.com/archives/2000/06/index.html">&rsaquo; June 2000</a></li><li><a href="http://joi.ito.com/archives/2000/05/index.html">&rsaquo; May 2000</a></li><li><a href="http://joi.ito.com/archives/2000/04/index.html">&rsaquo; April 2000</a></li><li><a href="http://joi.ito.com/archives/2000/03/index.html">&rsaquo; March 2000</a></li><li><a href="http://joi.ito.com/archives/2000/02/index.html">&rsaquo; February 2000</a></li><li><a href="http://joi.ito.com/archives/2000/01/index.html">&rsaquo; January 2000</a></li><li><a href="http://joi.ito.com/archives/1999/12/index.html">&rsaquo; December 1999</a></li><li><a href="http://joi.ito.com/archives/1999/11/index.html">&rsaquo; November 1999</a></li><li><a href="http://joi.ito.com/archives/1999/10/index.html">&rsaquo; October 1999</a></li><li><a href="http://joi.ito.com/archives/1999/09/index.html">&rsaquo; September 1999</a></li><li><a href="http://joi.ito.com/archives/1999/04/index.html">&rsaquo; April 1999</a></li><li><a href="http://joi.ito.com/archives/1999/02/index.html">&rsaquo; February 1999</a></li><li><a href="http://joi.ito.com/archives/1999/01/index.html">&rsaquo; January 1999</a></li><li><a href="http://joi.ito.com/archives/1998/12/index.html">&rsaquo; December 1998</a></li><li><a href="http://joi.ito.com/archives/1998/10/index.html">&rsaquo; October 1998</a></li><li><a href="http://joi.ito.com/archives/1998/08/index.html">&rsaquo; August 1998</a></li><li><a href="http://joi.ito.com/archives/1997/11/index.html">&rsaquo; November 1997</a></li><li><a href="http://joi.ito.com/archives/1997/10/index.html">&rsaquo; October 1997</a></li><li><a href="http://joi.ito.com/archives/1997/06/index.html">&rsaquo; June 1997</a></li><li><a href="http://joi.ito.com/archives/1997/04/index.html">&rsaquo; April 1997</a></li><li><a href="http://joi.ito.com/archives/1996/10/index.html">&rsaquo; October 1996</a></li><li><a href="http://joi.ito.com/archives/1995/10/index.html">&rsaquo; October 1995</a></li><li><a href="http://joi.ito.com/archives/1995/06/index.html">&rsaquo; June 1995</a></li><li><a href="http://joi.ito.com/archives/1995/05/index.html">&rsaquo; May 1995</a></li><li><a href="http://joi.ito.com/archives/1995/03/index.html">&rsaquo; March 1995</a></li><li><a href="http://joi.ito.com/archives/1994/11/index.html">&rsaquo; November 1994</a></li><li><a href="http://joi.ito.com/archives/1993/07/index.html">&rsaquo; July 1993</a></li></ul>
+</div>
+
+<h5><a href="javascript:toggle('item2')" title="Category archives" onmouseover="(window.status='Category archives'); return true">Category archives</a></h5>
+<div id="dl_item2" class="closed">
+	<ul><li><a href="http://joi.ito.com/archives/activism/index.html">&rsaquo; Activism</a></li><li><a href="http://joi.ito.com/archives/advanced_science/index.html">&rsaquo; Advanced Science</a></li><li><a href="http://joi.ito.com/archives/art/index.html">&rsaquo; Art</a></li><li><a href="http://joi.ito.com/archives/blogging_about_blogging/index.html">&rsaquo; Blogging about Blogging</a></li><li><a href="http://joi.ito.com/archives/books/index.html">&rsaquo; Books</a></li><li><a href="http://joi.ito.com/archives/business_and_the_economy/index.html">&rsaquo; Business and the Economy</a></li><li><a href="http://joi.ito.com/archives/computer_and_network_risks/index.html">&rsaquo; Computer and Network Risks</a></li><li><a href="http://joi.ito.com/archives/consumer_electronics/index.html">&rsaquo; Consumer Electronics</a></li><li><a href="http://joi.ito.com/archives/cool_web_sites/index.html">&rsaquo; Cool Web Sites</a></li><li><a href="http://joi.ito.com/archives/creative_commons/index.html">&rsaquo; Creative Commons</a></li><li><a href="http://joi.ito.com/archives/eating_and_cooking/index.html">&rsaquo; Eating and Cooking</a></li><li><a href="http://joi.ito.com/archives/ecology/index.html">&rsaquo; Ecology</a></li><li><a href="http://joi.ito.com/archives/economics/index.html">&rsaquo; Economics</a></li><li><a href="http://joi.ito.com/archives/email/index.html">&rsaquo; Email</a></li><li><a href="http://joi.ito.com/archives/emergent_democracy/index.html">&rsaquo; Emergent Democracy</a></li><li><a href="http://joi.ito.com/archives/energy/index.html">&rsaquo; Energy</a></li><li><a href="http://joi.ito.com/archives/flash/index.html">&rsaquo; Flash</a></li><li><a href="http://joi.ito.com/archives/gadgets/index.html">&rsaquo; Gadgets</a></li><li><a href="http://joi.ito.com/archives/gender/index.html">&rsaquo; Gender</a></li><li><a href="http://joi.ito.com/archives/global_politics/index.html">&rsaquo; Global Politics</a></li><li><a href="http://joi.ito.com/archives/global_voices/index.html">&rsaquo; Global Voices</a></li><li><a href="http://joi.ito.com/archives/hardware/index.html">&rsaquo; Hardware</a></li><li><a href="http://joi.ito.com/archives/health_and_medicine/index.html">&rsaquo; Health and Medicine</a></li><li><a href="http://joi.ito.com/archives/heckling/index.html">&rsaquo; Heckling</a></li><li><a href="http://joi.ito.com/archives/human_rights/index.html">&rsaquo; Human Rights</a></li><li><a href="http://joi.ito.com/archives/humor/index.html">&rsaquo; Humor</a></li><li><a href="http://joi.ito.com/archives/icann/index.html">&rsaquo; ICANN</a></li><li><a href="http://joi.ito.com/archives/identity/index.html">&rsaquo; Identity</a></li><li><a href="http://joi.ito.com/archives/im/index.html">&rsaquo; IM</a></li><li><a href="http://joi.ito.com/archives/information_and_media/index.html">&rsaquo; Information and Media</a></li><li><a href="http://joi.ito.com/archives/intellectual_property/index.html">&rsaquo; Intellectual Property</a></li><li><a href="http://joi.ito.com/archives/internet_policy/index.html">&rsaquo; Internet Policy</a></li><li><a href="http://joi.ito.com/archives/introspective/index.html">&rsaquo; Introspective</a></li><li><a href="http://joi.ito.com/archives/irc/index.html">&rsaquo; IRC</a></li><li><a href="http://joi.ito.com/archives/japanese_culture/index.html">&rsaquo; Japanese Culture</a></li><li><a href="http://joi.ito.com/archives/japanese_national_id/index.html">&rsaquo; Japanese National ID</a></li><li><a href="http://joi.ito.com/archives/japanese_policy/index.html">&rsaquo; Japanese Policy</a></li><li><a href="http://joi.ito.com/archives/japanese_politics/index.html">&rsaquo; Japanese Politics</a></li><li><a href="http://joi.ito.com/archives/jois_diary/index.html">&rsaquo; Joi's Diary</a></li><li><a href="http://joi.ito.com/archives/joicards/index.html">&rsaquo; Joicards</a></li><li><a href="http://joi.ito.com/archives/leadership_and_entrepreneurship/index.html">&rsaquo; Leadership and Entrepreneurship</a></li><li><a href="http://joi.ito.com/archives/loaf/index.html">&rsaquo; LOAF</a></li><li><a href="http://joi.ito.com/archives/marketing/index.html">&rsaquo; Marketing</a></li><li><a href="http://joi.ito.com/archives/media_and_journalism/index.html">&rsaquo; Media and Journalism</a></li><li><a href="http://joi.ito.com/archives/moblogging/index.html">&rsaquo; Moblogging</a></li><li><a href="http://joi.ito.com/archives/movies/index.html">&rsaquo; Movies</a></li><li><a href="http://joi.ito.com/archives/music/index.html">&rsaquo; Music</a></li><li><a href="http://joi.ito.com/archives/neoteny/index.html">&rsaquo; Neoteny</a></li><li><a href="http://joi.ito.com/archives/network_technology/index.html">&rsaquo; Network Technology</a></li><li><a href="http://joi.ito.com/archives/photo/index.html">&rsaquo; Photo</a></li><li><a href="http://joi.ito.com/archives/podcasts/index.html">&rsaquo; Podcasts</a></li><li><a href="http://joi.ito.com/archives/privacy/index.html">&rsaquo; Privacy</a></li><li><a href="http://joi.ito.com/archives/python_fun/index.html">&rsaquo; Python Fun</a></li><li><a href="http://joi.ito.com/archives/reforming_japanese_democracy/index.html">&rsaquo; Reforming Japanese Democracy</a></li><li><a href="http://joi.ito.com/archives/religion/index.html">&rsaquo; Religion</a></li><li><a href="http://joi.ito.com/archives/salon/index.html">&rsaquo; Salon</a></li><li><a href="http://joi.ito.com/archives/sars/index.html">&rsaquo; SARS</a></li><li><a href="http://joi.ito.com/archives/search/index.html">&rsaquo; Search</a></li><li><a href="http://joi.ito.com/archives/sharing_economy/index.html">&rsaquo; Sharing Economy</a></li><li><a href="http://joi.ito.com/archives/six_apart/index.html">&rsaquo; Six Apart</a></li><li><a href="http://joi.ito.com/archives/social_software/index.html">&rsaquo; Social Software</a></li><li><a href="http://joi.ito.com/archives/socialtext/index.html">&rsaquo; SocialText</a></li><li><a href="http://joi.ito.com/archives/software/index.html">&rsaquo; Software</a></li><li><a href="http://joi.ito.com/archives/technology_controversy/index.html">&rsaquo; Technology Controversy</a></li><li><a href="http://joi.ito.com/archives/technorati/index.html">&rsaquo; Technorati</a></li><li><a href="http://joi.ito.com/archives/us_policy_and_politics/index.html">&rsaquo; US Policy and Politics</a></li><li><a href="http://joi.ito.com/archives/venture_capital/index.html">&rsaquo; Venture Capital</a></li><li><a href="http://joi.ito.com/archives/video/index.html">&rsaquo; Video</a></li><li><a href="http://joi.ito.com/archives/voip/index.html">&rsaquo; VoIP</a></li><li><a href="http://joi.ito.com/archives/warblogging/index.html">&rsaquo; Warblogging</a></li><li><a href="http://joi.ito.com/archives/wiki/index.html">&rsaquo; Wiki</a></li><li><a href="http://joi.ito.com/archives/wireless_and_mobile/index.html">&rsaquo; Wireless and Mobile</a></li></ul>
+</div>
+
+<h5><a href="javascript:toggle('item3')" title="Recent Entries" onmouseover="(window.status='Recent Entries'); return true">Recent Entries</a></h5>
+<div id="dl_item3" class="closed">
+	<ul><li><a href="http://joi.ito.com/archives/2005/03/14/the_italian_squat_scene.html">&rsaquo; The Italian squat scene</a></li><li><a href="http://joi.ito.com/archives/2005/03/13/off_to_rome.html">&rsaquo; Off to Rome</a></li><li><a href="http://joi.ito.com/archives/2005/03/12/whatsinyourbag.html">&rsaquo; whatsinyourbag</a></li><li><a href="http://joi.ito.com/archives/2005/03/12/threatened_by_alzarqawi.html">&rsaquo; Threatened by al-Zarqawi</a></li><li><a href="http://joi.ito.com/archives/2005/03/12/open_letter_to_sir_howard_stringer.html">&rsaquo; Open letter to Sir Howard Stringer</a></li><li><a href="http://joi.ito.com/archives/2005/03/12/us_department_of_homeland_security_checking_email.html">&rsaquo; US Department of Homeland Security checking email</a></li><li><a href="http://joi.ito.com/archives/2005/03/12/more_notes_from_atocha.html">&rsaquo; More notes from Atocha</a></li><li><a href="http://joi.ito.com/archives/2005/03/11/atocha_summit_opening_remarks.html">&rsaquo; Atocha Summit opening remarks</a></li><li><a href="http://joi.ito.com/archives/2005/03/11/hezbollah_tv_on_us_terrorist_exclusion_list.html">&rsaquo; Hezbollah TV on US Terrorist Exclusion List</a></li><li><a href="http://joi.ito.com/archives/2005/03/11/atocha_workshop_today.html">&rsaquo; Atocha workshop today</a></li></ul>
+</div>
+<!-- End BlogNav Sidebar -->
+<br />
+
+<h5><a href="javascript:toggle('item5')" title="Blogroll" onmouseover="(window.status='Blogroll'); return true">Blogroll</a></h5>
+<div id="dl_item5" class="closed">
+	<ul>#-<a href='http://www.scripting.com/' target='_top' title='Dave Winer' >Scripting News</a><br />
+#-<a href='http://www.smartmobs.com/' target='_top' title='Howard Rheingold' >Smart Mobs</a><br />
+#-<a href='http://novaspivack.typepad.com/'  title='Nova Spivak' >Minding the Planet</a><br />
+#-<a href='http://www.corante.com/many/'  title='Last updated: 02:00:11 [GMT+9] on Tuesday, March 15' >Social Software</a><br />
+#-<a href='http://boingboing.net/' target='_top' title='Last updated: 00:21:23 [GMT+9] on Tuesday, March 15' >BoingBoing</a><br />
+#-<a href='http://doc.weblogs.com/' target='_top' title='Doc Searls' >Doc Searls Weblog</a><br />
+#-<a href='http://www.isen.com/blog/'  title='David S. Isenberg&#39;s Blog' >isen.blog</a><br />
+#-<a href='http://www.purselipsquarejaw.org/'  title='Anne Galloway' >purse lip square jaw</a><br />
+#-<a href='http://blogging.la/'  title='Last updated: 22:12:12 [GMT+9] on Monday, March 14' >blogging.la</a><br />
+#-<a href='http://www.sifry.com/alerts/'  title='David Sifry' >Sifry's Alerts</a><br />
+#-<a href='http://www.wikisearch.org/'  title='Angela Beesley' >WikiSearch</a><br />
+#-<a href='http://www.halleyscomment.blogspot.com/'  title='Halley Suitt' >Halley's Comment</a><br />
+#-<a href='http://kanai.net/weblog/' target='_top' title='Gen Kanai&#39;s Blog' >Gen Kanai Dot Net</a><br />
+#-<a href='http://bopuc.levendis.com/weblog/'  title='Boris Anthony' >Boris Anthony</a><br />
+#-<a href='http://mamamusings.net/'  title='Last updated: 04:32:30 [GMT+9] on Monday, March 14' >mamamusings</a><br />
+#-<a href='http://www.buzzmachine.com/'  title='Jeff Jarvis' >BuzzMachine</a><br />
+-<a href='http://www.dashes.com/anil/'  title='Last updated: 08:32:58 [GMT+9] on Sunday, March 13' >Anil Dash</a><br />
+-<a href='http://ming.tv/'  title='Flemming Funch' >Ming the Mechanic</a><br />
+-<a href='http://www.zenarchery.com/'  title='Joshua Ellis' >Zenarchery.com</a><br />
+-<a href='http://www.sociate.com/'  title='Jerry Michalski' >Sociate</a><br />
+-<a href='http://lessig.org/blog/' target='_top' title='Lawrence Lessig' >Lessig Blog</a><br />
+-<a href='http://k.lenz.name/LB/'  title='Last updated: 08:33:24 [GMT+9] on Friday, March 11' >Lenz Blog</a><br />
+-<a href='http://www.rebeccablood.net/'  title='Last updated: 04:12:24 [GMT+9] on Friday, March 11' >rebecca's pocket</a><br />
+-<a href='http://allied.blogspot.com/'  title='Jeneane Sessum' >Jeneane Sessum</a><br />
+-<a href='http://www.weblogsky.com/'  title='Jon Lebkowsky&#39;s Weblog' >Weblogsky</a><br />
+-<a href='http://radio.weblogs.com/0110772/'  title='Sébastien Paquet' >Seb's Open Research</a><br />
+-<a href='http://www.onlisareinsradar.com/'  title='Lisa Rein' >On Lisa Rein's Radar</a><br />
+-<a href='http://www.shellen.com/'  title='Last updated: 09:03:44 [GMT+9] on Friday, March 04' >Jason Shellen's Blog</a><br />
+-<a href='http://www.evhead.com/'  title='Evan Williams' >Evhead</a><br />
+-<a href='http://www.umamitsunami.com/' target='_top' title='Jane' >Umami Tsunami</a><br />
+-<a href='http://www.commonme.org/'  title='Last updated: 04:46:01 [GMT+9] on Sunday, February 27' >CommonMe</a><br />
+-<a href='http://www.misbehaving.net/'  title='Last updated: 01:35:18 [GMT+9] on Saturday, February 26' >misbehaving.net</a><br />
+-<a href='http://vagrantly.com'  title='Last updated: 14:51:21 [GMT+9] on Tuesday, February 22' >vagrantly</a><br />
+-<a href='http://blogs.law.harvard.edu/jim/'  title='Last updated: 11:58:45 [GMT+9] on Saturday, February 19' >Jim Moore's Weblog</a><br />
+-<a href='http://www.boosman.com/blog/' target='_top' title='Frank Boosman' >pseudorandom</a><br />
+-<a href='http://www.stevenberlinjohnson.com/'  title='Last updated: 02:31:22 [GMT+9] on Wednesday, February 16' >stevenberlinjohnson.com</a><br />
+-<a href='http://unadorned.org/dandruff/'  title='Stephanie Troeth' >dandruff::All sheep welcome here.</a><br />
+-<a href='http://weblog.burningbird.net/'  title='Shelly Powers' >Burningbird</a><br />
+-<a href='http://www.easterwood.org/hmmn/'  title='Last updated: 01:28:26 [GMT+9] on Friday, February 11' >hmmn: musings from the far east(erwood)</a><br />
+-<a href='http://healingiraq.blogspot.com/'  title='Last updated: 01:57:53 [GMT+9] on Thursday, February 10' >Healing Iraq</a><br />
+-<a href='http://weblog.siliconvalley.com/column/dangillmor/' target='_top' title='Dan Gillmor' >Dan Gillmor's eJournal</a><br />
+-<a href='http://www.eire.com/'  title='Antoin O Lachtnain&#39;s blog' >antoin@eire.com</a><br />
+-<a href='http://www.links.net/' target='_top' title='Justin Hall' >Justin's Links</a><br />
+-<a href='http://snowchyld.org/'  title='Last updated: 21:15:51 [GMT+9] on Monday, January 17' >snowchyld.org</a><br />
+-<a href='http://riverbendblog.blogspot.com/'  title='Riverbend' >Baghdad Burning</a><br />
+-<a href='http://www.v-2.org/'  title='Last updated: 03:15:15 [GMT+9] on Sunday, January 16' >v-2 Organization</a><br />
+-<a href='http://www.glome.org/' target='_top' title='Trevor Hill' >Glome</a><br />
+-<a href='http://www.pacificavc.com/blog/'  title='Tim Oren' >Due Diligence</a><br />
+-<a href='http://www.gnome-girl.com/'  title='Last updated: 05:44:45 [GMT+9] on Thursday, November 25' >Gnome Girl</a><br />
+-<a href='http://www.theartofpeace.blogspot.com/'  title='David Weisman' >The Art of Peace 
+
+
+
+
+</a><br />
+-<a href='http://reiter.weblogger.com/'  title='Last updated: 02:14:15 [GMT+9] on Sunday, October 03' >Reiter's Wireless Data Web Log</a><br />
+-<a href='http://blogs.law.harvard.edu/techjournalism/'  title='Last updated: 13:48:29 [GMT+9] on Friday, October 01' >Rebecca MacKinnon's Weblog</a><br />
+-<a href='http://chris.pirillo.com/'  title='Chris Pirillo' >PIRILLO.EXE</a><br />
+-<a href='http://wequitdrinking.typepad.com/blog/'  title='Last updated: 12:21:50 [GMT+9] on Friday, August 27' >We Quit Drinking</a><br />
+-<a href='http://dear_raed.blogspot.com/'  title='Bloggers in Baghdad' >Where is Raed ?</a><br />
+-<a href='http://blogs.law.harvard.edu/lydon/'  title='Chryistopher Lydon' >Chryistopher Lydon Interviews</a><br />
+-<a href='http://werbach.com/blog/' target='_top' title='Kevin Werbach' >Werblog</a><br />
+-<a href='http://blogs.it/0100198/' target='_top' title='Marc Canter' >Marc's Voice</a><br />
+-<a href='http://neon.vortex.com/blog/lauren/'  title='Lauren Weinstein' >Lauren Weinstein's Blog</a><br />
+-<a href='http://metamemos.typepad.com/e/'  title='Gohsuke Takama&#39;s blog' >MetaThoughts</a><br />
+-<a href='http://whatsatstake.blogs.com/whatsatstake/'  title='Last updated: 14:14:06 [GMT+9] on Saturday, April 10' >What's At Stake?</a><br />
+-<a href='http://www.tomigaia.com/blog/'  title='Cyrus Shaoul&#39;s Blog' >The Tomigaia Blog</a><br />
+-<a href='http://www.ozzie.net/blog/'  title='Ray Ozzie' >Ray Ozzie's Weblog</a><br />
+-<a href='http://www.loiclemeur.com/'  title='Loic Le Meur' >Loic Le Meur's WebLog</a><br />
+-<a href='http://www.vwmarshall.net/'  title='V. W. Marshall' >V. W. Marshall</a><br />
+-<a href='http://pierre.typepad.com/pierre/'  title='Pierre Omidyar&#39;s blog' >Pierre's Web</a><br />
+-<a href='http://jasonnolan.net/'  title='Jason Nolan' >Just differently intelligent</a><br />
+-<a href='http://ken.coar.org/burrow/'  title='Ken Coar&#39;s Blog' >The Rodent's Burrow</a><br />
+-<a href='http://scoble.weblogs.com/'  title='Robert Scoble&#39;s Weblog' >The Scobleizer Weblog</a><br />
+-<a href='http://www.petebarrwatson.com/pm/weblog.php'  title='Last updated: 18:05:29 [GMT+9] on Sunday, January 04' >Pete's Eats</a><br />
+-<a href='http://ross.typepad.com'  title='Last updated: 09:22:54 [GMT+9] on Thursday, August 07' >Ross Mayfield's Weblog</a><br />
+-<a href='http://www.sethgodin.com/sg/blog/sethgodin.html'  title='Seth Godin' >Seth's Blog</a><br />
+-<a href='http://www.chanpon.org/' target='_top' title='Chanpon.org is a site devoted to the mixture of Japanese culture with other cultures.' >Chanpon</a><br />
+-<a href='http://invisibleshoebox.blogspot.com/'  title='Last updated: 14:59:51 [GMT+9] on Wednesday, August 06' >Grumpy Girl</a><br />
+-<a href='http://www.jainnet.com/knowledgeeldorado/'  title='Veer Bothra&#39;s Blog' >Knowledge El Dorado</a><br />
+-<a href='http://patrickweb.com/' target='_top' title='John Patrick' >John Patrick's Weblog</a><br />
+-<a href='http://www.alevin.com/weblog'  title='Adina Levin&#39;s Weblog' >BookBlog</a><br />
+-<a href='http://weblog.edventure.com/'  title='Esther Dyson' >Esther Dyson</a><br />
+-<a href='http://www.ratcliffe.com/blog.html/'  title='Mitch Ratcliffe' >RatcliffeBlog</a><br />
+-<a href='http://www.hyperorg.com/blogger/index.html'  title='David Weinberger&#39;s Weblog' >Joho the Blog</a><br />
+-<a href='http://btrott.typepad.com/'  title='Ben Trott' >Ben's Blog</a><br />
+-<a href='http://toph.blogspot.com/'  title='Last updated: 08:45:55 [GMT+9] on Monday, April 07' >Topher Tune's Times</a><br />
+-<a href='http://ahtisaari.typepad.com'  title='Marko Ahtisaari' >Marko Ahtisaari</a><br />
+-<a href='http://adfny.metalgear.org/'  title='http://adfny.metalgear.org/' >Chris B</a><br />
+-<a href='http://blog.digitaltavern.com/'  title='Allan Karl&#39;s Blog' >The Digital Tavern</a><br />
+-<a href='http://www.sixapart.com/'  title='Mena and Ben&#39;s Corporate Blog' >Six Apart Log</a><br />
+-<a href='http://ashleyb.blogspot.com/'  title='Ashley Benigno' >Notes from Somewhere Bizarre</a><br />
+-<a href='http://mena.typepad.com/'  title='http://mena.typepad.com/' >Not a Dollarshort</a><br />
+-<a href='http://www.kung-foo.tv/blog/index.php'  title='Adriaan&#39;s Blog' >chaotic intransient prose bursts</a><br />
+-<a href='http://www.istori.com/log/'  title='Peter Kaminski' >istori/log</a><br />
+-<a href='http://epeus.blogspot.com/rss/epeus.xml'  title='Kevin Marks' >Epeus' epigon</a><br />
+-<a href='http://mayhem-chaos.net/blog.html'  title='Robert Kaye&#39;s Blog' >The Musings of Mayhem & Chaos</a><br />
+-<a href='http://blog.mmdc.net/'  title='Jim O&#39;Connell' >Wirefarm</a><br />
+-<a href='http://www.raelity.org/'  title='Rael Dornfest' >Raelity Bytes</a><br />
+-<a href='http://www.urbanaddiction.com/'  title='Liz Fine' >UrbanAddiction.com</a><br />
+-<a href='http://jcwinnie.blogspot.com/'  title='jcwinnie' >Your Guess Is As Good As Mine</a><br />
+-<a href='http://www.neidich.com/'  title='http://www.neidich.com/' >Ori Neidich</a><br />
+-<a href='http://sounio.typepad.com/'  title='http://sounio.typepad.com/' >sounio</a><br />
+-<a href='http://blog.barlowfriendz.net/'  title='John Perry Barlow&#39;s Blog' >BarlowFriendz</a><br />
+-<a href='http://del.icio.us/joi_ito'  title='http://del.icio.us/joi_ito' >Joi Ito's del.icio.us bookmarks</a><br />
+-<a href='http://socialarchitect.typepad.com/musings/'  title='http://socialarchitect.typepad.com/musings/' >Amy Jo Kim</a><br />
+-<a href='http://www.halplotkin.com/'  title='http://www.halplotkin.com/' >Hal Plotkin</a><br />
+-<a href='http://crepuscular.blogspot.com/'  title='http://crepuscular.blogspot.com/' >Crepuscular Tokyo</a><br />
+-<a href='http://www.bigbrainboy.com/'  title='http://www.bigbrainboy.com/' >BigBrainBoy</a><br />
+<!-- 175de18e05fd826da65065bf52ea8b68 -->
+</ul>
+</div>
+
+<h5><a href="javascript:toggle('item6')" title="Delicious Bookmarks" onmouseover="(window.status='Delicious Bookmarks'); return true">Delicious Bookmarks</a></h5>
+<div id="dl_item6" class="closed">
+	<div class="delPost">&raquo; 
+<a class="delLink" href="http://www.masternewmedia.org/news/2004/09/03/americans_dont_believe_me_mentalhealthscreeningiscomingyourway.htm">Americans Don't Believe Me: Mental-Health-Screening-Is-Coming-Your-Way - Robin Good's Latest News</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/mental_health">mental_health</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://www.mentalhealthcommission.gov/">President`s New Freedom Commission on Mental Health</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/mental_health">mental_health</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://www.theweblogproject.com/">TheWeblogProject</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/blogging">blogging</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://bopuc.levendis.com/weblog/archives/-2005/03/12/why_blogging_sucks.php">bopuc/weblog: Why &quot;blogging&quot; sucks</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/mycomments">mycomments</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://jkonno.exblog.jp/2244071">%u9045%u54B2%u304D%u30D6%u30ED%u30B0%u5C11%u5E74</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/mycomments">mycomments</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://jrobb.mindplex.org/2005/03/10.html#a6154">John Robb's Weblog</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/mycomments">mycomments</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://www.webproworld.com/viewtopic.php?p=201183#201183">WebProWorld :: View topic - Anti-Business Attitude From Google?</a></div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://radio.weblogs.com/0133184/2005/02/27.html#a279">Kevin Schofield's Weblog</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/mycomments">mycomments</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://tingilinde.typepad.com/starstuff/2005/03/metcalfes_law_i.html">tingilinde: metcalfe's law is wrong</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/paper">paper</a>
+<a class="delTag" href="http://del.icio.us/joi_ito/networks">networks</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://www.nytimes.com/2005/02/25/technology/25podcast.html?adxnnl=1&amp;adxnnlx=1109323721-xY3loKtqO7rGn29nDc5tyA">The New York Times &gt; Technology &gt; For a Start-Up, Visions of Profit in Podcasting</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/podcasting">podcasting</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://dangillmor.typepad.com/dan_gillmor_on_grassroots/2005/02/how_one_company.html">Dan Gillmor on Grassroots Journalism, Etc.: How One Company Fakes out Caller ID</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/mycomments">mycomments</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://insanecats.com/cgi-bin/PyComments.py?month=feb05&amp;msg=19">As if I care...</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/mycomments">mycomments</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://joi.ito.com/moblog/entries/2005/02/16/003457.html">Joi Ito's Moblog: Jimmy's bag</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/wikipedia">wikipedia</a>
+<a class="delTag" href="http://del.icio.us/joi_ito/google">google</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://peerfear.org/download/technorati-goatse.jpg">technorati-goatse.jpg (JPEG Image, 703x489 pixels)</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/goatse">goatse</a>
+</div>
+<div class="delPost">&raquo; 
+<a class="delLink" href="http://www.zefrank.com/punc/">communication skills - zefrank</a> <span class="delTagSep">/</span>
+<a class="delTag" href="http://del.icio.us/joi_ito/funny">funny</a>
+</div>
+        <a href="http://del.icio.us/rss/joi_ito" title="subscribe"><span style="font-family: verdana, sans-serif;
+font-size: 10px;
+font-weight:bold;
+text-decoration:none;
+color: white;
+background-color: #F60;
+border:1px solid;
+border-color: #FC9 #630 #330 #F96;
+padding:0px 3px 0px 3px;
+margin:0px;">RSS</span></a>
+
+</div>
+
+<br />
+
+<h5><a href="javascript:toggle('item7')" title="Papers and Resources" onmouseover="(window.status='Papers and Resources'); return true">Papers and Resources</a></h5>
+<div id="dl_item7" class="closed">
+	<ul>
+		<li><a href="http://radio.weblogs.com/0114939/outlines/moblog.html" title="Moblog Resources">Moblog Resources</a></li>
+		<li><a href="http://topicexchange.com/t/emergent_democracy/" title="Emergent Democracy Topic Exchange">Emergent Democracy Topic Exchange</a></li>
+		<li><a href="http://joi.ito.com/joiwiki/EmergentDemocracyPaper" title="Emergent Democracy Paper 1.31">Emergent Democracy Paper 1.31</a></li>
+		<li><a href="http://joi.ito.com/joiwiki/JoiToDo" title="Joi's Public To Do List">Joi's Public To Do List</a></li>
+		<li><a href="http://joi.ito.com/archives/2003/02/06/draft_of_oped_for_the_south_china_morning_post.html" title="Op Ed for South China Morning Post on Reform in Japan - 2003">Op Ed for South China Morning Post on Reform in Japan - 2003</a></li>
+		<li><a href="http://joi.ito.com/archives/2002/07/16/identity_and_privacy_in_a_globalized_community.html" title="dentity and Privacy in a Globalized Community - 2002">Identity and Privacy in a Globalized Community - 2002</a></li>
+		<li><a href="http://joi.ito.com/archives/images/presentations/Blueprint2020gltsummit.ppt" title="Blueprint for Japan 2020 for GLT Summit (ppt) - 2002">Blueprint for Japan 2020 for GLT Summit (ppt) - 2002</a></li>
+		<li><a href="http://joi.ito.com/archives/2002/04/09/trilateral_commission_speech.html" title="Speech at the Trilateral Commission Annual Meeting - 2002">Speech at the Trilateral Commission Annual Meeting - 2002</a></li>
+		<li><a href="http://joi.ito.com/archives/1997/06/19/aesthetics_of_the_internet_context_as_a_medium.html" title="Aesthetics of the Internet - Context as a Medium - 1997">Aesthetics of the Internet - Context as a Medium - 1997</a></li>
+	</ul>
+</div>
+<br />
+
+<form class="googleform" method="get" action="http://www.google.com/custom">
+	<input class="googleinput" type="text" name="q" size="20" maxlength="255" value="" /><input class="googlesubmit" type="submit" name="sa" value="Search" /><input type="hidden" name="cof" value="LW:240;L:http://joi.ito.com/archives/images/logo2-trim.jpg;LH:64;BGC:White;AH:left;GL:0;S:http://joi.ito.com/;AWFID:de3e917c93428e74;" /><input type="hidden" name="domains" value="joi.ito.com" /><input type="hidden" name="sitesearch" value="joi.ito.com" />
+</form>
+
+<br />
+<br />	</div>
+	<!-- Begin Footer -->
+<div id="footer">
+<div class="badges">
+	<a rel="license" href="http://creativecommons.org/licenses/by/2.0/"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.gif" /></a>
+<!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+<license rdf:resource="http://creativecommons.org/licenses/by/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by/2.0/">
+<permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+<permits rdf:resource="http://web.resource.org/cc/Distribution" />
+<requires rdf:resource="http://web.resource.org/cc/Notice" />
+<requires rdf:resource="http://web.resource.org/cc/Attribution" />
+<permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+</License>
+
+</rdf:RDF>
+
+-->
+</div>
+<div class="badges">
+	<a href="http://www.movabletype.org" title="Powered by Movable Type">Movable Type</a><br />
+	<a href="http://ecto.kung-foo.tv/" title="ecto - Desktop weblog editor publisher for Mac">ecto <span class="h">Desktop weblog editor publisher for Mac</span></a>
+</div>
+<div class="techpro">
+	<a href="http://www.technorati.com/profile/joichi/1968/e56ed60e3af41336b1c683d565e7bb2b" title="Technorati"><img src="http://www.technorati.com/progimages/photo.jpg?uid=346" alt="Technorati" width="26" height="40" border="0" /></a>
+</div>
+Contact <a href="mailto:jito@neoteny.com">Joi Ito</a><br />
+Design: <a href="http://bopuc.levendis.com/weblog/" title="Boris Anthony">Boris</a><br />
+Logo: <a href="http://www.etoy.com/" title="etoy.ZAI">etoy.ZAI</a>
+
+<br clear="all" />
+</div>
+<!-- End Footer --></div>
+</body>
+</html>

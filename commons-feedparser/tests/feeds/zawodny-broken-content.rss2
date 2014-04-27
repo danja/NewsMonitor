@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rss version="2.0" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+  <channel>
+    <title>Jeremy Zawodny&apos;s blog</title>
+    <link>http://jeremy.zawodny.com/blog/</link>
+    <description>SELECT * FROM random_thoughts ORDER BY date DESC</description>
+    <dc:language>en-us</dc:language>
+    <dc:creator>Jeremy@Zawodny.com</dc:creator>
+    <dc:rights>Copyright 2005</dc:rights>
+    <dc:date>2005-03-20T12:56:26-08:00</dc:date>
+    <admin:generatorAgent rdf:resource="http://www.movabletype.org/?v=2.63" />
+    <admin:errorReportsTo rdf:resource="mailto:Jeremy@Zawodny.com"/>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+
+    <item>
+      <title>Thoughts on Flickr and Yahoo</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004362.html</link>
+      <description>The first time I used Flickr, I knew it was something different and something important. It took me a while to figure out and try to articulate exactly what that was, but I took my first swipe back in September when I called it a Next Generation Web Service. In that posting, I said: Flickr has been on my radar for a while now, but I only recently began to start playing with it. I&apos;m impressed as hell. After my...</description>
+      <guid isPermaLink="false">4362@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>The first time I used Flickr, I knew it was something <em>different</em> and something <em>important</em>.  It took me a while to figure out and try to articulate exactly what that was, but I took my first swipe back in September when I called it a <a href="http://jeremy.zawodny.com/blog/archives/002526.html">Next Generation Web Service</a>.  In that posting, I said:</p>
+
+<blockquote>
+
+<p>Flickr has been on my radar for a while now, but I only recently began to start playing with it.  I'm impressed as hell.  After my first 10 minutes of playing with it, I found myself thinking "why don't we build stuff like this at Yahoo?"  In other words, I realized that we could probably learn <em>a lot</em> from this when it comes to building next generation applications at Yahoo.  (Whether or not we do is a whole separate topic of discussion.)</p>
+
+<p>Flickr has the potential to set the new standard for on-line photo sharing, management, etc.  Why?  Because Flickr...</p>
+
+<ul>
+
+<li>does one thing and does it well</li>
+
+<li>provides a clean and simple UI</li>
+
+<li>has clear and helpful documentation</li>
+
+<li>exposes core functionality with a <a href="http://www.flickr.com/services/api/">documented API</a></li>
+
+<li>account sign up is brain-dead simple</li>
+
+<li>makes extensive and intuitive use of RSS</li>
+
+<li>like <a href="http://del.icio.us/">del.icio.us</a>, uses tags to help organize</li>
+
+<li>doens't spam me with graphical/animated/flash ads or try to unexpectedly pop up <em>any</em> sort of window</li>
+
+</ul>
+
+<p>In other words, it's developer friendly, user friendly, and is a web site as well as a "service" or "platform" (in the <a href="http://www.web2con.com/">Web 2.0</a> sense) all at the same time.</p>
+
+</blockquote>
+
+<p>It was around that time that I jokingly responded to every mention of Flickr at the office with "you know, we should buy them..."  And I was only half joking.</p>
+
+<p>Be careful what you wish for, right? :-)</p>
+
+<p>Since then a lot has happened and I've had the chance to meet the Flickr team a few times.  That has only convinced me even more that they have what it takes to really change things.  Combining their mix of tagging, communities, syndication, open APIs, and interactive UI with Yahoo's services and millions of users will lead to even more great stuff.</p>
+
+<p>As Caterina <a href="http://blog.flickr.com/flickrblog/2005/03/yahoo_actually_.html">wrote</a>, this isn't about just throwing millions of users at Flickr or bolting Flickr onto Yahoo! Photos.  Think more deeply about it.  There are many parts of Yahoo that will be Flickrized in the coming months.  And with more resources available, Flickr itself will be able to grow like never before.</p>
+
+<p>Personally, I can't wait.  I've been really excited by the potential here for a while now.  And I don't mean the sort of "excited" people say when they're expected to say it.  If only you could ask the people around here that I've been taking to in recent weeks.</p>
+
+<p>It's such a relief to be able to talk openly about this.  There's obviously more good stuff in the works.  For starters, just think about how we could Flickrize <a href="http://360.yahoo.com/">Yahoo! 360</a> (and it's not even out yet!).  Oh, and I can finally stop pretending I don't know what my friends are talking about when they ask if there's something going on between the two companies!</p>
+
+<p>Sorry, <a href="http://www.bladam.com/archives/0412190006.htm">Adam</a>.  You guessed wrong on this one.</p>
+
+<h4>To the Flickr Team</h4>
+
+<p>Congrats and welcome to the Yahoo family.  It's a big one but you're going to be a very big part of it.  You have a lot of fans here--probably even more after today. :-)</p>
+
+<p>The next few months are probably going to be crazy.  But if any of you have questions about Yahoo or just want to grab lunch at URL's, give me a call/email/IM.  I'll do anything I can to help.</p>
+
+<p>You guys rock.</p>
+
+<h4>Related:</h4>
+
+<ul>
+
+<li><a href="http://blog.flickr.com/flickrblog/2005/03/yahoo_actually_.html">Yahoo actually does acquire Flickr</a> (Caterina's announcement on the <a href="http://blog.flickr.com/">Flickr blog</a>)</li>
+
+<!--
+<li><a href=""></a> (John Battelle comments on the news)</li>
+
+<li><a href=""></a> (the press release)</li>
+-->
+
+<li><a href="http://jeremy.zawodny.com/blog/archives/002526.html">Next Generation Web Services: Flickr</a> (when I first started writing about Flickr)</li>
+
+</ul>
+
+<p>More to come...</p>]]></content:encoded>
+      <dc:subject>Yahoo</dc:subject>
+      <dc:date>2005-03-20T12:56:26-08:00</dc:date>
+    </item>
+    <item>
+      <title>ETech, Yahoo! 360, Amazon, Open Search, and Generally Crazy Times</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004357.html</link>
+      <description>I&apos;ve been so busy between stuff going on at ETech and stuff back at Yahoo that I haven&apos;t had a chance to even post here. You probably heard about Yahoo! 360 (our answer to what happens when you combine your friends, your content (pictures, lists, reviews, etc), and a bit of blogging fu). I&apos;ll write more about it later, probably but am happy to see that some people &quot;get it.&quot; 360 was not designed to be YASNS (Yet Another Social...</description>
+      <guid isPermaLink="false">4357@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>I've been so busy between stuff going on at ETech and stuff back at Yahoo that I haven't had a chance to even post here.  You probably heard about Yahoo! 360 (our answer to what happens when you combine your friends, your content (pictures, lists, reviews, etc), and a bit of blogging fu).  I'll write more about it later, probably but am happy to see that <a href="http://www.yeald.com/Yeald/a/34521/article.html">some people</a> "get it."</p>
+
+<p>360 was not designed to be YASNS (Yet Another Social Networking Service).  The goal is not to amass as many "friends" as possible, unlike Friendster, Orkut, and others.  It's about making it easier to share stuff with people who <em>really are</em> you friends--tne ones you already talk to, email, IM, etc.</p>
+
+<p>ETech has been great.  I even got to ask Jeff Bezos about his space investments a couple hours ago.  What's really cool is that he comes to a conference like ETech and says around to just check out what's going on an talk to people.  He doesn't fly back to Seattle as soon as his talk is done or blow people off.  He's right at home among the geeks here.</p>
+
+<p>Speaking of Amazon, Udi Manber of a9.com told me he's heading to Tuscon for PC Forum after this.  He's taking the gps and camera equipment with him so that he can drive the streets and get more pictures for their sidewalk view of the area.  We also got to chat a bit about the <a href="http://opensearch.a9.com/">Open Search</a> via RSS concept that Jeff demonstrated yesterday.</p>
+
+<p>So much cool stuff, so little time.</p>
+
+<p>Also, while I'm doing an ETech inspired braindump of sorts, here's a mini-linkdump too:</p>
+
+<ul>
+
+<li><a href="http://www.infoworld.com/article/05/03/11/11OPstrategic_1.html">Don't throw out the SOAP with the bathwater</a> - Jon Udell writes about Yahoo! Search Web Services, REST, SOAP, and how there's room for all of it.</li>
+
+<li><a href="http://news.yahoo.com/news?tmpl=story&u=/zd/20050316/tc_zd/147936">Yahoo Service Combines Blogging, Social Networking</a> (ZDNet)</li>
+
+<li><a href="http://slashdot.org/article.pl?sid=05/03/16/1350210&from=rss">Yahoo! Tunes into Blogging and Social Networking</a> (Slashdot, uh oh)</li>
+
+<li><a href="http://blogs.forrester.com/charleneli/2005/03/yahoo_announces.html">Yahoo! announces blogging and social networking betas</a> (Charlene Li)</li>
+
+</ul>]]></content:encoded>
+      <dc:subject>Yahoo</dc:subject>
+      <dc:date>2005-03-16T23:38:52-08:00</dc:date>
+    </item>
+    <item>
+      <title>Headed to ETech in the Morning...</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004351.html</link>
+      <description>I have a 7:00am flight tomorrow down to San Diego for the 2005 Emerging Technologies Conference. The program looks great this year. They&apos;re even letting me speak: Introduction to Yahoo! Search Web Services. That topic&apos;s a big shock, I&apos;m sure. Anyway, if you&apos;re in town for the conference I hope we run into each other. Don&apos;t forget to drop by the Yahoo booth to get some goodies, find out about getting a job at Yahoo, etc. In theory I arrive...</description>
+      <guid isPermaLink="false">4351@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>I have a 7:00am flight tomorrow down to San Diego for the <a href="http://conferences.oreillynet.com/etech/">2005 Emerging Technologies Conference</a>.  The <a href="http://conferences.oreillynet.com/pub/w/36/program.html">program</a> looks great this year.  They're even letting me speak: <a href="http://conferences.oreillynet.com/cs/et2005/view/e_sess/7033">Introduction to Yahoo! Search Web Services</a>.  That topic's a big shock, I'm sure.</p>
+
+<p>Anyway, if you're in town for the conference I hope we run into each other.  Don't forget to drop by the Yahoo booth to get some goodies, find out about getting a job at Yahoo, etc.</p>
+
+<p>In theory I arrive in San Diego at ~8:30am and should be at the conference by 9:00am.  Let's see what Murphy has in store...</p>]]></content:encoded>
+      <dc:subject>Yahoo</dc:subject>
+      <dc:date>2005-03-14T20:48:27-08:00</dc:date>
+    </item>
+    <item>
+      <title>Transparensee&apos;s Discovery Search Engine</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004348.html</link>
+      <description>In Grokking Transparensee, John Battelle said the following: This is powerful stuff when you think about it, and it solves a core database search issue, at least for me: you know there is the right answer for the query you are entering, but damned if it isn&apos;t escaping you, due to the blunt nature of structured search. He&apos;s referring to Transparensee&apos;s Discovery Search Engine. He did a decent job of explaining what it is, but it&apos;s really one of those...</description>
+      <guid isPermaLink="false">4348@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>In <a href="http://battellemedia.com/archives/001312.php">Grokking Transparensee</a>, John Battelle said the following:</p>
+
+<blockquote>
+This is powerful stuff when you think about it, and it solves a core database search issue, at least for me: you know there is the right answer for the query you are entering, but damned if it isn't escaping you, due to the blunt nature of structured search.
+</blockquote>
+
+<p>He's referring to <a href="http://transparensee.com/">Transparensee</a>'s <a href="http://transparensee.com/products/">Discovery Search Engine</a>.  He did a decent job of explaining what it is, but it's really one of those "you really have to try it before you'll get it" technologies.</p>
+
+<p>Luckily Steve Lavine (the founder and CEO of Transparensee Systems) walked me through a few demos some time ago.  As their site indicates, the technology can be applied to a variety of "vertical search" markets:</p>
+
+<ul>
+
+<li>real estate</li>
+<li>dating</li>
+<li>restaurants</li>
+<li>many types of shopping and product comparison</li>
+
+</ul>
+
+<p>It's pretty cool stuff.  I expect that we'll see a lot more of this in the coming months.  Searching structured databases really shouldn't be any harder than searching the web, but it often is.  The "fuzzy" searching capabilities their technology adds does a good job of closing that gap.</p>
+
+<p>The more I think about it, I realize that this is the perfect case of a product that could benefit from a <a href="http://weblog.infoworld.com/udell/2005/02/21.html#a1182">screencast</a>.  I'll mention that to Steve.</p>]]></content:encoded>
+      <dc:subject>Random</dc:subject>
+      <dc:date>2005-03-14T08:09:38-08:00</dc:date>
+    </item>
+    <item>
+      <title>What about Microsoft&apos;s upcoming contextual advertising system?</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004337.html</link>
+      <description>I keep reading all these speculative posts about Yahoo getting into the contextual advertising game, being &quot;poised&quot; to compete with AdSense, and so on. But what surprises me is how little chatter about Microsoft I read. If people really think that MSN Search is Microsoft&apos;s only assault on the cash cow in Mountain View, there&apos;s some really good crack getting smoked. Maybe it&apos;s time to review Google&apos;s financials and think like like the monoplist that Microsoft is. If you wanted...</description>
+      <guid isPermaLink="false">4337@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>I keep reading all these speculative posts about Yahoo getting into the contextual advertising game, being <a href="http://yahoo.weblogsinc.com/entry/1234000070035506/">"poised" to compete with AdSense</a>, and so on.</p>
+
+<p>But what surprises me is how little chatter about Microsoft I read.  If people really think that MSN Search is Microsoft's only assault on the cash cow in Mountain View, there's some really good crack getting smoked.</p>
+
+<p>Maybe it's time to <a href="http://biz.yahoo.com/e/041115/goog10-q.html">review Google's financials</a> and think like like the monoplist that Microsoft is.  If you wanted to "pull a Netscape" on Google, would you merely attack them in the algorithmic search market?  Or would you go after the <em>real money</em> too?</p>
+
+<p>To quote their filing from last year:</p>
+
+<blockquote>
+We derive most of our revenues from fees we receive from our advertisers.
+</blockquote>
+
+<p>Luckily, they haven't forgotten their roots:</p>
+
+<blockquote>
+Our original business model consisted of licensing our search engine services to other web sites. In the first quarter of 2000, we introduced our first advertising program...
+</blockquote>
+
+<p>But I'm betting on a healthy dose of Redmond Greed to make this interesting.</p>
+
+<p>What do you think?</p>]]></content:encoded>
+      <dc:subject>Random</dc:subject>
+      <dc:date>2005-03-12T17:13:06-08:00</dc:date>
+    </item>
+    <item>
+      <title>To Portal or not To Portal?  Wrong question.</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004336.html</link>
+      <description><![CDATA[It seems that the portalization of Google comes up now and then. I just ran across a this quote on Technosailor: It seems Google is trying to experiment with elements of portal sites like My Yahoo! but still trying to remain in the business of purely search and rejecting the elements of portalhood that it doesn&rsquo;t like. I&rsquo;m not so sure you can be on both sides of the fence. Yeah, I'd agree with that. You can't be on the...]]></description>
+      <guid isPermaLink="false">4336@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>It seems that the portalization of Google comes up now and then.  I just ran across a <a href="http://www.technosailor.com/google-news-customization">this quote</a> on <a href="http://www.technosailor.com/">Technosailor</a>:</p>
+
+<blockquote>
+It seems Google is trying to experiment with elements of portal sites like My Yahoo! but still trying to remain in the business of purely search and rejecting the elements of portalhood that it doesn&rsquo;t like. I&rsquo;m not so sure you can be on both sides of the fence.
+</blockquote>
+
+<p>Yeah, I'd agree with that.  You can't be on the fence and Google is headed to portaldom.  But I think people are focusing on the wrong question, really.  The question they should be asking is this:</p>
+
+<blockquote>
+What will the next generation portal look like?
+</blockquote>
+
+<p>If their current products are any indication, most things fit into a "one box" view of the world.  By that I mean that each of their major properties have an obvious text input box and one or two buttons.  The interaction is in one of two modes:</p>
+
+<ol>
+
+<li>Type into the box and hit the button.  Look at results.</li>
+
+<li>Use other navigation to browse.  Repeat.</li>
+
+</ol>
+
+<p>It seems that Froogle, Logal/Maps, and Search (Web, Image, <strike>Transcript</strike> Video) are clearly in mode #1.  While Mail and Groups are unevenly split between #1 and #2.  That's not terribly surprising, since those two are more about communication and interaction.</p>
+
+<p>In other words, you may or may not begin by "searching" but will likely end up navigating content that may have ads nearby.  But I suspect that 95% or more of their current "sessions" begin with a search of some sort.  After all, Google is a <strike>advertising</strike> search company.</p>
+
+<p>I'm not convinced that the "one box" view of the world is going to be the primary mode of interaction over the next few years.  Are you?</p>]]></content:encoded>
+      <dc:subject>Google</dc:subject>
+      <dc:date>2005-03-12T16:59:51-08:00</dc:date>
+    </item>
+    <item>
+      <title>The Hopeless Email Battle</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004331.html</link>
+      <description>This sucks. I&apos;m trying to catch up on email this morning, so the first thing I did was move everything old than 30 days into an &quot;old&quot; folder that I&apos;ll probably never look at. But I do want it to be searchable. However, after doing so, I still have 674 unread and 1,125 total messages in my inbox. Grr. Time to make a &quot;14+ days old&quot; filter in Thunderbird and repeat the process, I guess. Update: Okay, I did the...</description>
+      <guid isPermaLink="false">4331@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>This sucks.  I'm trying to catch up on email this morning, so the first thing I did was move everything old than 30 days into an "old" folder that I'll probably never look at.  But I do want it to be <a href="http://jeremy.zawodny.com/blog/archives/004309.html">searchable</a>.</p>
+
+<p>However, after doing so, I still have 674 unread and 1,125 total messages in my inbox.</p>
+
+<p>Grr.</p>
+
+<p>Time to make a "14+ days old" filter in <a href="http://www.mozilla.org/products/thunderbird/">Thunderbird</a> and repeat the process, I guess.</p>
+
+<p><strong>Update:</strong> Okay, I did the 14+ day thing and brought it down to 412/612.  That's good, but the ratio of unread to read messages got a lot worse.  It's gonna be a long day.</p>]]></content:encoded>
+      <dc:subject>Random</dc:subject>
+      <dc:date>2005-03-11T08:20:36-08:00</dc:date>
+    </item>
+    <item>
+      <title>Customize Google News... Why?</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004328.html</link>
+      <description>Maybe I&apos;m seriously missing something and you can help me out here. I&apos;ve been known to drink the Google kool aid now and then, but their stuff is so... uneven. I know, I know. It&apos;s beta. And it has been for years. The &quot;big news&quot; is that you can now customize Google News and that&apos;s interesting I guess. But I use a few browsers and several computers. Without any sort of login or registration system, though, I have to make...</description>
+      <guid isPermaLink="false">4328@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>Maybe I'm seriously missing something and you can help me out here.  I've been known to <a href="http://jeremy.zawodny.com/blog/archives/004309.html">drink the Google kool aid</a> now and then, but their stuff is so... uneven.    I know, I know.  It's <em>beta</em>.  And it has been for <em>years</em>.</p>
+
+<p>The "big news" is that <a href="http://www.google.com/googleblog/2005/03/i-read-news-today-oh-boy.html">you can now customize</a> <a href="http://news.google.com/">Google News</a> and that's interesting I guess.</p>
+
+<p>But I use a few browsers and several computers.  Without any sort of login or registration system, though, I have to make the same customizations on each of those machines and on each browser.</p>
+
+<p>What the heck?</p>
+
+<p>Isn't that like having a version of <a href="http://my.yahoo.com/">My Yahoo!</a> that just forgets your settings every time you use a new computer?  That would really suck.</p>
+
+<p>Other than showing off some DHTML stuff, what's the deal with offering customization without a way of making my settings really persistent?</p>
+
+<p>If I'm missing the magic "login" link, please tell me where to look.</p>
+
+<p>Thanks.</p>]]></content:encoded>
+      <dc:subject>Google</dc:subject>
+      <dc:date>2005-03-10T22:38:46-08:00</dc:date>
+    </item>
+    <item>
+      <title>106 Miles #3: Jeff Winner</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004321.html</link>
+      <description>As with last time and the time before, last night&apos;s 106 Miles gathering was excellent. Who is Jeff Winner? As the site said: Jeff Winner is a principal in venture accelerator Alacrity Partners. He was most recently VP of engineering at Friendster, leading the well-known scaling and performance rewrite. Previous posts include Demandtec, eGroups, Netscape, Collabra, and Verity. In other words, he&apos;s been around the block a few times in Silicon Valley. He&apos;s learned a lot and had much to...</description>
+      <guid isPermaLink="false">4321@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>As with <a href="http://jeremy.zawodny.com/blog/archives/004156.html">last time</a> and <a href="http://jeremy.zawodny.com/blog/archives/003921.html">the time before</a>, last night's <a href="http://106miles.org/">106 Miles</a> gathering was excellent.</p>
+
+<p>Who is Jeff Winner?  As the site said:</p>
+
+<blockquote>
+
+Jeff Winner is a principal in venture accelerator Alacrity Partners. He was most recently VP of engineering at Friendster, leading the well-known scaling and performance rewrite. Previous posts include Demandtec, eGroups, Netscape, Collabra, and Verity.
+
+</blockquote>
+
+<p>In other words, he's been around the block a few times in Silicon Valley.  He's learned a lot and had much to share with us about the world of VCs, startups, scaling companies, and so on.</p>
+
+<p>Much of what was said is off the record, but I think everyone learned a lot from Jeff's honesty and experiences.  One amusing think we did learn is that VCs don't want to fund enterprise software startups.  That's just not interesting to them at all.</p>
+
+<p>Nobody was surprised by that either. :-)</p>
+
+<p>There were a lot of new faces at 106 Miles this time and I hope to see many returning next time.  Amusingly, when the topic of "how you learned about 106 Miles" came up at my table there were three common answers:</p>
+
+<ol>
+
+<li>Read about it on Jeremy's blog</li>
+
+<li>Read about it on Joyce's blog</li>
+
+<li>I'm a friend of Joyce</li>
+
+</ol>
+
+<p>Blogs are the new grapevine.</p>
+
+<p>Thanks again to Joyce and CommerceNet for making 106 Miles happen.</p>]]></content:encoded>
+      <dc:subject>Random</dc:subject>
+      <dc:date>2005-03-10T00:19:23-08:00</dc:date>
+    </item>
+    <item>
+      <title>Lunchtime Blogging Presentation by Charlene Li</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004320.html</link>
+      <description> Forrester analyst and blogger Charlene Li spoke to a packed room of marketing, PR, and other interested folks today at Yahoo. Her hour-long talk covered many aspects of blogging, corporate marketing, PR, and what she believes Yahoo can do. Luckily, she was able to skip most of the intro material since blogs really aren&apos;t new to Yahoo at this point. Instead she focused on what works, what doesn&apos;t, and how blogging is a mindset--not a technology. Amen to that!...</description>
+      <guid isPermaLink="false">4320@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>
+
+<img src="http://a964.g.akamaitech.net/f/964/714/1h/www.forrester.com/ER/Author/Image/gif/0,1508,86,00.gif" align="right" hspace="4" height="89" width="89"/>
+
+Forrester analyst and blogger <a href="http://forrester.typepad.com/charleneli/">Charlene Li</a> spoke to a packed room of marketing, PR, and other interested folks today at Yahoo.  Her hour-long talk covered many aspects of blogging, corporate marketing, PR, and what she believes Yahoo can do.</p>
+
+<p>Luckily, she was able to skip most of the intro material since blogs really aren't new to Yahoo at this point.  Instead she focused on what works, what doesn't, and how blogging is a mindset--not a technology.  Amen to that!</p>
+
+<p>I was glad to hear that she likes what we're doing with the <a href="http://www.ysearchblog.com/">Yahoo! Search blog</a> and the new <a href="http://developer.yahoo.net/blog/">YSDN blog</a>.  Once of her recommendations to us was... get this: more blogs!</p>
+
+<p>I don't think that surprised anybody.  But it's always good to hear it from the outside.</p>
+
+<p>Of course, she used me as an example a few times.  I kind of expected that. :-)</p>]]></content:encoded>
+      <dc:subject>Blogging</dc:subject>
+      <dc:date>2005-03-09T16:46:04-08:00</dc:date>
+    </item>
+    <item>
+      <title>The Relief of Leaving a Job</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004319.html</link>
+      <description>I&apos;ve noticed a funny thing in the last year or so. The vast majority of the time someone I know leaves a job (or is fired) two trends seem to recur: A sense of relief: &quot;I&apos;m so glad I&apos;m not at that place anymore.&quot; A complete loss of &quot;spare&quot; time: &quot;I&apos;m busier now than when I was working full-time!&quot; Maybe everyone should change jobs once or twice a decade? Maybe people should ask themselves a bit more often one question:...</description>
+      <guid isPermaLink="false">4319@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>I've noticed a funny thing in the last year or so.  The vast majority of the time someone I know leaves a job (or is fired) two trends seem to recur:</p>
+
+<ul>
+
+<li>A sense of relief:  "I'm so glad I'm not at that place anymore."</li>
+
+<li>A complete loss of "spare" time: "I'm busier now than when I was working full-time!"</li>
+
+</ul>
+
+<p>Maybe everyone should change jobs once or twice a decade?  Maybe people should ask themselves a bit more often one question: <a href="http://jeremy.zawodny.com/blog/archives/000411.html">What Should I Do With My Life?</a></p>
+
+<p>Who knows...</p>]]></content:encoded>
+      <dc:subject>Random</dc:subject>
+      <dc:date>2005-03-09T13:11:00-08:00</dc:date>
+    </item>
+    <item>
+      <title>Congrats to Mark Jen, now at Plaxo</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004316.html</link>
+      <description>It looks like Mark found himself a new job (Plaxo) after a whirlwind of media attention and job interviews. Congrats, Mark. Lemme know if you want to drop by Yahoo for lunch again sometime....</description>
+      <guid isPermaLink="false">4316@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>It looks like Mark found himself <a href="http://99zeros.blogspot.com/2005/03/hello-plaxo.html">a new job</a> (Plaxo) after a whirlwind of media attention and job interviews.</p>
+
+<p>Congrats, Mark.</p>
+
+<p>Lemme know if you want to drop by Yahoo for lunch again sometime.</p>]]></content:encoded>
+      <dc:subject>Random</dc:subject>
+      <dc:date>2005-03-08T03:43:47-08:00</dc:date>
+    </item>
+    <item>
+      <title>I Love March Weather in the Bay Area</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004315.html</link>
+      <description>Need I say more than this? And to think, just a couple days ago I was looking at snow in Tokyo....</description>
+      <guid isPermaLink="false">4315@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>Need I say more than this?</p>
+
+<p align="center">
+<a href="http://www.wunderground.com/US/CA/Santa_Clara.html">
+<img src="http://jeremy.zawodny.com/i/march-wx.png" height="212" width="536" border="0"/>
+</a>
+</p>
+
+<p>And to think, just a couple days ago I was looking at snow in Tokyo.</p>]]></content:encoded>
+      <dc:subject>Personal</dc:subject>
+      <dc:date>2005-03-08T03:35:41-08:00</dc:date>
+    </item>
+    <item>
+      <title>Yahoo! Search APIs Inspire WeatherBug APIs?</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004314.html</link>
+      <description>Steve Rubel just sent me a note to point at this post on the WeatherBug blog: The main reason the Yahoo API story grabbed my attention is because I have always thought about creating a developers API for WeatherBug. There are so many applications that can be developed with WeatherBug data, but there is no way that we have enough time and resources to develop them all on our own. So, why not give developers out there a chance to...</description>
+      <guid isPermaLink="false">4314@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p><a href="http://steverubel.typepad.com/micropersuasion/">Steve Rubel</a> just sent me a note to point at <a href="http://blog.weatherbug.com/index.php?/corporate/yahoo_search_engine_api_and_weatherbug/">this post</a> on the <a href="http://blog.weatherbug.com/index.php?/corporate/">WeatherBug blog</a>:</p>
+
+<blockquote>
+The main reason the Yahoo API story grabbed my attention is because I have always thought about creating a developers API for WeatherBug. There are so many applications that can be developed with WeatherBug data, but there is no way that we have enough time and resources to develop them all on our own. So, why not give developers out there a chance to develop their own applications using our data?
+</blockquote>
+
+<p>Cool.  It's always refreshing to see someone else look at a project you helped with and realize that there are good reasons for them to go the same route.</p>
+
+<p>Maybe it's time to nudge the <a href="http://weather.yahoo.com/">Yahoo! Weather</a> folks a bit too? :-)</p>]]></content:encoded>
+      <dc:subject>Yahoo</dc:subject>
+      <dc:date>2005-03-08T03:22:16-08:00</dc:date>
+    </item>
+    <item>
+      <title>Beer in Japan</title>
+      <link>http://jeremy.zawodny.com/blog/archives/004313.html</link>
+      <description>Some of the little things about visiting Japan amuse me the most. As an example, while browsing a store on Sunday we came across Diet Beer: And the fact that Budwiser is an import in Japan, and therefore more desirable by some, takes a bit of getting used to as well. All in all, I had a good trip. I&apos;ll surely have more to say about it in the next few days....</description>
+      <guid isPermaLink="false">4313@http://jeremy.zawodny.com/blog/</guid>
+      <content:encoded><![CDATA[<p>Some of the little things about visiting Japan amuse me the most.  As an example, while browsing a store on Sunday we came across Diet Beer:</p>
+
+<p align="center">
+<a href="http://www.flickr.com/photos/jzawodn/6114002/" title="Diet Beer"><img src="http://photos3.flickr.com/6114002_6c78f60d6b_m.jpg" width="240" height="180" alt="Diet Beer" border="0"/></a>
+</p>
+
+<p>And the fact that Budwiser is an <em>import</em> in Japan, and therefore more desirable by some, takes a bit of getting used to as well.</p>
+
+<p align="center">
+<a href="http://www.flickr.com/photos/jzawodn/6113982/" title="Budweiser is an Import in Japan"><img src="http://photos3.flickr.com/6113982_e7b7433907_m.jpg" width="240" height="180" alt="Budweiser is an Import in Japan" border="0" /></a>
+</p>
+
+<p>All in all, I had a good trip.  I'll surely have more to say about it in the next few days.</p>]]></content:encoded>
+      <dc:subject>Random</dc:subject>
+      <dc:date>2005-03-08T02:53:29-08:00</dc:date>
+    </item>
+
+
+  </channel>
+</rss>

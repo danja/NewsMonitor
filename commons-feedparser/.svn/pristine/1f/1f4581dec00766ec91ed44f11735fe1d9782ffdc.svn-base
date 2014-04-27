@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+<channel rdf:about="http://del.icio.us/tag/programming">
+<title>del.icio.us/tag/programming</title>
+<link>http://del.icio.us/tag/programming</link>
+<description></description>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://www.apple.com/macosx/features/xcode/" />
+  <rdf:li rdf:resource="http://www.mozilla.org/xpfe/goodcss.html" />
+  <rdf:li rdf:resource="http://www.evillabs.net/tivo/" />
+  <rdf:li rdf:resource="http://www.angelcode.com/dev/callconv/callconv.html" />
+  <rdf:li rdf:resource="http://www.paulgraham.com/redund.html" />
+  <rdf:li rdf:resource="http://www.cssbeauty.com/" />
+  <rdf:li rdf:resource="http://www.edge.org/digerati/simonyi/simonyi_p1.html" />
+  <rdf:li rdf:resource="http://pyobjc.sourceforge.net/" />
+  <rdf:li rdf:resource="http://developer.apple.com/" />
+  <rdf:li rdf:resource="http://www.htmlhelp.com/reference/css/" />
+  <rdf:li rdf:resource="http://www.amazon.com/gp/browse.html/102-5660839-0580131?_encoding=UTF8&amp;node=3435361" />
+  <rdf:li rdf:resource="http://www.proggyfonts.com/index.php?menu=download" />
+  <rdf:li rdf:resource="http://www.google.com/apis/" />
+  <rdf:li rdf:resource="http://www.orablogs.com/duffblog/archives/000536.html" />
+  <rdf:li rdf:resource="http://www.wordlog.com/" />
+  <rdf:li rdf:resource="http://www.csszengarden.com/" />
+  <rdf:li rdf:resource="http://www.orbworks.com/pcce/index.html" />
+  <rdf:li rdf:resource="http://macromates.com/sigpipe/archives/2004/09/05/using-openssl-for-license-keys" />
+  <rdf:li rdf:resource="http://209.87.142.42//y/programr.htm" />
+  <rdf:li rdf:resource="http://trac.cherrypy.org/" />
+  <rdf:li rdf:resource="http://www.murkworks.com/Research/Python/PocketPCPython/Overview" />
+  <rdf:li rdf:resource="http://starship.python.net/crew/zack/pymagick/" />
+  <rdf:li rdf:resource="http://www.php.net/" />
+  <rdf:li rdf:resource="http://aspn.activestate.com/ASPN/PHP/Cookbook" />
+  <rdf:li rdf:resource="http://www.codegeneration.net/articles/mdpuxslt.pdf" />
+  <rdf:li rdf:resource="http://nslog.com/archives/cat_software_development.php" />
+  <rdf:li rdf:resource="http://poignantguide.net/ruby/" />
+  <rdf:li rdf:resource="http://www.cs.ru.nl/~clean/index.html" />
+  <rdf:li rdf:resource="http://dave.imarc.net/php/" />
+  <rdf:li rdf:resource="http://www.wabasoft.com/" />
+  <rdf:li rdf:resource="http://www.ewesoft.com/" />
+ </rdf:Seq>
+</items>
+</channel>
+
+<item rdf:about="http://www.apple.com/macosx/features/xcode/">
+<title>Apple - Mac OS X - Features - Xcode</title>
+<link>http://www.apple.com/macosx/features/xcode/</link>
+<description>XCode IDE does everything for Java, GNU, Mac OS X Cocoa or Applescript developers. And distributed builds and SVN as well as CVS support, fully Applescriptable.</description>
+<dc:creator>johncollins</dc:creator>
+<dc:date>2005-01-23T03:42Z</dc:date>
+<dc:subject>applescript cocoa java macintosh macosx objective-c programming xcode</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/macintosh" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+    <rdf:li resource="http://del.icio.us/tag/xcode" />
+    <rdf:li resource="http://del.icio.us/tag/macosx" />
+    <rdf:li resource="http://del.icio.us/tag/objective-c" />
+    <rdf:li resource="http://del.icio.us/tag/cocoa" />
+    <rdf:li resource="http://del.icio.us/tag/java" />
+    <rdf:li resource="http://del.icio.us/tag/applescript" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.mozilla.org/xpfe/goodcss.html">
+<title>Good CSS</title>
+<link>http://www.mozilla.org/xpfe/goodcss.html</link>
+<dc:creator>xenoguy</dc:creator>
+<dc:date>2005-01-23T03:37Z</dc:date>
+<dc:subject>programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.evillabs.net/tivo/">
+<title>TiVo To Go MPEG2 Decrypting</title>
+<link>http://www.evillabs.net/tivo/</link>
+<dc:creator>sagev_efil</dc:creator>
+<dc:date>2005-01-23T03:36Z</dc:date>
+<dc:subject>hacking howto programming software tech technology tivo tools</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/hacking" />
+    <rdf:li resource="http://del.icio.us/tag/howto" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+    <rdf:li resource="http://del.icio.us/tag/software" />
+    <rdf:li resource="http://del.icio.us/tag/tech" />
+    <rdf:li resource="http://del.icio.us/tag/technology" />
+    <rdf:li resource="http://del.icio.us/tag/tools" />
+    <rdf:li resource="http://del.icio.us/tag/tivo" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.angelcode.com/dev/callconv/callconv.html">
+<title>Calling conventions on the x86 platform</title>
+<link>http://www.angelcode.com/dev/callconv/callconv.html</link>
+<dc:creator>nuvem</dc:creator>
+<dc:date>2005-01-23T03:36Z</dc:date>
+<dc:subject>asm c++ programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+    <rdf:li resource="http://del.icio.us/tag/asm" />
+    <rdf:li resource="http://del.icio.us/tag/c++" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.paulgraham.com/redund.html">
+<title>Kragen Sitaker on Redundancy and Power</title>
+<link>http://www.paulgraham.com/redund.html</link>
+<description>I wrote this a couple of years ago in response to Paul Graham's essay, entitled "Succinctness is Power."  It argues that programming-language power is more than succinctness; I'm pleasantly surprised at how well it's held up.</description>
+<dc:creator>kragen</dc:creator>
+<dc:date>2005-01-23T03:33Z</dc:date>
+<dc:subject>programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.cssbeauty.com/">
+<title>CSS Beauty | CSS Design Showcase</title>
+<link>http://www.cssbeauty.com/</link>
+<dc:creator>xenoguy</dc:creator>
+<dc:date>2005-01-23T03:28Z</dc:date>
+<dc:subject>programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.edge.org/digerati/simonyi/simonyi_p1.html">
+<title>EDGE Digerati: The WYSIWYG - Charles Simonyi</title>
+<link>http://www.edge.org/digerati/simonyi/simonyi_p1.html</link>
+<dc:creator>manasgarg</dc:creator>
+<dc:date>2005-01-23T03:26Z</dc:date>
+<dc:subject>intentional literate programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/intentional" />
+    <rdf:li resource="http://del.icio.us/tag/literate" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://pyobjc.sourceforge.net/">
+<title>PyObjC - Home</title>
+<link>http://pyobjc.sourceforge.net/</link>
+<dc:creator>kamo</dc:creator>
+<dc:date>2005-01-23T03:18Z</dc:date>
+<dc:subject>osx programming python</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/osx" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+    <rdf:li resource="http://del.icio.us/tag/python" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://developer.apple.com/">
+<title>Apple Developer Connection</title>
+<link>http://developer.apple.com/</link>
+<dc:creator>workindog</dc:creator>
+<dc:date>2005-01-23T03:07Z</dc:date>
+<dc:subject>computing.mac programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/computing.mac" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.htmlhelp.com/reference/css/">
+<title>Guide to Cascading Style Sheets</title>
+<link>http://www.htmlhelp.com/reference/css/</link>
+<dc:creator>BBH</dc:creator>
+<dc:date>2005-01-23T03:05Z</dc:date>
+<dc:subject>Programming Stylesheets</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/Programming" />
+    <rdf:li resource="http://del.icio.us/tag/Stylesheets" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.amazon.com/gp/browse.html/102-5660839-0580131?_encoding=UTF8&amp;node=3435361">
+<title>Amazon.com</title>
+<link>http://www.amazon.com/gp/browse.html/102-5660839-0580131?_encoding=UTF8&amp;node=3435361</link>
+<dc:creator>flanderb</dc:creator>
+<dc:date>2005-01-23T03:00Z</dc:date>
+<dc:subject>amazon api programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/amazon" />
+    <rdf:li resource="http://del.icio.us/tag/api" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.proggyfonts.com/index.php?menu=download">
+<title>Proggy Fonts</title>
+<link>http://www.proggyfonts.com/index.php?menu=download</link>
+<dc:creator>andreia</dc:creator>
+<dc:date>2005-01-23T03:00Z</dc:date>
+<dc:subject>fonts programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/fonts" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.google.com/apis/">
+<title>Google Web APIs - Home</title>
+<link>http://www.google.com/apis/</link>
+<dc:creator>flanderb</dc:creator>
+<dc:date>2005-01-23T02:59Z</dc:date>
+<dc:subject>api google programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/google" />
+    <rdf:li resource="http://del.icio.us/tag/api" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.orablogs.com/duffblog/archives/000536.html">
+<title>Duffblog: Writing an Extension for Firefox</title>
+<link>http://www.orablogs.com/duffblog/archives/000536.html</link>
+<dc:creator>cameronp</dc:creator>
+<dc:date>2005-01-23T02:57Z</dc:date>
+<dc:subject>extensions mozilla programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/mozilla" />
+    <rdf:li resource="http://del.icio.us/tag/extensions" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.wordlog.com/">
+<title>wordlog</title>
+<link>http://www.wordlog.com/</link>
+<description>the latest in the WordPress world</description>
+<dc:creator>feaverish</dc:creator>
+<dc:date>2005-01-23T02:57Z</dc:date>
+<dc:subject>blog design programming web wordpress</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/wordpress" />
+    <rdf:li resource="http://del.icio.us/tag/web" />
+    <rdf:li resource="http://del.icio.us/tag/design" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+    <rdf:li resource="http://del.icio.us/tag/blog" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.csszengarden.com/">
+<title>css Zen Garden: The Beauty in CSS Design</title>
+<link>http://www.csszengarden.com/</link>
+<dc:creator>xenoguy</dc:creator>
+<dc:date>2005-01-23T02:56Z</dc:date>
+<dc:subject>art programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/art" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.orbworks.com/pcce/index.html">
+<title>PocketC for Windows CE</title>
+<link>http://www.orbworks.com/pcce/index.html</link>
+<dc:creator>JackWilliamBell</dc:creator>
+<dc:date>2005-01-23T02:43Z</dc:date>
+<dc:subject>PDA Programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/PDA" />
+    <rdf:li resource="http://del.icio.us/tag/Programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://macromates.com/sigpipe/archives/2004/09/05/using-openssl-for-license-keys">
+<title>SIGPIPE 13 » Using OpenSSL for license keys</title>
+<link>http://macromates.com/sigpipe/archives/2004/09/05/using-openssl-for-license-keys</link>
+<dc:creator>zachad</dc:creator>
+<dc:date>2005-01-23T02:40Z</dc:date>
+<dc:subject>programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://209.87.142.42//y/programr.htm">
+<title>A Programmer's Guide to the Mind</title>
+<link>http://209.87.142.42//y/programr.htm</link>
+<dc:creator>andreia</dc:creator>
+<dc:date>2005-01-23T02:39Z</dc:date>
+<dc:subject>programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://trac.cherrypy.org/">
+<title>CherryPy - a pythonic, object-oriented web development framework</title>
+<link>http://trac.cherrypy.org/</link>
+<description>python programming</description>
+<dc:creator>denimboy</dc:creator>
+<dc:date>2005-01-23T02:34Z</dc:date>
+<dc:subject>programming python</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/python" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.murkworks.com/Research/Python/PocketPCPython/Overview">
+<title>Python 2.2+ for the Microsoft Pocket PC</title>
+<link>http://www.murkworks.com/Research/Python/PocketPCPython/Overview</link>
+<dc:creator>JackWilliamBell</dc:creator>
+<dc:date>2005-01-23T02:20Z</dc:date>
+<dc:subject>PDA Programming Python</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/PDA" />
+    <rdf:li resource="http://del.icio.us/tag/Programming" />
+    <rdf:li resource="http://del.icio.us/tag/Python" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://starship.python.net/crew/zack/pymagick/">
+<title>Python Magick</title>
+<link>http://starship.python.net/crew/zack/pymagick/</link>
+<dc:creator>ghost</dc:creator>
+<dc:date>2005-01-23T02:18Z</dc:date>
+<dc:subject>programming python</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/python" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.php.net/">
+<title>PHP: Hypertext Preprocessor</title>
+<link>http://www.php.net/</link>
+<dc:creator>cobyrne</dc:creator>
+<dc:date>2005-01-23T02:14Z</dc:date>
+<dc:subject>php programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/php" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://aspn.activestate.com/ASPN/PHP/Cookbook">
+<title>ActiveState open source programming cookbooks code samples ratings review</title>
+<link>http://aspn.activestate.com/ASPN/PHP/Cookbook</link>
+<dc:creator>cobyrne</dc:creator>
+<dc:date>2005-01-23T02:13Z</dc:date>
+<dc:subject>php programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/php" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.codegeneration.net/articles/mdpuxslt.pdf">
+<title>mdpuxslt.pdf (application/pdf Object)</title>
+<link>http://www.codegeneration.net/articles/mdpuxslt.pdf</link>
+<dc:creator>wencho</dc:creator>
+<dc:date>2005-01-23T02:10Z</dc:date>
+<dc:subject>programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://nslog.com/archives/cat_software_development.php">
+<title>NSLog(); - Erik J. Barzeski</title>
+<link>http://nslog.com/archives/cat_software_development.php</link>
+<description>information on programming the Macintosh OS X using Cocoa APIs and other goodies</description>
+<dc:creator>johncollins</dc:creator>
+<dc:date>2005-01-23T02:07Z</dc:date>
+<dc:subject>apple cocoa macintosh macosx programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+    <rdf:li resource="http://del.icio.us/tag/macintosh" />
+    <rdf:li resource="http://del.icio.us/tag/macosx" />
+    <rdf:li resource="http://del.icio.us/tag/cocoa" />
+    <rdf:li resource="http://del.icio.us/tag/apple" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://poignantguide.net/ruby/">
+<title>Why's (Poignant) Guide to Ruby</title>
+<link>http://poignantguide.net/ruby/</link>
+<description>Overview and Introduction to Ruby (with foxes)</description>
+<dc:creator>esinclai</dc:creator>
+<dc:date>2005-01-23T02:04Z</dc:date>
+<dc:subject>code development programming ruby tutorial</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/code" />
+    <rdf:li resource="http://del.icio.us/tag/development" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+    <rdf:li resource="http://del.icio.us/tag/ruby" />
+    <rdf:li resource="http://del.icio.us/tag/tutorial" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.cs.ru.nl/~clean/index.html">
+<title>Home</title>
+<link>http://www.cs.ru.nl/~clean/index.html</link>
+<dc:creator>snowgen</dc:creator>
+<dc:date>2005-01-23T02:03Z</dc:date>
+<dc:subject>programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://dave.imarc.net/php/">
+<title>PHP Scripts and Resources [dave.imarc.net]</title>
+<link>http://dave.imarc.net/php/</link>
+<dc:creator>mongoman</dc:creator>
+<dc:date>2005-01-23T02:02Z</dc:date>
+<dc:subject>computer internet php programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/computer" />
+    <rdf:li resource="http://del.icio.us/tag/internet" />
+    <rdf:li resource="http://del.icio.us/tag/programming" />
+    <rdf:li resource="http://del.icio.us/tag/php" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.wabasoft.com/">
+<title>waba -- programming language and VM for portable devices</title>
+<link>http://www.wabasoft.com/</link>
+<dc:creator>JackWilliamBell</dc:creator>
+<dc:date>2005-01-23T01:53Z</dc:date>
+<dc:subject>PDA Programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/PDA" />
+    <rdf:li resource="http://del.icio.us/tag/Programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+<item rdf:about="http://www.ewesoft.com/">
+<title>Welcome to the home of the Ewe programming system.</title>
+<link>http://www.ewesoft.com/</link>
+<description>"Ewe is a programming system that allows you to write applications, using Java, which run exactly the same on desktop systems, on mobile systems, and even in a Web browser as an Applet."</description>
+<dc:creator>JackWilliamBell</dc:creator>
+<dc:date>2005-01-23T01:51Z</dc:date>
+<dc:subject>PDA Programming</dc:subject>
+<taxo:topics>
+  <rdf:Bag>
+    <rdf:li resource="http://del.icio.us/tag/PDA" />
+    <rdf:li resource="http://del.icio.us/tag/Programming" />
+  </rdf:Bag>
+</taxo:topics>
+</item>
+
+</rdf:RDF>
+

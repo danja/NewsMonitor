@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="wordpress/1.5-alpha-6" -->
+<rss version="2.0" 
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+>
+
+<channel>
+	<title>WordPress WordBlog</title>
+	<link>http://wordpress.org/development</link>
+	<description>Updates and information relevant to the development of WordPress</description>
+	<copyright>Copyright 2005</copyright>
+	<pubDate>Wed, 02 Feb 2005 22:04:47 +0000</pubDate>
+	<generator>http://wordpress.org/?v=1.5-alpha-6</generator>
+
+		<item>
+		<title>Matt and Ryan talk about 1.5</title>
+		<link>http://wordpress.org/development/2005/02/matt-and-ryan-talk-about-15/</link>
+		<comments>http://wordpress.org/development/2005/02/matt-and-ryan-talk-about-15/#comments</comments>
+		<pubDate>Wed, 02 Feb 2005 22:03:27 +0000</pubDate>
+		
+	<category>Interviews</category>		<guid>http://wordpress.org/development/2005/02/matt-and-ryan-talk-about-15/</guid>
+		<description>Craig Hartel, aka NuclearMoose sits down with Matt and Ryan, and asks them a few question about WordPress 1.5, Life, and Everything in The Inside Scoop - an interview of sorts.
+
+Matt talks about helping out with managing the project, while also keeping track of changes in one's personal and professional ...</description>
+		<content:encoded><![CDATA[	<p>Craig Hartel, aka <a href="http://blog.nuclearmoose.com/">NuclearMoose</a> sits down with <a href="http://photomatt.net">Matt</a> and <a href="http://boren.nu">Ryan</a>, and asks them a few question about WordPress 1.5, Life, and Everything in <a href="http://blog.nuclearmoose.com/archives/2005/01/27/the-inside-scoop/">The Inside Scoop</a> - an interview of sorts.</p>
+	<p>Matt talks about helping out with managing the project, while also keeping track of changes in one&#8217;s personal and professional lives, and also about why he&#8217;s excited about the forthcoming 1.5 release. Ryan, who has been busy with regularly fine-tuning WordPress and fixing bugs, talks about some of the more significant bug fixes and feature changes.
+</p>
+]]></content:encoded>
+		<wfw:commentRSS>http://wordpress.org/development/2005/02/matt-and-ryan-talk-about-15/feed/</wfw:commentRSS>
+	</item>
+		<item>
+		<title>The WordPress Plugin Repository</title>
+		<link>http://wordpress.org/development/2005/01/the-wordpress-plugin-repository/</link>
+		<comments>http://wordpress.org/development/2005/01/the-wordpress-plugin-repository/#comments</comments>
+		<pubDate>Mon, 10 Jan 2005 19:03:04 +0000</pubDate>
+		
+	<category>Development</category>		<guid>http://wordpress.org/development/2005/01/the-wordpress-plugin-repository/</guid>
+		<description>We are proud to announce wp-plugins.org, the WordPress Plugin repository. A need was felt for a set of common tools, and a common playground for developers creating plugins and themes to extend WordPress. WP-Plugins.org seeks to fill the gap by providing stable and reliable hosting, complete with version control, an ...</description>
+		<content:encoded><![CDATA[	<p>We are proud to announce <a href="http://dev.wp-plugins.org">wp-plugins.org</a>, the WordPress Plugin repository. A need was felt for a set of common tools, and a common playground for developers creating plugins and themes to extend WordPress. WP-Plugins.org seeks to fill the gap by providing <a href="http://dev.wp-plugins.org/wiki/AboutHosting">stable and reliable hosting</a>, complete with <a href="http://dev.wp-plugins.org/wiki/VersionControl">version control</a>, an <a href="http://dev.wp-plugins.org/wiki/TracTickets">issue tracker</a>, and wiki to the developers, absolutely free.</p>
+	<p>All of the <a href="http://dev.wp-plugins.org/">Plugin Repository</a> is powered by <a href="http://trac.edgewall.com/">Trac</a> - an integrated SCM (Source Control Management) and project management tool. Version control is provided using <a href="http://subversion.tigris.org/">Subversion</a>. Subversion is the source management tool WordPress itself will be using after the 1.5 release. </p>
+	<p><strong>Developers</strong> can:</p>
+	<ul>
+	<li>Host their development for <strong>free</strong></li>
+	<li>Be assured of <strong>high visibility</strong> </li>
+	<li><strong>Manage their code</strong> using an <a href="http://subversion.tigris.org/project_links.html">SVN client</a></li>
+	<li><strong>Track issues</strong> (bugs) using the <a href="http://dev.wp-plugins.org/wiki/TracTickets">tracker</a></li>
+	<li><strong>Provide documentation</strong> using the <a href="http://dev.wp-plugins.org/wiki">wiki</a> with the help of end-users.</li>
+	</ul>
+	<p><strong>WordPress Users</strong> can:</p>
+	<ul>
+	<li><a href="http://dev.wp-plugins.org/browser/"><strong>Browse</strong></a> all the plugins and themes.</li>
+	<li><strong>Download</strong> plugins and themes from one location.</li>
+	<li><strong>Provide feedback</strong> to plugin developers using the tracker.<br />
+Help improve the plugin or theme.</li>
+	<li>Develop documentation at the wiki page for the plugins they use.</li>
+	<li>Stay in the the loop using the <a href="http://dev.wp-plugins.org/wiki/TracRss">RSS feeds</a>.</li>
+	</ul>
+	<p>If you have developed plugins or themes for WordPress, or if you are engaged in the process, we strongly urge you to check it in to this community resource. <a href="http://dev.wp-plugins.org/wiki/GetHosted">Get hosted</a> &#8212; a simple email is all it takes to get started. Things have been <a href="http://dev.wp-plugins.org/timeline">busy</a> in the few weeks the service has been around and in testing. About <a href="http://svn.wp-plugins.org/">60 plugins</a> have already been checked in by their developers. Checking in your plugin or theme is the best way to expose your plugin to a vast cross-section of WordPress users, without having to worry about bandwidth. It also makes it much easier to collaborate with other developers, should you choose to.</p>
+	<p>At this point the Plugin Repository is mainly aimed at developers and more savvy users, but if you can find your way around the interface it will prove a very powerful resource. Trac makes it simple to <a href="http://dev.wp-plugins.org/wiki/TracBrowser">browse the plugins</a> and download the latest version, and if the interest that has been shown so far by the WordPress hacker community is any indication, the repository is where the action is gonna be. So regardless of whether you are a developer or an end-user, <a href="http://dev.wp-plugins.org">check it out now</a>.</p>
+	<p>That said, we plan to create a friendlier front-end to the repository aimed specifically at new users in the coming months, stay tuned.
+</p>
+]]></content:encoded>
+		<wfw:commentRSS>http://wordpress.org/development/2005/01/the-wordpress-plugin-repository/feed/</wfw:commentRSS>
+	</item>
+		<item>
+		<title>ArsTechnica : Web Application of the Year</title>
+		<link>http://wordpress.org/development/2005/01/web-app-of-year/</link>
+		<comments>http://wordpress.org/development/2005/01/web-app-of-year/#comments</comments>
+		<pubDate>Thu, 06 Jan 2005 19:21:09 +0000</pubDate>
+		
+	<category>Newsletter</category>		<guid>http://wordpress.org/development/2005/01/web-app-of-year/</guid>
+		<description>We hope the new year brings cheer and good news to your life.  For the WordPress family, the year starts on a positive note. ArsTechnica names WordPress the Web Application of the Year (2004)!
+
+The blurb reads:
+
+Let's face it. Blogs are in fashion, and why not? Vanity knows no bounds, ...</description>
+		<content:encoded><![CDATA[	<p>We hope the new year brings cheer and good news to your life.  For the WordPress family, the year starts on a positive note. <a href="http://arstechnica.com">ArsTechnica</a> names WordPress the <a href="http://arstechnica.com/columns/linux/linux-20050102.ars/2">Web Application of the Year</a> (2004)!</p>
+	<p>The blurb reads:</p>
+	<blockquote><p>Let&#8217;s face it. Blogs are in fashion, and why not? Vanity knows no bounds, and there are some people who actually do something productive with theirs. From the influence of blogs on the coverage of the US presidential elections to every random teenager who has problems with their partner/parent/teacher/cat, blogs are out there allowing your most intimate feelings to be shared with random people at wifi hotspots. WordPress is the most prominent rising star of weblog software, completely free and with a large and active community. Styles, plugins and hacks are readily available, with problems such as comment spamming being addressed far more rapidly than competing applications.
+</p></blockquote>
+	<p>Congratulations to the WordPress family!</p>
+	<p>2004 was defintely the year of the &#8220;switcher&#8221; for WordPress. May 2005 bring a lot of first-time bloggers to the community. With each succeeding version, WordPress is becoming more user-friendly, less complicated, and more useful.
+</p>
+]]></content:encoded>
+		<wfw:commentRSS>http://wordpress.org/development/2005/01/web-app-of-year/feed/</wfw:commentRSS>
+	</item>
+		<item>
+		<title>Version Skip</title>
+		<link>http://wordpress.org/development/2004/12/version-skip/</link>
+		<comments>http://wordpress.org/development/2004/12/version-skip/#comments</comments>
+		<pubDate>Wed, 29 Dec 2004 02:33:19 +0000</pubDate>
+		
+	<category>Development</category>		<guid>http://wordpress.org/development/2004/12/version-skip/</guid>
+		<description>Some enterprising individuals have noticed that the version number in the nightly builds has jumped from 1.3 to 1.5. I've heard a number of interesting ideas for why this is, including:
+
+
+	Even numbers are soooo 2004
+	2 + 3 = 5 (who can argue with that?)
+	They released 1.3 without telling us
+	They're switching ...</description>
+		<content:encoded><![CDATA[	<p>Some enterprising individuals have noticed that the version number in the nightly builds has jumped from 1.3 to 1.5. I&#8217;ve heard a number of interesting ideas for why this is, including:</p>
+	<ul>
+	<li>Even numbers are soooo 2004</li>
+	<li>2 + 3 = 5 (who can argue with that?)</li>
+	<li>They released 1.3 without telling us</li>
+	<li>They&#8217;re switching to letters (WordPress XP, WordPress CS, WordPress MX)</li>
+	<li>They&#8217;re switching to years (WordPress 2004, WordPress 2005&#8230;)</li>
+	</ul>
+	<p>If you have your own theory then ping this entry. The funniest ping gets a free copy of WordPress 1.2005 XP edition.</p>
+	<p>(The real reason is we wanted the version to be indictative of the changes in the underlying codebase, and 1.5 has <strong>a lot</strong>. We&#8217;re still pretty conservative with version numbers though, if we were Microsoft we&#8217;d be on 10.0 already.)
+</p>
+]]></content:encoded>
+		<wfw:commentRSS>http://wordpress.org/development/2004/12/version-skip/feed/</wfw:commentRSS>
+	</item>
+		<item>
+		<title>Mailing Lists Down</title>
+		<link>http://wordpress.org/development/2004/12/mailing-lists-down/</link>
+		<comments>http://wordpress.org/development/2004/12/mailing-lists-down/#comments</comments>
+		<pubDate>Thu, 23 Dec 2004 09:52:28 +0000</pubDate>
+		
+	<category>Development</category>		<guid>http://wordpress.org/development/2004/12/mailing-lists-down/</guid>
+		<description>Just a quick note to say the WordPress discussion lists will be down for a few more hours while we transition the archives and subscriptions from the old system to the new one. When everything is back to normal we'll update this post.
+
+I hope everyone is enjoying the holidays as ...</description>
+		<content:encoded><![CDATA[	<p>Just a quick note to say the <a href="http://codex.wordpress.org/Mailing_Lists">WordPress discussion lists</a> will be down for a few more hours while we transition the archives and subscriptions from the old system to the new one. When everything is back to normal we&#8217;ll update this post.</p>
+	<p>I hope everyone is enjoying the holidays as much as we are. :)
+</p>
+]]></content:encoded>
+		<wfw:commentRSS>http://wordpress.org/development/2004/12/mailing-lists-down/feed/</wfw:commentRSS>
+	</item>
+	</channel>
+</rss>

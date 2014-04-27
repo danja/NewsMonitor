@@ -1,0 +1,20 @@
+<!-- test for basic RSS with an internal RSS 0.90 index.xml link. -->
+
+<html>
+    <head>
+
+        <link rel="alternate" 
+              type="application/rss+xml"
+              title="RSS" href="http://www.peerfear.org/index.rss" />
+
+    </head>
+
+    <body>
+
+        <p>
+            <a href="/index.xml">RSS 0.90</a>
+        </p>
+
+    </body>
+
+</html>

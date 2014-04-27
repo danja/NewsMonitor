@@ -21,17 +21,30 @@ import org.danja.feedreader.io.Interpreter;
  */
 public class InterpreterFactory {
 
-    public static Interpreter createInterpreter(char formatHint,
+    private static AtomHandler atomHandler;
+
+	public static Interpreter createInterpreter(char formatHint,
             EntryList entries) {
         Interpreter interpreter = null;
         FeedParser feedParser = null;
         Rss2Handler rss2handler = null;
 
+// UNKNOWN, RSS1, RSS2, ATOM, RSS2_BOZO, RDF_OTHER
+        
         switch (formatHint) {
+        case FeedConstants.RSS1:
+        	
+        case FeedConstants.ATOM:
+            System.out.println("Atom: Using AtomHandler, XMLReaderParser");
+            feedParser = new XMLReaderParser();
+            interpreter = new ParserInterpreter(feedParser);
+            atomHandler = new AtomHandler();
+            atomHandler.setEntryList(entries);
+            feedParser.setContentHandler(atomHandler);
+            return interpreter;
+            
         case FeedConstants.RSS2:
             System.out.println("RSS2: Using Rss2Handler, XMLReaderParser");
-          
-
             feedParser = new XMLReaderParser();
             interpreter = new ParserInterpreter(feedParser);
             rss2handler = new Rss2Handler();
@@ -39,13 +52,15 @@ public class InterpreterFactory {
             feedParser.setContentHandler(rss2handler);
             return interpreter;
 
+        case FeedConstants.RDF_OTHER:
+
         case FeedConstants.RSS2_BOZO:
+        case FeedConstants.UNKNOWN:
             System.out.println("RSS2_BOZO: Using Rss2Handler, SoupParser");
             feedParser = new SoupParser();
             interpreter = new ParserInterpreter(feedParser);
             rss2handler = new Rss2Handler();
             rss2handler.setEntryList(entries);
-           
             feedParser.setContentHandler(rss2handler);
             return interpreter;
 

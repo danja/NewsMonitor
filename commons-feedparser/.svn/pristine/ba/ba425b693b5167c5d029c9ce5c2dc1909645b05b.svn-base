@@ -1,0 +1,12 @@
+<!-- test for basic RSS with an internal RSS 0.90 index.xml link. -->
+
+<html>
+    <head>
+
+	  <!-- Site Feed Autodiscovery-->
+  <link rel="service.feed" type="application/atom+xml" title="Eduwonk.com" href="" />
+  <!-- Atom API Posting Autodiscovery -->
+
+    </head>
+
+</html>

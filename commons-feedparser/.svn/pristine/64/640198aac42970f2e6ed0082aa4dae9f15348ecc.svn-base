@@ -1,0 +1,478 @@
+
+<!-- TEST NO AUTODISCOVERY, WITH INDEX.XML AND INDEX.RDF LINKS... MAKE SURE TO
+     USE INDEX.RDF FIRST -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+  <title>brendonwilson.com</title>
+  <script language="javascript" type="text/javascript">
+  <!--
+      function OpenComments(c)
+      {
+          window.open(c, 'comments', 'width=480,height=480,scrollbars=yes,status=yes');
+      }
+
+      function OpenPostWindow(c)
+      {
+          window.open(c, 'comments', 'width=700,height=765,scrollbars=yes,status=yes');
+      }
+  //-->
+  </script>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://www.brendonwilson.com" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://www.brendonwilson.com" r (n 0 s 0 v 0 l 0))'/>
+    <meta name="blogchalk" content="United States, California, Mountain View, Downtown, English, French, Brendon, Male, 26-30" />
+
+    <link href="/includes/styles.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="P3Pv1" href="/w3c/p3p.xml" type="text/xml"/>
+    <script language="javascript" src="/includes/rollover.js" type="text/javascript"></script>
+  </head>
+
+  <body link="#990000" alink="#666666" vlink="#990000">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr height="20">
+        <td colspan="3"><img src="/images/spacer.gif" width="1" height="20" alt=""></img></td>
+
+      </tr>
+      <tr height="80">
+        <td width="26"><img src="/images/spacer.gif" width="26" height="1" alt=""></img></td>
+        <td><a href="/"><img src="/images/banner.gif" width="548" height="91" alt="brendonwilson.com" border="0"></img></a></td>
+        <td width="26"><img src="/images/spacer.gif" width="26" height="1" alt=""></img></td>
+      </tr>
+      <tr height="2">
+        <td class="separator" colspan="3"><img src="/images/spacer.gif" width="1" height="2" alt=""></img></td>
+      </tr>
+
+      <tr height="26">
+        <td width="26"><img src="/images/spacer.gif" width="26" height="1" alt=""></img></td>
+        <td>
+          <table width="454" height="25" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td><a href="/profile"><img name="profile" src="/images/profileOff.gif" onMouseOver="activate('profile'); window.status=profileDescription; return true;" onMouseOut="deactivate('profile'); window.status =''; return true;" width="71" height="25" border="0" alt="[profile]"></img></a></td>
+              <td><a href="/ideas"><img name="ideas" src="/images/ideasOff.gif" onMouseOver="activate('ideas'); window.status=ideasDescription; return true;" onMouseOut="deactivate('ideas'); window.status =''; return true;" width="64" height="25" border="0" alt="[ideas]"></img></a></td>
+              <td><a href="/projects"><img name="projects" src="/images/projectsOff.gif" onMouseOver="activate('projects'); window.status=projectsDescription; return true;" onMouseOut="deactivate('projects'); window.status =''; return true;" width="95" height="25" border="0" alt="[projects]"></img></a></td>
+              <td><a href="/cgi-bin/liveframe.cgi"><img name="photos" src="/images/photosOff.gif" onMouseOver="activate('photos'); window.status=photosDescription; return true;" onMouseOut="deactivate('photos'); window.status =''; return true;" width="79" height="25" border="0" alt="[photos]"></img></a></td>
+
+              <td><a href="/resume"><img name="resume" src="/images/resumeOff.gif" onMouseOver="activate('resume'); window.status=resumeDescription; return true;" onMouseOut="deactivate('resume'); window.status =''; return true;" width="83" height="25" border="0" alt="[resume]"></img></a></td>
+              <td><a href="/search.shtml"><img name="search" src="/images/searchOff.gif" onMouseOver="activate('search'); window.status=searchDescription; return true;" onMouseOut="deactivate('search'); window.status =''; return true;" width="76" height="25" border="0" alt="[search]"></img></a></td>
+              <td><a href="/contact"><img name="contact" src="/images/contactOff.gif" onMouseOver="activate('contact'); window.status=contactDescription; return true;" onMouseOut="deactivate('contact'); window.status =''; return true;" width="80" height="25" border="0" alt="[contact]"></img></a></td>
+            </tr>
+          </table>
+        </td>
+        <td width="26"><img src="/images/spacer.gif" width="26" height="1" alt=""></img></td>
+      </tr>
+      <tr>
+
+        <td width="26"><img src="/images/spacer.gif" width="26" height="1" alt=""></img></td>
+        <td valign="top">
+
+          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr><td colspan="4" height="90"><img src="/images/spacer.gif" width="1" height="90" alt=""></img></td></tr>
+            <tr>
+              <td width="170" valign="top" align="right">
+
+  <table cellspacing="2" cellpadding="0" border="0">
+    <tr>
+
+      <td colspan="7" align="left" class="calendarmonth">August 2004</td>
+    </tr>
+    <tr>
+      <td align="center" class="calendarhead">Sun</td>
+      <td align="center" class="calendarhead">Mon</td>
+      <td align="center" class="calendarhead">Tue</td>
+      <td align="center" class="calendarhead">Wed</td>
+
+      <td align="center" class="calendarhead">Thu</td>
+      <td align="center" class="calendarhead">Fri</td>
+      <td align="center" class="calendarhead">Sat</td>
+    </tr>
+    
+      <tr>
+      <td align="center" class="calendarentry">
+        1
+      </td>
+
+      
+    
+      
+      <td align="center" class="calendarentry">
+        2
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        <a href="http://www.brendonwilson.com/profile/000177.shtml" class="calendarentry">3</a>
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        4
+      </td>
+
+      
+    
+      
+      <td align="center" class="calendarentry">
+        5
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        6
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        7
+      </td>
+      </tr>
+
+    
+      <tr>
+      <td align="center" class="calendarentry">
+        8
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        9
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        10
+      </td>
+
+      
+    
+      
+      <td align="center" class="calendarentry">
+        11
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        12
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        13
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+
+        14
+      </td>
+      </tr>
+    
+      <tr>
+      <td align="center" class="calendarentry">
+        15
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        16
+      </td>
+
+      
+    
+      
+      <td align="center" class="calendarentry">
+        17
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        18
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        19
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+
+        20
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        21
+      </td>
+      </tr>
+    
+      <tr>
+      <td align="center" class="calendarentry">
+        22
+      </td>
+
+      
+    
+      
+      <td align="center" class="calendarentry">
+        23
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        24
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        25
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+
+        26
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        27
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        28
+      </td>
+      </tr>
+    
+      <tr>
+
+      <td align="center" class="calendarentry">
+        29
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        30
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        31
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+
+        &nbsp;
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        &nbsp;
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+        &nbsp;
+      </td>
+      
+    
+      
+      <td align="center" class="calendarentry">
+
+        &nbsp;
+      </td>
+      </tr>
+    
+  </table>
+  <p>
+    <div class="navigation">Recent Entries</div>
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000177.shtml" class="subnavigation">The Canadian Candidate</a></div>
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000176.shtml" class="subnavigation">To Infinity...</a></div>
+
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000175.shtml" class="subnavigation">Wagging The Dog</a></div>
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000174.shtml" class="subnavigation">Tagging Humans</a></div>
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000173.shtml" class="subnavigation">Mini-Bubble??</a></div>
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000172.shtml" class="subnavigation">Cloak And Google</a></div>
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000171.shtml" class="subnavigation">There's Hope Yet</a></div>
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000170.shtml" class="subnavigation">Jarvis On NewsNight</a></div>
+
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000169.shtml" class="subnavigation">Non-DRM Constitution</a></div>
+    
+      <div class="subnavigation"><a href="http://www.brendonwilson.com/profile/000168.shtml" class="subnavigation">Making Meaning</a></div>
+    
+  </p>
+  <p>
+    <div class="navigation"><a href="/profile/" class="navigation">Monthly Archives</a></div>
+  </p>
+  <p>
+
+    <div class="navigation">RSS Feeds (<a href="/index.rdf" class="navigation">1.0</a> | <a href="/index.xml" class="navigation">0.91</a>)</div>
+  </p>
+<div class="navigation">Latest Photo Gallery</div>
+<div class="navigation">
+  <div class="latest-image"><a href="http://www.brendonwilson.com/cgi-bin/liveframe.cgi/nextfest2004"><img src="latest.jpg" width="120" height="90" alt="Wired's NextFest 2004" border="0"></img></a></div>
+</div>
+<div class="navigation">Friends' Sites</div>
+
+<div class="subnavigation"><a href="http://www.zyx.com" class="subnavigation" target="_blank">Farshad Abasi</a></div>
+<div class="subnavigation"><a href="http://www.peerfear.org/" class="subnavigation" target="_blank">Kevin Burton</a></div>
+<div class="subnavigation"><a href="http://jamie.illusiondesigns.net/" class="subnavigation" target="_blank">Jamie Cheng</a></div>
+<div class="subnavigation"><a href="http://mydentity.illusiondesigns.net/" class="subnavigation" target="_blank">Kevin Cheng</a></div>
+<div class="subnavigation"><a href="http://www.cluonflux.com" class="subnavigation" target="_blank">Alex Cruise</a></div>
+<div class="subnavigation"><a href="http://www.holleemeera.com/" class="subnavigation" target="_blank">Hollee Cruise</a></div>
+<div class="subnavigation"><a href="http://log.antiflux.org/princess" class="subnavigation" target="_blank">Beth Davy</a></div>
+<div class="subnavigation"><a href="http://www.mattfraser.com/" class="subnavigation" target="_blank">Matthew Fraser</a></div>
+<div class="subnavigation"><a href="http://www.johnharveyphoto.com/" class="subnavigation" target="_blank">John Harvey</a></div>
+
+<div class="subnavigation"><a href="http://www.andrewnoeljones.com" class="subnavigation" target="_blank">Andrew Jones</a></div>
+<div class="subnavigation"><a href="http://log.antiflux.org/cjones" class="subnavigation" target="_blank">Chris Jones</a></div>
+<div class="subnavigation"><a href="http://www.lmlweb.com/" class="subnavigation" target="_blank">Laurie Landry</a></div>
+<div class="subnavigation"><a href="http://www.jinfoong.net/jesse/" class="subnavigation" target="_blank">Jesse Malm</a></div>
+<div class="subnavigation"><a href="http://www.ashleyrichards.com" class="subnavigation" target="_blank">Ashley Richards</a></div>
+<div class="subnavigation"><a href="http://www.brittanyrichards.com" class="subnavigation" target="_blank">Brittany Richards</a></div>
+<div class="subnavigation"><a href="http://www.livejournal.com/users/sockgirl" class="subnavigation" target="_blank">Jillian Tate</a></div>
+<div class="subnavigation"><a href="http://www.andrewtinka.com" class="subnavigation" target="_blank">Andrew Tinka</a></div>
+<div class="subnavigation"><a href="http://weir.cc/tom/" class="subnavigation" target="_blank">Tom Weir</a></div>
+
+<div class="subnavigation"><a href="http://home.justwerks.com" class="subnavigation" target="_blank">Evan Wise</a></div>
+<div class="subnavigation"><a href="http://www.renayung.com" class="subnavigation" target="_blank">Rena Yung</a></div>
+
+              </td>
+
+              <td width="70"><img src="/images/spacer.gif" width="70" height="1" alt=""></img></td>
+              <td valign="top" align="left" class="content">
+
+  <script language="javascript" type="text/javascript">
+  <!--
+      function reveal()
+      {
+          blocking("comments-header");
+          blocking("comments-body");
+      }
+
+      function blocking(nr)
+      {
+          if (document.layers)
+          {
+              current = ((document.layers[nr].display == "none") ? "block" : "none");
+              document.layers[nr].display = current;
+          }
+          else if (document.all)
+          {
+              current = ((document.all[nr].style.display == "none") ? "block" : "none");
+              document.all[nr].style.display = current;
+          }
+          else if (document.getElementById)
+          {
+              vista = ((document.getElementById(nr).style.display == "none") ? "block" : "none");
+              document.getElementById(nr).style.display = vista;
+          }
+      }
+  // -->
+  </script>
+  <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+
+    
+      <tr>
+        <td class="content">
+          
+            <h1>August  3, 2004</h1>
+          
+          <h2>The Canadian Candidate</h2>
+          <p>Somewhere between the ads for summer blockbuster movies like <a href="http://www.manchuriancandidatemovie.com" class="content">The Manchurian Candidate</a> and debates on the legality of <a href="http://csmonitor.com/2004/0730/p11s02-bogn.html" class="content">fictional presidential assassinations</a>, I forgot something: my real reason for being in the States. Yes, I know, it's shocking! I admit it - I have an ulterior motive, a hidden agenda, if you will, for my current habitation of the United States. I am a secret agent, a warrior on the front lines of Canada's covert bid for <a href="http://cwd.ptbcanadian.com/" class="content">world domination</a>.</p>
+
+          
+            <p>My status as an agent of the revolution had lain dormant in my brain recently, its priority lurking somewhere above "keep breathing, for God's sake, just keep breathing" but marginally below "you really could go for a bacon sandwich right about now". Then it hit me: mmm...I really <i>could</i> go for a bacon sandwich right about now. And as I perused the back of the package of Safeway Select Bacon while <a href="http://www.ashleyrichards.com" class="content">Ashley</a> made breakfast, I was jarred from my status as a sleeper agent for the puck-slapping, syrup-sucking empire by the package's undoubtedly malevolent hypnotic message:</p>
+<blockquote>
+  Canadians have long been respected for their unique institutions - the <a href="http://www.rcmp-grc.gc.ca/" class="content">Royal Canadian Mounted Police</a> (they always get their man), hockey (most of the great players are from Canada), maple syrup (experts acknowledge it's the best in the world) and bacon.
+</blockquote>
+<p>Mounties? Hockey? Syrup-flavoured bacon?</p>
+
+<p>With a start, it all came flooding back. Of course! That's what I was here to do - it was all so obvious! And yet I'd missed all the signs. Comrade Shatner had obviously been attempting to contact me, encoding his message in a <a href="shoutfactory.com/av/common_people.mov" class="content">rehash of a Pulp song</a> so horrid, I'm amazed no one uncovered its true meaning. It must have been urgent - the last time such a dire message was sent, Shatner had to butcher a <a href="http://www.deviantart.com/view/7156316/" class="content">Beatles classic</a>. It was not pretty (then again, it was nowhere near as weird as what Spock has been <a href="http://www.leonardnimoyphotography.com/" class="content">up to recently</a>).</p>
+<p>With my mental fog lifted, I reviewed the plans to convert Americans to our ways. Flooding the American market with <a href="http://www.theregister.co.uk/2004/07/29/us_online_pharmacies/" class="content">cheap drugs</a> to illustrate the value of socialized healthcare? Check. Brainwashing the masses with imported Canadian rock stars, actors, and subversive films, each conveying subliminal pro-Canada messages? <a href="http://www.theregister.co.uk/2004/07/30/music_poll_results/" class="content">Check</a>, <a href="http://www.imdb.com/name/nm0000150/" class="content">check</a> and <a href="http://www.fahrenheit911.com/" class="content">check</a>.</p>
+
+<p>Now, where was I? Oh, yes, that's right - message received Comrade Shatner! I am proceeding to Stage Two: defeating the entire US military in a bloodless coup. Brendon to base, Brendon to base...prepare to deploy Anne Murray...</p>
+          
+        </td>
+      </tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr>
+        <td class="content">
+          
+            <div id="comments-header">        
+              <p align="right"><a href="#" onClick="reveal(); return false;" class="content">View 0 Comments</a> || <a href="http://www.brendonwilson.com/profile/post.shtml?entry_id=177" onclick="OpenPostWindow(this.href); return false;" class="content">Post A Comment</a></p>        
+            </div>        
+            <div class="comments" id="comments-body">        
+              
+              <p align="right"><a href="#" onClick="reveal(); return false;" class="content">Hide Comments</a> || <a href="http://www.brendonwilson.com/profile/post.shtml?entry_id=177" onclick="OpenPostWindow(this.href); return false;" class="content">Post A Comment</a></p>
+
+            </div>  
+            <script language="javascript" type="text/javascript">
+            <!--        
+                blocking('comments-body');        
+            //-->        
+            </script>        
+          
+        </td>
+      </tr>
+    
+  </table>
+              </td>
+              <td width="90"><img src="/images/spacer.gif" width="90" height="1" alt=""></img></td>
+            </tr>
+            <tr><td colspan="4" height="70"><img src="/images/spacer.gif" width="1" height="50" alt=""></img></td></tr>
+
+          </table>
+
+        </td>
+        <td width="26"><img src="/images/spacer.gif" width="26" height="1" alt=""></img></td>
+      </tr>
+      <tr height="1">
+        <td class="separator" colspan="3"><img src="/images/spacer.gif" width="1" height="1" alt=""></img></td>
+      </tr>
+      <tr height="20">
+
+        <td width="26"><img src="/images/spacer.gif" width="26" height="1" alt=""></img></td>
+        <td class="copyright">Copyright &copy; 1996-2004, Brendon J. Wilson. All Rights Reserved.</td>
+        <td width="26"><img src="/images/spacer.gif" width="26" height="1" alt=""></img></td>
+      </tr>
+    </table>
+  </body>
+</html>
+

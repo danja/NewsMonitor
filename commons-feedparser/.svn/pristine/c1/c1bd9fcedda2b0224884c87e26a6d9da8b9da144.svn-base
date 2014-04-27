@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+
+<rss version="0.91">
+  <channel>
+    <title>EEK Speaks   </title>
+    <link>http://www.eekim.com/blog</link>
+    <description>Eugene Eric Kim's worklog on collaboration and communities.</description>
+    <language>en</language>
+
+  <item>
+    <title>Self-Organizing Collaboration at the World Trade Center Ruins</title>
+    <link>http://www.eekim.com/blog/2004/08/31#americanground</link>
+    <description>
+
+        &nbsp;
+
+&lt;p&gt;&lt;a name=&quot;nid2AW&quot; id=&quot;nid2AW&quot;&gt;&lt;/a&gt;In early 2003, I had lunch with &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?RichardGabriel&quot; class=&quot;wikiword&quot;&gt;RichardGabriel&lt;/a&gt; for the first time, and I explained to him my desire to uncover common collaborative patterns across different disciplines, starting with &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?OpenSource&quot; class=&quot;wikiword&quot;&gt;OpenSource&lt;/a&gt; communities.  Richard recommended that I read &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?WilliamLangewiesche&quot; class=&quot;wikiword&quot;&gt;WilliamLangewiesche&lt;/a&gt;'s &lt;i&gt;American Ground: Unbuilding the World Trade Center&lt;/i&gt;, a book that described the dismantling of the ruins and the self-organizing process that emerged. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;2AW&quot; href=&quot;http://www.eekim.com/blog/2004/08/31/americanground#nid2AW&quot;&gt;(2AW)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid2AX&quot; id=&quot;nid2AX&quot;&gt;&lt;/a&gt;Over a year later, I finally got around to following Richard's advice, and I'm
+glad that I did.  Langewiesche's book is a gripping, thoughtful account of
+what happened at the &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?WorldTradeCenter&quot; class=&quot;wikiword&quot;&gt;WorldTradeCenter&lt;/a&gt; site immediately following 9/11. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;2AX&quot; href=&quot;http://www.eekim.com/blog/2004/08/31/americanground#nid2AX&quot;&gt;(2AX)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;&lt;a href=&quot;http://www.eekim.com/blog/2004/08/31/americanground&quot; class=&quot;extlink&quot;&gt;See more....&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;
+</description>
+  </item>
+  <item>
+    <title>TPVortex: Intro, Call For Help</title>
+    <link>http://www.eekim.com/blog/2004/08/12#tpvortex-cfh</link>
+    <description>&lt;p&gt;&lt;a name=&quot;nid247&quot; id=&quot;nid247&quot;&gt;&lt;/a&gt;In my &lt;a href=&quot;http://www.blueoxen.org/papers/0000D/&quot; class=&quot;extlink&quot;&gt;manifesto for
+collaborative tools&lt;/a&gt;, I &lt;a href=&quot;http://www.blueoxen.org/papers/0000D/#nid3M6&quot; class=&quot;extlink&quot;&gt;cited&lt;/a&gt; &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLinks&quot; class=&quot;wikiword&quot;&gt;BackLinks&lt;/a&gt; as an example of a common, yet oft-overlooked
+conceptual construct in collaborative tools.  Those who know me well
+know that my strategy for implementing some of &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?DougEngelbart&quot; class=&quot;wikiword&quot;&gt;DougEngelbart&lt;/a&gt;'s ideas
+(which I crafted over three years ago) has always been to create
+simple, concrete tools that could easily be shoehorned into existing
+applications.  The plan was to start with &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?GranularAddressability&quot; class=&quot;wikiword&quot;&gt;GranularAddressability&lt;/a&gt;
+(&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleNumbers&quot; class=&quot;wikiword&quot;&gt;PurpleNumbers&lt;/a&gt;), then move on to &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLinks&quot; class=&quot;wikiword&quot;&gt;BackLinks&lt;/a&gt;. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;247&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid247&quot;&gt;(247)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid248&quot; id=&quot;nid248&quot;&gt;&lt;/a&gt;For a number of reasons, now seems to be the right time for me to
+start shifting my technical focus to &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLinks&quot; class=&quot;wikiword&quot;&gt;BackLinks&lt;/a&gt;.  The strategy for
+doing this is to implement a generic, &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?OpenSource&quot; class=&quot;wikiword&quot;&gt;OpenSource&lt;/a&gt;, &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLink&quot; class=&quot;wikiword&quot;&gt;BackLink&lt;/a&gt; database
+(dubbed &lt;a href=&quot;http://www.eekim.com/software/tpvortex/&quot; class=&quot;extlink&quot;&gt;&quot;TPVortex&quot;&lt;/a&gt; and
+integrate it into several existing tools: &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleWiki&quot; class=&quot;wikiword&quot;&gt;PurpleWiki&lt;/a&gt;, blosxom,
+&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?MovableType&quot; class=&quot;wikiword&quot;&gt;MovableType&lt;/a&gt;, &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?MHonArc&quot; class=&quot;wikiword&quot;&gt;MHonArc&lt;/a&gt;.  I'm looking for folks who might be interested
+in participating in this project. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;248&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid248&quot;&gt;(248)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid249&quot; id=&quot;nid249&quot;&gt;&lt;/a&gt;The motivation for such a tool is straightforward: &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLinks&quot; class=&quot;wikiword&quot;&gt;BackLinks&lt;/a&gt; provide
+useful, contextual information.  Most Wikis already implement
+&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLinks&quot; class=&quot;wikiword&quot;&gt;BackLinks&lt;/a&gt;.  Some of them display &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLinks&quot; class=&quot;wikiword&quot;&gt;BackLinks&lt;/a&gt; on the main page, which is
+the correct behavior.  Others (including &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleWiki&quot; class=&quot;wikiword&quot;&gt;PurpleWiki&lt;/a&gt;) do not.  In order
+to implement this properly, you need a &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLink&quot; class=&quot;wikiword&quot;&gt;BackLink&lt;/a&gt; database. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;249&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid249&quot;&gt;(249)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid24A&quot; id=&quot;nid24A&quot;&gt;&lt;/a&gt;Once you have a &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLink&quot; class=&quot;wikiword&quot;&gt;BackLink&lt;/a&gt; database, you might as well use it for other
+applications besides Wikis, such as blogs.  We have this integration
+in &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleWiki&quot; class=&quot;wikiword&quot;&gt;PurpleWiki&lt;/a&gt; (see &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?WikisAsTopicMaps&quot; class=&quot;wikiword&quot;&gt;WikisAsTopicMaps&lt;/a&gt; for the resulting benefits), but
+again, it would be much nicer to display the &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLinks&quot; class=&quot;wikiword&quot;&gt;BackLinks&lt;/a&gt; on the page
+itself rather than requiring a person to click on a link to see them.
+In order to implement this properly, the database has to store
+document metadata, such as title and author, not just the &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BackLink&quot; class=&quot;wikiword&quot;&gt;BackLink&lt;/a&gt;.
+For this reason, I think that TPVortex should use an RDF database on
+the backend. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;24A&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid24A&quot;&gt;(24A)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid24B&quot; id=&quot;nid24B&quot;&gt;&lt;/a&gt;Other thoughts: &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;24B&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid24B&quot;&gt;(24B)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a name=&quot;nid24C&quot; id=&quot;nid24C&quot;&gt;&lt;/a&gt;Use &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?TrackBack&quot; class=&quot;wikiword&quot;&gt;TrackBack&lt;/a&gt; or &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PingBack&quot; class=&quot;wikiword&quot;&gt;PingBack&lt;/a&gt; as the protocol for updating the database. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;24C&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid24C&quot;&gt;(24C)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a name=&quot;nid24D&quot; id=&quot;nid24D&quot;&gt;&lt;/a&gt;Use &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?IdentityCommons&quot; class=&quot;wikiword&quot;&gt;IdentityCommons&lt;/a&gt; i-names for identification and authentication. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;24D&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid24D&quot;&gt;(24D)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a name=&quot;nid24E&quot; id=&quot;nid24E&quot;&gt;&lt;/a&gt;Implement stubs in multiple languages. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;24E&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid24E&quot;&gt;(24E)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&quot;nid24F&quot; id=&quot;nid24F&quot;&gt;&lt;/a&gt;I welcome help in all forms -- comments, critiques, and especially
+coding.  I've set up a Wiki page at the &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?CollaborationCollaboratory&quot; class=&quot;wikiword&quot;&gt;CollaborationCollaboratory&lt;/a&gt; --
+&lt;a href=&quot;http://collab.blueoxen.net/cgi-bin/wiki.pl?TpVortex&quot; class=&quot;interwiki&quot;&gt;Collab:TpVortex&lt;/a&gt; -- to serve as the center of design discussions.  If
+you're interested in contributing or commenting, please do it there.
+Feel free to drop me an email as well. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;24F&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/tpvortex-cfh#nid24F&quot;&gt;(24F)&lt;/a&gt;&lt;/p&gt;
+</description>
+  </item>
+  <item>
+    <title>Wiki Linking Using Ontologies</title>
+    <link>http://www.eekim.com/blog/2004/08/12#ontologywiki</link>
+    <description>&lt;p&gt;&lt;a name=&quot;nid242&quot; id=&quot;nid242&quot;&gt;&lt;/a&gt;Last weekend, I posted some notes on &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?MarkupFreeAutoLinkingWiki&quot; class=&quot;wikiword&quot;&gt;MarkupFreeAutoLinkingWiki&lt;/a&gt;.  The
+idea is that instead of relying on user syntax for identifying and
+linking to Wiki pages, the Wiki could do a linguistic scan of the text
+and link words based on a site-specific ontology. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;242&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/ontologywiki#nid242&quot;&gt;(242)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid243&quot; id=&quot;nid243&quot;&gt;&lt;/a&gt;I posted my notes mainly as a &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?BlueSkyIdea&quot; class=&quot;wikiword&quot;&gt;BlueSkyIdea&lt;/a&gt;, but it ended up generating
+a ton of
+&lt;a href=&quot;http://collab.blueoxen.net/forums/tools-yak/2004-08/msg00005.html&quot; class=&quot;extlink&quot;&gt;discussion&lt;/a&gt; at the &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?CollaborationCollaboratory&quot; class=&quot;wikiword&quot;&gt;CollaborationCollaboratory&lt;/a&gt;.  That discussion
+made me realize that this idea may not be all that blue sky after all,
+and that -- given the proper &lt;a href=&quot;http://purplewiki.blueoxen.net/cgi-bin/wiki.pl?DataBase&quot; class=&quot;interwiki&quot;&gt;PurpleWiki:DataBase&lt;/a&gt; design -- we're not
+all that far off from implementing something like this in &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleWiki&quot; class=&quot;wikiword&quot;&gt;PurpleWiki&lt;/a&gt;. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;243&quot; href=&quot;http://www.eekim.com/blog/2004/08/12/ontologywiki#nid243&quot;&gt;(243)&lt;/a&gt;&lt;/p&gt;
+</description>
+  </item>
+  <item>
+    <title>PurpleWiki 0.94 Released</title>
+    <link>http://www.eekim.com/blog/2004/08/11#pw-094</link>
+    <description>&lt;p&gt;&lt;a name=&quot;nid23X&quot; id=&quot;nid23X&quot;&gt;&lt;/a&gt;The latest release of &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleWiki&quot; class=&quot;wikiword&quot;&gt;PurpleWiki&lt;/a&gt; has mucho changes.  The most visible
+is customizable look-and-feel using templates (see
+&lt;a href=&quot;http://purplewiki.blueoxen.net/cgi-bin/wiki.pl?Templates&quot; class=&quot;interwiki&quot;&gt;PurpleWiki:Templates),&lt;/a&gt; but there are a slew of other important changes
+as well. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23X&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/pw-094#nid23X&quot;&gt;(23X)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid23Y&quot; id=&quot;nid23Y&quot;&gt;&lt;/a&gt;Thanks to a growing user base (which included many folks who tested
+the beta code in live environments), many bugs have been eradicated.
+The code has advanced to the point where there's only one significant
+chunk of &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?UseModWiki&quot; class=&quot;wikiword&quot;&gt;UseModWiki&lt;/a&gt; code left -- the database, which is on our list of
+things to replace next. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23Y&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/pw-094#nid23Y&quot;&gt;(23Y)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid23Z&quot; id=&quot;nid23Z&quot;&gt;&lt;/a&gt;All this means two things: First, &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleWiki&quot; class=&quot;wikiword&quot;&gt;PurpleWiki&lt;/a&gt; is becoming a very good,
+very stable, production-quality Wiki.  It's not quite there yet -- We
+could use a better installation script and more documentation, and
+there's still some refactoring that needs to be done -- but it's
+close.  Second, with a lot of the grunt work out of the way, folks
+hacking on &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleWiki&quot; class=&quot;wikiword&quot;&gt;PurpleWiki&lt;/a&gt; can start refocusing on the more interesting
+features -- &lt;a href=&quot;http://purple.blueoxen.net/cgi-bin/wiki.pl?DistributedPurpleNumbers&quot; class=&quot;interwiki&quot;&gt;Purple:DistributedPurpleNumbers,&lt;/a&gt; &lt;a href=&quot;http://purplewiki.blueoxen.net/cgi-bin/wiki.pl?TransClusion&quot; class=&quot;interwiki&quot;&gt;PurpleWiki:TransClusion,&lt;/a&gt;
+etc.  You're going to start seeing a lot of cool stuff. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23Z&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/pw-094#nid23Z&quot;&gt;(23Z)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid240&quot; id=&quot;nid240&quot;&gt;&lt;/a&gt;One of these cool features is support for &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?IdentityCommons&quot; class=&quot;wikiword&quot;&gt;IdentityCommons&lt;/a&gt;'s i-names
+(see &lt;a href=&quot;http://purplewiki.blueoxen.net/cgi-bin/wiki.pl?INames&quot; class=&quot;interwiki&quot;&gt;PurpleWiki:INames).&lt;/a&gt;  &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?PurpleWiki&quot; class=&quot;wikiword&quot;&gt;PurpleWiki&lt;/a&gt; is the first publically available
+tool to support this important new technology. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;240&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/pw-094#nid240&quot;&gt;(240)&lt;/a&gt;&lt;/p&gt;
+</description>
+  </item>
+  <item>
+    <title>Amber Alert in Action</title>
+    <link>http://www.eekim.com/blog/2004/08/11#amberalert</link>
+    <description>&lt;p&gt;&lt;a name=&quot;nid23L&quot; id=&quot;nid23L&quot;&gt;&lt;/a&gt;On Monday, I found myself in the middle of a car chase.  More
+importantly, I saw &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?AmberAlert&quot; class=&quot;wikiword&quot;&gt;AmberAlert&lt;/a&gt; working first-hand. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23L&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/amberalert#nid23L&quot;&gt;(23L)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid23M&quot; id=&quot;nid23M&quot;&gt;&lt;/a&gt;I was driving south on 101 to Campbell from RedwoodCity&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?action=edit&amp;amp;id=RedwoodCity&quot; class=&quot;wikiword&quot;&gt;?&lt;/a&gt; for lunch and
+a slew of meetings.  As I drove through &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?MountainView&quot; class=&quot;wikiword&quot;&gt;MountainView&lt;/a&gt;, I saw an
+&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?AmberAlert&quot; class=&quot;wikiword&quot;&gt;AmberAlert&lt;/a&gt; on an electronic billboard, which said that a girl had been
+abducted in a blue Land Rover.  I noted the first few numbers of the
+license plate in my head, then thought about how great &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?AmberAlert&quot; class=&quot;wikiword&quot;&gt;AmberAlert&lt;/a&gt; was,
+and how interesting it would be to see it in action.  I was thinking
+about how &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?AmberAlert&quot; class=&quot;wikiword&quot;&gt;AmberAlert&lt;/a&gt; could potentially use InstantMessenging&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?action=edit&amp;amp;id=InstantMessenging&quot; class=&quot;wikiword&quot;&gt;?&lt;/a&gt; in cell
+phones when I saw the second notice on the sign at &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?GreatAmerica&quot; class=&quot;wikiword&quot;&gt;GreatAmerica&lt;/a&gt; in
+SantaClara&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?action=edit&amp;amp;id=SantaClara&quot; class=&quot;wikiword&quot;&gt;?&lt;/a&gt;. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23M&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/amberalert#nid23M&quot;&gt;(23M)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid23N&quot; id=&quot;nid23N&quot;&gt;&lt;/a&gt;In SanJose&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?action=edit&amp;amp;id=SanJose&quot; class=&quot;wikiword&quot;&gt;?&lt;/a&gt;, I merged onto 17 towards Campbell, and a few minutes
+later, I saw flashing lights in my mirror.  I was running a bit late
+for my lunch appointment, so I glanced at my speedometer to see if I
+were in trouble, and to my relief, I discovered that -- thanks to
+traffic -- I was right at 65 miles per hour. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23N&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/amberalert#nid23N&quot;&gt;(23N)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid23O&quot; id=&quot;nid23O&quot;&gt;&lt;/a&gt;Checking my mirrors again, I noticed the blue SUV behind me change to
+the fast lane.  I remember thinking, &quot;That's strange.  Makes more
+sense to switch into the slow lane.&quot;  Yes, I can be slow at times.  As
+the SUV zoomed past me, I noticed &quot;Land Rover&quot; on the tire cover and
+recognized the first few letters of the license plate.  The three
+police cars in pursuit confirmed what had slowly dawned on me.  That
+was the kidnapper. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23O&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/amberalert#nid23O&quot;&gt;(23O)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid23P&quot; id=&quot;nid23P&quot;&gt;&lt;/a&gt;I fully realize that if I were truly cool, I would have captured the
+chase on my cell phone camera and moblogged it immediately.  Folks
+would have seen the chase snapshot live, rather than having to wait
+for this account two days later.  In my defense, I was calm enough to
+do it.  As I watched all of this unfold, I actually called my friend
+and told him that I was in the middle of a car chase and would be a
+few minutes late.  Unfortunately, my cell phone is four years old.  It
+doesn't have a camera, and it won't connect to the Internet. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23P&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/amberalert#nid23P&quot;&gt;(23P)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid23Q&quot; id=&quot;nid23Q&quot;&gt;&lt;/a&gt;I can happily report that the police did eventually
+&lt;a href=&quot;http://sfgate.com/cgi-bin/article.cgi?f=/c/a/2004/08/10/ABDUCT.TMP&amp;amp;nl=top&quot; class=&quot;extlink&quot;&gt;catch&lt;/a&gt; the culprit (in &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?SanLuisObispo&quot; class=&quot;wikiword&quot;&gt;SanLuisObispo&lt;/a&gt;, about five hours south of
+&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?SanFrancisco&quot; class=&quot;wikiword&quot;&gt;SanFrancisco&lt;/a&gt;), and the girl is safe and sound. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;23Q&quot; href=&quot;http://www.eekim.com/blog/2004/08/11/amberalert#nid23Q&quot;&gt;(23Q)&lt;/a&gt;&lt;/p&gt;
+</description>
+  </item>
+  <item>
+    <title>Precinct Walking in Mountain View</title>
+    <link>http://www.eekim.com/blog/2004/08/08#precinctwalking</link>
+    <description>&lt;p&gt;&lt;a name=&quot;nid22Z&quot; id=&quot;nid22Z&quot;&gt;&lt;/a&gt;November is just around the corner, and like many folks who care about
+the upcoming election, I spent this gorgeous day campaigning... for my
+friend, &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?StephanieSchaaf&quot; class=&quot;wikiword&quot;&gt;StephanieSchaaf&lt;/a&gt;.  Steph is &lt;a href=&quot;http://www.stephanieschaaf.com/&quot; class=&quot;extlink&quot;&gt;running&lt;/a&gt; for city council in &lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?MountainView&quot; class=&quot;wikiword&quot;&gt;MountainView&lt;/a&gt;.  She's very active
+politically, especially about environmental issues, and will make a
+great city council person.  She's also running a very tight ship with
+her campaign, and has a large, well-organized team of active
+volunteers. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;22Z&quot; href=&quot;http://www.eekim.com/blog/2004/08/08/precinctwalking#nid22Z&quot;&gt;(22Z)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid230&quot; id=&quot;nid230&quot;&gt;&lt;/a&gt;This was my first experience precinct walking, and it brought back
+mixed memories of selling candy and gift wrap door-to-door for
+elementary school fundraisers.  Each of us had a list of registered
+voters broken down by street.  The goal was to visit as many of these
+voters as humanly possible, and to tell them about Steph and give them
+literature.  It was hard and slow work.  I'm in decent shape, and my
+recent &lt;a href=&quot;http://www.eekim.com/blog/2004/07/11/midwest20040710&quot; class=&quot;extlink&quot;&gt;travels&lt;/a&gt;
+left me conditioned to the heat (about 90 degrees today, with low
+humidity), but even so, I only managed to tackle 95 houses in about
+three hours.  There are about 35,000 registered voters in Mountain
+View.  The lesson?  You can't visit them all. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;230&quot; href=&quot;http://www.eekim.com/blog/2004/08/08/precinctwalking#nid230&quot;&gt;(230)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name=&quot;nid231&quot; id=&quot;nid231&quot;&gt;&lt;/a&gt;I enjoyed the experience more than I expected.  It was great exploring
+the neighborhoods and interacting with the residents, even if most of
+those conversations were thirty seconds at most.  The few blocks that
+I walked were diverse ethnically and economically, which was nice to
+see.  My day broke down as follows: &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;231&quot; href=&quot;http://www.eekim.com/blog/2004/08/08/precinctwalking#nid231&quot;&gt;(231)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a name=&quot;nid232&quot; id=&quot;nid232&quot;&gt;&lt;/a&gt;Visited 95 homes. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;232&quot; href=&quot;http://www.eekim.com/blog/2004/08/08/precinctwalking#nid232&quot;&gt;(232)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a name=&quot;nid233&quot; id=&quot;nid233&quot;&gt;&lt;/a&gt;39 people were home. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;233&quot; href=&quot;http://www.eekim.com/blog/2004/08/08/precinctwalking#nid233&quot;&gt;(233)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a name=&quot;nid234&quot; id=&quot;nid234&quot;&gt;&lt;/a&gt;6 people refused to talk to me. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;234&quot; href=&quot;http://www.eekim.com/blog/2004/08/08/precinctwalking#nid234&quot;&gt;(234)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a name=&quot;nid235&quot; id=&quot;nid235&quot;&gt;&lt;/a&gt;2 people asked questions. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;235&quot; href=&quot;http://www.eekim.com/blog/2004/08/08/precinctwalking#nid235&quot;&gt;(235)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&quot;nid236&quot; id=&quot;nid236&quot;&gt;&lt;/a&gt;These numbers made me wonder how much of an impact I made.  Both Steph
+and her boyfriend, RafaelReyes&lt;a href=&quot;http://www.eekim.com/cgi-bin/wiki.pl?action=edit&amp;amp;id=RafaelReyes&quot; class=&quot;wikiword&quot;&gt;?&lt;/a&gt;, who's also quite active politically,
+insisted that precinct walking is extremely important in local
+elections, and that the face-to-face interaction -- brief as it is --
+leaves strong impressions on voters.  The nice thing about elections
+is that the precinct breakdowns will quantitatively show the impact
+that we had. &amp;nbsp;&amp;nbsp; &lt;a class=&quot;nid&quot; title=&quot;236&quot; href=&quot;http://www.eekim.com/blog/2004/08/08/precinctwalking#nid236&quot;&gt;(236)&lt;/a&gt;&lt;/p&gt;
+</description>
+  </item>
+  </channel>
+</rss>

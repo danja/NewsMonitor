@@ -1,0 +1,53 @@
+
+** FIXME **
+
+    - What about the transparent HTCache work?
+
+    - Look at all the imports and make SURE its isolated
+
+        - Might have to move the event package over.
+
+** DOCUMENTATION **
+
+- InputStream utilities
+
+    - String content
+    - byte array
+    - Local cached input stream
+
+- Initial support for Digest and Basic authentication and an API to support
+  this.
+    
+- Support for easy and common HTTP custimization (changing UserAgent, etc)
+
+- Identical default behavior between URL and HTTPClient implementations
+    
+- Support for session cookies when java.net.URL is used. (Still being
+  implemented)
+
+- No infinite timeouts per the default java.net.URL.  We set default timeouts to
+  5 minutes instead of infiniity.
+
+- NetworkException instead of generic IOException.  This allows you to use
+  network IO alongside fileIO and note the difference in try/catch blocks.  This
+  also throws the 'cause' of the exception which IOException does not.
+
+- Download progress via event listeners.  Currently most network IO packages are
+  just black boxes.  We support blocking IO which event callbacks during reads.
+
+- HTTP status codes in exceptions.  java.net.URL doesn't support this.
+
+- Support for Jakarta HttpClient and java.net.URL as IO implementations.  While
+  java.net.URL is reliable we believe that Jakarta HttpClient is very compelling.
+
+- Support for a future async IO API... While blocking IO has proven reliable we
+  want to provide an async IO layer which uses event callbacks.
+
+- Simple ResourceRequest API which has no requirements on internal JRE classes.
+
+- Provide portability to migrate away from non-free software (java.net.URL)
+
+- Easy URI scheme registration IO handlers.  One can now create URI base IO
+  handlers and read from them.  This comes in handy for adhoc scheme creation.
+
+  

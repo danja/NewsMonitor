@@ -1,0 +1,116 @@
+
+Project Management:
+
+    - Get viewcvs linked to the app
+
+- [DONE] Nightly builds? (requested with Craig)
+
+    - 0.5 public release
+
+        http://jakarta.apache.org/commons/releases/index.html
+
+
+
+
+    - maven?
+
+- (DONE) All FeedParser exceptions should include the URL of the feed if
+  possible.  This will really help with debugging
+    
+- (DONE) Implementation of RSS/Atom autodiscovery...
+
+- (DONE) Remove ALL references to newsmonster IO layer.
+
+- (DONE) Support MetaFeedParser.onCreated() for RSS 2.0 /rss/channel/item/pubdate
+
+- (DONE) Implement RSS 2.0 enclosure linkage ... this should be an onLink handler.
+
+- (DONE) Atom GUIDs and RSS 2.0 GUIDs
+
+- (DONE) Rework the factory mechanism to support multiple FeedParsers... should
+  be an interface.
+
+- How do I want to maintain a public    changelog?
+
+- How do I want to maintain a public TODO?
+
+- UTF-16 tests for unicode and checksum the content.
+
+- Fix the feedparsing bug where we'll drop chars:
+
+    current-broken-drop-accents.atom
+
+    The bug is in getCorrectInputStream
+
+- Networking layer should support per-request UserAgent settings.  This should
+  just be a request header I think
+
+
+- Won't build with the maven version with Jaxen 1.0.  What version of Jaxen are
+  we running?  This is a big problem if we can't figure this out.
+
+    - The older betas are NOT present so I really don't have any way to figure
+      this out... Do I?  When did I add it to NewsMonster?
+
+- What build of JDOM are we running?
+    1.0beta9 built January 24 2003
+
+- Would it be possible to dump JDOM and use DOM with Jaxen until we're ready to
+  use SAX?
+
+- Maven javadoc is broken.  Why is this?
+
+- Better Atom support:
+
+    - Support Base64 Atom values and the ability to enable them to be
+      automatically decoded.
+        
+    - Atom's xml:base is NOT supported right now.  We NEED to support this.
+
+    - Do we support multiple content items in Atom?
+
+
+- Where do we store global options like USER_AGENT, STRICT_PARSING, and
+  STRICT_SPECw
+
+
+
+
+- Unit tests don't need to be so LOUD!!
+
+- tests for:
+
+    - RSS and Atom GUIDs
+    - Atom content
+    - Atom summary
+    - xml:base expansion
+
+    - http://www.intertwingly.net/stories/2004/04/04/title.html
+
+
+- http://feedparser.org/docs/html-sanitization.html#advanced.sanitization.why
+
+    Hm...
+
+
+- FIXME: documentation on using HTTP authentication
+
+- BUG:
+
+    Make SURE that all these tests work
+
+     http://diveintomark.org/tests/client/autodiscovery/
+
+- We do not support multipart/alternative in the feedparser.
+ 
+- Migrate away from JDOM (slower than just using DOM/SAX)
+
+- Test cases shouldn't use absolute paths.
+
+- Support textinput which we don't support now
+
+
+- Break down requirements into specific versions of libraries that we need.
+
+            
+

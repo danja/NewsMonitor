@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<document>
+   <properties>
+      <title>Downloads</title>
+      <author email="dev@commons.apache.org">Commons Documentation Team</author>
+      <revision>$Id: downloads.xml 561366 2007-07-31 15:58:29Z rahul $</revision>
+   </properties>
+
+   <body>
+      <section name="Releases">
+         <p>There are no releases available.</p>
+
+<!--
+         <p>The following releases are available:</p>
+         <ul>
+           <li>Version 1.1 - 20 October 2003</li>
+           <li>Version 1.0 - 12 August 2002</li>
+         </ul>
+         <br/>
+         <p>
+            The latest binary release is always available on the 
+            <a href="http://jakarta.apache.org/site/binindex.cgi#commons-feedparser">
+            Jakarta Binary Downloads page</a>,
+            its source is available from 
+            <a href="http://jakarta.apache.org/site/sourceindex.cgi#commons-feedparser">
+            Jakarta Source Downloads page</a>.
+         </p>
+         <p>
+            Older releases are retained by the Apache Software Foundation but are 
+            moved into a
+            <a href="http://archive.apache.org/dist/jakarta/commons/feedparser/">
+            special archive area</a>.
+         </p>
+         <p>
+           <a href="http://cvs.apache.org/builds/jakarta-commons/nightly/commons-feedparser/">
+           Nightly source and binary drops</a> are available.
+         </p>
+
+-->
+          <p>
+              
+              The Subversion repository for FeedParser can be 
+              
+              <a href="http://svn.apache.org/viewvc/commons/dormant/feedparser/trunk/">
+                  browsed online
+              </a>.
+
+          </p>
+
+          <p>
+              Access to the source tree to see the latest and greatest code is possible
+              through <a href="cvs-usage.html">anonymous SVN access</a>.
+          </p>
+
+      </section>
+
+<!--
+      <section name="Release Candidate">
+         <p>
+            Release candidates for the upcoming 1.1 release can be downloaded 
+            <a href="http://cvs.apache.org/~dirkv/builds/">here</a>.
+         </p>
+         <p>
+            Please review and report any problem on the 
+            <a href="mail-lists.html">mailing list</a>.
+         </p>
+         <p>
+            Final release target is 20 October 2003. 
+         </p>
+      </section>
+-->
+   </body>
+</document>

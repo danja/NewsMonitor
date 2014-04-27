@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" ns="" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+    XML Schema for RSS v2.0 feed files.
+    Project home: http://www.codeplex.com/rss2schema/ 
+    Based on the RSS 2.0 specification document at http://cyber.law.harvard.edu/rss/rss.html 
+    Author: Jorgen Thelin
+    Revision: 16
+    Date: 01-Nov-2008
+    Feedback to: http://www.codeplex.com/rss2schema/WorkItem/List.aspx 
+  </a:documentation>
+  <rng:start combine="choice">
+<rng:ref name="rss"/>
+</rng:start>
+<rng:define name="rss">
+<rng:element name="rss">
+    
+      
+        <rng:element name="channel">
+<rng:ref name="RssChannel"/>
+</rng:element>
+        <rng:zeroOrMore>
+<rng:element>
+<rng:anyName/>
+<rng:text/>
+</rng:element>
+</rng:zeroOrMore>
+      
+      <rng:attribute name="version">
+<rng:data type="decimal"/>
+</rng:attribute>
+      <rng:attribute>
+<rng:anyName/>
+<rng:text/>
+</rng:attribute>
+    
+  </rng:element>
+</rng:define>
+  <rng:define name="RssItem">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      An item may represent a "story" -- much like a story in a newspaper or magazine; if so its description is a synopsis of the story, and the link points to the full story. An item may also be complete in itself, if so, the description contains the text (entity-encoded HTML is allowed), and the link and title may be omitted.
+    </a:documentation>
+    
+      <rng:oneOrMore>
+<rng:choice>
+        <rng:optional>
+<rng:element name="title">
+<rng:data type="string">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The title of the item.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="description">
+<rng:data type="string">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The item synopsis.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="link">
+<rng:data type="anyURI">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The URL of the item.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="author">
+<rng:ref name="EmailAddress"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Email address of the author of the item.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="category">
+<rng:ref name="Category"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Includes the item in one or more categories. 
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="comments">
+<rng:data type="anyURI">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            URL of a page for comments relating to the item.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="enclosure">
+<rng:ref name="Enclosure"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Describes a media object that is attached to the item.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="guid">
+<rng:ref name="Guid"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            guid or permalink URL for this entry
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="pubDate">
+<rng:ref name="Rfc822FormatDate"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Indicates when the item was published.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="source">
+<rng:ref name="Source"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The RSS channel that the item came from.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:zeroOrMore>
+<rng:element>
+<rng:anyName/>
+<rng:text/>
+</rng:element>
+</rng:zeroOrMore>
+      </rng:choice>
+</rng:oneOrMore>
+    
+    <rng:attribute>
+<rng:anyName/>
+<rng:text/>
+</rng:attribute>
+  </rng:define>
+  <rng:define name="RssChannel">
+    
+      <rng:oneOrMore>
+<rng:choice>
+        <rng:element name="title">
+<rng:data type="string">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The name of the channel. It's how people refer to your service. If you have an HTML website that contains the same information as your RSS file, the title of your channel should be the same as the title of your website.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+        <rng:element name="link">
+<rng:data type="anyURI">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The URL to the HTML website corresponding to the channel.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+        <rng:element name="description">
+<rng:data type="string">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Phrase or sentence describing the channel.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+        <rng:optional>
+<rng:element name="language">
+<rng:data type="language">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The language the channel is written in. This allows aggregators to group all Italian language sites, for example, on a single page. A list of allowable values for this element, as provided by Netscape, is here. You may also use values defined by the W3C.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="copyright">
+<rng:data type="string">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Copyright notice for content in the channel.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="managingEditor">
+<rng:ref name="EmailAddress"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Email address for person responsible for editorial content.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="webMaster">
+<rng:ref name="EmailAddress"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Email address for person responsible for technical issues relating to channel.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="pubDate">
+<rng:ref name="Rfc822FormatDate"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The publication date for the content in the channel. All date-times in RSS conform to the Date and Time Specification of RFC 822, with the exception that the year may be expressed with two characters or four characters (four preferred).
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="lastBuildDate">
+<rng:ref name="Rfc822FormatDate"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The last time the content of the channel changed.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="category">
+<rng:ref name="Category"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Specify one or more categories that the channel belongs to.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="generator">
+<rng:data type="string">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            A string indicating the program used to generate the channel.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="docs">
+<rng:data type="anyURI">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            A URL that points to the documentation for the format used in the RSS file. It's probably a pointer to this page. It's for people who might stumble across an RSS file on a Web server 25 years from now and wonder what it is.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="cloud">
+<rng:ref name="Cloud"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Allows processes to register with a cloud to be notified of updates to the channel, implementing a lightweight publish-subscribe protocol for RSS feeds.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="ttl">
+<rng:data type="nonNegativeInteger">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            ttl stands for time to live. It's a number of minutes that indicates how long a channel can be cached before refreshing from the source.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="image">
+<rng:ref name="Image"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Specifies a GIF, JPEG or PNG image that can be displayed with the channel.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="rating">
+<rng:data type="string">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            The PICS rating for the channel.
+          </a:documentation>
+        </rng:data>
+</rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="textInput">
+<rng:ref name="TextInput"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Specifies a text input box that can be displayed with the channel.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="skipHours">
+<rng:ref name="SkipHoursList"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            A hint for aggregators telling them which hours they can skip.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:optional>
+<rng:element name="skipDays">
+<rng:ref name="SkipDaysList"/>
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            A hint for aggregators telling them which days they can skip.
+          </a:documentation>
+        </rng:element>
+</rng:optional>
+        <rng:zeroOrMore>
+<rng:element>
+<rng:anyName/>
+<rng:text/>
+</rng:element>
+</rng:zeroOrMore>
+      </rng:choice>
+</rng:oneOrMore>
+      <rng:oneOrMore>
+<rng:element name="item">
+<rng:ref name="RssItem"/>
+         
+      </rng:element>
+</rng:oneOrMore>
+      <rng:zeroOrMore>
+<rng:element>
+<rng:anyName/>
+<rng:text/>
+</rng:element>
+</rng:zeroOrMore>
+    
+    <rng:attribute>
+<rng:anyName/>
+<rng:text/>
+</rng:attribute>
+  </rng:define>
+  <rng:define name="SkipHour">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      A time in GMT when aggregators should not request the channel data. The hour beginning at midnight is hour zero.
+    </a:documentation>
+    <rng:data type="nonNegativeInteger">
+      <rng:param name="minInclusive">0</rng:param>
+      <rng:param name="maxInclusive">23</rng:param>
+    </rng:data>
+  </rng:define>
+  <rng:define name="SkipHoursList">
+    
+      <rng:optional>
+<rng:element name="hour">
+<rng:ref name="SkipHour"/>
+</rng:element>
+</rng:optional>
+    
+  </rng:define>
+  <rng:define name="SkipDay">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      A day when aggregators should not request the channel data.
+    </a:documentation>
+    <rng:choice>
+      <rng:value>Monday</rng:value>
+      <rng:value>Tuesday</rng:value>
+      <rng:value>Wednesday</rng:value>
+      <rng:value>Thursday</rng:value>
+      <rng:value>Friday</rng:value>
+      <rng:value>Saturday</rng:value>
+      <rng:value>Sunday</rng:value>
+    </rng:choice>
+  </rng:define>
+  <rng:define name="SkipDaysList">
+    
+      <rng:optional>
+<rng:element name="day">
+<rng:ref name="SkipDay"/>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          A time in GMT, when aggregators should not request the channel data. The hour beginning at midnight is hour zero.
+        </a:documentation>
+      </rng:element>
+</rng:optional>
+    
+  </rng:define>
+  <rng:define name="Category">
+    
+      
+        <rng:attribute name="domain">
+<rng:data type="string"/>
+</rng:attribute>
+      
+    
+  </rng:define>
+  <rng:define name="Image">
+    <rng:interleave>
+<rng:optional>
+<rng:element name="url">
+<rng:data type="anyURI">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          The URL of the image file.
+        </a:documentation>
+      </rng:data>
+</rng:element>
+</rng:optional>
+<rng:optional>
+<rng:element name="title">
+<rng:data type="string">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          Describes the image, it's used in the ALT attribute of the HTML &lt;img&gt; tag when the channel is rendered in HTML.
+        </a:documentation>
+      </rng:data>
+</rng:element>
+</rng:optional>
+<rng:optional>
+<rng:element name="link">
+<rng:data type="anyURI">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          The URL of the site, when the channel is rendered, the image is a link to the site. (Note, in practice the image &lt;title&gt; and &lt;link&gt; should have the same value as the channel's &lt;title&gt; and &lt;link&gt;. 
+        </a:documentation>
+      </rng:data>
+</rng:element>
+</rng:optional>
+<rng:optional>
+<a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            default value is : 88</a:documentation>
+<rng:optional>
+<rng:element name="width">
+<rng:ref name="ImageWidth"/>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          The width of the image in pixels.
+        </a:documentation>
+      </rng:element>
+</rng:optional>
+</rng:optional>
+<rng:optional>
+<a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            default value is : 31</a:documentation>
+<rng:optional>
+<rng:element name="height">
+<rng:ref name="ImageHeight"/>
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          The height of the image in pixels.
+        </a:documentation>
+      </rng:element>
+</rng:optional>
+</rng:optional>
+<rng:optional>
+<rng:optional>
+<rng:element name="description">
+<rng:data type="string">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          Text that is included in the TITLE attribute of the link formed around the image in the HTML rendering.
+        </a:documentation>
+      </rng:data>
+</rng:element>
+</rng:optional>
+</rng:optional>
+</rng:interleave>
+  </rng:define>
+  <rng:define name="ImageHeight">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      The height of the image in pixels.
+    </a:documentation>
+    <rng:data type="positiveInteger">
+      <rng:param name="maxInclusive">400</rng:param>
+    </rng:data>
+  </rng:define>
+  <rng:define name="ImageWidth">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      The width of the image in pixels.
+    </a:documentation>
+    <rng:data type="positiveInteger">
+      <rng:param name="maxInclusive">144</rng:param>
+    </rng:data>
+  </rng:define>
+  <rng:define name="Cloud">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      Specifies a web service that supports the rssCloud interface which can be implemented in HTTP-POST, XML-RPC or SOAP 1.1. Its purpose is to allow processes to register with a cloud to be notified of updates to the channel, implementing a lightweight publish-subscribe protocol for RSS feeds.
+    </a:documentation>
+    <rng:attribute name="domain">
+<rng:data type="string"/>
+</rng:attribute>
+    <rng:attribute name="port">
+<rng:data type="positiveInteger"/>
+</rng:attribute>
+    <rng:attribute name="path">
+<rng:data type="string"/>
+</rng:attribute>
+    <rng:attribute name="registerProcedure">
+<rng:data type="string"/>
+</rng:attribute>
+    <rng:attribute name="protocol">
+<rng:ref name="CloudProtocol"/>
+</rng:attribute>
+  </rng:define>
+  <rng:define name="CloudProtocol">
+    <rng:choice>
+      <rng:value>xml-rpc</rng:value>
+      <rng:value>http-post</rng:value>
+      <rng:value>soap</rng:value>
+    </rng:choice>
+  </rng:define>
+  <rng:define name="TextInput">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      The purpose of this element is something of a mystery! You can use it to specify a search engine box. Or to allow a reader to provide feedback. Most aggregators ignore it.
+    </a:documentation>
+    <rng:interleave>
+<rng:optional>
+<rng:element name="title">
+<rng:data type="string">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          The label of the Submit button in the text input area.
+        </a:documentation>
+      </rng:data>
+</rng:element>
+</rng:optional>
+<rng:optional>
+<rng:element name="description">
+<rng:data type="string">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          Explains the text input area.
+        </a:documentation>
+      </rng:data>
+</rng:element>
+</rng:optional>
+<rng:optional>
+<rng:element name="name">
+<rng:data type="string">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          The name of the text object in the text input area.
+        </a:documentation>
+      </rng:data>
+</rng:element>
+</rng:optional>
+<rng:optional>
+<rng:element name="link">
+<rng:data type="anyURI">
+        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+          The URL of the CGI script that processes text input requests.
+        </a:documentation>
+      </rng:data>
+</rng:element>
+</rng:optional>
+</rng:interleave>
+  </rng:define>
+  <rng:define name="EmailAddress">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      Using the regexp definiton of E-Mail Address by Lucadean from the .NET RegExp Pattern Repository at http://www.3leaf.com/default/NetRegExpRepository.aspx 
+    </a:documentation>
+    <rng:data type="string">
+      <rng:param name="pattern">([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@(\[((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}|((([a-zA-Z0-9\-]+)\.)+))([a-zA-Z]{2,}|(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\])</rng:param>
+    </rng:data>
+  </rng:define>
+  <rng:define name="Rfc822FormatDate">
+    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+      A date-time displayed in RFC-822 format.
+      Using the regexp definiton of rfc-822 date by Sam Ruby at http://www.intertwingly.net/blog/1360.html 
+    </a:documentation>
+    <rng:data type="string">
+      <rng:param name="pattern">(((Mon)|(Tue)|(Wed)|(Thu)|(Fri)|(Sat)|(Sun)), *)?\d\d? +((Jan)|(Feb)|(Mar)|(Apr)|(May)|(Jun)|(Jul)|(Aug)|(Sep)|(Oct)|(Nov)|(Dec)) +\d\d(\d\d)? +\d\d:\d\d(:\d\d)? +(([+\-]?\d\d\d\d)|(UT)|(GMT)|(EST)|(EDT)|(CST)|(CDT)|(MST)|(MDT)|(PST)|(PDT)|\w)</rng:param>
+    </rng:data>
+  </rng:define>
+  <rng:define name="Source">
+    
+      
+        <rng:attribute name="url">
+<rng:data type="anyURI"/>
+</rng:attribute>
+      
+    
+  </rng:define>
+  <rng:define name="Enclosure">
+    
+      
+        <rng:attribute name="url">
+<rng:data type="anyURI">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            URL where the enclosure is located
+          </a:documentation>
+        </rng:data>
+</rng:attribute>
+        <rng:attribute name="length">
+<rng:data type="nonNegativeInteger">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            Size in bytes
+          </a:documentation>
+        </rng:data>
+</rng:attribute>
+        <rng:attribute name="type">
+<rng:data type="string">
+          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+            MIME media-type of the enclosure
+          </a:documentation>
+        </rng:data>
+</rng:attribute>
+      
+    
+  </rng:define>
+  <rng:define name="Guid">
+    
+      
+        <rng:attribute name="isPermaLink" a0:defaultValue="true" xmlns:a0="http://relaxng.org/ns/compatibility/annotations/1.0">
+<rng:data type="boolean"/>
+</rng:attribute>
+      
+    
+  </rng:define>
+
+
+
+
+
+</rng:grammar>

@@ -1,0 +1,16 @@
+<!-- test for basic RSS with an internal RSS 0.90 index.xml link. -->
+
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <p>
+            <a href="/roller/rss/foobar">RSS</a>
+        </p>
+
+    </body>
+
+</html>

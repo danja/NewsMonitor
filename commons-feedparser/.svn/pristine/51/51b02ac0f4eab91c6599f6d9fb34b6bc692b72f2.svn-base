@@ -1,0 +1,56 @@
+  <?xml version="1.0" encoding="utf-8" ?> 
+- <opml version="1.0">
+- <head>
+  <title>Bloglines Subscriptions</title> 
+  <dateCreated>Wed, 1 Sep 2004 06:18:07 GMT</dateCreated> 
+  <ownerName>KnowledgeBoard</ownerName> 
+  </head>
+
+- <body>
+- <outline title="Subscriptions">
+  <outline title="Blog of Collective Intelligence" htmlUrl="http://www.community-intelligence.com/blogs/public/" type="rss" xmlUrl="http://www.community-intelligence.com/blogs/public/index.rdf" /> 
+  <outline title="Column Two" htmlUrl="http://www.steptwo.com.au/columntwo/" type="rss" xmlUrl="http://steptwo.com.au/columntwo/index.xml" /> 
+  <outline title="Connectivity: Spike Hall's RU Weblog" htmlUrl="http://radio.weblogs.com/0106698/" type="rss" xmlUrl="http://radio.weblogs.com/0106698/rss.xml" /> 
+  <outline title="Conversations with Dina" htmlUrl="http://radio.weblogs.com/0121664/" type="rss" xmlUrl="http://radio.weblogs.com/0121664/rss.xml" /> 
+  <outline title="Das E-Business Weblog" htmlUrl="http://www.roell.net/weblog/" type="rss" xmlUrl="http://www.roell.net/weblog/index.rdf" /> 
+  <outline title="eCriteria Datablog eCriteria Meta Datablog Pulp IT Pulp IT" htmlUrl="http://www.ecriteria.blogspot.com/" type="rss" xmlUrl="http://www.wcc.vccs.edu/services/rssify/rssify.php?url=http://www.ecriteria.blogspot.com" /> 
+  <outline title="EduResources Weblog--Higher Education Resources Online" htmlUrl="http://radio.weblogs.com/0114870/" type="rss" xmlUrl="http://radio.weblogs.com/0114870/rss.xml" /> 
+  <outline title="excited utterances" htmlUrl="http://excitedutterances.blogspot.com" type="rss" xmlUrl="http://excitedutterances.blogspot.com/rss/excitedutterances.xml" /> 
+  <outline title="Gilles en vrac..." htmlUrl="http://radio.weblogs.com/0101569/" type="rss" xmlUrl="http://radio.weblogs.com/0101569/rss.xml" /> 
+  <outline title="Gurteen Knowledge Log" htmlUrl="http://www.gurteen.com/gurteen/gurteen.nsf/0/E79924B9B266C48A80256B8D004BB5AD/" type="rss" xmlUrl="http://www.gurteen.com/gurteen/gurteen.nsf/id/gurteen-klog.xml" /> 
+  <outline title="infosophy: Socio-technological Rendering of Information" htmlUrl="http://www.kmentor.com/socio-tech-info/" type="rss" xmlUrl="http://www.kmentor.com/socio-tech-info/index.rdf" /> 
+  <outline title="It's all about people and networks" htmlUrl="http://www.efios.com/blog/" type="rss" xmlUrl="http://www.efios.com/blog/rss.xml" /> 
+  <outline title="John Daly's Thoughts About K4D" htmlUrl="http://stconsultant.blogspot.com/" type="rss" xmlUrl="http://feeds.blogstreet.com/13028.rss" /> 
+  <outline title="judith meskill's knowledge notes..." htmlUrl="http://www.meskill.net/weblogs/" type="rss" xmlUrl="http://www.meskill.net/weblogs/index.xml" /> 
+  <outline title="Goiaba Knowledge Management" htmlUrl="http://goiaba.blogs.com/knowledge_bridge/" type="rss" xmlUrl="http://goiaba.blogs.com/knowledge_bridge/index.rdf" /> 
+  <outline title="Knowledge-at-work" htmlUrl="http://denham.typepad.com/km/" type="rss" xmlUrl="http://denham.typepad.com/km/index.rdf" /> 
+  <outline title="Living Networks - The Blog" htmlUrl="http://www.livingnetworksbook.com/blog" type="rss" xmlUrl="http://www.livingnetworksbook.com/blog/backend.php" /> 
+  <outline title="Mathemagenic" htmlUrl="http://blog.mathemagenic.com/" type="rss" xmlUrl="http://blog.mathemagenic.com/rss.xml" /> 
+  <outline title="McGee's Musings" htmlUrl="http://www.mcgeesmusings.net/" type="rss" xmlUrl="http://www.mcgeesmusings.net/rss.xml" /> 
+  <outline title="Mopsos" htmlUrl="http://blog.mopsos.com/" type="rss" xmlUrl="http://blog.mopsos.com//index.xml" /> 
+  <outline title="Networks, Complexity, and Relatedness" htmlUrl="http://www.byeday.net/weblog/networkblog.html" type="rss" xmlUrl="http://www.byeday.net/weblog/rss.xml" /> 
+  <outline title="Psybertron Knowledge Modelling WebLog" htmlUrl="http://www.psybertron.org/index.html" type="rss" xmlUrl="http://www.psybertron.org/rss.xml" /> 
+  <outline title="Jason Bell - Java Development" htmlUrl="http://realkm.blog-city.com/" type="rss" xmlUrl="http://realkm.blog-city.com/rss/default.rss" /> 
+  <outline title="Seb's Open Research" htmlUrl="http://radio.weblogs.com/0110772/" type="rss" xmlUrl="http://radio.weblogs.com/0110772/rss.xml" /> 
+  <outline title="Latest Entries @ snowdragon.blog-city.com" htmlUrl="http://snowdragon.blog-city.com/" type="rss" xmlUrl="http://snowdragon.blog-city.com/rss/default.rss" /> 
+  <outline title="TeledyN" htmlUrl="http://www.teledyn.com/mt/" type="rss" xmlUrl="http://www.teledyn.com/mt/index.rdf" /> 
+  <outline title="The Ferryman" htmlUrl="http://barryhardy.blogs.com/theferryman/" type="rss" xmlUrl="http://barryhardy.blogs.com/theferryman/index.rdf" /> 
+  <outline title="Mutual Marketing" htmlUrl="http://www.mutualmarketing.co.uk/" type="rss" xmlUrl="http://www.mutualmarketing.co.uk/index.rdf" /> 
+  <outline title="The Ourhouse Weblog" htmlUrl="http://www.roundourhouse.com/blog/" type="rss" xmlUrl="http://www.roundourhouse.com/blog/index.rdf" /> 
+  <outline title="Ton's Interdependent Thoughts" htmlUrl="http://www.zylstra.org/blog/" type="rss" xmlUrl="http://www.zylstra.org/blog/index.rdf" /> 
+  <outline title="Value-Creation by Communities of Practice" htmlUrl="http://www.eccop.com/blogs/public/" type="rss" xmlUrl="http://www.eccop.com/blogs/public/index.rdf" /> 
+  <outline title="ingo's blog" htmlUrl="http://www.forstenlechner.com/blogger.html" type="rss" xmlUrl="http://feeds.blogstreet.com/39730.rss" /> 
+  <outline title="Thoughts About K4D" htmlUrl="http:///" type="rss" xmlUrl="http://feedster.com/makerss.php?url=http://stconsultant.blogspot.com/" /> 
+  <outline title="ingoblog" htmlUrl="http://www.forstenlechner.com/blogger.html" type="rss" xmlUrl="http://www.forstenlechner.com/atom.xml" /> 
+  <outline title="Monkeymagic" htmlUrl="http://blog.monkeymagic.net/" type="rss" xmlUrl="http://www.monkeymagic.net/blog/index.rdf" /> 
+  <outline title="IrishEyes" htmlUrl="http://irish.typepad.com/irisheyes/" type="rss" xmlUrl="http://irish.typepad.com/irisheyes/index.rdf" /> 
+  <outline title="CONIECTO" htmlUrl="http://coniecto.blogspot.com" type="rss" xmlUrl="http://coniecto.blogspot.com/atom.xml" /> 
+  <outline title="Ed Bilodeau" htmlUrl="http://www.coolweblog.com/bilodeau/" type="rss" xmlUrl="http://www.coolweblog.com/bilodeau/index.rdf" /> 
+  <outline title="Intellectual Capital Punishment" htmlUrl="http://sammarshall.blogspot.com" type="rss" xmlUrl="http://sammarshall.blogspot.com/atom.xml" /> 
+  <outline title="Hannes Gassert" htmlUrl="http://hannes.kaywa.com/" type="rss" xmlUrl="http://hannes.kaywa.com/rss/rss.xml" /> 
+  <outline title="Knowledge Jolt with Jack" htmlUrl="http://jackvinson.com/" type="rss" xmlUrl="http://jackvinson.com/index.xml" /> 
+  </outline>
+
+  </body>
+
+  </opml>

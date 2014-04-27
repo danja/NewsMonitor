@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:admin="http://webns.net/mvcb/">
+
+<channel rdf:about="http://blog.livedoor.jp/lindows_staff/">
+<title>開発日誌</title>
+<link>http://blog.livedoor.jp/lindows_staff/</link>
+<description>
+
+	
+	livedoor LindowsOS｜livedoorホーム
+
+
+
+
+
+	LindowsOS開発日誌
+
+</description>
+<dc:language>ja</dc:language>
+<admin:generatorAgent rdf:resource="http://blog.livedoor.com/?v=1.0" />
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/6420746.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/6419682.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/6385682.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/6331698.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/6170818.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/6112530.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/6068537.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/5973811.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/5971909.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/5828478.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/5736705.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/5736389.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/5682397.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/5646065.html" />
+  <rdf:li rdf:resource="http://blog.livedoor.jp/lindows_staff/archives/5630093.html" />
+ </rdf:Seq>
+</items>
+</channel>
+
+<item rdf:about="http://blog.livedoor.jp/lindows_staff/archives/6420746.html">
+<title>Linuxショップ おすすめ商品</title>
+<link>http://blog.livedoor.jp/lindows_staff/archives/6420746.html</link>
+<description>livedoor LINUXでは、Linuxショップ内のおすすめアイテムを掲載しています。
+もちろん、その他にも多数商品を取り揃えておりますので、ぜひご来店ください。
+
+お店は、こちらです。
+
+</description>
+<dc:creator>lindows_staff</dc:creator>
+<dc:date>2004-09-02T15:06:04+09:00</dc:date>
+<dc:subject>LinuxShop</dc:subject>
+<content:encoded><![CDATA[
+<a href="http://linux.livedoor.com/">livedoor LINUX</a>では、Linuxショップ内のおすすめアイテムを掲載しています。<br />
+もちろん、その他にも多数商品を取り揃えておりますので、ぜひご来店ください。<br />
+<br />
+お店は、<a href="http://depart.livedoor.com/category?category_id=6195">こちら</a>です。<br />
+<br />
+]]></content:encoded>
+</item>
+
+</rdf:RDF>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+  <head />
+  <body>
+    <outline title="Tech Blogs">
+      <outline title="Jamie Jamison On Technology" xmlUrl="http://www.jamiejamison.com/tech/index.rdf" htmlUrl="http://www.jamiejamison.com/tech/" description="News and opinions from a Philadelphia-area tech junkie" />
+      <outline title="Anil Dash" xmlUrl="http://www.dashes.com/anil/index.rdf" htmlUrl="http://www.dashes.com/anil/" description="New York New Media New Funk" />
+      <outline title="Joel on Software" xmlUrl="http://www.joelonsoftware.com/rss.xml" htmlUrl="http://www.joelonsoftware.com" description="Painless Software Management" />
+      <outline title="kuro5hin.org" xmlUrl="http://www.kuro5hin.org/backend.rdf" htmlUrl="http://www.kuro5hin.org/" description="technology and culture, from the trenches" />
+      <outline title="Dan Gillmor's eJournal" xmlUrl="http://weblog.siliconvalley.com/column/dangillmor/index.xml" htmlUrl="http://weblog.siliconvalley.com/column/dangillmor/" description="" />
+      <outline title="John Battelle's Searchblog" xmlUrl="http://battellemedia.com/index.xml" htmlUrl="http://battellemedia.com/" description="Thoughts on the intersection of search, media, technology, and more.&#xD;&#xA;                  Beta" />
+      <outline title="business2blog" xmlUrl="http://business2.blogs.com/business2blog/index.rdf" htmlUrl="http://business2.blogs.com/business2blog/" description="Daily reports and comments from the writers and editors of Business 2.0 magazine." />
+      <outline title="Lessig Blog" xmlUrl="http://www.lessig.org/blog/index.xml" htmlUrl="http://www.lessig.org/blog/" description="Lessig's blog." />
+      <outline title="Engadget" xmlUrl="http://www.engadget.com/rss.xml" htmlUrl="http://www.engadget.com/" description="Engadget" />
+      <outline title="Ted Shelton" xmlUrl="http://tedshelton.blogspot.com/blogger_rss.xml" htmlUrl="http://tedshelton.blogspot.com" description="Early adopter, entrepreneur, leader interested in software, the Internet, mobile telephony and computing, and VoIP. Founder or senior management with CallTrex, Borland (BORL), The Dr. Spock Company, Neta4, WhoWhere?, CMP Media, and IT Solutions." />
+      <outline title="Jonathan Schwartz's Weblog" xmlUrl="http://blogs.sun.com/roller/rss/jonathan" htmlUrl="http://blogs.sun.com/roller/page/jonathan" description="Jonathan Schwartz's Weblog" />
+      <outline title="Contentious Weblog" xmlUrl="http://blog.contentious.com/index.rdf" htmlUrl="http://blog.contentious.com/" description="News and musings on how we communicate in the online age&lt;br&gt;&#xD;&#xA;By AMY&amp;nbsp;GAHRAN: writer, editor, trainer" />
+      <outline title="Russell Beattie Notebook" xmlUrl="http://www.russellbeattie.com/notebook/index.rss" htmlUrl="http://www.russellbeattie.com/notebook/" description="My online notebook with thoughts, comments, links and more." />
+      <outline title="Clay Shirky's Essays   " xmlUrl="http://shirky.com/writings/rss.cgi" htmlUrl="http://shirky.com/writings/rss.cgi" description="Clay Shirky's Essays" />
+      <outline title="Lextext" xmlUrl="http://blog.lextext.com/blog/index.xml" htmlUrl="http://blog.lextext.com/blog" description="" />
+      <outline title="Scobleizer: Microsoft Geek Blogger" xmlUrl="http://radio.weblogs.com/0001011/rss.xml" htmlUrl="http://radio.weblogs.com/0001011/" description="Robert Scoble's look at geek and Microsoft life." />
+      <outline title="EuroTelcoblog" xmlUrl="http://eurotelcoblog.blogspot.com/atom.xml" htmlUrl="http://eurotelcoblog.blogspot.com" description="Reflections on developments within the European telecom sector, with an emphasis on disruptive influences and emerging business models - by James Enck of Daiwa Securities SMBC Europe Ltd. (james.enck@dir.co.uk) " />
+      <outline title="Search Engine Roundtable" xmlUrl="http://www.seroundtable.com/index.xml" htmlUrl="http://www.seroundtable.com/" description="A well-rounded view on search engines and search engine marketing by senior members of the major SEO/SEM forums on the Internet." />
+      <outline title="Yahoo! Search blog" xmlUrl="http://www.ysearchblog.com/index.xml" htmlUrl="http://www.ysearchblog.com/" description="A look inside the world of search from the people of Yahoo!" />
+      <outline title="Gizmodo" xmlUrl="http://www.gizmodo.com/index.xml" htmlUrl="http://www.gizmodo.com/" description="Gizmodo is an online review dedicated to gadgets, gizmos, and cutting-edge consumer electronics." />
+    </outline>
+    <outline title="International News">
+      <outline title="ABC News: World" xmlUrl="http://my.abcnews.go.com/rsspublic/world_rss093.xml" htmlUrl="http://abcnews.com/sections/world/index.html" description="RSS FEED FOR ABCNEWS World INDEX" />
+      <outline title="Guardian Unlimited" xmlUrl="http://www.guardian.co.uk/rss/1,,,00.xml" htmlUrl="http://www.guardian.co.uk" description="Intelligent news and comment throughout the day from The Guardian newspaper" />
+      <outline title="BBC News - Front Page - UK Edition" xmlUrl="http://news.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss091.xml" htmlUrl="http://news.bbc.co.uk/go/click/rss/0.91/public/-/1/hi/default.stm" description="Updated every minute of every day - FOR PERSONAL USE ONLY" />
+      <outline title="New York Times- NYT HomePage" xmlUrl="http://www.nytimes.com/services/xml/rss/userland/HomePage.xml" htmlUrl="http://www.nytimes.com/index.html?partner=rssuserland" description="New York Times &gt; Breaking News, World News &amp; Multimedia" />
+    </outline>
+    <outline title="WiFi">
+      <outline title="802.11 Planet News" xmlUrl="http://www.wi-fiplanet.com/icom_includes/feeds/80211/xml_front-news-10.xml" htmlUrl="http://www.wi-fiplanet.com" description="wireless" />
+      <outline title="Ecademy: user blogs" xmlUrl="http://www.wifi.ecademy.com/module.php?mod=blog&amp;op=feed" htmlUrl="http://wireless.ecademy.com/module.php?mod=blog" description="Recently updated blogs." />
+      <outline title="FierceWireless and 802.11 Report (Email)" xmlUrl="(null)" />
+      <outline title="Wi-Fi Networking News" xmlUrl="http://wifinetnews.com/index.rdf" htmlUrl="http://wifinetnews.com/" description="Wi-Fi Networking News reports nearly daily on all the news associated with wireless networking." />
+    </outline>
+    <outline title="Tech News">
+      <outline title="BBC Tech" xmlUrl="http://news.bbc.co.uk/rss/newsonline_world_edition/technology/rss091.xml" htmlUrl="http://news.bbc.co.uk/go/click/rss/0.91/public/-/2/hi/technology/default.stm" description="Updated every minute of every day - FOR PERSONAL USE ONLY" />
+      <outline title="Techdirt" xmlUrl="http://www.techdirt.com/techdirt_rss.xml" htmlUrl="http://www.techdirt.com/" description="Easily digestible tech news." />
+      <outline title="Techdirt Corporate Intelligence:" xmlUrl="http://www.techdirt.com/news/wireless/rss.xml" htmlUrl="http://techdirt.com/news/wireless/" description="" />
+      <outline title="Wired News" xmlUrl="http://www.wired.com/news_drop/netcenter/netcenter.rdf" htmlUrl="http://www.wired.com/" description="Technology, and the way we do business, is changing the world we know. Wired News is a technology - and business-oriented news service feeding an intelligent, discerning audience. What role does technology play in the day-to-day living of your life? Wired News tells you. How has evolving technology changed the face of the international business world? Wired News puts you in the picture." />
+      <outline title="The Register" xmlUrl="http://www.theregister.co.uk/feeds/latest.rdf" htmlUrl="http://www.theregister.co.uk/" description="Biting the hand that feeds IT" />
+      <outline title="News.com" xmlUrl="http://news.com.com/2547-1_3-0-20.xml" htmlUrl="http://news.com.com/" description="Tech news and business reports by CNET News.com. Focused on information technology, core topics include computers, hardware, software, networking, and Internet media." />
+      <outline title="Slashdot" xmlUrl="http://slashdot.org/index.rss" htmlUrl="http://slashdot.org/" description="News for nerds, stuff that matters" />
+      <outline title="heise online news" xmlUrl="http://www.heise.de/newsticker/heise.rdf" htmlUrl="http://www.heise.de/newsticker/" description="Nachrichten aus der Welt des Computers" />
+      <outline title="NYT: Technology" xmlUrl="http://www.nytimes.com/services/xml/rss/userland/Technology.xml" htmlUrl="http://www.nytimes.com/pages/technology/index.html?partner=rssuserland" description="Find breaking news, tech news &amp; multimedia on the Internet, telecommunications, wireless applications, electronics, science, computers, e-mail &amp; the Web." />
+      <outline title="Ars Technica" xmlUrl="http://arstechnica.com/news/rss2.0.rdf" htmlUrl="http://www.arstechnica.com/" description="The PC Enthusiast's Resource" />
+      <outline title="NewsForge: NewsVac" xmlUrl="http://www.newsforge.com/newsvac.rss" htmlUrl="http://newsvac.newsforge.com/" description="The Online Newspaper for Linux and Open Source" />
+      <outline title="NewsForge" xmlUrl="http://www.newsforge.com/reports.rss" htmlUrl="http://www.newsforge.com/" description="The Online Newspaper for Linux and Open Source" />
+    </outline>
+    <outline title="Rarely Read">
+      <outline title="Bloglines | News" xmlUrl="http://www.bloglines.com/rss/about/news" htmlUrl="http://www.bloglines.com" description="The Latest News And Updates From Bloglines" />
+    </outline>
+    <outline title="Wireless">
+      <outline title="moconews" xmlUrl="http://feeds.feedburner.com/Moconews" htmlUrl="http://www.moconews.net" description="Mobile Content News" />
+      <outline title="TheFeature.com" xmlUrl="http://www.thefeature.com/thefeature.rdf" htmlUrl="http://www.thefeature.com" description="TheFeature :: It's All About The Mobile Internet" />
+      <outline title="MobileTracker" xmlUrl="http://www.mobiletracker.net/index.rdf" htmlUrl="http://www.mobiletracker.net/" description="Because You Can't Trust The Salesman" />
+      <outline title="Wireless Europe Analysis" xmlUrl="http://wireless.iop.org/rss/news.xml" htmlUrl="http://wireless.iop.org/articles/news/" description="" />
+      <outline title="PaidContent.org" xmlUrl="http://feeds.feedburner.com/pcorg" htmlUrl="http://www.paidcontent.org/" description="" />
+    </outline>
+    <outline title="BV and Venture">
+      <outline title="VentureBlog" xmlUrl="http://feeds.feedburner.com/ventureblog" htmlUrl="http://www.ventureblog.com/" description="A Random Walk Down Sand Hill Road" />
+      <outline title="A VC - Fred Wilson" xmlUrl="http://feeds.feedburner.com/AVc" htmlUrl="http://avc.blogs.com/a_vc/" description="Musings of a VC in NYC" />
+      <outline title="Feld Thoughts" xmlUrl="http://feeds.feedburner.com/FeldThoughts" htmlUrl="http://www.feld.com/blog/" description="" />
+      <outline title="OnlyOnce - ReturnPath CEO" xmlUrl="http://feeds.feedburner.com/Onlyonce" htmlUrl="http://onlyonce.blogs.com/onlyonce/" description="On management, leadership, being a first-time entrepreneur, and on the email industry" />
+      <outline title="Northwest VC - Steve Hall- Vulcan" xmlUrl="http://nwvc.blogs.com/northwest_vc/index.rdf" htmlUrl="http://nwvc.blogs.com/northwest_vc/" description="Steve Hall's &quot;notes to self&quot; and anyone else who happens to read this page...." />
+      <outline title="Transparent Bundles" xmlUrl="http://majestic.typepad.com/seth/index.rdf" htmlUrl="http://majestic.typepad.com/seth/" description="Regular thoughts on Independent Research and the new sources of data that are changing Wall Street." />
+      <outline title="BurnhamsBeat" xmlUrl="http://billburnham.blogs.com/burnhamsbeat/index.rdf" htmlUrl="http://billburnham.blogs.com/burnhamsbeat/" description="Articles on Software Technology and Investing" />
+      <outline title="BeyondVC" xmlUrl="http://www.beyondvc.com/index.rdf" htmlUrl="http://www.beyondvc.com/" description="Ed Sim's blog on venture capital, technology, the markets, and life in a connected world..." />
+      <outline title="VCball" xmlUrl="http://brotman.blogs.com/vcball/index.rdf" htmlUrl="http://brotman.blogs.com/vcball/" description="Steve Brotman's quixotic search for new knowledge in VC, entrepreneurship and IT with an NYC metro centric tilt." />
+      <outline title="Weekly Read:: Here" xmlUrl="http://www.weeklyread.com/rss/here.xml" />
+      <outline title="Weekly Read :: Elsewhere" xmlUrl="http://www.weeklyread.com/rss/elsewhere.xml" htmlUrl="http://www.weeklyread.com/" description="" />
+      <outline title="a little ludwig goes a long way" xmlUrl="http://www.theludwigs.com/index.rdf" htmlUrl="http://www.theludwigs.com/" description="john ludwig :: john AT ignitionpartners.com :: jhludwig AT hotmail.com" />
+      <outline title="Jeff Nolan" xmlUrl="http://sapventures.typepad.com/main/index.rdf" htmlUrl="http://sapventures.typepad.com/main/" description="meta news with occasional original content" />
+      <outline title="Due Diligence" xmlUrl="http://www.pacificavc.com/blog/rss.xml" htmlUrl="http://www.pacificavc.com/blog/" description="Tim Oren's notes and opinions on technology, venture investing, Silicon Valley, life, the universe and everything." />
+      <outline title="Scott Loftesness" xmlUrl="http://www.sjl.us/main/index.rdf" htmlUrl="http://www.sjl.us/main/" description="&lt;i&gt;Be well, do good work, and keep in touch.&lt;/i&gt;" />
+      <outline title="Geekfishing Blog - Ignition" xmlUrl="http://www.geekfishing.net/index.rdf" htmlUrl="http://www.geekfishing.net/" description="Thoughts and ruminations of the various folks at &lt;a href=&quot;http://ignitionpartners.com&quot;&gt;&lt;font color=#FF0000&quot;&gt;i&lt;/font&gt;gnition&lt;/a&gt;. Nothing that's official, but a place to muse about all the geeky things in the world." />
+      <outline title="Dispatches Weblog" xmlUrl="http://feeds.feedburner.com/DispatchesWeblog" htmlUrl="http://radio.weblogs.com/0111718/" description="Musings on Entrepreneurship on the Economic Frontier" />
+      <outline title="Madeleines" xmlUrl="http://madeleines.typepad.com/madelines/index.rdf" htmlUrl="http://madeleines.typepad.com/madelines/" description="&quot;And suddenly the memory revealed itself: The taste was that of the little piece of madeleine which on Sunday mornings at Combray (because on those mornings I did not go out before mass), when I went to say good morning to her in her bedroom, my aunt Léonie used to give me, dipping it first in her own cup of tea or tisane.&quot;" />
+      <outline title="BuzzMachine" xmlUrl="http://www.buzzmachine.com/index.rdf" htmlUrl="http://www.buzzmachine.com/" description="" />
+    </outline>
+    <outline title="VoIP - Boadband">
+      <outline title="VoIP Watch" xmlUrl="http://andyabramson.blogs.com/voipwatch/index.rdf" htmlUrl="http://andyabramson.blogs.com/voipwatch/" description="All about Voice Over IP and Internet Based Telephony." />
+      <outline title="Voxilla.com" xmlUrl="http://voxilla.com/backend.php" htmlUrl="http://voxilla.com/" description="Voxilla.com - News &amp; Views on the Communications Revolution" />
+      <outline title="Marc's Voice" xmlUrl="http://marc.blogs.it/index.xml" htmlUrl="http://marc.blogs.it/" description="" />
+      <outline title="The Tom Keating Blog" xmlUrl="http://voip-blog.tmcnet.com/blog/tom-keating/index.rdf" htmlUrl="http://blog.tmcnet.com/blog/tom-keating/" description="&lt;table border=0&gt;&lt;tr&gt;&#xD;&#xD;&#xA;&lt;td&gt;&#xD;&#xD;&#xA;&lt;img alt=&quot;tom keating voip blog voip forum gadget technology&quot;&#xD;&#xD;&#xA;src=&quot;http://blog.tmcnet.com/blog/tom-keating/image-files/tom-cruising-in-the-viper.jpg&quot;&gt;&#xD;&#xD;&#xA;&lt;/td&gt;&#xD;&#xD;&#xA;&lt;td&gt;&#xD;&#xD;&#xA;Opinions, News, Ponderings on the VoIP industry as well as general technology-related stuff.  Gadgets are one of my favorite topics. &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" />
+      <outline title="SIPthat.com" xmlUrl="http://sipthat.com/index.rdf" htmlUrl="http://sipthat.com/" description="Erik Lagerway's daily comments on VoIP,&#xD;&#xA;SIP &amp; IP communications." />
+      <outline title="Om Malik on Broadband" xmlUrl="http://www.gigaom.com/atom.xml" htmlUrl="http://www.gigaom.com/" description="" />
+    </outline>
+    <outline title="Jupiter">
+      <outline title="Nate Elliott" xmlUrl="http://weblogs.jupiterresearch.com/analysts/elliott/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/elliott/" description="" />
+      <outline title="David Card" xmlUrl="http://weblogs.jupiterresearch.com/analysts/card/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/card/" description="" />
+      <outline title="Todd Chanko" xmlUrl="http://weblogs.jupiterresearch.com/analysts/chanko/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/chanko/" description="" />
+      <outline title="Ian Fogg" xmlUrl="http://weblogs.jupiterresearch.com/analysts/fogg/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/fogg/" description="" />
+      <outline title="Michael Gartenberg" xmlUrl="http://weblogs.jupiterresearch.com/analysts/gartenberg/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/gartenberg/" description="" />
+      <outline title="Avi Greengart" xmlUrl="http://weblogs.jupiterresearch.com/analysts/greengart/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/greengart/" description="" />
+      <outline title="Joseph Laszlo" xmlUrl="http://weblogs.jupiterresearch.com/analysts/laszlo/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/laszlo/" description="" />
+      <outline title="Mark Mulligan" xmlUrl="http://weblogs.jupiterresearch.com/analysts/mulligan/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/mulligan/" description="" />
+      <outline title="Niki Scevak" xmlUrl="http://weblogs.jupiterresearch.com/analysts/scevak/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/scevak/" description="" />
+      <outline title="David Schatsky" xmlUrl="http://weblogs.jupiterresearch.com/analysts/schatsky/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/schatsky/" description="" />
+      <outline title="Gary Stein" xmlUrl="http://weblogs.jupiterresearch.com/analysts/stein/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/stein/" description="" />
+      <outline title="Joe Wilcox" xmlUrl="http://weblogs.jupiterresearch.com/analysts/wilcox/index.xml" htmlUrl="http://weblogs.jupiterresearch.com/analysts/wilcox/" description="" />
+    </outline>
+    <outline title="Deutsche Blogs">
+      <outline title="medienmami.de" xmlUrl="http://www.informatik.uni-ulm.de/paedagogik/nucleus2/atom.php" htmlUrl="http://www.informatik.uni-ulm.de/paedagogik/nucleus2/" description="" />
+    </outline>
+  </body>
+</opml>

@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<document>
+
+    <properties>
+        <author email="burton at apache.org">Kevin A. Burton</author>
+        <title>Overview - Jakarta FeedParser</title>
+    </properties>
+
+    <body>
+
+        <section name="Jakarta FeedParser">
+
+            <p>
+                Jakarta FeedParser is a Java RSS/Atom parser designed to
+                elegantly support all versions of RSS (0.9, 0.91, 0.92, 1.0, and
+                2.0), Atom 0.5 (and future versions) as well as easy ad hoc
+                extension and RSS 1.0 modules capability.
+            </p>
+
+            <p>
+                FeedParser was the parser API designed by <a
+                href="http://peerfear.org">Kevin Burton</a> for <a
+                href="http://newsmonster.org">NewsMonster</a> and has been
+                donated to the ASF in order to continue development.
+            </p>
+
+            <p>
+                FeedParser differs from most other RSS/Atom parsers in that it
+                is not DOM based but event based (similar to SAX).  Instead of
+                the low level startElement() API present in SAX, we provide
+                higher level events based on feed parsing information.
+            </p>
+
+            <p>
+                Events are also given to the caller independent of the
+                underlying format.  This is accomplished with a Feed Event Model
+                that isolates your application from the underlying feed format.
+                This enables transparent support for all RSS versions including
+                Atom.  We also hide format specific implementation such as dates
+                (RFC 822 in RSS 2.0 and 0.9x and ISO 8601 in RSS 1.0 and Atom)
+                and other metadata.
+            </p>
+
+            <p>
+                The FeedParser distribution also includes:
+            </p>
+
+            <ol>
+                <li>An implementation of RSS and Atom autodiscovery.</li>
+
+                <li>
+
+                    Support for all content modules including xhtml:body,
+                    mod_content (RDF and inline), atom:content, and atom:summary
+
+                </li>
+
+                <li>
+                    Atom 1.0 link API as well as RSS 1.0 mod_link API
+                </li>
+
+                <li>
+                    An HTML link parser for finding all links in an HTML source
+                    file and expanding them to become full URLs instead of
+                    relative.
+                </li>
+
+            </ol>
+
+        </section>
+
+        <section name="Feed Location">
+
+            <p>
+                The <q>locate</q> package provides an API for determing all
+                valid feeds for a given weblog URL.  We also attempt to profile
+                popular blogging services including Moveable Type, Blogger,
+                Xanga, etc.  Some of these services have subtle incorrect
+                behavior and we can correct these to return feeds for sites that
+                would otherwise fail.
+            </p>
+
+            <p>
+                Feed location within FeedParser is simple.  Simply pass a URL to
+                <a href="apidocs/org/apache/commons/feedparser/locate/FeedLocator.html">
+                    FeedLocator
+                </a> which will parse your HTML for your weblog and return all
+                references to feeds with a
+
+                <a href="apidocs/org/apache/commons/feedparser/FeedList.html">
+                    FeedList
+                </a>
+            </p>
+
+        </section>
+
+        <!-- 
+
+             Feed Type and Version Detection
+             Relative Link Expansion
+
+             -->
+
+        <section name="Liberal Parsing">
+
+            <p>
+                We support so called <q>liberal</q> parsing to accept feeds
+                which while <strong>not</strong> valid XML would parse with just
+                a few modifications.  These include subtle modifications to text
+                before the XML declaration, entity decoding, etc.
+            </p>
+
+        </section>
+
+        <section name="Supported Feed Formats">
+
+            <p>
+                Jakarta FeedParser supports the following syndication formats:
+            </p>
+
+            <dl>
+
+                <!-- FIXME: provide links to these specifications -->
+
+                <dt>RSS 1.0</dt>
+
+                <dt>RSS 0.9</dt>
+                <dt>RSS 0.91</dt>
+                <dt>RSS 0.92</dt>
+
+                <!--
+                http://www.purplepages.ie/RSS/netscape/rss0.90.html
+                http://my.netscape.com/publish/formats/rss-spec-0.91.html
+                http://purl.org/rss/1.0/
+                http://backend.userland.com/rss092
+                http://backend.userland.com/rss093
+                     -->
+
+                <dt>
+
+                    <a href="http://feedvalidator.org/docs/rss2.html">
+                        RSS 2.0
+                    </a>
+
+                </dt>
+
+                <dt>Atom 0.3 (deprecated)</dt>
+                <dt>Atom 0.4 (deprecated)</dt>
+
+                <dt>
+                    <a href="http://www.ietf.org/internet-drafts/draft-ietf-atompub-format-05.txt">
+                        Atom 0.5
+                    </a>
+                </dt>
+
+                <dt>OPML</dt>
+                <dt>FOAF</dt>
+                <dt>Changes.xml</dt>
+                <dt>XFN</dt>
+
+            </dl>
+            
+            <p>
+                In addition the following module supports is available:
+            </p>
+
+            <dl>
+                
+                <dt>Dublin Core (mod_dc)</dt>
+
+                <dt>mod_content</dt>
+                
+                <dt>mod_aggregation</dt>
+
+                <dt>mod_dcterms</dt>
+
+                <dt>xhtml:body</dt>
+
+                <dd>Provided for XHTML RSS bodies</dd>
+
+                <dt>mod_taxonomy</dt>
+
+                <dd>
+                    Helps enables tags within RSS feeds
+                </dd>
+
+                <dd>
+                    RSS 2.0 enclosures
+                </dd>
+
+                <dt>
+                    wfw:commentRSS
+                </dt>
+                
+                <dd>
+                    WFW commentRSS support for linking to additional RSS feeds
+                    for comments
+                </dd>
+
+            </dl>
+
+        </section>
+
+        <section name="API">
+
+            <p>
+                Developers place all their logic in a 
+
+                <a href="apidocs/org/apache/commons/feedparser/FeedParserListener.html">
+                    FeedParserListener 
+                </a>
+
+                which then receives callbacks from the FeedParser which knows
+                about specific XML formats.  They then pass the FeedParser an
+                InputStream and they are ready to get events:
+            </p>
+
+            <source>
+
+//create a new FeedParser...
+FeedParser parser = FeedParserFactory.newFeedParser();
+
+//create a listener for handling our callbacks
+FeedParserListener listener = new DefaultFeedParserListener() {
+
+        public void onChannel( FeedParserState state,
+                               String title,
+                               String link,
+                               String description ) throws FeedParserException {
+
+            System.out.println( "Found a new channel: " + title );
+
+        }
+
+        public void onItem( FeedParserState state,
+                            String title,
+                            String link,
+                            String description,
+                            String permalink ) throws FeedParserException {
+
+            System.out.println( "Found a new published article: " + permalink );
+            
+        }
+
+        public void onCreated( FeedParserState state, Date date ) throws FeedParserException {
+            System.out.println( "Which was created on: " + date );
+        }
+
+    };
+
+//specify the feed we want to fetch
+
+String resource = "http://peerfear.org/rss/index.rss";
+
+if ( args.length == 1 )
+    resource = args[0];
+
+System.out.println( "Fetching resource:" + resource );
+
+//use the FeedParser network IO package to fetch our resource URL
+ResourceRequest request = ResourceRequestFactory.getResourceRequest( resource );
+
+//grab our input stream
+InputStream is = request.getInputStream();
+
+//start parsing our feed and have the above onItem methods called
+parser.parse( listener, is, resource );
+
+            </source>
+
+            <p>
+
+                This is a trivial example from the 
+
+                <a href="xref/org/apache/commons/feedparser/example/HelloFeedParser.html">
+                    HelloFeedParser 
+                </a>
+
+                demo distributed within FeedParser.  Other events such as
+                onChannel, onImage, onLink can be used to obtain additional
+                metadata.
+            </p>
+
+            <p>
+                This is done to allow for extension of the RSS specification in
+                the future as well as support for additional namespaces.  For
+                example the RSS 1.0, 2.0, and Atom specification all support
+                different date mechanisms.  The FeedParser simply passes
+                onCreated, onIssued methods via the 
+
+                <a href="apidocs/org/apache/commons/feedparser/MetaFeedParserListener.html">
+                    MetaFeedParserListener
+                </a>
+                interface.
+            </p>
+
+        </section>
+
+        <!--
+        <section name="Event Stream">
+
+            <p>
+                All of these events can be visualized as a stream of events
+                called against your application.
+            </p>
+
+        </section>
+             -->
+
+        <section name="Content">
+
+            <p>
+                Content is a generic name for a body of text within an RSS or
+                Atom post.  Due to various format difference there are a number
+                of ways to include content in a post including HTML encoded
+                content in the description element, RSS 1.0 mod_content,
+                xhtml:body, atom:content, atom:summary, etc. 
+            </p>
+
+            <p>
+                The FeedParser includes a generic 
+
+                <a href="apidocs/org/apache/commons/feedparser/ContentFeedParserListener.html">
+                    ContentFeedParserListener
+                </a>
+
+                which allows you to intercept all content markup from all RSS
+                formats including Atom.
+            </p>
+
+        </section>
+
+        <section name="Strict Specification Conformance">
+
+            <p>
+                Currently the FeedParser does NOT require that XML feeds meet
+                RSS and Atom specifications to the letter.  While this is part
+                of liberal feed parsing in general there are secions of the Atom
+                specification for example which MUST have child elements.
+            </p>
+            
+            <p>
+                For example: 
+                
+                <q>atom:entry elements MUST contain exactly one atom:id element.</q>
+            </p>
+
+            <p>
+                We try to follow Postel's law here and allow feeds to pass in
+                this situation.  We may adopt a policy in the future for both
+                strict XML parsing and strict format compliance which would
+                trigger exception in the event of a feed not exactly matching
+                the specification.
+            </p>
+
+            <p>
+                In practice if your application requires data from a feed you
+                need to assert within your code that you have all correct data
+                before moving forward.
+            </p>
+
+        </section>
+
+        <section name="Network IO">
+
+            <p>
+                The FeedParser also includes an advanced networking layer which
+                meets the requirements necessary for providing XML aggregations
+                services over HTTP.  This includes support for If-None-Match
+                (ETags), If-Modified-Since (HTTP 304 Not Modified), gzip content
+                encoding (compression), User Agent modification, non-infinite
+                timeouts, event callbacks for download progress, support for
+                setting HTTP Referrer headers, maximum content downloads (no
+                files larger than N bytes), ability to use custom HTTP methods
+                (HEAD, GET, PUT, POST) etc.
+            </p>
+
+            <p>
+                While various APIs already exist for providing HTTP support
+                (java.net.URL and HttpClient) we're using a version of
+                java.net.URL that meets all our requirements and is very
+                reliable. 
+            </p>
+
+            <p>
+                Future plans are to migrate to an HTTP implementation (probably
+                HttpClient) which supports NIO based async event IO.  This
+                library still needs to be developed but in event IO needs to be
+                used to provide a scalable system.
+            </p>
+
+            <p>
+                The Network IO sets a default user agent of:
+            </p>
+
+            <source>
+Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.2.1; aggregator:FeedParser; http://commons.apache.org/sandbox/feedparser/) Gecko/20021130
+</source>
+
+        </section>
+
+        <!--
+        <section name="Dependencies">
+
+            <subsection name="Core Dependencies">
+
+            </subsection>
+            
+        </section>
+             -->
+
+        <section name="Visualizing FeedParser Events">
+
+            <p>
+
+                The FeedParser includes a sample console application which
+                accepts a URL to a feed, parses it, receives events, and then
+                outputs them to the console.
+
+            </p>
+
+            <source>
+%shell% java org.apache.commons.feedparser.Main http://www.eakes.org/blog/atom.xml
+debug: init()
+onLocale: en
+debug: onChannel
+        title : Michael Eakes
+        link : 'http://www.eakes.org/blog/'
+        description : The Weblog of Michael Eakes
+debug: onChannelEnd
+debug: onItem
+        title : Flickr and Good URI Design
+        link : 'http://www.eakes.org/blog/archives/2005/01/flickr_uris.html'
+        description : I noticed that Flickr had some pretty sweet URIs, but I wanted to find out exactly what it was that made them good. To brush up on URI design, I scoured this great list of resources compiled by Tanya Rabourn:...
+onLink: 
+        rel: alternate
+        href: http://www.eakes.org/blog/archives/2005/01/flickr_uris.html
+        type: text/html
+
+            </source>
+
+        </section>
+
+        <section name="Alternative RSS/Atom and Feed Parsers">
+
+            <p>
+                If for some reason FeedParser doesn't meet you needs (and we'd
+                love to find out why) there are other alternatives.
+            </p>
+
+            <dl>
+                <dt>
+                    <a href="https://rome.dev.java.net/">Rome</a>
+                </dt>
+
+                <dd>
+                    While Rome lacks autodiscovery and a networking layer it
+                    does provide a nice DOM API (if this is what you require)
+                    and the developers from both projects are friendly and
+                    cooperate.
+                </dd>
+
+                <dt>
+                    <a href="http://sourceforge.net/projects/feedparser/">
+                        Universal FeedParser
+                    </a>
+                </dt>
+
+                <dd>
+
+                    The Universal FeedParser is a python-based parser which
+                    happens to conflict somewhat in our use of names.
+
+                </dd>
+
+            </dl>
+
+        </section>
+
+        <section name="Dependencies">
+            
+            <p>
+                We try to keep the library dependencies of FeedParser down to a
+                minimum.  Right now a few are required that might be deprecated
+                in FeedParser 2.0.
+            </p>
+
+            <table>
+                <tr>
+                    <th>library</th>
+                    <th>version</th>
+                    <th>required</th>
+                </tr>
+
+                <tr>
+                    <td>jaxen-full</td>
+                    <td></td>
+                    <td>yes</td>
+                </tr>
+
+                <tr>
+                    <td>jdom</td>
+                    <td></td>
+                    <td>yes</td>
+                </tr>
+
+                <tr>
+                    <td>log4j</td>
+                    <td>1.2.6</td>
+                    <td>yes</td>
+                </tr>
+
+                <tr>
+                    <td>xercesImpl</td>
+                    <td></td>
+                    <td>yes</td>
+                </tr>
+
+                <tr>
+                    <td>xml-apis</td>
+                    <td></td>
+                    <td>yes</td>
+                </tr>
+
+                <tr>
+                    <td>commons-httpclient</td>
+                    <td>3.0-beta1</td>
+                    <td>no (experimental support for networking)</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </body>
+
+</document>

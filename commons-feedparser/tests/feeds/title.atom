@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed version="0.3" xmlns="http://purl.org/atom/ns#">
+  <title>Title escaping test cases</title>
+  <id>http://www.intertwingly.net/stories/2004/04/04/title.html</id>
+  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html'/>
+  <modified>2004-05-10T12:19:44-04:00</modified>
+  <author><name>Sam Ruby</name></author>
+  <tagline>Various combinations of cdata and escaping</tagline>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&#38;#38;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test1</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test1'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: decimal</li><li>inner: decimal</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&#38;#x26;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test2</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test2'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: decimal</li><li>inner: hex</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title>&#38;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test3</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test3'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>plain text</li><li>decimal</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&#38;amp;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test4</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test4'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: decimal</li><li>inner: amp</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&#x26;#38;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test5</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test5'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: hex</li><li>inner: decimal</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&#x26;#x26;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test6</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test6'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: hex</li><li>inner: hex</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title>&#x26;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test7</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test7'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>plain text</li><li>hex</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&#x26;amp;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test8</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test8'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: hex</li><li>inner: amp</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&amp;#38;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test9</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test9'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: amp</li><li>inner: decimal</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&amp;#x26;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test10</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test10'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: amp</li><li>inner: hex</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title>&amp;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test11</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test11'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>plain text</li><li>amp</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&amp;amp;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test12</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test12'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: amp</li><li>inner: amp</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&#38;#38;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test13</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test13'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: decimal</li><li>inner: decimal</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&#38;#x26;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test14</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test14'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: decimal</li><li>inner: hex</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&#38;amp;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test15</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test15'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: decimal</li><li>inner: amp</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&#x26;#38;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test16</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test16'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: hex</li><li>inner: decimal</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&#x26;#x26;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test17</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test17'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: hex</li><li>inner: hex</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&#x26;amp;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test18</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test18'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: hex</li><li>inner: amp</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&amp;#38;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test19</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test19'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: amp</li><li>inner: decimal</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&amp;#x26;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test20</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test20'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: amp</li><li>inner: hex</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b&gt;&amp;amp;&lt;/b&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test21</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test21'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: amp</li><li>inner: amp</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&#38;#38;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test22</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test22'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: decimal</li><li>inner: decimal</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&#38;#x26;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test23</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test23'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: decimal</li><li>inner: hex</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&#38;amp;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test24</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test24'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: decimal</li><li>inner: amp</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&#x26;#38;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test25</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test25'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: hex</li><li>inner: decimal</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&#x26;#x26;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test26</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test26'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: hex</li><li>inner: hex</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&#x26;amp;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test27</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test27'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: hex</li><li>inner: amp</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&amp;#38;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test28</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test28'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: amp</li><li>inner: decimal</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&amp;#x26;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test29</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test29'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: amp</li><li>inner: hex</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;b>&amp;amp;&lt;/b></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test30</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test30'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: amp</li><li>inner: amp</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&#38;#38;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test31</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test31'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: decimal</li><li>inner: decimal</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&#38;#x26;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test32</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test32'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: decimal</li><li>inner: hex</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&#38;amp;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test33</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test33'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: decimal</li><li>inner: amp</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&#x26;#38;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test34</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test34'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: hex</li><li>inner: decimal</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&#x26;#x26;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test35</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test35'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: hex</li><li>inner: hex</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&#x26;amp;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test36</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test36'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: hex</li><li>inner: amp</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&amp;#38;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test37</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test37'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: amp</li><li>inner: decimal</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&amp;#x26;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test38</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test38'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: amp</li><li>inner: hex</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong&gt;&amp;amp;&lt;/strong&gt;</title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test39</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test39'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: full</li><li>outer: amp</li><li>inner: amp</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&#38;#38;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test40</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test40'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: decimal</li><li>inner: decimal</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&#38;#x26;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test41</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test41'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: decimal</li><li>inner: hex</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&#38;amp;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test42</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test42'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: decimal</li><li>inner: amp</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&#x26;#38;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test43</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test43'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: hex</li><li>inner: decimal</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&#x26;#x26;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test44</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test44'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: hex</li><li>inner: hex</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&#x26;amp;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test45</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test45'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: hex</li><li>inner: amp</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&amp;#38;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test46</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test46'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: amp</li><li>inner: decimal</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&amp;#x26;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test47</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test47'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: amp</li><li>inner: hex</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped">&lt;strong>&amp;amp;&lt;/strong></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test48</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test48'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: minimal</li><li>outer: amp</li><li>inner: amp</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[&#38;]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test49</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test49'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: cdata</li><li>inner: decimal</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[&#x26;]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test50</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test50'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: cdata</li><li>inner: hex</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title><![CDATA[&]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test51</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test51'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>plain text</li><li>cdata</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[&amp;]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test52</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test52'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML stripped</li><li>escaped</li><li>outer: cdata</li><li>inner: amp</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[<b>&#38;</b>]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test53</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test53'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: cdata</li><li>inner: decimal</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[<b>&#x26;</b>]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test54</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test54'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: cdata</li><li>inner: hex</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[<b>&amp;</b>]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test55</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test55'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: cdata</li><li>inner: amp</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[<strong>&#38;</strong>]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test56</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test56'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: cdata</li><li>inner: decimal</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[<strong>&#x26;</strong>]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test57</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test57'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: cdata</li><li>inner: hex</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="text/html" mode="escaped"><![CDATA[<strong>&amp;</strong>]]></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test58</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test58'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>escaped: cdata</li><li>inner: amp</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="application/xhtml+xml" mode="xml"><div xmlns="http://www.w3.org/1999/xhtml"><b>&#38;</b></div></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test59</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test59'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>inline</li><li>decimal</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="application/xhtml+xml" mode="xml"><div xmlns="http://www.w3.org/1999/xhtml"><b>&#x26;</b></div></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test60</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test60'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>inline</li><li>hex</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="application/xhtml+xml" mode="xml"><div xmlns="http://www.w3.org/1999/xhtml"><b>&amp;</b></div></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test61</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test61'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>inline</li><li>amp</li><li>bold</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="application/xhtml+xml" mode="xml"><div xmlns="http://www.w3.org/1999/xhtml"><strong>&#38;</strong></div></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test62</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test62'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>inline</li><li>decimal</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="application/xhtml+xml" mode="xml"><div xmlns="http://www.w3.org/1999/xhtml"><strong>&#x26;</strong></div></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test63</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test63'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>inline</li><li>hex</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+  <entry>
+	  <title type="application/xhtml+xml" mode="xml"><div xmlns="http://www.w3.org/1999/xhtml"><strong>&amp;</strong></div></title>
+	  <id>http://www.intertwingly.net/stories/2004/04/04/title.html#test64</id>
+	  <link rel='alternate' type='text/html' href='http://www.intertwingly.net/stories/2004/04/04/title.html#test64'/>
+	  <summary type='application/xhtml+xml' mode='xml'><div xmlns='http://www.w3.org/1999/xhtml'><ul><li>HTML supported</li><li>bold</li><li>inline</li><li>amp</li><li>strong</li></ul></div></summary>
+	  <issued>2004-05-10T12:19:44-04:00</issued>
+	  <modified>2004-05-10T12:19:44-04:00</modified>
+	</entry>
+
+</feed>

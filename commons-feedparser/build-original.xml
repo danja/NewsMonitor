@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="feedparser" default="jar" basedir=".">
+
+    <property name="jakarta.site2.home" location="../jakarta-site2"/>
+
+    <property name="compile.dir" value="compile"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="junit.dir" value="junit"/>
+    <property name="src.dir" value="src"/>
+    <property environment="env"/>
+    <property file="build.properties"/>
+    <property name="project" value="feedparser"/>
+    <property name="product" value="FeedParser"/>
+
+    <property name="version.major" value="0"/>
+    <property name="version.minor" value="5"/>
+    <property name="version.sub" value="0"/>
+    <property name="version.desc" value="-RC1"/>
+
+    <property name="version" value="${version.major}.${version.minor}.${version.sub}${version.desc}"/>
+
+    <property name="docs.dest" value="./site"/>
+    <property name="docs.src" value="./xdocs"/>
+
+    <property name="year" value="2005"/>
+
+    <path id="anakia.classpath">
+        <fileset dir="${jakarta.site2.home}/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="project.classpath">
+        <fileset dir="lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="junit.classpath">
+        <path refid="project.classpath"/>
+        <fileset dir="lib/build">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="init">
+
+        <available property="junit.available" 
+                   classname="junit.framework.TestCase"/>
+
+    </target>
+
+    <target name="prep" depends="init">
+
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${compile.dir}"/>
+        <mkdir dir="${junit.dir}"/>
+
+    </target>
+
+    <target name="compile.main" depends="prep">
+        <javac srcdir="${src.dir}/java/"
+            classpathref="project.classpath"
+            destdir="${compile.dir}"
+            debug="true"
+            excludes="org/apache/commons/feedparser/test/**">
+        </javac>
+    </target>
+
+    <target name="compile.test" depends="prep" if="junit.available">
+        <javac srcdir="${src.dir}/java/"
+            classpathref="junit.classpath"
+            destdir="${junit.dir}"
+            debug="true"
+            includes="org/apache/commons/feedparser/test/**">
+        </javac>
+    </target>
+
+    <target name="clean" depends="init">
+        <delete dir="${dist.dir}"/>
+        <delete dir="${compile.dir}"/>
+        <delete dir="${junit.dir}"/>
+    </target>
+
+    <target name="jar" depends="compile.main">
+        <mkdir dir="${dist.dir}"/>
+        <jar compress="yes" jarfile="${dist.dir}/commons-feedparser-${version}.jar">
+            <fileset dir="${compile.dir}">
+            </fileset>
+        </jar>
+
+    </target>
+
+	<target name="dist" depends="jar,javadoc" description="build a distribution">
+		<copy file="LICENSE.txt" todir="${dist.dir}"/>
+		<copy file="NOTICE.txt" todir="${dist.dir}"/>
+		<copy todir="${dist.dir}">
+			<fileset dir="." includes="docs/**"/>
+		</copy>
+	</target>
+
+    <target name="run-example" description="Runs the example feed parser class"
+        depends="jar">
+        <java classpathref="project.classpath"
+            classname="org.apache.commons.feedparser.example.HelloFeedParser"
+            fork="true"
+            failonerror="true">
+        </java>
+    </target>
+
+    <target name="debug-feed" description="Debugs a feed"
+        depends="jar">
+        <java classpathref="project.classpath"
+            classname="org.apache.commons.feedparser.Main"
+            fork="true"
+            failonerror="true">
+            <arg value="${feed-url}"/>
+        </java>
+    </target>
+
+    <target name="test-autodiscover" description="Runs the testing class for autodiscovery"
+            depends="jar">
+
+        <java classpathref="project.classpath"
+            classname="org.apache.commons.feedparser.locate.TestFeedLocator"
+            fork="true"
+            failonerror="true">
+
+            <sysproperty key="feedparser.home" value="${feedparser.home}"/>
+
+        </java>
+
+    </target>
+
+    <target name="test-probing" description="Runs the testing class for aggresive probing"
+        depends="jar">
+
+        <java classpathref="project.classpath"
+            classname="org.apache.commons.feedparser.test.TestProbeLocator"
+            fork="true"
+            failonerror="true">
+
+            <sysproperty key="feedparser.home" value="${feedparser.home}"/>
+
+        </java>
+
+    </target>
+
+    <target name="test" depends="jar,compile.test" description="Run junit tests." if="junit.available">
+        <junit printsummary="on"
+               fork="true"
+               filtertrace="true"
+               haltonfailure="false"
+               haltonerror="false">
+            <sysproperty key="feedparser.home" value="${feedparser.home}"/>
+            <classpath>
+                <path refid="project.classpath"/>
+                <pathelement location="${compile.dir}"/>
+                <pathelement location="${junit.dir}"/>
+            </classpath>
+
+            <batchtest todir="target/test-reports"> 
+                <fileset dir="${src.dir}/java">
+                    <include name="**/Test*.java"/>
+                    <exclude name="**/Test.java" />
+                </fileset>
+                <fileset dir="${src.dir}/test">
+                    <include name="**/Test*.java"/>
+                </fileset>
+
+            </batchtest>
+
+        </junit>
+    </target>
+
+    <target name="javadoc" depends="init">
+
+        <mkdir dir="docs/apidocs"/>
+
+        <!--
+
+        link="${javadoc.link}"
+             -->
+
+        <javadoc sourcepath="src/java"
+                 classpathref="project.classpath"
+                 packagenames="org.apache.commons.feedparser.*"
+                 destdir="docs/apidocs"
+                 author="true"
+                 version="true"
+                 use="true"
+                 windowtitle="${product} ${version} API"
+                 doctitle="${product} ${version} API"
+                 bottom="Copyright &amp;copy; ${year} Apache Software Foundation.  All Rights Reserved.">
+
+        </javadoc>
+
+    </target>
+
+    <target name="help">
+        <echo message="U S A G E :"/>
+        <echo message=""/>
+
+        <echo message="[clean,clobber]"/>
+        <echo message="Delete old builds"/>
+        <echo message=""/>
+
+        <echo message="[compile]"/>
+        <echo message="Compiles the source tree"/>
+        <echo message=""/>
+
+        <echo message="[jakarta-feedparser.jar]"/>
+        <echo message="Generates a JAR file for the feed parser"/>
+        <echo message=""/>
+
+        <echo message="[run-example]"/>
+        <echo message="Runs the example feed parser class"/>
+        <echo message=""/>
+
+        <echo message="[debug-feed]"/>
+        <echo message="Debugs a single feed by attempting to retrieve it."/>
+        <echo message="To use:"/>
+        <echo message="ant debug-feed -Dfeed-url=http://www.someblog.com"/>
+        <echo message=""/>
+
+        <echo message="[test]"/>
+        <echo message="Runs all the JUnit testing classes"/>
+        <echo message="This target has an optional value.  If run as follows:"/>
+        <echo message="ant test -Dtest.only.local=true"/>
+        <echo message="Then any tests that involve network traffic are _not_ run. "/>
+        <echo message="This is useful because the remote tests can take a long time "/>
+        <echo message="to run.  By default we run remote tests."/>
+        <echo message=""/>
+
+        <echo message="[test-autodiscover]"/>
+        <echo message="Runs the testing class for autodiscovery"/>
+        <echo message=""/>
+
+        <echo message="[test-probing]"/>
+        <echo message="Runs the testing class for aggresive probing"/>
+        <echo message=""/>
+
+        <echo message="[javadoc]"/>
+        <echo message="Generates JavaDoc for this project"/>
+        <echo message=""/>
+        <echo message=""/>
+
+        <echo message="General information:"/>
+        <echo message="A file named 'build.properties' exists in this"/>
+        <echo message="directory that can be used to control the build process."/>
+        <echo message="The following attributes are available:"/>
+        <echo message=""/>
+        <echo message="feedparser.home"/>
+        <echo message="The full path to where the Jakarta Feed Parser is installed,"/>
+        <echo message="such as 'c:/jakarta/feedparser'; use forward slashes instead of"/>
+        <echo message="backslashes on Windows."/>
+        <echo message=""/>
+        <echo message="ext.lib.path"/>
+        <echo message="The file path location to where all of our external "/>
+        <echo message="JARs are located that are not bundled with the "/>
+        <echo message="Jakarta Feed Parser, such as junit.jar."/>
+
+    </target>
+
+</project>

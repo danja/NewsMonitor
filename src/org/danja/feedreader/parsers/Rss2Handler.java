@@ -68,7 +68,7 @@ public class Rss2Handler extends DefaultHandler {
         case IN_CHANNEL:
 //          added for Poller
             textBuffer = new StringBuffer();
-            if ("item".equals(localName)) {
+            if ("item".equals(localName)) { // TODO is this doing anything?
                 state = IN_ITEM;
                 entry = new EntryImpl();
 //              added for Poller

@@ -163,6 +163,7 @@ public class FeedImpl extends FeedEntityBase implements Feed,
 		Map<String, Object> data = getTemplateDataMap();
 		data.put("type", "rss:channel");
 		Iterator<String> i = data.keySet().iterator();
+		System.out.println("--FEED--");
 		while(i.hasNext()){
 			System.out.println(i.next()+" = "+data.get(i));
 		}

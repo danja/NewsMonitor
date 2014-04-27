@@ -12,6 +12,8 @@ get pat seperator from system
 
 add @Overrides
 
+support atom:summary
+
 test on windows machine
 
 ---------------------------------------------------------------

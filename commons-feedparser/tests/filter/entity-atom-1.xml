@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+
+<feed version="0.3" xmlns="http://purl.org/atom/ns#">
+    <link href="http://www.blogger.com/atom/3187374" rel="service.post" title="saladwithsteve " type="application/x.atom+xml"/>
+    <link href="http://www.blogger.com/atom/3187374" rel="service.feed" title="saladwithsteve " type="application/x.atom+xml"/>
+    <title mode="escaped" type="text/html">saladwithsteve </title>
+    <tagline mode="escaped" type="text/html">enjoying salad since 1978.</tagline>
+    <link href="http://saladwithsteve.com/" rel="alternate" title="saladwithsteve " type="text/html"/>
+    <id>tag:blogger.com,1999:blog-3187374</id>
+    <modified>2004-08-24T23:44:54Z</modified>
+    <generator url="http://www.blogger.com/" version="5.15">Blogger</generator>
+
+    <info mode="xml" type="text/html">
+
+        <div xmlns="http://www.w3.org/1999/xhtml">This is an Atom formatted XML
+    site feed. It is intended to be viewed in a Newsreader or syndicated to
+    another site. Please visit the <a
+    href="http://help.blogger.com/bin/answer.py?answer=697">Blogger Knowledge
+    Base</a> for more info.</div> </info>
+
+    <entry>
+
+        <link href="http://www.blogger.com/atom/3187374/109332167901730672" 
+              rel="service.edit" 
+              title="BlogSense - AdSense for Blogs" 
+              type="application/x.atom+xml"/>
+
+        <author>
+            <name>steve jenson</name>
+        </author>
+        <issued>2004-08-23T21:24:40-07:00</issued>
+        <modified>2004-08-24T22:05:40Z</modified>
+
+        <created>2004-08-24T04:27:59Z</created>
+
+        <link href="http://saladwithsteve.com/2004/08/blogsense-adsense-for-blogs.html"
+              rel="alternate" 
+              title="BlogSense - AdSense for Blogs" 
+              type="text/html"/>
+
+        <id>tag:blogger.com,1999:blog-3187374.post-109332167901730672</id>
+        <title mode="escaped" type="text/html">BlogSense - AdSense for Blogs</title>
+
+        <content mode="escaped" 
+                 type="text/html" 
+                 xml:base="http://saladwithsteve.com/" 
+                 xml:lang="en-US" 
+                 xml:space="preserve">
+       
+            hello world
+
+            &eacute;
+
+        </content>
+     
+    </entry>
+
+</feed>

@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import org.danja.feedreader.content.HtmlTidy;
@@ -146,6 +147,12 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 	@Override
 	public String toTurtleNoPrefixes() {
 		Map<String, Object> data = getTemplateDataMap();
+		System.out.println("--ENTRY--");
+		Iterator<String> i = data.keySet().iterator();
+		while(i.hasNext()){
+			System.out.println(i.next()+" = "+data.get(i));
+		}
+		
 		data.put("type", "schema:article");
 		return Templater.apply("entry-turtle-no-prefixes", data);
 	}
