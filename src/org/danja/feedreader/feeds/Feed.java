@@ -12,7 +12,7 @@ package org.danja.feedreader.feeds;
 
 import java.io.InputStream;
 
-import org.danja.feedreader.io.Interpreter;
+import org.danja.feedreader.interpreters.Interpreter;
 
 /**
  * syndication-oriented access to HTTP operations
@@ -20,6 +20,7 @@ import org.danja.feedreader.io.Interpreter;
  */
 public interface Feed extends FeedEntity {
 
+	public void addEntry(Entry entry);
     /**
      * Values can be FeedConstants.RSS2 etc.
      */
@@ -63,4 +64,6 @@ public interface Feed extends FeedEntity {
      * @return the Turtle
      */
     public String toTurtle();
+	public EntryList getEntries();
+	public void setFirstCall(boolean firstCall);
 }

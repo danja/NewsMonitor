@@ -12,7 +12,6 @@ package org.danja.feedreader.interpreters;
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.io.Interpreter;
 
 /**
  * Looks after the creation of interpreters (gluing parsers together)

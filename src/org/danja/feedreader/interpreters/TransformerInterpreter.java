@@ -22,13 +22,12 @@ import javax.xml.transform.stream.StreamSource;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.io.FileEntrySerializer;
-import org.danja.feedreader.io.Interpreter;
 
 /**
  * Transforms feed XML (RSS 2.0/Atom) into RDF/XML using XSLT
  *  
  */
-public class TransformerInterpreter implements Interpreter {
+public class TransformerInterpreter extends InterpreterBase {
 
     private WriterInterpreter rdfInterpreter;
 

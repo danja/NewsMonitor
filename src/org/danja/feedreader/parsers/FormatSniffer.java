@@ -53,6 +53,8 @@ public class FormatSniffer extends DefaultHandler{
     
     public void startElement(String namespaceURI, String localName,
             String qName, Attributes attributes) {
+    	// System.out.println("namespaceURI = "+namespaceURI);
+    	// System.out.println("localName = "+localName);
         if(namespaceURI.equals(FeedConstants.RDF_NS) && localName.equals("RDF")){
             format = FeedConstants.RDF_OTHER;
         }

@@ -64,9 +64,10 @@ public class EntryImpl extends FeedEntityBase implements Entry {
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
      */
-    public String toString() {
-        return toTurtle();
-    }
+	public String toString() {
+		String string = "* Entry *\n";
+		  return super.toString()+string;
+	}
 
     /* (non-Javadoc)
      * @see org.danja.feedreader.feeds.FeedEntityBase#toHTML()

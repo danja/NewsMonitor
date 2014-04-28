@@ -15,6 +15,7 @@ import java.util.List;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.parsers.HtmlHandler;
 import org.danja.feedreader.parsers.Link;
+import org.danja.feedreader.parsers.SoupHandler;
 import org.danja.feedreader.parsers.SoupParser;
 
  

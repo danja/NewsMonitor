@@ -46,4 +46,8 @@ public interface FeedList
    public void refreshAll();
    
    public int size();
+
+public EntryList getEntries();
+
+public void setFirstCall(boolean b);
 }

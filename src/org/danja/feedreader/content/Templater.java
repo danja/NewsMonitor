@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import org.danja.feedreader.main.Config;
@@ -43,6 +44,8 @@ public class Templater {
 	}
 	
 	public static String apply(String templateName, Object dataModel){
+		System.out.println("templateName = "+templateName);
+		
         Writer writer = new StringWriter();
         try {
 			templates.get(templateName).process(dataModel, writer);
@@ -93,5 +96,16 @@ loadTemplates();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static String dataMapToString(Map<String, Object> data) {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("----------\nData Map :\n");
+		Iterator<String> i = data.keySet().iterator();
+		while(i.hasNext()){
+			buffer.append(i.next()+" = "+data.get(i)+"\n");
+		}
+		buffer.append("----------\n");
+		return buffer.toString();
 	}
 }

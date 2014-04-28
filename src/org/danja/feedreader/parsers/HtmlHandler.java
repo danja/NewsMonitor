@@ -13,9 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class HtmlHandler extends DefaultHandler implements CommentHandler {
+public class HtmlHandler extends FeedHandler implements CommentHandler {
     
     private List links = new ArrayList();
 
@@ -43,4 +44,18 @@ public class HtmlHandler extends DefaultHandler implements CommentHandler {
     public void comment(String comment) {
         comments.add(comment);
     }
+
+	@Override
+	public void endElement(String uri, String localName, String qName)
+			throws SAXException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void characters(char[] ch, int start, int length)
+			throws SAXException {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -21,8 +21,7 @@ import org.xml.sax.helpers.DefaultHandler;
  *  
  */
 
-// Sourced added for Poller
-public class Rss2Handler extends DefaultHandler {
+public class Rss2Handler extends FeedHandler {
 
     private String sourceURI = "";
 

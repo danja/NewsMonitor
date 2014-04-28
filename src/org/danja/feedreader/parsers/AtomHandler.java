@@ -12,6 +12,7 @@ package org.danja.feedreader.parsers;
 import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.EntryImpl;
 import org.danja.feedreader.feeds.EntryList;
+import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.Person;
 import org.danja.feedreader.feeds.PersonImpl;
@@ -24,8 +25,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * 
  */
 
-// Sourced added for Poller
-public class AtomHandler extends DefaultHandler {
+public class AtomHandler extends FeedHandler {
 
 	private String sourceURI = "";
 
@@ -47,7 +47,7 @@ public class AtomHandler extends DefaultHandler {
 
 	private Entry entry;
 
-	private EntryList entries;
+	private EntryList entries = new EntryListImpl();
 
 	private Attributes attributes;
 
@@ -57,19 +57,25 @@ public class AtomHandler extends DefaultHandler {
 	private String feedTitle = "";
 	private String feedLink = "";
 
-	private FeedImpl feed;
+//	private FeedImpl feed;
 
 	public AtomHandler() {
 		textBuffer = new StringBuffer();
 	}
-
-	public void setEntryList(EntryList entries) {
-		this.entries = entries;
+	
+	public void startDocument() throws SAXException {
+		System.out.println("AtomHandler.startDocument()");
 	}
 
+//	public void setEntryList(EntryList entries) {
+//		this.entries = entries;
+//	}
+
+	
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes attrs) {
 
+		System.out.println("startElement");
 		attributes = attrs;
 		textBuffer = new StringBuffer();
 
@@ -82,11 +88,12 @@ public class AtomHandler extends DefaultHandler {
 			// feed = new FeedImpl();
 			return;
 
-		case IN_FEED:
+		case IN_FEED: 
 			if ("entry".equals(localName)) {
 				state = IN_ENTRY;
 			}
 			entry = new EntryImpl();
+			
 			textBuffer = new StringBuffer();
 			return;
 
@@ -106,6 +113,8 @@ public class AtomHandler extends DefaultHandler {
 	}
 
 	public void endElement(String namespaceURI, String localName, String qName) {
+		
+		System.out.println("localName = "+localName);
 
 		switch (state) {
 
@@ -120,6 +129,7 @@ public class AtomHandler extends DefaultHandler {
 			if ("link".equals(localName)) {
 				System.out.println("LINK attrs = " + attributes);
 				System.out.println("LINK");
+				// feed.setLink(localName);
 			}
 
 			// added for Poller

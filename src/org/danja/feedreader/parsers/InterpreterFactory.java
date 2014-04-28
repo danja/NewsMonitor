@@ -11,7 +11,7 @@ package org.danja.feedreader.parsers;
 
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.io.Interpreter;
+import org.danja.feedreader.interpreters.Interpreter;
 
 /**
  * Looks after the creation of interpreters (gluing parsers together)
@@ -23,8 +23,7 @@ public class InterpreterFactory {
 
     private static AtomHandler atomHandler;
 
-	public static Interpreter createInterpreter(char formatHint,
-            EntryList entries) {
+	public static Interpreter createInterpreter(char formatHint) {
         Interpreter interpreter = null;
         FeedParser feedParser = null;
         Rss2Handler rss2handler = null;
@@ -39,8 +38,9 @@ public class InterpreterFactory {
             feedParser = new XMLReaderParser();
             interpreter = new ParserInterpreter(feedParser);
             atomHandler = new AtomHandler();
-            atomHandler.setEntryList(entries);
-            feedParser.setContentHandler(atomHandler);
+          //  atomHandler.setEntryList(entries);
+         //   feedParser.setContentHandler(atomHandler);
+            interpreter.setContentHandler(atomHandler);
             return interpreter;
             
         case FeedConstants.RSS2:
@@ -48,7 +48,7 @@ public class InterpreterFactory {
             feedParser = new XMLReaderParser();
             interpreter = new ParserInterpreter(feedParser);
             rss2handler = new Rss2Handler();
-            rss2handler.setEntryList(entries);
+    //        rss2handler.setEntryList(entries);
             feedParser.setContentHandler(rss2handler);
             return interpreter;
 
@@ -56,11 +56,11 @@ public class InterpreterFactory {
 
         case FeedConstants.RSS2_BOZO:
         case FeedConstants.UNKNOWN:
-            System.out.println("RSS2_BOZO: Using Rss2Handler, SoupParser");
+            System.out.println("RSS2_BOZO: Using Rss2Handler, SoupHandler");
             feedParser = new SoupParser();
             interpreter = new ParserInterpreter(feedParser);
             rss2handler = new Rss2Handler();
-            rss2handler.setEntryList(entries);
+        //    rss2handler.setEntryList(entries);
             feedParser.setContentHandler(rss2handler);
             return interpreter;
 

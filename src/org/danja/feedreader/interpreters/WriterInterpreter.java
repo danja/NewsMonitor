@@ -11,10 +11,9 @@ package org.danja.feedreader.interpreters;
 
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.io.Interpreter;
 
 
-public class WriterInterpreter implements Interpreter {
+public class WriterInterpreter extends InterpreterBase {
 
     public void interpret(Feed feed) {
         System.out.println("\nFeed: "+feed.getUrl());

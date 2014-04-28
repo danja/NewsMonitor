@@ -10,6 +10,9 @@
 
 package org.danja.feedreader.feeds;
 
+import java.util.Collection;
+import java.util.List;
+
 
 /**
  * Defines a container for an ordered series of Entry objects
@@ -51,4 +54,8 @@ public interface EntryList {
      * @return the Turtle
      */
     public String toTurtle();
+
+	public void addAll(EntryList entries);
+
+	public List<Entry> getEntries();
 }

@@ -104,6 +104,14 @@ public abstract class FeedEntityBase implements FeedEntity {
     }
 
     public String toString() {
-        return toTurtle();
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("Entity : "+getClass().getSimpleName()+"\n");
+      
+        buffer.append("url = "+getUrl()+"\n");
+        buffer.append("title = "+getTitle()+"\n");
+        buffer.append("description = "+getContent()+"\n");
+        buffer.append("link = "+getLink()+"\n");
+        buffer.append("date = "+getDate()+"\n\n");
+        return buffer.toString();
     }
 }

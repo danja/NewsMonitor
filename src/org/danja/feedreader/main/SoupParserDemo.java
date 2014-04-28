@@ -16,6 +16,7 @@ import java.io.InputStream;
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.parsers.Rss2Handler;
+import org.danja.feedreader.parsers.SoupHandler;
 import org.danja.feedreader.parsers.SoupParser;
 import org.xml.sax.helpers.DefaultHandler;
 

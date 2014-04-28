@@ -8,7 +8,7 @@
 #   http://www.w3.org/community/rww/feed/
 
 # Atom
-http://www.jenitennison.com/blog/atom/feed
+http://intertwingly.net/blog/index.atom
 
 # Atom
 http://markwatson.com/blog/atom.xml

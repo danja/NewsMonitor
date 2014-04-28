@@ -29,6 +29,8 @@ import org.danja.feedreader.main.Main;
 public class FeedListImpl implements FeedList {
 
     private LinkedList<Feed> feedQueue;
+	private EntryList entries;
+	private boolean firstCall;
 
     public FeedListImpl() {
         feedQueue = new LinkedList<Feed>();
@@ -70,13 +72,18 @@ public class FeedListImpl implements FeedList {
 
     public void refreshAll() {
     	System.out.println("Refresh all...");
+    	
+    	entries = new EntryListImpl();
         Set<Feed> expiring = new HashSet<Feed>();
         Iterator<Feed> iterator = feedQueue.iterator();
         Feed feed;
         while (iterator.hasNext()) {
             feed = iterator.next();
             System.out.println("\n\nRefreshing : " + feed.getUrl());
+            feed.setFirstCall(firstCall);
             feed.refresh();
+            System.out.println(" feed.getEntries() = "+feed.getEntries());
+            entries.addAll(feed.getEntries());
             if(feed.shouldExpire()){
                 expiring.add(feed);
             }
@@ -98,8 +105,10 @@ public class FeedListImpl implements FeedList {
     }
     
     public String toString() {
+    	System.out.println("FEEDLIST size() = "+feedQueue.size());
     	StringBuffer buffer = new StringBuffer();
-    	buffer.append("===Feed List===");
+    	buffer.append("===Feed List===\n");
+    	
     	  Iterator<Feed> iterator = feedQueue.iterator();
          
           while (iterator.hasNext()) {
@@ -111,5 +120,15 @@ public class FeedListImpl implements FeedList {
 	@Override
 	public int size() {
 		return feedQueue.size();
+	}
+
+	@Override
+	public EntryList getEntries() {
+		return entries;
+	}
+
+	@Override
+	public void setFirstCall(boolean b) {
+		this.firstCall = b;
 	}
 }

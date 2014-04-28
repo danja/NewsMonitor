@@ -14,13 +14,13 @@ import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.io.FileEntrySerializer;
-import org.danja.feedreader.io.Interpreter;
 import org.danja.feedreader.parsers.FeedParser;
 import org.danja.feedreader.parsers.ParserInterpreter;
 import org.danja.feedreader.parsers.Rss2Handler;
+import org.danja.feedreader.parsers.SoupHandler;
 import org.danja.feedreader.parsers.SoupParser;
 
-public class CleanerInterpreter implements Interpreter {
+public class CleanerInterpreter extends InterpreterBase {
 
     FeedParser feedParser = null;
 
@@ -45,8 +45,8 @@ public class CleanerInterpreter implements Interpreter {
             serializer.addEntry(entries.getEntry(i));
         }
         String filename = "data/" + RDFInterpreterFactory.getFilename(feed);
-        System.out.println("\nFeed: "+feed.getUrl());
-        System.out.println("type: "+ FeedConstants.formatName(feed.getFormatHint()));
+        System.out.println("\nFeed: "+feed);
+      
         System.out.println("Writing from CleanerInterpreter...");
 
         serializer.transformWrite(filename, "xslt/feed-rss1.0.xsl");

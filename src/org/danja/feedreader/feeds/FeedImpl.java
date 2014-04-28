@@ -17,8 +17,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.danja.feedreader.content.Templater;
+import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
-import org.danja.feedreader.io.Interpreter;
 import org.danja.feedreader.main.Config;
 
 /**
@@ -27,6 +27,8 @@ import org.danja.feedreader.main.Config;
  */
 public class FeedImpl extends FeedEntityBase implements Feed,
         FeedEntity {
+	
+	private EntryList entryList = new EntryListImpl();
 
     private long lastRefresh;
 
@@ -34,9 +36,7 @@ public class FeedImpl extends FeedEntityBase implements Feed,
 
     private static final double ditherFactor = 0.1D;
 
-    private int MAX_LIVES = 3;
-    
-    private int lives = MAX_LIVES;
+    private int lives = Config.MAX_LIVES;
 
     private char hint = FeedConstants.UNKNOWN;
 
@@ -46,17 +46,24 @@ public class FeedImpl extends FeedEntityBase implements Feed,
 
     private Interpreter interpreter;
 
+	private boolean firstCall;
+
     public FeedImpl() {
     }
 
 
 
     public boolean refresh() {
-        if (now() < lastRefresh + refreshPeriod + getPeriodDither()) {
-            return false;
-        }
+//        if (now() < lastRefresh + refreshPeriod + getPeriodDither()) {
+//            return false;
+//        }
+    	
+    	
         if (httpConnector == null) {
         	httpConnector = new HttpConnector();
+        
+        		httpConnector.setConditional(!firstCall); // first GET is unconditional
+        
         	String url = getUrl();
         	System.out.println("URL in FeedImpl.refresh = "+url);
         	httpConnector.setUrl(url);
@@ -67,7 +74,7 @@ public class FeedImpl extends FeedEntityBase implements Feed,
             System.out.println("Connected, interpreting...");
             System.out.println("interpretor ="+interpreter);
             interpreter.interpret(this);
-            lives = MAX_LIVES;
+            lives = Config.MAX_LIVES;
         } else {
             if (httpConnector.isDead()) {
                 System.out.println("Error, feed life lost.");
@@ -76,6 +83,7 @@ public class FeedImpl extends FeedEntityBase implements Feed,
             }
         }
         lastRefresh = now();
+        System.out.println("isNew = "+isNew);
         return isNew;
     }
 
@@ -162,12 +170,36 @@ public class FeedImpl extends FeedEntityBase implements Feed,
 	public String toTurtle() {
 		Map<String, Object> data = getTemplateDataMap();
 		data.put("type", "rss:channel");
-		Iterator<String> i = data.keySet().iterator();
+	
+		System.out.println(Templater.dataMapToString(data));
 		System.out.println("--FEED--");
-		while(i.hasNext()){
-			System.out.println(i.next()+" = "+data.get(i));
-		}
-
 		return Templater.apply("feed-turtle", data);
 	}
-}
+	
+	public String toString() {
+		String string = "* Feed *\n"+getUrl()+"\nFormat = "+ FeedConstants.formatName(getFormatHint())
+				+"\n"+interpreter;
+		  return super.toString()+string;
+	}
+
+
+
+	@Override
+	public void addEntry(Entry entry) {
+		entryList.addEntry(entry);
+	}
+
+
+
+	@Override
+	public EntryList getEntries() {
+		return entryList;
+	}
+
+
+
+	@Override
+	public void setFirstCall(boolean firstCall) {
+		this.firstCall = firstCall;
+	}
+	}

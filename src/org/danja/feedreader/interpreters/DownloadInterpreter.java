@@ -11,11 +11,10 @@
 package org.danja.feedreader.interpreters;
 
 import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.io.Interpreter;
 /**
  * Implementation of Interpreter, saves the data from individual feeds to file
  */
-public class DownloadInterpreter  implements Interpreter{
+public class DownloadInterpreter  extends InterpreterBase {
 
     
     private String  downloadDir;

@@ -69,16 +69,30 @@ public class EntryListImpl implements EntryList {
 
 	@Override
 	public String toTurtle() {
+		if(entries.size() == 0) {
+			return "# No entries.";
+		}
 		StringBuffer bodyBuffer = new StringBuffer();
 		for(int i=0;i<entries.size();i++){
 			bodyBuffer.append(entries.get(i).toString()+"\n\n");
 		}
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("body", bodyBuffer.toString());
+		System.out.println(Templater.dataMapToString(data));
 		return Templater.apply("turtle-prefixes", data);
 	}
 	
     public String toString() {
         return toTurtle();
     }
+
+	@Override
+	public void addAll(EntryList incoming) {
+		entries.addAll(incoming.getEntries());
+	}
+
+	@Override
+	public List<Entry> getEntries() {
+		return entries;
+	}
 }
