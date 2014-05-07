@@ -15,7 +15,6 @@ import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.parsers.FeedParser;
-import org.danja.feedreader.parsers.ParserInterpreter;
 import org.danja.feedreader.parsers.Rss2Handler;
 import org.danja.feedreader.parsers.SoupHandler;
 import org.danja.feedreader.parsers.SoupParser;

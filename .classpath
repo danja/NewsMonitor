@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="lib/httpmime-4.3.3.jar"/>
 	<classpathentry kind="lib" path="lib/jtidy.jar"/>
 	<classpathentry kind="lib" path="lib/freemarker.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>

@@ -12,7 +12,7 @@ import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.feeds.FeedListImpl;
 import org.danja.feedreader.interpreters.Interpreter;
-import org.danja.feedreader.parsers.InterpreterFactory;
+import org.danja.feedreader.interpreters.InterpreterFactory;
 
 public class Runner2 {
 

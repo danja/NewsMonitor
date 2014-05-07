@@ -13,6 +13,7 @@ import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.EntryImpl;
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.EntryListImpl;
+import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.Person;
 import org.danja.feedreader.feeds.PersonImpl;
@@ -26,6 +27,8 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 
 public class AtomHandler extends FeedHandler {
+	
+	//private Feed feed;
 
 	private String sourceURI = "";
 
@@ -63,8 +66,12 @@ public class AtomHandler extends FeedHandler {
 		textBuffer = new StringBuffer();
 	}
 	
+	
+
+
+	
 	public void startDocument() throws SAXException {
-		System.out.println("AtomHandler.startDocument()");
+	//	System.out.println("AtomHandler.startDocument()");
 	}
 
 //	public void setEntryList(EntryList entries) {
@@ -75,7 +82,7 @@ public class AtomHandler extends FeedHandler {
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes attrs) {
 
-		System.out.println("startElement");
+	//	System.out.println("startElement");
 		attributes = attrs;
 		textBuffer = new StringBuffer();
 
@@ -89,6 +96,7 @@ public class AtomHandler extends FeedHandler {
 			return;
 
 		case IN_FEED: 
+			
 			if ("entry".equals(localName)) {
 				state = IN_ENTRY;
 			}
@@ -121,9 +129,16 @@ public class AtomHandler extends FeedHandler {
 		case IN_NOTHING:
 			return;
 
-		case IN_FEED: // switch down
+		case IN_FEED: 
+			
+			// switch down
 			if ("feed".equals(localName)) {
 				state = IN_NOTHING;
+			}
+			
+			if ("title".equals(localName)) {
+				getFeed().setTitle(textBuffer.toString());
+				return;
 			}
 
 			if ("link".equals(localName)) {

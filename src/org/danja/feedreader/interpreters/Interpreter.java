@@ -22,7 +22,7 @@ public interface Interpreter  {
 
     public void interpret(Feed feed);
 
-	public void setContentHandler(FeedHandler feedHandler);
+	// public void setContentHandler(FeedHandler feedHandler);
 	
-	public FeedHandler getContentHandler();
+	//public FeedHandler getContentHandler();
 }

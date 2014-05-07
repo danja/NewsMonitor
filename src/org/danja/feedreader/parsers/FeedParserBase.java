@@ -18,38 +18,45 @@ import org.xml.sax.ContentHandler;
  */
 public abstract class FeedParserBase implements FeedParser {
 
-	 FeedHandler contentHandler;
-	 
+	private FeedHandler feedHandler;
+
 	private Feed feed;
+
 	// private Feed feed;
 
-	/* (non-Javadoc)
-	 * @see org.danja.feedreader.parsers.FeedParser#setContentHandler(org.xml.sax.ContentHandler)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.danja.feedreader.parsers.FeedParser#setContentHandler(org.xml.sax
+	 * .ContentHandler)
 	 */
-//	@Override
-//	public void setContentHandler(FeedHandler contentHandler) {
-//this.contentHandler = contentHandler;
-//contentHandler.setFeed(feed);
-//	}
-	
-	public FeedHandler getContentHandler() {
-		return contentHandler;
+	@Override
+	public void setContentHandler(FeedHandler contentHandler) {
+		this.feedHandler = contentHandler;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.danja.feedreader.parsers.FeedParser#setFeed(org.danja.feedreader.feeds.Feed)
+	public FeedHandler getContentHandler() {
+		return feedHandler;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.danja.feedreader.parsers.FeedParser#setFeed(org.danja.feedreader.
+	 * feeds.Feed)
 	 */
 	@Override
 	public void setFeed(Feed feed) {
 		this.feed = feed;
-		
+		feedHandler.setFeed(feed);
 	}
-	
+
 	public void parse() {
 		System.out.println("parse() called");
 		parse(feed.getInputStream());
 	}
-
 
 	@Override
 	public Feed getFeed() {

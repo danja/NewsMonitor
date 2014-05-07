@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+ <!-- Atom Feed sample -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+	<title>Feed Title</title>
+	<subtitle>Feed subtitle</subtitle>
+	<link href="http://example.org/feed/" rel="self" />
+	<link href="http://example.org/" />
+	<id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id>
+	<updated>2003-12-13T18:30:02Z</updated>
+ 
+	<entry>
+		<title>Entry 1</title>
+		<link href="http://example.org/entry1" />
+		<link rel="alternate" type="text/html" href="http://example.org/entry1.html"/>
+		<link rel="edit" href="http://example.org/entry1/edit"/>
+		<id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+		<updated>2014-05-07T18:30:02Z</updated>
+		 <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+           <p>Entry 1 content</p>
+         </div>
+       </content>
+		<summary>Entry 1 summary</summary>
+        <author>
+           <name>Jane Doe</name>
+           <email>janedoe@example.com</email>
+        </author>
+	</entry>
+	<entry>
+		<title>Entry 2</title>
+		<link href="http://example.org/entry2" />
+		<link rel="alternate" type="text/html" href="http://example.org/entry2.html"/>
+		<link rel="edit" href="http://example.org/entry2/edit"/>
+		<id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6b</id>
+		<updated>2014-05-08T18:30:02Z</updated>
+		 <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+           <p>Entry 2 content</p>
+         </div>
+       </content>
+		<summary>Entry 2 summary</summary>
+        <author>
+           <name>Jane Doe</name>
+           <email>janedoe@example.com</email>
+        </author>
+	</entry>
+ 
+</feed>

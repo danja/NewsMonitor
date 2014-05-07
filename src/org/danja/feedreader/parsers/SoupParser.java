@@ -7,6 +7,7 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
 
@@ -28,6 +29,7 @@ public class SoupParser extends FeedParserBase {
     private Stack openTags;
     private String block;
     private String cdata;
+	private ContentHandler contentHandler;
 	
     private static Pattern whitespaceRe = Pattern.compile("\\s+");
     private static Pattern commentRe = Pattern.compile("^<!--.+?-->",
