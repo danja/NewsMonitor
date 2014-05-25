@@ -44,16 +44,6 @@ public interface Entry extends FeedEntity {
      * @return  set the URL of the feed
      */
     public String getSourceLink();
-
-    /**
-     * @param author set the author of the feed
-     */
-    public void setAuthor(String author);
-    
-    /**
-     * @return get the author of the feed
-     */
-    public String getAuthor();
     
     /**
      * Gets an RDF/Turtle representation of the Entry (sans prefixes)

@@ -6,7 +6,7 @@
  * @date Apr 23, 2014
  *
  */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.main;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class FeedUrls  {
 	// TODO move to config
 	private static String SPARQL_FILENAME = "sparql/get-feedlist.sparql";
 	private static String queryEndpoint = "http://localhost:3030/feedreader/query";
-	private List<String> feeds = new ArrayList();
+	private List<String> feeds = new ArrayList<String>();
 
 	public void load() {
 		String sparql = TextFileReader.read(SPARQL_FILENAME);

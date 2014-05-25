@@ -10,9 +10,9 @@
 package org.danja.feedreader.interpreters;
 
 import org.danja.feedreader.feeds.EntryList;
-import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.feeds.impl.EntryListImpl;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.parsers.FeedParser;
 import org.danja.feedreader.parsers.Rss2Handler;

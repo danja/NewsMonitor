@@ -3,7 +3,7 @@ package org.danja.feedreader.tests.parsers;
 import static org.junit.Assert.*;
 
 import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.feeds.FeedImpl;
+import org.danja.feedreader.feeds.impl.FeedImpl;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;

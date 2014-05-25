@@ -9,7 +9,7 @@
  * @date Apr 25, 2014
  *
  */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.feeds.impl;
 
 
 import java.util.HashSet;
@@ -18,6 +18,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import org.danja.feedreader.feeds.EntryList;
+import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.feeds.FeedConstants;
+import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.main.Main;
 

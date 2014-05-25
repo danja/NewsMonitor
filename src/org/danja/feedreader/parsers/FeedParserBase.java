@@ -8,6 +8,7 @@
  */
 package org.danja.feedreader.parsers;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 import org.danja.feedreader.feeds.Feed;
@@ -54,8 +55,9 @@ public abstract class FeedParserBase implements FeedParser {
 	}
 
 	public void parse() {
-		System.out.println("parse() called");
-		parse(feed.getInputStream());
+		// System.out.println("parse() called");
+		InputStream stream = feed.getInputStream();
+		parse(stream);
 	}
 
 	@Override

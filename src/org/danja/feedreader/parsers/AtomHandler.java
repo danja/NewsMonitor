@@ -9,14 +9,18 @@
  */
 package org.danja.feedreader.parsers;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.danja.feedreader.feeds.Entry;
-import org.danja.feedreader.feeds.EntryImpl;
 import org.danja.feedreader.feeds.EntryList;
-import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.Person;
-import org.danja.feedreader.feeds.PersonImpl;
+import org.danja.feedreader.feeds.impl.EntryImpl;
+import org.danja.feedreader.feeds.impl.EntryListImpl;
+import org.danja.feedreader.feeds.impl.FeedImpl;
+import org.danja.feedreader.feeds.impl.PersonImpl;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -27,8 +31,8 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 
 public class AtomHandler extends FeedHandler {
-	
-	//private Feed feed;
+
+	// private Feed feed;
 
 	private String sourceURI = "";
 
@@ -36,79 +40,103 @@ public class AtomHandler extends FeedHandler {
 
 	private String author = "";
 
+	// change to enum?
 	private final static char IN_NOTHING = 0;
 
 	private final static char IN_FEED = 1;
 
 	private final static char IN_ENTRY = 2;
 
-	private final static char IN_AUTHOR = 3;
+	private final static char IN_FEED_AUTHOR = 3;
+
+	private final static char IN_ENTRY_AUTHOR = 4;
+
+	private final static char IN_CONTENT = 5;
 
 	private char state = IN_NOTHING;
 
 	private StringBuffer textBuffer;
 
-	private Entry entry;
+	private Entry currentEntry;
 
-	private EntryList entries = new EntryListImpl();
+	// private EntryList entries = new EntryListImpl();
+	private static final String[] textElementsArray = { "title", "updated",
+			"name", "email", "content" };
+	private static final Set<String> textElements = new HashSet<String>();
+	static {
+		Collections.addAll(textElements, textElementsArray);
+	}
 
 	private Attributes attributes;
 
-	private Person person = new PersonImpl();
+	private Feed feed;
 
-	// TODO used?
-	private String feedTitle = "";
-	private String feedLink = "";
+	/**
+	 * @return the feed
+	 */
+	public Feed getFeed() {
+		return feed;
+	}
 
-//	private FeedImpl feed;
+	/**
+	 * @param feed
+	 *            the feed to set
+	 */
+	public void setFeed(Feed feed) {
+		this.feed = feed;
+	}
 
 	public AtomHandler() {
 		textBuffer = new StringBuffer();
 	}
-	
-	
 
-
-	
-	public void startDocument() throws SAXException {
-	//	System.out.println("AtomHandler.startDocument()");
-	}
-
-//	public void setEntryList(EntryList entries) {
-//		this.entries = entries;
-//	}
-
-	
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes attrs) {
+		
+		// System.out.println("start = "+localName);
+		// System.out.println("startQ = "+qName);
+		
+		if (textElements.contains(localName)) {
+			textBuffer = new StringBuffer();
+		}
 
-	//	System.out.println("startElement");
 		attributes = attrs;
-		textBuffer = new StringBuffer();
 
 		switch (state) {
 
 		case IN_NOTHING:
 			if ("feed".equals(localName)) {
 				state = IN_FEED;
+				return;
 			}
-			// feed = new FeedImpl();
-			return;
 
-		case IN_FEED: 
-			
-			if ("entry".equals(localName)) {
-				state = IN_ENTRY;
+		case IN_FEED:
+			if ("author".equals(localName)) {
+				state = IN_FEED_AUTHOR;
+				return;
 			}
-			entry = new EntryImpl();
-			
-			textBuffer = new StringBuffer();
-			return;
+			if ("entry".equals(localName)) {
+				
+				// System.out.println("into Entry"+namespaceURI);
+				state = IN_ENTRY;
+				currentEntry = new EntryImpl();
+				return;
+			}
 
 		case IN_ENTRY:
 			if ("author".equals(localName)) {
-				state = IN_AUTHOR;
+				state = IN_ENTRY_AUTHOR;
+				return;
 			}
+
+			if ("content".equals(localName)) {
+				// System.out.println("into Content");
+				state = IN_CONTENT;
+				return;
+			}
+			
+		case IN_CONTENT:
+			textBuffer.append("<"+localName+">");
 			return;
 
 		default:
@@ -120,105 +148,91 @@ public class AtomHandler extends FeedHandler {
 		textBuffer.append(ch, start, length);
 	}
 
+	// //////////////////////////////////////////////////////////////////////////////////////////////////
+
 	public void endElement(String namespaceURI, String localName, String qName) {
-		
-		System.out.println("localName = "+localName);
+		// System.out.println("localName = " + localName);
+
+		String text = "";
+		if (textElements.contains(localName)) {
+			text = textBuffer.toString().trim();
+		}
 
 		switch (state) {
 
 		case IN_NOTHING:
 			return;
 
-		case IN_FEED: 
-			
+		case IN_FEED:
+
 			// switch down
 			if ("feed".equals(localName)) {
 				state = IN_NOTHING;
+				return;
 			}
-			
+
 			if ("title".equals(localName)) {
-				getFeed().setTitle(textBuffer.toString());
+				getFeed().setTitle(text);
 				return;
 			}
 
 			if ("link".equals(localName)) {
-				System.out.println("LINK attrs = " + attributes);
-				System.out.println("LINK");
+				// System.out.println("LINK attrs = " + attributes);
+				// .out.println("LINK");
 				// feed.setLink(localName);
-			}
-
-			// added for Poller
-			if ("title".equals(localName)) {
-				feedTitle = textBuffer.toString();
 				return;
 			}
-			return;
 
 		case IN_ENTRY:
+			
 			if ("entry".equals(localName)) {
+				// System.out.println("out of Entry");
 				state = IN_FEED;
-				entries.addEntry(entry);
+			//	feed.addEntry(currentEntry);
+				System.out.println("DONE ENTRY = "+currentEntry);
 				return;
 			}
 			if ("title".equals(localName)) {
-				entry.setTitle(textBuffer.toString());
+				currentEntry.setTitle(text);
 				return;
 			}
-			if ("content".equals(localName)) {
-				System.out.println("in AtomHandler textBuffer.toString() = "
-						+ textBuffer.toString());
-				entry.setContent(textBuffer.toString());
+			if ("updated".equals(localName)) {
+				// currentEntry.getDate().setUpdated(text); failing silently
 				return;
 			}
-
-			// added for Poller
-			if ("guid".equals(localName)) {
-				entry.setUrl(textBuffer.toString());
-				return;
-			}
-			if ("pubDate".equals(localName)) {
-				entry.setDate(textBuffer.toString());
-				return;
-			}
-
 			if ("link".equals(localName)) {
-				entry.setLink(textBuffer.toString());
+				// currentEntry.setLink(textBuffer.toString().trim());
 				return;
 			}
+			
 
-			// if ("entry".equals(localName)) {
-			// state = IN_ENTRY;
-			// entry = new EntryImpl();
-			// // added for Poller
-			//
-			// entry.setAuthor(author);
-			// entry.setSourceTitle(feedTitle);
-			// entry.setSourceLink(feedLink);
-			// }
-
-			textBuffer.append(localName);
+		case IN_CONTENT:
+			if ("content".equals(localName) && "http://www.w3.org/2005/Atom".equals(namespaceURI)) {
+			//	System.out.println("content text = " + text);
+				currentEntry.setContent(text);
+				state = IN_ENTRY;
+				return;
+			}
+			textBuffer.append("</"+localName+">");
 			return;
 
-		case IN_AUTHOR:
-			if ("author".equals(localName)) {
-				// feed.setAuthor(person);
-				System.out.println("Person = "+person);
-			}
+		case IN_FEED_AUTHOR:
 			if ("name".equals(localName)) {
-				person.setName(textBuffer.toString());
+				feed.getAuthor().setName(text);
+				return;
 			}
 			if ("email".equals(localName)) {
-				person.setEmail(textBuffer.toString());
+				feed.getAuthor().setEmail(text);
+				return;
 			}
-			return;
-			
+
 		default:
 			return;
 		}
 	}
 
 	public void endDocument() throws SAXException {
-		System.out.println("AtomHandler entry = " + entry);
+		System.out.println("AtomHandler currentEntry = " + currentEntry);
 	}
 
 }

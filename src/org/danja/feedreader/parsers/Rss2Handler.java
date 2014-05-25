@@ -10,8 +10,8 @@
 package org.danja.feedreader.parsers;
 
 import org.danja.feedreader.feeds.Entry;
-import org.danja.feedreader.feeds.EntryImpl;
 import org.danja.feedreader.feeds.EntryList;
+import org.danja.feedreader.feeds.impl.EntryImpl;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -72,7 +72,7 @@ public class Rss2Handler extends FeedHandler {
                 entry = new EntryImpl();
 //              added for Poller
              
-                entry.setAuthor(author);
+              //  entry.setAuthor(author);
                 entry.setSourceTitle(feedTitle); 
                 entry.setSourceLink(feedLink); 
             }
@@ -140,7 +140,7 @@ public class Rss2Handler extends FeedHandler {
                 return;
             }
             if ("pubDate".equals(localName)) {
-                entry.setDate(textBuffer.toString());
+             //   entry.setDate(textBuffer.toString());
                 return;
             }
 

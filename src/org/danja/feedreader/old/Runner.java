@@ -6,9 +6,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.FeedList;
-import org.danja.feedreader.feeds.FeedListImpl;
+import org.danja.feedreader.feeds.impl.FeedImpl;
+import org.danja.feedreader.feeds.impl.FeedListImpl;
 import org.danja.feedreader.interpreters.DownloadInterpreter;
 
 public class Runner {

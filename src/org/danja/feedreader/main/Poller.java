@@ -13,12 +13,12 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.danja.feedreader.feeds.EntryList;
-import org.danja.feedreader.feeds.EntryListImpl;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.feeds.FeedImpl;
 import org.danja.feedreader.feeds.FeedList;
-import org.danja.feedreader.feeds.FeedListImpl;
+import org.danja.feedreader.feeds.impl.EntryListImpl;
+import org.danja.feedreader.feeds.impl.FeedImpl;
+import org.danja.feedreader.feeds.impl.FeedListImpl;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.interpreters.RDFInterpreterFactory;

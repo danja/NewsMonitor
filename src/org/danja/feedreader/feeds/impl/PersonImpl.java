@@ -6,7 +6,9 @@
  * @date Apr 27, 2014
  *
  */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.feeds.impl;
+
+import org.danja.feedreader.feeds.Person;
 
 /**
  *

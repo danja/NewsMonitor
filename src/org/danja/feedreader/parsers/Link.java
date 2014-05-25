@@ -1,7 +1,7 @@
 /**
  * feedreader-prototype
  *
- * Link.java
+ * LinkImpl.java
  * 
  * @author danja
  * @date Apr 25, 2014

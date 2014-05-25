@@ -8,7 +8,7 @@
  * @date Apr 25, 2014
  *
  */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.feeds.impl;
 
 import java.io.InputStream;
 import java.util.Date;
@@ -17,6 +17,11 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.danja.feedreader.content.Templater;
+import org.danja.feedreader.feeds.Entry;
+import org.danja.feedreader.feeds.EntryList;
+import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.feeds.FeedConstants;
+import org.danja.feedreader.feeds.FeedEntity;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.main.Config;
@@ -174,8 +179,9 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	public String toString() {
 		String string = "* Feed *\n" + getUrl() + "\nFormat = "
 				+ FeedConstants.formatName(getFormatHint()) + "\n"
-				+ interpreter;
-		return super.toString() + string;
+				+ interpreter +"\n";
+		string += entryList.toString();
+		return string + super.toString();
 	}
 
 	@Override

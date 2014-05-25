@@ -5,9 +5,11 @@
  * 
  * @author danja
  * @date Apr 25, 2014
+ * 
+ * TODO there's cruft here from pre-triplestore version
  *
  */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.feeds.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,6 +19,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.danja.feedreader.content.Templater;
+import org.danja.feedreader.feeds.Entry;
+import org.danja.feedreader.feeds.EntryList;
 
 /**
  *  implements EntryList, an ordered series of Entry objects
@@ -44,7 +48,6 @@ public class EntryListImpl implements EntryList {
     // added for Poller
     public void trimList(int trimSize) {
         removeDuplicates();
-        sortByDate();
         if (trimSize > size()) {
             return;
         }
@@ -61,10 +64,6 @@ public class EntryListImpl implements EntryList {
             }
             entryIDs.add(id);
         }
-    }
-
-    public void sortByDate() {
-        EntryDateSorter.sort(entries);
     }
 
 	@Override

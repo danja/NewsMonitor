@@ -62,14 +62,14 @@ public class FileEntrySerializer {
         item.appendChild(simpleElement("description", unescape(entry
                 .getContent())));
         item.appendChild(simpleElement("link", entry.getLink()));
-        item.appendChild(simpleElement("pubDate", entry.getDate()));
-        String sourceTitle = entry.getAuthor();
-        if(sourceTitle.equals("")){
-            sourceTitle = entry.getSourceTitle();
-        }
-        Element sourceElement = simpleElement("source", sourceTitle);
-        sourceElement.setAttribute("url", entry.getSourceLink());
-        item.appendChild(sourceElement);
+ //       item.appendChild(simpleElement("pubDate", entry.getDate()));
+//        String sourceTitle = entry.getAuthor();
+//        if(sourceTitle.equals("")){
+//            sourceTitle = entry.getSourceTitle();
+//        }
+//        Element sourceElement = simpleElement("source", sourceTitle);
+//        sourceElement.setAttribute("url", entry.getSourceLink());
+//        item.appendChild(sourceElement);
         feedElement.appendChild(item);
     }
 

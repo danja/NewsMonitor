@@ -7,15 +7,20 @@
  * @date Apr 25, 2014
  *
  */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.feeds.impl;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.danja.feedreader.content.Templater;
+import org.danja.feedreader.feeds.DateStamp;
+import org.danja.feedreader.feeds.FeedEntity;
+import org.danja.feedreader.feeds.Person;
 
 /**
  * Characteristics common to components of a feed
+ * 
+ * can some of these be final?
  */
 public abstract class FeedEntityBase implements FeedEntity {
 
@@ -25,11 +30,27 @@ public abstract class FeedEntityBase implements FeedEntity {
 
     private String title = "";
 
-    private String date = "";
+    private DateStamp date = new DateStampImpl();;
     
     private String link = "";
+    
+    private Person author= new PersonImpl();
 
-    public FeedEntityBase() {
+    /**
+	 * @return the author
+	 */
+	public Person getAuthor() {
+		return author;
+	}
+
+	/**
+	 * @param author the author to set
+	 */
+	public void setAuthor(Person author) {
+		this.author = author;
+	}
+
+	public FeedEntityBase() {
     }
 
     public FeedEntityBase(String uriString) {
@@ -70,12 +91,12 @@ public abstract class FeedEntityBase implements FeedEntity {
         return link;
     }
 
-    public void setDate(String date) {
+    public void setDate(DateStamp date) {
         this.date = date;
 
     }
 
-    public String getDate() {
+    public DateStamp getDate() {
         return date;
     }
 
@@ -87,9 +108,7 @@ public abstract class FeedEntityBase implements FeedEntity {
         if (getContent().trim().length() > 0) {
             html.append("\n<p>" + getContent() + "</p>");
         }
-        if (getDate().trim().length() > 0) {
             html.append("\n<p>" + getDate() + "</p>\n");
-        }
         return html.toString();
     }
 
@@ -109,7 +128,7 @@ public abstract class FeedEntityBase implements FeedEntity {
       
         buffer.append("url = "+getUrl()+"\n");
         buffer.append("title = "+getTitle()+"\n");
-        buffer.append("description = "+getContent()+"\n");
+        buffer.append("content = "+getContent()+"\n");
         buffer.append("link = "+getLink()+"\n");
         buffer.append("date = "+getDate()+"\n\n");
         return buffer.toString();

@@ -11,7 +11,8 @@ package org.danja.feedreader.feeds;
 
 /**
  * interface to characteristics common to several components of a feed
- * TODO extend to more components
+ * 
+ * TODO extend to more elements
  */
 public interface FeedEntity {
 
@@ -23,7 +24,6 @@ public interface FeedEntity {
 
     public String getTitle();
 
-    
     public void setContent(String content);
 
     public String getContent();
@@ -32,9 +32,13 @@ public interface FeedEntity {
 
     public String getLink();
 
-    public void setDate(String date);
+    public void setDate(DateStamp date);
 
-    public String getDate();
+    public DateStamp getDate();
+    
+    public void setAuthor(Person author);
+    
+    public Person getAuthor();
     
     /**
      * Gets an RDF/Turtle representation of the FeedEntity (sans prefixes)

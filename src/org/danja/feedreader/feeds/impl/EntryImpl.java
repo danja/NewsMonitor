@@ -7,7 +7,7 @@
  * @date Apr 24, 2014
  *
  */
-package org.danja.feedreader.feeds;
+package org.danja.feedreader.feeds.impl;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -20,6 +20,7 @@ import java.util.Map;
 
 import org.danja.feedreader.content.HtmlTidy;
 import org.danja.feedreader.content.Templater;
+import org.danja.feedreader.feeds.Entry;
 
 /**
  *  Implementation of Entry, an RSS item/Atom entry/Blog post model
@@ -65,8 +66,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      * @see java.lang.Object#toString()
      */
 	public String toString() {
-		String string = "* Entry *\n";
-		  return super.toString()+string;
+		  return "* Entry *\n" + super.toString();
 	}
 
     /* (non-Javadoc)
@@ -110,13 +110,6 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      */
     public void setAuthor(String author) {
       this.author = author;
-    }
-
-    /* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.Entry#getAuthor()
-     */
-    public String getAuthor() {
-        return author;
     }
 
 	/**
