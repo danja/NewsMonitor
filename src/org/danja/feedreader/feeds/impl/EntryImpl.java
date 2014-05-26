@@ -67,7 +67,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      * @see java.lang.Object#toString()
      */
 	public String toString() {
-		  return "* Entry *\n" + super.toString();
+		  return "* Entry *\n" + super.toString() + "content = "+getContent()+"\n";
 	}
 
     /* (non-Javadoc)

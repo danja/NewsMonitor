@@ -15,6 +15,10 @@ import org.danja.feedreader.feeds.Link;
  */
 public class LinkImpl implements Link {
 
+	private String type;
+	private String rel;
+	private String label;
+	
 	private String href;
 	/* (non-Javadoc)
 	 * @see org.danja.feedreader.feeds.Link#getHref()
@@ -72,7 +76,19 @@ public class LinkImpl implements Link {
 	public void setLabel(String label) {
 		this.label = label;
 	}
-	private String type;
-	private String rel;
-	private String label;
+
+	
+    public String toString() {
+//        return "<link rel=\"" + rel + "\" href=\"" + href + "\" type=\""
+//                + type + "\"/>";
+		return "[href = "+href+", type = "+type+", rel = "+rel+", label = "+label+"]\n";
+
+    }
+
+    public boolean isAlternate() {
+        if ((rel != null) && rel.equals("alternate") && (href != null) && (type != null)) {
+            return true;
+        }
+        return false;
+    }
 }

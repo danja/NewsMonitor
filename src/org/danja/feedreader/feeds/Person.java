@@ -19,4 +19,8 @@ public interface Person {
 	public void setEmail(String email);
 	
 	public String getEmail();
+	
+	public void setHomepage(String homepage);
+	
+	public String getHomepage();
 }

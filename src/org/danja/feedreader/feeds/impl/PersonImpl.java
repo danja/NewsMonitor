@@ -17,6 +17,7 @@ public class PersonImpl implements Person {
 
 	private String name = "";
 	private String email = "";
+	private String homepage;
 
 	/*
 	 * (non-Javadoc)
@@ -59,15 +60,16 @@ public class PersonImpl implements Person {
 	}
 	
 	public String toString(){
-		return "Person : name="+getName()+", email="+getEmail();
+		return "[name="+getName()+", email="+getEmail()+", homepage="+homepage+"]";
 	}
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	@Override
+	public void setHomepage(String homepage) {
+		this.homepage = homepage;
 	}
 
+	@Override
+	public String getHomepage() {
+		return homepage;
+	}
 }

@@ -145,7 +145,7 @@ public class Rss2Handler extends FeedHandler {
             }
 
             if ("link".equals(localName)) {
-                entry.setLink(textBuffer.toString());
+           //     entry.setLink(textBuffer.toString());
                 return;
             }
 

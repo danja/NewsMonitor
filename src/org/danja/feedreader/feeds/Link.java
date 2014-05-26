@@ -5,41 +5,43 @@ public interface Link {
 	/**
 	 * @return the href
 	 */
-	public abstract String getHref();
+	public  String getHref();
 
 	/**
 	 * @param href the href to set
 	 */
-	public abstract void setHref(String href);
+	public  void setHref(String href);
 
 	/**
 	 * @return the type
 	 */
-	public abstract String getType();
+	public  String getType();
 
 	/**
 	 * @param type the type to set
 	 */
-	public abstract void setType(String type);
+	public  void setType(String type);
 
 	/**
 	 * @return the rel
 	 */
-	public abstract String getRel();
+	public  String getRel();
 
 	/**
 	 * @param rel the rel to set
 	 */
-	public abstract void setRel(String rel);
+	public  void setRel(String rel);
 
 	/**
 	 * @return the label
 	 */
-	public abstract String getLabel();
+	public  String getLabel();
 
 	/**
 	 * @param label the label to set
 	 */
-	public abstract void setLabel(String label);
+	public  void setLabel(String label);
+
+	public boolean isAlternate();
 
 }

@@ -61,7 +61,7 @@ public class FileEntrySerializer {
         item.appendChild(simpleElement("title", entry.getTitle()));
         item.appendChild(simpleElement("description", unescape(entry
                 .getContent())));
-        item.appendChild(simpleElement("link", entry.getLink()));
+    //    item.appendChild(simpleElement("link", entry.getLink()));
  //       item.appendChild(simpleElement("pubDate", entry.getDate()));
 //        String sourceTitle = entry.getAuthor();
 //        if(sourceTitle.equals("")){

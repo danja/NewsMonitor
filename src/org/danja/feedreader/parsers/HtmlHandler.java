@@ -12,6 +12,8 @@ package org.danja.feedreader.parsers;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.danja.feedreader.feeds.Link;
+import org.danja.feedreader.feeds.impl.LinkImpl;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -23,10 +25,10 @@ public class HtmlHandler extends FeedHandler implements CommentHandler {
     public void startElement(String namespaceURI, String localName,
             String qName, Attributes attributes) {
         if ("link".equalsIgnoreCase(localName)) {
-            Link link = new Link();
-            link.rel = attributes.getValue("rel");
-            link.href = attributes.getValue("href");
-            link.type = attributes.getValue("type");
+            Link link = new LinkImpl();
+            link.setRel(attributes.getValue("rel"));
+            link.setHref(attributes.getValue("href"));
+            link.setType(attributes.getValue("type"));
             links.add(link);
         }
     }

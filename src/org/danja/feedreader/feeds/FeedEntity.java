@@ -9,6 +9,8 @@
  */
 package org.danja.feedreader.feeds;
 
+import java.util.Set;
+
 /**
  * interface to characteristics common to several components of a feed
  * 
@@ -19,18 +21,19 @@ public interface FeedEntity {
     public void setUrl(String url);
 
     public String getUrl();
+    
+    public void setId(String id);
+    
+    public String getId();
 
     public void setTitle(String title);
 
     public String getTitle();
 
-    public void setContent(String content);
+    // public String getLink();
+    public void addLink(Link link);  
 
-    public String getContent();
-
-    public void setLink(String link);  // rename to setSiteLink orsimilar
-
-    public String getLink();
+    public Set<Link> getLinks();
 
     public void setDateStamp(DateStamp date);
 

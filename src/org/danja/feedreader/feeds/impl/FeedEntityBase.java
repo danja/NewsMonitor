@@ -10,11 +10,15 @@
 package org.danja.feedreader.feeds.impl;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.feeds.DateStamp;
 import org.danja.feedreader.feeds.FeedEntity;
+import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
 
 /**
@@ -25,14 +29,30 @@ import org.danja.feedreader.feeds.Person;
 public abstract class FeedEntityBase implements FeedEntity {
 
     private String url = "";
+    
+    private String id = "";
+    
+    private Set<Link> links = new HashSet<Link>();
 
-    private String content = "";
+    /**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	private String content = "";
 
     private String title = "";
 
     private DateStamp date = new DateStampImpl();;
-    
-    private String link = "";
     
     private Person author= new PersonImpl();
 
@@ -73,22 +93,12 @@ public abstract class FeedEntityBase implements FeedEntity {
         return title;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-
+    public void addLink(Link link) {
+        links.add(link);
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
-
-    }
-
-    public String getLink() {
-        return link;
+    public Set<Link> getLinks() {
+        return links;
     }
 
     public void setDateStamp(DateStamp date) {
@@ -102,12 +112,9 @@ public abstract class FeedEntityBase implements FeedEntity {
 
     public String toHTML() {
         StringBuffer html = new StringBuffer();
-        html.append("<a href=\"" + getLink() + "\">");
+        // html.append("<a href=\"" + getLink() + "\">");
         html.append(getTitle());
         html.append("</a>");
-        if (getContent().trim().length() > 0) {
-            html.append("\n<p>" + getContent() + "</p>");
-        }
             html.append("\n<p>" + getDateStamp() + "</p>\n");
         return html.toString();
     }
@@ -116,8 +123,7 @@ public abstract class FeedEntityBase implements FeedEntity {
     	Map<String, Object> data = new HashMap<String, Object>();
 		data.put("url", getUrl());
 		data.put("title", getTitle());
-		data.put("description", getContent());
-		data.put("link", getLink());
+		// data.put("link", getLink());
 		data.put("date", getDateStamp());
 		return data;
     }
@@ -127,9 +133,14 @@ public abstract class FeedEntityBase implements FeedEntity {
         buffer.append("Entity : "+getClass().getSimpleName()+"\n");
       
         buffer.append("url = "+getUrl()+"\n");
+        buffer.append("id = "+getId()+"\n");
         buffer.append("title = "+getTitle()+"\n");
-        buffer.append("content = "+getContent()+"\n");
-        buffer.append("link = "+getLink()+"\n");
+        buffer.append("author = "+getAuthor()+"\n");
+        buffer.append("links = \n");
+        Iterator<Link> i = links.iterator();
+        while(i.hasNext()){
+        			buffer.append(i.next().toString());
+        }
         buffer.append("date = "+getDateStamp()+"\n\n");
         return buffer.toString();
     }

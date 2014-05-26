@@ -183,7 +183,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 				+ interpreter +"\n";
 		
 		string += entryList.toString();
-		return string + super.toString();
+		return string+super.toString();
 	}
 
 	@Override
