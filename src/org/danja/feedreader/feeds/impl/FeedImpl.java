@@ -67,7 +67,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 														// unconditional
 
 			String url = getUrl();
-			System.out.println("URL in FeedImpl.refresh = " + url);
+			System.out.println("FeedImpl.refresh = " + url);
 			httpConnector.setUrl(url);
 		}
 		isNew = httpConnector.load();
@@ -78,6 +78,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			interpreter.interpret(this);
 			System.out.println("INTERPRETED =" + this);
 			lives = Config.MAX_LIVES;
+			isNew = false;
 		} else {
 			if (httpConnector.isDead()) {
 				System.out.println("Error, feed life lost.");
@@ -180,6 +181,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		String string = "* Feed *\n" + getUrl() + "\nFormat = "
 				+ FeedConstants.formatName(getFormatHint()) + "\n"
 				+ interpreter +"\n";
+		
 		string += entryList.toString();
 		return string + super.toString();
 	}

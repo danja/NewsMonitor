@@ -1,6 +1,6 @@
 package org.danja.feedreader.tests.parsers;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.impl.FeedImpl;
@@ -21,26 +21,23 @@ public class TestAtomParser {
 	private FeedImpl feed;
 	private Interpreter interpreter;
 	private static HttpServer server = new HttpServer(rootDir, 8080);
-	
+
 	@BeforeClass
 	public static void startServer() {
 		server.init();
 		server.start();
 	}
-	
+
 	@Before
 	public void setUp() throws Exception {
-		
+
 		feed = new FeedImpl();
 		feed.setUrl(url);
 		feed.setFormatHint(FeedConstants.ATOM);
 		feed.setRefreshPeriod(Config.getPollerPeriod());
 
-		// interpreter = RDFInterpreterFactory.createInterpreter(format);
-		// feed.setInterpreter(interpreter);
-
 		interpreter = InterpreterFactory.createInterpreter(FeedConstants.ATOM);
-		
+
 		feed.setInterpreter(interpreter);
 		feed.refresh();
 	}
@@ -50,22 +47,21 @@ public class TestAtomParser {
 		assertEquals("checking feed title", "Feed Title", feed.getTitle());
 		assertEquals("checking feed url", url, feed.getUrl());
 		assertEquals("checking entry count", 2, feed.getEntries().size());
-		
+
 		// TODO implement -note, canhave multiple links
-	//	assertEquals("checking feed link", , feed.getLink());
-	}
-	
-	@Test
-	public void testEntryLevel() {
-		
+		// assertEquals("checking feed link", , feed.getLink());
 	}
 
-	
+//	@Test
+//	public void testEntryLevel() {
+//
+//	}
+
 	@After
 	public void tearDown() {
-		
+
 	}
-	
+
 	@AfterClass
 	public static void stopServer() {
 		server.stop();

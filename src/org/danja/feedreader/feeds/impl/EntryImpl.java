@@ -52,7 +52,8 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      * @see org.danja.feedreader.feeds.Entry#setContent(java.lang.String)
      */
     public void setContent(String content) {
-        this.content = cleanContent(content);
+     //   this.content = cleanContent(content);
+    	this.content = content;
     }
 
     /* (non-Javadoc)
@@ -113,7 +114,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
     }
 
 	/**
-	 * 
+	 * TODO remove
 	 * is a big clunky, converting String to stream
 	 * 
 	 * @param content

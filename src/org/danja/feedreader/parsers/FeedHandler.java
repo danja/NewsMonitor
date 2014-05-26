@@ -41,11 +41,11 @@ public abstract class FeedHandler implements ContentHandler {
 		System.out.println("FeedHandler.startDocument()");
 	}
 
-	@Override
-	public void endDocument() throws SAXException {
-		// TODO Auto-generated method stub
-
-	}
+//	@Override
+//	public void endDocument() throws SAXException {
+//		// TODO Auto-generated method stub
+//
+//	}
 
 	@Override
 	public void startPrefixMapping(String prefix, String uri)

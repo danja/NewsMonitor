@@ -32,9 +32,9 @@ public interface FeedEntity {
 
     public String getLink();
 
-    public void setDate(DateStamp date);
+    public void setDateStamp(DateStamp date);
 
-    public DateStamp getDate();
+    public DateStamp getDateStamp();
     
     public void setAuthor(Person author);
     

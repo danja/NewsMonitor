@@ -82,7 +82,11 @@ public class EntryListImpl implements EntryList {
 	}
 	
     public String toString() {
-        return toTurtle();
+		StringBuffer bodyBuffer = new StringBuffer();
+		for(int i=0;i<entries.size();i++){
+			bodyBuffer.append(entries.get(i).toString()+"\n\n");
+		}
+        return bodyBuffer.toString();
     }
 
 	@Override

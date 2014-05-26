@@ -91,12 +91,12 @@ public abstract class FeedEntityBase implements FeedEntity {
         return link;
     }
 
-    public void setDate(DateStamp date) {
+    public void setDateStamp(DateStamp date) {
         this.date = date;
 
     }
 
-    public DateStamp getDate() {
+    public DateStamp getDateStamp() {
         return date;
     }
 
@@ -108,7 +108,7 @@ public abstract class FeedEntityBase implements FeedEntity {
         if (getContent().trim().length() > 0) {
             html.append("\n<p>" + getContent() + "</p>");
         }
-            html.append("\n<p>" + getDate() + "</p>\n");
+            html.append("\n<p>" + getDateStamp() + "</p>\n");
         return html.toString();
     }
 
@@ -118,7 +118,7 @@ public abstract class FeedEntityBase implements FeedEntity {
 		data.put("title", getTitle());
 		data.put("description", getContent());
 		data.put("link", getLink());
-		data.put("date", getDate());
+		data.put("date", getDateStamp());
 		return data;
     }
 
@@ -130,7 +130,7 @@ public abstract class FeedEntityBase implements FeedEntity {
         buffer.append("title = "+getTitle()+"\n");
         buffer.append("content = "+getContent()+"\n");
         buffer.append("link = "+getLink()+"\n");
-        buffer.append("date = "+getDate()+"\n\n");
+        buffer.append("date = "+getDateStamp()+"\n\n");
         return buffer.toString();
     }
 }

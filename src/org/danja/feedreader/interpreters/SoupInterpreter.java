@@ -1,7 +1,7 @@
 /**
  * feedreader-prototype
  *
- * CleanerInterpreter.java
+ * SoupInterpreter.java
  * 
  * @author danja
  * @date Apr 25, 2014
@@ -19,7 +19,7 @@ import org.danja.feedreader.parsers.Rss2Handler;
 import org.danja.feedreader.parsers.SoupHandler;
 import org.danja.feedreader.parsers.SoupParser;
 
-public class CleanerInterpreter extends InterpreterBase {
+public class SoupInterpreter extends InterpreterBase {
 
     FeedParser feedParser = null;
 
@@ -29,7 +29,7 @@ public class CleanerInterpreter extends InterpreterBase {
 
     FileEntrySerializer serializer;
 
-    public CleanerInterpreter() {
+    public SoupInterpreter() {
         entries = new EntryListImpl();
         initializeCleaner();
         serializer = new FileEntrySerializer();
@@ -46,7 +46,7 @@ public class CleanerInterpreter extends InterpreterBase {
         String filename = "data/" + RDFInterpreterFactory.getFilename(feed);
         System.out.println("\nFeed: "+feed);
       
-        System.out.println("Writing from CleanerInterpreter...");
+        System.out.println("Writing from SoupInterpreter...");
 
         serializer.transformWrite(filename, "xslt/feed-rss1.0.xsl");
     }

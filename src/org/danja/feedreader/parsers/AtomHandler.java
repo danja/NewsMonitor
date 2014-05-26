@@ -10,6 +10,7 @@
 package org.danja.feedreader.parsers;
 
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,16 +18,16 @@ import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.Person;
+import org.danja.feedreader.feeds.impl.DateConverters;
 import org.danja.feedreader.feeds.impl.EntryImpl;
 import org.danja.feedreader.feeds.impl.EntryListImpl;
-import org.danja.feedreader.feeds.impl.FeedImpl;
 import org.danja.feedreader.feeds.impl.PersonImpl;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 /**
- * SAX2 handler for RSS 2.0 XML
+ * SAX2 handler for Atom XML
  * 
  */
 
@@ -42,17 +43,14 @@ public class AtomHandler extends FeedHandler {
 
 	// change to enum?
 	private final static char IN_NOTHING = 0;
-
 	private final static char IN_FEED = 1;
-
 	private final static char IN_ENTRY = 2;
-
 	private final static char IN_FEED_AUTHOR = 3;
-
 	private final static char IN_ENTRY_AUTHOR = 4;
-
 	private final static char IN_CONTENT = 5;
-
+	
+	private final static String[] states = {"IN_NOTHING", "IN_FEED", "IN_ENTRY", "IN_FEED_AUTHOR", "IN_ENTRY_AUTHOR", "IN_CONTENT" };
+	
 	private char state = IN_NOTHING;
 
 	private StringBuffer textBuffer;
@@ -84,6 +82,8 @@ public class AtomHandler extends FeedHandler {
 	 */
 	public void setFeed(Feed feed) {
 		this.feed = feed;
+		String date = DateConverters.dateAsISO8601(new Date());
+		feed.getDateStamp().setSeen(date);
 	}
 
 	public AtomHandler() {
@@ -109,6 +109,7 @@ public class AtomHandler extends FeedHandler {
 				state = IN_FEED;
 				return;
 			}
+			return;
 
 		case IN_FEED:
 			if ("author".equals(localName)) {
@@ -122,7 +123,8 @@ public class AtomHandler extends FeedHandler {
 				currentEntry = new EntryImpl();
 				return;
 			}
-
+			return;
+			
 		case IN_ENTRY:
 			if ("author".equals(localName)) {
 				state = IN_ENTRY_AUTHOR;
@@ -134,9 +136,19 @@ public class AtomHandler extends FeedHandler {
 				state = IN_CONTENT;
 				return;
 			}
+			return;
 			
 		case IN_CONTENT:
-			textBuffer.append("<"+localName+">");
+			String elementName = HtmlCleaner.normaliseElement(localName);
+			
+			StringBuffer attrBuffer = new StringBuffer();
+			for(int i = 0;i<attributes.getLength();i++) {
+				String name = attributes.getLocalName(i);
+				if(!HtmlCleaner.excludeAttributes.contains(name)){
+					attrBuffer.append(" "+name+"="+"\""+attributes.getValue(i)+"\"");
+				}
+			}
+			textBuffer.append("<"+elementName+attrBuffer+">");
 			return;
 
 		default:
@@ -151,11 +163,16 @@ public class AtomHandler extends FeedHandler {
 	// //////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void endElement(String namespaceURI, String localName, String qName) {
-		// System.out.println("localName = " + localName);
+		
+		 System.out.println("END localName = " + localName);
+		 System.out.println("state = "+states[state]);
 
 		String text = "";
-		if (textElements.contains(localName)) {
-			text = textBuffer.toString().trim();
+		if (textElements.contains(localName))  {
+			text = textBuffer.toString();
+			if(text.length() > 0) {
+			text = text.trim();
+			}
 		}
 
 		switch (state) {
@@ -164,46 +181,77 @@ public class AtomHandler extends FeedHandler {
 			return;
 
 		case IN_FEED:
-
+			 System.out.println("state = "+states[state]);
+			 System.out.println("END localName = " + localName);
+			 
 			// switch down
 			if ("feed".equals(localName)) {
+				System.out.println("DONE. Feed = \n");
 				state = IN_NOTHING;
+				System.out.println("DONE. Feed = \n"+feed);
 				return;
 			}
-
 			if ("title".equals(localName)) {
 				getFeed().setTitle(text);
 				return;
 			}
-
+			if ("published".equals(localName)) {
+				getFeed().getDateStamp().setPublished(text);
+				return;
+			}
+			if ("updated".equals(localName)) {
+				getFeed().getDateStamp().setUpdated(text);
+				return;
+			}
 			if ("link".equals(localName)) {
 				// System.out.println("LINK attrs = " + attributes);
 				// .out.println("LINK");
 				// feed.setLink(localName);
 				return;
 			}
+			return;
 
+		case IN_FEED_AUTHOR:
+			if ("name".equals(localName)) {
+				feed.getAuthor().setName(text);
+				return;
+			}
+			if ("email".equals(localName)) {
+				feed.getAuthor().setEmail(text);
+				return;
+			}
+			if ("author".equals(localName)) {
+				state = IN_FEED;
+				return;
+			}
+			return;
+			
 		case IN_ENTRY:
 			
 			if ("entry".equals(localName)) {
 				// System.out.println("out of Entry");
 				state = IN_FEED;
-			//	feed.addEntry(currentEntry);
-				System.out.println("DONE ENTRY = "+currentEntry);
+				feed.addEntry(currentEntry);
+				// System.out.println("DONE ENTRY = "+currentEntry);
 				return;
 			}
 			if ("title".equals(localName)) {
 				currentEntry.setTitle(text);
 				return;
 			}
+			if ("published".equals(localName)) {
+				currentEntry.getDateStamp().setPublished(text);
+				return;
+			}
 			if ("updated".equals(localName)) {
-				// currentEntry.getDate().setUpdated(text); failing silently
+				currentEntry.getDateStamp().setUpdated(text);
 				return;
 			}
 			if ("link".equals(localName)) {
 				// currentEntry.setLink(textBuffer.toString().trim());
 				return;
 			}
+			return;
 			
 
 		case IN_CONTENT:
@@ -216,15 +264,20 @@ public class AtomHandler extends FeedHandler {
 			textBuffer.append("</"+localName+">");
 			return;
 
-		case IN_FEED_AUTHOR:
+		case IN_ENTRY_AUTHOR:
 			if ("name".equals(localName)) {
-				feed.getAuthor().setName(text);
+				currentEntry.getAuthor().setName(text);
 				return;
 			}
 			if ("email".equals(localName)) {
-				feed.getAuthor().setEmail(text);
+				currentEntry.getAuthor().setEmail(text);
 				return;
 			}
+			if ("author".equals(localName)) {
+				state = IN_ENTRY;
+				return;
+			}
+			return;
 
 		default:
 			return;
@@ -232,7 +285,7 @@ public class AtomHandler extends FeedHandler {
 	}
 
 	public void endDocument() throws SAXException {
-		System.out.println("AtomHandler currentEntry = " + currentEntry);
+		System.out.println("AtomHandler FEED = \n" + feed);
 	}
 
 }

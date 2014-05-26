@@ -28,7 +28,7 @@ public class RDFInterpreterFactory {
 
 		case FeedConstants.RSS2_BOZO:
 			System.out.println("Using BOZO interpreter...");
-			interpreter = new CleanerInterpreter();
+			interpreter = new SoupInterpreter();
 			return interpreter;
 
 		case FeedConstants.RSS2:

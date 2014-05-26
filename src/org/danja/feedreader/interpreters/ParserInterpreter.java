@@ -27,20 +27,10 @@ public class ParserInterpreter extends InterpreterBase {
 		this.feedParser = feedParser;
 	}
 
-//	public void setContentHandler(FeedHandler contentHandler) {
-//		feedParser.setContentHandler(contentHandler);
-//	}
-
 	public void interpret(Feed feed) {
 		System.out.println("interpret(Feed feed), feed = "+feed.getUrl());
 		feedParser.setFeed(feed);
-		//System.out.println("getContentHandler() = "+getContentHandler());
-		//feedParser.setContentHandler(getContentHandler());
-		// feedParser.getContentHandler(contentHandler);
-		System.out.println("feedParser.getContentHandler() = "+feedParser.getContentHandler());
 		feedParser.parse();
-	System.out.println(feedParser.getClass().getSimpleName());
-		// feedParser.parse(feed.getInputStream());
 	}
 
 	public String toString() {

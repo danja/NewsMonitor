@@ -58,4 +58,10 @@ public class HtmlHandler extends FeedHandler implements CommentHandler {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void endDocument() throws SAXException {
+		// TODO Auto-generated method stub
+		
+	}
 }
