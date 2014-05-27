@@ -88,6 +88,11 @@ public class HttpServer {
 	private HttpService httpService;
 	private SSLServerSocketFactory sf = null;
 	private Thread serverThread = null;
+	public static Socket socket;
+	public static HttpServerConnection conn;
+	public static WorkerThread workerThread;
+	public static boolean running;
+	
 	
     public static void main(String[] args) throws Exception {
 //        if (args.length < 1) {
@@ -194,17 +199,38 @@ public class HttpServer {
     
     public void start(){
         
+        if(this.serverThread == null) {
+        	running = true;
 		try {
 			this.serverThread = new RequestListenerThread(this.port, this.httpService, this.sf);
 		} catch (IOException e) {
-			e.printStackTrace();
+		//	e.printStackTrace();
+			return;
 		}
         this.serverThread.setDaemon(false);
         this.serverThread.start();
+        }
     }
     
-    public void stop(){
-    	this.serverThread.interrupt();
+    public void stop(){ // TODO can't get this to work... yucky workaround in start()
+    	//System.out.println("STOP server");
+    	running = false;
+//    	try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//    	try {
+//			socket.close();
+//		} catch (IOException e1) {
+//			e1.printStackTrace();
+//		}
+//    	try {
+//			conn.close();
+//		} catch (IOException e1) {
+//			e1.printStackTrace();
+//		}
+
     }
 
     static class HttpFileHandler implements HttpRequestHandler  {
@@ -282,17 +308,17 @@ public class HttpServer {
         @Override
         public void run() {
             System.out.println("HttpServer : Listening on port " + this.serversocket.getLocalPort());
-            while (!Thread.interrupted()) {
+            while (running) {
                 try {
                     // Set up HTTP connection
-                    Socket socket = this.serversocket.accept();
+                    socket = this.serversocket.accept();
                     System.out.println("HttpServer : Incoming connection from " + socket.getInetAddress());
-                    HttpServerConnection conn = this.connFactory.createConnection(socket);
+                    conn = this.connFactory.createConnection(socket);
 
                     // Start worker thread
-                    Thread t = new WorkerThread(this.httpService, conn);
-                    t.setDaemon(true);
-                    t.start();
+                     workerThread = new WorkerThread(this.httpService, conn);
+                    workerThread.setDaemon(true);
+                    workerThread.start();
                 } catch (InterruptedIOException ex) {
                     break;
                 } catch (IOException e) {
@@ -322,7 +348,7 @@ public class HttpServer {
             System.out.println("HttpServer : New connection thread");
             HttpContext context = new BasicHttpContext(null);
             try {
-                while (!Thread.interrupted() && this.conn.isOpen()) {
+                while (running && !Thread.interrupted() && this.conn.isOpen()) {
                     this.httpservice.handleRequest(this.conn, context);
                 }
             } catch (ConnectionClosedException ex) {
