@@ -30,19 +30,20 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * SAX2 handler for Atom XML
- * 
+ * <p>
  * Populates a {@link Feed} object (with any contained entries etc.).
- * 
- * Elements handled : 
- * (feed level) id, title, link, published, updated, author
+ * <p>
+ * Elements handled : (feed level) id, title, link, published, updated, author
  * (entry level) as feed, plus content
+ * <p>
+ * Titles have any HTML tags removed, and HTML content has a little
+ * cleaning/normalization, and links are pulled out of there too.
  * 
- * HTML content has a little cleaning/normalization, and links are pulled out of there too.
- * 
+ * @see XMLReaderParser
  * @see Feed
  * @see Entry
  * @see Person
- * @see TimeStamp
+ * @see DateStamp
  * @see Link
  */
 
@@ -76,7 +77,7 @@ public class AtomHandler extends FeedHandler {
 
 	// private EntryList entries = new EntryListImpl();
 	private static final String[] textElementsArray = { "id", "title",
-			"updated", "name", "email", "content" };
+			"updated", "name", "email", "content", "a" };
 	private static final Set<String> textElements = new HashSet<String>();
 	static {
 		Collections.addAll(textElements, textElementsArray);
@@ -180,8 +181,8 @@ public class AtomHandler extends FeedHandler {
 
 	public void endElement(String namespaceURI, String localName, String qName) {
 
-	//	System.out.println("END localName = " + localName);
-	//	System.out.println("state = " + states[state]);
+		// System.out.println("END localName = " + localName);
+		// System.out.println("state = " + states[state]);
 
 		String text = "";
 		if (textElements.contains(localName)) {
@@ -207,13 +208,20 @@ public class AtomHandler extends FeedHandler {
 			}
 			if ("id".equals(localName)) {
 				getFeed().setId(text);
-				if("".equals(getFeed().getUrl()) && text.startsWith("http://")) { // id might be url, but favour alternate link
+				if ("".equals(getFeed().getUrl()) && text.startsWith("http://")) { // id
+																					// might
+																					// be
+																					// url,
+																					// but
+																					// favour
+																					// alternate
+																					// link
 					getFeed().setUrl(text);
 				}
 				return;
 			}
 			if ("title".equals(localName)) {
-				getFeed().setTitle(text);
+				getFeed().setTitle(HtmlCleaner.stripTags(text));
 				return;
 			}
 			if ("published".equals(localName)) {
@@ -226,12 +234,30 @@ public class AtomHandler extends FeedHandler {
 			}
 			if ("link".equals(localName)) {
 				Link link = new LinkImpl();
-				link.setRel(attributes.getValue("rel"));
-				link.setHref(attributes.getValue("href"));
-				link.setType(attributes.getValue("type"));
+				String rel = attributes.getValue("rel");
+				String href = attributes.getValue("href");
+				String type = attributes.getValue("type");
+
+				link.setRel(rel);
+				link.setHref(href);
+				link.setType(type);
 				getFeed().addLink(link);
-				if(link.isAlternate()) {
-					getFeed().setUrl(link.getHref());
+
+				// WordPress
+				// <link rel="alternate" type="text/html"
+				// href="http://longoio.wordpress.com" />
+				// <id>http://longoio.wordpress.com/feed/atom/</id>
+				// <link rel="self" type="application/atom+xml"
+				// href="http://longoio.wordpress.com/feed/atom/" />
+
+				// this seems to be a common usage,though the alternate would be
+				// preferred
+				if (getFeed().getHtmlUrl() == null && href != null
+						&& !"".equals(href) && rel == null && type == null) {
+					getFeed().setHtmlUrl(href);
+				}
+				if (link.isHtmlAlternate()) {
+					getFeed().setHtmlUrl(link.getHref());
 				}
 				return;
 			}
@@ -262,13 +288,15 @@ public class AtomHandler extends FeedHandler {
 			}
 			if ("id".equals(localName)) {
 				currentEntry.setId(text);
-				if("".equals(currentEntry.getUrl()) && text.startsWith("http://")) {// id might be url, but favour alternate link
+				if ("".equals(currentEntry.getUrl())
+						&& text.startsWith("http://")) {// id might be url, but
+														// favour alternate link
 					currentEntry.setUrl(text);
 				}
 				return;
 			}
 			if ("title".equals(localName)) {
-				currentEntry.setTitle(text);
+				currentEntry.setTitle(HtmlCleaner.stripTags(text));
 				return;
 			}
 			if ("published".equals(localName)) {
@@ -285,7 +313,7 @@ public class AtomHandler extends FeedHandler {
 				link.setHref(attributes.getValue("href"));
 				link.setType(attributes.getValue("type"));
 				currentEntry.addLink(link);
-				if(link.isAlternate()) {
+				if (link.isHtmlAlternate()) {
 					currentEntry.setUrl(link.getHref());
 				}
 				return;
@@ -293,6 +321,7 @@ public class AtomHandler extends FeedHandler {
 			return;
 
 		case IN_CONTENT:
+			System.out.println("element = "+localName);
 			if ("content".equals(localName)
 					&& "http://www.w3.org/2005/Atom".equals(namespaceURI)) {
 				// System.out.println("content text = " + text);
@@ -301,16 +330,20 @@ public class AtomHandler extends FeedHandler {
 				return;
 			}
 			textBuffer.append("</" + localName + ">");
-			
+
 			// pull out links in content
+			if("a".equals(localName)){
 			for (int i = 0; i < attributes.getLength(); i++) {
 				String name = attributes.getLocalName(i);
-				if("href".equals(name) && "a".equals(localName)) {
+				if ("href".equals(name)) {
 					Link link = new LinkImpl();
 					link.setHref(attributes.getValue(i));
 					link.setRel("related");
+					text = HtmlCleaner.stripTags(text).trim();
 					link.setLabel(text);
+					currentEntry.addLink(link);
 				}
+			}
 			}
 			return;
 

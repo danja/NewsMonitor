@@ -32,7 +32,7 @@ public class Rss2ParserDemo {
             XMLReader xmlReader = parserFactory.newSAXParser().getXMLReader();
 
             Rss2Handler handler = new Rss2Handler();
-            handler.setEntryList(entries);
+           //  handler.setEntryList(entries);
 
             xmlReader.setContentHandler(handler);
             InputStream inputStream = new FileInputStream(

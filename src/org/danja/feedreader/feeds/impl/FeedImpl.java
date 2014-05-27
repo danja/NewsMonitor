@@ -52,6 +52,8 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private boolean firstCall;
 
+	private String htmlUrl;
+
 	public FeedImpl() {
 	}
 
@@ -74,9 +76,9 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 		if (isNew) {
 			System.out.println("Connected, interpreting...");
-			System.out.println("interpretor =" + interpreter);
+			System.out.println("interpreter =" + interpreter);
 			interpreter.interpret(this);
-			System.out.println("INTERPRETED =" + this);
+			// System.out.println("INTERPRETED =" + this);
 			lives = Config.MAX_LIVES;
 			isNew = false;
 		} else {
@@ -199,5 +201,15 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	@Override
 	public void setFirstCall(boolean firstCall) {
 		this.firstCall = firstCall;
+	}
+
+	@Override
+	public void setHtmlUrl(String url) {
+		this.htmlUrl = url;
+	}
+
+	@Override
+	public String getHtmlUrl() {
+		return this.htmlUrl;
 	}
 }

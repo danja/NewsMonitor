@@ -21,7 +21,6 @@ import org.danja.feedreader.feeds.impl.FeedImpl;
 import org.danja.feedreader.feeds.impl.FeedListImpl;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
-import org.danja.feedreader.interpreters.RDFInterpreterFactory;
 import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.parsers.FormatSniffer;
@@ -88,7 +87,7 @@ public class Poller implements Runnable {
 			// interpreter = RDFInterpreterFactory.createInterpreter(format);
 			// feed.setInterpreter(interpreter);
 
-			interpreter = InterpreterFactory.createInterpreter(format);
+			interpreter = InterpreterFactory.createInterpreter(feed);
 			
 			System.out.println("Setting interpreter " + interpreter
 					+ " to feed " + url);

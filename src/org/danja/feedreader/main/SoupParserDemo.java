@@ -31,7 +31,7 @@ public class SoupParserDemo extends DefaultHandler {
         //    XMLReader xmlReader = parserFactory.newSAXParser().getXMLReader();
             SoupParser parser = new SoupParser(); //+
             Rss2Handler handler = new Rss2Handler();
-            handler.setEntryList(entries);
+         //   handler.setEntryList(entries);
 
             parser.setContentHandler(handler); //+
             InputStream inputStream = new FileInputStream(

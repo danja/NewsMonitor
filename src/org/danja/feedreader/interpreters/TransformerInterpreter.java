@@ -5,6 +5,9 @@
  * 
  * @author danja
  * @date Apr 25, 2014
+ * 
+ * removed from use because of licensing issues around the XSLT
+ * left here in case future XSLTs with appropriate licenses are available
  *
  */
 package org.danja.feedreader.interpreters;
@@ -29,7 +32,7 @@ import org.danja.feedreader.io.FileEntrySerializer;
  */
 public class TransformerInterpreter extends InterpreterBase {
 
-    private WriterInterpreter rdfInterpreter;
+  //  private WriterInterpreter rdfInterpreter;
 
     private Transformer transformer;
 
@@ -37,24 +40,24 @@ public class TransformerInterpreter extends InterpreterBase {
     private static final String xslFilename = "xslt/feed-rss1.0.xsl";
 
     public TransformerInterpreter() {
-        rdfInterpreter = new WriterInterpreter();
+   //     rdfInterpreter = new WriterInterpreter();
 
     }
 
     public void interpret(Feed feed) {
         InputStream inputStream = feed.getInputStream();
-        String filename = "data/" + RDFInterpreterFactory.getFilename(feed);
-        
-        System.out.println("\nFeed: "+feed.getUrl());
-        System.out.println("type: "+ FeedConstants.formatName(feed.getFormatHint()));
-        System.out.println("Writing from TransformerInterpreter...");
-        
-        writeXmlFile(inputStream, filename, xslFilename);
-        try {
-			inputStream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//        String filename = "data/" + InterpreterFactory.getFilename(feed);
+//        
+//        System.out.println("\nFeed: "+feed.getUrl());
+//        System.out.println("type: "+ FeedConstants.formatName(feed.getFormatHint()));
+//        System.out.println("Writing from TransformerInterpreter...");
+//        
+//        writeXmlFile(inputStream, filename, xslFilename);
+//        try {
+//			inputStream.close();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
     }
 
     public static void writeXmlFile(InputStream inputStream, String outputFilename,

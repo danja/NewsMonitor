@@ -17,10 +17,12 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import org.danja.feedreader.content.HtmlTidy;
 import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.feeds.Entry;
+import org.danja.feedreader.feeds.Link;
 
 /**
  *  Implementation of Entry, an RSS item/Atom entry/Blog post model
@@ -81,30 +83,30 @@ public class EntryImpl extends FeedEntityBase implements Entry {
     /* (non-Javadoc)
      * @see org.danja.feedreader.feeds.Entry#setSourceTitle(java.lang.String)
      */
-    public void setSourceTitle(String sourceTitle) {
-        this.sourceTitle = sourceTitle;
-    }
+//    public void setSourceTitle(String sourceTitle) {
+//        this.sourceTitle = sourceTitle;
+//    }
 
     /* (non-Javadoc)
      * @see org.danja.feedreader.feeds.Entry#getSourceTitle()
      */
-    public String getSourceTitle() {
-        return sourceTitle;
-    }
+//    public String getSourceTitle() {
+//        return sourceTitle;
+//    }
 
     /* (non-Javadoc)
      * @see org.danja.feedreader.feeds.Entry#setSourceLink(java.lang.String)
      */
-    public void setSourceLink(String sourceLink) {
-        this.sourceLink = sourceLink;
-    }
+//    public void setSourceLink(String sourceLink) {
+//        this.sourceLink = sourceLink;
+//    }
 
     /* (non-Javadoc)
      * @see org.danja.feedreader.feeds.Entry#getSourceLink()
      */
-    public String getSourceLink() {
-        return sourceLink;
-    }
+//    public String getSourceLink() {
+//        return sourceLink;
+//    }
 
     /* (non-Javadoc)
      * @see org.danja.feedreader.feeds.Entry#setAuthor(java.lang.String)

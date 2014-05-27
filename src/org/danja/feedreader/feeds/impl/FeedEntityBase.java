@@ -97,6 +97,10 @@ public abstract class FeedEntityBase implements FeedEntity {
         links.add(link);
     }
 
+	public void addAllLinks(Set<Link> links) {
+		this.links.addAll(links);
+	}
+	
     public Set<Link> getLinks() {
         return links;
     }

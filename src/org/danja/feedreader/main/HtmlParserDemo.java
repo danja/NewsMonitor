@@ -66,7 +66,7 @@ public class HtmlParserDemo {
 
         for (int i = 0; i < links.size(); i++) {
             Link link = (Link) links.get(i);
-            if (link.isAlternate()) {
+            if (link.isHtmlAlternate()) {
                 System.out.println(link);
             }
         }

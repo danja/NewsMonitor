@@ -22,14 +22,15 @@ public class ParserInterpreter extends InterpreterBase {
 
 //	private ContentHandler contentHandler;
 
-	public ParserInterpreter(FeedParser feedParser) {
+	public ParserInterpreter(Feed feed, FeedParser feedParser) {
 		super();
 		this.feedParser = feedParser;
+		feedParser.setFeed(feed);
 	}
 
 	public void interpret(Feed feed) {
 		System.out.println("interpret(Feed feed), feed = "+feed.getUrl());
-		feedParser.setFeed(feed);
+		// feedParser.setFeed(feed);
 		feedParser.parse();
 	}
 

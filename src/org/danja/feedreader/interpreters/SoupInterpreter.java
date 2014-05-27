@@ -29,7 +29,10 @@ public class SoupInterpreter extends InterpreterBase {
 
     FileEntrySerializer serializer;
 
-    public SoupInterpreter() {
+	private Feed feed;
+
+    public SoupInterpreter(Feed feed, FeedParser feedParser) {
+    	this.feed = feed;
         entries = new EntryListImpl();
         initializeCleaner();
         serializer = new FileEntrySerializer();
@@ -37,25 +40,26 @@ public class SoupInterpreter extends InterpreterBase {
         // hardcoding
     }
 
+    // TODO make this look more like ParserInterpreter
     public void interpret(Feed feed) {
         serializer.clearEntries();
 
         for (int i = 0; i < entries.size(); i++) {
             serializer.addEntry(entries.getEntry(i));
         }
-        String filename = "data/" + RDFInterpreterFactory.getFilename(feed);
+       //  String filename = "data/" + InterpreterFactory.getFilename(feed);
         System.out.println("\nFeed: "+feed);
       
         System.out.println("Writing from SoupInterpreter...");
 
-        serializer.transformWrite(filename, "xslt/feed-rss1.0.xsl");
+ //       serializer.transformWrite(filename, "xslt/feed-rss1.0.xsl");
     }
 
     private void initializeCleaner() {
         FeedParser feedParser = new SoupParser();
-        Interpreter interpreter = new ParserInterpreter(feedParser);
+        Interpreter interpreter = new ParserInterpreter(feed, feedParser);
         rss2handler = new Rss2Handler();
-        rss2handler.setEntryList(entries);
+        // rss2handler.setEntryList(entries);
         feedParser.setContentHandler(rss2handler);
     }
 

@@ -85,9 +85,11 @@ public class LinkImpl implements Link {
 
     }
 
-    public boolean isAlternate() {
-        if ((rel != null) && rel.equals("alternate") && (href != null) && (type != null)) {
+    public boolean isHtmlAlternate() {
+        if ((rel != null) && rel.equals("alternate")) {
+        	if(type == null || "text/html".equals(type)){
             return true;
+        	}
         }
         return false;
     }
