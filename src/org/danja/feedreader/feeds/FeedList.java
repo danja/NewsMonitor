@@ -46,7 +46,7 @@ public interface FeedList
    
    public int size();
 
-public EntryList getEntries();
+// public EntryList getEntries();
 
 public void setFirstCall(boolean b);
 }

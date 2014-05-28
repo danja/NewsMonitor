@@ -26,7 +26,7 @@ import org.danja.feedreader.parsers.FormatSniffer;
 
 public class Poller implements Runnable {
 
-	private EntryList entries = new EntryListImpl();
+//	private EntryList entries = new EntryListImpl();
 
 	private List<String> feedUrls = null;
 
@@ -81,7 +81,7 @@ public class Poller implements Runnable {
 			feed = new FeedImpl();
 			feed.setUrl(url);
 			feed.setFormatHint(format); // TODO remove duplication with setInterpreter
-			feed.setRefreshPeriod(Config.getPollerPeriod());
+			// feed.setRefreshPeriod(Config.getPollerPeriod());
 
 			// interpreter = RDFInterpreterFactory.createInterpreter(format);
 			// feed.setInterpreter(interpreter);
@@ -110,6 +110,7 @@ public class Poller implements Runnable {
 	public void run() {
 		running = true;
 		feedList.setFirstCall(true);
+		// System.out.println("FEEDLIST = " + feedList);
 		while (running) {
 			System.out.println("Starting loop #" + ++loopCount);
 
@@ -118,18 +119,20 @@ public class Poller implements Runnable {
 			feedList.setFirstCall(false);
 
 			feedList.refreshAll();
+			
+
 
 			// System.out.println("*** STATUS ***");
 			// displayStatus(feedList);
 
 			// local display of recent entries
-			entries = feedList.getEntries();
+		//	entries = feedList.getEntries();
 
-			System.out.println("FEEDLIST = " + feedList);
-			System.out.println("DISPLAY entries.size() = " + entries.size());
+			
+		//	System.out.println("entries.size() = " + entries.size());
 
 			// TODO sort entries
-			entries.trimList(Config.getMaxItems());
+		//	entries.trimList(Config.getMaxItems());
 
 			/*
 			FileEntrySerializer serializer = new FileEntrySerializer();
@@ -154,18 +157,18 @@ public class Poller implements Runnable {
 		System.out.println("Poller stopped.");
 	}
 
-	public void displayStatus(FeedList feeds) {
-		Iterator feedIterator = feeds.getFeedCollection().iterator();
+	public void displayFeeds() {
+		Iterator<Feed> feedIterator = feedList.getFeedCollection().iterator();
 		while (feedIterator.hasNext()) {
-			System.out.println(((Feed) feedIterator.next()).getStatus());
+			System.out.println(feedIterator.next().toTurtle());
 		}
 		System.out.println("---------------");
-		for (int i = 0; i < entries.size(); i++) {
-			System.out.println(entries.getEntry(i));
-		}
+//		for (int i = 0; i < entries.size(); i++) {
+//			System.out.println(entries.getEntry(i));
+//		}
 	}
 
-	public void setFeedList(List<String> feeds) {
-		feedUrls = feeds;
+	public void setFeedList(List<String> feedUrls) {
+		this.feedUrls = feedUrls;
 	}
 }

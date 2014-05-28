@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.danja.feedreader.feeds.Entry;
+import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.impl.FeedImpl;
@@ -48,6 +49,11 @@ public class TestAtomParser {
 
 		feed.setInterpreter(interpreter);
 		feed.refresh();
+		
+		EntryList entries = feed.getEntries();
+		
+		System.out.println(entries.getEntry(0).toTurtle());
+		// System.out.println(feed.toTurtle());
 	}
 
 	@Test

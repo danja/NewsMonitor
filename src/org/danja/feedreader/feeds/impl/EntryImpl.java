@@ -26,13 +26,6 @@ import org.danja.feedreader.feeds.Entry;
  */
 public class EntryImpl extends FeedEntityBase implements Entry {
 
-//	private HtmlTidy tidy = new HtmlTidy();
-//	private String sourceLink = "";
-//	  private String sourceTitle = "";
-//	 
-//	private String author = "";
-   // private String content = "";
-
     /**
      * @param uriString URL of feed
      */

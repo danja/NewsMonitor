@@ -39,6 +39,8 @@ import org.xml.sax.helpers.DefaultHandler;
  * Titles have any HTML tags removed, and HTML content has a little
  * cleaning/normalization, and links are pulled out of there too.
  * 
+ * TODO class attribute is getting through in content
+ * 
  * @see XMLReaderParser
  * @see Feed
  * @see Entry
@@ -321,7 +323,7 @@ public class AtomHandler extends FeedHandler {
 			return;
 
 		case IN_CONTENT:
-			System.out.println("element = "+localName);
+			// System.out.println("element = "+localName);
 			if ("content".equals(localName)
 					&& "http://www.w3.org/2005/Atom".equals(namespaceURI)) {
 				// System.out.println("content text = " + text);
@@ -368,7 +370,7 @@ public class AtomHandler extends FeedHandler {
 	}
 
 	public void endDocument() throws SAXException {
-		System.out.println("AtomHandler FEED = \n" + feed);
+		// System.out.println("AtomHandler FEED = \n" + feed);
 	}
 
 }

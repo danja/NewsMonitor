@@ -48,7 +48,8 @@ public class Templater {
 		
         Writer writer = new StringWriter();
         try {
-			templates.get(templateName).process(dataModel, writer);
+			Template template = templates.get(templateName);
+			template.process(dataModel, writer);
 			 writer.close();
 		} catch (TemplateException e) {
 			e.printStackTrace();

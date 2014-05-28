@@ -34,7 +34,7 @@ public interface Feed extends FeedEntity {
 
     public boolean refresh();
 
-    public void setRefreshPeriod(long refreshPeriod);
+   // public void setRefreshPeriod(long refreshPeriod);
 
     /**
      * @return is this feed up-to-date?

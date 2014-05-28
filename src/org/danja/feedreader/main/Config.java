@@ -18,26 +18,31 @@ public class Config {
 	
 	public static final String TEMPLATES_DIR = "templates";
 	
+	public static final String SPARQL_PREFIXES_FILENAME = "sparql/prefixes.sparql";
+	
     public static final int CONNECT_TIMEOUT = 5000; // milliseconds
     public static final int READ_TIMEOUT = 5000; // milliseconds
     
+    /**
+     * Number of attempts to read a feed which is failing before flagging it as dead
+     */
     public static final  int MAX_LIVES = 3;
 
-	public static final boolean JTIDY_SHOW_WARNINGS = false;
-    
-	private static int REFRESH_PERIOD = 10000; // milliseconds
-    
-	public static int PER_FEED_SLEEP_PERIOD = 0; /// ????
+	/**
+	 * Pause between polling runs
+	 */
+	public static int REFRESH_PERIOD = 500; // milliseconds
 
-    private static int MAX_ITEMS = 5;
+	/**
+	 * Pause between reading each feed
+	 */
+	public static int PER_FEED_SLEEP_PERIOD = 500; 
+
+    private static int MAX_ITEMS = 10;
     
-    public static void load() {
-    	// TODO read from store
-    }
-    
-    public static int getPollerPeriod() {
-    	return REFRESH_PERIOD;
-    }
+//    public static void load() {
+//    	// TODO read from store
+//    }
     
     public static int getMaxItems() {
     	return MAX_ITEMS;

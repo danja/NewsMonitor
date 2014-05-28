@@ -34,7 +34,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private long lastRefresh;
 
-	private long refreshPeriod;
+//	private long refreshPeriod;
 
 	private static final double ditherFactor = 0.1D;
 
@@ -56,9 +56,9 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	}
 
 	public boolean refresh() {
-		// if (now() < lastRefresh + refreshPeriod + getPeriodDither()) {
-		// return false;
-		// }
+//		 if (now() < lastRefresh + refreshPeriod + getPeriodDither()) {
+//		 return false;
+//		 }
 
 		if (httpConnector == null) {
 			httpConnector = new HttpConnector();
@@ -83,11 +83,12 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			if (httpConnector.isDead()) {
 				System.out.println("Error, feed life lost.");
 				lives--;
-				refreshPeriod = refreshPeriod * 2;
+			//	refreshPeriod = refreshPeriod * 2;
 			}
+			System.out.println("Nothing new, skipping...");
 		}
 		lastRefresh = now();
-		System.out.println("isNew = " + isNew);
+		// System.out.println("isNew = " + isNew);
 		return isNew;
 	}
 
@@ -95,9 +96,9 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		return (new Date()).getTime();
 	}
 
-	private long getPeriodDither() {
-		return (long) (Math.random() * ditherFactor * refreshPeriod);
-	}
+//	private long getPeriodDither() {
+//		return (long) (Math.random() * ditherFactor * refreshPeriod);
+//	}
 
 	public boolean shouldExpire() {
 		return lives < 1;
@@ -155,13 +156,13 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		this.interpreter = interpreter;
 	}
 
-	public long getRefreshPeriod() {
-		return refreshPeriod;
-	}
+//	public long getRefreshPeriod() {
+//		return refreshPeriod;
+//	}
 
-	public void setRefreshPeriod(long refreshPeriod) {
-		this.refreshPeriod = refreshPeriod;
-	}
+//	public void setRefreshPeriod(long refreshPeriod) {
+//		this.refreshPeriod = refreshPeriod;
+//	}
 
 	public long getLastRefresh() {
 		return lastRefresh;

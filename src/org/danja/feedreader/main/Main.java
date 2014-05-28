@@ -11,6 +11,7 @@ package org.danja.feedreader.main;
 import java.util.List;
 import java.util.Set;
 
+import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.main.FeedListLoader.LineHandler;
@@ -27,7 +28,8 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Main main = new Main();
-		Config.load();
+		Templater.loadTemplates();
+		// Config.load();
 
 		// load seed list from file into store
 		System.out.println("Loading seed feed list from file into store...");
@@ -50,18 +52,19 @@ public class Main {
 
 		System.out.println("\n==== Starting Poller ====");
 		poller.start();
-//		try {
-//			Thread.sleep(60000); // wait a minute
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-		// poller.stop();
+		try {
+			Thread.sleep(10000); // wait a bit
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		 poller.stop();
+		 poller.displayFeeds();
 	}
 
 	private List<String> getFeeds() {
-		FeedUrls feedList = new FeedUrls();
-		feedList.load();
-		return feedList.getFeeds();
+		FeedUrls feedUrlList = new FeedUrls();
+		feedUrlList.load();
+		return feedUrlList.getFeeds();
 	}
 
 	public void loadSeedFeedList() {

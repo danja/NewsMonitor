@@ -16,7 +16,7 @@ import org.xml.sax.ContentHandler;
 /**
  *  
  */
-public class ParserInterpreter extends InterpreterBase {
+public class ParserInterpreter implements Interpreter {
 
 	private FeedParser feedParser;
 

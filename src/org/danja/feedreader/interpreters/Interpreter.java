@@ -1,5 +1,4 @@
 /**
- * TODO rename?
  * feedreader-prototype
  *
  * Interpreter.java
@@ -15,12 +14,10 @@ import org.danja.feedreader.feeds.Feed;
 /**
  * Bridges between feed and parser
  *  
+ *  @see FeedParser
+ *  @see Feed
  */
 public interface Interpreter  { 
 
     public void interpret(Feed feed);
-
-	// public void setContentHandler(FeedHandler feedHandler);
-	
-	//public FeedHandler getContentHandler();
 }

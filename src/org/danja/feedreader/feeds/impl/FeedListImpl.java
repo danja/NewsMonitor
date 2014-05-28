@@ -33,7 +33,7 @@ import org.danja.feedreader.main.Main;
 public class FeedListImpl implements FeedList {
 
     private LinkedList<Feed> feedQueue;
-	private EntryList entries;
+	// private EntryList entries;
 	private boolean firstCall;
 
     public FeedListImpl() {
@@ -75,19 +75,19 @@ public class FeedListImpl implements FeedList {
     }
 
     public void refreshAll() {
-    	System.out.println("Refresh all...");
+    	// System.out.println("Refresh all...");
     	
-    	entries = new EntryListImpl();
+    //	entries = new EntryListImpl();
         Set<Feed> expiring = new HashSet<Feed>();
         Iterator<Feed> iterator = feedQueue.iterator();
         Feed feed;
         while (iterator.hasNext()) {
             feed = iterator.next();
-            System.out.println("\n\nRefreshing : " + feed.getUrl());
+            System.out.println("\nRefreshing : " + feed.getUrl());
             feed.setFirstCall(firstCall);
             feed.refresh();
-            System.out.println(" feed.getEntries() = "+feed.getEntries());
-            entries.addAll(feed.getEntries());
+           // System.out.println(" feed.getEntries() = "+feed.getEntries());
+      //      entries.addAll(feed.getEntries());
             if(feed.shouldExpire()){
                 expiring.add(feed);
             }
@@ -105,6 +105,11 @@ public class FeedListImpl implements FeedList {
             feed = iterator.next();
                 System.out.println("Unsubscribing from "+feed.getUrl());
                 feedQueue.remove(feed);
+        }
+        try {
+            Thread.sleep(Config.REFRESH_PERIOD);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
     
@@ -126,10 +131,10 @@ public class FeedListImpl implements FeedList {
 		return feedQueue.size();
 	}
 
-	@Override
-	public EntryList getEntries() {
-		return entries;
-	}
+//	@Override
+//	public EntryList getEntries() {
+//		return entries;
+//	}
 
 	@Override
 	public void setFirstCall(boolean b) {

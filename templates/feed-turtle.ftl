@@ -1,5 +1,5 @@
 <${url}> a ${type} ;
          dcterms:title "${title}" ;
          dcterms:date "${date}" ;
-         dcterms:source "${source}" .
+         dcterms:source "${link}" .
          # TODO dcterms:description ? 
