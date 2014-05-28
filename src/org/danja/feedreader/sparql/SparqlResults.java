@@ -7,7 +7,7 @@
  * @date Apr 21, 2014
  *
  */
-package org.danja.feedreader.parsers;
+package org.danja.feedreader.sparql;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -15,7 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import org.danja.feedreader.parsers.SparqlResults.Result;
+import org.danja.feedreader.sparql.SparqlResults.Result;
 
 /**
  * Model of SPARQL XML Results format

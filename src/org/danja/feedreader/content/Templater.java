@@ -36,7 +36,7 @@ public class Templater {
 	 */
 	public static void main(String[] args) {
 		Templater.init();
-		Template template = Templater.getTemplate("sample");
+		// Template template = Templater.getTemplate("sample");
 		Map<String, Object> data = new HashMap<String, Object>();
         data.put("place", "Mozzanella");
 
@@ -88,7 +88,7 @@ loadTemplates();
 		  try {
 			Template template = configuration.getTemplate(Config.TEMPLATES_DIR+"/"+filename);
 			// System.out.println(filename);
-			String[] split = filename.split(".");
+			// String[] split = filename.split(".");
 			
 			String name = filename.substring(0, filename.indexOf(".")); // remove extension
 			// System.out.println(name);

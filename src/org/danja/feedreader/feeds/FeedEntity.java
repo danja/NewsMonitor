@@ -20,6 +20,16 @@ public interface FeedEntity {
 
     public void setUrl(String url);
 
+    /**
+     * @param content set the Entry content, typically HTML
+     */
+    public void setContent(String content);
+
+    /**
+     * @return get the Entry content, typically HTML
+     */
+    public String getContent();
+    
     public String getUrl();
     
     public void setId(String id);

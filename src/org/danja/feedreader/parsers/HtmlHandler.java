@@ -18,7 +18,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class HtmlHandler extends FeedHandler implements CommentHandler {
+public class HtmlHandler extends FeedHandler {
     
     private List links = new ArrayList();
 

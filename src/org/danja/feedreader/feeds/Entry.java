@@ -17,15 +17,7 @@ import java.util.Set;
  */
 public interface Entry extends FeedEntity {
 
-    /**
-     * @param content set the Entry content, typically HTML
-     */
-    public void setContent(String content);
 
-    /**
-     * @return get the Entry content, typically HTML
-     */
-    public String getContent();
 
     /**
      * @param feedTitle set the title of the feed

@@ -11,8 +11,6 @@
 package org.danja.feedreader.interpreters;
 
 import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.parsers.AtomHandler;
-import org.danja.feedreader.parsers.FeedHandler;
 
 /**
  * Bridges between feed and parser

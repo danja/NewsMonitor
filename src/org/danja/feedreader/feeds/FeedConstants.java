@@ -36,7 +36,7 @@ public class FeedConstants {
     
     public static final char ATOM = 3;
 
-    public static final char RSS2_BOZO = 4; //++
+    public static final char RSS_SOUP = 4; //++
     
     public static final char RDF_OTHER = 5; 
     

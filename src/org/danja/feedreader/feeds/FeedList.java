@@ -10,7 +10,6 @@
  */
 package org.danja.feedreader.feeds;
 
-import java.util.Collection;
 import java.util.List;
 
 /**

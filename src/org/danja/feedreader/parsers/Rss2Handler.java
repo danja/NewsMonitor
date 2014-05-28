@@ -186,10 +186,8 @@ public class Rss2Handler extends FeedHandler {
 				Link link = new LinkImpl();
 				link.setHref(text);
 					getFeed().setHtmlUrl(link.getHref());
-				
 				return;
 			}
-
 			return;
 
 		case IN_ITEM:
@@ -244,7 +242,7 @@ public class Rss2Handler extends FeedHandler {
 	}
 
 	public void endDocument() throws SAXException {
-		System.out.println("AtomHandler FEED = \n" + feed);
+	//	System.out.println("FEED = \n" + feed);
 	}
 
 }

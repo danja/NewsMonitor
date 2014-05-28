@@ -35,7 +35,7 @@ public class ParserInterpreter extends InterpreterBase {
 	}
 
 	public String toString() {
-		ContentHandler contentHandler = feedParser.getContentHandler(); 
+		ContentHandler contentHandler = feedParser.getHandler(); 
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("Interpreter : " + getClass().getSimpleName() + "\n");
 		buffer.append("feedParser = ");

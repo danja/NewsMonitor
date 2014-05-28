@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.danja.feedreader.feeds.FeedList;
-import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.main.FeedListLoader.LineHandler;
 

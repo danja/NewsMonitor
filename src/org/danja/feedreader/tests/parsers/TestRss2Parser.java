@@ -76,7 +76,7 @@ public class TestRss2Parser {
 		assertEquals("checking entry url", "http://example.org/entry1",
 				entry0.getUrl());
 		String published = entry0.getDateStamp().getPublished();
-		System.out.println(published);
+		// System.out.println(published);
 		assertEquals("checking entry pubDate",
 				"Mon, 07 Sep 2009 16:20:00 +0000", published);
 		Entry entry1 = feed.getEntries().getEntry(1);
@@ -89,11 +89,11 @@ public class TestRss2Parser {
 		Iterator<Link> i = links.iterator();
 		while (i.hasNext()) {
 			Link link = i.next();
-			System.out.println("link: " + link);
+			// System.out.println("link: " + link);
 			if ("http://example.com".equals(link.getHref())
 					&& "with a link".equals(link.getLabel())) {
 				found = true;
-				System.out.println("TRUE: " + link);
+			//	System.out.println("TRUE: " + link);
 			}
 		}
 		assertTrue("checking link in content", found);

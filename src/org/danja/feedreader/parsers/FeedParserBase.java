@@ -33,11 +33,11 @@ public abstract class FeedParserBase implements FeedParser {
 	 * .ContentHandler)
 	 */
 	@Override
-	public void setContentHandler(FeedHandler contentHandler) {
+	public void setHandler(FeedHandler contentHandler) {
 		this.feedHandler = contentHandler;
 	}
 
-	public FeedHandler getContentHandler() {
+	public FeedHandler getHandler() {
 		return feedHandler;
 	}
 

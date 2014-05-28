@@ -13,8 +13,8 @@ import java.util.List;
 
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.io.TextFileReader;
-import org.danja.feedreader.parsers.SparqlResults.Result;
-import org.danja.feedreader.parsers.SparqlResultsParser;
+import org.danja.feedreader.sparql.SparqlResultsParser;
+import org.danja.feedreader.sparql.SparqlResults.Result;
 
 /**
  *

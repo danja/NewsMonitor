@@ -1,7 +1,5 @@
 package org.danja.feedreader.interpreters;
 
-import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.parsers.FeedHandler;
 
 // TODO is needed?
 public abstract class InterpreterBase implements Interpreter {

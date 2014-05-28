@@ -17,24 +17,21 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
-import org.danja.feedreader.content.HtmlTidy;
 import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.feeds.Entry;
-import org.danja.feedreader.feeds.Link;
 
 /**
  *  Implementation of Entry, an RSS item/Atom entry/Blog post model
  */
 public class EntryImpl extends FeedEntityBase implements Entry {
 
-	private HtmlTidy tidy = new HtmlTidy();
-	private String sourceLink = "";
-	  private String sourceTitle = "";
-	 
-	private String author = "";
-    private String content = "";
+//	private HtmlTidy tidy = new HtmlTidy();
+//	private String sourceLink = "";
+//	  private String sourceTitle = "";
+//	 
+//	private String author = "";
+   // private String content = "";
 
     /**
      * @param uriString URL of feed
@@ -47,23 +44,10 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      * Constructor
      */
     public EntryImpl() {
-    	tidy.init();
+    //	tidy.init();
 	}
 
-	/* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.Entry#setContent(java.lang.String)
-     */
-    public void setContent(String content) {
-     //   this.content = cleanContent(content);
-    	this.content = content;
-    }
 
-    /* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.Entry#getContent()
-     */
-    public String getContent() {
-        return content;
-    }
 
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
@@ -111,9 +95,9 @@ public class EntryImpl extends FeedEntityBase implements Entry {
     /* (non-Javadoc)
      * @see org.danja.feedreader.feeds.Entry#setAuthor(java.lang.String)
      */
-    public void setAuthor(String author) {
-      this.author = author;
-    }
+//    public void setAuthor(String author) {
+//      this.author = author;
+//    }
 
 	/**
 	 * TODO remove
@@ -125,7 +109,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 	public String cleanContent(String content) {
 		InputStream inputStream = new ByteArrayInputStream(content.getBytes());
 		Writer stringWriter = new StringWriter();
-		tidy.clean(inputStream, stringWriter);
+	//	tidy.clean(inputStream, stringWriter);
 		try {
 			inputStream.close();
 		} catch (IOException e) {

@@ -38,7 +38,7 @@ public class HtmlParserDemo {
             SoupParser parser = new SoupParser();
             HtmlHandler handler = new HtmlHandler();
 
-            parser.setContentHandler(handler);
+            parser.setHandler(handler);
 
             HttpConnector connector = new HttpConnector();
             connector.setUrl(uriString);

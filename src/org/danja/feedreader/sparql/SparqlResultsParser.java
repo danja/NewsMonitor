@@ -7,7 +7,7 @@
  * @date Apr 25, 2014
  *
  */
-package org.danja.feedreader.parsers;
+package org.danja.feedreader.sparql;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,8 +18,8 @@ import java.io.StringReader;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.danja.feedreader.parsers.SparqlResults.Binding;
-import org.danja.feedreader.parsers.SparqlResults.Result;
+import org.danja.feedreader.sparql.SparqlResults.Binding;
+import org.danja.feedreader.sparql.SparqlResults.Result;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.InputSource;

@@ -21,7 +21,6 @@ import org.danja.feedreader.feeds.impl.FeedImpl;
 import org.danja.feedreader.feeds.impl.FeedListImpl;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
-import org.danja.feedreader.io.FileEntrySerializer;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.parsers.FormatSniffer;
 
@@ -132,6 +131,7 @@ public class Poller implements Runnable {
 			// TODO sort entries
 			entries.trimList(Config.getMaxItems());
 
+			/*
 			FileEntrySerializer serializer = new FileEntrySerializer();
 			serializer.loadDocumentShell("input/shell.xml"); // TODO move to
 																// Config
@@ -149,6 +149,7 @@ public class Poller implements Runnable {
 			System.out.println("Writing RSS 1.0...");
 			serializer
 					.transformWrite("output/feed.rdf", "xslt/feed-rss1.0.xsl");
+					*/
 		}
 		System.out.println("Poller stopped.");
 	}

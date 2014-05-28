@@ -12,8 +12,6 @@ package org.danja.feedreader.feeds.impl;
 
 import java.io.InputStream;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import org.danja.feedreader.content.Templater;

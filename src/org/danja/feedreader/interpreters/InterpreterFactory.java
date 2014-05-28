@@ -9,7 +9,6 @@
  */
 package org.danja.feedreader.interpreters;
 
-import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.parsers.AtomHandler;
@@ -24,65 +23,64 @@ import org.danja.feedreader.parsers.XMLReaderParser;
  * Looks after the creation of interpreters (gluing parsers together)
  * 
  * @version $Revision$
- *  
+ * 
  */
 public class InterpreterFactory {
 
-    private static AtomHandler atomHandler;
+	private static AtomHandler atomHandler;
 
 	public static Interpreter createInterpreter(Feed feed) {
 		char formatHint = feed.getFormatHint();
-        Interpreter interpreter = null;
-        FeedParser feedParser = null;
-     //   Rss2Handler rss2handler = null;
+		Interpreter interpreter = null;
+		FeedParser feedParser = null;
+		// Rss2Handler rss2handler = null;
 
-// UNKNOWN, RSS1, RSS2, ATOM, RSS2_BOZO, RDF_OTHER
-        
-        switch (formatHint) {
-        case FeedConstants.RSS1:
-            System.out.println("RSS1: Using Rss1Handler, XMLReaderParser");
-            feedParser = new XMLReaderParser();
-            FeedHandler rss1handler = new Rss1Handler();
-            feedParser.setContentHandler(rss1handler);
-            interpreter = new ParserInterpreter(feed, feedParser);
-            return interpreter;
-        	
-        case FeedConstants.ATOM:
-            System.out.println("Atom: Using AtomHandler, XMLReaderParser");
-            feedParser = new XMLReaderParser();
-            atomHandler = new AtomHandler();
-            feedParser.setContentHandler(atomHandler);
-            interpreter = new ParserInterpreter(feed, feedParser);
-           
-          //  atomHandler.setEntryList(entries);
-         //   feedParser.setContentHandler(atomHandler);
-         //   interpreter.setContentHandler(atomHandler);
-            
-            return interpreter;
-            
-        case FeedConstants.RSS2:
-            System.out.println("RSS2: Using Rss2Handler, XMLReaderParser");
-            feedParser = new XMLReaderParser();
-            FeedHandler  rss2handler = new Rss2Handler();
-            feedParser.setContentHandler(rss2handler);
-            interpreter = new ParserInterpreter(feed, feedParser);
-            return interpreter;
+		// UNKNOWN, RSS1, RSS2, ATOM, RSS_SOUP, RDF_OTHER
 
-        case FeedConstants.RDF_OTHER:
+		switch (formatHint) {
+		case FeedConstants.RSS1:
+			System.out.println("RSS1: Using Rss1Handler, XMLReaderParser");
+			feedParser = new XMLReaderParser();
+			FeedHandler rss1handler = new Rss1Handler();
+			feedParser.setHandler(rss1handler);
+			interpreter = new ParserInterpreter(feed, feedParser);
+			return interpreter;
 
-        case FeedConstants.RSS2_BOZO:
-        case FeedConstants.UNKNOWN:
-            System.out.println("RSS2_BOZO: Using Rss2Handler, SoupHandler");
-            feedParser = new SoupParser();
-            interpreter = new ParserInterpreter(feed, feedParser);
-            rss2handler = new Rss2Handler();
-        //    rss2handler.setEntryList(entries);
-            feedParser.setContentHandler(rss2handler);
-            return interpreter;
+		case FeedConstants.ATOM:
+			System.out.println("Atom: Using AtomHandler, XMLReaderParser");
+			feedParser = new XMLReaderParser();
+			atomHandler = new AtomHandler();
+			feedParser.setHandler(atomHandler);
+			interpreter = new ParserInterpreter(feed, feedParser);
 
-        default:
-            return null;
-        }
+			// atomHandler.setEntryList(entries);
+			// feedParser.setContentHandler(atomHandler);
+			// interpreter.setContentHandler(atomHandler);
 
-    }
+			return interpreter;
+
+		case FeedConstants.RSS2:
+			System.out.println("RSS2: Using Rss2Handler, XMLReaderParser");
+			feedParser = new XMLReaderParser();
+			FeedHandler rss2handler = new Rss2Handler();
+			feedParser.setHandler(rss2handler);
+			interpreter = new ParserInterpreter(feed, feedParser);
+			return interpreter;
+
+		case FeedConstants.RDF_OTHER:
+
+		case FeedConstants.RSS_SOUP:
+		case FeedConstants.UNKNOWN:
+			System.out.println("RSS_SOUP: Using SoupParser, SoupHandler");
+			feedParser = new SoupParser();
+			FeedHandler handler = new Rss2Handler();
+			feedParser.setHandler(handler);
+			interpreter = new ParserInterpreter(feed, feedParser);
+			return interpreter;
+
+		default:
+			return null;
+		}
+
+	}
 }

@@ -81,7 +81,7 @@ public class TestAtomParser {
 		Iterator<Link> i = links.iterator();
 		while (i.hasNext()) {
 			Link link = i.next();
-			System.out.println("link: "+link);
+			// System.out.println("link: "+link);
 			if ("http://example.com".equals(link.getHref())
 					&& "with a link".equals(link.getLabel())) {
 				found = true;
@@ -97,7 +97,7 @@ public class TestAtomParser {
 
 	@AfterClass
 	public static void stopServer() {
-		System.out.println("STOP");
+		// System.out.println("STOP");
 		server.stop();
 	}
 }

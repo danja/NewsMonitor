@@ -15,7 +15,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.feeds.DateStamp;
 import org.danja.feedreader.feeds.FeedEntity;
 import org.danja.feedreader.feeds.Link;
@@ -112,6 +111,21 @@ public abstract class FeedEntityBase implements FeedEntity {
 
     public DateStamp getDateStamp() {
         return date;
+    }
+    
+	/* (non-Javadoc)
+     * @see org.danja.feedreader.feeds.Entry#setContent(java.lang.String)
+     */
+    public void setContent(String content) {
+     //   this.content = cleanContent(content);
+    	this.content = content;
+    }
+
+    /* (non-Javadoc)
+     * @see org.danja.feedreader.feeds.Entry#getContent()
+     */
+    public String getContent() {
+        return content;
     }
 
     public String toHTML() {

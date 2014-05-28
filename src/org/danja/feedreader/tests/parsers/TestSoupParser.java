@@ -20,9 +20,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestRss1Parser {
+// FIXME
 
-	private final String url = "http://localhost:8080/rss1-sample.xml";
+public class TestSoupParser {
+
+	private final String url = "http://localhost:8080/rss2-sample.xml";
 	private final static String rootDir = "data";
 	private FeedImpl feed;
 	private Interpreter interpreter;
@@ -39,7 +41,7 @@ public class TestRss1Parser {
 
 		feed = new FeedImpl();
 		feed.setUrl(url);
-		feed.setFormatHint(FeedConstants.RSS1);
+		feed.setFormatHint(FeedConstants.RSS_SOUP);
 		interpreter = InterpreterFactory.createInterpreter(feed);
 		feed.setInterpreter(interpreter);
 		feed.refresh();
@@ -48,14 +50,14 @@ public class TestRss1Parser {
 	@Test
 	public void testFeedLevel() {
 		assertEquals("checking feed title", "Feed Title", feed.getTitle());
-		assertEquals("checking feed id",
-				"http://longoio.wordpress.com", feed.getId());
 		assertEquals("checking feed url", url, feed.getUrl());
 		assertEquals("checking entry count", 2, feed.getEntries().size());
 		assertEquals("checking HTML url", "http://www.example.com/main.html",
 				feed.getHtmlUrl());
-		assertEquals("checking date", "2014-05-27T11:18:15Z",
-				feed.getDateStamp().getUpdated());
+		assertEquals("checking webMaster", "john@gmail.com", feed.getAuthor()
+				.getEmail());
+		assertEquals("checking pubDate", "Sun, 06 Sep 2009 16:20:00 +0000",
+				feed.getDateStamp().getPublished());
 		// TODO implement -note, canhave multiple links
 		// assertEquals("checking feed link", , feed.getLink());
 	}
@@ -66,17 +68,22 @@ public class TestRss1Parser {
 	@Test
 	public void testEntryLevel() {
 		Entry entry0 = feed.getEntries().getEntry(0);
-		assertEquals("checking entry id",
-				"http://example.org/entry1", entry0.getId());
 		assertEquals("checking entry title", "Entry 1", entry0.getTitle());
+		assertEquals("checking entry author", "john@doe.com", entry0
+				.getAuthor().getEmail());
+		assertEquals("checking entry guid",
+				"urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a", entry0.getId());
 		assertEquals("checking entry content", "<p>Entry 1 content</p>",
 				entry0.getContent());
 		assertEquals("checking entry url", "http://example.org/entry1",
 				entry0.getUrl());
-		String updated = entry0.getDateStamp().getUpdated();
-		assertEquals("checking entry date",
-				"2014-05-27T09:30:55Z", updated);
+		String published = entry0.getDateStamp().getPublished();
+		// System.out.println(published);
+		assertEquals("checking entry pubDate",
+				"Mon, 07 Sep 2009 16:20:00 +0000", published);
 		Entry entry1 = feed.getEntries().getEntry(1);
+		assertEquals("checking entry creator", "JohnDoe", entry1.getAuthor()
+				.getName());
 
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Set<Link> links = entry1.getLinks();
@@ -96,6 +103,7 @@ public class TestRss1Parser {
 
 	@After
 	public void tearDown() {
+
 	}
 
 	@AfterClass

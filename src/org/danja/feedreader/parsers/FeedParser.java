@@ -18,7 +18,8 @@ import org.xml.sax.ContentHandler;
  * common interface for feed parsers
  */
 public interface FeedParser {
-    public void setContentHandler(FeedHandler contentHandler);
+	
+    public void setHandler(FeedHandler contentHandler);
 
     public void parse(InputStream inputStream);
     
@@ -28,5 +29,5 @@ public interface FeedParser {
     
     public Feed getFeed();
 
-	public ContentHandler getContentHandler();
+	public FeedHandler getHandler();
 }
