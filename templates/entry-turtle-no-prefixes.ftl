@@ -1,6 +1,8 @@
-<${url}> a ${type} ;
+<${url}> a schema:article ;
          dcterms:title "${title}" ;
-         dcterms:date "${date}" ;
-         dcterms:source "${source}" ;
+         <#if date??>dcterms:date "${date}" ;</#if>
+         dcterms:source "${url}" ;
          schema:articleBody """${content}""" .
+         
+         # 
          

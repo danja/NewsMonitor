@@ -44,9 +44,9 @@ public interface Entry extends FeedEntity {
      * 
      * @return the Turtle
      */
-    public String toTurtle();
+    // public String toTurtle();
     
-    public String toTurtleNoPrefixes();
+   // public String toTurtleNoPrefixes();
 
 	public void addAllLinks(Set<Link> links);
 }

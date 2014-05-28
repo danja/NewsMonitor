@@ -18,8 +18,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.feeds.Entry;
+import org.danja.feedreader.templating.Templater;
 
 /**
  *  Implementation of Entry, an RSS item/Atom entry/Blog post model
@@ -38,15 +38,6 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      */
     public EntryImpl() {
     //	tidy.init();
-	}
-
-
-
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
-	public String toString() {
-		  return "* Entry *\n" + super.toString() + "content = "+getContent()+"\n";
 	}
 
     /* (non-Javadoc)
@@ -111,23 +102,30 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 		return "CONTENT="+stringWriter.toString();
 	}
 	
-	@Override
-	public String toTurtle() {
-		Map<String, Object> data = new HashMap<String, Object>();
-		data.put("body", toTurtleNoPrefixes());
-		return Templater.apply("turtle-prefixes", data);
+	/* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
+	public String toString() {
+		  return "* Entry *\n" + super.toString() + "content = "+getContent()+"\n";
 	}
-
-	@Override
-	public String toTurtleNoPrefixes() {
-		Map<String, Object> data = getTemplateDataMap();
-		System.out.println("--ENTRY--");
-		Iterator<String> i = data.keySet().iterator();
-		while(i.hasNext()){
-			System.out.println(i.next()+" = "+data.get(i));
-		}
-		
-		data.put("type", "schema:article");
-		return Templater.apply("entry-turtle-no-prefixes", data);
-	}
+	
+//	@Override
+//	public String toTurtle() {
+//		Map<String, Object> data = new HashMap<String, Object>();
+//		data.put("body", toTurtleNoPrefixes());
+//		return Templater.apply("turtle-prefixes", data);
+//	}
+//
+//	@Override
+//	public String toTurtleNoPrefixes() {
+//		Map<String, Object> data = getTemplateDataMap();
+//		System.out.println("--ENTRY--");
+//		Iterator<String> i = data.keySet().iterator();
+//		while(i.hasNext()){
+//			System.out.println(i.next()+" = "+data.get(i));
+//		}
+//		
+//		data.put("type", "schema:article");
+//		return Templater.apply("entry-turtle-no-prefixes", data);
+//	}
 }

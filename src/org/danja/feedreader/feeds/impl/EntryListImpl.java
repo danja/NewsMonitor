@@ -18,9 +18,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.EntryList;
+import org.danja.feedreader.templating.Templater;
 
 /**
  *  implements EntryList, an ordered series of Entry objects

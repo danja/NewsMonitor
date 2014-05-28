@@ -9,13 +9,16 @@
 package org.danja.feedreader.feeds.impl;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.danja.feedreader.feeds.DateStamp;
+import org.danja.feedreader.feeds.Templatable;
 
 /**
  *
  */
-public class DateStampImpl implements DateStamp {
+public class DateStampImpl implements DateStamp, Templatable {
 
 	// is needed?
 	private static String fallback; // a week ago
@@ -81,5 +84,14 @@ public class DateStampImpl implements DateStamp {
 	
 	public String toString(){
 		return "{seen:"+seen+", published:"+published+", updated:"+updated+"}";
+	}
+	
+	@Override
+	public Map<String, Object> getTemplateDataMap() {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("published", this.published);
+		map.put("seen", this.seen);
+		map.put("updated", this.updated);
+		return map;
 	}
 }

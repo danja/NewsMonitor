@@ -12,9 +12,9 @@ package org.danja.feedreader.feeds.impl;
 
 import java.io.InputStream;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
-import org.danja.feedreader.content.Templater;
 import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.Feed;
@@ -23,6 +23,7 @@ import org.danja.feedreader.feeds.FeedEntity;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.main.Config;
+import org.danja.feedreader.templating.Templater;
 
 /**
  * Models a feed, wrapped around HttpConnection
@@ -168,15 +169,15 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		return lastRefresh;
 	}
 
-	@Override
-	public String toTurtle() {
-		Map<String, Object> data = getTemplateDataMap();
-		data.put("type", "rss:channel");
-
-		System.out.println(Templater.dataMapToString(data));
-		System.out.println("--FEED--");
-		return Templater.apply("feed-turtle", data);
-	}
+//	@Override
+//	public String toTurtle() {
+//		Map<String, Object> data = getTemplateDataMap();
+//		data.put("type", "rss:channel");
+//
+//		System.out.println(Templater.dataMapToString(data));
+//		System.out.println("--FEED--");
+//		return Templater.apply("feed-turtle", data);
+//	}
 
 	public String toString() {
 		String string = "* Feed *\n" + getUrl() + "\nFormat = "
@@ -210,5 +211,14 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	@Override
 	public String getHtmlUrl() {
 		return this.htmlUrl;
+	}
+	
+	@Override
+	public Map<String, Object> getTemplateDataMap() {
+		Map<String, Object> map = super.getTemplateDataMap();
+		map.put("htmlUrl", this.htmlUrl);
+		map.put("dead", isDead());
+		map.put("entries", this.entryList.getEntries());
+		return map;
 	}
 }

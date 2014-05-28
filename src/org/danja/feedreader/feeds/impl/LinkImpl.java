@@ -8,12 +8,16 @@
  */
 package org.danja.feedreader.feeds.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.danja.feedreader.feeds.Link;
+import org.danja.feedreader.feeds.Templatable;
 
 /**
  *
  */
-public class LinkImpl implements Link {
+public class LinkImpl implements Link, Templatable {
 
 	private String type;
 	private String rel;
@@ -93,4 +97,14 @@ public class LinkImpl implements Link {
         }
         return false;
     }
+    
+	@Override
+	public Map<String, Object> getTemplateDataMap() {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("href", this.href);
+		map.put("label", this.label);
+		map.put("rel", this.rel);
+		map.put("type", this.type);
+		return map;
+	}
 }

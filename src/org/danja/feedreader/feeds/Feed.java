@@ -67,7 +67,7 @@ public interface Feed extends FeedEntity {
      * 
      * @return the Turtle
      */
-    public String toTurtle();
+  //  public String toTurtle();
 	public EntryList getEntries();
 	public void setFirstCall(boolean firstCall);
 }

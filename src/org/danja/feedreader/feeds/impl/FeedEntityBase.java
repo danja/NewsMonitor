@@ -19,13 +19,14 @@ import org.danja.feedreader.feeds.DateStamp;
 import org.danja.feedreader.feeds.FeedEntity;
 import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
+import org.danja.feedreader.feeds.Templatable;
 
 /**
  * Characteristics common to components of a feed
  * 
  * can some of these be final?
  */
-public abstract class FeedEntityBase implements FeedEntity {
+public abstract class FeedEntityBase implements FeedEntity, Templatable {
 
     private String url = "";
     
@@ -139,10 +140,13 @@ public abstract class FeedEntityBase implements FeedEntity {
 
     public Map<String, Object> getTemplateDataMap(){
     	Map<String, Object> data = new HashMap<String, Object>();
+    	data.put("author", getAuthor());
+    	data.put("content", getContent());
+    	data.put("datestamp", getDateStamp());
+    	data.put("id", getId());
+    	data.put("links", getLinks());
 		data.put("url", getUrl());
 		data.put("title", getTitle());
-		// data.put("link", getLink());
-		data.put("date", getDateStamp());
 		return data;
     }
 

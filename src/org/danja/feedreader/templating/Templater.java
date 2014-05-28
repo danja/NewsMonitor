@@ -7,7 +7,7 @@
  * @date Apr 26, 2014
  *
  */
-package org.danja.feedreader.content;
+package org.danja.feedreader.templating;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +28,7 @@ import freemarker.template.TemplateException;
  */
 public class Templater {
 
-	private static Configuration configuration= new Configuration();
+	private static Configuration configuration = new Configuration();
 	private static Map<String, Template> templates = new HashMap<String, Template>();
 
 	/**
@@ -38,35 +38,37 @@ public class Templater {
 		Templater.init();
 		// Template template = Templater.getTemplate("sample");
 		Map<String, Object> data = new HashMap<String, Object>();
-        data.put("place", "Mozzanella");
+		data.put("place", "Mozzanella");
 
-        System.out.println(apply("sample", data));
+		System.out.println(apply("sample", data));
 	}
-	
-	public static String apply(String templateName, Object dataModel){
-		System.out.println("templateName = "+templateName);
-		
-        Writer writer = new StringWriter();
-        try {
+
+	public static String apply(String templateName, Object dataModel) {
+		System.out.println("templateName = " + templateName);
+
+		Writer writer = new StringWriter();
+		try {
 			Template template = templates.get(templateName);
+			System.out.println("template = " + template);
+			System.out.println("dataModel = " + dataModel);
 			template.process(dataModel, writer);
-			 writer.close();
+			writer.close();
 		} catch (TemplateException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-       
-        return writer.toString();
+
+		return writer.toString();
 	}
-	
+
 	public static Template getTemplate(String name) {
 		return templates.get(name);
 	}
 
 	public static void init() {
 		configuration.setDefaultEncoding("UTF-8");
-loadTemplates();
+		loadTemplates();
 	}
 
 	public static void loadTemplates() {
@@ -86,12 +88,14 @@ loadTemplates();
 	}
 
 	public static void loadTemplate(String filename) {
-		  try {
-			Template template = configuration.getTemplate(Config.TEMPLATES_DIR+"/"+filename);
+		try {
+			Template template = configuration.getTemplate(Config.TEMPLATES_DIR
+					+ "/" + filename);
 			// System.out.println(filename);
 			// String[] split = filename.split(".");
-			
-			String name = filename.substring(0, filename.indexOf(".")); // remove extension
+
+			String name = filename.substring(0, filename.indexOf(".")); // remove
+																		// extension
 			// System.out.println(name);
 			templates.put(name, template);
 		} catch (IOException e) {
@@ -103,8 +107,8 @@ loadTemplates();
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("----------\nData Map :\n");
 		Iterator<String> i = data.keySet().iterator();
-		while(i.hasNext()){
-			buffer.append(i.next()+" = "+data.get(i)+"\n");
+		while (i.hasNext()) {
+			buffer.append(i.next() + " = " + data.get(i) + "\n");
 		}
 		buffer.append("----------\n");
 		return buffer.toString();

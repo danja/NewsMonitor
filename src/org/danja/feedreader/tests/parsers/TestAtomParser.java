@@ -13,6 +13,7 @@ import org.danja.feedreader.feeds.impl.FeedImpl;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;
+import org.danja.feedreader.templating.Templater;
 import org.danja.feedreader.tests.utils.HttpServer;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -52,8 +53,11 @@ public class TestAtomParser {
 		
 		EntryList entries = feed.getEntries();
 		
-		System.out.println(entries.getEntry(0).toTurtle());
+		// System.out.println(entries.getEntry(0).toTurtle());
 		// System.out.println(feed.toTurtle());
+		Templater.init();
+		String feedTurtle = Templater.apply("entry-turtle-no-prefixes", feed.getTemplateDataMap());
+		System.out.println("# Feed Turtle\n"+feedTurtle);
 	}
 
 	@Test

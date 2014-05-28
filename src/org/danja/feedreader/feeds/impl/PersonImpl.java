@@ -8,15 +8,19 @@
  */
 package org.danja.feedreader.feeds.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.danja.feedreader.feeds.Person;
+import org.danja.feedreader.feeds.Templatable;
 
 /**
  *
  */
-public class PersonImpl implements Person {
+public class PersonImpl implements Person, Templatable {
 
-	private String name = "";
-	private String email = "";
+	private String name;
+	private String email;
 	private String homepage;
 
 	/*
@@ -71,5 +75,14 @@ public class PersonImpl implements Person {
 	@Override
 	public String getHomepage() {
 		return homepage;
+	}
+	
+	@Override
+	public Map<String, Object> getTemplateDataMap() {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("name", this.name);
+		map.put("email", this.email);
+		map.put("homepage", this.homepage);
+		return map;
 	}
 }

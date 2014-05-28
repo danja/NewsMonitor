@@ -58,5 +58,5 @@ public interface FeedEntity {
      * 
      * @return the Turtle
      */
-    public String toTurtle();
+   // public String toTurtle();
 }

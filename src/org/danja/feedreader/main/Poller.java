@@ -160,7 +160,7 @@ public class Poller implements Runnable {
 	public void displayFeeds() {
 		Iterator<Feed> feedIterator = feedList.getFeedCollection().iterator();
 		while (feedIterator.hasNext()) {
-			System.out.println(feedIterator.next().toTurtle());
+	//		System.out.println(feedIterator.next().toTurtle());
 		}
 		System.out.println("---------------");
 //		for (int i = 0; i < entries.size(); i++) {
