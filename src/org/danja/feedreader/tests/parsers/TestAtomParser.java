@@ -80,12 +80,14 @@ public class TestAtomParser {
 	@Test
 	public void testEntryLevel() {
 		Entry entry0 = feed.getEntries().getEntry(0);
+		assertEquals("checking entry1 URL", "http://example.org/entry1", entry0.getUrl());
 		assertEquals("checking entry title", "Entry 1", entry0.getTitle());
 		String normalSpaces = entry0.getContent().replaceAll("\\s+", " ");
 		assertEquals("checking entry 1 content", "<div> <p>Entry 1 content</p> </div>", normalSpaces);
 		
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Entry entry1 = feed.getEntries().getEntry(1);
+		assertEquals("checking entry2 URL", "http://example.org/entry2.html", entry1.getUrl());
 		String normalSpaces1 = entry1.getContent().replaceAll("\\s+", " ");
 		assertEquals("checking entry 2 content", "<div> <p>Entry 2 content <a href=\"http://example.com\">with a link</a></p> </div>", normalSpaces1);
 		Set<Link> links = entry1.getLinks();

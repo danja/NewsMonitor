@@ -65,9 +65,9 @@ public class HtmlParserDemo {
 
         for (int i = 0; i < links.size(); i++) {
             Link link = (Link) links.get(i);
-            if (link.isHtmlAlternate()) {
-                System.out.println(link);
-            }
+//            if (link.isHtmlAlternate()) {
+//                System.out.println(link);
+//            }
         }
         List comments = reader.getComments();
         for (int i = 0; i < comments.size(); i++) {

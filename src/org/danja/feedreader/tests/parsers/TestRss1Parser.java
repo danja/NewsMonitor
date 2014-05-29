@@ -72,6 +72,7 @@ public class TestRss1Parser {
 		Entry entry0 = feed.getEntries().getEntry(0);
 		assertEquals("checking entry id",
 				"http://example.org/entry1", entry0.getId());
+	
 		assertEquals("checking entry title", "Entry 1", entry0.getTitle());
 		assertEquals("checking entry content", "<p>Entry 1 content</p>",
 				entry0.getContent());
@@ -81,7 +82,7 @@ public class TestRss1Parser {
 		assertEquals("checking entry date",
 				"2014-05-27T09:30:55Z", updated);
 		Entry entry1 = feed.getEntries().getEntry(1);
-
+		assertEquals("checking entry2 URL", "http://example.org/entry2", entry1.getUrl());
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Set<Link> links = entry1.getLinks();
 		boolean found = false;

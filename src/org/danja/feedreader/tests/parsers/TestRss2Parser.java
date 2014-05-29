@@ -70,6 +70,7 @@ public class TestRss2Parser {
 	@Test
 	public void testEntryLevel() {
 		Entry entry0 = feed.getEntries().getEntry(0);
+		
 		assertEquals("checking entry title", "Entry 1", entry0.getTitle());
 		assertEquals("checking entry author", "john@doe.com", entry0
 				.getAuthor().getEmail());
@@ -84,6 +85,7 @@ public class TestRss2Parser {
 		assertEquals("checking entry pubDate",
 				"Mon, 07 Sep 2009 16:20:00 +0000", published);
 		Entry entry1 = feed.getEntries().getEntry(1);
+		assertEquals("checking entry2 URL", "http://example.org/entry2", entry1.getUrl());
 		assertEquals("checking entry creator", "JohnDoe", entry1.getAuthor()
 				.getName());
 

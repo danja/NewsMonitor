@@ -52,7 +52,7 @@ public class XMLReaderParser extends FeedParserBase implements FeedParser {
     }
 
     public void parse(InputStream inputStream) {
-    	
+    //	System.out.println("parse() called");
         InputSource inputSource = new InputSource(inputStream);
       //  inputSource.setEncoding("UTF-8"); // ?? isneeded
         try {
@@ -68,5 +68,6 @@ public class XMLReaderParser extends FeedParserBase implements FeedParser {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
+    //    System.out.println("after parse");
     }
 }

@@ -9,9 +9,12 @@
  */
 package org.danja.feedreader.parsers;
 
+import java.net.URI;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.danja.feedreader.feeds.Entry;
@@ -124,8 +127,8 @@ public class AtomHandler extends FeedHandler {
 		if (textElements.contains(localName)) {
 			textBuffer = new StringBuffer();
 		}
-		if("a".equals(localName)) {
-			IN_CONTENT_LINK  = true;
+		if ("a".equals(localName)) {
+			IN_CONTENT_LINK = true;
 			labelBuffer = new StringBuffer();
 		}
 
@@ -167,7 +170,7 @@ public class AtomHandler extends FeedHandler {
 
 		case IN_CONTENT:
 			String elementName = HtmlCleaner.normaliseElement(localName);
-// System.out.println("elementName = "+elementName);
+			// System.out.println("elementName = "+elementName);
 			StringBuffer attrBuffer = new StringBuffer();
 			for (int i = 0; i < attributes.getLength(); i++) {
 				String name = attributes.getLocalName(i);
@@ -186,7 +189,7 @@ public class AtomHandler extends FeedHandler {
 
 	public void characters(char[] ch, int start, int length) {
 		textBuffer.append(ch, start, length);
-		if(IN_CONTENT_LINK) {
+		if (IN_CONTENT_LINK) {
 			labelBuffer.append(ch, start, length);
 		}
 	}
@@ -266,14 +269,16 @@ public class AtomHandler extends FeedHandler {
 				// <link rel="self" type="application/atom+xml"
 				// href="http://longoio.wordpress.com/feed/atom/" />
 
-				// this seems to be a common usage,though the alternate would be
+				// this seems to be a common usage,though the alternate is
 				// preferred
 				if (getFeed().getHtmlUrl() == null && href != null
 						&& !"".equals(href) && rel == null && type == null) {
 					getFeed().setHtmlUrl(href);
 				}
-				if (link.isHtmlAlternate()) {
-					getFeed().setHtmlUrl(link.getHref());
+				// best
+				if (rel != null && rel.equals("alternate") && type != null
+						&& "text/html".equals(type)) {
+					getFeed().setHtmlUrl(href);
 				}
 				return;
 			}
@@ -307,7 +312,8 @@ public class AtomHandler extends FeedHandler {
 			}
 			if ("id".equals(localName)) {
 				currentEntry.setId(text);
-				if ("".equals(currentEntry.getUrl())
+				if (currentEntry.getUrl() == null
+						|| "".equals(currentEntry.getUrl())
 						&& text.startsWith("http://")) {// id might be url, but
 														// favour alternate link
 					currentEntry.setUrl(text);
@@ -329,14 +335,38 @@ public class AtomHandler extends FeedHandler {
 				return;
 			}
 			if ("link".equals(localName)) {
-				Link link = new LinkImpl();
-				link.setRel(attributes.getValue("rel"));
-				link.setHref(attributes.getValue("href"));
-				link.setType(attributes.getValue("type"));
-				currentEntry.addLink(link);
-				if (link.isHtmlAlternate()) {
-					currentEntry.setUrl(link.getHref());
+
+				String rel = attributes.getValue("rel");
+				String href = attributes.getValue("href");
+				String type = attributes.getValue("type");
+				if (href == null || "".equals(href)) { // useless
+					return;
 				}
+
+				href = HtmlCleaner.resolveUrl(feed.getUrl(), href);
+
+				Link link = new LinkImpl();
+				link.setRel(rel);
+				link.setHref(href);
+				link.setType(type);
+				currentEntry.addLink(link);
+
+				// best
+				if (rel != null && rel.equals("alternate") && type != null
+						&& "text/html".equals(type)) {
+					currentEntry.setUrl(href);
+				}
+				// good
+				if (currentEntry.getUrl() == null && rel == null
+						&& type != null && "text/html".equals(type)) {
+					currentEntry.setUrl(href);
+				}
+				// ok
+				if (currentEntry.getUrl() == null && rel == null
+						&& type == null) {
+					currentEntry.setUrl(href);
+				}
+
 				return;
 			}
 			return;
@@ -353,20 +383,21 @@ public class AtomHandler extends FeedHandler {
 			textBuffer.append("</" + localName + ">");
 
 			// pull out links in content
-			if("a".equals(localName)){
-				
-				
-			for (int i = 0; i < attributes.getLength(); i++) {
-				String name = attributes.getLocalName(i);
-				if ("href".equals(name)) {
-					Link link = new LinkImpl();
-					link.setHref(attributes.getValue(i));
-					link.setRel("related");
-					String label = HtmlCleaner.stripTags(labelBuffer.toString()).trim();
-					link.setLabel(label);
-					currentEntry.addLink(link);
+			if ("a".equals(localName)) {
+
+				for (int i = 0; i < attributes.getLength(); i++) {
+					String name = attributes.getLocalName(i);
+
+					if ("href".equals(name)) {
+						Link link = new LinkImpl();
+						link.setRel("related");
+						link.setHref(attributes.getValue(i));
+						String label = HtmlCleaner.stripTags(
+								labelBuffer.toString()).trim();
+						link.setLabel(label);
+						currentEntry.addLink(link);
+					}
 				}
-			}
 			}
 			return;
 
@@ -392,10 +423,28 @@ public class AtomHandler extends FeedHandler {
 		}
 	}
 
-
-
 	public void endDocument() throws SAXException {
-		// System.out.println("AtomHandler FEED = \n" + feed);
+		resolveLinks();
+	}
+
+	private void resolveLinks() {
+		Iterator<Link> iterator = feed.getLinks().iterator();
+		while (iterator.hasNext()) {
+			Link link = iterator.next();
+			link.setHref(HtmlCleaner.resolveUrl(feed.getUrl(),
+					link.getHref()));
+		}
+		EntryList entries = feed.getEntries();
+		for (int i = 0; i < entries.size(); i++) {
+			Entry currentEntry = entries.getEntry(i);
+			Iterator<Link> iterator2 = currentEntry.getLinks().iterator();
+			while (iterator2.hasNext()) {
+				Link link = iterator2.next();
+				System.out.println("LINK="+link);
+				link.setHref(HtmlCleaner.resolveUrl(feed.getUrl(),
+						link.getHref()));
+			}
+		}
 	}
 
 }

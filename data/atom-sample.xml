@@ -34,7 +34,6 @@
 	</entry>
 	<entry>
 		<title>Entry 2</title>
-		<link href="http://example.org/entry2" />
 		<link rel="alternate" type="text/html" href="http://example.org/entry2.html"/>
 		<link rel="edit" href="http://example.org/entry2/edit"/>
 		<id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6b</id>

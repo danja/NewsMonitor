@@ -121,8 +121,11 @@ public class Poller implements Runnable {
 			feedList.setFirstCall(false);
 
 			feedList.refreshAll();
+		//	System.out.println("A");
 			displayFeeds();
+		//	System.out.println("B");
 			pushFeeds();
+		//	System.out.println("C");
 		}
 		System.out.println("Poller stopped.");
 	}
@@ -139,7 +142,7 @@ public class Poller implements Runnable {
 	public void displayFeeds() {
 		Iterator<Feed> feedIterator = feedList.getList().iterator();
 		while (feedIterator.hasNext()) {
-	//		System.out.println(feedIterator.next().toTurtle());
+			System.out.println(feedIterator.next());
 		}
 		System.out.println("---------------");
 //		for (int i = 0; i < entries.size(); i++) {

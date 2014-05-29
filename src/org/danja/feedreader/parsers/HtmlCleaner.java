@@ -8,6 +8,8 @@
  */
 package org.danja.feedreader.parsers;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -23,7 +25,7 @@ import org.danja.feedreader.feeds.impl.LinkImpl;
  */
 public class HtmlCleaner {
 
-	private static final String[] excludeAttrs = { "font", "class" };
+	private static final String[] excludeAttrs = { "font", "class", "style" };
 
 	public static final Set<String> excludeAttributes = new HashSet<String>();
 	static {
@@ -83,12 +85,22 @@ public class HtmlCleaner {
 				Link link = new LinkImpl();
 				link.setHref(href);
 				link.setLabel(linkText);
-
 				links.add(link);
-
 			}
-
 		}
 		return links;
+	}
+
+	public static String resolveUrl(String url, String href) {
+		if(href.startsWith("http://") || href.startsWith("https://")) {
+			return href;
+		}
+		URI uri = null;
+		try {
+		 uri = new URI(url);
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+		return uri.resolve(href).toString();
 	}
 }

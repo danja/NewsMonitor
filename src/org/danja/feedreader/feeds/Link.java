@@ -42,6 +42,6 @@ public interface Link {
 	 */
 	public  void setLabel(String label);
 
-	public boolean isHtmlAlternate();
+	// public boolean isHtmlAlternate();
 
 }

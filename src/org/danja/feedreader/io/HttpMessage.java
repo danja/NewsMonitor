@@ -44,4 +44,7 @@ public class HttpMessage {
 		this.statusMessage = statusMessage;
 	}
 	
+	public String toString() {
+		return this.statusCode + " : "+this.statusMessage;
+	}
 }

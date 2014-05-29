@@ -53,7 +53,7 @@ public class Main {
 		System.out.println("\n==== Starting Poller ====");
 		poller.start();
 		try {
-			Thread.sleep(10000); // wait a bit
+			Thread.sleep(20000); // wait a bit
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

@@ -42,7 +42,8 @@ public class SparqlTemplater {
 		map.put("body", feedBody);
 		
 		String sparql = Templater.apply("sparql-insert", map);
+		System.out.println("\n\n----------------"+sparql+"\n\n---------------------");
 		HttpMessage message = SparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
-		return null;
+		return message;
 	}
 }
