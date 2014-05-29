@@ -16,6 +16,11 @@ public class Config {
 	
 	// public static String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
 	
+	public static final String SPARQL_FILENAME = "sparql/get-feedlist.sparql";
+
+	public static final String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
+	public static final String UPDATE_ENDPOINT = "http://localhost:3030/feedreader/update";
+	
 	public static final String TEMPLATES_DIR = "templates";
 	
 	public static final String SPARQL_PREFIXES_FILENAME = "sparql/prefixes.sparql";
@@ -27,6 +32,8 @@ public class Config {
      * Number of attempts to read a feed which is failing before flagging it as dead
      */
     public static final  int MAX_LIVES = 3;
+
+	
 
 	/**
 	 * Pause between polling runs
@@ -44,7 +51,9 @@ public class Config {
 //    	// TODO read from store
 //    }
     
-    public static int getMaxItems() {
-    	return MAX_ITEMS;
-    }
+//    public static int getMaxItems() {
+//    	return MAX_ITEMS;
+//    }
+
+
 }

@@ -8,7 +8,11 @@
  */
 package org.danja.feedreader.parsers;
 
+import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.feeds.FeedEntity;
+import org.danja.feedreader.feeds.impl.DateStampImpl;
+import org.danja.feedreader.feeds.impl.PersonImpl;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
@@ -28,6 +32,20 @@ public abstract class FeedHandler implements ContentHandler {
 
 	public Feed getFeed() {
 		return feed;
+	}
+	
+	// want these as null unless they are populated
+	protected void initDateStamp(FeedEntity feedEntity) {
+		if(feedEntity.getDateStamp() == null) {
+			feedEntity.setDateStamp(new DateStampImpl());
+		}
+		
+	}
+
+	protected void initAuthor(FeedEntity feedEntity) {
+		if(feedEntity.getAuthor() == null) {
+			feedEntity.setAuthor(new PersonImpl());
+		}
 	}
 
 	@Override

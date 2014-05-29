@@ -36,7 +36,7 @@ public interface FeedList
    /**
     * @return all feeds
     */
-   public List<Feed> getFeedCollection();
+   public List<Feed> getList();
 
    public Feed createFeed(String uri);
 

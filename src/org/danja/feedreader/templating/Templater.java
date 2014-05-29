@@ -44,13 +44,13 @@ public class Templater {
 	}
 
 	public static String apply(String templateName, Object dataModel) {
-		System.out.println("templateName = " + templateName);
+		//System.out.println("templateName = " + templateName);
 
 		Writer writer = new StringWriter();
 		try {
 			Template template = templates.get(templateName);
-			System.out.println("template = " + template);
-			System.out.println("dataModel = " + dataModel);
+		//	System.out.println("template = " + template);
+		//	System.out.println("dataModel = " + dataModel);
 			template.process(dataModel, writer);
 			writer.close();
 		} catch (TemplateException e) {

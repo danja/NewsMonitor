@@ -20,6 +20,7 @@ import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
 import org.danja.feedreader.feeds.impl.DateConverters;
+import org.danja.feedreader.feeds.impl.DateStampImpl;
 import org.danja.feedreader.feeds.impl.EntryImpl;
 import org.danja.feedreader.feeds.impl.EntryListImpl;
 import org.danja.feedreader.feeds.impl.LinkImpl;
@@ -74,12 +75,13 @@ public class AtomHandler extends FeedHandler {
 	private char state = IN_NOTHING;
 
 	private StringBuffer textBuffer;
+	private StringBuffer labelBuffer;
 
 	private Entry currentEntry;
 
 	// private EntryList entries = new EntryListImpl();
 	private static final String[] textElementsArray = { "id", "title",
-			"updated", "name", "email", "content", "a" };
+			"updated", "name", "email", "content" };
 	private static final Set<String> textElements = new HashSet<String>();
 	static {
 		Collections.addAll(textElements, textElementsArray);
@@ -88,6 +90,8 @@ public class AtomHandler extends FeedHandler {
 	private Attributes attributes;
 
 	private Feed feed;
+
+	private boolean IN_CONTENT_LINK = false;
 
 	/**
 	 * @return the feed
@@ -102,8 +106,9 @@ public class AtomHandler extends FeedHandler {
 	 */
 	public void setFeed(Feed feed) {
 		this.feed = feed;
-		String date = DateConverters.dateAsISO8601(new Date());
-		feed.getDateStamp().setSeen(date);
+		initDateStamp(this.feed);
+		String now = DateConverters.dateAsISO8601(new Date());
+		feed.getDateStamp().setSeen(now);
 	}
 
 	public AtomHandler() {
@@ -118,6 +123,10 @@ public class AtomHandler extends FeedHandler {
 
 		if (textElements.contains(localName)) {
 			textBuffer = new StringBuffer();
+		}
+		if("a".equals(localName)) {
+			IN_CONTENT_LINK  = true;
+			labelBuffer = new StringBuffer();
 		}
 
 		attributes = attrs;
@@ -158,7 +167,7 @@ public class AtomHandler extends FeedHandler {
 
 		case IN_CONTENT:
 			String elementName = HtmlCleaner.normaliseElement(localName);
-
+// System.out.println("elementName = "+elementName);
 			StringBuffer attrBuffer = new StringBuffer();
 			for (int i = 0; i < attributes.getLength(); i++) {
 				String name = attributes.getLocalName(i);
@@ -177,6 +186,9 @@ public class AtomHandler extends FeedHandler {
 
 	public void characters(char[] ch, int start, int length) {
 		textBuffer.append(ch, start, length);
+		if(IN_CONTENT_LINK) {
+			labelBuffer.append(ch, start, length);
+		}
 	}
 
 	// //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -227,10 +239,12 @@ public class AtomHandler extends FeedHandler {
 				return;
 			}
 			if ("published".equals(localName)) {
+				initDateStamp(getFeed());
 				getFeed().getDateStamp().setPublished(text);
 				return;
 			}
 			if ("updated".equals(localName)) {
+				initDateStamp(getFeed());
 				getFeed().getDateStamp().setUpdated(text);
 				return;
 			}
@@ -267,14 +281,17 @@ public class AtomHandler extends FeedHandler {
 
 		case IN_FEED_AUTHOR:
 			if ("name".equals(localName)) {
+				initAuthor(getFeed());
 				feed.getAuthor().setName(text);
 				return;
 			}
 			if ("email".equals(localName)) {
+				initAuthor(getFeed());
 				feed.getAuthor().setEmail(text);
 				return;
 			}
 			if ("author".equals(localName)) {
+				initAuthor(getFeed());
 				state = IN_FEED;
 				return;
 			}
@@ -302,10 +319,12 @@ public class AtomHandler extends FeedHandler {
 				return;
 			}
 			if ("published".equals(localName)) {
+				initDateStamp(currentEntry);
 				currentEntry.getDateStamp().setPublished(text);
 				return;
 			}
 			if ("updated".equals(localName)) {
+				initDateStamp(currentEntry);
 				currentEntry.getDateStamp().setUpdated(text);
 				return;
 			}
@@ -335,14 +354,16 @@ public class AtomHandler extends FeedHandler {
 
 			// pull out links in content
 			if("a".equals(localName)){
+				
+				
 			for (int i = 0; i < attributes.getLength(); i++) {
 				String name = attributes.getLocalName(i);
 				if ("href".equals(name)) {
 					Link link = new LinkImpl();
 					link.setHref(attributes.getValue(i));
 					link.setRel("related");
-					text = HtmlCleaner.stripTags(text).trim();
-					link.setLabel(text);
+					String label = HtmlCleaner.stripTags(labelBuffer.toString()).trim();
+					link.setLabel(label);
 					currentEntry.addLink(link);
 				}
 			}
@@ -351,10 +372,12 @@ public class AtomHandler extends FeedHandler {
 
 		case IN_ENTRY_AUTHOR:
 			if ("name".equals(localName)) {
+				initAuthor(currentEntry);
 				currentEntry.getAuthor().setName(text);
 				return;
 			}
 			if ("email".equals(localName)) {
+				initAuthor(currentEntry);
 				currentEntry.getAuthor().setEmail(text);
 				return;
 			}
@@ -368,6 +391,8 @@ public class AtomHandler extends FeedHandler {
 			return;
 		}
 	}
+
+
 
 	public void endDocument() throws SAXException {
 		// System.out.println("AtomHandler FEED = \n" + feed);

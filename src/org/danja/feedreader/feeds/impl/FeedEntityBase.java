@@ -28,9 +28,17 @@ import org.danja.feedreader.feeds.Templatable;
  */
 public abstract class FeedEntityBase implements FeedEntity, Templatable {
 
-    private String url = "";
+    private String url = null;
     
-    private String id = "";
+    private String id = null;
+    
+	private String content = null;
+
+    private String title = null;
+
+    private DateStamp datestamp = null;
+    
+    private Person author = null;
     
     private Set<Link> links = new HashSet<Link>();
 
@@ -48,13 +56,7 @@ public abstract class FeedEntityBase implements FeedEntity, Templatable {
 		this.id = id;
 	}
 
-	private String content = "";
 
-    private String title = "";
-
-    private DateStamp date = new DateStampImpl();;
-    
-    private Person author= new PersonImpl();
 
     /**
 	 * @return the author
@@ -106,12 +108,12 @@ public abstract class FeedEntityBase implements FeedEntity, Templatable {
     }
 
     public void setDateStamp(DateStamp date) {
-        this.date = date;
+        this.datestamp = date;
 
     }
 
     public DateStamp getDateStamp() {
-        return date;
+        return datestamp;
     }
     
 	/* (non-Javadoc)

@@ -61,10 +61,10 @@ public class FeedListImpl implements FeedList {
     }
 
     public void addFeeds(FeedList feeds) {
-        feedQueue.addAll(feeds.getFeedCollection());
+        feedQueue.addAll(feeds.getList());
     }
 
-    public List<Feed> getFeedCollection() {
+    public List<Feed> getList() {
         return feedQueue;
     }
 

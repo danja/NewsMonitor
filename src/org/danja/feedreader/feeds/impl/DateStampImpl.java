@@ -27,9 +27,9 @@ public class DateStampImpl implements DateStamp, Templatable {
 		fallback = DateConverters.dateAsISO8601(fallbackDate);
 	}
 	
-	private String published = "";
-	private String updated = "";
-	private String seen = "";
+	private String published = null;
+	private String updated = null;
+	private String seen = null;
 
 	/*
 	 * (non-Javadoc)

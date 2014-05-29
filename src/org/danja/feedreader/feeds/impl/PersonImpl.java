@@ -19,9 +19,9 @@ import org.danja.feedreader.feeds.Templatable;
  */
 public class PersonImpl implements Person, Templatable {
 
-	private String name;
-	private String email;
-	private String homepage;
+	private String name = null;
+	private String email = null;
+	private String homepage = null;
 
 	/*
 	 * (non-Javadoc)

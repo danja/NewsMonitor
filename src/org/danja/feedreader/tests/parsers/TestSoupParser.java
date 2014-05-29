@@ -13,6 +13,7 @@ import org.danja.feedreader.feeds.impl.FeedImpl;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;
+import org.danja.feedreader.templating.Templater;
 import org.danja.feedreader.tests.utils.HttpServer;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -45,6 +46,8 @@ public class TestSoupParser {
 		interpreter = InterpreterFactory.createInterpreter(feed);
 		feed.setInterpreter(interpreter);
 		feed.refresh();
+		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
+		System.out.println("# Feed Turtle\n"+feedTurtle);
 	}
 
 	@Test

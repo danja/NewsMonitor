@@ -11,6 +11,7 @@
 package org.danja.feedreader.feeds;
 
 import java.io.InputStream;
+import java.util.Map;
 
 import org.danja.feedreader.interpreters.Interpreter;
 
@@ -70,4 +71,6 @@ public interface Feed extends FeedEntity {
   //  public String toTurtle();
 	public EntryList getEntries();
 	public void setFirstCall(boolean firstCall);
+
+	public Map<String, Object> getTemplateDataMap();
 }

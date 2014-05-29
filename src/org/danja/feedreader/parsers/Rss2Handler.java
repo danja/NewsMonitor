@@ -88,6 +88,7 @@ public class Rss2Handler extends FeedHandler {
 	 */
 	public void setFeed(Feed feed) {
 		this.feed = feed;
+		initDateStamp(this.feed);
 		String date = DateConverters.dateAsISO8601(new Date());
 		feed.getDateStamp().setSeen(date);
 	}
@@ -175,10 +176,12 @@ public class Rss2Handler extends FeedHandler {
 				return;
 			}
 			if ("webMaster".equals(localName)) {
+				initAuthor(getFeed());
 				getFeed().getAuthor().setEmail(text);
 				return;
 			}
 			if ("pubDate".equals(localName)) {
+				initDateStamp(getFeed());
 				getFeed().getDateStamp().setPublished(text);
 				return;
 			}
@@ -218,15 +221,18 @@ public class Rss2Handler extends FeedHandler {
 				return;
 			}
 			if ("author".equals(localName)) {
+				initAuthor(currentEntry);
 				currentEntry.getAuthor().setEmail(text);
 				return;
 			}
 			if ("creator".equals(localName)) { // dc:creator, escaped - used by WordPress
 				text = HtmlCleaner.unescape(text);
+				initAuthor(currentEntry);
 				currentEntry.getAuthor().setName(text);
 				return;
 			}
 			if ("pubDate".equals(localName)) {
+				initDateStamp(currentEntry);
 				currentEntry.getDateStamp().setPublished(text);
 				return;
 			}

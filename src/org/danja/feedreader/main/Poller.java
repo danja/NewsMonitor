@@ -22,7 +22,9 @@ import org.danja.feedreader.feeds.impl.FeedListImpl;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.io.HttpConnector;
+import org.danja.feedreader.io.HttpMessage;
 import org.danja.feedreader.parsers.FormatSniffer;
+import org.danja.feedreader.sparql.SparqlTemplater;
 
 public class Poller implements Runnable {
 
@@ -119,46 +121,23 @@ public class Poller implements Runnable {
 			feedList.setFirstCall(false);
 
 			feedList.refreshAll();
-			
-
-
-			// System.out.println("*** STATUS ***");
-			// displayStatus(feedList);
-
-			// local display of recent entries
-		//	entries = feedList.getEntries();
-
-			
-		//	System.out.println("entries.size() = " + entries.size());
-
-			// TODO sort entries
-		//	entries.trimList(Config.getMaxItems());
-
-			/*
-			FileEntrySerializer serializer = new FileEntrySerializer();
-			serializer.loadDocumentShell("input/shell.xml"); // TODO move to
-																// Config
-
-			serializer.clearEntries();
-			System.out.println("entries.size() = " + entries.size());
-			for (int i = 0; i < entries.size(); i++) {
-				serializer.addEntry(entries.getEntry(i));
-			}
-			System.out.println("Writing RSS 2.0...");
-			serializer.write("output/rss.xml");
-			System.out.println("Writing HTML...");
-			serializer
-					.transformWrite("output/index.html", "xslt/rss2html.xslt");
-			System.out.println("Writing RSS 1.0...");
-			serializer
-					.transformWrite("output/feed.rdf", "xslt/feed-rss1.0.xsl");
-					*/
+			displayFeeds();
+			pushFeeds();
 		}
 		System.out.println("Poller stopped.");
 	}
 
+	private void pushFeeds() {
+		List<Feed> feeds = feedList.getList();
+		for(int i=0;i<feeds.size();i++){
+			System.out.println("Uploading : "+feeds.get(i).getUrl());
+			HttpMessage message = SparqlTemplater.uploadFeed(feeds.get(i));
+			System.out.println("response = "+message);
+		}
+	}
+
 	public void displayFeeds() {
-		Iterator<Feed> feedIterator = feedList.getFeedCollection().iterator();
+		Iterator<Feed> feedIterator = feedList.getList().iterator();
 		while (feedIterator.hasNext()) {
 	//		System.out.println(feedIterator.next().toTurtle());
 		}

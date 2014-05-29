@@ -28,7 +28,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Main main = new Main();
-		Templater.loadTemplates();
+		Templater.init();
 		// Config.load();
 
 		// load seed list from file into store
@@ -77,7 +77,7 @@ public class Main {
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
 		// System.out.println("Query = \n" + sparql);
 		int responseCode = SparqlConnector.update(
-				"http://localhost:3030/feedreader/update", sparql);
+				"http://localhost:3030/feedreader/update", sparql).getStatusCode();
 		// System.out.println(responseCode);
 	}
 

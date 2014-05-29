@@ -56,7 +56,7 @@ public class TestAtomParser {
 		// System.out.println(entries.getEntry(0).toTurtle());
 		// System.out.println(feed.toTurtle());
 		Templater.init();
-		String feedTurtle = Templater.apply("entry-turtle-no-prefixes", feed.getTemplateDataMap());
+		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
 		System.out.println("# Feed Turtle\n"+feedTurtle);
 	}
 
@@ -82,10 +82,12 @@ public class TestAtomParser {
 		Entry entry0 = feed.getEntries().getEntry(0);
 		assertEquals("checking entry title", "Entry 1", entry0.getTitle());
 		String normalSpaces = entry0.getContent().replaceAll("\\s+", " ");
-		assertEquals("checking entry content", "<div> <p>Entry 1 content</p> </div>", normalSpaces);
+		assertEquals("checking entry 1 content", "<div> <p>Entry 1 content</p> </div>", normalSpaces);
 		
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Entry entry1 = feed.getEntries().getEntry(1);
+		String normalSpaces1 = entry1.getContent().replaceAll("\\s+", " ");
+		assertEquals("checking entry 2 content", "<div> <p>Entry 2 content <a href=\"http://example.com\">with a link</a></p> </div>", normalSpaces1);
 		Set<Link> links = entry1.getLinks();
 		boolean found = false;
 		Iterator<Link> i = links.iterator();

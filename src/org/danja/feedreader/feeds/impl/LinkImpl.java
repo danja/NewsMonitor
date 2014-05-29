@@ -19,9 +19,9 @@ import org.danja.feedreader.feeds.Templatable;
  */
 public class LinkImpl implements Link, Templatable {
 
-	private String type;
-	private String rel;
-	private String label;
+	private String type = null;
+	private String rel = null;
+	private String label = null;
 	
 	private String href;
 	/* (non-Javadoc)

@@ -97,7 +97,7 @@ public class SparqlConnector {
 	 * @param sparql
 	 * @return
 	 */
-	public static int update(String updateEndpoint, String sparql) {
+	public static HttpMessage update(String updateEndpoint, String sparql) {
 
 		int statusCode = -1;
 
@@ -111,13 +111,15 @@ public class SparqlConnector {
 			e.printStackTrace();
 		}
 		CloseableHttpResponse response = null;
+		String statusMessage = "";
 		try {
 			response = httpclient.execute(httpPost);
 			statusCode = response.getStatusLine().getStatusCode();
+			statusMessage = response.getStatusLine().getReasonPhrase();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		return statusCode;
+		HttpMessage message = new HttpMessage(statusCode, statusMessage);
+		return message;
 	}
 }
