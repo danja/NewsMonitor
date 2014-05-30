@@ -33,6 +33,9 @@ public class Config {
      */
     public static final  int MAX_LIVES = 3;
 
+ // buggy-list.txt rdf-bloggers-feedlist.txt;
+	public static final String SEED_FEEDLIST = "input/short-list.txt";
+
 	
 
 	/**

@@ -10,6 +10,7 @@
 
 package org.danja.feedreader.feeds;
 
+import java.util.Map;
 import java.util.Set;
 
 /**

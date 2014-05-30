@@ -71,13 +71,12 @@ public class Main {
 		FeedListLoader loader = new FeedListLoader();
 		LineHandler handler = loader.new LineHandler();
 		// TODO move to config
-		String turtleBody = loader.readFile("input/short-list.txt", // buggy-list.txt rdf-bloggers-feedlist.txt
-				handler);
+		String turtleBody = loader.readFile(Config.SEED_FEEDLIST, handler);
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
 		// System.out.println("Query = \n" + sparql);
 		int responseCode = SparqlConnector.update(
-				"http://localhost:3030/feedreader/update", sparql).getStatusCode();
+				Config.UPDATE_ENDPOINT, sparql).getStatusCode();
 		// System.out.println(responseCode);
 	}
 

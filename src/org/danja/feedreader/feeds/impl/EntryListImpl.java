@@ -66,20 +66,20 @@ public class EntryListImpl implements EntryList {
         }
     }
 
-	@Override
-	public String toTurtle() {
-		if(entries.size() == 0) {
-			return "# No entries.";
-		}
-		StringBuffer bodyBuffer = new StringBuffer();
-		for(int i=0;i<entries.size();i++){
-			bodyBuffer.append(entries.get(i).toString()+"\n\n");
-		}
-		Map<String, Object> data = new HashMap<String, Object>();
-		data.put("body", bodyBuffer.toString());
-		System.out.println(Templater.dataMapToString(data));
-		return Templater.apply("turtle-prefixes", data);
-	}
+//	@Override
+//	public String toTurtle() {
+//		if(entries.size() == 0) {
+//			return "# No entries.";
+//		}
+//		StringBuffer bodyBuffer = new StringBuffer();
+//		for(int i=0;i<entries.size();i++){
+//			bodyBuffer.append(entries.get(i).toString()+"\n\n");
+//		}
+//		Map<String, Object> data = new HashMap<String, Object>();
+//		data.put("body", bodyBuffer.toString());
+//		System.out.println(Templater.dataMapToString(data));
+//		return Templater.apply("turtle-prefixes", data);
+//	}
 	
     public String toString() {
 		StringBuffer bodyBuffer = new StringBuffer();
@@ -97,5 +97,14 @@ public class EntryListImpl implements EntryList {
 	@Override
 	public List<Entry> getEntries() {
 		return entries;
+	}
+
+	@Override
+	public List<Map<String, Object>> getTemplateList() {
+		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		for(int i=0;i<entries.size();i++){
+			list.add(entries.get(i).getTemplateDataMap());
+		}
+		return list;
 	}
 }

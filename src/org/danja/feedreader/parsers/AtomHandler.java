@@ -42,8 +42,11 @@ import org.xml.sax.helpers.DefaultHandler;
  * <p>
  * Titles have any HTML tags removed, and HTML content has a little
  * cleaning/normalization, and links are pulled out of there too.
- * 
- * TODO class attribute is getting through in content
+ * <p>
+ * Currently uses entry HTML URL as URI, not precise but pragmatic - maybe TODO split url/htmlURL
+ * <p>
+ * TODO class attribute is getting through in content ? fixed?
+ * TODO support subtitle, summary
  * 
  * @see XMLReaderParser
  * @see Feed
@@ -225,14 +228,8 @@ public class AtomHandler extends FeedHandler {
 			}
 			if ("id".equals(localName)) {
 				getFeed().setId(text);
-				if ("".equals(getFeed().getUrl()) && text.startsWith("http://")) { // id
-																					// might
-																					// be
-																					// url,
-																					// but
-																					// favour
-																					// alternate
-																					// link
+				// id might be url, but favour alternate link
+				if (getFeed().getUrl() == null && text.startsWith("http://")) { 
 					getFeed().setUrl(text);
 				}
 				return;
@@ -312,10 +309,8 @@ public class AtomHandler extends FeedHandler {
 			}
 			if ("id".equals(localName)) {
 				currentEntry.setId(text);
-				if (currentEntry.getUrl() == null
-						|| "".equals(currentEntry.getUrl())
-						&& text.startsWith("http://")) {// id might be url, but
-														// favour alternate link
+				// id might be url, but favour alternate link
+				if (currentEntry.getUrl() == null && text.startsWith("http://")) {							
 					currentEntry.setUrl(text);
 				}
 				return;
@@ -364,6 +359,7 @@ public class AtomHandler extends FeedHandler {
 				// ok
 				if (currentEntry.getUrl() == null && rel == null
 						&& type == null) {
+				//	System.out.println("SETTING URL TO "+href);
 					currentEntry.setUrl(href);
 				}
 
@@ -440,7 +436,7 @@ public class AtomHandler extends FeedHandler {
 			Iterator<Link> iterator2 = currentEntry.getLinks().iterator();
 			while (iterator2.hasNext()) {
 				Link link = iterator2.next();
-				System.out.println("LINK="+link);
+			//	System.out.println("LINK="+link);
 				link.setHref(HtmlCleaner.resolveUrl(feed.getUrl(),
 						link.getHref()));
 			}

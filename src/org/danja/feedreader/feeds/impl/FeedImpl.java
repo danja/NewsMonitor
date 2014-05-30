@@ -218,7 +218,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		Map<String, Object> map = super.getTemplateDataMap();
 		map.put("htmlUrl", this.htmlUrl);
 		map.put("dead", isDead());
-		map.put("entries", this.entryList.getEntries());
+		map.put("entries", this.entryList.getTemplateList());
 		map.put("entryCount", this.entryList.getEntries().size());
 		return map;
 	}

@@ -9,6 +9,7 @@
  */
 package org.danja.feedreader.feeds;
 
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -52,6 +53,8 @@ public interface FeedEntity {
     public void setAuthor(Person author);
     
     public Person getAuthor();
+    
+	public Map<String, Object> getTemplateDataMap();
     
     /**
      * Gets an RDF/Turtle representation of the FeedEntity (sans prefixes)

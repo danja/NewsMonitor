@@ -47,60 +47,6 @@ public class EntryImpl extends FeedEntityBase implements Entry {
         return "<div class=\"entry\">" + super.toHTML() + "<p>" + getContent()
                 + "</p>" + "</div>";
     }
-    
-    /* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.Entry#setSourceTitle(java.lang.String)
-     */
-//    public void setSourceTitle(String sourceTitle) {
-//        this.sourceTitle = sourceTitle;
-//    }
-
-    /* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.Entry#getSourceTitle()
-     */
-//    public String getSourceTitle() {
-//        return sourceTitle;
-//    }
-
-    /* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.Entry#setSourceLink(java.lang.String)
-     */
-//    public void setSourceLink(String sourceLink) {
-//        this.sourceLink = sourceLink;
-//    }
-
-    /* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.Entry#getSourceLink()
-     */
-//    public String getSourceLink() {
-//        return sourceLink;
-//    }
-
-    /* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.Entry#setAuthor(java.lang.String)
-     */
-//    public void setAuthor(String author) {
-//      this.author = author;
-//    }
-
-	/**
-	 * TODO remove
-	 * is a big clunky, converting String to stream
-	 * 
-	 * @param content
-	 * @return
-	 */
-	public String cleanContent(String content) {
-		InputStream inputStream = new ByteArrayInputStream(content.getBytes());
-		Writer stringWriter = new StringWriter();
-	//	tidy.clean(inputStream, stringWriter);
-		try {
-			inputStream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return "CONTENT="+stringWriter.toString();
-	}
 	
 	/* (non-Javadoc)
      * @see java.lang.Object#toString()
@@ -108,24 +54,4 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 	public String toString() {
 		  return "* Entry *\n" + super.toString() + "content = "+getContent()+"\n";
 	}
-	
-//	@Override
-//	public String toTurtle() {
-//		Map<String, Object> data = new HashMap<String, Object>();
-//		data.put("body", toTurtleNoPrefixes());
-//		return Templater.apply("turtle-prefixes", data);
-//	}
-//
-//	@Override
-//	public String toTurtleNoPrefixes() {
-//		Map<String, Object> data = getTemplateDataMap();
-//		System.out.println("--ENTRY--");
-//		Iterator<String> i = data.keySet().iterator();
-//		while(i.hasNext()){
-//			System.out.println(i.next()+" = "+data.get(i));
-//		}
-//		
-//		data.put("type", "schema:article");
-//		return Templater.apply("entry-turtle-no-prefixes", data);
-//	}
 }

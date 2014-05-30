@@ -2,7 +2,7 @@
 <${url}> a nm:feed ;
          dcterms:source "${url}" ;
          <#if id??>dcterms:identifier "${id}" ;</#if>
-         <#if title??>dcterms:title "${title}" ;</#if>
+         <#if title??>dcterms:title """${title}""" ;</#if>
          <#if content??>schema:description """${content}""" ;</#if> 
          <#if author??>
          	dcterms:creator
@@ -29,6 +29,7 @@
 # Entry ------------------------
 <${entry.url}> a schema:article ;
          dcterms:source "${url}" ;
+         <#if entry.htmlUrl??>nm:htmlUrl "${entry.htmlUrl}" ;</#if>
          <#if entry.id??>nm:id "${entry.id}" ;</#if>
          <#if entry.title??>dcterms:title "${entry.title}" ;</#if>
          <#if entry.content??>schema:articleBody """${entry.content}""" ;</#if> 

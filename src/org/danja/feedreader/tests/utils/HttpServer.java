@@ -106,7 +106,7 @@ public class HttpServer {
 //        if (args.length >= 2) {
 //            port = Integer.parseInt(args[1]);
 //        }
-        HttpServer server = new HttpServer("data", 8080);
+        HttpServer server = new HttpServer("www", 8080);
         server.init();
         server.start();
     }

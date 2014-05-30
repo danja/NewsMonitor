@@ -11,6 +11,7 @@
 package org.danja.feedreader.feeds;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -52,9 +53,11 @@ public interface EntryList {
      * 
      * @return the Turtle
      */
-    public String toTurtle();
+  //  public String toTurtle();
 
 	public void addAll(EntryList entries);
 
 	public List<Entry> getEntries();
+
+	public List<Map<String, Object>> getTemplateList();
 }

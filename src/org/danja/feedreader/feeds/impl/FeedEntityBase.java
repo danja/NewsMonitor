@@ -20,6 +20,7 @@ import org.danja.feedreader.feeds.FeedEntity;
 import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
 import org.danja.feedreader.feeds.Templatable;
+import org.danja.feedreader.parsers.HtmlCleaner;
 
 /**
  * Characteristics common to components of a feed
@@ -143,18 +144,18 @@ public abstract class FeedEntityBase implements FeedEntity, Templatable {
     public Map<String, Object> getTemplateDataMap(){
     	Map<String, Object> data = new HashMap<String, Object>();
     	data.put("author", getAuthor());
-    	data.put("content", getContent());
+    	data.put("content", HtmlCleaner.escapeQuotes(getContent()));
     	data.put("datestamp", getDateStamp());
     	data.put("id", getId());
     	data.put("links", getLinks());
 		data.put("url", getUrl());
-		data.put("title", getTitle());
+		data.put("title", HtmlCleaner.escapeQuotes(getTitle()));
 		return data;
     }
 
     public String toString() {
         StringBuffer buffer = new StringBuffer();
-        buffer.append("Entity : "+getClass().getSimpleName()+"\n");
+        // buffer.append("Entity : "+getClass().getSimpleName()+"\n");
       
         buffer.append("url = "+getUrl()+"\n");
         buffer.append("id = "+getId()+"\n");

@@ -12,6 +12,7 @@
 	<author>
        <name>John Doe</name>
        <email>johndoe@example.com</email>
+       <uri>/john</uri>
     </author>
  
 	<entry>
@@ -34,7 +35,7 @@
 	</entry>
 	<entry>
 		<title>Entry 2</title>
-		<link rel="alternate" type="text/html" href="http://example.org/entry2.html"/>
+		<link href="/entry2.html"/>
 		<link rel="edit" href="http://example.org/entry2/edit"/>
 		<id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6b</id>
 		<updated>2014-05-08T18:30:02Z</updated>

@@ -103,4 +103,11 @@ public class HtmlCleaner {
 		}
 		return uri.resolve(href).toString();
 	}
+
+	public static String escapeQuotes(String content) {
+		if(content == null || "".equals(content)) {
+			return "";
+		}
+		return content.replaceAll("\"", "X\\\\\"");
+	}
 }
