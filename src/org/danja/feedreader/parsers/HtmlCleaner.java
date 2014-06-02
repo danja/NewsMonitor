@@ -92,6 +92,9 @@ public class HtmlCleaner {
 	}
 
 	public static String resolveUrl(String url, String href) {
+		if(href == null || url == null) {
+			return null;
+		}
 		if(href.startsWith("http://") || href.startsWith("https://")) {
 			return href;
 		}

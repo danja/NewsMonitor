@@ -20,6 +20,10 @@ import java.util.Set;
 public interface FeedEntity {
 
     public void setUrl(String url);
+    
+	public void setHtmlUrl(String url);
+	
+	public String getHtmlUrl();
 
     /**
      * @param content set the Entry content, typically HTML

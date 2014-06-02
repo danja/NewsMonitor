@@ -1,7 +1,8 @@
 # Feed --------------------
-<${url}> a nm:feed ;
-         dcterms:source "${url}" ;
+<${feedUrl}> a rss:channel ;
+         dcterms:source <${feedUrl}> ;
          <#if id??>dcterms:identifier "${id}" ;</#if>
+         <#if htmlUrl??>nm:htmlUrl <${htmlUrl}> ;</#if>
          <#if title??>dcterms:title """${title}""" ;</#if>
          <#if content??>schema:description """${content}""" ;</#if> 
          <#if author??>
@@ -16,20 +17,28 @@
          	<#if datestamp.seen??>nm:seen "${datestamp.seen}" ;</#if>
          	<#if datestamp.published??>dcterms:published "${datestamp.published}" ;</#if>
          	<#if datestamp.updated??>dcterms:updated "${datestamp.updated}" ;</#if>
-         </#if>
-         <#if htmlUrl??>nm:htmlUrl <${htmlUrl}> ;</#if> 
+         </#if> 
          <#if dead??>nm:dead "${dead?c}" ;</#if> 
          .
          <#list links as link>
-         	<#if link.href??><${url}> dcterms:references <${link.href}> .</#if>
+         	<#if link.href??><${feedUrl}> dcterms:references <${link.href}> .</#if>
          	<#if link.label??><${link.href}> schema:description """${link.label}""" .</#if>
+         	<#if link.href??>
+         	   <${url}> nm:hasLink [
+         	   		a nm:Link ;
+         	   		nm:href <${link.href}> ;
+         	   		<#if link.label??>nm:label """${link.label}""" ;</#if>
+         	   		<#if link.rel??>nm:rel """${link.rel}""" ;</#if>
+         	   		<#if link.type??>nm:type """${link.type}""" ;</#if>
+         	   ] .
+         	</#if>
          </#list>        
     
 <#list entries as entry>
 # Entry ------------------------
 <${entry.url}> a schema:article ;
-         dcterms:source "${url}" ;
-         <#if entry.htmlUrl??>nm:htmlUrl "${entry.htmlUrl}" ;</#if>
+         dcterms:source <${feedUrl}> ;
+         <#if entry.htmlUrl??>nm:htmlUrl <${entry.htmlUrl}> ;</#if>
          <#if entry.id??>nm:id "${entry.id}" ;</#if>
          <#if entry.title??>dcterms:title "${entry.title}" ;</#if>
          <#if entry.content??>schema:articleBody """${entry.content}""" ;</#if> 
@@ -50,6 +59,15 @@
          <#list entry.links as link>
 <#if link.href??><${url}> dcterms:references <${link.href}> .</#if>
 <#if link.label??><${link.href}> schema:description """${link.label}""" .</#if>
+         	<#if link.href??>
+         	   <${entry.url}> nm:hasLink [
+         	   		a nm:Link ;
+         	   		nm:href <${link.href}> ;
+         	   		<#if link.label??>nm:label """${link.label}""" ;</#if>
+         	   		<#if link.rel??>nm:rel """${link.rel}""" ;</#if>
+         	   		<#if link.type??>nm:type """${link.type}""" ;</#if>
+         	   ] .
+         	</#if>
          </#list>   
 </#list>
 <#if entryCount == 0> .</#if>

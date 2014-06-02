@@ -39,14 +39,6 @@ public class EntryImpl extends FeedEntityBase implements Entry {
     public EntryImpl() {
     //	tidy.init();
 	}
-
-    /* (non-Javadoc)
-     * @see org.danja.feedreader.feeds.FeedEntityBase#toHTML()
-     */
-    public String toHTML() {
-        return "<div class=\"entry\">" + super.toHTML() + "<p>" + getContent()
-                + "</p>" + "</div>";
-    }
 	
 	/* (non-Javadoc)
      * @see java.lang.Object#toString()

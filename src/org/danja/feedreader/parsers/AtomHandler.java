@@ -87,7 +87,7 @@ public class AtomHandler extends FeedHandler {
 
 	// private EntryList entries = new EntryListImpl();
 	private static final String[] textElementsArray = { "id", "title",
-			"updated", "name", "email", "content" };
+			"updated", "name", "uri", "email", "content" };
 	private static final Set<String> textElements = new HashSet<String>();
 	static {
 		Collections.addAll(textElements, textElementsArray);
@@ -228,10 +228,6 @@ public class AtomHandler extends FeedHandler {
 			}
 			if ("id".equals(localName)) {
 				getFeed().setId(text);
-				// id might be url, but favour alternate link
-				if (getFeed().getUrl() == null && text.startsWith("http://")) { 
-					getFeed().setUrl(text);
-				}
 				return;
 			}
 			if ("title".equals(localName)) {
@@ -290,6 +286,12 @@ public class AtomHandler extends FeedHandler {
 			if ("email".equals(localName)) {
 				initAuthor(getFeed());
 				feed.getAuthor().setEmail(text);
+				return;
+			}
+			if ("uri".equals(localName)) {
+				initAuthor(getFeed());
+				System.out.println("URI = "+text);
+				feed.getAuthor().setHomepage(text);
 				return;
 			}
 			if ("author".equals(localName)) {
@@ -408,6 +410,11 @@ public class AtomHandler extends FeedHandler {
 				currentEntry.getAuthor().setEmail(text);
 				return;
 			}
+			if ("uri".equals(localName)) {
+				initAuthor(currentEntry);
+				currentEntry.getAuthor().setHomepage(text);
+				return;
+			}
 			if ("author".equals(localName)) {
 				state = IN_ENTRY;
 				return;
@@ -421,6 +428,32 @@ public class AtomHandler extends FeedHandler {
 
 	public void endDocument() throws SAXException {
 		resolveLinks();
+		doAuthor();
+	}
+
+
+	/**
+	 * Checks if each entry has an author, if not use the feed author (if one exists)
+	 * also makes feed author URL absolute
+	 */
+	private void doAuthor() {
+		List<Entry> entries = feed.getEntries().getEntries();
+		Person feedAuthor = feed.getAuthor();
+		if(feedAuthor == null){
+			return;
+		}
+		feedAuthor.setHomepage(HtmlCleaner.resolveUrl(feed.getUrl(),feedAuthor.getHomepage()));
+//		String name = feedAuthor.getName();
+//		String homepage = feedAuthor.getHomepage();
+//		String email = feedAuthor.getEmail();
+		
+		for(int i= 0;i<entries.size();i++){
+			if(entries.get(i).getAuthor() == null) {
+			//	System.out.println("AUTHor = "+feedAuthor);
+				entries.get(i).setAuthor(feedAuthor);
+			}
+		}
+		
 	}
 
 	private void resolveLinks() {

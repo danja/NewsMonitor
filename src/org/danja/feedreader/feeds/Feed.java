@@ -20,10 +20,6 @@ import org.danja.feedreader.interpreters.Interpreter;
  *  
  */
 public interface Feed extends FeedEntity {
-
-	public void setHtmlUrl(String url);
-	
-	public String getHtmlUrl();
 	
 	public void addEntry(Entry entry);
     /**

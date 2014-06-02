@@ -33,6 +33,8 @@ public abstract class FeedEntityBase implements FeedEntity, Templatable {
     
     private String id = null;
     
+	private String htmlUrl = null;
+    
 	private String content = null;
 
     private String title = null;
@@ -131,25 +133,27 @@ public abstract class FeedEntityBase implements FeedEntity, Templatable {
     public String getContent() {
         return content;
     }
+    
+	@Override
+	public void setHtmlUrl(String url) {
+		this.htmlUrl = url;
+	}
 
-    public String toHTML() {
-        StringBuffer html = new StringBuffer();
-        // html.append("<a href=\"" + getLink() + "\">");
-        html.append(getTitle());
-        html.append("</a>");
-            html.append("\n<p>" + getDateStamp() + "</p>\n");
-        return html.toString();
-    }
+	@Override
+	public String getHtmlUrl() {
+		return this.htmlUrl;
+	}
 
     public Map<String, Object> getTemplateDataMap(){
     	Map<String, Object> data = new HashMap<String, Object>();
-    	data.put("author", getAuthor());
-    	data.put("content", HtmlCleaner.escapeQuotes(getContent()));
-    	data.put("datestamp", getDateStamp());
-    	data.put("id", getId());
-    	data.put("links", getLinks());
+		data.put("url", getUrl());
+		data.put("id", getId());
 		data.put("url", getUrl());
 		data.put("title", HtmlCleaner.escapeQuotes(getTitle()));
+    	data.put("content", HtmlCleaner.escapeQuotes(getContent()));
+    	data.put("datestamp", getDateStamp());
+    	data.put("author", getAuthor());
+    	data.put("links", getLinks());
 		return data;
     }
 

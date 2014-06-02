@@ -19,7 +19,7 @@ GRAPH ?g {
       }
       OPTIONAL { ?entry dcterms:title ?title . }
       OPTIONAL { ?entry dcterms:updated ?updated . }
-      OPTIONAL { ?entry schema:articleBody ?content . }
+  #    OPTIONAL { ?entry schema:articleBody ?content . }
       OPTIONAL { ?entry dcterms:creator [foaf:name ?author] . }
       OPTIONAL { ?entry dcterms:creator [foaf:homepage ?authorHomepage] . }
    }

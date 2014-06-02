@@ -51,8 +51,6 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private boolean firstCall;
 
-	private String htmlUrl;
-
 	public FeedImpl() {
 	}
 
@@ -169,16 +167,6 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		return lastRefresh;
 	}
 
-//	@Override
-//	public String toTurtle() {
-//		Map<String, Object> data = getTemplateDataMap();
-//		data.put("type", "rss:channel");
-//
-//		System.out.println(Templater.dataMapToString(data));
-//		System.out.println("--FEED--");
-//		return Templater.apply("feed-turtle", data);
-//	}
-
 	public String toString() {
 		String string = "* Feed *\n" + getUrl() + "\nFormat = "
 				+ FeedConstants.formatName(getFormatHint()) + "\n"
@@ -204,19 +192,10 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	}
 
 	@Override
-	public void setHtmlUrl(String url) {
-		this.htmlUrl = url;
-	}
-
-	@Override
-	public String getHtmlUrl() {
-		return this.htmlUrl;
-	}
-	
-	@Override
 	public Map<String, Object> getTemplateDataMap() {
 		Map<String, Object> map = super.getTemplateDataMap();
-		map.put("htmlUrl", this.htmlUrl);
+		map.put("feedUrl", getUrl()); // less confusing in templates/sparql
+		map.put("htmlUrl", getHtmlUrl());
 		map.put("dead", isDead());
 		map.put("entries", this.entryList.getTemplateList());
 		map.put("entryCount", this.entryList.getEntries().size());
