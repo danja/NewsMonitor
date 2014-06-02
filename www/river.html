@@ -9,31 +9,14 @@
 	<!--  link rel="stylesheet" href="css/river.css" -->
 <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
 <script type="text/javascript" language="javascript">
-/*
-$(function() {
-	$( "#accordion" ).accordion({
-		heightStyle: "fill"
-	});
-});
-$(function() {
-	$( "#accordion-resizer" ).resizable({
-		minHeight: 140,
-		minWidth: 200,
-		resize: function() {
-			$( "#accordion" ).accordion( "refresh" );
-		}
-	});
-});
-*/
 
 	var url = "http://localhost:3030/feedreader/query?query=PREFIX+rss%3A+%3Chttp%3A%2F%2Fpurl.org%2Frss%2F1.0%2F%3E+%0D%0APREFIX+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+nm%3A+%3Chttp%3A%2F%2Fpurl.org%2Fstuff%2Fnewsmonitor%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3FfeedTitle+%3FfeedHtml+%3FfeedUrl+%3FfeedAuthor+%3Fentry+%3Ftitle+%3Fcontent+%3Fupdated+%3Fauthor+%3FauthorHomepage+%0D%0AWHERE+%7B+%0D%0A%0D%0AGRAPH+%3Fg+%7B%0D%0A+++%3Fentry+a+schema%3Aarticle+.%0D%0A++++++OPTIONAL+%7B+%0D%0A+++++++++%3FfeedUrl+dcterms%3Atitle+%3FfeedTitle+.+%0D%0A+++++++++%3Fentry+dcterms%3Asource+%3FfeedUrl+.%0D%0A++++++%7D%0D%0A++++++OPTIONAL+%7B+%0D%0A+++++++++%3Fsource+nm%3AhtmlUrl+%3FfeedHtml+.+%0D%0A+++++++++%3Fentry+dcterms%3Asource+%3FfeedUrl+.%0D%0A++++++%7D%0D%0A++++++OPTIONAL+%7B+%0D%0A+++++++++%3Fsource+dcterms%3Acreator+%5Bfoaf%3Aname+%3FfeedAuthor%5D+.+%0D%0A+++++++++%3Fentry+dcterms%3Asource+%3FfeedUrl+.%0D%0A++++++%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+dcterms%3Atitle+%3Ftitle+.+%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+dcterms%3Aupdated+%3Fupdated+.+%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+schema%3AarticleBody+%3Fcontent+.+%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+dcterms%3Acreator+%5Bfoaf%3Aname+%3Fauthor%5D+.+%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+dcterms%3Acreator+%5Bfoaf%3Ahomepage+%3FauthorHomepage%5D+.+%7D%0D%0A+++%7D%0D%0A%7D%0D%0AORDER+BY+DESC%28%3Fupdated%29&output=xml";
 
-	//$(document).ready(function() {
-		// doAccordian();	
 		$(function() {
   getEntries();
-doAccordion();
-$( "#accordion" ).accordion({collapsible:true});
+// doAccordion();
+// $( "#accordion" ).accordion({collapsible:true});
+// $("#accordion-resizer").width(800);
 	});
 	
 	
@@ -66,7 +49,7 @@ $( "#accordion" ).accordion({collapsible:true});
 					$(this).find("binding[name='content']").each(function() {
 						//   	$("#results").append($(this).text());
 						content = $(this).text();
-						content = "guff";
+						// content = "guff";
 					});
 					$(this).find("binding[name='updated']").each(function() {
 						//$("#results").append($(this).text());
@@ -87,6 +70,7 @@ $( "#accordion" ).accordion({collapsible:true});
 				});
 				//html += "</div></div>";
 				//$("#accordion").append(html);
+				doAccordion();
 			});
 	}
 	
@@ -94,14 +78,16 @@ $( "#accordion" ).accordion({collapsible:true});
 		$( "#accordion" ).accordion({
 			heightStyle: "fill"
 		});
-		$( "#accordion-resizer" ).resizable({
+		$("#accordion-resizer").resizable({
 			minHeight: 140,
 			minWidth: 200,
 			resize: function() {
 				$( "#accordion" ).accordion( "refresh" );
 			}
 	});
-		
+		$("#accordion").accordion({collapsible:true});
+		$("#accordion").accordion({active:false});
+		$("#accordion-resizer").width(800);
 	}
 	
 	function generateEntryHtml(entryUrl, source, title, content, updated, author, authorHomepage) {
