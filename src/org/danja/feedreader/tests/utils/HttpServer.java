@@ -282,7 +282,18 @@ public class HttpServer {
             } else {
 
                 response.setStatusCode(HttpStatus.SC_OK);
-                FileEntity body = new FileEntity(file, ContentType.create("text/html", (Charset) null));
+                String mime = "text/html";
+                if(target.endsWith(".css")){
+                	mime = "text/css";
+                }
+                if(target.endsWith(".js")){
+                	mime = "application/javascript";
+                }
+                if(target.endsWith(".png")){
+                	mime = "image/png";
+                }
+                
+                FileEntity body = new FileEntity(file, ContentType.create(mime, (Charset) null));
                 response.setEntity(body);
                 System.out.println("HttpServer : Serving file " + file.getPath());
             }
