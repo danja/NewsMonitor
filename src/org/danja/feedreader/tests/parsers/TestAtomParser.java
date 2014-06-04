@@ -14,7 +14,7 @@ import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.templating.Templater;
-import org.danja.feedreader.tests.utils.HttpServer;
+import org.danja.feedreader.utils.HttpServer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -23,8 +23,8 @@ import org.junit.Test;
 
 public class TestAtomParser {
 
-	private final String url = "http://localhost:8080/atom-sample.xml";
-	private final static String rootDir = "data";
+	private final String url = "http://localhost:8080/test-data/atom-sample.xml";
+	private final static String rootDir = "www";
 	private FeedImpl feed;
 	private Interpreter interpreter;
 	private static HttpServer server = new HttpServer(rootDir, 8080);
@@ -66,6 +66,7 @@ public class TestAtomParser {
 		assertEquals("checking feed id",
 				"urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6", feed.getId());
 		assertEquals("checking feed title", "Feed Title", feed.getTitle());
+		assertEquals("checking feed subtitle", "Feed subtitle", feed.getSubtitle());
 		assertEquals("checking HTML url", "http://example.org/",
 				feed.getHtmlUrl());
 		assertEquals("checking entry count", 2, feed.getEntries().size());
@@ -84,10 +85,12 @@ public class TestAtomParser {
 		assertEquals("checking entry title", "Entry 1", entry0.getTitle());
 		String normalSpaces = entry0.getContent().replaceAll("\\s+", " ");
 		assertEquals("checking entry 1 content", "<div> <p>Entry 1 content</p> </div>", normalSpaces);
+		assertEquals("checking entry 1 summary", "Entry 1 summary", entry0.getSummary());
 		
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Entry entry1 = feed.getEntries().getEntry(1);
 		assertEquals("checking entry2 URL", "http://localhost:8080/entry2.html", entry1.getUrl());
+		assertEquals("checking entry2 source date", "2014-05-08T18:30:02Z", entry1.getDateStamp().getSortDate());
 		String normalSpaces1 = entry1.getContent().replaceAll("\\s+", " ");
 		assertEquals("checking entry 2 content", "<div> <p>Entry 2 content <a href=\"http://example.com\">with a link</a></p> </div>", normalSpaces1);
 		Set<Link> links = entry1.getLinks();

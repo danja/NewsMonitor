@@ -27,7 +27,7 @@
  *
  */
 
-package org.danja.feedreader.tests.utils;
+package org.danja.feedreader.utils;
 
 import java.io.File;
 import java.io.IOException;

@@ -14,7 +14,7 @@ import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.templating.Templater;
-import org.danja.feedreader.tests.utils.HttpServer;
+import org.danja.feedreader.utils.HttpServer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -25,8 +25,8 @@ import org.junit.Test;
 
 public class TestSoupParser {
 
-	private final String url = "http://localhost:8080/rss2-sample.xml";
-	private final static String rootDir = "data";
+	private final String url = "http://localhost:8080/test-data/rss2-sample.xml";
+	private final static String rootDir = "www";
 	private FeedImpl feed;
 	private Interpreter interpreter;
 	private static HttpServer server = new HttpServer(rootDir, 8080);
@@ -83,11 +83,13 @@ public class TestSoupParser {
 		String published = entry0.getDateStamp().getPublished();
 		// System.out.println(published);
 		assertEquals("checking entry pubDate",
-				"Mon, 07 Sep 2009 16:20:00 +0000", published);
+				"2009-09-07T16:20Z", published); 
 		Entry entry1 = feed.getEntries().getEntry(1);
 		assertEquals("checking entry creator", "JohnDoe", entry1.getAuthor()
 				.getName());
-
+		assertEquals("checking entry2 source date", "2014-05-08T18:30:02Z", entry1.getDateStamp().getSortDate());
+		
+		
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Set<Link> links = entry1.getLinks();
 		boolean found = false;

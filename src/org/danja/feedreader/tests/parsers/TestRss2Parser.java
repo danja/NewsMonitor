@@ -14,7 +14,7 @@ import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.templating.Templater;
-import org.danja.feedreader.tests.utils.HttpServer;
+import org.danja.feedreader.utils.HttpServer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -23,8 +23,8 @@ import org.junit.Test;
 
 public class TestRss2Parser {
 
-	private final String url = "http://localhost:8080/rss2-sample.xml";
-	private final static String rootDir = "data";
+	private final String url = "http://localhost:8080/test-data/rss2-sample.xml";
+	private final static String rootDir = "www";
 	private FeedImpl feed;
 	private Interpreter interpreter;
 	private static HttpServer server = new HttpServer(rootDir, 8080);
@@ -45,21 +45,23 @@ public class TestRss2Parser {
 		feed.setInterpreter(interpreter);
 		feed.refresh();
 		Templater.init();
-		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
-		System.out.println("# Feed Turtle\n"+feedTurtle);
+		String feedTurtle = Templater.apply("feed-turtle-no-prefixes",
+				feed.getTemplateDataMap());
+		System.out.println("# Feed Turtle\n" + feedTurtle);
 	}
 
 	@Test
 	public void testFeedLevel() {
 		assertEquals("checking feed title", "Feed Title", feed.getTitle());
+		assertEquals("checking feed subtitle", "Feed subtitle", feed.getSubtitle());
 		assertEquals("checking feed url", url, feed.getUrl());
 		assertEquals("checking entry count", 2, feed.getEntries().size());
 		assertEquals("checking HTML url", "http://www.example.com/main.html",
 				feed.getHtmlUrl());
 		assertEquals("checking webMaster", "john@gmail.com", feed.getAuthor()
 				.getEmail());
-		assertEquals("checking pubDate", "Sun, 06 Sep 2009 16:20:00 +0000",
-				feed.getDateStamp().getPublished());
+		assertEquals("checking pubDate", "2009-09-06T16:20Z", feed
+				.getDateStamp().getPublished());
 		// TODO implement -note, canhave multiple links
 		// assertEquals("checking feed link", , feed.getLink());
 	}
@@ -70,7 +72,7 @@ public class TestRss2Parser {
 	@Test
 	public void testEntryLevel() {
 		Entry entry0 = feed.getEntries().getEntry(0);
-		
+
 		assertEquals("checking entry title", "Entry 1", entry0.getTitle());
 		assertEquals("checking entry author", "john@doe.com", entry0
 				.getAuthor().getEmail());
@@ -82,12 +84,14 @@ public class TestRss2Parser {
 				entry0.getUrl());
 		String published = entry0.getDateStamp().getPublished();
 		// System.out.println(published);
-		assertEquals("checking entry pubDate",
-				"Mon, 07 Sep 2009 16:20:00 +0000", published);
+		assertEquals("checking entry pubDate", "2009-09-07T16:20Z", published);
 		Entry entry1 = feed.getEntries().getEntry(1);
-		assertEquals("checking entry2 URL", "http://example.org/entry2", entry1.getUrl());
+		assertEquals("checking entry2 URL", "http://example.org/entry2",
+				entry1.getUrl());
 		assertEquals("checking entry creator", "JohnDoe", entry1.getAuthor()
 				.getName());
+		assertEquals("checking entry2 sort date", "2009-09-08T16:20Z",
+				entry1.getDateStamp().getSortDate());
 
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Set<Link> links = entry1.getLinks();
@@ -99,7 +103,7 @@ public class TestRss2Parser {
 			if ("http://example.com".equals(link.getHref())
 					&& "with a link".equals(link.getLabel())) {
 				found = true;
-			//	System.out.println("TRUE: " + link);
+				// System.out.println("TRUE: " + link);
 			}
 		}
 		assertTrue("checking link in content", found);

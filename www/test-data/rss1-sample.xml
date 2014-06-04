@@ -24,7 +24,9 @@
 	<dc:date>2014-05-27T09:30:55Z</dc:date>
 	<dc:creator><![CDATA[Francis]]></dc:creator>
 	<dc:subject><![CDATA[Architecture]]></dc:subject>
-	<description><![CDATA[<p>Entry 1 content</p>]]></description>
+	<description><![CDATA[<p>Entry 1 summary</p>]]></description>
+	<content:encoded><![CDATA[<p>Entry 1 content</p>]]></content:encoded>
+	
 	</item>
 <item rdf:about="http://example.org/entry2">
 	<title>Entry 2</title>
@@ -32,6 +34,6 @@
 	<dc:date>2014-05-27T07:10:43Z</dc:date>
 	<dc:creator><![CDATA[Francis]]></dc:creator>
 	<dc:subject><![CDATA[Events]]></dc:subject>
-	<description><![CDATA[<p>Entry 2 content <a href="http://example.com">with a link</a></p>]]></description>
+	<content:encoded><![CDATA[<p>Entry 2 content <a href="http://example.com">with a link</a></p>]]></content:encoded>
 	</item>
 </rdf:RDF>

@@ -91,16 +91,19 @@
 	}
 	
 	function generateEntryHtml(entryUrl, source, title, content, updated, author, authorHomepage) {
-		var entry = "<h3 ><a href=\""+entryUrl+"\">" + title + "</a></h3>";
+		var entry = "<h3 >";
+		
+		if(author != null && authorHomepage == null) {
+			entry += "<div class=\"author\">" + author + "</div> : ";
+		}
+		if(author != null && authorHomepage != null) {
+			entry += "<div class=\"author\"><a href=\"" + authorHomepage+ "\">"+ author + "</a></div> :";
+		}
+		entry += "<a href=\""+entryUrl+"\">" + title + "</a></h3>";
 		entry += "<div>";
 		
 		entry += "<div class=\"content\">"+content+"</div>";
-		if(author != null && authorHomepage == null) {
-			entry += "<div class=\"author\">" + author + "</div>";
-		}
-		if(author != null && authorHomepage != null) {
-			entry += "<div class=\"author\"><a href=\"" + authorHomepage+ "\">"+ author + "</a></div>";
-		}
+
 		entry += "<div class=\"updated\">" + updated + "</div>";
 		
 		entry += "</div>"

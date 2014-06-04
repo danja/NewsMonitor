@@ -6,7 +6,7 @@
  * @date May 26, 2014
  *
  */
-package org.danja.feedreader.parsers;
+package org.danja.feedreader.utils;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -92,10 +92,10 @@ public class HtmlCleaner {
 	}
 
 	public static String resolveUrl(String url, String href) {
-		if(href == null || url == null) {
+		if(href == null || url == null) { // dud
 			return null;
 		}
-		if(href.startsWith("http://") || href.startsWith("https://")) {
+		if(href.startsWith("http://") || href.startsWith("https://")) { // already absolute
 			return href;
 		}
 		URI uri = null;
@@ -111,6 +111,6 @@ public class HtmlCleaner {
 		if(content == null || "".equals(content)) {
 			return "";
 		}
-		return content.replaceAll("\"", "X\\\\\"");
+		return content.replaceAll("\"", "\\\\\"");
 	}
 }

@@ -21,6 +21,16 @@ import org.danja.feedreader.interpreters.Interpreter;
  */
 public interface Feed extends FeedEntity {
 	
+	/**
+	 * @param subtitle
+	 */
+	public void setSubtitle(String subtitle);
+	
+	/**
+	 * @return
+	 */
+	public String getSubtitle();
+	
 	public void addEntry(Entry entry);
     /**
      * Values can be FeedConstants.RSS2 etc.

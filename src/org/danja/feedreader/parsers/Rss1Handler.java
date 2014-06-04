@@ -19,11 +19,12 @@ import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
-import org.danja.feedreader.feeds.impl.DateConverters;
 import org.danja.feedreader.feeds.impl.EntryImpl;
 import org.danja.feedreader.feeds.impl.EntryListImpl;
 import org.danja.feedreader.feeds.impl.LinkImpl;
 import org.danja.feedreader.feeds.impl.PersonImpl;
+import org.danja.feedreader.utils.DateConverters;
+import org.danja.feedreader.utils.HtmlCleaner;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -68,34 +69,13 @@ public class Rss1Handler extends FeedHandler {
 	private Entry currentEntry;
 
 	// private EntryList entries = new EntryListImpl();
-	private static final String[] textElementsArray = { "webMaster", "author", "creator", "date", "guid", "title",
-			"pubDate", "lastBuildDate", "link", "description" };
+	private static final String[] textElementsArray = { "webMaster", "author", "creator", "date", "title", "link", "description", "encoded" };
 	private static final Set<String> textElements = new HashSet<String>();
 	static {
 		Collections.addAll(textElements, textElementsArray);
 	}
 
 	private Attributes attributes;
-
-	private Feed feed;
-
-	/**
-	 * @return the feed
-	 */
-	public Feed getFeed() {
-		return feed;
-	}
-
-	/**
-	 * @param feed
-	 *            the feed to set
-	 */
-	public void setFeed(Feed feed) {
-		this.feed = feed;
-		initDateStamp(this.feed);
-		String date = DateConverters.dateAsISO8601(new Date());
-		feed.getDateStamp().setSeen(date);
-	}
 
 	public Rss1Handler() {
 		textBuffer = new StringBuffer();
@@ -202,8 +182,13 @@ public class Rss1Handler extends FeedHandler {
 				getFeed().setTitle(text);
 				return;
 			}
+			if ("description".equals(localName)) {
+				getFeed().setSubtitle(HtmlCleaner.stripTags(text));
+				return;
+			}
 			if ("date".equals(localName)) {
 				initDateStamp(getFeed());
+				getFeed().getDateStamp().setSortDate(text);
 				getFeed().getDateStamp().setUpdated(text);
 				return;
 			}
@@ -211,7 +196,6 @@ public class Rss1Handler extends FeedHandler {
 				Link link = new LinkImpl();
 				link.setHref(text);
 					getFeed().setHtmlUrl(link.getHref());
-				
 				return;
 			}
 
@@ -220,7 +204,7 @@ public class Rss1Handler extends FeedHandler {
 		case IN_ITEM:
 			if ("item".equals(localName)) {
 				state = IN_RDF;
-				feed.addEntry(currentEntry);
+				getFeed().addEntry(currentEntry);
 				// System.out.println("DONE ENTRY = "+currentEntry);
 				return;
 			}
@@ -229,8 +213,19 @@ public class Rss1Handler extends FeedHandler {
 				return;
 			}
 			if ("description".equals(localName)) {
-				String content = HtmlCleaner.unescape(text);
+				String summary = text;
+						// HtmlCleaner.unescape(text);
 				//content = HtmlCleaner.normalise(content);
+				currentEntry.setSummary(summary);
+				Set<Link> links = HtmlCleaner.extractLinks(summary);
+				currentEntry.addAllLinks(links);
+				return;
+			}
+			if ("encoded".equals(localName)) {
+				System.out.println("TEXT = "+text);
+				String content = HtmlCleaner.unescape(text);
+				System.out.println("CONTNT = "+content);
+				// content = HtmlCleaner.normalise(content);
 				currentEntry.setContent(content);
 				Set<Link> links = HtmlCleaner.extractLinks(content);
 				currentEntry.addAllLinks(links);
@@ -249,6 +244,7 @@ public class Rss1Handler extends FeedHandler {
 			}
 			if ("date".equals(localName)) {
 				initDateStamp(currentEntry);
+				currentEntry.getDateStamp().setSortDate(text);
 				currentEntry.getDateStamp().setUpdated(text);
 				return;
 			}
@@ -262,9 +258,4 @@ public class Rss1Handler extends FeedHandler {
 			return;
 		}
 	}
-
-	public void endDocument() throws SAXException {
-		System.out.println("AtomHandler FEED = \n" + feed);
-	}
-
 }

@@ -51,6 +51,8 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private boolean firstCall;
 
+	private String subtitle = null;
+
 	public FeedImpl() {
 	}
 
@@ -200,5 +202,15 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		map.put("entries", this.entryList.getTemplateList());
 		map.put("entryCount", this.entryList.getEntries().size());
 		return map;
+	}
+
+	@Override
+	public void setSubtitle(String subtitle) {
+		this.subtitle  = subtitle;
+	}
+
+	@Override
+	public String getSubtitle() {
+		return subtitle;
 	}
 }

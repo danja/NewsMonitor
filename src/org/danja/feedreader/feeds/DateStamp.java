@@ -40,5 +40,11 @@ public interface DateStamp {
 	
 	public String getSeen();
 	
+	public void setSortDate(String date);
+	
+	public String getSortDate();
+	
 	public void setSeen(String String);
+
+	public void setToFallback();
 }

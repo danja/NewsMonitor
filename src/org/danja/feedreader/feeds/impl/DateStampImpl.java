@@ -14,22 +14,23 @@ import java.util.Map;
 
 import org.danja.feedreader.feeds.DateStamp;
 import org.danja.feedreader.feeds.Templatable;
+import org.danja.feedreader.utils.DateConverters;
 
 /**
  *
  */
 public class DateStampImpl implements DateStamp, Templatable {
 
-	// is needed?
-	private static String fallback; // a week ago
+	public static String FALLBACK; // a week ago
 	static {
 		Date fallbackDate = new Date(System.currentTimeMillis() - 604800000); // a week ago
-		fallback = DateConverters.dateAsISO8601(fallbackDate);
+		FALLBACK = DateConverters.dateAsISO8601(fallbackDate);
 	}
 	
 	private String published = null;
 	private String updated = null;
 	private String seen = null;
+	private String sortDate = null;
 
 	/*
 	 * (non-Javadoc)
@@ -83,15 +84,31 @@ public class DateStampImpl implements DateStamp, Templatable {
 	}
 	
 	public String toString(){
-		return "{seen:"+seen+", published:"+published+", updated:"+updated+"}";
+		return "{seen:"+seen+", published:"+published+", updated:"+updated+", sortDate:"+sortDate+"}";
 	}
 	
 	@Override
 	public Map<String, Object> getTemplateDataMap() {
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("published", this.published);
+		map.put("sortDate", this.sortDate);
 		map.put("seen", this.seen);
+		map.put("published", this.published);
 		map.put("updated", this.updated);
 		return map;
+	}
+
+	@Override
+	public void setSortDate(String date) {
+		this.sortDate = date;
+	}
+
+	@Override
+	public String getSortDate() {
+		return sortDate;
+	}
+
+	@Override
+	public void setToFallback() {
+		this.sortDate = FALLBACK;
 	}
 }

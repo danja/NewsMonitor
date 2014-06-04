@@ -26,7 +26,9 @@ import org.danja.feedreader.templating.Templater;
  */
 public class EntryImpl extends FeedEntityBase implements Entry {
 
-    /**
+    private String summary = null;
+
+	/**
      * @param uriString URL of feed
      */
     public EntryImpl(String uriString) {
@@ -45,5 +47,15 @@ public class EntryImpl extends FeedEntityBase implements Entry {
      */
 	public String toString() {
 		  return "* Entry *\n" + super.toString() + "content = "+getContent()+"\n";
+	}
+
+	@Override
+	public void setSummary(String summary) {
+		this.summary  = summary;
+	}
+
+	@Override
+	public String getSummary() {
+		return summary;
 	}
 }

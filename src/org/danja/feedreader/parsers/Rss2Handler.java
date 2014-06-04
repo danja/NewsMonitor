@@ -19,11 +19,12 @@ import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
-import org.danja.feedreader.feeds.impl.DateConverters;
 import org.danja.feedreader.feeds.impl.EntryImpl;
 import org.danja.feedreader.feeds.impl.EntryListImpl;
 import org.danja.feedreader.feeds.impl.LinkImpl;
 import org.danja.feedreader.feeds.impl.PersonImpl;
+import org.danja.feedreader.utils.DateConverters;
+import org.danja.feedreader.utils.HtmlCleaner;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -72,26 +73,6 @@ public class Rss2Handler extends FeedHandler {
 	}
 
 	private Attributes attributes;
-
-	private Feed feed;
-
-	/**
-	 * @return the feed
-	 */
-	public Feed getFeed() {
-		return feed;
-	}
-
-	/**
-	 * @param feed
-	 *            the feed to set
-	 */
-	public void setFeed(Feed feed) {
-		this.feed = feed;
-		initDateStamp(this.feed);
-		String date = DateConverters.dateAsISO8601(new Date());
-		feed.getDateStamp().setSeen(date);
-	}
 
 	public Rss2Handler() {
 		textBuffer = new StringBuffer();
@@ -175,6 +156,10 @@ public class Rss2Handler extends FeedHandler {
 				getFeed().setTitle(text);
 				return;
 			}
+			if ("description".equals(localName)) {
+				getFeed().setSubtitle(text);
+				return;
+			}
 			if ("webMaster".equals(localName)) {
 				initAuthor(getFeed());
 				getFeed().getAuthor().setEmail(text);
@@ -182,7 +167,8 @@ public class Rss2Handler extends FeedHandler {
 			}
 			if ("pubDate".equals(localName)) {
 				initDateStamp(getFeed());
-				getFeed().getDateStamp().setPublished(text);
+				String iso = DateConverters.ISO8601FromRFC822(text);
+				getFeed().getDateStamp().setPublished(iso);
 				return;
 			}
 			if ("link".equals(localName)) {
@@ -197,7 +183,7 @@ public class Rss2Handler extends FeedHandler {
 			if ("item".equals(localName)) {
 				// System.out.println("out of Entry");
 				state = IN_CHANNEL;
-				feed.addEntry(currentEntry);
+				getFeed().addEntry(currentEntry);
 				// System.out.println("DONE ENTRY = "+currentEntry);
 				return;
 			}
@@ -233,7 +219,8 @@ public class Rss2Handler extends FeedHandler {
 			}
 			if ("pubDate".equals(localName)) {
 				initDateStamp(currentEntry);
-				currentEntry.getDateStamp().setPublished(text);
+				String iso = DateConverters.ISO8601FromRFC822(text);
+				currentEntry.getDateStamp().setPublished(iso);
 				return;
 			}
 			if ("link".equals(localName)) {
@@ -246,9 +233,4 @@ public class Rss2Handler extends FeedHandler {
 			return;
 		}
 	}
-
-	public void endDocument() throws SAXException {
-	//	System.out.println("FEED = \n" + feed);
-	}
-
 }

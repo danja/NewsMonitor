@@ -15,6 +15,7 @@
          </#if>
          <#if datestamp??>
          	<#if datestamp.seen??>nm:seen "${datestamp.seen}" ;</#if>
+         	<#if datestamp.sortDate??>dcterms:date "${datestamp.sortDate}" ;</#if>
          	<#if datestamp.published??>dcterms:published "${datestamp.published}" ;</#if>
          	<#if datestamp.updated??>dcterms:updated "${datestamp.updated}" ;</#if>
          </#if> 
@@ -52,14 +53,15 @@
          </#if>
          <#if entry.datestamp??>
      <#if entry.datestamp.seen??>nm:seen "${entry.datestamp.seen}" ;</#if>
+     <#if entry.datestamp.sortDate??>dcterms:date "${entry.datestamp.sortDate}" ;</#if>
      <#if entry.datestamp.published??>dcterms:published "${entry.datestamp.published}" ;</#if>
      <#if entry.datestamp.updated??>dcterms:updated "${entry.datestamp.updated}" ;</#if>
          </#if>
          .
          <#list entry.links as link>
-<#if link.href??><${url}> dcterms:references <${link.href}> .</#if>
-<#if link.label??><${link.href}> schema:description """${link.label}""" .</#if>
          	<#if link.href??>
+         	   <${url}> dcterms:references <${link.href}> .
+               <#if link.label??><${link.href}> schema:description """${link.label}""" .</#if>
          	   <${entry.url}> nm:hasLink [
          	   		a nm:Link ;
          	   		nm:href <${link.href}> ;

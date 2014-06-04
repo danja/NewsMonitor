@@ -20,7 +20,7 @@ import org.danja.feedreader.feeds.FeedEntity;
 import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
 import org.danja.feedreader.feeds.Templatable;
-import org.danja.feedreader.parsers.HtmlCleaner;
+import org.danja.feedreader.utils.HtmlCleaner;
 
 /**
  * Characteristics common to components of a feed

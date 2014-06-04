@@ -4,7 +4,7 @@ PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX schema:<http://schema.org/>
 PREFIX nm: <http://purl.org/stuff/newsmonitor/>
 
-SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?updated ?author ?authorHomepage 
+SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?date ?author ?authorHomepage 
 WHERE { 
 
 GRAPH ?g {
@@ -18,7 +18,7 @@ GRAPH ?g {
          ?entry dcterms:source ?feedUrl .
       }
       OPTIONAL { ?entry dcterms:title ?title . }
-      OPTIONAL { ?entry dcterms:updated ?updated . }
+      OPTIONAL { ?entry dcterms:date ?date . }
       OPTIONAL { ?entry schema:articleBody ?content . }
       OPTIONAL { ?entry dcterms:creator [foaf:name ?author] . }
       OPTIONAL { ?entry dcterms:creator [foaf:homepage ?authorHomepage] . }

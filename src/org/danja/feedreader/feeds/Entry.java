@@ -18,7 +18,15 @@ import java.util.Set;
  */
 public interface Entry extends FeedEntity {
 
-
+	/**
+	 * @param summary
+	 */
+	public void setSummary(String summary);
+	
+	/**
+	 * @return
+	 */
+	public String getSummary();
 
     /**
      * @param feedTitle set the title of the feed

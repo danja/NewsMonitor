@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.danja.feedreader.feeds.impl;
+package org.danja.feedreader.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -107,6 +107,9 @@ public final class DateConverters {
     	return parse(text).getTime();
     }
     
+    public static String ISO8601FromRFC822(String text) {
+    	return dateAsISO8601(dateFromRFC822(text));
+    }
 
     /**
      * Parses an DateConverters-compliant date/time string.
