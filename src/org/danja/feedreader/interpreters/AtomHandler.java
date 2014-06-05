@@ -7,7 +7,7 @@
  * @date Apr 27, 2014
  *
  */
-package org.danja.feedreader.parsers;
+package org.danja.feedreader.interpreters;
 
 import java.net.URI;
 import java.util.Collections;

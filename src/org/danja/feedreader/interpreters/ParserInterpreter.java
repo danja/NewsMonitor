@@ -10,7 +10,6 @@
 package org.danja.feedreader.interpreters;
 
 import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.parsers.FeedParser;
 import org.xml.sax.ContentHandler;
 
 /**

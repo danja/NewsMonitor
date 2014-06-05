@@ -11,13 +11,6 @@ package org.danja.feedreader.interpreters;
 
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.parsers.AtomHandler;
-import org.danja.feedreader.parsers.FeedHandler;
-import org.danja.feedreader.parsers.FeedParser;
-import org.danja.feedreader.parsers.Rss1Handler;
-import org.danja.feedreader.parsers.Rss2Handler;
-import org.danja.feedreader.parsers.SoupParser;
-import org.danja.feedreader.parsers.XMLReaderParser;
 
 /**
  * Looks after the creation of interpreters (gluing parsers together)

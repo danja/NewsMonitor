@@ -6,7 +6,7 @@
  * @date Apr 28, 2014
  *
  */
-package org.danja.feedreader.parsers;
+package org.danja.feedreader.interpreters;
 
 import java.util.Date;
 import java.util.Iterator;

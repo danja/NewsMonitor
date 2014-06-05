@@ -7,7 +7,7 @@
  * @date Apr 25, 2014
  *
  */
-package org.danja.feedreader.parsers;
+package org.danja.feedreader.interpreters;
 
 import java.util.ArrayList;
 import java.util.List;

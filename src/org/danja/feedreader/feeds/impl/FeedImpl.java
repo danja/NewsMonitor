@@ -37,11 +37,11 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 //	private long refreshPeriod;
 
-	private static final double ditherFactor = 0.1D;
+	// private static final double ditherFactor = 0.1D;
 
 	private int lives = Config.MAX_LIVES;
 
-	private char hint = FeedConstants.UNKNOWN;
+	private char formatHint = FeedConstants.UNKNOWN;
 
 	private boolean isNew = false;
 
@@ -106,11 +106,11 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	}
 
 	public void setFormatHint(char hint) {
-		this.hint = hint;
+		this.formatHint = hint;
 	}
 
 	public char getFormatHint() {
-		return hint;
+		return formatHint;
 	}
 
 	public Interpreter getInterpreter() {

@@ -19,11 +19,11 @@ import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.feeds.impl.EntryListImpl;
 import org.danja.feedreader.feeds.impl.FeedImpl;
 import org.danja.feedreader.feeds.impl.FeedListImpl;
+import org.danja.feedreader.interpreters.FormatSniffer;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.HttpMessage;
-import org.danja.feedreader.parsers.FormatSniffer;
 import org.danja.feedreader.sparql.SparqlTemplater;
 
 public class Poller implements Runnable {

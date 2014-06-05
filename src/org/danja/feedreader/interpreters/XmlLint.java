@@ -1,4 +1,4 @@
-package org.danja.feedreader.parsers;
+package org.danja.feedreader.interpreters;
 
 import javax.xml.parsers.SAXParserFactory;
 
