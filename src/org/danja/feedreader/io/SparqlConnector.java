@@ -18,6 +18,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -67,7 +68,10 @@ public class SparqlConnector {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		Header[] headers = response.getAllHeaders();
+		for(int i =0;i<headers.length; i++){
+			System.out.println("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
+		}
 		// Get the response
 		BufferedReader reader = null;
 		try {

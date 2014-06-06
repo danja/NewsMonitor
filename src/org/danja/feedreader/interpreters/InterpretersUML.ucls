@@ -4,7 +4,7 @@
   <class id="1" language="java" name="org.danja.feedreader.interpreters.Rss1Handler" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/Rss1Handler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="570" y="342"/>    
+    <position height="-1" width="-1" x="614" y="456"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -14,17 +14,17 @@
   <class id="2" language="java" name="org.danja.feedreader.interpreters.SoupParser" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/SoupParser.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1043" y="202"/>    
+    <position height="-1" width="-1" x="761" y="245"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
-      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
   <interface id="3" language="java" name="org.danja.feedreader.interpreters.FeedParser" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/FeedParser.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="711" y="32"/>    
+    <position height="-1" width="-1" x="755" y="146"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -34,7 +34,7 @@
   <class id="4" language="java" name="org.danja.feedreader.interpreters.FeedParserBase" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/FeedParserBase.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="855" y="47"/>    
+    <position height="-1" width="-1" x="899" y="161"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -44,7 +44,7 @@
   <class id="5" language="java" name="org.danja.feedreader.interpreters.AtomHandler" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/AtomHandler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="369" y="381"/>    
+    <position height="-1" width="-1" x="413" y="495"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -54,7 +54,7 @@
   <class id="6" language="java" name="org.danja.feedreader.interpreters.XMLReaderParser" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/XMLReaderParser.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="845" y="136"/>    
+    <position height="-1" width="-1" x="901" y="266"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -65,7 +65,7 @@
     project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/InterpreterFactory.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="377" y="142"/>    
+    <position height="-1" width="-1" x="421" y="256"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   <class id="8" language="java" name="org.danja.feedreader.interpreters.FeedHandler" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/FeedHandler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="581" y="195"/>    
+    <position height="-1" width="-1" x="625" y="309"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -85,7 +85,7 @@
   <class id="9" language="java" name="org.danja.feedreader.interpreters.SoupHandler" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/SoupHandler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="764" y="455"/>    
+    <position height="-1" width="-1" x="808" y="569"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -95,7 +95,7 @@
   <interface id="10" language="java" name="org.danja.feedreader.interpreters.Interpreter" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/Interpreter.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="431" y="33"/>    
+    <position height="-1" width="-1" x="475" y="147"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -105,7 +105,7 @@
   <class id="11" language="java" name="org.danja.feedreader.interpreters.FormatSniffer" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/FormatSniffer.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="240" y="145"/>    
+    <position height="-1" width="-1" x="465" y="71"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -116,7 +116,7 @@
     project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/ParserInterpreter.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="563" y="40"/>    
+    <position height="-1" width="-1" x="607" y="154"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -126,7 +126,7 @@
   <class id="13" language="java" name="org.danja.feedreader.interpreters.Rss2Handler" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/interpreters/Rss2Handler.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="761" y="333"/>    
+    <position height="-1" width="-1" x="805" y="447"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="false"/>      
@@ -135,7 +135,7 @@
   </class>  
   <class id="14" language="java" name="org.danja.feedreader.io.HttpConnector" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/io/HttpConnector.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="101" y="342"/>    
+    <position height="-1" width="-1" x="145" y="456"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -144,109 +144,151 @@
   </class>  
   <class id="15" language="java" name="org.danja.feedreader.feeds.impl.FeedImpl" project="feedreader-prototype" 
     file="/feedreader-prototype/src/org/danja/feedreader/feeds/impl/FeedImpl.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="93" y="100"/>    
+    <position height="-1" width="-1" x="137" y="214"/>    
     <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <association id="16">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="17" name="interpreter"/>      
-      <multiplicity id="18" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="false" multiplicity="false"/>  
-  </association>  
-  <dependency id="19">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
-  <realization id="20">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <dependency id="21">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <association id="22">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="23" name="httpConnector"/>      
-      <multiplicity id="24" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="false" multiplicity="false"/>  
-  </association>  
-  <generalization id="25">    
+  <class id="16" language="java" name="org.xml.sax.helpers.DefaultHandler" project="feedreader-prototype" 
+    file="/usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="601" y="68"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="org.danja.feedreader.main.Poller" project="feedreader-prototype" 
+    file="/feedreader-prototype/src/org/danja/feedreader/main/Poller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="298" y="77"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <generalization id="18">    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <dependency id="26">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <dependency id="27">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <realization id="28">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <dependency id="29">    
+  <dependency id="19">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="10"/>  
   </dependency>  
-  <dependency id="30">    
+  <dependency id="20">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="12"/>  
   </dependency>  
-  <generalization id="31">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <dependency id="32">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
-  <association id="33">    
+  <association id="21">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="34" name="atomHandler"/>      
-      <multiplicity id="35" minimum="0" maximum="1"/>    
+      <attribute id="22" name="atomHandler"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
-  <generalization id="36">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="37">    
+  <generalization id="24">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="8"/>  
   </generalization>  
-  <dependency id="38">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="39">    
+  <dependency id="25">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
-  <generalization id="40">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="41">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <realization id="42">    
+  <dependency id="26">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <realization id="27">    
     <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="10"/>  
   </realization>  
+  <dependency id="28">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="29">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="30" name="interpreter"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <realization id="33">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <dependency id="34">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <association id="35">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="36" name="httpConnector"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <dependency id="38">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="39">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <realization id="40">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <dependency id="41">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <generalization id="42">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <generalization id="44">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <dependency id="45">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <generalization id="46">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="47">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <dependency id="48">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <generalization id="49">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <dependency id="50">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" 
     accessors="true" visibility="false">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

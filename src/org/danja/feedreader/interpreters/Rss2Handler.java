@@ -34,10 +34,11 @@ import org.xml.sax.helpers.DefaultHandler;
  * <p>
  * Populates a {@link Feed} object (with any contained items etc.).
  * <p>
- * Elements handled : webMaster, author, creator, guid, title,
-			"pubDate", "link", "description" 
+ * Elements handled : webMaster, author, creator, guid, title, "pubDate",
+ * "link", "description"
  * <p>
- * HTML content has a little cleaning/normalization, and links are pulled out of there too.
+ * HTML content has a little cleaning/normalization, and links are pulled out of
+ * there too.
  * 
  * @see XMLReaderParser
  * @see Feed
@@ -56,7 +57,7 @@ public class Rss2Handler extends FeedHandler {
 
 	// handy for debugging
 	private final static String[] states = { "IN_NOTHING", "IN_CHANNEL",
-			"IN_ITEM"};
+			"IN_ITEM" };
 
 	private char state = IN_NOTHING;
 
@@ -65,8 +66,9 @@ public class Rss2Handler extends FeedHandler {
 	private Entry currentEntry;
 
 	// private EntryList entries = new EntryListImpl();
-	private static final String[] textElementsArray = { "webMaster", "author", "creator", "date", "guid", "title",
-			"pubDate", "lastBuildDate", "link", "description" };
+	private static final String[] textElementsArray = { "webMaster", "author",
+			"creator", "date", "guid", "title", "pubDate", "lastBuildDate",
+			"link", "description", "encoded" };
 	private static final Set<String> textElements = new HashSet<String>();
 	static {
 		Collections.addAll(textElements, textElementsArray);
@@ -98,7 +100,7 @@ public class Rss2Handler extends FeedHandler {
 				return;
 			}
 			return;
-			
+
 		case IN_CHANNEL:
 			if ("item".equals(localName)) {
 				state = IN_ITEM;
@@ -120,8 +122,8 @@ public class Rss2Handler extends FeedHandler {
 
 	public void endElement(String namespaceURI, String localName, String qName) {
 
-	//	System.out.println("END localName = " + localName);
-	//	System.out.println("state = " + states[state]);
+		// System.out.println("END localName = " + localName);
+		// System.out.println("state = " + states[state]);
 
 		String text = "";
 		if (textElements.contains(localName)) {
@@ -147,7 +149,14 @@ public class Rss2Handler extends FeedHandler {
 			}
 			if ("guid".equals(localName)) {
 				getFeed().setId(text);
-				if("".equals(getFeed().getUrl()) && text.startsWith("http://")) { // id might be url, but favour alternate link
+				if ("".equals(getFeed().getUrl()) && text.startsWith("http://")) { // id
+																					// might
+																					// be
+																					// url,
+																					// but
+																					// favour
+																					// alternate
+																					// link
 					getFeed().setUrl(text);
 				}
 				return;
@@ -174,7 +183,7 @@ public class Rss2Handler extends FeedHandler {
 			if ("link".equals(localName)) {
 				Link link = new LinkImpl();
 				link.setHref(text);
-					getFeed().setHtmlUrl(link.getHref());
+				getFeed().setHtmlUrl(link.getHref());
 				return;
 			}
 			return;
@@ -189,7 +198,9 @@ public class Rss2Handler extends FeedHandler {
 			}
 			if ("guid".equals(localName)) {
 				currentEntry.setId(text);
-				if("".equals(currentEntry.getUrl()) && text.startsWith("http://")) {// id might be url, but favour alternate link
+				if ("".equals(currentEntry.getUrl())
+						&& text.startsWith("http://")) {// id might be url, but
+														// favour alternate link
 					currentEntry.setUrl(text);
 				}
 				return;
@@ -200,7 +211,28 @@ public class Rss2Handler extends FeedHandler {
 			}
 			if ("description".equals(localName)) {
 				String content = HtmlCleaner.unescape(text);
-				//content = HtmlCleaner.normalise(content);
+				System.out.println("DESCRIPTION text = "+text);
+				System.out.println("DESCRIPTION = "+content);
+				// content = HtmlCleaner.normalise(content);
+				if (currentEntry.getContent() != null) { // already loaded from content:encoded
+					currentEntry.setSummary(content);
+				} else {
+					currentEntry.setContent(content);
+				}
+				Set<Link> links = HtmlCleaner.extractLinks(content);
+				currentEntry.addAllLinks(links);
+				return;
+			}
+			if ("encoded".equals(localName)) { // occurs in the wild
+				
+				if (currentEntry.getContent() != null) {
+					currentEntry.setSummary(currentEntry.getContent());
+				}
+				String content = HtmlCleaner.unescape(text);
+				
+				System.out.println("ENCODED text = "+text);
+				System.out.println("ENCODED = "+content);
+				// content = HtmlCleaner.normalise(content);
 				currentEntry.setContent(content);
 				Set<Link> links = HtmlCleaner.extractLinks(content);
 				currentEntry.addAllLinks(links);
@@ -211,7 +243,8 @@ public class Rss2Handler extends FeedHandler {
 				currentEntry.getAuthor().setEmail(text);
 				return;
 			}
-			if ("creator".equals(localName)) { // dc:creator, escaped - used by WordPress
+			if ("creator".equals(localName)) { // dc:creator, escaped - used by
+												// WordPress
 				text = HtmlCleaner.unescape(text);
 				initAuthor(currentEntry);
 				currentEntry.getAuthor().setName(text);

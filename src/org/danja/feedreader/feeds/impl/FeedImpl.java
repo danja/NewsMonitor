@@ -72,6 +72,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			httpConnector.setUrl(url);
 		}
 		isNew = httpConnector.load();
+		System.out.println("STATUS =\n"+httpConnector.getHeadersString());
 
 		if (isNew) {
 			System.out.println("Connected, interpreting...");

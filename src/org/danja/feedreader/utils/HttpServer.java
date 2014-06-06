@@ -292,7 +292,7 @@ public class HttpServer {
                 if(target.endsWith(".png")){
                 	mime = "image/png";
                 }
-                
+                // System.out.println("CONTENT_ENCODING");
                 FileEntity body = new FileEntity(file, ContentType.create(mime, (Charset) null));
                 response.setEntity(body);
                 System.out.println("HttpServer : Serving file " + file.getPath());
