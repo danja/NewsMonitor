@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Feeds</title>
 <!-- link rel="stylesheet" href="css/jquery.ui.all.css" -->
 <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css">
@@ -57,26 +58,40 @@ var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 	
 	
 	function getEntries() {
-		$.get(url, function(xml) {
-
+	//	$.get(url, function(xml) {
+			$.ajax({
+				url: url, 
+				accept: {
+						  xml: 'application/xml;charset=UTF-8',
+						  sparql: 'sparql-results+xml;charset=UTF-8'
+						  },
+				headers: { // belt and braces
+						        'Accept':'sparql-results+xml;charset=UTF-8',
+						        'Accept-Charset': 'UTF-8'
+						        }
+				
+			}).done(function(xml) {
+			
 			//	alert("Load was performed.");
 		
 			var xmlString = (new XMLSerializer()).serializeToString(xml);
-			console.log(xmlString);
-			console.log("----------------------------------------------------");
+			//console.log(xmlString);
+			//console.log("----------------------------------------------------");
 			
 			//  0xEF 0xBF 0xBD
-		//	xmlString = encode_utf8(xmlString);
+		xmlString = encode_utf8(xmlString);
 		//	xmlString = xmlString.replace("\xef\xbf\xbd", " ");
 		//	xmlString = native2ascii(xmlString);
 	//	xmlString = xmlString.replace("/\uFFFD/g", " ");
 	
 	// workaround for wrong interpretation of charset
 	xmlString = xmlString.replace(/[^\u0000-\u007F]/g, '');
+	// maybe force to ISO-8859-1, also known as Latin-1 instead?
+	
 	//	xmlString = xmlString.replace("ï¿½", " ");
 			//	xml = decode_utf8(xml);
 				
-				console.log(xml);
+			//	console.log(xml);
 				var $xml = $(xmlString);
 				
 //				var html = "<div id=\"accordion-resizer\" class=\"ui-widget-content\">";
