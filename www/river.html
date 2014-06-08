@@ -60,8 +60,25 @@ var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 		$.get(url, function(xml) {
 
 			//	alert("Load was performed.");
-
-				var $xml = $(xml);
+		
+			var xmlString = (new XMLSerializer()).serializeToString(xml);
+			console.log(xmlString);
+			console.log("----------------------------------------------------");
+			
+			//  0xEF 0xBF 0xBD
+		//	xmlString = encode_utf8(xmlString);
+		//	xmlString = xmlString.replace("\xef\xbf\xbd", " ");
+		//	xmlString = native2ascii(xmlString);
+	//	xmlString = xmlString.replace("/\uFFFD/g", " ");
+	
+	// workaround for wrong interpretation of charset
+	xmlString = xmlString.replace(/[^\u0000-\u007F]/g, '');
+	//	xmlString = xmlString.replace("ï¿½", " ");
+			//	xml = decode_utf8(xml);
+				
+				console.log(xml);
+				var $xml = $(xmlString);
+				
 //				var html = "<div id=\"accordion-resizer\" class=\"ui-widget-content\">";
 //				html += "<div id=\"accordion\">"; 
 				$xml.find("result").each(function() {
@@ -109,6 +126,32 @@ var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 				doAccordion();
 			});
 	}
+
+	function native2ascii(str) {
+		var out = "";
+		for (var i = 0; i < str.length; i++) {
+			if (str.charCodeAt(i) < 0x80) {
+				out += str.charAt(i);
+			} else {
+				var u = "" + str.charCodeAt(i).toString(16);
+				out += "\\u" + (u.length === 2 ? "00" + u : u.length === 3 ? "0" + u : u);
+			}
+		}
+		return out;
+	}
+	
+	function encode_utf8(s) {
+		  return unescape(encodeURIComponent(s));
+		}
+
+//	function decode(s) {
+//		  return unescape(escape(s));
+//		}
+	
+	function decode_utf8(s) {
+		var e = escape(s);
+		  return decodeURIComponent(e);
+		}
 	
 	function doAccordion(){
 		$( "#accordion" ).accordion({

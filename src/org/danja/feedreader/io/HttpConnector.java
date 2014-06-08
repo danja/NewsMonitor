@@ -24,6 +24,7 @@ import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
 
 import org.danja.feedreader.main.Config;
+import org.danja.feedreader.utils.XmlEncodingSniffer;
 
 /**
  * HTTP connection handler

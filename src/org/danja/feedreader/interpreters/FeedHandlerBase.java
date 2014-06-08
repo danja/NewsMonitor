@@ -1,7 +1,7 @@
 /**
  * feedreader-prototype
  *
- * FeedHandler.java
+ * FeedHandlerBase.java
  * @author danja
  * @date Apr 28, 2014
  *
@@ -21,6 +21,7 @@ import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
 import org.danja.feedreader.feeds.impl.DateStampImpl;
 import org.danja.feedreader.feeds.impl.PersonImpl;
+import org.danja.feedreader.utils.CharsetDetector;
 import org.danja.feedreader.utils.DateConverters;
 import org.danja.feedreader.utils.HtmlCleaner;
 import org.xml.sax.Attributes;
@@ -32,7 +33,7 @@ import org.xml.sax.helpers.DefaultHandler;
 /**
  *
  */
-public abstract class FeedHandler implements ContentHandler {
+public abstract class FeedHandlerBase implements ContentHandler {
 
 	private Feed feed;
 	
@@ -69,7 +70,7 @@ public abstract class FeedHandler implements ContentHandler {
 
 	@Override
 	public void startDocument() throws SAXException {
-	//	System.out.println("FeedHandler.startDocument()");
+	//	System.out.println("FeedHandlerBase.startDocument()");
 	}
 
 //	@Override
@@ -124,6 +125,7 @@ public abstract class FeedHandler implements ContentHandler {
 			if(entries.get(i).getContent() == null && entries.get(i).getSummary() != null) {
 				entries.get(i).setContent(entries.get(i).getSummary());
 			}
+		entries.get(i).setContent(CharsetDetector.fixEncoding(entries.get(i).getContent()));
 		}
 	}
 	

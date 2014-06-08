@@ -11,6 +11,7 @@ package org.danja.feedreader.io;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
@@ -31,6 +32,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
+import org.danja.feedreader.utils.XmlEncodingSniffer;
 
 /**
  * Utility for interacting with SPARQL store over HTTP
@@ -73,13 +75,33 @@ public class SparqlConnector {
 			System.out.println("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
 		}
 		// Get the response
+		InputStream inputStream = null;
 		BufferedReader reader = null;
 		try {
+			inputStream = response.getEntity().getContent();
+		} catch (IllegalStateException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+//		XmlEncodingSniffer sniffer;
+//		try {
+//			sniffer = new XmlEncodingSniffer(inputStream, "UTF-8");
+//			inputStream = sniffer.getStream();
+//		} catch (UnsupportedEncodingException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		} catch (IOException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+		
+		try {
 			reader = new BufferedReader
-			  (new InputStreamReader(response.getEntity().getContent()));
+			  (new InputStreamReader(inputStream)); // response.getEntity().getContent()
 		} catch (IllegalStateException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		    

@@ -260,6 +260,7 @@ public class HttpServer {
             }
 
             final File file = new File(this.docRoot, URLDecoder.decode(target, "UTF-8"));
+            
             if (!file.exists()) {
 
                 response.setStatusCode(HttpStatus.SC_NOT_FOUND);
@@ -292,9 +293,15 @@ public class HttpServer {
                 if(target.endsWith(".png")){
                 	mime = "image/png";
                 }
+               
                 // System.out.println("CONTENT_ENCODING");
                 FileEntity body = new FileEntity(file, ContentType.create(mime, (Charset) null));
+            
+                
                 response.setEntity(body);
+                if(target.endsWith(".html")){
+                	response.addHeader("Content-Type", "text/css; charset=UTF-8");
+                }
                 System.out.println("HttpServer : Serving file " + file.getPath());
             }
         }

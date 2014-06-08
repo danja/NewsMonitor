@@ -48,7 +48,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * @see Link
  */
 
-public class Rss2Handler extends FeedHandler {
+public class Rss2Handler extends FeedHandlerBase {
 
 	// change to enum?
 	private final static char IN_NOTHING = 0;

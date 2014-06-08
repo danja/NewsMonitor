@@ -46,7 +46,7 @@ public class XMLReaderParser extends FeedParserBase implements FeedParser {
         }
     }
 
-    public void setHandler(FeedHandler contentHandler) {
+    public void setHandler(FeedHandlerBase contentHandler) {
     	super.setHandler(contentHandler); // is ok?
         reader.setContentHandler(contentHandler);
     }

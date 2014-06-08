@@ -135,6 +135,8 @@ public class Poller implements Runnable {
 		for(int i=0;i<feeds.size();i++){
 			System.out.println("Uploading : "+feeds.get(i).getUrl());
 			HttpMessage message = SparqlTemplater.uploadFeed(feeds.get(i));
+			
+			// feeds.get(0).downloadToFile("text.xml");
 			System.out.println("response = "+message);
 		}
 	}
