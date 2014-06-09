@@ -2,28 +2,123 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
-<title>NewsMonitor Admin</title>
+   <title>NewsMonitor Admin</title>
+   <link rel="stylesheet" href="css/common.css">
+   <link rel="stylesheet" href="css/admin.css">
+   <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+   <script type="text/javascript" language="javascript">
 
-<script type="text/javascript" language="javascript">
+var sparqlEndpoint = "http://localhost:3030/feedreader/query?query=";
 
-var sparql = '\
-	PREFIX rss: <http://purl.org/rss/1.0/> \
-	PREFIX dcterms:<http://purl.org/dc/terms/> \
-	PREFIX foaf:<http://xmlns.com/foaf/0.1/> \
-	PREFIX schema:<http://schema.org/> \
-	PREFIX nm: <http://purl.org/stuff/newsmonitor/> \
-\
-	SELECT DISTINCT ?channel ?title WHERE { \
-	   ?channel a rss:channel; \
-			  dcterms:title ?title; \
-    } \
-	ORDER By ?title \
-\';
+var sparql = "PREFIX rss: <http://purl.org/rss/1.0/> \n\
+PREFIX dcterms: <http://purl.org/dc/terms/> \n\
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n\
+PREFIX schema: <http://schema.org/> \n\
+PREFIX nm: <http://purl.org/stuff/newsmonitor/> \n\
+\n \
+SELECT DISTINCT * WHERE { \n\
+	GRAPH ?g { \n\
+      ?channel a rss:channel . \n\
+      OPTIONAL { ?channel dcterms:title ?title } \n\
+      OPTIONAL { ?channel nm:htmlUrl ?htmlUrl } \n\
+} \n\
+} \n\
+ORDER By ?title\n";
+
+console.log(sparql);
+    
+var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
+	
+    $(function() {
+      getFeeds();
+    });
+    	
+    	
+    	function getFeeds() {
+    	//	$.get(url, function(xml) {
+    			$.ajax({
+    				url: url, 
+    				accept: {
+    						  xml: 'application/xml;charset=UTF-8',
+    						  sparql: 'sparql-results+xml;charset=UTF-8'
+    						  },
+    				headers: { // belt and braces
+    						        'Accept':'sparql-results+xml;charset=UTF-8'
+    						     //   'Accept-Charset': 'UTF-8' unsafe
+    						        }
+    				
+    			}).done(function(xml) {
+    		
+    			var xmlString = (new XMLSerializer()).serializeToString(xml);
+
+    			// workaround for wrong interpretation of charset
+    			xmlString = xmlString.replace(/[^\u0000-\u007F]/g, '');
+    			// maybe force to ISO-8859-1, also known as Latin-1 instead?
+    	
+    				var $xml = $(xmlString);
+					var rows = "";
+					
+    				$xml.find("result").each(function() {
+    					// $('#results').html($(this));
+    					var channel, title, htmlUrl;
+    					
+    					$(this).find("binding[name='channel']").each(function() {
+    						channel = $(this).text().trim();
+    					});
+    					$(this).find("binding[name='title']").each(function() {
+    						title = $(this).text().trim();
+    					});
+    					$(this).find("binding[name='htmlUrl']").each(function() {
+    						htmlUrl = $(this).text().trim();
+    					});
+    					var feedRow = generateFeedRow(channel, title, htmlUrl);
+    					// $("#feeds").append("$("+feedRow+")");
+    					rows += feedRow;
+    				});
+    			//	console.log(rows);
+    				 $("#feeds").replaceWith(rows);
+    			});
+    			
+    	}
+    	
+    	function generateFeedRow(channel, title, htmlUrl) {
+    		// console.log("channel = "+channel);
+    		// console.log("title = "+title);
+    		// console.log("htmlUrl ="+htmlUrl);
+    		var row = "<tr>\n";
+    		if(htmlUrl != null && title != null) {
+    			row += "<td><a href=\""+htmlUrl+"\">"+title+"</a></td>\n";
+    			row += "<td><a href=\""+channel+"\">" + channel + "</a></td>\n";
+    		}
+    		if(htmlUrl == null && title != null) {
+    			row += "<td>"+title+"</td>\n";
+    			row += "<td><a href=\""+channel+"\">" + channel + "</a></td>\n";
+    		}
+    		if(htmlUrl != null && title == null) {
+    			row += "<td><a href=\""+htmlUrl+"\"><em>Link</em></a></td>\n";
+    			row += "<td><a href=\""+channel+"\">" + channel + "</a></td>\n";
+    		}
+    		row += "</tr>\n";
+    		return row;
+    	}
 </script>
 
 </head>
 
 <body>
 <h1>NewsMonitor Admin</h1>
+   <h1>Feeds</h1>
+   <p>
+      <a href="/index.html">Home</a>
+   </p>
+
+<table>
+<tr>
+  <th>Source</th>
+  <th>Feed URL</th> 
+</tr>
+<tr id="feeds"></tr>
+  </table>
+   
 </body>
 </html>

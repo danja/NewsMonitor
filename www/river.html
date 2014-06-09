@@ -7,6 +7,7 @@
 <!-- link rel="stylesheet" href="css/jquery.ui.all.css" -->
 <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css">
 <!--   link rel="stylesheet" href="css/jquery.ui.accordian.css" -->
+   <link rel="stylesheet" href="css/common.css">
 	<!--  link rel="stylesheet" href="css/river.css" -->
 <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
 <script type="text/javascript" language="javascript">
@@ -39,22 +40,16 @@ GRAPH ?g { \
       OPTIONAL { ?entry dcterms:creator [foaf:homepage ?authorHomepage] . } \
    }\
 } \
-ORDER BY DESC(?date)";
-
-// console.log("SPARQL="+sparql);
-// console.log("SPARQL escaped="+escape(sparql));
+ORDER BY DESC(?date) \
+LIMIT 10 \
+OFFSET 0 \
+";
 
 var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
-//	var url = "http://localhost:3030/feedreader/query?query=PREFIX+rss%3A+%3Chttp%3A%2F%2Fpurl.org%2Frss%2F1.0%2F%3E+%0D%0APREFIX+dcterms%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0APREFIX+schema%3A%3Chttp%3A%2F%2Fschema.org%2F%3E%0D%0APREFIX+nm%3A+%3Chttp%3A%2F%2Fpurl.org%2Fstuff%2Fnewsmonitor%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3FfeedTitle+%3FfeedHtml+%3FfeedUrl+%3FfeedAuthor+%3Fentry+%3Ftitle+%3Fcontent+%3Fupdated+%3Fauthor+%3FauthorHomepage+%0D%0AWHERE+%7B+%0D%0A%0D%0AGRAPH+%3Fg+%7B%0D%0A+++%3Fentry+a+schema%3Aarticle+.%0D%0A++++++OPTIONAL+%7B+%0D%0A+++++++++%3FfeedUrl+dcterms%3Atitle+%3FfeedTitle+.+%0D%0A+++++++++%3Fentry+dcterms%3Asource+%3FfeedUrl+.%0D%0A++++++%7D%0D%0A++++++OPTIONAL+%7B+%0D%0A+++++++++%3Fsource+nm%3AhtmlUrl+%3FfeedHtml+.+%0D%0A+++++++++%3Fentry+dcterms%3Asource+%3FfeedUrl+.%0D%0A++++++%7D%0D%0A++++++OPTIONAL+%7B+%0D%0A+++++++++%3Fsource+dcterms%3Acreator+%5Bfoaf%3Aname+%3FfeedAuthor%5D+.+%0D%0A+++++++++%3Fentry+dcterms%3Asource+%3FfeedUrl+.%0D%0A++++++%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+dcterms%3Atitle+%3Ftitle+.+%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+dcterms%3Aupdated+%3Fupdated+.+%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+schema%3AarticleBody+%3Fcontent+.+%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+dcterms%3Acreator+%5Bfoaf%3Aname+%3Fauthor%5D+.+%7D%0D%0A++++++OPTIONAL+%7B+%3Fentry+dcterms%3Acreator+%5Bfoaf%3Ahomepage+%3FauthorHomepage%5D+.+%7D%0D%0A+++%7D%0D%0A%7D%0D%0AORDER+BY+DESC%28%3Fupdated%29&output=xml";
-
 	
-	
-		$(function() {
+$(function() {
   getEntries();
-// doAccordion();
-// $( "#accordion" ).accordion({collapsible:true});
-// $("#accordion-resizer").width(800);
-	});
+});
 	
 	
 	function getEntries() {
@@ -66,107 +61,71 @@ var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 						  sparql: 'sparql-results+xml;charset=UTF-8'
 						  },
 				headers: { // belt and braces
-						        'Accept':'sparql-results+xml;charset=UTF-8',
-						        'Accept-Charset': 'UTF-8'
+						        'Accept':'sparql-results+xml;charset=UTF-8'
+						     //   'Accept-Charset': 'UTF-8' unsafe
 						        }
 				
 			}).done(function(xml) {
-			
-			//	alert("Load was performed.");
 		
 			var xmlString = (new XMLSerializer()).serializeToString(xml);
-			//console.log(xmlString);
-			//console.log("----------------------------------------------------");
-			
-			//  0xEF 0xBF 0xBD
-		xmlString = encode_utf8(xmlString);
-		//	xmlString = xmlString.replace("\xef\xbf\xbd", " ");
-		//	xmlString = native2ascii(xmlString);
-	//	xmlString = xmlString.replace("/\uFFFD/g", " ");
+
+			// workaround for wrong interpretation of charset
+			xmlString = xmlString.replace(/[^\u0000-\u007F]/g, '');
+			// maybe force to ISO-8859-1, also known as Latin-1 instead?
 	
-	// workaround for wrong interpretation of charset
-	xmlString = xmlString.replace(/[^\u0000-\u007F]/g, '');
-	// maybe force to ISO-8859-1, also known as Latin-1 instead?
-	
-	//	xmlString = xmlString.replace("ï¿½", " ");
-			//	xml = decode_utf8(xml);
-				
-			//	console.log(xml);
 				var $xml = $(xmlString);
-				
-//				var html = "<div id=\"accordion-resizer\" class=\"ui-widget-content\">";
-//				html += "<div id=\"accordion\">"; 
+
 				$xml.find("result").each(function() {
 					// $('#results').html($(this));
-					var entryUrl, source, title, content, updated, author, authorHomepage;
-					// console.log("result = " + $(this));
+					var entryUrl, source, title, content, date, author, authorHomepage;
 					
 					$(this).find("binding[name='entry']").each(function() {
-						//   	$("#results").append($(this).text());
-						entryUrl = $(this).text();
+						entryUrl = $(this).text().trim();
 					});
-					var feedUrl, title, updated, author, authorHomepage;
 					$(this).find("binding[name='source']").each(function() {
-						//	$("#results").append($(this).text());
-						source = $(this).text();
+						source = $(this).text().trim();
 					});
 					$(this).find("binding[name='title']").each(function() {
-						//   	$("#results").append($(this).text());
-						title = $(this).text();
+						title = $(this).text().trim();
 					});
 					$(this).find("binding[name='content']").each(function() {
-						//   	$("#results").append($(this).text());
-						content = $(this).text();
-						// content = "guff";
+						content = $(this).text().trim();
 					});
-					$(this).find("binding[name='updated']").each(function() {
-						//$("#results").append($(this).text());
-						updated = $(this).text();
+					$(this).find("binding[name='date']").each(function() {
+						date = $(this).text().trim();
 					});
 					$(this).find("binding[name='author']").each(function() {
-						//$("#results").append($(this).text());
-						author = $(this).text();
+						author = $(this).text().trim();
 					});
 					$(this).find("binding[name='authorHomepage']").each(function() {
-						//$("#results").append($(this).text());
-						authorHomepage = $(this).text();
+						authorHomepage = $(this).text().trim();
 					});
-					var entry = generateEntryHtml(entryUrl, source, title, content, updated, author, authorHomepage);
-					// $("#results").append(entry);
+					var entry = generateEntryHtml(entryUrl, source, title, content, date, author, authorHomepage);
 					$("#accordion").append(entry);
-					// html += entry;
 				});
-				//html += "</div></div>";
-				//$("#accordion").append(html);
 				doAccordion();
 			});
 	}
-
-	function native2ascii(str) {
-		var out = "";
-		for (var i = 0; i < str.length; i++) {
-			if (str.charCodeAt(i) < 0x80) {
-				out += str.charAt(i);
-			} else {
-				var u = "" + str.charCodeAt(i).toString(16);
-				out += "\\u" + (u.length === 2 ? "00" + u : u.length === 3 ? "0" + u : u);
-			}
+	
+	function generateEntryHtml(entryUrl, source, title, content, date, author, authorHomepage) {
+		var entry = "<h3 >";
+		
+		if(author != null && authorHomepage == null) {
+			entry += "<div class=\"author\">" + author + "</div> : ";
 		}
-		return out;
+		if(author != null && authorHomepage != null) {
+			entry += "<div class=\"author\"><a href=\"" + authorHomepage+ "\">"+ author + "</a></div> :";
+		}
+		entry += "<a href=\""+entryUrl+"\">" + title + "</a></h3>";
+		entry += "<div>";
+		
+		entry += "<div class=\"content\">"+content+"</div>";
+
+		entry += "<div class=\"updated\">" + date + "</div>";
+		
+		entry += "</div>"
+		return entry;
 	}
-	
-	function encode_utf8(s) {
-		  return unescape(encodeURIComponent(s));
-		}
-
-//	function decode(s) {
-//		  return unescape(escape(s));
-//		}
-	
-	function decode_utf8(s) {
-		var e = escape(s);
-		  return decodeURIComponent(e);
-		}
 	
 	function doAccordion(){
 		$( "#accordion" ).accordion({
@@ -182,26 +141,6 @@ var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 		$("#accordion").accordion({collapsible:true});
 		$("#accordion").accordion({active:false});
 		$("#accordion-resizer").width(800);
-	}
-	
-	function generateEntryHtml(entryUrl, source, title, content, updated, author, authorHomepage) {
-		var entry = "<h3 >";
-		
-		if(author != null && authorHomepage == null) {
-			entry += "<div class=\"author\">" + author + "</div> : ";
-		}
-		if(author != null && authorHomepage != null) {
-			entry += "<div class=\"author\"><a href=\"" + authorHomepage+ "\">"+ author + "</a></div> :";
-		}
-		entry += "<a href=\""+entryUrl+"\">" + title + "</a></h3>";
-		entry += "<div>";
-		
-		entry += "<div class=\"content\">"+content+"</div>";
-
-		entry += "<div class=\"updated\">" + updated + "</div>";
-		
-		entry += "</div>"
-		return entry;
 	}
 	</script>
 
@@ -220,11 +159,10 @@ var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 </script>
 </head>
 <body>
-	<h1>Feeds</h1>
+	<h1>Entries</h1>
 	<p>
 		<a href="/index.html">Home</a>
 	</p>
-   <h3 class="docs">Resize the outer container:</h3>
 
 <div id="accordion-resizer" class="ui-widget-content">
 	<div id="accordion">
