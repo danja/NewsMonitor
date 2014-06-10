@@ -293,14 +293,22 @@ public class HttpServer {
                 if(target.endsWith(".png")){
                 	mime = "image/png";
                 }
-               
+                if(target.endsWith(".gif")){
+                	mime = "image/gif";
+                }
                 // System.out.println("CONTENT_ENCODING");
                 FileEntity body = new FileEntity(file, ContentType.create(mime, (Charset) null));
             
+                // simulate latency
+//                try {
+//					Thread.sleep(2000);
+//				} catch (InterruptedException e) {
+//					e.printStackTrace();
+//				}
                 
                 response.setEntity(body);
                 if(target.endsWith(".html")){
-                	response.addHeader("Content-Type", "text/css; charset=UTF-8");
+                	response.addHeader("Content-Type", "text/html; charset=UTF-8");
                 }
                 System.out.println("HttpServer : Serving file " + file.getPath());
             }

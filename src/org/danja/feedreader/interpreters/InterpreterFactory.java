@@ -32,11 +32,11 @@ public class InterpreterFactory {
 
 		switch (formatHint) {
 		case FeedConstants.RSS1:
-			System.out.println("RSS1: Using Rss1Handler, XMLReaderParser");
+			System.out.println("RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser");
 			feedParser = new XMLReaderParser();
 			FeedHandlerBase rss1handler = new Rss1Handler();
 			feedParser.setHandler(rss1handler);
-			interpreter = new ParserInterpreter(feed, feedParser);
+			interpreter = new Rss1Interpreter(feed, feedParser);
 			return interpreter;
 
 		case FeedConstants.ATOM:

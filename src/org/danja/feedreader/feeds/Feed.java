@@ -69,6 +69,17 @@ public interface Feed extends FeedEntity {
     
     public void setInterpreter(Interpreter interpreter);
     
+    public void setDead(boolean dead);
+    
+    public void setLives(int lives);
+    
+    public int getLives();
+    
+    public void setVolatile(boolean v);
+    
+    public boolean isVolatile();
+    
+    
     /**
      * Gets an RDF/Turtle representation of the EntryList (sans prefixes)
      * 

@@ -1,6 +1,13 @@
 # Feed --------------------
 <${feedUrl}> a rss:channel ;
          dcterms:source <${feedUrl}> ;
+         
+         # admin bits
+         <#if lives??>nm:lives "${lives}" ;</#if>
+         <#if dead??>nm:dead "${dead}" ;</#if>
+         <#if volatile??>nm:volatile "${volatile}" ;</#if>
+         <#if relevance??>nm:relevance "${relevance}" ;</#if>
+                  
          <#if id??>dcterms:identifier "${id}" ;</#if>
          <#if htmlUrl??>nm:htmlUrl <${htmlUrl}> ;</#if>
          <#if title??>dcterms:title """${title}""" ;</#if>

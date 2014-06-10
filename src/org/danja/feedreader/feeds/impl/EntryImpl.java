@@ -9,17 +9,9 @@
  */
 package org.danja.feedreader.feeds.impl;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringWriter;
-import java.io.Writer;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import org.danja.feedreader.feeds.Entry;
-import org.danja.feedreader.templating.Templater;
 
 /**
  *  Implementation of Entry, an RSS item/Atom entry/Blog post model
@@ -27,6 +19,7 @@ import org.danja.feedreader.templating.Templater;
 public class EntryImpl extends FeedEntityBase implements Entry {
 
     private String summary = null;
+	private boolean read = false;
 
 	/**
      * @param uriString URL of feed
@@ -58,4 +51,21 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 	public String getSummary() {
 		return summary;
 	}
+
+	@Override
+	public void setRead(boolean read) {
+		this.read = read;
+	}
+
+	@Override
+	public boolean isRead() {
+		return read;
+	}
+	
+	  public Map<String, Object> getTemplateDataMap(){
+		  Map<String, Object> map = super.getTemplateDataMap();
+		  map.put("summary", getSummary());
+		  map.put("read", isRead());
+		  return map;
+	  }
 }

@@ -28,7 +28,7 @@ public class ParserInterpreter implements Interpreter {
 	}
 
 	public void interpret(Feed feed) {
-		System.out.println("parsing "+feed.getUrl());
+		// System.out.println("parsing "+feed.getUrl());
 		// feedParser.setFeed(feed);
 		feedParser.parse();
 		System.out.println("parsed");

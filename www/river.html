@@ -41,14 +41,27 @@ GRAPH ?g { \
    }\
 } \
 ORDER BY DESC(?date) \
-LIMIT 10 \
+# LIMIT 10 \
 OFFSET 0 \
 ";
 
 var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 	
 $(function() {
-  getEntries();
+	var $loading = $('#spinner').hide();
+	$("#accordion-resizer").hide();
+	jQuery.ajaxSetup({
+		  beforeSend: function() {
+		     $('#spinner').show();
+		     
+		  },
+		  complete: function(){
+		     $('#spinner').hide();
+		     $("#accordion-resizer").show();
+		  },
+		  success: function() {}
+		});
+   getEntries();
 });
 	
 	
@@ -159,18 +172,20 @@ $(function() {
 </script>
 </head>
 <body>
+ 
 	<h1>Entries</h1>
 	<p>
 		<a href="/index.html">Home</a>
 	</p>
 
+ <div id="spinner" class="spinner"></div> <!--   img src="/css/spinner.gif" / -->  
+ 
 <div id="accordion-resizer" class="ui-widget-content">
+
 	<div id="accordion">
    </div>
+
    </div>
-   <!-- div id="results"></div -->
   
-	
-   
 </body>
 </html>

@@ -19,6 +19,7 @@ import org.danja.feedreader.feeds.DateStamp;
 import org.danja.feedreader.feeds.FeedEntity;
 import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
+import org.danja.feedreader.feeds.Tag;
 import org.danja.feedreader.feeds.Templatable;
 import org.danja.feedreader.utils.HtmlCleaner;
 
@@ -27,7 +28,7 @@ import org.danja.feedreader.utils.HtmlCleaner;
  * 
  * can some of these be final?
  */
-public abstract class FeedEntityBase implements FeedEntity, Templatable {
+public abstract  class FeedEntityBase implements FeedEntity, Templatable {
 
     private String url = null;
     
@@ -44,6 +45,12 @@ public abstract class FeedEntityBase implements FeedEntity, Templatable {
     private Person author = null;
     
     private Set<Link> links = new HashSet<Link>();
+
+	private float relevance = 0;
+
+	private Set<Tag> tags = new HashSet<Tag>();
+
+	private boolean favourite = false;
 
     /**
 	 * @return the id
@@ -154,6 +161,9 @@ public abstract class FeedEntityBase implements FeedEntity, Templatable {
     	data.put("datestamp", getDateStamp());
     	data.put("author", getAuthor());
     	data.put("links", getLinks());
+    	data.put("relevance", getRelevance());
+    	data.put("tags", getTags());
+    	data.put("favourite", getFavourite());
 		return data;
     }
 
@@ -173,4 +183,35 @@ public abstract class FeedEntityBase implements FeedEntity, Templatable {
         buffer.append("date = "+getDateStamp()+"\n\n");
         return buffer.toString();
     }
+
+	@Override
+	public void setRelevance(float relevance) {
+		this.relevance = relevance;
+	}
+
+	@Override
+	public float getRelevance() {
+		// TODO Auto-generated method stub
+		return relevance;
+	}
+
+	@Override
+	public void addTag(Tag tag) {
+		tags .add(tag);
+	}
+
+	@Override
+	public Set<Tag> getTags() {
+		return tags;
+	}
+
+	@Override
+	public void setFavourite(boolean favourite) {
+		this.favourite  = favourite;
+	}
+
+	@Override
+	public boolean getFavourite() {
+		return favourite;
+	}
 }

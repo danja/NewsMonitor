@@ -25,6 +25,17 @@ public interface FeedEntity {
 	
 	public String getHtmlUrl();
 
+	public void setRelevance(float relevance);
+	
+	public float getRelevance();
+	
+	public void addTag(Tag tag);
+	
+	public Set<Tag> getTags();
+	
+	public void setFavourite(boolean favourite);
+	
+	public boolean getFavourite();
     /**
      * @param content set the Entry content, typically HTML
      */

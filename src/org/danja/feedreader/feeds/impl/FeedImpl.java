@@ -33,11 +33,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private EntryList entryList = new EntryListImpl();
 
-	private long lastRefresh;
-
-//	private long refreshPeriod;
-
-	// private static final double ditherFactor = 0.1D;
+	private long lastRefresh = 0;
 
 	private int lives = Config.MAX_LIVES;
 
@@ -47,11 +43,15 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private HttpConnector httpConnector = null;
 
-	private Interpreter interpreter;
+	private Interpreter interpreter = null;
 
-	private boolean firstCall;
+	private boolean firstCall = true;
 
 	private String subtitle = null;
+
+	private boolean dead = false;
+
+	private boolean wolatile = false;
 
 	public FeedImpl() {
 	}
@@ -63,12 +63,10 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 		if (httpConnector == null) {
 			httpConnector = new HttpConnector();
-
-			httpConnector.setConditional(!firstCall); // first GET is
-														// unconditional
+			httpConnector.setConditional(!firstCall); // first GET is unconditional
 
 			String url = getUrl();
-			System.out.println("FeedImpl.refresh = " + url);
+			// System.out.println("FeedImpl.refresh = " + url);
 			httpConnector.setUrl(url);
 		}
 		isNew = httpConnector.load();
@@ -199,9 +197,12 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		Map<String, Object> map = super.getTemplateDataMap();
 		map.put("feedUrl", getUrl()); // less confusing in templates/sparql
 		map.put("htmlUrl", getHtmlUrl());
-		map.put("dead", isDead());
 		map.put("entries", this.entryList.getTemplateList());
 		map.put("entryCount", this.entryList.getEntries().size());
+		map.put("subtitle", getSubtitle());
+		map.put("dead", isDead());
+		map.put("lives", getLives());
+		map.put("volatile", isVolatile());
 		return map;
 	}
 
@@ -213,5 +214,30 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	@Override
 	public String getSubtitle() {
 		return subtitle;
+	}
+
+	@Override
+	public void setDead(boolean dead) {
+		this.dead = dead;
+	}
+
+	@Override
+	public void setLives(int lives) {
+		this.lives = lives;
+	}
+
+	@Override
+	public int getLives() {
+		return lives;
+	}
+
+	@Override
+	public void setVolatile(boolean v) {
+		this.wolatile = v;
+	}
+
+	@Override
+	public boolean isVolatile() {
+		return wolatile;
 	}
 }

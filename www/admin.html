@@ -6,11 +6,17 @@
    <link rel="stylesheet" href="css/common.css">
    <link rel="stylesheet" href="css/admin.css">
    <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+   
+    <!--  link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" -->
+    <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css">
+ <!--  link rel="stylesheet" href="css/themes/ui-lightness/jquery.ui.all.css" -->
+  <script src="/js/ui/jquery-ui.js"></script>
+  
    <script type="text/javascript" language="javascript">
+   
+var sparqlQueryEndpoint = "http://localhost:3030/feedreader/query?query=";
 
-var sparqlEndpoint = "http://localhost:3030/feedreader/query?query=";
-
-var sparql = "PREFIX rss: <http://purl.org/rss/1.0/> \n\
+var getFeedsSparql = "PREFIX rss: <http://purl.org/rss/1.0/> \n\
 PREFIX dcterms: <http://purl.org/dc/terms/> \n\
 PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n\
 PREFIX schema: <http://schema.org/> \n\
@@ -25,11 +31,22 @@ SELECT DISTINCT * WHERE { \n\
 } \n\
 ORDER By ?title\n";
 
-console.log(sparql);
+// console.log(sparql);
     
-var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
+var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&output=xml";
 	
     $(function() {
+    	var $loading = $('#spinner').hide();
+    	jQuery.ajaxSetup({
+    		  beforeSend: function() {
+    		     $('#spinner').show();
+    		  },
+    		  complete: function(){
+    		     $('#spinner').hide();
+    		  },
+    		  success: function() {}
+    		});
+    	
       getFeeds();
     });
     	
@@ -37,7 +54,7 @@ var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
     	function getFeeds() {
     	//	$.get(url, function(xml) {
     			$.ajax({
-    				url: url, 
+    				url: getFeedsUrl, 
     				accept: {
     						  xml: 'application/xml;charset=UTF-8',
     						  sparql: 'sparql-results+xml;charset=UTF-8'
@@ -101,24 +118,179 @@ var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
     		row += "</tr>\n";
     		return row;
     	}
+    	
+
+    	///////// buttons/dialogs
+    	
+$(function() {
+	
+    	$("#deleteEntriesButton").on("click", function() {
+			$("#dialog-confirm-delete-entries").dialog("open");
+		});
+    	
+    	$("#deleteAllButton").on("click", function() {
+			$("#dialog-confirm-delete-all").dialog("open");
+			
+		});
+    	
+	    $( "#dialog-confirm-delete-entries" ).dialog({
+	      autoOpen: false,
+	      resizable: false,
+	      height:140,
+	      modal: true,
+	      buttons: {
+	        "Delete": function() {
+	          $( this ).dialog( "close" );
+	          deleteAllEntries();
+	        },
+	        Cancel: function() {
+	          $( this ).dialog( "close" );
+	        }
+	      }
+	    });
+    
+	    $( "#dialog-done-delete-entries" ).dialog({
+	    	  autoOpen: false,
+		      modal: true,
+		      buttons: {
+		        Ok: function() {
+		          $( this ).dialog( "close" );
+		        }
+		      }
+		    });
+	//  });
+    	
+	    $( "#dialog-confirm-delete-all" ).dialog({
+		      autoOpen: false,
+		      resizable: false,
+		      height:140,
+		      modal: true,
+		      buttons: {
+		        "Delete": function() {
+		          $( this ).dialog( "close" );
+		          deleteAll();
+		        },
+		        Cancel: function() {
+		          $( this ).dialog( "close" );
+		        }
+		      }
+		    });
+	    
+		    $( "#dialog-done-delete-all" ).dialog({
+		    	  autoOpen: false,
+			      modal: true,
+			      buttons: {
+			        Ok: function() {
+			          $( this ).dialog( "close" );
+			          location.reload(true); 
+			        }
+			      }
+			    });
+		  });
+    	
+    	
+    	function deleteAllEntries() {
+    		// console.log("delete all");
+    		var sparqlUpdateEndpoint = "http://localhost:3030/feedreader/update";
+
+    		var deleteEntriesSparql = "update=PREFIX schema: <http://schema.org/> \n\
+    			\n\
+    			DELETE {  GRAPH ?g { ?entry ?p ?o }} \n\
+    			INSERT {} \n\
+    			WHERE { \n\
+    			      GRAPH ?g { \n\
+    			         ?entry a schema:article ; \n\
+    			               ?p ?o \n\
+    			} \n\
+    			}";
+
+    		// console.log(sparql);
+    		    
+    		// var deleteEntriesUrl = sparqlUpdateEndpoint + encodeURIComponent(getFeedsSparql) + "&output=xml";
+    		
+    		$.ajax({
+    			  type: "POST",
+    			  url: sparqlUpdateEndpoint,
+    			  data: deleteEntriesSparql
+    			})
+    			  .done(function( msg ) {
+    				  $("#dialog-done-delete-entries").dialog( "open" );
+    			  });
+    	}
+    	
+    	function deleteAll() {
+    		// console.log("delete all");
+    		var sparqlUpdateEndpoint = "http://localhost:3030/feedreader/update";
+
+    		var deleteEntriesSparql = "update=PREFIX schema: <http://schema.org/> \n\
+    			\n\
+    			DELETE {  GRAPH ?g { ?s ?p ?o }} \n\
+    			INSERT {} \n\
+    			WHERE { \n\
+    			      GRAPH ?g { \n\
+    			         ?s ?p ?o \n\
+    			} \n\
+    			}";
+
+    		// console.log(sparql);
+    		    
+    		// var deleteEntriesUrl = sparqlUpdateEndpoint + encodeURIComponent(getFeedsSparql) + "&output=xml";
+    		
+    		$.ajax({
+    			  type: "POST",
+    			  url: sparqlUpdateEndpoint,
+    			  data: deleteEntriesSparql
+    			})
+    			  .done(function( msg ) {
+    				  $("#dialog-done-delete-all").dialog( "open" );
+    			  });
+    	}
+    	
 </script>
 
 </head>
 
 <body>
 <h1>NewsMonitor Admin</h1>
-   <h1>Feeds</h1>
+   
    <p>
       <a href="/index.html">Home</a>
    </p>
 
+<input type="button" id="deleteEntriesButton" value="Delete all Entries" />
+<input type="button" id="deleteAllButton" value="Delete all Data" />
+
 <table>
+<tr><th colspan="2">Feed Settings</th></tr>
 <tr>
   <th>Source</th>
   <th>Feed URL</th> 
 </tr>
 <tr id="feeds"></tr>
   </table>
+  
+    <div id="spinner" class="spinner"></div> <!--   img src="/css/spinner.gif" / -->
    
+<div id="dialog-confirm-delete-entries" title="Delete all entries?">
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+  Entries will be deleted until next cycle. Are you sure?</p>
+</div>
+
+<div id="dialog-done-delete-entries" title="Done">
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    All entries deleted.
+</div>
+
+<div id="dialog-confirm-delete-all" title="Delete all data?">
+   <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+  Data will be permanently deleted. Are you sure?
+  </p>
+</div>
+
+<div id="dialog-done-delete-all" title="Done">
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    All data deleted.
+</div>
+
 </body>
 </html>
