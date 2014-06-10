@@ -14,6 +14,10 @@ a:active {
     text-decoration: underline;
 }
 
+.center {
+	text-align:center;
+}
+
 .spinner {
 height:60px;
 width:60px;

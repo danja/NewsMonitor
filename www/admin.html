@@ -27,6 +27,12 @@ SELECT DISTINCT * WHERE { \n\
       ?channel a rss:channel . \n\
       OPTIONAL { ?channel dcterms:title ?title } \n\
       OPTIONAL { ?channel nm:htmlUrl ?htmlUrl } \n\
+      # admin \n\
+      OPTIONAL { ?channel nm:relevance ?relevance . } \n\
+      OPTIONAL { ?channel nm:favourite ?favourite . } \n\
+      OPTIONAL { ?channel nm:dead ?dead . } \n\
+      OPTIONAL { ?channel nm:lives ?lives . } \n\
+      OPTIONAL { ?channel nm:volatile ?wolatile . } \n\
 } \n\
 } \n\
 ORDER By ?title\n";
@@ -77,7 +83,7 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
 					
     				$xml.find("result").each(function() {
     					// $('#results').html($(this));
-    					var channel, title, htmlUrl;
+    					var channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite;
     					
     					$(this).find("binding[name='channel']").each(function() {
     						channel = $(this).text().trim();
@@ -88,7 +94,23 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     					$(this).find("binding[name='htmlUrl']").each(function() {
     						htmlUrl = $(this).text().trim();
     					});
-    					var feedRow = generateFeedRow(channel, title, htmlUrl);
+    					$(this).find("binding[name='dead']").each(function() {
+    						dead = $(this).text().trim();
+    					});
+    					$(this).find("binding[name='lives']").each(function() {
+    						lives = $(this).text().trim();
+    					});
+    					$(this).find("binding[name='wolatile']").each(function() {
+    						wolatile = $(this).text().trim();
+    					});
+    					$(this).find("binding[name='relevance']").each(function() {
+    						relevance = $(this).text().trim();
+    					});
+    					$(this).find("binding[name='favourite']").each(function() {
+    						favourite = $(this).text().trim();
+    					});
+    					
+    					var feedRow = generateFeedRow(channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite);
     					// $("#feeds").append("$("+feedRow+")");
     					rows += feedRow;
     				});
@@ -98,7 +120,7 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     			
     	}
     	
-    	function generateFeedRow(channel, title, htmlUrl) {
+    	function generateFeedRow(channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite) {
     		// console.log("channel = "+channel);
     		// console.log("title = "+title);
     		// console.log("htmlUrl ="+htmlUrl);
@@ -114,6 +136,31 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     		if(htmlUrl != null && title == null) {
     			row += "<td><a href=\""+htmlUrl+"\"><em>Link</em></a></td>\n";
     			row += "<td><a href=\""+channel+"\">" + channel + "</a></td>\n";
+    		}
+    		if(dead != null) {
+    			row += "<td class=\"center\">"+dead+"</td>\n";
+    		} else {
+    			row += "<td></td>";
+    		}
+    		if(lives != null) {
+    			row += "<td class=\"center\">"+lives+"</td>\n";
+    		} else {
+    			row += "<td></td>";
+    		}
+    		if(wolatile != null) {
+    			row += "<td class=\"center\">"+wolatile+"</td>\n";
+    		} else {
+    			row += "<td></td>";
+    		}
+    		if(relevance != null) {
+    			row += "<td class=\"center\">"+relevance+"</td>\n";
+    		} else {
+    			row += "<td></td>";
+    		}
+    		if(favourite != null) {
+    			row += "<td class=\"center\">"+favourite+"</td>\n";
+    		} else {
+    			row += "<td></td>";
     		}
     		row += "</tr>\n";
     		return row;
@@ -257,14 +304,21 @@ $(function() {
       <a href="/index.html">Home</a>
    </p>
 
+<p>
 <input type="button" id="deleteEntriesButton" value="Delete all Entries" />
 <input type="button" id="deleteAllButton" value="Delete all Data" />
+</p>
 
 <table>
-<tr><th colspan="2">Feed Settings</th></tr>
+<tr><th colspan="7">Feed Settings</th></tr>
 <tr>
   <th>Source</th>
   <th>Feed URL</th> 
+  <th>Dead</th> 
+  <th>Lives</th> 
+  <th>Volatile</th> 
+  <th>Relevance</th> 
+  <th>Favourite</th> 
 </tr>
 <tr id="feeds"></tr>
   </table>

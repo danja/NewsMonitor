@@ -38,6 +38,10 @@ GRAPH ?g { \
       OPTIONAL { ?entry schema:articleBody ?content . } \
       OPTIONAL { ?entry dcterms:creator [foaf:name ?author] . } \
       OPTIONAL { ?entry dcterms:creator [foaf:homepage ?authorHomepage] . } \
+      # admin \
+      OPTIONAL { ?entry nm:relevance ?relevance . } \
+      OPTIONAL { ?entry nm:favourite ?favourite . } \
+      OPTIONAL { ?entry nm:read ?read . } \
    }\
 } \
 ORDER BY DESC(?date) \

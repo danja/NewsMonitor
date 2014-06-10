@@ -4,11 +4,12 @@ PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX schema:<http://schema.org/>
 PREFIX nm: <http://purl.org/stuff/newsmonitor/>
 
-SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?date ?author ?authorHomepage 
+SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?date ?author ?authorHomepage ?read 
 WHERE { 
 
 GRAPH ?g {
    ?entry a schema:article .
+   # feed level
       OPTIONAL { 
          ?feedUrl dcterms:title ?feedTitle . 
          ?entry dcterms:source ?feedUrl .
@@ -17,11 +18,16 @@ GRAPH ?g {
          ?source nm:htmlUrl ?feedHtml . 
          ?entry dcterms:source ?feedUrl .
       }
+   # entry level
       OPTIONAL { ?entry dcterms:title ?title . }
       OPTIONAL { ?entry dcterms:date ?date . }
       OPTIONAL { ?entry schema:articleBody ?content . }
       OPTIONAL { ?entry dcterms:creator [foaf:name ?author] . }
       OPTIONAL { ?entry dcterms:creator [foaf:homepage ?authorHomepage] . }
+      # admin
+      OPTIONAL { ?entry nm:relevance ?relevance . }
+      OPTIONAL { ?entry nm:favourite ?favourite . }
+      OPTIONAL { ?entry nm:read ?read . }
    }
 }
 ORDER BY DESC(?updated)

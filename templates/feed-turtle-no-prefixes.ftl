@@ -3,10 +3,11 @@
          dcterms:source <${feedUrl}> ;
          
          # admin bits
-         <#if lives??>nm:lives "${lives}" ;</#if>
-         <#if dead??>nm:dead "${dead}" ;</#if>
-         <#if volatile??>nm:volatile "${volatile}" ;</#if>
-         <#if relevance??>nm:relevance "${relevance}" ;</#if>
+         <#if lives??>nm:lives "${lives?c}" ;</#if>
+         <#if dead??>nm:dead "${dead?c}" ;</#if> 
+         <#if volatile??>nm:volatile "${volatile?c}" ;</#if>
+         <#if relevance??>nm:relevance "${relevance?c}" ;</#if>
+         <#if favourite??>nm:favourite "${favourite?c}" ;</#if>
                   
          <#if id??>dcterms:identifier "${id}" ;</#if>
          <#if htmlUrl??>nm:htmlUrl <${htmlUrl}> ;</#if>
@@ -26,7 +27,7 @@
          	<#if datestamp.published??>dcterms:published "${datestamp.published}" ;</#if>
          	<#if datestamp.updated??>dcterms:updated "${datestamp.updated}" ;</#if>
          </#if> 
-         <#if dead??>nm:dead "${dead?c}" ;</#if> 
+         
          .
          <#list links as link>
          	<#if link.href??><${feedUrl}> dcterms:references <${link.href}> .</#if>
@@ -40,7 +41,16 @@
          	   		<#if link.type??>nm:type """${link.type}""" ;</#if>
          	   ] .
          	</#if>
-         </#list>        
+         </#list>     
+         <#list tags as tag>
+         	<#if tag.text??>
+         	    <${feedUrl}> nm:tag [ 
+         	    	a nm:Tag ;
+         	        nm:tagText <${tag.text}> ;
+         	        <#if tag.relevance??><${feedUrl}> nm:relevance <${tag.relevance}> .</#if>
+         	        ] .
+         	</#if>
+         </#list>
     
 <#list entries as entry>
 # Entry ------------------------
@@ -64,6 +74,20 @@
      <#if entry.datestamp.published??>dcterms:published "${entry.datestamp.published}" ;</#if>
      <#if entry.datestamp.updated??>dcterms:updated "${entry.datestamp.updated}" ;</#if>
          </#if>
+         
+                  	# admin
+         	 <#if entry.read??>nm:read "${entry.read?c}" ;</#if>
+         	 <#if entry.relevance??>nm:relevance "${entry.relevance?c}" ;</#if>
+         	 <#if entry.favourite??>nm:favourite "${entry.favourite?c}" ;</#if> 
+         	 <#list entry.tags as tag>
+         	    <#if tag.text??>
+         	       <${feedUrl}> nm:tag [ 
+         	    	   a nm:Tag ;
+         	           nm:tagText <${tag.text}> ;
+         	           <#if tag.relevance??><${feedUrl}> nm:relevance <${tag.relevance}> .</#if>
+         	           ] .
+         	   </#if>
+            </#list>
          .
          <#list entry.links as link>
          	<#if link.href??>
@@ -77,6 +101,6 @@
          	   		<#if link.type??>nm:type """${link.type}""" ;</#if>
          	   ] .
          	</#if>
-         </#list>   
+        </#list>   
 </#list>
 <#if entryCount == 0> .</#if>
