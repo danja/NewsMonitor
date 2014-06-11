@@ -109,8 +109,10 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     					$(this).find("binding[name='favourite']").each(function() {
     						favourite = $(this).text().trim();
     					});
-    					
-    					var feedRow = generateFeedRow(channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite);
+    					$(this).find("binding[name='relevanceFactor']").each(function() {
+    						favourite = $(this).text().trim();
+    					});
+    					var feedRow = generateFeedRow(channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite, relevanceFactor);
     					// $("#feeds").append("$("+feedRow+")");
     					rows += feedRow;
     				});
@@ -120,7 +122,7 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     			
     	}
     	
-    	function generateFeedRow(channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite) {
+    	function generateFeedRow(channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite, relevanceFactor) {
     		// console.log("channel = "+channel);
     		// console.log("title = "+title);
     		// console.log("htmlUrl ="+htmlUrl);
@@ -140,27 +142,32 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     		if(dead != null) {
     			row += "<td class=\"center\">"+dead+"</td>\n";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		if(lives != null) {
     			row += "<td class=\"center\">"+lives+"</td>\n";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		if(wolatile != null) {
     			row += "<td class=\"center\">"+wolatile+"</td>\n";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		if(relevance != null) {
     			row += "<td class=\"center\">"+relevance+"</td>\n";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		if(favourite != null) {
     			row += "<td class=\"center\">"+favourite+"</td>\n";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
+    		}
+    		if(relevanceFactor != null) {
+    			row += "<td class=\"center\">"+relevanceFactor+"</td>\n";
+    		} else {
+    			row += "<td class=\"center\">-</td>";
     		}
     		row += "</tr>\n";
     		return row;

@@ -8,7 +8,7 @@
          <#if volatile??>nm:volatile "${volatile?c}" ;</#if>
          <#if relevance??>nm:relevance "${relevance?c}" ;</#if>
          <#if favourite??>nm:favourite "${favourite?c}" ;</#if>
-                  
+         <#if relevanceFactor??> nm:relevanceFactor "${relevanceFactor?c}" ;</#if>                  
          <#if id??>dcterms:identifier "${id}" ;</#if>
          <#if htmlUrl??>nm:htmlUrl <${htmlUrl}> ;</#if>
          <#if title??>dcterms:title """${title}""" ;</#if>

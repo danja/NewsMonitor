@@ -16,12 +16,13 @@ import java.util.Map;
 import java.util.Set;
 
 import org.danja.feedreader.interpreters.Interpreter;
+import org.danja.feedreader.pages.Page;
 
 /**
  * syndication-oriented access to HTTP operations
  *  
  */
-public interface Feed extends FeedEntity {
+public interface Feed extends FeedEntity, Page {
 	
 	/**
 	 * @param subtitle
@@ -81,6 +82,10 @@ public interface Feed extends FeedEntity {
     public void setVolatile(boolean v);
     
     public boolean isVolatile();
+    
+	public void setRelevanceFactor(float relevanceFactor);
+	
+	public float getRelevanceFactor();
     
     
     /**

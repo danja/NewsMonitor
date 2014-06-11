@@ -56,6 +56,8 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private boolean wolatile = false;
 
+	private float relevanceFactor = 0;
+
 	public FeedImpl() {
 	}
 
@@ -68,8 +70,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			httpConnector = new HttpConnector();
 			httpConnector.setConditional(!firstCall); // first GET is unconditional
 
-			String url = getUrl();
-			// System.out.println("FeedImpl.refresh = " + url);
+			String url = getUrl(); // ?? refactor?
 			httpConnector.setUrl(url);
 		}
 		isNew = httpConnector.load();
@@ -196,20 +197,6 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	}
 
 	@Override
-	public Map<String, Object> getTemplateDataMap() {
-		Map<String, Object> map = super.getTemplateDataMap();
-		map.put("feedUrl", getUrl()); // less confusing in templates/sparql
-		map.put("htmlUrl", getHtmlUrl());
-		map.put("entries", this.entryList.getTemplateList());
-		map.put("entryCount", this.entryList.getEntries().size());
-		map.put("subtitle", getSubtitle());
-		map.put("dead", isDead());
-		map.put("lives", getLives());
-		map.put("volatile", isVolatile());
-		return map;
-	}
-
-	@Override
 	public void setSubtitle(String subtitle) {
 		this.subtitle  = subtitle;
 	}
@@ -249,5 +236,32 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		Set<Link> links = super.getLinks();
 		links.addAll(entryList.getAllLinks());
 		return links;
+	}
+
+	@Override
+	public void setRelevanceFactor(float relevanceFactor) {
+		this.relevanceFactor = relevanceFactor;
+	}
+
+	@Override
+	public float getRelevanceFactor() {
+		// TODO Auto-generated method stub
+		return relevanceFactor;
+	}
+	
+
+	@Override
+	public Map<String, Object> getTemplateDataMap() {
+		Map<String, Object> map = super.getTemplateDataMap();
+		map.put("feedUrl", getUrl()); // less confusing in templates/sparql
+		map.put("htmlUrl", getHtmlUrl());
+		map.put("entries", this.entryList.getTemplateList());
+		map.put("entryCount", this.entryList.getEntries().size());
+		map.put("subtitle", getSubtitle());
+		map.put("dead", isDead());
+		map.put("lives", getLives());
+		map.put("volatile", isVolatile());
+		map.put("relevanceFactor", getRelevanceFactor());
+		return map;
 	}
 }

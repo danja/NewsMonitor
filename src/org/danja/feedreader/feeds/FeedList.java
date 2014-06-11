@@ -11,6 +11,7 @@
 package org.danja.feedreader.feeds;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Models a set of feeds/connections
@@ -45,6 +46,8 @@ public interface FeedList
    public void refreshAll();
    
    public int size();
+   
+   public Set<Link> getAllLinks();
 
 // public EntryList getEntries();
 

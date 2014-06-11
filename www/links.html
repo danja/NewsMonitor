@@ -5,6 +5,7 @@
    <title>NewsMonitor Links</title>
    
    <link rel="stylesheet" href="/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/css/common.css">
 
    <!-- link rel="stylesheet" href="/css/themes/base/jquery.ui.all.css" -->
 
@@ -13,8 +14,6 @@
         
         <script src="/js/jquery-migrate-1.2.1.js"></script>
           <script src="/js/colResizable-1.3.min.js"></script>
-   <!--  link rel="stylesheet" href="css/common.css" -->
-   <!--  link rel="stylesheet" href="css/admin.css" -->
    
 
    
@@ -147,32 +146,32 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
     		if(href != null) {
     			row += "<td><a href=\""+href+"\">"+href+"</a></td>";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		if(label != null) {
     		   row += "<td>"+label+"</td>";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		if(rel != null) {
-     		   row += "<td>"+rel+"</td>";
+     		   row += "<td class=\"center\">"+rel+"</td>";
      		} else {
-     			row += "<td>-</td>";
+     			row += "<td class=\"center\">-</td>";
      		}
     		if(type != null) {
-    			row += "<td>"+type+"</td>";
+    			row += "<td class=\"center\">"+type+"</td>";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		if(explored != null) {
-    			row += "<td>"+explored+"</td>";
+    			row += "<td class=\"center\">"+explored+"</td>";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		if(relevance != null) {
-    			row += "<td>"+relevance+"</td>";
+    			row += "<td class=\"center\">"+relevance+"</td>";
     		} else {
-    			row += "<td>-</td>";
+    			row += "<td class=\"center\">-</td>";
     		}
     		row += "</tr>\n";
     		return row;
@@ -215,12 +214,12 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
 
 <table  id="linksTable" class="table table-bordered" data-resizable-columns-id="links">
 <tr>
-  <th>URL</th>
-  <th>Label</th> 
-  <th>Rel</th> 
-  <th>Type</th> 
-  <th>Explored</th> 
-  <th>Relevance</th> 
+  <th class="center">URL</th>
+  <th class="center">Label</th> 
+  <th class="center">Rel</th> 
+  <th class="center">Type</th> 
+  <th class="center">Explored</th> 
+  <th class="center">Relevance</th> 
 </tr>
 <tr id="links"></tr>
   </table>

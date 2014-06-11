@@ -21,7 +21,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 
-public class FormatSniffer extends DefaultHandler{
+public class FormatSniffer extends DefaultHandler {
 
     char format = FeedConstants.UNKNOWN;
     

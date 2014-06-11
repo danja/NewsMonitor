@@ -18,6 +18,10 @@ GRAPH ?g {
          ?source nm:htmlUrl ?feedHtml . 
          ?entry dcterms:source ?feedUrl .
       }
+      OPTIONAL { 
+         ?source nm:relevanceFactor ?relevanceFactor . 
+         ?entry dcterms:source ?feedUrl .
+      }
    # entry level
       OPTIONAL { ?entry dcterms:title ?title . }
       OPTIONAL { ?entry dcterms:date ?date . }

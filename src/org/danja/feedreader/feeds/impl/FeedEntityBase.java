@@ -21,6 +21,7 @@ import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.feeds.Person;
 import org.danja.feedreader.feeds.Tag;
 import org.danja.feedreader.feeds.Templatable;
+import org.danja.feedreader.pages.PageBase;
 import org.danja.feedreader.utils.HtmlCleaner;
 
 /**
@@ -28,7 +29,7 @@ import org.danja.feedreader.utils.HtmlCleaner;
  * 
  * can some of these be final?
  */
-public abstract  class FeedEntityBase implements FeedEntity, Templatable {
+public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Templatable {
 
     private String url = null;
     
