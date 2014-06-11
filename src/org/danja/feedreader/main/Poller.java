@@ -34,6 +34,13 @@ public class Poller implements Runnable {
 
 	private FeedList feedList = new FeedListImpl();
 
+	/**
+	 * @return the feedList
+	 */
+	public FeedList getFeedList() {
+		return feedList;
+	}
+
 	private boolean running = false;
 
 	private Thread thread;
@@ -152,7 +159,7 @@ public class Poller implements Runnable {
 //		}
 	}
 
-	public void setFeedList(List<String> feedUrls) {
+	public void setFeedUrls(List<String> feedUrls) {
 		this.feedUrls = feedUrls;
 	}
 }

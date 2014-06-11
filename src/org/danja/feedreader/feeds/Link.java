@@ -2,6 +2,9 @@ package org.danja.feedreader.feeds;
 
 public interface Link {
 
+	public boolean explored();
+	
+	public void setExplored(boolean explored);
 	/**
 	 * @return the href
 	 */

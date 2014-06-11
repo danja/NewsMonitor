@@ -11,6 +11,7 @@ package org.danja.feedreader.main;
 import java.util.List;
 import java.util.Set;
 
+import org.danja.feedreader.discovery.LinkExplorer;
 import org.danja.feedreader.feeds.FeedList;
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.main.FeedListLoader.LineHandler;
@@ -22,6 +23,7 @@ import org.danja.feedreader.templating.Templater;
 public class Main {
 
 	public static final boolean POLLER_NO_LOOP = false; // for debugging
+	private static LinkExplorer linkManager;
 
 	/**
 	 * @param args
@@ -41,7 +43,7 @@ public class Main {
 
 		// load feed list from store into memory, pass to Poller
 		System.out.println("Loading feed list from store...");
-		poller.setFeedList(main.getFeeds());
+		poller.setFeedUrls(main.getFeeds());
 
 		// Set channelURIs = planet.loadChannelList("input/bloggers.rdf");
 		// Set channelURIs = planet.loadChannelList("input/feedlist.opml");
@@ -49,15 +51,19 @@ public class Main {
 		// FeedList feedSet =
 		System.out.println("\n==== Initialising Feeds ====");
 		poller.initFeeds();
+		
+		linkManager = new LinkExplorer(poller.getFeedList());
 
 		System.out.println("\n==== Starting Poller ====");
 		poller.start();
+		linkManager.start();
 		try {
 			Thread.sleep(300000); // wait a bit
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		 poller.stop();
+		 linkManager.stop();
 		 poller.displayFeeds();
 	}
 

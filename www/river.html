@@ -14,39 +14,39 @@
 
 	var sparqlEndpoint = "http://localhost:3030/feedreader/query?query=";
 	
-	var sparql = "PREFIX rss: <http://purl.org/rss/1.0/>\
-PREFIX dcterms: <http://purl.org/dc/terms/>\
-PREFIX foaf: <http://xmlns.com/foaf/0.1/> \
-PREFIX schema: <http://schema.org/> \
-PREFIX nm: <http://purl.org/stuff/newsmonitor/> \
-\
-SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?date ?author ?authorHomepage \
-WHERE { \
-\
-GRAPH ?g { \
-   ?entry a schema:article . \
-      OPTIONAL { \
-         ?feedUrl dcterms:title ?feedTitle . \
-         ?entry dcterms:source ?feedUrl . \
-      } \
-      OPTIONAL { \
-         ?source nm:htmlUrl ?feedHtml . \
-         ?entry dcterms:source ?feedUrl . \
-      } \
-      OPTIONAL { ?entry dcterms:title ?title . } \
-      OPTIONAL { ?entry dcterms:date ?date . } \
-      OPTIONAL { ?entry schema:articleBody ?content . } \
-      OPTIONAL { ?entry dcterms:creator [foaf:name ?author] . } \
-      OPTIONAL { ?entry dcterms:creator [foaf:homepage ?authorHomepage] . } \
-      # admin \
-      OPTIONAL { ?entry nm:relevance ?relevance . } \
-      OPTIONAL { ?entry nm:favourite ?favourite . } \
-      OPTIONAL { ?entry nm:read ?read . } \
-   }\
-} \
-ORDER BY DESC(?date) \
-# LIMIT 10 \
-OFFSET 0 \
+	var sparql = "PREFIX rss: <http://purl.org/rss/1.0/> \n\
+PREFIX dcterms: <http://purl.org/dc/terms/> \n\
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n\
+PREFIX schema: <http://schema.org/> \n\
+PREFIX nm: <http://purl.org/stuff/newsmonitor/> \n\
+\n\
+SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?date ?author ?authorHomepage \n\
+WHERE { \n\
+\n\
+GRAPH ?g { \n\
+   ?entry a schema:article . \n\
+      OPTIONAL { \n\
+         ?feedUrl dcterms:title ?feedTitle . \n\
+         ?entry dcterms:source ?feedUrl . \n\
+      } \n\
+      OPTIONAL { \n\
+         ?source nm:htmlUrl ?feedHtml . \n\
+         ?entry dcterms:source ?feedUrl . \n\
+      } \n\
+      OPTIONAL { ?entry dcterms:title ?title . } \n\
+      OPTIONAL { ?entry dcterms:date ?date . } \n\
+      OPTIONAL { ?entry schema:articleBody ?content . } \n\
+      OPTIONAL { ?entry dcterms:creator [foaf:name ?author] . } \n\
+      OPTIONAL { ?entry dcterms:creator [foaf:homepage ?authorHomepage] . } \n\
+      # admin \n\
+      OPTIONAL { ?entry nm:relevance ?relevance . } \n\
+      OPTIONAL { ?entry nm:favourite ?favourite . } \n\
+      OPTIONAL { ?entry nm:read ?read . } \n\
+   }\n\
+} \n\
+ORDER BY DESC(?date) \n\
+LIMIT 10 \n\
+OFFSET 0 \n\
 ";
 
 var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";

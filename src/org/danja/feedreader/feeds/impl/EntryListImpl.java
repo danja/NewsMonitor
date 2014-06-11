@@ -20,6 +20,7 @@ import java.util.Set;
 
 import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.EntryList;
+import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.templating.Templater;
 
 /**
@@ -106,5 +107,14 @@ public class EntryListImpl implements EntryList {
 			list.add(entries.get(i).getTemplateDataMap());
 		}
 		return list;
+	}
+
+	@Override
+	public synchronized Set<Link> getAllLinks() { // TODO check synch
+		Set<Link> links = new HashSet<Link>();
+		for(int i=0;i<entries.size();i++) {
+			links.addAll(entries.get(i).getLinks());
+		}
+		return links;
 	}
 }

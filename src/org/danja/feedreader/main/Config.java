@@ -36,6 +36,8 @@ public class Config {
  // buggy-list.txt rdf-bloggers-feedlist.txt;
 	public static final String SEED_FEEDLIST = "input/short-list.txt";
 
+	public static final int LINK_EXPLORER_SLEEP_PERIOD = 1000;
+
 	
 
 	/**

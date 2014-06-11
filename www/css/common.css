@@ -18,6 +18,10 @@ a:active {
 	text-align:center;
 }
 
+.missing {
+	color: #66FF66;
+}
+
 .spinner {
 height:60px;
 width:60px;

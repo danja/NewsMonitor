@@ -140,27 +140,27 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     		if(dead != null) {
     			row += "<td class=\"center\">"+dead+"</td>\n";
     		} else {
-    			row += "<td></td>";
+    			row += "<td>-</td>";
     		}
     		if(lives != null) {
     			row += "<td class=\"center\">"+lives+"</td>\n";
     		} else {
-    			row += "<td></td>";
+    			row += "<td>-</td>";
     		}
     		if(wolatile != null) {
     			row += "<td class=\"center\">"+wolatile+"</td>\n";
     		} else {
-    			row += "<td></td>";
+    			row += "<td>-</td>";
     		}
     		if(relevance != null) {
     			row += "<td class=\"center\">"+relevance+"</td>\n";
     		} else {
-    			row += "<td></td>";
+    			row += "<td>-</td>";
     		}
     		if(favourite != null) {
     			row += "<td class=\"center\">"+favourite+"</td>\n";
     		} else {
-    			row += "<td></td>";
+    			row += "<td>-</td>";
     		}
     		row += "</tr>\n";
     		return row;

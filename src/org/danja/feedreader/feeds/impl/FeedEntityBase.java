@@ -113,7 +113,7 @@ public abstract  class FeedEntityBase implements FeedEntity, Templatable {
 		this.links.addAll(links);
 	}
 	
-    public Set<Link> getLinks() {
+    public synchronized Set<Link> getLinks() { // TODO check synch
         return links;
     }
 

@@ -23,7 +23,9 @@ public class LinkImpl implements Link, Templatable {
 	private String rel = null;
 	private String label = null;
 	
-	private String href;
+	private String href = null;
+	private boolean explored = false;
+	
 	/* (non-Javadoc)
 	 * @see org.danja.feedreader.feeds.Link#getHref()
 	 */
@@ -81,12 +83,19 @@ public class LinkImpl implements Link, Templatable {
 		this.label = label;
 	}
 
+	@Override
+	public boolean explored() {
+		return explored ;
+	}
+	@Override
+	public void setExplored(boolean explored) {
+		this.explored = explored;
+	}
 	
     public String toString() {
 //        return "<link rel=\"" + rel + "\" href=\"" + href + "\" type=\""
 //                + type + "\"/>";
-		return "[href = "+href+", type = "+type+", rel = "+rel+", label = "+label+"]\n";
-
+		return "[href = "+href+", type = "+type+", rel = "+rel+", label = "+label+", explored = "+explored+"]\n";
     }
 
     
@@ -97,6 +106,7 @@ public class LinkImpl implements Link, Templatable {
 		map.put("label", this.label);
 		map.put("rel", this.rel);
 		map.put("type", this.type);
+		map.put("explored", this.explored);
 		return map;
 	}
 }

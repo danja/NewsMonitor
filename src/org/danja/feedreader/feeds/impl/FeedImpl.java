@@ -13,13 +13,16 @@ package org.danja.feedreader.feeds.impl;
 import java.io.InputStream;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.danja.feedreader.feeds.Entry;
 import org.danja.feedreader.feeds.EntryList;
 import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.feeds.FeedConstants;
 import org.danja.feedreader.feeds.FeedEntity;
+import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.main.Config;
@@ -239,5 +242,12 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	@Override
 	public boolean isVolatile() {
 		return wolatile;
+	}
+
+	@Override
+	public synchronized Set<Link> getAllLinks() { // check synch
+		Set<Link> links = super.getLinks();
+		links.addAll(entryList.getAllLinks());
+		return links;
 	}
 }

@@ -11,7 +11,9 @@
 package org.danja.feedreader.feeds;
 
 import java.io.InputStream;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.danja.feedreader.interpreters.Interpreter;
 
@@ -41,6 +43,7 @@ public interface Feed extends FeedEntity {
 
     public boolean refresh();
 
+    public Set<Link> getAllLinks();
    // public void setRefreshPeriod(long refreshPeriod);
 
     /**

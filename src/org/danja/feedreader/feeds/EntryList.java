@@ -12,6 +12,7 @@ package org.danja.feedreader.feeds;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 
 /**
@@ -58,6 +59,8 @@ public interface EntryList {
 	public void addAll(EntryList entries);
 
 	public List<Entry> getEntries();
+	
+	public Set<Link> getAllLinks();
 
 	public List<Map<String, Object>> getTemplateList();
 }
