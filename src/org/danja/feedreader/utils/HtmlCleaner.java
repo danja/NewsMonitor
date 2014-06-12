@@ -17,8 +17,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.danja.feedreader.feeds.Link;
-import org.danja.feedreader.feeds.impl.LinkImpl;
+import org.danja.feedreader.model.Link;
+import org.danja.feedreader.model.impl.LinkImpl;
 
 /**
  *
@@ -46,7 +46,7 @@ public class HtmlCleaner {
 		if (raw == null || "".equals(raw))
 			return "";
 		String stripped = raw.replaceAll("<[^>]*>", " ");
-		stripped.replaceAll("\\s+", " ").trim(); // collapse spaces
+		stripped = stripped.replaceAll("\\s+", " ").trim(); // collapse spaces
 		return stripped;
 	}
 

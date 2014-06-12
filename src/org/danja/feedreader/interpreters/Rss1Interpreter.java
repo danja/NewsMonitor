@@ -8,7 +8,7 @@
  */
 package org.danja.feedreader.interpreters;
 
-import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.model.Feed;
 
 /**
  * TODO push RSS 1.0 to server

@@ -6,13 +6,13 @@ import static org.junit.Assert.assertTrue;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.danja.feedreader.feeds.Entry;
-import org.danja.feedreader.feeds.FeedConstants;
-import org.danja.feedreader.feeds.Link;
-import org.danja.feedreader.feeds.impl.FeedImpl;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;
+import org.danja.feedreader.model.Entry;
+import org.danja.feedreader.model.FeedConstants;
+import org.danja.feedreader.model.Link;
+import org.danja.feedreader.model.impl.FeedImpl;
 import org.danja.feedreader.templating.Templater;
 import org.danja.feedreader.utils.HttpServer;
 import org.junit.After;

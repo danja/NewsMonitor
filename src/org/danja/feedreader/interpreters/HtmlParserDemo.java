@@ -12,9 +12,9 @@ package org.danja.feedreader.interpreters;
 import java.io.InputStream;
 import java.util.List;
 
-import org.danja.feedreader.feeds.Link;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.main.DemoConstants;
+import org.danja.feedreader.model.Link;
 
  
 public class HtmlParserDemo {

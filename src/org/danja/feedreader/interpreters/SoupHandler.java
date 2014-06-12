@@ -19,7 +19,7 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.model.Feed;
 import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;

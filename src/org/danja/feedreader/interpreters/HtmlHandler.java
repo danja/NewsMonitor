@@ -12,8 +12,8 @@ package org.danja.feedreader.interpreters;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.danja.feedreader.feeds.Link;
-import org.danja.feedreader.feeds.impl.LinkImpl;
+import org.danja.feedreader.model.Link;
+import org.danja.feedreader.model.impl.LinkImpl;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;

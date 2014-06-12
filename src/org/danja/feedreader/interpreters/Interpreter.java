@@ -9,7 +9,8 @@
  */
 package org.danja.feedreader.interpreters;
 
-import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.model.Feed;
+import org.danja.feedreader.model.Page;
 
 /**
  * Bridges between feed and parser
@@ -19,5 +20,5 @@ import org.danja.feedreader.feeds.Feed;
  */
 public interface Interpreter  { 
 
-    public void interpret(Feed feed);
+    public void interpret(Page page);
 }

@@ -8,7 +8,8 @@
  */
 package org.danja.feedreader.interpreters;
 
-import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.model.Feed;
+import org.danja.feedreader.model.Page;
 
 /**
  *
@@ -23,10 +24,10 @@ public class HtmlInterpreter implements Interpreter {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.danja.feedreader.interpreters.Interpreter#interpret(org.danja.feedreader.feeds.Feed)
+	 * @see org.danja.feedreader.interpreters.Interpreter#interpret(org.danja.feedreader.model.Feed)
 	 */
 	@Override
-	public void interpret(Feed feed) {
+	public void interpret(Page page) {
 		// TODO Auto-generated method stub
 
 	}

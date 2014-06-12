@@ -3,12 +3,13 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Feeds</title>
+<title>Latest Entries</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
 <!-- link rel="stylesheet" href="css/jquery.ui.all.css" -->
 <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css">
 <!--   link rel="stylesheet" href="css/jquery.ui.accordian.css" -->
    <link rel="stylesheet" href="css/common.css">
-	<!--  link rel="stylesheet" href="css/river.css" -->
+	<link rel="stylesheet" href="css/river.css">
 <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
 <script type="text/javascript" language="javascript">
 
@@ -136,7 +137,7 @@ $(function() {
 		entry += "<a href=\""+entryUrl+"\">" + title + "</a></h3>";
 		entry += "<div>";
 		
-		entry += "<div class=\"content\">"+content+"</div>";
+		entry += "<div class=\"entryContent\">"+content+"</div>";
 
 		entry += "<div class=\"updated\">" + date + "</div>";
 		
@@ -145,19 +146,26 @@ $(function() {
 	}
 	
 	function doAccordion(){
-		$( "#accordion" ).accordion({
-			heightStyle: "fill"
-		});
+// 		$( "#accordion" ).accordion({
+// 			autoHeight: false, 
+// 			active: 1,
+// 			heightStyle: "content" 
+// 		});
 		$("#accordion-resizer").resizable({
-			minHeight: 140,
+			/* minHeight: 140, */
 			minWidth: 200,
 			resize: function() {
 				$( "#accordion" ).accordion( "refresh" );
 			}
-	});
-		$("#accordion").accordion({collapsible:true});
-		$("#accordion").accordion({active:false});
-		$("#accordion-resizer").width(800);
+	    });
+		$("#accordion").accordion({
+			collapsible:true,
+			autoHeight: false,
+			heightStyle: "content" , 
+			active:false
+			});
+	$("#accordion-resizer").width(800);
+	$("#accordion").height(100);
 	}
 	</script>
 
@@ -176,20 +184,12 @@ $(function() {
 </script>
 </head>
 <body>
- 
-	<h1>Entries</h1>
-	<p>
-		<a href="/index.html">Home</a>
-	</p>
+   <h3><a href="/index.html">NewsMonitor</a> Entries</h3>
 
- <div id="spinner" class="spinner"></div> <!--   img src="/css/spinner.gif" / -->  
- 
-<div id="accordion-resizer" class="ui-widget-content">
-
-	<div id="accordion">
-   </div>
-
-   </div>
-  
+   <div id="spinner" class="spinner"></div> 
+   <!-- div id="accordion-resizer" class="ui-widget-content" -->
+      <div id="accordion"></div>
+   <!-- /div -->
+   
 </body>
 </html>

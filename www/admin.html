@@ -3,6 +3,7 @@
 <head>
    <meta charset="utf-8">
    <title>NewsMonitor Admin</title>
+     <link rel="stylesheet" href="/css/bootstrap.min.css">
    <link rel="stylesheet" href="css/common.css">
    <link rel="stylesheet" href="css/admin.css">
    <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
@@ -83,7 +84,7 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
 					
     				$xml.find("result").each(function() {
     					// $('#results').html($(this));
-    					var channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite;
+    					var channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite, relevanceFactor;
     					
     					$(this).find("binding[name='channel']").each(function() {
     						channel = $(this).text().trim();
@@ -110,7 +111,7 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     						favourite = $(this).text().trim();
     					});
     					$(this).find("binding[name='relevanceFactor']").each(function() {
-    						favourite = $(this).text().trim();
+    						relevanceFactor = $(this).text().trim();
     					});
     					var feedRow = generateFeedRow(channel, title, htmlUrl, dead, lives, wolatile, relevance, favourite, relevanceFactor);
     					// $("#feeds").append("$("+feedRow+")");
@@ -139,6 +140,19 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     			row += "<td><a href=\""+htmlUrl+"\"><em>Link</em></a></td>\n";
     			row += "<td><a href=\""+channel+"\">" + channel + "</a></td>\n";
     		}
+//     		  <th>Source</th>
+//     		  <th>Feed URL</th> 
+//     		  <th>Favourite</th> 
+//     		  <th>Dead</th> 
+//     		  <th>Lives</th> 
+//     		  <th>Volatile</th> 
+//     		  <th>Relevance</th> 
+//     		  <th>Relevance Factor</th> 
+    		if(favourite != null) {
+    			row += "<td class=\"center\">"+favourite+"</td>\n";
+    		} else {
+    			row += "<td class=\"center\">-</td>";
+    		}  
     		if(dead != null) {
     			row += "<td class=\"center\">"+dead+"</td>\n";
     		} else {
@@ -156,11 +170,6 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     		}
     		if(relevance != null) {
     			row += "<td class=\"center\">"+relevance+"</td>\n";
-    		} else {
-    			row += "<td class=\"center\">-</td>";
-    		}
-    		if(favourite != null) {
-    			row += "<td class=\"center\">"+favourite+"</td>\n";
     		} else {
     			row += "<td class=\"center\">-</td>";
     		}
@@ -321,11 +330,12 @@ $(function() {
 <tr>
   <th>Source</th>
   <th>Feed URL</th> 
+  <th>Favourite</th> 
   <th>Dead</th> 
   <th>Lives</th> 
   <th>Volatile</th> 
   <th>Relevance</th> 
-  <th>Favourite</th> 
+  <th>Relevance Factor</th> 
 </tr>
 <tr id="feeds"></tr>
   </table>

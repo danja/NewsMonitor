@@ -9,8 +9,8 @@
  */
 package org.danja.feedreader.interpreters;
 
-import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.feeds.FeedConstants;
+import org.danja.feedreader.model.Feed;
+import org.danja.feedreader.model.FeedConstants;
 
 /**
  * Looks after the creation of interpreters (gluing parsers together)

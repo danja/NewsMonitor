@@ -9,7 +9,8 @@
  */
 package org.danja.feedreader.interpreters;
 
-import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.model.Feed;
+import org.danja.feedreader.model.Page;
 import org.xml.sax.ContentHandler;
 
 /**
@@ -27,11 +28,11 @@ public class ParserInterpreter implements Interpreter {
 		feedParser.setFeed(feed);
 	}
 
-	public void interpret(Feed feed) {
+	public void interpret(Page page) { // why ??
 		// System.out.println("parsing "+feed.getUrl());
 		// feedParser.setFeed(feed);
 		feedParser.parse();
-		System.out.println("parsed");
+		// System.out.println("parsed");
 	}
 
 	public String toString() {

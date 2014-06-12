@@ -14,15 +14,15 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.danja.feedreader.feeds.Entry;
-import org.danja.feedreader.feeds.EntryList;
-import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.feeds.Link;
-import org.danja.feedreader.feeds.Person;
-import org.danja.feedreader.feeds.impl.EntryImpl;
-import org.danja.feedreader.feeds.impl.EntryListImpl;
-import org.danja.feedreader.feeds.impl.LinkImpl;
-import org.danja.feedreader.feeds.impl.PersonImpl;
+import org.danja.feedreader.model.Entry;
+import org.danja.feedreader.model.EntryList;
+import org.danja.feedreader.model.Feed;
+import org.danja.feedreader.model.Link;
+import org.danja.feedreader.model.Person;
+import org.danja.feedreader.model.impl.EntryImpl;
+import org.danja.feedreader.model.impl.EntryListImpl;
+import org.danja.feedreader.model.impl.LinkImpl;
+import org.danja.feedreader.model.impl.PersonImpl;
 import org.danja.feedreader.utils.DateConverters;
 import org.danja.feedreader.utils.HtmlCleaner;
 import org.xml.sax.Attributes;
@@ -54,7 +54,9 @@ public class Rss2Handler extends FeedHandlerBase {
 	private final static char IN_NOTHING = 0;
 	private final static char IN_CHANNEL = 1;
 	private final static char IN_ITEM = 2;
+	private final static char IN_MEDIA = 3; // partially supported to avoid spurious titles etc.
 
+	private static final String MEDIA_NS = "http://search.yahoo.com/mrss/";
 	// handy for debugging
 	private final static String[] states = { "IN_NOTHING", "IN_CHANNEL",
 			"IN_ITEM" };
@@ -105,6 +107,13 @@ public class Rss2Handler extends FeedHandlerBase {
 			if ("item".equals(localName)) {
 				state = IN_ITEM;
 				currentEntry = new EntryImpl();
+				return;
+			}
+			return;
+			
+		case IN_ITEM:
+			if (MEDIA_NS.equals(namespaceURI) && "content".equals(localName)) {
+				state = IN_MEDIA;
 				return;
 			}
 			return;
@@ -211,8 +220,7 @@ public class Rss2Handler extends FeedHandlerBase {
 			}
 			if ("description".equals(localName)) {
 				String content = HtmlCleaner.unescape(text);
-				System.out.println("DESCRIPTION text = "+text);
-				System.out.println("DESCRIPTION = "+content);
+
 				// content = HtmlCleaner.normalise(content);
 				if (currentEntry.getContent() != null) { // already loaded from content:encoded
 					currentEntry.setSummary(content);
@@ -229,9 +237,6 @@ public class Rss2Handler extends FeedHandlerBase {
 					currentEntry.setSummary(currentEntry.getContent());
 				}
 				String content = HtmlCleaner.unescape(text);
-				
-				System.out.println("ENCODED text = "+text);
-				System.out.println("ENCODED = "+content);
 				// content = HtmlCleaner.normalise(content);
 				currentEntry.setContent(content);
 				Set<Link> links = HtmlCleaner.extractLinks(content);
@@ -262,6 +267,13 @@ public class Rss2Handler extends FeedHandlerBase {
 			}
 			return;
 
+		case IN_MEDIA:
+			if ("content".equals(localName)) {
+				state = IN_ITEM;
+				return;
+			}
+			return;
+			
 		default:
 			return;
 		}

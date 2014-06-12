@@ -10,7 +10,7 @@ public static String fixEncoding(String latin1) {
 	   if (!validUTF8(bytes)) {
 	    return latin1;   
 	    } 
-	   System.out.println("ALREADY UTF-8");
+	 //  System.out.println("ALREADY UTF-8");
 	   return new String(bytes, "UTF-8");  
 	  } catch (UnsupportedEncodingException e) {
 	   // Impossible, throw unchecked

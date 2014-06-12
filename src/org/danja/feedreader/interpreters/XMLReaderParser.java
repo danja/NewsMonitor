@@ -14,7 +14,7 @@ import java.io.InputStream;
 
 import javax.xml.parsers.SAXParserFactory;
 
-import org.danja.feedreader.feeds.Feed;
+import org.danja.feedreader.model.Feed;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;

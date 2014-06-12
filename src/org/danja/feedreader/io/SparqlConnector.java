@@ -70,10 +70,12 @@ public class SparqlConnector {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Header[] headers = response.getAllHeaders();
-		for(int i =0;i<headers.length; i++){
-			System.out.println("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
-		}
+		
+//		Header[] headers = response.getAllHeaders();
+//		for(int i =0;i<headers.length; i++){
+//			System.out.println("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
+//		}
+		
 		// Get the response
 		InputStream inputStream = null;
 		BufferedReader reader = null;

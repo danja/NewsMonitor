@@ -12,15 +12,15 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import org.danja.feedreader.feeds.DateStamp;
-import org.danja.feedreader.feeds.Entry;
-import org.danja.feedreader.feeds.EntryList;
-import org.danja.feedreader.feeds.Feed;
-import org.danja.feedreader.feeds.FeedEntity;
-import org.danja.feedreader.feeds.Link;
-import org.danja.feedreader.feeds.Person;
-import org.danja.feedreader.feeds.impl.DateStampImpl;
-import org.danja.feedreader.feeds.impl.PersonImpl;
+import org.danja.feedreader.model.DateStamp;
+import org.danja.feedreader.model.Entry;
+import org.danja.feedreader.model.EntryList;
+import org.danja.feedreader.model.Feed;
+import org.danja.feedreader.model.FeedEntity;
+import org.danja.feedreader.model.Link;
+import org.danja.feedreader.model.Person;
+import org.danja.feedreader.model.impl.DateStampImpl;
+import org.danja.feedreader.model.impl.PersonImpl;
 import org.danja.feedreader.utils.CharsetDetector;
 import org.danja.feedreader.utils.DateConverters;
 import org.danja.feedreader.utils.HtmlCleaner;
@@ -150,7 +150,7 @@ public abstract class FeedHandlerBase implements ContentHandler {
 		if(dateStamp.getSortDate() == null) { // FALLBACK
 			dateStamp.setToFallback();
 		}	
-		System.out.println("DATESTAMP = "+dateStamp);
+	//	System.out.println("DATESTAMP = "+dateStamp);
 	}
 	
 	/**
@@ -178,8 +178,9 @@ public abstract class FeedHandlerBase implements ContentHandler {
 	
 
 	protected void resolveLinks() {
-		System.out.println("LINKS **************************"+feed.getLinks());
 		Iterator<Link> iterator = feed.getLinks().iterator();
+//		String feedUrl = feed.getUrl();
+//		String[] split = feedUrl.split()
 		while (iterator.hasNext()) {
 			Link link = iterator.next();
 			link.setHref(HtmlCleaner.resolveUrl(feed.getUrl(),
@@ -191,7 +192,6 @@ public abstract class FeedHandlerBase implements ContentHandler {
 			Iterator<Link> iterator2 = currentEntry.getLinks().iterator();
 			while (iterator2.hasNext()) {
 				Link link = iterator2.next();
-			//	System.out.println("LINK="+link);
 				link.setHref(HtmlCleaner.resolveUrl(feed.getUrl(),
 						link.getHref()));
 			}

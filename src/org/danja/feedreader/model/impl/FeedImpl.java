@@ -1,0 +1,158 @@
+/**
+ * TODO rename
+ * feedreader-prototype
+ *
+ * FeedImpl.java
+ * 
+ * @author danja
+ * @date Apr 25, 2014
+ *
+ */
+package org.danja.feedreader.model.impl;
+
+import java.io.InputStream;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.danja.feedreader.interpreters.Interpreter;
+import org.danja.feedreader.io.HttpConnector;
+import org.danja.feedreader.main.Config;
+import org.danja.feedreader.model.Entry;
+import org.danja.feedreader.model.EntryList;
+import org.danja.feedreader.model.Feed;
+import org.danja.feedreader.model.FeedConstants;
+import org.danja.feedreader.model.FeedEntity;
+import org.danja.feedreader.model.Link;
+import org.danja.feedreader.templating.Templater;
+
+/**
+ * Models a feed, wrapped around HttpConnection
+ * 
+ */
+public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
+
+	private EntryList entryList = new EntryListImpl();
+
+	private char formatHint = FeedConstants.UNKNOWN;
+
+	private String subtitle = null;
+
+	private boolean dead = false;
+
+	private boolean wolatile = false;
+
+	private float relevanceFactor = 0;
+
+	public FeedImpl() {
+	}
+
+	public void setFormatHint(char hint) {
+		this.formatHint = hint;
+	}
+
+	public char getFormatHint() {
+		return formatHint;
+	}
+
+
+
+	public String toString() {
+		String string = "* Feed *\n" + getUrl() + "\nFormat = "
+				+ FeedConstants.formatName(getFormatHint()) + "\n"
+				+ getInterpreter() +"\n";
+		
+		string += entryList.toString();
+		return string+super.toString();
+	}
+
+	@Override
+	public void addEntry(Entry entry) {
+		entryList.addEntry(entry);
+	}
+
+	@Override
+	public EntryList getEntries() {
+		return entryList;
+	}
+
+
+
+	@Override
+	public void setSubtitle(String subtitle) {
+		this.subtitle  = subtitle;
+	}
+
+	@Override
+	public String getSubtitle() {
+		return subtitle;
+	}
+
+	@Override
+	public void setDead(boolean dead) {
+		this.dead = dead;
+	}
+
+
+
+	@Override
+	public void setVolatile(boolean v) {
+		this.wolatile = v;
+	}
+
+	@Override
+	public boolean isVolatile() {
+		return wolatile;
+	}
+
+	@Override
+	public synchronized Set<Link> getAllLinks() { // check synch
+		Set<Link> links = super.getLinks();
+		links.addAll(entryList.getAllLinks());
+		return links;
+	}
+	
+	@Override
+	public synchronized Set<Link> getRemoteLinks() {
+		Set<Link> all = getAllLinks();
+		Set<Link> remote = new HashSet<Link>();
+		Iterator<Link> iterator = all.iterator();
+		while(iterator.hasNext()) {
+			Link link =iterator.next();
+			if(link.isRemote()) {
+				remote.add(link);
+			}
+		}
+		return remote;
+	}
+
+	@Override
+	public void setRelevanceFactor(float relevanceFactor) {
+		this.relevanceFactor = relevanceFactor;
+	}
+
+	@Override
+	public float getRelevanceFactor() {
+		return relevanceFactor;
+	}
+	
+
+	@Override
+	public Map<String, Object> getTemplateDataMap() {
+		Map<String, Object> map = super.getTemplateDataMap();
+		map.put("feedUrl", getUrl()); // less confusing in templates/sparql
+		map.put("htmlUrl", getHtmlUrl());
+		map.put("entries", this.entryList.getTemplateList());
+		map.put("entryCount", this.entryList.getEntries().size());
+		map.put("subtitle", getSubtitle());
+		map.put("dead", isDead());
+		map.put("lives", getLives());
+		map.put("volatile", isVolatile());
+		map.put("relevanceFactor", getRelevanceFactor());
+		return map;
+	}
+}

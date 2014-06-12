@@ -11,11 +11,11 @@ package org.danja.feedreader.sparql;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.danja.feedreader.feeds.Feed;
 import org.danja.feedreader.io.HttpMessage;
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.io.TextFileReader;
 import org.danja.feedreader.main.Config;
+import org.danja.feedreader.model.Feed;
 import org.danja.feedreader.templating.Templater;
 
 /**
