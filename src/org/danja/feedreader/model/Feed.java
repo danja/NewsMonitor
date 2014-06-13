@@ -52,10 +52,6 @@ public interface Feed extends FeedEntity, Page {
      */
     public boolean isNew();
 
-    /**
-     * @return is the site responding?
-     */
-    public boolean isDead();
 
     public boolean shouldExpire();
 

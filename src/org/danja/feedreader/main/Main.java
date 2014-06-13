@@ -13,6 +13,7 @@ import java.util.Set;
 
 import org.danja.feedreader.discovery.LinkExplorer;
 import org.danja.feedreader.io.SparqlConnector;
+import org.danja.feedreader.io.TextFileReader;
 import org.danja.feedreader.main.FeedListLoader.LineHandler;
 import org.danja.feedreader.model.FeedList;
 import org.danja.feedreader.templating.Templater;
@@ -20,7 +21,7 @@ import org.danja.feedreader.templating.Templater;
 /**
  *
  */
-public class Main {
+public class Main implements Runnable {
 
 	public static final boolean POLLER_NO_LOOP = false; // for debugging
 	private static LinkExplorer linkManager;
@@ -31,6 +32,12 @@ public class Main {
 	public static void main(String[] args) {
 		Main main = new Main();
 		Templater.init();
+		
+		String sparqlBootstrap = TextFileReader.read(Config.BOOTSTRAP_SPARQL);
+		SparqlConnector.update(Config.UPDATE_ENDPOINT, sparqlBootstrap);
+		
+		SystemStatus status = new SystemStatus();
+		System.out.println("POLLER RUNNING = "+status.getPollerRunning());
 		// Config.load();
 
 		// load seed list from file into store
@@ -49,12 +56,12 @@ public class Main {
 		// Set channelURIs = planet.loadChannelList("input/feedlist.opml");
 
 		// FeedList feedSet =
-		System.out.println("\n==== Initialising Feeds ====");
+		System.out.println("==== Initialising Feeds ====");
 		poller.initFeeds();
 		
 		linkManager = new LinkExplorer(poller.getFeedList());
 
-		System.out.println("\n==== Starting Poller ====");
+		System.out.println("==== Starting Poller ====");
 		poller.start();
 		linkManager.start();
 		
@@ -95,6 +102,11 @@ public class Main {
 		int responseCode = SparqlConnector.update(
 				Config.UPDATE_ENDPOINT, sparql).getStatusCode();
 		// System.out.println(responseCode);
+	}
+
+	@Override
+	public void run() {
+		
 	}
 
 }

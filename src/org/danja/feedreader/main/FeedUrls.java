@@ -24,7 +24,7 @@ public class FeedUrls  {
 	private List<String> feeds = new ArrayList<String>();
 
 	public void load() {
-		String sparql = TextFileReader.read(Config.SPARQL_FILENAME);
+		String sparql = TextFileReader.read(Config.SPARQL_FEEDLIST_FILENAME);
 		String xmlResults = SparqlConnector.query(Config.QUERY_ENDPOINT, sparql);
 
 		/*

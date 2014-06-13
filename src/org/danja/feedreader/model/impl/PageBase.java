@@ -3,6 +3,7 @@ package org.danja.feedreader.model.impl;
 import java.io.InputStream;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -13,56 +14,60 @@ import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.Page;
 
 public abstract class PageBase implements Page {
-	
+
 	private HttpConnector httpConnector = null;
 
 	private Interpreter interpreter = null;
-	
+
 	private boolean isNew = false;
 
 	private boolean firstCall = true;
-	
+
 	private int lives = Config.MAX_LIVES;
-	
+
 	private long lastRefresh = 0;
 
 	private String url = null;
-	
-    private String title = null;
+
+	private String title = null;
 
 	private String content = null;
 
+	private String contentType = null;
+	
+	private boolean dead = false;
+
 	public PageBase(String url) {
-this.url = url;
+		this.url = url;
 	}
 
-    public PageBase() {
+	public PageBase() {
 	}
 
 	public void setUrl(String uriString) {
-        this.url = uriString;
-    }
+		this.url = uriString;
+	}
 
-    public String getUrl() {
-        return url ;
-    }
-    
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public String getTitle() {
-        return title;
-    }
-    
-    public String getDomain(){
-    	String[] split = getUrl().split("/");
-    	return split[3];
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public String getDomain() {
+		String[] split = getUrl().split("/");
+		return split[3];
+	}
 
 	@Override
 	public void setContent(String content) {
-		this.content  = content;
+		this.content = content;
 	}
 
 	@Override
@@ -80,21 +85,19 @@ this.url = url;
 		boolean streamAvailable = connector.load();
 		if (streamAvailable) {
 			// format = sniffer.sniff(connector.getInputStream());
-			 System.out.println("streamAvailable ===Headers ===\n"+connector.getHeadersString()+"------\n");
+//			System.out.println("streamAvailable ===Headers ===\n"
+//					+ connector.getHeadersString() + "------\n");
 		} else {
 			System.out.println("Stream unavailable.");
 			// format = FeedConstants.UNKNOWN;
 		}
-//		System.out.println("Format matches : "
-//				+ FeedConstants.formatName(format));
+		// System.out.println("Format matches : "
+		// + FeedConstants.formatName(format));
 		System.out.println("\nCreating object for Page : " + url);
 		// connector.
 	}
 
 	public boolean refresh() {
-//		 if (now() < lastRefresh + refreshPeriod + getPeriodDither()) {
-//		 return false;
-//		 }
 
 		if (httpConnector == null) {
 			httpConnector = new HttpConnector();
@@ -104,34 +107,40 @@ this.url = url;
 			httpConnector.setUrl(url);
 		}
 		isNew = httpConnector.load();
-		System.out.println("IS NEW = "+isNew);
-	//	System.out.println("STATUS =\n"+httpConnector.getHeadersString());
+	//	System.out.println("IS NEW = " + isNew);
+		// System.out.println("STATUS =\n"+httpConnector.getHeadersString());
 
 		if (isNew) {
 			System.out.println("Connected, interpreting...");
 			System.out.println("interpreter =" + interpreter);
 			interpreter.interpret(this);
 			// System.out.println("INTERPRETED =" + this);
-			lives = Config.MAX_LIVES;
+		//	lives = Config.MAX_LIVES;
 			isNew = true;
 		} else {
 			if (httpConnector.isDead()) {
 				System.out.println("Error, feed life lost.");
 				lives--;
-			//	refreshPeriod = refreshPeriod * 2;
-			}
+				// refreshPeriod = refreshPeriod * 2;
+			} else {
 			System.out.println("Nothing new, skipping...");
+			}
 			isNew = false;
+		}
+		if (httpConnector.getHeaders().containsKey("Content-Type")) {
+			List<String> contentTypeList = httpConnector.getHeaders().get(
+					"Content-Type");
+			contentType = contentTypeList.get(0);
 		}
 		lastRefresh = now();
 		// System.out.println("isNew = " + isNew);
 		return isNew;
 	}
-	
+
 	public boolean shouldExpire() {
 		return lives < 1;
 	}
-	
+
 	public Interpreter getInterpreter() {
 		return interpreter;
 	}
@@ -139,9 +148,14 @@ this.url = url;
 	public boolean isNew() {
 		return isNew;
 	}
+	
+	@Override
+	public void setDead(boolean dead) {
+		this.dead = dead;
+	}
 
 	public boolean isDead() {
-		return httpConnector.isDead();
+		return dead;
 	}
 
 	public String getETag() {
@@ -155,9 +169,15 @@ this.url = url;
 	public String getContentEncoding() {
 		return httpConnector.getContentEncoding();
 	}
-
+	
+	
+	@Override
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
+	}
+	
 	public String getContentType() {
-		return httpConnector.getContentType();
+		return contentType;
 	}
 
 	public InputStream getInputStream() {
@@ -179,12 +199,12 @@ this.url = url;
 	public long getLastRefresh() {
 		return lastRefresh;
 	}
-	
+
 	@Override
 	public void setFirstCall(boolean firstCall) {
 		this.firstCall = firstCall;
 	}
-	
+
 	@Override
 	public void setLives(int lives) {
 		this.lives = lives;

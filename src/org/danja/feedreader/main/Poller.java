@@ -57,7 +57,6 @@ public class Poller implements Runnable {
 	 * @return
 	 */
 	public FeedList initFeeds() {
-		System.out.println("Poller.initFeeds()");
 		for (int i = 0; i < feedUrls.size(); i++) {
 			Feed feed = new FeedImpl();
 			feed.setUrl(feedUrls.get(i));

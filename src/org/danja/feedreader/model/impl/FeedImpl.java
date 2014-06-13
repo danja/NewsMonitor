@@ -44,8 +44,6 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private String subtitle = null;
 
-	private boolean dead = false;
-
 	private boolean wolatile = false;
 
 	private float relevanceFactor = 0;
@@ -61,15 +59,13 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		return formatHint;
 	}
 
-
-
 	public String toString() {
 		String string = "* Feed *\n" + getUrl() + "\nFormat = "
 				+ FeedConstants.formatName(getFormatHint()) + "\n"
-				+ getInterpreter() +"\n";
-		
+				+ getInterpreter() + "\n";
+
 		string += entryList.toString();
-		return string+super.toString();
+		return string + super.toString();
 	}
 
 	@Override
@@ -82,24 +78,15 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		return entryList;
 	}
 
-
-
 	@Override
 	public void setSubtitle(String subtitle) {
-		this.subtitle  = subtitle;
+		this.subtitle = subtitle;
 	}
 
 	@Override
 	public String getSubtitle() {
 		return subtitle;
 	}
-
-	@Override
-	public void setDead(boolean dead) {
-		this.dead = dead;
-	}
-
-
 
 	@Override
 	public void setVolatile(boolean v) {
@@ -117,15 +104,15 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		links.addAll(entryList.getAllLinks());
 		return links;
 	}
-	
+
 	@Override
 	public synchronized Set<Link> getRemoteLinks() {
 		Set<Link> all = getAllLinks();
 		Set<Link> remote = new HashSet<Link>();
 		Iterator<Link> iterator = all.iterator();
-		while(iterator.hasNext()) {
-			Link link =iterator.next();
-			if(link.isRemote()) {
+		while (iterator.hasNext()) {
+			Link link = iterator.next();
+			if (link.isRemote()) {
 				remote.add(link);
 			}
 		}
@@ -141,7 +128,6 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	public float getRelevanceFactor() {
 		return relevanceFactor;
 	}
-	
 
 	@Override
 	public Map<String, Object> getTemplateDataMap() {
@@ -167,25 +153,42 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		HttpConnector connector = new HttpConnector();
 		connector.setUrl(url);
 		connector.setConditional(false);
-		System.out.println("\n\nInitializing : " + url);
+		System.out.println("\nInitializing : " + url);
 
 		boolean streamAvailable = connector.load();
 		if (streamAvailable) {
 			System.out.println("Sniffing...");
+			System.out.println("CONTENT TYPE = " + connector.getContentType());
+			setContentType(connector.getContentType());
 			format = sniffer.sniff(connector.getInputStream());
 			// System.out.println("===Headers ===\n"+connector.getHeadersString()+"------\n");
 		} else {
 			System.out.println("Stream unavailable.");
 			format = FeedConstants.UNKNOWN;
+			setLives(getLives() - 1);
+			// setDead(true);
 		}
+
+		System.out.println("getContentType() = " + getContentType() + " "
+				+ getContentType().startsWith("text/html"));
+
+		if (format == FeedConstants.UNKNOWN || format == FeedConstants.RSS_SOUP) {
+			if (getContentType() != null
+					&& getContentType().startsWith("text/html")) {
+				System.out.println("Appears to be HTML, taking life : " + url);
+				format = FeedConstants.HTML;
+				setLives(getLives() - 1);
+				setLives(0);
+				return;
+			}
+		}
+
 		System.out.println("Format matches : "
 				+ FeedConstants.formatName(format));
-		System.out.println("\nCreating object for feed : " + url);
 
-		// create Feed object
-
+		System.out.println("Creating interpreter for feed : " + url);
 		setFormatHint(format); // TODO remove duplication with
-									// setInterpreter
+								// setInterpreter
 		// feed.setRefreshPeriod(Config.getPollerPeriod());
 
 		// interpreter = RDFInterpreterFactory.createInterpreter(format);
@@ -196,6 +199,6 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		System.out.println("Setting interpreter " + interpreter + " to feed "
 				+ url);
 		setInterpreter(interpreter);
-	//	return feed;
+		// return feed;
 	}
 }

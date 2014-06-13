@@ -91,6 +91,12 @@ public class HttpConnector {
 																	// handle
 																	// response
 																	// code here
+		char codeBlock = Integer.toString(responseCode).charAt(0);
+		if(codeBlock == 4 || codeBlock == 5) {
+			System.out.println("four or FIVE");
+			return false;
+		}
+			
 		} catch (IOException e1) {
 			e1.printStackTrace(); // TODO log error
 			dead = false;
@@ -108,7 +114,7 @@ public class HttpConnector {
 			inputStream = getInputStream(connection);
 		} catch (IOException e2) {
 			dead = true;
-			e2.printStackTrace(); // TODO log error
+			// e2.printStackTrace(); // TODO log error
 			return false;
 		}
 

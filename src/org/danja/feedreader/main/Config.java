@@ -18,9 +18,11 @@ public class Config {
 		public static final String SEED_FEEDLIST = "input/some.txt";
 	// public static String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
 		
-		public static final long TEST_RUN = 5; // stop after this no. minutes
+		public static final long TEST_RUN = 0; // stop after this no. minutes, 0 = infinite
 	
-	public static final String SPARQL_FILENAME = "sparql/get-feedlist.sparql";
+		public static final String BOOTSTRAP_SPARQL = "sparql/bootstrap.sparql";
+		
+	public static final String SPARQL_FEEDLIST_FILENAME = "sparql/get-feedlist.sparql";
 
 	public static final String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
 	public static final String UPDATE_ENDPOINT = "http://localhost:3030/feedreader/update";
@@ -41,6 +43,8 @@ public class Config {
 	public static final String STOPWORDS_FILENAME = "input/stopwords.txt";
 
 	public static final int LINK_EXPLORER_SLEEP_PERIOD = 1000;
+
+	public static final String SPARQL_GET_STATUS = "sparql/get-system-status.sparql";
 
 
 

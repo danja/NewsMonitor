@@ -39,8 +39,12 @@ public class FeedConstants {
     
     public static final char RDF_OTHER = 5; 
     
+	public static final char HTML = 6;
+    
     public static final String[] FORMAT_NAMES = {"Unknown", "RSS 1.0", "RSS 2.0", "Atom", 
-            "Soup", "RDF/XML (non-RSS)"};
+            "RSS Soup", "RDF/XML (non-RSS)", "HTML"};
+
+
 
     
     public static String formatName(char format){

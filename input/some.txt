@@ -1,2 +1,3 @@
 
 http://people.w3.org/~djweitzner/blog/?cat=8&feed=rdf
+# http://markwatson.com/blog/atom.xml

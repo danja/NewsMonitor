@@ -80,8 +80,22 @@ public class FeedListImpl implements FeedList {
 		Feed feed;
 		while (iterator.hasNext()) {
 			feed = iterator.next();
+//			System.out.println("feed.getLives() = "+feed.getLives());
+//			System.out.println("feed.isDead() = "+feed.isDead());
+			
+			if(feed.getLives() < 1) {
+				feed.setDead(true);
+			}
+			if(feed.isDead()) {
+				System.out.println("Is dead, skipping.");
+				
+				// TODO is duplicated below
+				System.out.println("Unsubscribing from " + feed.getUrl());
+				feedQueue.remove(feed);
+				continue;
+			};
 			if(feed.getLives() < Config.MAX_LIVES) {
-				System.out.println("LESS THAN MAX LIVES");
+				// System.out.println("LESS THAN MAX LIVES");
 				feed.init();
 				firstCall = true;
 			}
@@ -106,6 +120,7 @@ public class FeedListImpl implements FeedList {
 			feed = iterator.next();
 			System.out.println("Unsubscribing from " + feed.getUrl());
 			feedQueue.remove(feed);
+			// TODO pass to SPARQL store
 		}
 		try {
 			Thread.sleep(Config.REFRESH_PERIOD);
