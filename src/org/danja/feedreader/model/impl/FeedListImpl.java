@@ -75,19 +75,19 @@ public class FeedListImpl implements FeedList {
 	}
 
 	public void refreshAll() {
-		// System.out.println("Refresh all...");
-
-		// entries = new EntryListImpl();
 		Set<Feed> expiring = new HashSet<Feed>();
 		Iterator<Feed> iterator = feedQueue.iterator();
 		Feed feed;
 		while (iterator.hasNext()) {
 			feed = iterator.next();
+			if(feed.getLives() < Config.MAX_LIVES) {
+				System.out.println("LESS THAN MAX LIVES");
+				feed.init();
+				firstCall = true;
+			}
 			System.out.println("\nRefreshing : " + feed.getUrl());
 			feed.setFirstCall(firstCall);
 			feed.refresh();
-			// System.out.println(" feed.getEntries() = "+feed.getEntries());
-			// entries.addAll(feed.getEntries());
 			if (feed.shouldExpire()) {
 				expiring.add(feed);
 			}

@@ -10,8 +10,11 @@
 package org.danja.feedreader.model.impl;
 
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.danja.feedreader.model.Entry;
+import org.danja.feedreader.utils.HtmlCleaner;
 
 /**
  *  Implementation of Entry, an RSS item/Atom entry/Blog post model
@@ -65,6 +68,18 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 		  Map<String, Object> map = super.getTemplateDataMap();
 		  map.put("summary", getSummary());
 		  map.put("read", isRead());
+		  map.put("wordcount", getContentWordCount());
 		  return map;
 	  }
+
+	@Override
+	public int getContentWordCount() {
+		Pattern wordPattern = Pattern.compile("(\\w+)");
+		Matcher wordMatcher = wordPattern.matcher(HtmlCleaner.stripTags(getContent()));
+
+		int count = 0;
+		while (wordMatcher.find())
+			count++;
+		return count;
+	}
 }

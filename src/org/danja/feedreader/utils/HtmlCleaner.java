@@ -99,11 +99,14 @@ public class HtmlCleaner {
 			return href;
 		}
 		URI uri = null;
+		System.out.println("URL = "+url);
 		try {
 		 uri = new URI(url);
 		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
+		System.out.println("URI = "+uri);
+		System.out.println("HREF = "+href);
 		return uri.resolve(href).toString();
 	}
 

@@ -3,16 +3,16 @@ http://aabs.wordpress.com/feed/
 # /category/semanticweb/rdf
 
 # RSS2.0
-# http://mortenhf.dk/blog/feed/
+http://mortenhf.dk/blog/feed/
 # http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
 
 # RSS 2.0
-# http://www.w3.org/community/rww/feed/
+http://www.w3.org/community/rww/feed/
 
 # Atom
-# http://intertwingly.net/blog/index.atom
+http://intertwingly.net/blog/index.atom
 
 # Atom
-# http://markwatson.com/blog/atom.xml
+http://markwatson.com/blog/atom.xml
 
 # http://localhost:8080/atom-real-1.xml

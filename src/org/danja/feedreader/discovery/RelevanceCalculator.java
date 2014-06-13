@@ -96,7 +96,7 @@ public class RelevanceCalculator {
 //		content.replaceAll(".", " ");
 //		content.replaceAll(",", " ");
 		
-		content = content.replaceAll("[^a-zA-Z]", " ");
+		content = content.replaceAll("[^a-zA-Z]", " "); // or \\p{P}
 
 		return content;
 	}

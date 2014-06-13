@@ -28,7 +28,7 @@ import org.danja.feedreader.sparql.SparqlTemplater;
 
 public class Poller implements Runnable {
 
-//	private EntryList entries = new EntryListImpl();
+	// private EntryList entries = new EntryListImpl();
 
 	private List<String> feedUrls = null;
 
@@ -47,6 +47,8 @@ public class Poller implements Runnable {
 
 	private int loopCount = 0;
 
+	private boolean stopped = false;
+
 	/**
 	 * Takes each feed URL on the list and using @see FormatSniffer checks the
 	 * target type, then creates @see Feed objects according to what it finds,
@@ -56,57 +58,17 @@ public class Poller implements Runnable {
 	 */
 	public FeedList initFeeds() {
 		System.out.println("Poller.initFeeds()");
-		Feed feed;
-		Interpreter interpreter;
-		String url;
-		FormatSniffer sniffer = new FormatSniffer();
-		HttpConnector connector;
-		char format;
-
-		// System.out.println("feedUrls.size() = " + feedUrls.size());
 		for (int i = 0; i < feedUrls.size(); i++) {
-
-			// check the target URL
-			url = feedUrls.get(i);
-			connector = new HttpConnector();
-			connector.setUrl(url);
-			connector.setConditional(false);
-			System.out.println("\n\nInitializing : " + url);
-
-			boolean streamAvailable = connector.load();
-			if (streamAvailable) {
-				System.out.println("Sniffing...");
-				format = sniffer.sniff(connector.getInputStream());
-				// System.out.println("===Headers ===\n"+connector.getHeadersString()+"------\n");
-			} else {
-				System.out.println("Stream unavailable.");
-				format = FeedConstants.UNKNOWN;
-			}
-			System.out.println("Format matches : "
-					+ FeedConstants.formatName(format));
-			System.out.println("\nCreating object for feed : " + url);
-
-			// create Feed object
-			feed = new FeedImpl();
-			feed.setUrl(url);
-			feed.setFormatHint(format); // TODO remove duplication with setInterpreter
-			// feed.setRefreshPeriod(Config.getPollerPeriod());
-
-			// interpreter = RDFInterpreterFactory.createInterpreter(format);
-			// feed.setInterpreter(interpreter);
-
-			interpreter = InterpreterFactory.createInterpreter(feed);
-			
-			System.out.println("Setting interpreter " + interpreter
-					+ " to feed " + url);
-			feed.setInterpreter(interpreter);
-
+			Feed feed = new FeedImpl();
+			feed.setUrl(feedUrls.get(i));
+			feed.init();
 			feedList.addFeed(feed);
 		}
 		return feedList;
 	}
 
 	public void start() {
+		stopped = false;
 		thread = new Thread(this);
 		thread.start();
 	}
@@ -122,29 +84,29 @@ public class Poller implements Runnable {
 		// System.out.println("FEEDLIST = " + feedList);
 		while (running) {
 			System.out.println("Starting loop #" + ++loopCount);
-
 			System.out.println("Refreshing " + feedList.size() + " feeds...");
 
 			feedList.setFirstCall(false);
-
 			feedList.refreshAll();
-		//	System.out.println("A");
-			displayFeeds();
-		//	System.out.println("B");
+			// displayFeeds();
 			pushFeeds();
-		//	System.out.println("C");
 		}
 		System.out.println("Poller stopped.");
+		stopped = true;
 	}
 
 	private void pushFeeds() {
 		List<Feed> feeds = feedList.getList();
-		for(int i=0;i<feeds.size();i++){
-			System.out.println("Uploading : "+feeds.get(i).getUrl());
-			HttpMessage message = SparqlTemplater.uploadFeed(feeds.get(i));
+		for (int i = 0; i < feeds.size(); i++) {
+			Feed feed = feeds.get(i);
 			
+			if (feed.isNew()) {
+				System.out.println("Uploading SPARQL for : " + feed.getUrl());
+				HttpMessage message = SparqlTemplater.uploadFeed(feeds.get(i));
+				System.out.println("SPARQL response = " + message);
+			}
 			// feeds.get(0).downloadToFile("text.xml");
-			System.out.println("response = "+message);
+
 		}
 	}
 
@@ -154,12 +116,16 @@ public class Poller implements Runnable {
 			System.out.println(feedIterator.next());
 		}
 		System.out.println("---------------");
-//		for (int i = 0; i < entries.size(); i++) {
-//			System.out.println(entries.getEntry(i));
-//		}
+		// for (int i = 0; i < entries.size(); i++) {
+		// System.out.println(entries.getEntry(i));
+		// }
 	}
 
 	public void setFeedUrls(List<String> feedUrls) {
 		this.feedUrls = feedUrls;
+	}
+
+	public boolean isStopped() {
+		return stopped;
 	}
 }

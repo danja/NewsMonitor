@@ -32,6 +32,7 @@ public class LinkExplorer implements Runnable {
 	private FeedList feedList = null;
 	private boolean running = false;
 	private Thread thread = null;
+	private boolean stopped = false;
 
 	/**
 	 * 
@@ -42,6 +43,7 @@ public class LinkExplorer implements Runnable {
 
 	public void start() {
 		running = true;
+		stopped = false;
 		thread = new Thread(this);
 		thread.start();
 
@@ -66,6 +68,7 @@ public class LinkExplorer implements Runnable {
 				e.printStackTrace();
 			}
 		}
+		stopped = true;
 	}
 
 	private void explore(Link link) {
@@ -102,6 +105,10 @@ public class LinkExplorer implements Runnable {
 		page.load();
 		return page;
 
+	}
+
+	public boolean isStopped() {
+		return stopped;
 	}
 
 }

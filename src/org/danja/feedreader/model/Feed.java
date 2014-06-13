@@ -100,4 +100,6 @@ public interface Feed extends FeedEntity, Page {
 	public Map<String, Object> getTemplateDataMap();
 
 	public Set<Link> getRemoteLinks();
+
+	public void init();
 }

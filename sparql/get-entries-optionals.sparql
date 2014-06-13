@@ -4,7 +4,7 @@ PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX schema:<http://schema.org/>
 PREFIX nm: <http://purl.org/stuff/newsmonitor/>
 
-SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?date ?author ?authorHomepage ?read 
+SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?date ?author ?authorHomepage ?read ?wordCount 
 WHERE { 
 
 GRAPH ?g {
@@ -32,6 +32,7 @@ GRAPH ?g {
       OPTIONAL { ?entry nm:relevance ?relevance . }
       OPTIONAL { ?entry nm:favourite ?favourite . }
       OPTIONAL { ?entry nm:read ?read . }
+      OPTIONAL { ?entry nm:wordCount ?wordCount . }
    }
 }
 ORDER BY DESC(?updated)

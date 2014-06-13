@@ -415,8 +415,8 @@ public class AtomHandler extends FeedHandlerBase {
 					&& "http://www.w3.org/2005/Atom".equals(namespaceURI)) {
 				// System.out.println("content text = " + text);
 				currentEntry.setSummary(text);
-				System.out.println("SUMMARY = "+text);
-				System.out.println("currentEntry.getSummary() = "+currentEntry.getSummary());
+				// System.out.println("SUMMARY = "+text);
+				// System.out.println("currentEntry.getSummary() = "+currentEntry.getSummary());
 				state = IN_ENTRY;
 				return;
 			}

@@ -57,14 +57,25 @@ public class Main {
 		System.out.println("\n==== Starting Poller ====");
 		poller.start();
 		linkManager.start();
+		
+		if(Config.TEST_RUN > 0) {
 		try {
-			Thread.sleep(300000); // wait a bit
+			Thread.sleep(Config.TEST_RUN*60000); // wait a bit
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		 poller.stop();
 		 linkManager.stop();
 		 poller.displayFeeds();
+		 System.out.println("\n==== Stopped Poller ====");
+		 while(!poller.isStopped() || !linkManager.isStopped()) {
+				try {
+					Thread.sleep(1000); // wait a bit
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+		 }
+		}
 	}
 
 	private List<String> getFeeds() {

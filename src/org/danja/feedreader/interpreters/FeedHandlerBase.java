@@ -164,10 +164,18 @@ public abstract class FeedHandlerBase implements ContentHandler {
 			return;
 		}
 		feedAuthor.setHomepage(HtmlCleaner.resolveUrl(feed.getUrl(),feedAuthor.getHomepage()));
-//		String name = feedAuthor.getName();
-//		String homepage = feedAuthor.getHomepage();
-//		String email = feedAuthor.getEmail();
-		
+		String name = feedAuthor.getName();
+		String homepage = feedAuthor.getHomepage();
+		String email = feedAuthor.getEmail();
+		if(name != null) {
+			feedAuthor.setName(name);
+		}
+		if(homepage != null) {
+			feedAuthor.setName(homepage);
+		}
+		if(email  != null) {
+			feedAuthor.setName(email );
+		}
 		for(int i= 0;i<entries.size();i++){
 			if(entries.get(i).getAuthor() == null) {
 			//	System.out.println("AUTHor = "+feedAuthor);

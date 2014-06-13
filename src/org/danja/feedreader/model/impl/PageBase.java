@@ -71,9 +71,24 @@ this.url = url;
 	}
 
 	@Override
-	public void load() {
-		// TODO Auto-generated method stub
+	public void load() { // used by LinkExplorer
+		HttpConnector connector = new HttpConnector();
+		connector.setUrl(url);
+		connector.setConditional(false);
+		System.out.println("\n\nGetting content for : " + url);
 
+		boolean streamAvailable = connector.load();
+		if (streamAvailable) {
+			// format = sniffer.sniff(connector.getInputStream());
+			 System.out.println("streamAvailable ===Headers ===\n"+connector.getHeadersString()+"------\n");
+		} else {
+			System.out.println("Stream unavailable.");
+			// format = FeedConstants.UNKNOWN;
+		}
+//		System.out.println("Format matches : "
+//				+ FeedConstants.formatName(format));
+		System.out.println("\nCreating object for Page : " + url);
+		// connector.
 	}
 
 	public boolean refresh() {
@@ -89,6 +104,7 @@ this.url = url;
 			httpConnector.setUrl(url);
 		}
 		isNew = httpConnector.load();
+		System.out.println("IS NEW = "+isNew);
 	//	System.out.println("STATUS =\n"+httpConnector.getHeadersString());
 
 		if (isNew) {
@@ -97,7 +113,7 @@ this.url = url;
 			interpreter.interpret(this);
 			// System.out.println("INTERPRETED =" + this);
 			lives = Config.MAX_LIVES;
-			isNew = false;
+			isNew = true;
 		} else {
 			if (httpConnector.isDead()) {
 				System.out.println("Error, feed life lost.");
@@ -105,6 +121,7 @@ this.url = url;
 			//	refreshPeriod = refreshPeriod * 2;
 			}
 			System.out.println("Nothing new, skipping...");
+			isNew = false;
 		}
 		lastRefresh = now();
 		// System.out.println("isNew = " + isNew);

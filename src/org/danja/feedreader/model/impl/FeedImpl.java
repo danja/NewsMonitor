@@ -19,7 +19,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.danja.feedreader.interpreters.FormatSniffer;
 import org.danja.feedreader.interpreters.Interpreter;
+import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.model.Entry;
@@ -154,5 +156,46 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		map.put("volatile", isVolatile());
 		map.put("relevanceFactor", getRelevanceFactor());
 		return map;
+	}
+
+	@Override
+	public void init() {
+		String url = getUrl();
+		FormatSniffer sniffer = new FormatSniffer();
+		char format = FeedConstants.UNKNOWN;
+
+		HttpConnector connector = new HttpConnector();
+		connector.setUrl(url);
+		connector.setConditional(false);
+		System.out.println("\n\nInitializing : " + url);
+
+		boolean streamAvailable = connector.load();
+		if (streamAvailable) {
+			System.out.println("Sniffing...");
+			format = sniffer.sniff(connector.getInputStream());
+			// System.out.println("===Headers ===\n"+connector.getHeadersString()+"------\n");
+		} else {
+			System.out.println("Stream unavailable.");
+			format = FeedConstants.UNKNOWN;
+		}
+		System.out.println("Format matches : "
+				+ FeedConstants.formatName(format));
+		System.out.println("\nCreating object for feed : " + url);
+
+		// create Feed object
+
+		setFormatHint(format); // TODO remove duplication with
+									// setInterpreter
+		// feed.setRefreshPeriod(Config.getPollerPeriod());
+
+		// interpreter = RDFInterpreterFactory.createInterpreter(format);
+		// feed.setInterpreter(interpreter);
+
+		Interpreter interpreter = InterpreterFactory.createInterpreter(this);
+
+		System.out.println("Setting interpreter " + interpreter + " to feed "
+				+ url);
+		setInterpreter(interpreter);
+	//	return feed;
 	}
 }

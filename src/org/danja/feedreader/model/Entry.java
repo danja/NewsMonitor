@@ -30,6 +30,8 @@ public interface Entry extends FeedEntity {
 	 * @return
 	 */
 	public String getSummary();
+	
+	public int getContentWordCount();
 
     /**
      * @param feedTitle set the title of the feed

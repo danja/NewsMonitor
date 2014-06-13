@@ -46,7 +46,7 @@ GRAPH ?g { \n\
    }\n\
 } \n\
 ORDER BY DESC(?date) \n\
-LIMIT 10 \n\
+LIMIT 20 \n\
 OFFSET 0 \n\
 ";
 
@@ -92,8 +92,13 @@ $(function() {
 			// maybe force to ISO-8859-1, also known as Latin-1 instead?
 	
 				var $xml = $(xmlString);
-
-				$xml.find("result").each(function() {
+			
+			// console.log("FIND "+$xml.find("result").length);
+				var $results = $xml.find("result");
+				if($results.length == 0) {
+					$("#message").append("<h3>No entries found.</h3>");
+				}
+				$results.each(function() {
 					// $('#results').html($(this));
 					var entryUrl, source, title, content, date, author, authorHomepage;
 					
@@ -129,10 +134,10 @@ $(function() {
 		var entry = "<h3 >";
 		
 		if(author != null && authorHomepage == null) {
-			entry += "<div class=\"author\">" + author + "</div> : ";
+			entry += "<span class=\"author\">" + author + "</span> : ";
 		}
 		if(author != null && authorHomepage != null) {
-			entry += "<div class=\"author\"><a href=\"" + authorHomepage+ "\">"+ author + "</a></div> :";
+			entry += "<span class=\"author\"><a href=\"" + authorHomepage+ "\">"+ author + "</a></span> :";
 		}
 		entry += "<a href=\""+entryUrl+"\">" + title + "</a></h3>";
 		entry += "<div>";
@@ -186,10 +191,12 @@ $(function() {
 <body>
    <h3><a href="/index.html">NewsMonitor</a> Entries</h3>
 
+<div id="message"></div>
    <div id="spinner" class="spinner"></div> 
    <!-- div id="accordion-resizer" class="ui-widget-content" -->
       <div id="accordion"></div>
    <!-- /div -->
+   
    
 </body>
 </html>

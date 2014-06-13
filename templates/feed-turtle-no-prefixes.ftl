@@ -26,9 +26,10 @@
          	<#if datestamp.sortDate??>dcterms:date "${datestamp.sortDate}" ;</#if>
          	<#if datestamp.published??>dcterms:published "${datestamp.published}" ;</#if>
          	<#if datestamp.updated??>dcterms:updated "${datestamp.updated}" ;</#if>
+         	.
          </#if> 
          
-         .
+         
          <#list links as link>
          	<#if link.href??><${feedUrl}> dcterms:references <${link.href}> .</#if>
          	<#if link.label??><${link.href}> schema:description """${link.label}""" .</#if>
@@ -58,6 +59,7 @@
          dcterms:source <${feedUrl}> ;
          <#if entry.htmlUrl??>nm:htmlUrl <${entry.htmlUrl}> ;</#if>
          <#if entry.id??>nm:id "${entry.id}" ;</#if>
+         <#if entry.wordcount??>nm:wordcount "${entry.wordcount}" ;</#if>
          <#if entry.title??>dcterms:title "${entry.title}" ;</#if>
          <#if entry.content??>schema:articleBody """${entry.content}""" ;</#if> 
          <#if entry.author??>

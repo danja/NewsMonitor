@@ -68,8 +68,8 @@ public class Rss1Handler extends FeedHandlerBase {
 
 	private Entry currentEntry;
 
-	// private EntryList entries = new EntryListImpl();
-	private static final String[] textElementsArray = { "webMaster", "author", "creator", "date", "title", "link", "description", "encoded" };
+	// When adding a new text element, it must be on this list
+	private static final String[] textElementsArray = { "webMaster", "author", "creator", "date", "title", "link", "description", "encoded", "publisher" };
 	private static final Set<String> textElements = new HashSet<String>();
 	static {
 		Collections.addAll(textElements, textElementsArray);
@@ -196,6 +196,12 @@ public class Rss1Handler extends FeedHandlerBase {
 				Link link = new LinkImpl();
 				link.setHref(text);
 					getFeed().setHtmlUrl(link.getHref());
+				return;
+			}
+			if ("publisher".equals(localName)) { // dc:publisher, escaped - used by Norm Walsh
+				initAuthor(getFeed());
+			    text = HtmlCleaner.unescape(text);
+				getFeed().getAuthor().setName(text);
 				return;
 			}
 

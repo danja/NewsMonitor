@@ -14,7 +14,11 @@ package org.danja.feedreader.main;
  */
 public class Config {
 	
+	 // buggy-list.txt rdf-bloggers-feedlist.txt; input/short-list.txt
+		public static final String SEED_FEEDLIST = "input/some.txt";
 	// public static String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
+		
+		public static final long TEST_RUN = 5; // stop after this no. minutes
 	
 	public static final String SPARQL_FILENAME = "sparql/get-feedlist.sparql";
 
@@ -33,8 +37,7 @@ public class Config {
      */
     public static final  int MAX_LIVES = 3;
 
- // buggy-list.txt rdf-bloggers-feedlist.txt;
-	public static final String SEED_FEEDLIST = "input/short-list.txt";
+
 	public static final String STOPWORDS_FILENAME = "input/stopwords.txt";
 
 	public static final int LINK_EXPLORER_SLEEP_PERIOD = 1000;

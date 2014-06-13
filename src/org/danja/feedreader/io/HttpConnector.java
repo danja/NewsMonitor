@@ -96,6 +96,7 @@ public class HttpConnector {
 			dead = false;
 			return false;
 		}
+		
 		if (responseCode == HttpURLConnection.HTTP_NOT_MODIFIED) {
 			connection.disconnect();
 			dead = false;
