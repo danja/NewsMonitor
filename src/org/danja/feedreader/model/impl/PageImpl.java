@@ -31,6 +31,4 @@ public class PageImpl extends PageBase {
 	public String getContent() {
 		return content;
 	}
-
-
 }

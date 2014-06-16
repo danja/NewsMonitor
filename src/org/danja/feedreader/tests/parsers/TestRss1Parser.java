@@ -10,7 +10,7 @@ import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.model.Entry;
-import org.danja.feedreader.model.FeedConstants;
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.impl.FeedImpl;
 import org.danja.feedreader.templating.Templater;
@@ -40,7 +40,7 @@ public class TestRss1Parser {
 
 		feed = new FeedImpl();
 		feed.setUrl(url);
-		feed.setFormatHint(FeedConstants.RSS1);
+		feed.setFormatHint(ContentType.RSS1);
 		interpreter = InterpreterFactory.createInterpreter(feed);
 		feed.setInterpreter(interpreter);
 		feed.refresh();

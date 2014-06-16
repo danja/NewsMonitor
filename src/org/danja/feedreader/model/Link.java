@@ -2,7 +2,7 @@ package org.danja.feedreader.model;
 
 public interface Link {
 
-	public boolean explored();
+	public boolean isExplored();
 	
 	public void setExplored(boolean explored);
 	/**
@@ -48,4 +48,8 @@ public interface Link {
 	public boolean setRemote(boolean remote);
 	
 	public boolean isRemote();
+
+	public void setRelevance(float f);
+	
+	public float getRelevance();
 }

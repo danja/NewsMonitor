@@ -19,7 +19,7 @@ import org.xml.sax.ContentHandler;
  */
 public interface FeedParser {
 	
-    public void setHandler(FeedHandlerBase contentHandler);
+    public void setHandler(FeedHandler handler);
 
     public void parse(InputStream inputStream);
     
@@ -29,5 +29,5 @@ public interface FeedParser {
     
     public Feed getFeed();
 
-	public FeedHandlerBase getHandler();
+	public FeedHandler getHandler();
 }

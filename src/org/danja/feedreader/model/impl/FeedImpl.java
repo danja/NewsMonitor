@@ -27,7 +27,7 @@ import org.danja.feedreader.main.Config;
 import org.danja.feedreader.model.Entry;
 import org.danja.feedreader.model.EntryList;
 import org.danja.feedreader.model.Feed;
-import org.danja.feedreader.model.FeedConstants;
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.FeedEntity;
 import org.danja.feedreader.model.Link;
 import org.danja.feedreader.templating.Templater;
@@ -40,8 +40,6 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private EntryList entryList = new EntryListImpl();
 
-	private char formatHint = FeedConstants.UNKNOWN;
-
 	private String subtitle = null;
 
 	private boolean wolatile = false;
@@ -51,23 +49,18 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	public FeedImpl() {
 	}
 
-	public void setFormatHint(char hint) {
-		this.formatHint = hint;
-	}
 
-	public char getFormatHint() {
-		return formatHint;
-	}
 
 	public String toString() {
 		String string = "* Feed *\n" + getUrl() + "\nFormat = "
-				+ FeedConstants.formatName(getFormatHint()) + "\n"
+				+ ContentType.formatName(getFormatHint()) + "\n"
 				+ getInterpreter() + "\n";
 
 		string += entryList.toString();
 		return string + super.toString();
 	}
 
+	
 	@Override
 	public void addEntry(Entry entry) {
 		entryList.addEntry(entry);
@@ -148,7 +141,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	public void init() {
 		String url = getUrl();
 		FormatSniffer sniffer = new FormatSniffer();
-		char format = FeedConstants.UNKNOWN;
+		char format = ContentType.UNKNOWN;
 
 		HttpConnector connector = new HttpConnector();
 		connector.setUrl(url);
@@ -164,19 +157,20 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			// System.out.println("===Headers ===\n"+connector.getHeadersString()+"------\n");
 		} else {
 			System.out.println("Stream unavailable.");
-			format = FeedConstants.UNKNOWN;
+			format = ContentType.UNKNOWN;
 			setLives(getLives() - 1);
 			// setDead(true);
+			return;
 		}
 
 		System.out.println("getContentType() = " + getContentType() + " "
 				+ getContentType().startsWith("text/html"));
 
-		if (format == FeedConstants.UNKNOWN || format == FeedConstants.RSS_SOUP) {
+		if (format == ContentType.UNKNOWN || format == ContentType.RSS_SOUP) {
 			if (getContentType() != null
 					&& getContentType().startsWith("text/html")) {
 				System.out.println("Appears to be HTML, taking life : " + url);
-				format = FeedConstants.HTML;
+				format = ContentType.HTML;
 				setLives(getLives() - 1);
 				setLives(0);
 				return;
@@ -184,8 +178,8 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		}
 
 		System.out.println("Format matches : "
-				+ FeedConstants.formatName(format));
-
+				+ ContentType.formatName(format));
+		//setFormatName(ContentType.formatName(format));
 		System.out.println("Creating interpreter for feed : " + url);
 		setFormatHint(format); // TODO remove duplication with
 								// setInterpreter
@@ -200,5 +194,13 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 				+ url);
 		setInterpreter(interpreter);
 		// return feed;
+	}
+
+
+
+	@Override
+	public void clean() {
+		entryList = new EntryListImpl();
+		super.clearLinks();
 	}
 }

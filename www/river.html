@@ -46,7 +46,7 @@ GRAPH ?g { \n\
    }\n\
 } \n\
 ORDER BY DESC(?date) \n\
-LIMIT 20 \n\
+LIMIT 100 \n\
 OFFSET 0 \n\
 ";
 
@@ -131,6 +131,11 @@ $(function() {
 	}
 	
 	function generateEntryHtml(entryUrl, source, title, content, date, author, authorHomepage) {
+		console.log("Date = "+date);
+		var dateObject = new Date(Date.parse(date));	
+		console.log(dateObject);
+		date = dateObject.toDateString();
+		
 		var entry = "<h3 >";
 		
 		if(author != null && authorHomepage == null) {
@@ -139,12 +144,18 @@ $(function() {
 		if(author != null && authorHomepage != null) {
 			entry += "<span class=\"author\"><a href=\"" + authorHomepage+ "\">"+ author + "</a></span> :";
 		}
+		
 		entry += "<a href=\""+entryUrl+"\">" + title + "</a></h3>";
+		
 		entry += "<div>";
 		
+		if(entryUrl != null) {
+			entry += "<div class=\"updated\"><a href=\""+entryUrl+"\">"+date+"</a></div>";
+		} else {
+			entry += "<div class=\"updated\"><a href=\""+source+"\">"+date+"</a></div>";
+		}
+		
 		entry += "<div class=\"entryContent\">"+content+"</div>";
-
-		entry += "<div class=\"updated\">" + date + "</div>";
 		
 		entry += "</div>"
 		return entry;

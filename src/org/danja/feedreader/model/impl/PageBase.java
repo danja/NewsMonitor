@@ -7,9 +7,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.danja.feedreader.interpreters.FormatSniffer;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.main.Config;
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.Page;
 
@@ -28,6 +30,8 @@ public abstract class PageBase implements Page {
 	private long lastRefresh = 0;
 
 	private String url = null;
+	
+	private char formatHint = ContentType.UNKNOWN;
 
 	private String title = null;
 
@@ -36,6 +40,10 @@ public abstract class PageBase implements Page {
 	private String contentType = null;
 	
 	private boolean dead = false;
+
+	private int responseCode = 0;
+	
+	
 
 	public PageBase(String url) {
 		this.url = url;
@@ -75,27 +83,29 @@ public abstract class PageBase implements Page {
 		return content;
 	}
 
-	@Override
-	public void load() { // used by LinkExplorer
-		HttpConnector connector = new HttpConnector();
-		connector.setUrl(url);
-		connector.setConditional(false);
-		System.out.println("\n\nGetting content for : " + url);
-
-		boolean streamAvailable = connector.load();
-		if (streamAvailable) {
-			// format = sniffer.sniff(connector.getInputStream());
-//			System.out.println("streamAvailable ===Headers ===\n"
-//					+ connector.getHeadersString() + "------\n");
-		} else {
-			System.out.println("Stream unavailable.");
-			// format = FeedConstants.UNKNOWN;
-		}
-		// System.out.println("Format matches : "
-		// + FeedConstants.formatName(format));
-		System.out.println("\nCreating object for Page : " + url);
-		// connector.
-	}
+//	@Override
+//	public void load() { // used by LinkExplorer
+//		HttpConnector connector = new HttpConnector();
+//		connector.setUrl(url);
+//		connector.setConditional(false);
+//		System.out.println("\n\nGetting content for : " + url);
+//
+//		boolean streamAvailable = connector.load();
+//		if (streamAvailable) {
+//			FormatSniffer sniffer = new FormatSniffer();
+//			 setFormatHint(sniffer.sniff(connector.getInputStream()));
+//			 
+////			System.out.println("streamAvailable ===Headers ===\n"
+////					+ connector.getHeadersString() + "------\n");
+//		} else {
+//			System.out.println("Stream unavailable.");
+//			// format = ContentType.UNKNOWN;
+//		}
+//		// System.out.println("Format matches : "
+//		// + ContentType.formatName(format));
+//	//	System.out.println("\nCreating object for Page : " + url);
+//		// connector.
+//	}
 
 	public boolean refresh() {
 
@@ -132,6 +142,7 @@ public abstract class PageBase implements Page {
 					"Content-Type");
 			contentType = contentTypeList.get(0);
 		}
+		responseCode = httpConnector.getResponseCode();
 		lastRefresh = now();
 		// System.out.println("isNew = " + isNew);
 		return isNew;
@@ -218,10 +229,33 @@ public abstract class PageBase implements Page {
 	protected long now() {
 		return (new Date()).getTime();
 	}
+	
+	@Override
+	public void setResponseCode(int responseCode) {
+		this.responseCode  = responseCode;
+	}
+
+	@Override
+	public int getResponseCode() {
+		return responseCode;
+	}
+	
+	@Override
+	public void setFormatHint(char hint) {
+		this.formatHint = hint;
+	}
+
+	@Override
+	public char getFormatHint() {
+		return formatHint;
+	}
 
 	public Map<String, Object> getTemplateDataMap() {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("url", getUrl());
+		map.put("responseCode", getResponseCode());
+		map.put("format", ContentType.formatName(getFormatHint()));
+		// private String formatName = ContentType.formatName(ContentType.UNKNOWN);
 		return map;
 	}
 }

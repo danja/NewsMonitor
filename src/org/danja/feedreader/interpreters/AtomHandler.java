@@ -10,6 +10,7 @@
 package org.danja.feedreader.interpreters;
 
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
@@ -350,7 +351,11 @@ public class AtomHandler extends FeedHandlerBase {
 					return;
 				}
 
-				href = HtmlCleaner.resolveUrl(getFeed().getUrl(), href);
+				try {
+					href = HtmlCleaner.resolveUrl(getFeed().getUrl(), href);
+				} catch (URISyntaxException e) {
+					href = null;
+				}
 
 				Link link = new LinkImpl();
 				link.setRel(rel);

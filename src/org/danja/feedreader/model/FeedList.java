@@ -12,6 +12,7 @@ package org.danja.feedreader.model;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Models a set of feeds/connections
@@ -37,7 +38,7 @@ public interface FeedList
    /**
     * @return all feeds
     */
-   public List<Feed> getList();
+   public ConcurrentLinkedQueue<Feed> getList();
 
    public Feed createFeed(String uri);
 

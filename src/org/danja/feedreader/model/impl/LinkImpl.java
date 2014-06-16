@@ -26,7 +26,20 @@ public class LinkImpl implements Link, Templatable {
 	private String href = null;
 	private boolean explored = false;
 	private boolean remote = false;
+	private float relevance = 0;
 	
+	/**
+	 * @return the relevance
+	 */
+	public float getRelevance() {
+		return relevance;
+	}
+	/**
+	 * @param relevance the relevance to set
+	 */
+	public void setRelevance(float relevance) {
+		this.relevance = relevance;
+	}
 	/* (non-Javadoc)
 	 * @see org.danja.feedreader.model.Link#getHref()
 	 */
@@ -85,7 +98,7 @@ public class LinkImpl implements Link, Templatable {
 	}
 
 	@Override
-	public boolean explored() {
+	public boolean isExplored() {
 		return explored ;
 	}
 	@Override

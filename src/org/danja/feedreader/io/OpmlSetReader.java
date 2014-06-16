@@ -41,7 +41,7 @@ public class OpmlSetReader extends DefaultHandler {
             xmlReader.parse(inputSource);
             /*
              * Xerces version XMLReader reader = XMLReaderFactory
-             * .createXMLReader(FeedConstants.DEFAULT_PARSER_NAME);
+             * .createXMLReader(ContentType.DEFAULT_PARSER_NAME);
              * reader.setContentHandler(this); InputStream inputStream = new
              * FileInputStream(new File( storeFilename)); InputSource
              * inputSource = new InputSource(inputStream);

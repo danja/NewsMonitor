@@ -9,10 +9,13 @@
  */
 package org.danja.feedreader.io;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -123,12 +126,16 @@ public class HttpConnector {
 	}
 
 	public HttpURLConnection connect() {
+		return connect("GET");
+	}
+	
+	public HttpURLConnection connect(String method) {
 
 		HttpURLConnection connection = null;
 		try {
 			// System.out.println("URL in HttpConnector = "+url);
 			connection = (HttpURLConnection) url.openConnection();
-
+			connection.setRequestMethod(method);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -151,10 +158,37 @@ public class HttpConnector {
 		try {
 			connection.connect();
 		} catch (IOException e) {
-			e.printStackTrace();
+			// e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		headers = connection.getHeaderFields();
 		return connection;
+	}
+	
+	public String downloadAsString(String urlString) {
+		setUrl(urlString);
+		setConditional(false);
+		if(!load()) {
+			return null;
+		}
+		Reader inputStreamReader = new InputStreamReader(inputStream);
+    	BufferedReader in = new BufferedReader(inputStreamReader);
+    	StringBuffer buffer = new StringBuffer();
+    	String readLine;
+    	try {
+			while ((readLine = in.readLine()) != null) {
+			    buffer.append(readLine);
+			}
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+    	String data = buffer.toString();
+    	try {
+			in.close();
+		} catch (IOException e2) {
+			return null;
+		}
+    	return data;
 	}
 
 	public InputStream getInputStream(HttpURLConnection connection)
@@ -235,7 +269,19 @@ public class HttpConnector {
 	}
 
 	public String getContentType() {
+		if(contentType == null) {
+			doHeadRequest();
+		}
+		List<String> list = getHeaders().get("Content-Type");
+		if(list == null || list.size() == 0) {
+			return null;
+		}
+		contentType = getHeaders().get("Content-Type").get(0);
 		return contentType;
+	}
+
+	private void doHeadRequest() {
+		connect("HEAD");
 	}
 
 	public InputStream getInputStream() {

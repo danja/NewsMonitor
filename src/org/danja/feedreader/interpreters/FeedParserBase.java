@@ -19,7 +19,7 @@ import org.xml.sax.ContentHandler;
  */
 public abstract class FeedParserBase implements FeedParser {
 
-	private FeedHandlerBase feedHandler;
+	private FeedHandler feedHandler;
 
 	private Feed feed;
 
@@ -33,11 +33,11 @@ public abstract class FeedParserBase implements FeedParser {
 	 * .ContentHandler)
 	 */
 	@Override
-	public void setHandler(FeedHandlerBase contentHandler) {
+	public void setHandler(FeedHandler contentHandler) {
 		this.feedHandler = contentHandler;
 	}
 
-	public FeedHandlerBase getHandler() {
+	public FeedHandler getHandler() {
 		return feedHandler;
 	}
 

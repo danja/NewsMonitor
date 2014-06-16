@@ -34,4 +34,6 @@ public class Topic {
 	public Map<String, Float> getKeywords() {
 		return keywords;
 	}
+	
+	
 }

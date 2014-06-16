@@ -1,3 +1,4 @@
+http://danbri.org/words/category/technology/rdf
 # RSS 1.0
 http://aabs.wordpress.com/feed/
 # /category/semanticweb/rdf
@@ -16,3 +17,5 @@ http://intertwingly.net/blog/index.atom
 http://markwatson.com/blog/atom.xml
 
 # http://localhost:8080/atom-real-1.xml
+
+http://tomheath.com/blog/comments/feed/rdf/

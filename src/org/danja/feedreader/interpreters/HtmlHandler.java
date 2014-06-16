@@ -1,4 +1,6 @@
 /**
+ * NOT USED
+ * 
  * feedreader-prototype
  *
  * HtmlHandler.java

@@ -17,12 +17,21 @@ public interface Page {
 	public void setContentType(String contentType);
 	public String getContentType();
 	public String getDomain();
+	public void setResponseCode(int responseCode);
+	public int getResponseCode();
 	public void setContent(String content);
 	public String getContent();
-	public void load();
+	// public void load();
 	public void setLives(int lives);
 	public void setFirstCall(boolean firstCall);
 	public int getLives();
 	public void setDead(boolean dead);
 	public boolean isDead();
+	
+    /**
+     * Values can be ContentType.RSS2 etc.
+     */
+    public void setFormatHint(char hint);
+
+    public char getFormatHint();
 }

@@ -228,9 +228,9 @@ public class Rss1Handler extends FeedHandlerBase {
 				return;
 			}
 			if ("encoded".equals(localName)) {
-				System.out.println("TEXT = "+text);
+			//	System.out.println("TEXT = "+text);
 				String content = HtmlCleaner.unescape(text);
-				System.out.println("CONTNT = "+content);
+				// System.out.println("CONTNT = "+content);
 				// content = HtmlCleaner.normalise(content);
 				currentEntry.setContent(content);
 				Set<Link> links = HtmlCleaner.extractLinks(content);

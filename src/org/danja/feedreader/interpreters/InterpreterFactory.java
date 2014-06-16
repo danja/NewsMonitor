@@ -10,7 +10,7 @@
 package org.danja.feedreader.interpreters;
 
 import org.danja.feedreader.model.Feed;
-import org.danja.feedreader.model.FeedConstants;
+import org.danja.feedreader.model.ContentType;
 
 /**
  * Looks after the creation of interpreters (gluing parsers together)
@@ -31,7 +31,7 @@ public class InterpreterFactory {
 		// UNKNOWN, RSS1, RSS2, ATOM, RSS_SOUP, RDF_OTHER
 
 		switch (formatHint) {
-		case FeedConstants.RSS1:
+		case ContentType.RSS1:
 			System.out.println("RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser");
 			feedParser = new XMLReaderParser();
 			FeedHandlerBase rss1handler = new Rss1Handler();
@@ -39,7 +39,7 @@ public class InterpreterFactory {
 			interpreter = new Rss1Interpreter(feed, feedParser);
 			return interpreter;
 
-		case FeedConstants.ATOM:
+		case ContentType.ATOM:
 			System.out.println("Atom: Using AtomHandler, XMLReaderParser");
 			feedParser = new XMLReaderParser();
 			atomHandler = new AtomHandler();
@@ -52,7 +52,7 @@ public class InterpreterFactory {
 
 			return interpreter;
 
-		case FeedConstants.RSS2:
+		case ContentType.RSS2:
 			System.out.println("RSS2: Using Rss2Handler, XMLReaderParser");
 			feedParser = new XMLReaderParser();
 			FeedHandlerBase rss2handler = new Rss2Handler();
@@ -60,11 +60,11 @@ public class InterpreterFactory {
 			interpreter = new ParserInterpreter(feed, feedParser);
 			return interpreter;
 
-		case FeedConstants.RDF_OTHER:
+		case ContentType.RDF_OTHER:
 
-		case FeedConstants.RSS_SOUP:
-		case FeedConstants.UNKNOWN:
-			System.out.println("RSS_SOUP: Using SoupParser, SoupHandler");
+		case ContentType.RSS_SOUP:
+		case ContentType.UNKNOWN:
+			System.out.println("RSS_SOUP: Using SoupParser, Rss2Handler");
 			feedParser = new SoupParser();
 			FeedHandlerBase handler = new Rss2Handler();
 			feedParser.setHandler(handler);

@@ -9,13 +9,11 @@
 package org.danja.feedreader.main;
 
 import java.util.List;
-import java.util.Set;
 
 import org.danja.feedreader.discovery.LinkExplorer;
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.io.TextFileReader;
 import org.danja.feedreader.main.FeedListLoader.LineHandler;
-import org.danja.feedreader.model.FeedList;
 import org.danja.feedreader.templating.Templater;
 
 /**
@@ -33,16 +31,30 @@ public class Main implements Runnable {
 		Main main = new Main();
 		Templater.init();
 		
-		String sparqlBootstrap = TextFileReader.read(Config.BOOTSTRAP_SPARQL);
-		SparqlConnector.update(Config.UPDATE_ENDPOINT, sparqlBootstrap);
+		System.out.println("A");
+//		
+//		String sparqlBootstrap = TextFileReader.read(Config.BOOTSTRAP_SPARQL);
+//		SparqlConnector.update(Config.UPDATE_ENDPOINT, sparqlBootstrap);
+//		
+		System.out.println("B");
 		
 		SystemStatus status = new SystemStatus();
 		System.out.println("POLLER RUNNING = "+status.getPollerRunning());
 		// Config.load();
 
+		status.initializeFeedListFromFile(Config.SEED_FEEDLIST);
+		
+		if(args.length > 1) {
+			System.out.println("args[0] = "+args[0]);
+			if("-C".equals(args[0])) {
+				status.initializeFeedListFromFile(Config.SEED_FEEDLIST);
+			} 
+			if("-f".equals(args[0])) {
+				status.initializeFeedListFromFile(args[1]);
+			} 
+		}
 		// load seed list from file into store
-		System.out.println("Loading seed feed list from file into store...");
-		main.loadSeedFeedList();
+
 		
 		// TODO doesn't appear to be refreshing
 
@@ -91,18 +103,7 @@ public class Main implements Runnable {
 		return feedUrlList.getFeeds();
 	}
 
-	public void loadSeedFeedList() {
-		FeedListLoader loader = new FeedListLoader();
-		LineHandler handler = loader.new LineHandler();
-		// TODO move to config
-		String turtleBody = loader.readFile(Config.SEED_FEEDLIST, handler);
-		String sparql = FeedListLoader.insertValue(
-				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
-		// System.out.println("Query = \n" + sparql);
-		int responseCode = SparqlConnector.update(
-				Config.UPDATE_ENDPOINT, sparql).getStatusCode();
-		// System.out.println(responseCode);
-	}
+
 
 	@Override
 	public void run() {

@@ -9,12 +9,25 @@
 package org.danja.feedreader.io;
 
 /**
- * maybe tie to org.apache.http.HttpMessage
+ * maybe tie to/replace with org.apache.http.HttpMessage
  */
 public class HttpMessage {
 	private int statusCode = -1;
 	private String statusMessage;
+	private String requestBody = "";
 	
+	/**
+	 * @return the requestBody
+	 */
+	public String getRequestBody() {
+		return requestBody;
+	}
+	/**
+	 * @param requestBody the requestBody to set
+	 */
+	public void setRequestBody(String requestBody) {
+		this.requestBody = requestBody;
+	}
 	public HttpMessage(int statusCode, String statusMessage) {
 		this.statusCode = statusCode;
 		this.statusMessage = statusMessage;
@@ -45,6 +58,6 @@ public class HttpMessage {
 	}
 	
 	public String toString() {
-		return this.statusCode + " : "+this.statusMessage;
+		return this.statusCode + " : "+this.statusMessage + "\n" +this.requestBody;
 	}
 }

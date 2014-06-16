@@ -10,7 +10,7 @@ import org.danja.feedreader.interpreters.InterpreterFactory;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.model.Entry;
 import org.danja.feedreader.model.EntryList;
-import org.danja.feedreader.model.FeedConstants;
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.impl.FeedImpl;
 import org.danja.feedreader.templating.Templater;
@@ -40,7 +40,7 @@ public class TestAtomParser {
 
 		feed = new FeedImpl();
 		feed.setUrl(url);
-		feed.setFormatHint(FeedConstants.ATOM);
+		feed.setFormatHint(ContentType.ATOM);
 		// feed.setRefreshPeriod(Config.getPollerPeriod());
 
 		// interpreter = RDFInterpreterFactory.createInterpreter(format);

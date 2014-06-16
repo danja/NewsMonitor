@@ -16,12 +16,13 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.main.Main;
 import org.danja.feedreader.model.EntryList;
 import org.danja.feedreader.model.Feed;
-import org.danja.feedreader.model.FeedConstants;
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.FeedList;
 import org.danja.feedreader.model.Link;
 
@@ -32,12 +33,12 @@ import org.danja.feedreader.model.Link;
  */
 public class FeedListImpl implements FeedList {
 
-	private LinkedList<Feed> feedQueue;
+	private ConcurrentLinkedQueue<Feed> feedQueue;
 	// private EntryList entries;
 	private boolean firstCall;
 
 	public FeedListImpl() {
-		feedQueue = new LinkedList<Feed>();
+		feedQueue = new ConcurrentLinkedQueue<Feed>();
 	}
 
 	public Feed createFeed(String url) {
@@ -47,11 +48,12 @@ public class FeedListImpl implements FeedList {
 	}
 
 	public void addFeed(String uriString) {
-		addFeed(uriString, FeedConstants.UNKNOWN);
+		addFeed(uriString, ContentType.UNKNOWN);
 	}
 
 	public void addFeed(Feed feed) {
-		feedQueue.addFirst(feed); // it's shiny new and interesting
+		// feedQueue.addFirst(feed); // it's shiny new and interesting
+		feedQueue.add(feed);
 	}
 
 	public void addFeed(String uriString, char formatHint) {
@@ -64,30 +66,37 @@ public class FeedListImpl implements FeedList {
 		feedQueue.addAll(feeds.getList());
 	}
 
-	public List<Feed> getList() {
+	public ConcurrentLinkedQueue<Feed> getList() {
 		return feedQueue;
 	}
 
 	public Feed getNext() {
-		Feed next = (Feed) feedQueue.removeFirst();
-		feedQueue.addLast(next);
+		Feed next = feedQueue.poll();
+	//	Feed next = (Feed) feedQueue.removeFirst();
+	//	feedQueue.addLast(next);
 		return next;
 	}
 
-	public void refreshAll() {
+	public synchronized void refreshAll() {
 		Set<Feed> expiring = new HashSet<Feed>();
 		Iterator<Feed> iterator = feedQueue.iterator();
 		Feed feed;
+		
+
 		while (iterator.hasNext()) {
 			feed = iterator.next();
 //			System.out.println("feed.getLives() = "+feed.getLives());
 //			System.out.println("feed.isDead() = "+feed.isDead());
-			
+			if(feed.getFormatHint() == ContentType.HTML) {
+				feed.setDead(true);
+				System.out.println("Is HTML...");
+			}
 			if(feed.getLives() < 1) {
+				System.out.println("Lives gone...");
 				feed.setDead(true);
 			}
 			if(feed.isDead()) {
-				System.out.println("Is dead, skipping.");
+				System.out.println("Flagging as dead, skipping.");
 				
 				// TODO is duplicated below
 				System.out.println("Unsubscribing from " + feed.getUrl());
@@ -111,6 +120,7 @@ public class FeedListImpl implements FeedList {
 				e.printStackTrace();
 			}
 		}
+	
 		if (Main.POLLER_NO_LOOP) {
 			System.exit(1);
 			;

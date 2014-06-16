@@ -9,11 +9,13 @@
  */
 package org.danja.feedreader.model.impl;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.danja.feedreader.model.DateStamp;
 import org.danja.feedreader.model.FeedEntity;
@@ -45,11 +47,15 @@ public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Te
     
     private Person author = null;
     
-    private Set<Link> links = new HashSet<Link>();
+  //  private Set<Link> links = new HashSet<Link>();
+    
+    private Set<Link> links = Collections.newSetFromMap(
+	        new ConcurrentHashMap<Link, Boolean>());
 
 	private float relevance = 0;
 
-	private Set<Tag> tags = new HashSet<Tag>();
+	private Set<Tag> tags = Collections.newSetFromMap(
+	        new ConcurrentHashMap<Tag, Boolean>());
 
 	private boolean favourite = false;
 
@@ -202,5 +208,10 @@ public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Te
 	@Override
 	public boolean getFavourite() {
 		return favourite;
+	}
+
+	public void clearLinks() {
+		links = Collections.newSetFromMap(
+		        new ConcurrentHashMap<Link, Boolean>());
 	}
 }

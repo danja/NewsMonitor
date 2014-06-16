@@ -35,12 +35,7 @@ public interface Feed extends FeedEntity, Page {
 	public String getSubtitle();
 	
 	public void addEntry(Entry entry);
-    /**
-     * Values can be FeedConstants.RSS2 etc.
-     */
-    public void setFormatHint(char hint);
 
-    public char getFormatHint();
 
     public boolean refresh();
 
@@ -98,4 +93,6 @@ public interface Feed extends FeedEntity, Page {
 	public Set<Link> getRemoteLinks();
 
 	public void init();
+
+	public void clean();
 }

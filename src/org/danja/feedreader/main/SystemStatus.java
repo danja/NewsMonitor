@@ -14,6 +14,7 @@ import java.util.Map;
 
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.io.TextFileReader;
+import org.danja.feedreader.main.FeedListLoader.LineHandler;
 import org.danja.feedreader.sparql.SparqlResults;
 import org.danja.feedreader.sparql.SparqlResultsParser;
 import org.danja.feedreader.templating.Templater;
@@ -59,6 +60,20 @@ public void setDiscoveryRunning(boolean discoveryRunning) {
 public boolean getDiscoveryRunning() {
 	pullStatusFromStore();
 	return discoveryRunning;
+}
+
+public void initializeFeedListFromFile(String filename) {
+	System.out.println("Loading feed list from file "+filename+" into store...");
+	FeedListLoader loader = new FeedListLoader();
+	LineHandler handler = loader.new LineHandler();
+
+	String turtleBody = loader.readFile(filename, handler);
+	String sparql = FeedListLoader.insertValue(
+			FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
+	// System.out.println("Query = \n" + sparql);
+	int responseCode = SparqlConnector.update(
+			Config.UPDATE_ENDPOINT, sparql).getStatusCode();
+	System.out.println("SPARQL response : "+responseCode);
 }
 
 private void pushStatusToStore(){

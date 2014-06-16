@@ -82,6 +82,12 @@ public class HtmlCleaner {
 				if(href.startsWith("\"") || href.startsWith("'")){
 					href = href.substring(1, href.length()-1);
 				}
+				href = href.trim();
+				try {
+					URI uri = new URI(href);
+				} catch (URISyntaxException e) {
+					continue;
+				}
 				Link link = new LinkImpl();
 				link.setHref(href);
 				link.setLabel(linkText);
@@ -91,7 +97,7 @@ public class HtmlCleaner {
 		return links;
 	}
 
-	public static String resolveUrl(String url, String href) {
+	public static String resolveUrl(String url, String href) throws URISyntaxException {
 		if(href == null || url == null) { // dud
 			return null;
 		}
@@ -99,15 +105,17 @@ public class HtmlCleaner {
 			return href;
 		}
 		URI uri = null;
-		System.out.println("URL = "+url);
-		try {
+		//System.out.println("URL = "+url);
+
 		 uri = new URI(url);
-		} catch (URISyntaxException e) {
-			e.printStackTrace();
-		}
-		System.out.println("URI = "+uri);
-		System.out.println("HREF = "+href);
-		return uri.resolve(href).toString();
+		
+		//System.out.println("URI = "+uri);
+		//System.out.println("HREF = "+href);
+		URI hrefUri = null;
+
+			hrefUri = new URI(href);
+
+		return uri.resolve(hrefUri).toString();
 	}
 
 	public static String escapeQuotes(String content) {

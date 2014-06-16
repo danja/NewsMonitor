@@ -11,6 +11,7 @@ package org.danja.feedreader.main;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import org.danja.feedreader.interpreters.FormatSniffer;
 import org.danja.feedreader.interpreters.Interpreter;
@@ -19,7 +20,7 @@ import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.io.HttpMessage;
 import org.danja.feedreader.model.EntryList;
 import org.danja.feedreader.model.Feed;
-import org.danja.feedreader.model.FeedConstants;
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.FeedList;
 import org.danja.feedreader.model.impl.EntryListImpl;
 import org.danja.feedreader.model.impl.FeedImpl;
@@ -82,7 +83,12 @@ public class Poller implements Runnable {
 		feedList.setFirstCall(true);
 		// System.out.println("FEEDLIST = " + feedList);
 		while (running) {
-			System.out.println("Starting loop #" + ++loopCount);
+			if(feedList.size() == 0) {
+				System.out.println("No valid feeds, stopping poller...");
+				running = false;
+				break;
+			}
+			System.out.println("\n*** Starting loop #" + (++loopCount) +" ***");
 			System.out.println("Refreshing " + feedList.size() + " feeds...");
 
 			feedList.setFirstCall(false);
@@ -95,17 +101,23 @@ public class Poller implements Runnable {
 	}
 
 	private void pushFeeds() {
-		List<Feed> feeds = feedList.getList();
-		for (int i = 0; i < feeds.size(); i++) {
-			Feed feed = feeds.get(i);
-			
+		ConcurrentLinkedQueue<Feed> feeds = feedList.getList();
+		//for (int i = 0; i < feeds.size(); i++) {
+		//	Feed feed = feeds.get(i);Listterator
+		Iterator<Feed> iterator = feeds.iterator();
+			while(iterator.hasNext()) {
+				Feed feed = iterator.next();
 			if (feed.isNew()) {
 				System.out.println("Uploading SPARQL for : " + feed.getUrl());
-				HttpMessage message = SparqlTemplater.uploadFeed(feeds.get(i));
-				System.out.println("SPARQL response = " + message);
+				HttpMessage message = SparqlTemplater.uploadFeed(feed);
+				feed.clean();
+				System.out.println("SPARQL response = " + message.getStatusCode()+ " " +message.getStatusMessage());
+				if(message.getStatusCode() >= 400) {
+					System.out.println("\n"+message+"\n");
+				}
+			} else {
+				System.out.println("No changes to : " + feed.getUrl());
 			}
-			// feeds.get(0).downloadToFile("text.xml");
-
 		}
 	}
 
