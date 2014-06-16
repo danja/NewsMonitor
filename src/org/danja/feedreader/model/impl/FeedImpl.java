@@ -151,9 +151,10 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		boolean streamAvailable = connector.load();
 		if (streamAvailable) {
 			System.out.println("Sniffing...");
-			System.out.println("CONTENT TYPE = " + connector.getContentType());
+		//	System.out.println("CONTENT TYPE = " + connector.getContentType());
 			setContentType(connector.getContentType());
 			format = sniffer.sniff(connector.getInputStream());
+			setFormat(ContentType.formatName(format));
 			// System.out.println("===Headers ===\n"+connector.getHeadersString()+"------\n");
 		} else {
 			System.out.println("Stream unavailable.");
@@ -163,8 +164,8 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			return;
 		}
 
-		System.out.println("getContentType() = " + getContentType() + " "
-				+ getContentType().startsWith("text/html"));
+		System.out.println("getFormat" + getFormat() + " "
+				+ getFormat().startsWith("text/html"));
 
 		if (format == ContentType.UNKNOWN || format == ContentType.RSS_SOUP) {
 			if (getContentType() != null

@@ -61,7 +61,7 @@ public class FormatSniffer extends DefaultHandler {
     			break;
     		}
     	}
-    	System.out.println("MATCH = "+matched);
+    	// System.out.println("MATCH = "+matched);
     	if(!match) {
     	//	System.out.println("NO MATCH");
     		return ContentType.UNKNOWN;

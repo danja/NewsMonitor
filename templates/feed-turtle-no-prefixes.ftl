@@ -4,7 +4,8 @@
          
          # feed/admin bits
          <#if responseCode??><${feedUrl}> nm:responseCode "${responseCode?c}" .</#if>
-         <#if format??><${feedUrl}> nm:responseCode "${format}" .</#if>
+         <#if format??><${feedUrl}> nm:format "${format}" .</#if>
+         <#if contentType??><${feedUrl}> nm:contentType "${contentType}" .</#if>
          <#if lives??><${feedUrl}> nm:lives "${lives?c}" .</#if>
          <#if dead??><${feedUrl}> nm:dead "${dead?c}" .</#if> 
          <#if entryCount??><${feedUrl}> nm:entryCount "${entryCount?c}" .</#if> 
@@ -47,7 +48,8 @@
          	   		nm:href <${link.href}> ;
          	   		<#if link.label??>nm:label """${link.label}""" ;</#if>
          	   		<#if link.rel??>nm:rel "${link.rel}" ;</#if>
-         	   		<#if link.type??>nm:type "${link.type}" ;</#if>
+         	   		<#if link.contentType??>nm:contentType "${link.contentType}" ;</#if>
+         	   		<#if link.format??>nm:format "${link.format}" ;</#if>
          	   		
          	   		<#if link.explored??>nm:explored "${link.explored?c}" ;</#if>
          	   		<#if link.relevance??>nm:relevance "${link.relevance?c}" ;</#if>
@@ -121,7 +123,9 @@
          	   		nm:href <${link.href}> ;
          	   		<#if link.label??>nm:label """${link.label}""" ;</#if>
          	   		<#if link.rel??>nm:rel """${link.rel}""" ;</#if>
-         	   		<#if link.type??>nm:type """${link.type}""" ;</#if>
+         	   		<#if link.contentType??>nm:contentType "${link.contentType}" ;</#if>
+         	   		<#if link.format??>nm:format "${link.format}" ;</#if>
+         	   		
          	   		
          	   		<#if link.explored??>nm:explored "${link.explored?c}" ;</#if>
          	   		<#if link.relevance??>nm:relevance "${link.relevance?c}" ;</#if>

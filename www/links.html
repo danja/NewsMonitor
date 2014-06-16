@@ -35,7 +35,8 @@ var getLinksSparql = "PREFIX rss: <http://purl.org/rss/1.0/> \n\
 			  OPTIONAL { ?link nm:label ?label . } \n\
 		      OPTIONAL { ?link nm:href ?href . } \n\
 		      OPTIONAL { ?link nm:rel ?rel . } \n\
-		      OPTIONAL { ?link nm:type ?type . } \n\
+		      OPTIONAL { ?link nm:format ?format . } \n\
+		      OPTIONAL { ?link nm:contentType ?contentType . } \n\
 		      OPTIONAL { ?link nm:explored ?explored . } \n\
 		      OPTIONAL { ?link nm:relevance ?relevance . } \n\
 		   } \n\
@@ -99,7 +100,7 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
 					
     				$xml.find("result").each(function() {
     					// $('#results').html($(this));
-    					var href, label, rel, type, explored, relevance;
+    					var href, label, rel, format, contentType, explored, relevance;
     					
     					$(this).find("binding[name='href']").each(function() {
     						href = $(this).text().trim();
@@ -110,8 +111,11 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
     					$(this).find("binding[name='rel']").each(function() {
     						rel = $(this).text().trim();
     					});
-    					$(this).find("binding[name='type']").each(function() {
-    						type = $(this).text().trim();
+    					$(this).find("binding[name='format']").each(function() {
+    						format = $(this).text().trim();
+    					});
+    					$(this).find("binding[name='contentType']").each(function() {
+    						contentType = $(this).text().trim();
     					});
     					$(this).find("binding[name='explored']").each(function() {
     						explored = $(this).text().trim();
@@ -121,7 +125,7 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
     					});
     					
     					
-    					rows += generateLinkRow(href, label, rel, type, explored, relevance);
+    					rows += generateLinkRow(href, label, rel, format, contentType, explored, relevance);
     				});
     				 $("#links").replaceWith(rows);
     				//  $("table").colResizable();
@@ -130,7 +134,7 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
   		
     	}
     	
-    	function generateLinkRow(href, label, rel, type, explored, relevance) {
+    	function generateLinkRow(href, label, rel, format, contentType, explored, relevance) {
     		var row = "<tr>";
     		
     		// binaries etc.
@@ -143,7 +147,7 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
     			row += "<td class=\"center\">-</td>";
     		}
     		if(label != null) {
-    		   row += "<td>"+label+"</td>";
+    		   row += "<td class=\"center\">"+label+"</td>";
     		} else {
     			row += "<td class=\"center\">-</td>";
     		}
@@ -152,8 +156,13 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
      		} else {
      			row += "<td class=\"center\">-</td>";
      		}
-    		if(type != null) {
-    			row += "<td class=\"center\">"+type+"</td>";
+    		if(format != null) {
+    			row += "<td class=\"center\">"+format+"</td>";
+    		} else {
+    			row += "<td class=\"center\">-</td>";
+    		}
+    		if(contentType != null) {
+    			row += "<td class=\"center\">"+contentType+"</td>";
     		} else {
     			row += "<td class=\"center\">-</td>";
     		}
@@ -207,11 +216,13 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
 <div class="container">
 
 <table  id="linksTable" class="table table-bordered" data-resizable-columns-id="links">
+<tr><th colspan="7" class=\"center\">Links</th></tr>
 <tr>
   <th class="center">URL</th>
   <th class="center">Label</th> 
   <th class="center">Rel</th> 
-  <th class="center">Type</th> 
+  <th class="center">Format</th> 
+  <th class="center">Content Type</th> 
   <th class="center">Explored</th> 
   <th class="center">Relevance</th> 
 </tr>
@@ -219,9 +230,5 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
   </table>
   
     <div id="spinner" class="spinner"></div> 
-
-
-
-
 </body>
 </html>

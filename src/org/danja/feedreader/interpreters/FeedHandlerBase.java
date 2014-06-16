@@ -231,7 +231,7 @@ public abstract class FeedHandlerBase implements FeedHandler {
 				continue;
 			}
 			link.setHref(resolved);
-			System.out.println("LINK = " + link);
+		//	System.out.println("LINK = " + link);
 			if (link.getLabel() != null) {
 				String raw = link.getLabel();
 				String cleaned = HtmlCleaner.stripTags(raw).trim();

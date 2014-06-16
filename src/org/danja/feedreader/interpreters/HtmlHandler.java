@@ -14,6 +14,7 @@ package org.danja.feedreader.interpreters;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.impl.LinkImpl;
 import org.xml.sax.Attributes;
@@ -30,7 +31,9 @@ public class HtmlHandler extends FeedHandlerBase {
             Link link = new LinkImpl();
             link.setRel(attributes.getValue("rel"));
             link.setHref(attributes.getValue("href"));
-            link.setType(attributes.getValue("type"));
+            link.setContentType(attributes.getValue("type"));
+            link.setFormat(ContentType.getTypeName(attributes.getValue("type")));
+            // type = ContentType.getTypeName(type);
             links.add(link);
         }
     }

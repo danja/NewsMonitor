@@ -24,6 +24,11 @@ public class PresetTopics {
 		SEMWEB_TOPIC.addKeyword("semantic", 0.5F);
 		SEMWEB_TOPIC.addKeyword("data", 0.2F);
 		SEMWEB_TOPIC.addKeyword("web", 0.2F);
+		SEMWEB_TOPIC.addKeyword("schema.org", 0.8F);
+		SEMWEB_TOPIC.addKeyword("JSON-LD", 0.9F);
+		SEMWEB_TOPIC.addKeyword("W3C", 0.4F);
+		SEMWEB_TOPIC.addKeyword("RDFa", 0.9F);
+		SEMWEB_TOPIC.addKeyword("SPARQL", 0.9F);
 	}
 
 }

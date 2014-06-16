@@ -147,21 +147,6 @@ public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Te
 		return this.htmlUrl;
 	}
 
-    public Map<String, Object> getTemplateDataMap(){
-    	Map<String, Object> data = super.getTemplateDataMap();
-		data.put("url", getUrl());
-		data.put("id", getId());
-		data.put("title", HtmlCleaner.escapeQuotes(getTitle()));
-    	data.put("content", HtmlCleaner.escapeQuotes(getContent()));
-    	data.put("datestamp", getDateStamp());
-    	data.put("author", getAuthor());
-    	data.put("links", getLinks());
-    	data.put("relevance", getRelevance());
-    	data.put("tags", getTags());
-    	data.put("favourite", getFavourite());
-		return data;
-    }
-
     public String toString() {
         StringBuffer buffer = new StringBuffer();
         // buffer.append("Entity : "+getClass().getSimpleName()+"\n");
@@ -214,4 +199,19 @@ public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Te
 		links = Collections.newSetFromMap(
 		        new ConcurrentHashMap<Link, Boolean>());
 	}
+	
+	   public Map<String, Object> getTemplateDataMap(){
+	    	Map<String, Object> data = super.getTemplateDataMap();
+			// data.put("url", getUrl());
+			data.put("id", getId());
+			data.put("title", HtmlCleaner.escapeQuotes(getTitle()));
+	    	data.put("content", HtmlCleaner.escapeQuotes(getContent()));
+	    	data.put("datestamp", getDateStamp());
+	    	data.put("author", getAuthor());
+	    	data.put("links", getLinks());
+	    	data.put("relevance", getRelevance());
+	    	data.put("tags", getTags());
+	    	data.put("favourite", getFavourite());
+			return data;
+	    }
 }

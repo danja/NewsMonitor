@@ -1,5 +1,7 @@
 package org.danja.feedreader.model;
 
+import java.util.Map;
+
 public interface Link {
 
 	public boolean isExplored();
@@ -18,12 +20,12 @@ public interface Link {
 	/**
 	 * @return the type
 	 */
-	public  String getType();
+	public  String getContentType();
 
 	/**
 	 * @param type the type to set
 	 */
-	public  void setType(String type);
+	public  void setContentType(String contentType);
 
 	/**
 	 * @return the rel
@@ -52,4 +54,12 @@ public interface Link {
 	public void setRelevance(float f);
 	
 	public float getRelevance();
+
+	public void setFormat(String format);
+	
+	public String getFormat();
+
+	public Map<String, Object> getTemplateDataMap();
+
+	// public void setType(char type); too confusing, do it longhand in the callers
 }

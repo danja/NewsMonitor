@@ -5,14 +5,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
-import org.danja.feedreader.interpreters.FormatSniffer;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.model.ContentType;
-import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.Page;
 
 public abstract class PageBase implements Page {
@@ -20,6 +17,22 @@ public abstract class PageBase implements Page {
 	private HttpConnector httpConnector = null;
 
 	private Interpreter interpreter = null;
+	
+	private String contentType = null;
+
+	/**
+	 * @return the contentType
+	 */
+	public String getContentType() {
+		return contentType;
+	}
+
+	/**
+	 * @param contentType the contentType to set
+	 */
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
+	}
 
 	private boolean isNew = false;
 
@@ -37,7 +50,7 @@ public abstract class PageBase implements Page {
 
 	private String content = null;
 
-	private String contentType = null;
+	private String format = null;
 	
 	private boolean dead = false;
 
@@ -99,10 +112,10 @@ public abstract class PageBase implements Page {
 ////					+ connector.getHeadersString() + "------\n");
 //		} else {
 //			System.out.println("Stream unavailable.");
-//			// format = ContentType.UNKNOWN;
+//			// format = format.UNKNOWN;
 //		}
 //		// System.out.println("Format matches : "
-//		// + ContentType.formatName(format));
+//		// + format.formatName(format));
 //	//	System.out.println("\nCreating object for Page : " + url);
 //		// connector.
 //	}
@@ -140,7 +153,7 @@ public abstract class PageBase implements Page {
 		if (httpConnector.getHeaders().containsKey("Content-Type")) {
 			List<String> contentTypeList = httpConnector.getHeaders().get(
 					"Content-Type");
-			contentType = contentTypeList.get(0);
+			format = contentTypeList.get(0);
 		}
 		responseCode = httpConnector.getResponseCode();
 		lastRefresh = now();
@@ -183,12 +196,12 @@ public abstract class PageBase implements Page {
 	
 	
 	@Override
-	public void setContentType(String contentType) {
-		this.contentType = contentType;
+	public void setFormat(String format) {
+		this.format = format;
 	}
 	
-	public String getContentType() {
-		return contentType;
+	public String getFormat() {
+		return format;
 	}
 
 	public InputStream getInputStream() {
@@ -254,8 +267,9 @@ public abstract class PageBase implements Page {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("url", getUrl());
 		map.put("responseCode", getResponseCode());
-		map.put("format", ContentType.formatName(getFormatHint()));
-		// private String formatName = ContentType.formatName(ContentType.UNKNOWN);
+		map.put("contentType", getContentType());
+		map.put("format", getFormat());
+		// private String formatName = format.formatName(format.UNKNOWN);
 		return map;
 	}
 }

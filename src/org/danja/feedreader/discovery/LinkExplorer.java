@@ -10,14 +10,17 @@ package org.danja.feedreader.discovery;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.danja.feedreader.interpreters.HtmlHandler;
 import org.danja.feedreader.interpreters.SoupParser;
 import org.danja.feedreader.io.HttpConnector;
+import org.danja.feedreader.io.HttpMessage;
 import org.danja.feedreader.io.SparqlConnector;
 import org.danja.feedreader.io.TextFileReader;
 import org.danja.feedreader.main.Config;
@@ -26,9 +29,12 @@ import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.FeedList;
 import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.Page;
+import org.danja.feedreader.model.impl.LinkImpl;
 import org.danja.feedreader.model.impl.PageImpl;
+import org.danja.feedreader.sparql.SparqlResults.Binding;
 import org.danja.feedreader.sparql.SparqlResultsParser;
 import org.danja.feedreader.sparql.SparqlResults.Result;
+import org.danja.feedreader.templating.Templater;
 import org.danja.feedreader.utils.HtmlCleaner;
 
 /**
@@ -68,70 +74,124 @@ public class LinkExplorer implements Runnable {
 		while (running) {
 			// Set<Link> links = feedList.getAllLinks();
 			Set<Link> links = getLinksFromStore();
+			
 			Iterator<Link> linkIterator = links.iterator();
 			while (linkIterator.hasNext()) {
 				Link link = linkIterator.next();
 				explore(link);
-				updateStore(link);
+updateStore(link);
 			}
 			try {
 				Thread.sleep(Config.LINK_EXPLORER_SLEEP_PERIOD);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			//updateStore();
 		}
 		stopped = true;
 	}
 
 	private void updateStore(Link link) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("updating link "+link.getHref()+" to store");
+		String sparql = Templater.apply("update-links", link.getTemplateDataMap());
+		// System.out.println("\n\n----------------\n"+sparql+"\n\n---------------------");
+		HttpMessage message = SparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
+		message.setRequestBody(sparql);
+		System.out.println("updated link status : "+message.getStatusCode()+" "+message.getStatusMessage());
+		if(message.getStatusCode() >= 400) {
+			System.out.println(message);
+			System.out.println("SPARQL = \n"+message.getRequestBody());
+		}
 	}
 
 	private Set<Link> getLinksFromStore() {
 		String sparql = TextFileReader.read(Config.GET_LINKS_SPARQL);
 		String xmlResults = SparqlConnector.query(Config.QUERY_ENDPOINT, sparql);
 		
-		System.out.println("XMLRESULTS = "+xmlResults);
+		// System.out.println("XMLRESULTS = "+xmlResults);
 		
 		SparqlResultsParser parser = new SparqlResultsParser();
 		List<Result> results = parser.parse(xmlResults).getResults();
 		Set<Link> links = new HashSet<Link>();
 		for (int i = 0; i < results.size(); i++) {
-			 System.out.println(results.get(i));
-			// String link = results.get(i).iterator().next().getValue();
-			// feeds.add(feed);
+			 // System.out.println(results.get(i));
+			
+			Result result = results.get(i);
+			// .iterator().next().getName();
+			
+			Link link = new LinkImpl(); 
+			Iterator<Binding> iterator = result.iterator();
+			
+			while(iterator.hasNext()) {
+				Binding binding = iterator.next();
+				String name = binding.getName();
+				String value = binding.getValue();
+				setValue(link, name, value);
+			//	System.out.println("\n"+name+" = "+value);
+				
+			}
+			links.add(link);
 		}
-		return null;
+		return links;
+	}
+
+	private void setValue(Link link, String name, String value) {
+		if("href".equals(name)) {
+			link.setHref(value);
+		}
+		if("label".equals(name)) {
+			link.setLabel(value);
+		}
+		if("rel".equals(name)) {
+			link.setRel(value);
+		}
+		if("contentType".equals(name)) {
+			link.setContentType(value);
+		}
+		if("format".equals(name)) {
+			link.setFormat(value);
+		}
+		if("explored".equals(name)) {
+			link.setExplored("true".equals(value));
+		}
+		if("remote".equals(name)) {
+			link.setRemote("true".equals(value));
+		}
+		if("relevance".equals(name)) {
+			link.setRelevance(value.charAt(0));
+		}
 	}
 
 	private void explore(Link link) {
+		System.out.println("exploring "+link);
 		this.link = link;
 		this.url = link.getHref();
+		connector.setUrl(url);
 		
-		if(!isRecognised()) { // no use
+		char type = identifyType();
+		if(identifyType() == 0) { // no use
 			link.setRelevance(0F);
 			link.setExplored(true);
 			return;
 		}
+		System.out.println("Link "+link.getHref()+" recognised as "+ContentType.formatName(type));
+		link.setFormat(ContentType.formatName(type));
+		// as "+ContentType.formatName(link.))
 		String data = connector.downloadAsString(url);
 		if(data != null) {
 			RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
 			float relevance = relevanceCalculator.calculateRelevance(PresetTopics.SEMWEB_TOPIC, data); 
 			link.setRelevance(relevance);
+			System.out.println("EXPLORED "+link);
 		}
 		link.setExplored(true);
 	}
 
-	private boolean isRecognised() {
-		if(ContentType.identifyExtension(url) != 0) {
-			return true;
+	private char identifyType() {
+		char type = ContentType.identifyExtension(url);
+		if(type != 0F) {
+			return type;
 		}
-		if(ContentType.identifyContentType(connector.getContentType()) != 0) {
-			return true;
-		}
-		return false;
+		return ContentType.identifyContentType(connector.getContentType());
 	}
 
 		

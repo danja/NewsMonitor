@@ -18,6 +18,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.Entry;
 import org.danja.feedreader.model.EntryList;
 import org.danja.feedreader.model.Feed;
@@ -263,7 +264,10 @@ public class AtomHandler extends FeedHandlerBase {
 
 				link.setRel(rel);
 				link.setHref(href);
-				link.setType(type);
+				
+				link.setFormat(ContentType.getTypeName(type));
+				link.setContentType(type);
+				
 				getFeed().addLink(link);
 
 				// WordPress
@@ -301,7 +305,7 @@ public class AtomHandler extends FeedHandlerBase {
 			}
 			if ("uri".equals(localName)) {
 				initAuthor(getFeed());
-				System.out.println("URI = "+text);
+			//	System.out.println("URI = "+text);
 				getFeed().getAuthor().setHomepage(text);
 				return;
 			}
@@ -360,7 +364,10 @@ public class AtomHandler extends FeedHandlerBase {
 				Link link = new LinkImpl();
 				link.setRel(rel);
 				link.setHref(href);
-				link.setType(type);
+				
+				link.setContentType(type);
+				link.setFormat(ContentType.getTypeName(type));
+				
 				currentEntry.addLink(link);
 
 				// best

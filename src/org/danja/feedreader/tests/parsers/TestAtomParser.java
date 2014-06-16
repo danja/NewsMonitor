@@ -92,7 +92,7 @@ public class TestAtomParser {
 		assertEquals("checking entry2 URL", "http://localhost:8080/entry2.html", entry1.getUrl());
 		assertEquals("checking entry2 source date", "2014-05-08T18:30:02Z", entry1.getDateStamp().getSortDate());
 		String normalSpaces1 = entry1.getContent().replaceAll("\\s+", " ");
-		assertEquals("checking entry 2 content", "<div> <p>Entry 2 content <a href=\"http://example.com\">with a link</a></p> </div>", normalSpaces1);
+		assertEquals("checking entry 2 content", "<div> <p>Entry 2 content <a href=\"http://blog.schema.org/\">with a link</a></p> </div>", normalSpaces1);
 		Set<Link> links = entry1.getLinks();
 		boolean found = false;
 		Iterator<Link> i = links.iterator();

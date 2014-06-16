@@ -14,6 +14,8 @@ package org.danja.feedreader.model;
 public interface Page {
 	public void setUrl(String url);
 	public String getUrl();
+	public void setFormat(String format);
+	public String getFormat();
 	public void setContentType(String contentType);
 	public String getContentType();
 	public String getDomain();

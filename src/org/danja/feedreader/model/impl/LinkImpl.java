@@ -9,8 +9,10 @@
 package org.danja.feedreader.model.impl;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
+import org.danja.feedreader.model.ContentType;
 import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.Templatable;
 
@@ -27,6 +29,8 @@ public class LinkImpl implements Link, Templatable {
 	private boolean explored = false;
 	private boolean remote = false;
 	private float relevance = 0;
+	private String format = null;
+	private String contentType = null;
 	
 	/**
 	 * @return the relevance
@@ -54,20 +58,7 @@ public class LinkImpl implements Link, Templatable {
 	public void setHref(String href) {
 		this.href = href;
 	}
-	/* (non-Javadoc)
-	 * @see org.danja.feedreader.model.Link#getType()
-	 */
-	@Override
-	public String getType() {
-		return type;
-	}
-	/* (non-Javadoc)
-	 * @see org.danja.feedreader.model.Link#setType(java.lang.String)
-	 */
-	@Override
-	public void setType(String type) {
-		this.type = type;
-	}
+
 	/* (non-Javadoc)
 	 * @see org.danja.feedreader.model.Link#getRel()
 	 */
@@ -107,10 +98,17 @@ public class LinkImpl implements Link, Templatable {
 	}
 	
     public String toString() {
-//        return "<link rel=\"" + rel + "\" href=\"" + href + "\" type=\""
-//                + type + "\"/>";
-		return "[href = "+href+", type = "+type+", rel = "+rel+", label = "+label+", explored = "+explored+"]\n";
-    }
+    	Map<String, Object> map = getTemplateDataMap();
+    	Iterator<String> iterator = map.keySet().iterator();
+    	StringBuffer buffer = new StringBuffer();
+    	buffer.append("\n--------\nLink : \n");
+    	while(iterator.hasNext()) {
+    		String key = iterator.next();
+    		buffer.append(key + " = "+map.get(key)+"\n");
+    	}
+    	buffer.append("--------\n");
+		return buffer.toString();
+				}
 
     
 	@Override
@@ -119,8 +117,10 @@ public class LinkImpl implements Link, Templatable {
 		map.put("href", this.href);
 		map.put("label", this.label);
 		map.put("rel", this.rel);
-		map.put("type", this.type);
+		map.put("format", this.format);
+		map.put("contentType", this.contentType);
 		map.put("explored", this.explored);
+		map.put("relevance", this.relevance);
 		return map;
 	}
 	
@@ -132,4 +132,26 @@ public class LinkImpl implements Link, Templatable {
 	public boolean isRemote() {
 		return remote;
 	}
+	@Override
+	public String getContentType() {
+		return contentType;
+	}
+	@Override
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
+	}
+	@Override
+	public void setFormat(String format) {
+		this.format = format;
+	}
+	@Override
+	public String getFormat() {
+		return format;
+	}
+	
+//	too confusing, do it longhand in the callers
+//	@Override
+//	public void setType(char type) {
+//		setType(ContentType.formatName(type));
+//	}
 }
