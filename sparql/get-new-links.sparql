@@ -4,14 +4,16 @@ PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX schema:<http://schema.org/> 
 PREFIX nm: <http://purl.org/stuff/newsmonitor/> 
 
-SELECT DISTINCT ?label ?href ?rel ?contentType ?format ?explored ?relevance WHERE { 
+SELECT DISTINCT ?label ?href ?rel ?contentType ?format ?explored ?relevance ?associatedFeed WHERE { 
 
 	GRAPH ?g { 
 	  ?link a nm:Link ;
 	  nm:explored "false" . 
+	   OPTIONAL { ?link nm:associatedFeed ?associatedFeed . } 
 		OPTIONAL { ?link nm:label ?label . } 
 	    OPTIONAL { ?link nm:href ?href . } 
 	    OPTIONAL { ?link nm:rel ?rel . } 
+	    OPTIONAL { ?link nm:responseCode ?responseCode . } 
 	    OPTIONAL { ?link nm:contentType ?contentType . } 
 	    OPTIONAL { ?link nm:format ?format . } 
 	    OPTIONAL { ?link nm:relevance ?relevance . } 

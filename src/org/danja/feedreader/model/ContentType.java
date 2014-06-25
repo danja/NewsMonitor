@@ -94,7 +94,7 @@ public class ContentType {
 		return 0;
 	}
 
-	public static char identifyContentType(String contentType) {
+	public static char identifyFormat(String contentType) {
 		if(contentType == null) {
 			return UNKNOWN;
 		}
@@ -112,7 +112,7 @@ public class ContentType {
 	}
 
 	public static String getTypeName(String type) {
-		return formatName(identifyContentType(type));
+		return formatName(identifyFormat(type));
 	}
 
 }

@@ -164,8 +164,8 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			return;
 		}
 
-		System.out.println("getFormat" + getFormat() + " "
-				+ getFormat().startsWith("text/html"));
+//		System.out.println("getFormat" + getFormat() + " "
+//				+ getFormat().startsWith("text/html"));
 
 		if (format == ContentType.UNKNOWN || format == ContentType.RSS_SOUP) {
 			if (getContentType() != null
@@ -181,7 +181,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		System.out.println("Format matches : "
 				+ ContentType.formatName(format));
 		//setFormatName(ContentType.formatName(format));
-		System.out.println("Creating interpreter for feed : " + url);
+		// System.out.println("Creating interpreter for feed : " + url);
 		setFormatHint(format); // TODO remove duplication with
 								// setInterpreter
 		// feed.setRefreshPeriod(Config.getPollerPeriod());
@@ -191,17 +191,30 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 		Interpreter interpreter = InterpreterFactory.createInterpreter(this);
 
-		System.out.println("Setting interpreter " + interpreter + " to feed "
-				+ url);
+//		System.out.println("Setting interpreter " + interpreter + " to feed "
+//				+ url);
 		setInterpreter(interpreter);
 		// return feed;
 	}
 
-
+    public void addLink(Link link) {
+        super.addLink(link);
+        link.setAssociatedFeedUrl(getUrl());
+    }
+    
+	public void addAllLinks(Set<Link> links) {
+		Iterator<Link> iterator = links.iterator();
+		while(iterator.hasNext()) {
+			Link link = iterator.next();
+			link.setAssociatedFeedUrl(getUrl());
+		}
+		super.addAllLinks(links);
+	}
 
 	@Override
 	public void clean() {
 		entryList = new EntryListImpl();
 		super.clearLinks();
 	}
+	
 }

@@ -86,13 +86,13 @@ private void pushStatusToStore(){
 	  }
 
 private void pullStatusFromStore(){
-	System.out.println("A");
+	// System.out.println("A");
 	String results = SparqlConnector.query(Config.QUERY_ENDPOINT, sparqlGetStatus);
-	System.out.println("B");
+	// System.out.println("B");
 	SparqlResultsParser parser = new SparqlResultsParser();
-	System.out.println("C");
+	// System.out.println("C");
 	SparqlResults sparqlResults = parser.parse(results);
-	System.out.println("D");
+	// System.out.println("D");
 //	System.out.println("Size in main = "+sparqlResults.getResults().size());
 	System.out.println(sparqlResults.getResults());
 }

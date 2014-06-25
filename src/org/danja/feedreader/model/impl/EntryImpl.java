@@ -9,11 +9,14 @@
  */
 package org.danja.feedreader.model.impl;
 
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.danja.feedreader.model.Entry;
+import org.danja.feedreader.model.Link;
 import org.danja.feedreader.utils.HtmlCleaner;
 
 /**
@@ -21,8 +24,23 @@ import org.danja.feedreader.utils.HtmlCleaner;
  */
 public class EntryImpl extends FeedEntityBase implements Entry {
 
-    private String summary = null;
+    /**
+	 * @return the feedUrl
+	 */
+	public String getFeedUrl() {
+		return feedUrl;
+	}
+
+	/**
+	 * @param feedUrl the feedUrl to set
+	 */
+	public void setFeedUrl(String feedUrl) {
+		this.feedUrl = feedUrl;
+	}
+
+	private String summary = null;
 	private boolean read = false;
+	private String feedUrl = null;
 
 	/**
      * @param uriString URL of feed
@@ -64,8 +82,23 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 		return read;
 	}
 	
+    public void addLink(Link link) {
+        link.setAssociatedFeedUrl(getFeedUrl());
+        super.addLink(link);
+    }
+    
+	public void addAllLinks(Set<Link> links) {
+		Iterator<Link> iterator = links.iterator();
+		while(iterator.hasNext()) {
+			Link link = iterator.next();
+			link.setAssociatedFeedUrl(getFeedUrl());
+		}
+		super.addAllLinks(links);
+	}
+	
 	  public Map<String, Object> getTemplateDataMap(){
 		  Map<String, Object> map = super.getTemplateDataMap();
+		  map.put("feedUrl", getFeedUrl());
 		  map.put("summary", getSummary());
 		  map.put("read", isRead());
 		  map.put("wordcount", getContentWordCount());

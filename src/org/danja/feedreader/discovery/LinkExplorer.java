@@ -74,12 +74,18 @@ public class LinkExplorer implements Runnable {
 		while (running) {
 			// Set<Link> links = feedList.getAllLinks();
 			Set<Link> links = getLinksFromStore();
-			
+
 			Iterator<Link> linkIterator = links.iterator();
 			while (linkIterator.hasNext()) {
 				Link link = linkIterator.next();
+				if (link.isExplored() || link.getResponseCode() >= 400) {
+					continue;
+				}
+				System.out.println("LINK : " + link);
 				explore(link);
-updateStore(link);
+				link.setExplored(true);
+				
+				updateStore(link);
 			}
 			try {
 				Thread.sleep(Config.LINK_EXPLORER_SLEEP_PERIOD);
@@ -90,44 +96,109 @@ updateStore(link);
 		stopped = true;
 	}
 
+	
+
+	private void explore(Link link) {
+		System.out.println("Exploring " + link.getHref() + "...");
+		this.link = link;
+		this.url = link.getHref();
+		connector.setUrl(url);
+
+		// as "+ContentType.formatName(link.))
+		String data = connector.downloadAsString(url);
+		
+		
+		
+		int responseCode = connector.getResponseCode();
+		link.setResponseCode(responseCode);
+
+		//System.out.println("DATA = \n"+data);
+		if (data != null && responseCode == 200) {
+			String contentType = connector.getContentType();
+			char format = ContentType.identifyFormat(contentType);
+			System.out.println("Link " + link.getHref() + " recognised as "
+					+ ContentType.formatName(format));
+			link.setFormat(ContentType.formatName(format));
+			
+//			System.out.println("Link " + link.getHref() + " recognised as "
+//					+ ContentType.formatName(type));
+			
+			if (format == ContentType.UNKNOWN) { // no use
+				link.setRelevance(0F);
+				return;
+			}
+//			String contentType = connector.getContentType();
+//			link.setContentType(contentType);
+//			link.setFormat(ContentType.formatName(ContentType.identifyContentType(contentType)));
+			
+			RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
+			float relevance = relevanceCalculator.calculateRelevance(
+					PresetTopics.SEMWEB_TOPIC, data);
+			link.setRelevance(relevance);
+			System.out.println("EXPLORED " + link);
+		} else {
+			link.setContentType(null);
+			link.setFormat(ContentType.formatName(ContentType.UNKNOWN));
+			link.setRelevance(0);
+			link.setRelevance(0F);
+		}
+
+	}
+
+//	private char identifyType() {
+//		char type = ContentType.identifyExtension(url);
+//		if (type != 0F) {
+//			return type;
+//		}
+//		return ContentType.identifyContentType(connector.getContentType());
+//	}
+
+	public boolean isStopped() {
+		return stopped;
+	}
+
 	private void updateStore(Link link) {
-		System.out.println("updating link "+link.getHref()+" to store");
-		String sparql = Templater.apply("update-links", link.getTemplateDataMap());
-		// System.out.println("\n\n----------------\n"+sparql+"\n\n---------------------");
-		HttpMessage message = SparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
+		System.out.println("Updating link " + link.getHref() + " to store...");
+		String sparql = Templater.apply("update-links",
+				link.getTemplateDataMap());
+		System.out.println("\n\n----------------\n"+sparql+"\n\n---------------------");
+		HttpMessage message = SparqlConnector.update(Config.UPDATE_ENDPOINT,
+				sparql);
 		message.setRequestBody(sparql);
-		System.out.println("updated link status : "+message.getStatusCode()+" "+message.getStatusMessage());
-		if(message.getStatusCode() >= 400) {
+		System.out.println("updated link status : " + message.getStatusCode()
+				+ " " + message.getStatusMessage());
+		if (message.getStatusCode() >= 400) {
 			System.out.println(message);
-			System.out.println("SPARQL = \n"+message.getRequestBody());
+			System.out.println("SPARQL = \n" + message.getRequestBody());
 		}
 	}
 
 	private Set<Link> getLinksFromStore() {
 		String sparql = TextFileReader.read(Config.GET_LINKS_SPARQL);
-		String xmlResults = SparqlConnector.query(Config.QUERY_ENDPOINT, sparql);
-		
+		String xmlResults = SparqlConnector
+				.query(Config.QUERY_ENDPOINT, sparql);
+
 		// System.out.println("XMLRESULTS = "+xmlResults);
-		
+
 		SparqlResultsParser parser = new SparqlResultsParser();
 		List<Result> results = parser.parse(xmlResults).getResults();
 		Set<Link> links = new HashSet<Link>();
 		for (int i = 0; i < results.size(); i++) {
-			 // System.out.println(results.get(i));
-			
+			// System.out.println(results.get(i));
+
 			Result result = results.get(i);
 			// .iterator().next().getName();
-			
-			Link link = new LinkImpl(); 
+
+			Link link = new LinkImpl();
 			Iterator<Binding> iterator = result.iterator();
-			
-			while(iterator.hasNext()) {
+
+			while (iterator.hasNext()) {
 				Binding binding = iterator.next();
 				String name = binding.getName();
 				String value = binding.getValue();
 				setValue(link, name, value);
-			//	System.out.println("\n"+name+" = "+value);
-				
+				// System.out.println("\n"+name+" = "+value);
+
 			}
 			links.add(link);
 		}
@@ -135,69 +206,37 @@ updateStore(link);
 	}
 
 	private void setValue(Link link, String name, String value) {
-		if("href".equals(name)) {
+		if ("associatedFeedUrl".equals(name)) {
+			link.setAssociatedFeedUrl(value);
+		}
+		if ("href".equals(name)) {
 			link.setHref(value);
 		}
-		if("label".equals(name)) {
+		if ("label".equals(name)) {
 			link.setLabel(value);
 		}
-		if("rel".equals(name)) {
+		if ("rel".equals(name)) {
 			link.setRel(value);
 		}
-		if("contentType".equals(name)) {
+		if ("responseCode".equals(name)) {
+			link.setResponseCode(Integer.parseInt(value));
+		}
+		if ("contentType".equals(name)) {
 			link.setContentType(value);
 		}
-		if("format".equals(name)) {
+		if ("format".equals(name)) {
 			link.setFormat(value);
 		}
-		if("explored".equals(name)) {
+		if ("explored".equals(name)) {
+			System.out.println("EXPLORED = "+value);
 			link.setExplored("true".equals(value));
 		}
-		if("remote".equals(name)) {
+		if ("remote".equals(name)) {
 			link.setRemote("true".equals(value));
 		}
-		if("relevance".equals(name)) {
+		if ("relevance".equals(name)) {
 			link.setRelevance(value.charAt(0));
 		}
 	}
-
-	private void explore(Link link) {
-		System.out.println("exploring "+link);
-		this.link = link;
-		this.url = link.getHref();
-		connector.setUrl(url);
-		
-		char type = identifyType();
-		if(identifyType() == 0) { // no use
-			link.setRelevance(0F);
-			link.setExplored(true);
-			return;
-		}
-		System.out.println("Link "+link.getHref()+" recognised as "+ContentType.formatName(type));
-		link.setFormat(ContentType.formatName(type));
-		// as "+ContentType.formatName(link.))
-		String data = connector.downloadAsString(url);
-		if(data != null) {
-			RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
-			float relevance = relevanceCalculator.calculateRelevance(PresetTopics.SEMWEB_TOPIC, data); 
-			link.setRelevance(relevance);
-			System.out.println("EXPLORED "+link);
-		}
-		link.setExplored(true);
-	}
-
-	private char identifyType() {
-		char type = ContentType.identifyExtension(url);
-		if(type != 0F) {
-			return type;
-		}
-		return ContentType.identifyContentType(connector.getContentType());
-	}
-
-		
-
-	public boolean isStopped() {
-		return stopped;
-	}
-
+	
 }

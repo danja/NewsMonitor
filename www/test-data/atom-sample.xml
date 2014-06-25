@@ -41,7 +41,7 @@
 		<updated>2014-05-08T18:30:02Z</updated>
 		 <content type="xhtml">
          <div xmlns="http://www.w3.org/1999/xhtml">
-           <p>Entry 2 content <a href="http://blog.schema.org/xx.ttl">with a link</a></p>
+           <p>Entry 2 content <a href="http://blog.schema.org/">with a link</a></p>
          </div>
        </content>
 		<summary>Entry 2 summary</summary>

@@ -119,6 +119,7 @@ public class Rss1Handler extends FeedHandlerBase {
 				String about = attributes.getValue("rdf:about");
 				
 				currentEntry = new EntryImpl();
+				currentEntry.setFeedUrl(getFeed().getUrl());
 				currentEntry.setId(about);
 				// favour <link> for HtmlUrl, fall back on URI
 				if(currentEntry.getUrl() == null || "".equals(currentEntry.getUrl())){

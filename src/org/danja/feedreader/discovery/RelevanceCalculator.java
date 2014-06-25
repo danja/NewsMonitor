@@ -51,6 +51,7 @@ public class RelevanceCalculator {
 	public float calculateRelevance(Topic topic, String content) {
 
 		content = pruneContent(content);
+		System.out.println("PRUNED = "+content);
 
 		int words = getCount("(\\w+)", content);
 
@@ -67,12 +68,14 @@ public class RelevanceCalculator {
 			String keyword = iterator.next();
 		//	System.out.println("K = "+keyword);
 			int keywordCount = getCount("(" + keyword.toLowerCase() + ")", content);
+			System.out.println(keyword + " : "+keywordCount+" occurences");
 			float keywordRelevance = keywords.get(keyword);
+			System.out.println("keyword relevance = : "+keywordCount);
 		//	System.out.println("keywordCount = "+keywordCount);
 			relevance += keywordCount * keywordRelevance;
 		}
 		
-	//	System.out.println("relevance = "+);
+	System.out.println("RELEVANCE = "+relevance);
 		
 	 relevance = relevance/words;
 		return relevance;

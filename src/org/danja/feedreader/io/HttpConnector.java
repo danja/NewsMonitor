@@ -79,8 +79,7 @@ public class HttpConnector {
 	}
 
 	/**
-	 * Carries out everything needed to obtain an input stream if one is needed
-	 * by the feed. Returns true on success Any problems, or the feed is already
+	 * Carries out everything needed to obtain an input stream for the feed. Returns true on success Any problems, or the feed is already
 	 * up-to-date returns false.
 	 */
 	public boolean load() {

@@ -21,17 +21,42 @@ import org.danja.feedreader.model.Templatable;
  */
 public class LinkImpl implements Link, Templatable {
 
-	private String type = null;
+	private String associatedFeedUrl = null;
 	private String rel = null;
 	private String label = null;
-	
 	private String href = null;
 	private boolean explored = false;
 	private boolean remote = false;
 	private float relevance = 0;
 	private String format = null;
 	private String contentType = null;
+	private int responseCode = 1000;
 	
+	/**
+	 * @return the associatedFeedUrl
+	 */
+	public String getAssociatedFeedUrl() {
+		return associatedFeedUrl;
+	}
+	/**
+	 * @param associatedFeedUrl the associatedFeedUrl to set
+	 */
+	public void setAssociatedFeedUrl(String associatedFeedUrl) {
+		this.associatedFeedUrl = associatedFeedUrl;
+	}
+	
+	/**
+	 * @return the responseCode
+	 */
+	public int getResponseCode() {
+		return responseCode;
+	}
+	/**
+	 * @param responseCode the responseCode to set
+	 */
+	public void setResponseCode(int responseCode) {
+		this.responseCode = responseCode;
+	}
 	/**
 	 * @return the relevance
 	 */
@@ -119,8 +144,10 @@ public class LinkImpl implements Link, Templatable {
 		map.put("rel", this.rel);
 		map.put("format", this.format);
 		map.put("contentType", this.contentType);
+		map.put("responseCode", this.responseCode);
 		map.put("explored", this.explored);
 		map.put("relevance", this.relevance);
+		map.put("associatedFeed", this.associatedFeedUrl);
 		return map;
 	}
 	

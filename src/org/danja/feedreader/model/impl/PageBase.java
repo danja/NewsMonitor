@@ -130,6 +130,7 @@ public abstract class PageBase implements Page {
 			httpConnector.setUrl(url);
 		}
 		isNew = httpConnector.load();
+		setResponseCode(httpConnector.getResponseCode());
 	//	System.out.println("IS NEW = " + isNew);
 		// System.out.println("STATUS =\n"+httpConnector.getHeadersString());
 

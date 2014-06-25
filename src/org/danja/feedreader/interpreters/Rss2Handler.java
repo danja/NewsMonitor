@@ -107,6 +107,7 @@ public class Rss2Handler extends FeedHandlerBase {
 			if ("item".equals(localName)) {
 				state = IN_ITEM;
 				currentEntry = new EntryImpl();
+				currentEntry.setFeedUrl(getFeed().getUrl());
 				return;
 			}
 			return;

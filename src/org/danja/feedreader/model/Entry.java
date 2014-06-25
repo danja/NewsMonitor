@@ -18,6 +18,9 @@ import java.util.Set;
  */
 public interface Entry extends FeedEntity {
 
+	public void setFeedUrl(String feedUrl);
+	public String getFeedUrl();
+	
 	public void setRead(boolean read);
 	
 	public boolean isRead();

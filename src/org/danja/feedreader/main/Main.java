@@ -31,12 +31,10 @@ public class Main implements Runnable {
 		Main main = new Main();
 		Templater.init();
 		
-		System.out.println("A");
 //		
 //		String sparqlBootstrap = TextFileReader.read(Config.BOOTSTRAP_SPARQL);
 //		SparqlConnector.update(Config.UPDATE_ENDPOINT, sparqlBootstrap);
-//		
-		System.out.println("B");
+
 		
 		SystemStatus status = new SystemStatus();
 		System.out.println("POLLER RUNNING = "+status.getPollerRunning());

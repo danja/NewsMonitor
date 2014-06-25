@@ -144,6 +144,7 @@ public class AtomHandler extends FeedHandlerBase {
 			if ("entry".equals(localName)) {
 				state = IN_ENTRY;
 				currentEntry = new EntryImpl();
+				currentEntry.setFeedUrl(getFeed().getUrl());
 				return;
 			}
 			return;

@@ -3,6 +3,10 @@ package org.danja.feedreader.model;
 import java.util.Map;
 
 public interface Link {
+	
+	public void setAssociatedFeedUrl(String feedUrl);
+	
+	public String getAssociatedFeedUrl();
 
 	public boolean isExplored();
 	
@@ -60,6 +64,10 @@ public interface Link {
 	public String getFormat();
 
 	public Map<String, Object> getTemplateDataMap();
+
+	public int getResponseCode();
+	
+	public void setResponseCode(int responseCode);
 
 	// public void setType(char type); too confusing, do it longhand in the callers
 }
