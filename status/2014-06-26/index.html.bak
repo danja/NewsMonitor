@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <link title="Default" type="text/css" href="../../css/spec.css" rel="stylesheet"
+      media="screen">
+    <title>Fusepool NewsMonitor Status 2014-06-25</title>
+  </head>
+  <body>
+    <h1>Fusepool NewsMonitor Status 2014-06-25</h1>
+    <p>The <a title="NewsMonitor Spec" href="../../NewsMonitorSpecification_2014-04-18.html">Requirement
+        Spec</a> is pretty thorough on what I've been trying to do, here I'll
+      put some notes on current status &amp; screenshots. (Hastily compiled,
+      sorry, was concentrating on the code...).</p>
+    <p>In summary, I've got the system doing a good proportion of what I
+      proposed, quite a few relatively minor bugs, and I did run into
+      significant problems with integration into the Fusepool platform (have
+      been using an ad hoc HTTP server and Fuseki SPARQL store during prototype
+      dev, fewer moving parts :)&nbsp; I should be able to get these problems
+      sorted out this week (end of June).</p>
+    <p>As ever, the <a title="source" href="https://github.com/danja/NewsMonitor">code</a>
+      (on github) is the primary reference. <br>
+    </p>
+    <h2><a id="log">Server-side : Runtime Console Log</a></h2>
+    <p>Here are a couple of excerpts. Note the system is multi-threaded, so
+      things may not quite be in sequence. See below for diagrams of system data
+      flow, model etc.<span style="text-decoration: underline;"> </span></p>
+    <p><a title="sniffing" href="sniffing-phase.txt">initialization phase</a> -
+      reads list of feed from store (or text file), sniffs each feed URL for
+      status, feed format (feeds are often served with the wrong Content-Type)
+      etc.</p>
+    <p>Starting from scratch (by config) the system will upload a plain text
+      file of feeds URLs to the SPARQL store. Then, and on each subsequent
+      restart, it'll load a list back from the SPARQL store, which will probably
+      have been modified by other parts of the system. </p>
+    <p>Then for each feed URL it will do a HTTP GET and see if there's actually
+      a feed available and attempt to identify the feed format. Four format
+      species are supported: RSS 1.0, RSS 2.0, Atom and "Soup". Very often feeds
+      contain elements not found in the specs or just messy markup, so a feed
+      reader has to be fairly liberal in what it accepts. Where possible a
+      SAX-based parser will be used, and the 3 primary implementations cover
+      much of the material found in the wild. But if the feed contains broken
+      XML, the system will fall back on the Soup parser (ironically it's a bit
+      buggy at the time of writing) and try to interpret the material anyhow. If
+      there are more fundamental problems (e.g. the link 404s or only provides
+      HTML) the feed will be dropped from the list.</p>
+    <p><a title="polling" href="polling-phase.txt">polling phase</a> - the main
+      feed loading loop, checks each feed, reads/interprets what it finds
+      according to the appropriate parser into a common model, translates that
+      into RDF and pushes the result into the SPARQL store. If problems are
+      encountered with feed data here, the system takes note and will drop the
+      feed from its list after a preset number of lives. The system supports
+      Conditional GET (Etags &amp; Last-Modified), which is available from many
+      feed servers, so if the feed hasn't been updated since the last loop a
+      full GET won't be done, saving bandwidth &amp; processing.</p>
+    <p>A part of the processing of feeds is the extraction of any links in the
+      (typically HTML) content of feed entries to enable discovery of further
+      feeds. The prototype uses fairly crude regex-based extraction, after
+      integration into the platform is should be possible to make this (and
+      other content analysis/extraction) a lot more sophisticated.</p>
+    <h2><a id="client">Client-Side : In-Browser</a></h2>
+    <p>I've made three main pages: Admin, Latest Entries and Links. They're
+      implemented using client-side Javascript with jQuery/Ajax, the primary
+      content provided by addressing the SPARQL store directly. It turned out to
+      be relatively straightforward to formulate and apply the appropriate
+      queries in-browser, with SPARQL results XML also parsed in-browser.
+      (Though basically functional there are quite a few little unimplemented
+      bits/minor bugs in these, the server-side data collection is mostly
+      complete).</p>
+    <p>The <a id="admin-page"><span style="font-weight: bold;">Admin</span></a>
+      page will have basic controls, along with a list of current feeds and
+      their status :</p>
+    <img title="Admin" alt="Admin" src="admin.png">
+    <p><br>
+    </p>
+    <p>The <a style="font-weight: bold;" id="entries">Latest Entries</a> page
+      will be the main view. Entries are viewed most-recent first <span style="font-style: italic;">(nice-to-have:
+        search-based lists, by-feed lists, quite a few other things are possible
+        with little effort simply by modifying the SPARQL query in the
+        Javascript source)</span>. To make it possible to skip to items of
+      interest, I've used the jQuery UI accordion component, so an entry is
+      displayed title-only until it's clicked, then unfolds to show the entry
+      content. Here I've clicked on the 5th most recent item.</p>
+    <img title="Entries" alt="Entries" src="entries.png">
+    <p><br>
+    </p>
+    <p>The <a style="font-weight: bold;" id="links">Links</a> page lists all
+      the links known by the system, where they are feed URLs or ones extracted
+      from entry content :</p>
+    <img title="links" alt="links" src="links.png"><br>
+    <br>
+    <h2>Implemented System Design</h2>
+    <p>This largely follows what was in the <a href="file:///home/danny/Fusepool/workspace/NewsMonitor/NewsMonitorSpecification_2014-04-18.html">requirements
+        spec</a>.</p>
+    <p><a style="font-weight: bold;" id="flow">Data Flow</a> overview:</p>
+    <img alt="flow" src="data-flow-overview.png"><br>
+    <br>
+    The following diagrams were generated from the source code (actually
+    thinned-out UML).<br>
+    <a style="font-weight: bold;" id="main"><br>
+      Main components</a> just what gets the system running. What's not shown
+    here is the <span style="font-weight: bold;">link explorer/discovery</span>
+    thread part of the system. Although that's largely implemented it may well
+    change so I've not generated a diagram yet.<br>
+    <br>
+    <img alt="main" src="MainUML.png"><br>
+    <p><br>
+    </p>
+    <p><a id="model"><span style="font-weight: bold;">Primary data model</span></a>
+      (oops, I clearly didn't thin the UML on this one). Page loosely
+      corresponds to a HTTP or RDF resource :</p>
+    <img alt="model" src="ModelUML.png"><br>
+    <br>
+    <br>
+    This is an earlier version of the <a id="feed"><span style="font-weight: bold;">Feed
+        model</span></a>, bit clearer than the diagram above. I generalized to <span
+      style="font-weight: bold;">Page</span> as above after realising that the
+    components needed for dealing with linked HTML pages had a lot in common
+    with the components dealing with feeds.<br>
+    <br>
+    <img alt="feed" src="FeedUML.png"><br>
+    <br>
+    Finally, out of curiosity I just ran some code stats checks (not much value
+    as a metric other than for estimating relative usage), turns out there are -<br>
+    <br>
+    114 Java files, containing 9297 lines of non-comment/non-blank code<br>
+    1473 LOC in SPARQL<br>
+    251 LOC in Freemarker templates<br>
+    a handful of HTML (containing quite a lot of JS), a handful of Turtle<br>
+    <br>
+    <br>
+    <br>
+  </body>
+</html>

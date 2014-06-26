@@ -1,0 +1,109 @@
+==== Starting Poller ====
+
+*** Starting loop #1 ***
+Refreshing 10 feeds...
+Is HTML...
+Flagging as dead, skipping.
+Unsubscribing from http://people.w3.org/~djweitzner/blog/?cat=8&feed=rdf
+
+Refreshing : http://journal.dajobe.org/journal/comments.rdf
+Response Code : 200
+Connected, interpreting...
+interpreter =Interpreter : Rss1Interpreter
+feedParser = XMLReaderParser
+handler = Rss1Handler
+
+Refreshing : http://blog.3kbo.com/feed/rdf
+Response Code : 200
+Connected, interpreting...
+interpreter =Interpreter : Rss1Interpreter
+feedParser = XMLReaderParser
+handler = Rss1Handler
+
+Refreshing : http://tomheath.com/blog/comments/feed/rdf/
+Response Code : 200
+Connected, interpreting...
+interpreter =Interpreter : Rss1Interpreter
+feedParser = XMLReaderParser
+handler = Rss1Handler
+
+Refreshing : http://planetrdf.com/guide/rss.rdf
+Response Code : 200
+Connected, interpreting...
+interpreter =Interpreter : Rss1Interpreter
+feedParser = XMLReaderParser
+handler = Rss1Handler
+
+
+Refreshing : http://times.usefulinc.com/rss
+Response Code : 200
+Connected, interpreting...
+interpreter =Interpreter : Rss1Interpreter
+feedParser = XMLReaderParser
+handler = Rss1Handler
+
+Initializing : http://norman.walsh.name/index.rss
+connect timed out
+Stream unavailable.
+
+Refreshing : http://norman.walsh.name/index.rss
+connect timed out
+
+Refreshing : http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
+Response Code : 200
+Connected, interpreting...
+interpreter =Interpreter : ParserInterpreter
+feedParser = XMLReaderParser
+handler = Rss2Handler
+
+Initializing : http://blogs.talis.com/nodalities/index.rdf
+Response Code : 404
+Stream unavailable.
+
+Refreshing : http://blogs.talis.com/nodalities/index.rdf
+Response Code : 404
+Error, feed life lost.
+
+Refreshing : http://apassant.net/taxonomy/term/3/feed
+Response Code : 200
+Connected, interpreting...
+interpreter =Interpreter : ParserInterpreter
+feedParser = XMLReaderParser
+handler = Rss2Handler
+
+Unsubscribing from http://blogs.talis.com/nodalities/index.rdf
+Uploading SPARQL for : http://journal.dajobe.org/journal/comments.rdf
+SPARQL response = 200 OK
+Uploading SPARQL for : http://blog.3kbo.com/feed/rdf
+SPARQL response = 200 OK
+Uploading SPARQL for : http://tomheath.com/blog/comments/feed/rdf/
+SPARQL response = 200 OK
+Uploading SPARQL for : http://planetrdf.com/guide/rss.rdf
+SPARQL response = 200 OK
+Uploading SPARQL for : http://times.usefulinc.com/rss
+SPARQL response = 200 OK
+No changes to : http://norman.walsh.name/index.rss
+Uploading SPARQL for : http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
+SPARQL response = 200 OK
+Uploading SPARQL for : http://apassant.net/taxonomy/term/3/feed
+SPARQL response = 200 OK
+
+*** Starting loop #2 ***
+Refreshing 8 feeds...
+
+Refreshing : http://journal.dajobe.org/journal/comments.rdf
+Response Code : 304
+Nothing new, skipping...
+
+Refreshing : http://blog.3kbo.com/feed/rdf
+Response Code : 304
+Nothing new, skipping...
+
+Refreshing : http://tomheath.com/blog/comments/feed/rdf/
+Response Code : 200
+Connected, interpreting...
+interpreter =Interpreter : Rss1Interpreter
+feedParser = XMLReaderParser
+handler = Rss1Handler
+
+....

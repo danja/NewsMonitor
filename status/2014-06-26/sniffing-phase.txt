@@ -1,0 +1,429 @@
+Loading feed list from file input/rdf-bloggers-feedlist.txt into store...
+72 URLs loaded from file
+SPARQL response : 200
+Loading feed list from store...
+
+==== Initialising Feeds ====
+
+Initializing : http://torrez.us/archives/category/semweb/feed/rdf
+Response Code : 404
+Stream unavailable.
+
+Initializing : http://markwatson.com/blog/atom.xml
+Response Code : 403
+Stream unavailable.
+
+Initializing : http://aabs.wordpress.com/category/semanticweb/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://www.w3.org/blog/data/feed/
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://danbri.org/words/category/technology/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://johngoodwin225.wordpress.com/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://fgiasson.com/blog/index.php/category/fredblog/web/semantic-web/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://buytaert.net/taxonomy/term/61/0/feed
+Response Code : 200
+Sniffing...
+Format matches : HTML
+
+Initializing : http://www.snee.com/bobdc.blog/bobdcblog.rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://www.bnode.org/rdfxml/page/en-semweblog
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://captsolo.net/info/xmlsrv/rdf.php?blog=2&cat=3
+connect timed out
+
+Initializing : http://people.w3.org/~djweitzner/blog/?cat=8&feed=rdf
+Response Code : 200
+Sniffing...
+Format matches : HTML
+
+Initializing : http://journal.dajobe.org/journal/comments.rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://usefulinc.com/doap/news/rss
+Response Code : 404
+Stream unavailable.
+
+Initializing : http://tomheath.com/blog/comments/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://trueg.wordpress.com/feed/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://ebiquity.umbc.edu/blogger/category/semanticweb/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://drobilla.net/category/semweb/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://webofdata.wordpress.com/feed/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://norman.walsh.name/index.rss
+connect timed out
+java.net.SocketTimeoutException: connect timed out
+Stream unavailable.
+
+Initializing : http://chem-bla-ics.blogspot.com/feeds/posts/default/-/RDF?alt=rss
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://blogs.ecs.soton.ac.uk/enakting/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://apassant.net/taxonomy/term/3/feed
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://blog.3kbo.com/feed/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://blog.semantic-web.at/feed/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://www.openlinksw.com/weblogs/oerling/gems/index.rdf
+Response Code : 200
+Sniffing...
+[Fatal Error] :1:130007: Character reference "&#3" is an invalid XML character.
+Format matches : RSS Soup
+RSS_SOUP: Using SoupParser, Rss2Handler
+
+Initializing : http://dowhatimean.net/category/semantic-web/rdf
+Response Code : 404
+Stream unavailable.
+
+Initializing : http://www.ldodds.com/blog/index.rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://blog.aksw.org/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://feeds.feedburner.com/datagraph
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://www.w3.org/community/rww/feed/
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://feeds.feedburner.com/EnterpriseSemantics
+Response Code : 200
+Sniffing...
+Format matches : Atom
+Atom: Using AtomHandler, XMLReaderParser
+
+Initializing : http://webofdata.wordpress.com/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://blogs.talis.com/nodalities/index.rdf
+Response Code : 404
+Stream unavailable.
+
+Initializing : http://dublincore.org/news.rss
+Response Code : 200
+Sniffing...
+[Fatal Error] :1:10869: The reference to entity "T" must end with the ';' delimiter.
+Format matches : RSS Soup
+RSS_SOUP: Using SoupParser, Rss2Handler
+
+Initializing : http://planetrdf.com/guide/rss.rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://blog.planetrdf.com/rss.xml
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://times.usefulinc.com/rss
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://www.jenitennison.com/blog/atom/feed
+Response Code : 200
+Sniffing...
+Format matches : RDF/XML (non-RSS)
+RSS_SOUP: Using SoupParser, Rss2Handler
+
+Initializing : http://blog.seevl.net/category/technology/feed/
+Response Code : 301
+Sniffing...
+Appears to be HTML, taking life : http://blog.seevl.net/category/technology/feed/
+
+Initializing : http://tripletalk.wordpress.com/feed/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://rivuli-development.com/feed/rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://www.johnbreslin.com/blog/category/semantic-web/rdf
+Response Code : 404
+Stream unavailable.
+
+Initializing : http://clarkparsia.com/weblog/feed/rdf
+Response Code : 200
+Sniffing...
+Appears to be HTML, taking life : http://clarkparsia.com/weblog/feed/rdf
+
+Initializing : http://thefigtrees.net/lee/blog/semantic_web/index.rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://people.w3.org/~dsr/blog/?feed=rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://www.madmode.com/feeds/posts/default
+Response Code : 404
+Stream unavailable.
+
+Initializing : http://feeds.feedburner.com/wikier-semantics
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://blog.schema.org/feeds/posts/default?alt=rss
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://www.lassila.org/blog/index.rdf
+Response Code : 200
+Sniffing...
+[Fatal Error] :1:52: Element type "rdf:RDFxmlns" must be followed by either attribute specifications, ">" or "/>".
+Format matches : RSS Soup
+RSS_SOUP: Using SoupParser, Rss2Handler
+
+Initializing : http://www.openlinksw.com/blog/~kidehen/gems/index.rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://www.andzol.com/?feed=rdf
+java.net.SocketTimeoutException: Read timed out
+Stream unavailable.
+
+Initializing : http://localhost:8080/test-data/atom-sample.xml
+Response Code : 200
+Sniffing...
+Format matches : Atom
+Atom: Using AtomHandler, XMLReaderParser
+
+Initializing : http://www.phildawes.net/blog/category/semantic-web/rdf
+www.phildawes.net
+java.net.UnknownHostException: www.phildawes.net
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:1491)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1485)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1139)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:379)
+	at org.danja.feedreader.io.HttpConnector.load(HttpConnector.java:91)
+	at org.danja.feedreader.model.impl.FeedImpl.init(FeedImpl.java:151)
+	at org.danja.feedreader.main.Poller.initFeeds(Poller.java:64)
+	at org.danja.feedreader.main.Main.main(Main.java:70)
+Caused by: java.net.UnknownHostException: www.phildawes.net
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:195)
+Stream unavailable.
+
+Initializing : http://dig.csail.mit.edu/breadcrumbs/blog/feed/4
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:394)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:529)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:233)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:306)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:323)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:970)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:911)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:836)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1172)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(HttpURLConnection.java:2330)
+	at org.danja.feedreader.io.HttpConnector.connect(HttpConnector.java:163)
+	at org.danja.feedreader.io.HttpConnector.connect(HttpConnector.java:128)
+	at org.danja.feedreader.io.HttpConnector.load(HttpConnector.java:89)
+	... 3 more
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://blog.dbtune.org/feed/rss2
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://planb.nicecupoftea.org/feed/?feed=rdf
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://davidepalmisano.wordpress.com/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://shawfactor.com/tag/semantic/feed/
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://linkedjava.blogspot.com/feeds/posts/default
+Response Code : 200
+Sniffing...
+Format matches : Atom
+Atom: Using AtomHandler, XMLReaderParser
+
+Initializing : http://www.deri.ie/fileadmin/feed.rdf
+Response Code : 200
+Sniffing...
+Format matches : Unknown
+RSS_SOUP: Using SoupParser, Rss2Handler
+
+Initializing : http://www.wshoy.sidar.org/rss.php
+Response Code : 404
+Stream unavailable.
+
+Initializing : http://decentralyze.com/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://feeds2.feedburner.com/webofdatablog
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://rdfa.info/feed/rdf
+Response Code : 404
+Stream unavailable.
+
+Initializing : http://blog.foaf-project.org/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://tw.rpi.edu/weblog/feed/rdf/
+Response Code : 200
+Sniffing...
+Format matches : RSS 1.0
+RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser
+
+Initializing : http://ivan-herman.name/category/work-related/semantic-web/feed
+Response Code : 200
+Sniffing...
+Format matches : RSS 2.0
+RSS2: Using Rss2Handler, XMLReaderParser
+
+Initializing : http://redlink.co/feed
+
