@@ -14,12 +14,12 @@
       <li> <a href="https://github.com/danja/NewsMonitor">Code</a></li>
       <li><span style="font-weight: bold;">Status</span></li>
       <ul>
-        <li><a href="file:///home/danny/Fusepool/workspace/NewsMonitor/status/2014-06-26/index.html">2014-06-25</a></li>
+        <li><a href="status/2014-06-26/index.html">2014-06-25</a></li>
       </ul>
       <li><a href="NewsMonitorSpecification_2014-04-18.html">Requirements
           Specification</a></li>
       <li><a href="javadoc/">API Javadoc</a></li>
-      <li><a href="newsmonitor/docs/manual.html"><span style="color: #0000cc;">Manual</span></a>
+      <li><a href="manual/index.html"><span style="color: #0000cc;">Manual</span></a>
         <span style="font-style: italic;">work in progress</span></li>
     </ul>
   </body>

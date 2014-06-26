@@ -1,0 +1,11 @@
+org.danja.feedreader.discovery
+org.danja.feedreader.interpreters
+org.danja.feedreader.io
+org.danja.feedreader.main
+org.danja.feedreader.model
+org.danja.feedreader.model.impl
+org.danja.feedreader.sparql
+org.danja.feedreader.templating
+org.danja.feedreader.tests
+org.danja.feedreader.tests.parsers
+org.danja.feedreader.utils
