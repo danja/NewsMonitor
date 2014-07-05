@@ -17,6 +17,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.danja.feedreader.model.Feed;
 import org.danja.feedreader.model.Link;
 import org.danja.feedreader.model.impl.LinkImpl;
 
@@ -66,7 +67,7 @@ public class HtmlCleaner {
 		HREF_PATTERN = Pattern.compile(HTML_A_HREF_TAG_PATTERN);
 	}
 
-	public static Set<Link> extractLinks(String content) {
+	public static Set<Link> extractLinks(Feed feed, String content) {
 		Set<Link> links = new HashSet<Link>();
 		Matcher matcherTag = A_PATTERN.matcher(content);
 		while (matcherTag.find()) {
@@ -89,6 +90,7 @@ public class HtmlCleaner {
 					continue;
 				}
 				Link link = new LinkImpl();
+				link.setOrigin(feed.getUrl());
 				link.setHref(href);
 				link.setLabel(linkText);
 				links.add(link);

@@ -4,7 +4,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX schema: <http://schema.org/>
 PREFIX nm: <http://purl.org/stuff/newsmonitor/>
 
-WITH <${feedUrl}> DELETE { 
+WITH <${origin}> DELETE { 
 ?link ?p ?o 
 } WHERE { 
 GRAPH <${origin}> {
@@ -17,7 +17,7 @@ INSERT DATA {
 GRAPH <${origin}> {
          	   	[	a nm:Link ;
          	   		nm:href <${href}> ;
-         	   		nm:feedUrl <${origin}> ;
+         	   		nm:origin <${origin}> ;
          	   		<#if label??>nm:label """${label}""" ;</#if>
          	   		<#if rel??>nm:rel """${rel}""" ;</#if>
          	   		<#if format??>nm:format """${format}""" ;</#if>

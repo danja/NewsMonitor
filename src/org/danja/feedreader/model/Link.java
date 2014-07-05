@@ -4,10 +4,6 @@ import java.util.Map;
 
 public interface Link {
 	
-	public void setAssociatedFeedUrl(String feedUrl);
-	
-	public String getAssociatedFeedUrl();
-
 	public boolean isExplored();
 	
 	public void setExplored(boolean explored);

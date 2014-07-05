@@ -259,6 +259,7 @@ public class AtomHandler extends FeedHandlerBase {
 			}
 			if ("link".equals(localName)) {
 				Link link = new LinkImpl();
+				link.setOrigin(getFeed().getUrl());
 				String rel = attributes.getValue("rel");
 				String href = attributes.getValue("href");
 				String type = attributes.getValue("type");
@@ -363,6 +364,7 @@ public class AtomHandler extends FeedHandlerBase {
 				}
 
 				Link link = new LinkImpl();
+				link.setOrigin(getFeed().getUrl());
 				link.setRel(rel);
 				link.setHref(href);
 				
@@ -411,6 +413,7 @@ public class AtomHandler extends FeedHandlerBase {
 
 					if ("href".equals(name)) {
 						Link link = new LinkImpl();
+						link.setOrigin(getFeed().getUrl());
 						link.setRel("related");
 						link.setHref(attributes.getValue(i));
 						String label = HtmlCleaner.stripTags(
@@ -443,6 +446,7 @@ public class AtomHandler extends FeedHandlerBase {
 
 					if ("href".equals(name)) {
 						Link link = new LinkImpl();
+						link.setOrigin(getFeed().getUrl());
 						link.setRel("related");
 						link.setHref(attributes.getValue(i));
 						String label = HtmlCleaner.stripTags(

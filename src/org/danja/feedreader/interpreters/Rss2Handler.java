@@ -192,6 +192,7 @@ public class Rss2Handler extends FeedHandlerBase {
 			}
 			if ("link".equals(localName)) {
 				Link link = new LinkImpl();
+				link.setOrigin(getFeed().getUrl());
 				link.setHref(text);
 				getFeed().setHtmlUrl(link.getHref());
 				return;
@@ -228,7 +229,7 @@ public class Rss2Handler extends FeedHandlerBase {
 				} else {
 					currentEntry.setContent(content);
 				}
-				Set<Link> links = HtmlCleaner.extractLinks(content);
+				Set<Link> links = HtmlCleaner.extractLinks(getFeed(), content);
 				currentEntry.addAllLinks(links);
 				return;
 			}
@@ -240,7 +241,7 @@ public class Rss2Handler extends FeedHandlerBase {
 				String content = HtmlCleaner.unescape(text);
 				// content = HtmlCleaner.normalise(content);
 				currentEntry.setContent(content);
-				Set<Link> links = HtmlCleaner.extractLinks(content);
+				Set<Link> links = HtmlCleaner.extractLinks(getFeed(), content);
 				currentEntry.addAllLinks(links);
 				return;
 			}

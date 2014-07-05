@@ -206,8 +206,8 @@ public class LinkExplorer implements Runnable {
 	}
 
 	private void setValue(Link link, String name, String value) {
-		if ("originUrl".equals(name)) {
-			link.setAssociatedFeedUrl(value);
+		if ("origin".equals(name)) {
+			link.setOrigin(value);
 		}
 		if ("href".equals(name)) {
 			link.setHref(value);

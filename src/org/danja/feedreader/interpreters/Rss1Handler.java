@@ -195,6 +195,7 @@ public class Rss1Handler extends FeedHandlerBase {
 			}
 			if ("link".equals(localName)) {
 				Link link = new LinkImpl();
+				link.setOrigin(getFeed().getUrl());
 				link.setHref(text);
 					getFeed().setHtmlUrl(link.getHref());
 				return;
@@ -224,7 +225,7 @@ public class Rss1Handler extends FeedHandlerBase {
 						// HtmlCleaner.unescape(text);
 				//content = HtmlCleaner.normalise(content);
 				currentEntry.setSummary(summary);
-				Set<Link> links = HtmlCleaner.extractLinks(summary);
+				Set<Link> links = HtmlCleaner.extractLinks(getFeed(), summary);
 				currentEntry.addAllLinks(links);
 				return;
 			}
@@ -234,7 +235,7 @@ public class Rss1Handler extends FeedHandlerBase {
 				// System.out.println("CONTNT = "+content);
 				// content = HtmlCleaner.normalise(content);
 				currentEntry.setContent(content);
-				Set<Link> links = HtmlCleaner.extractLinks(content);
+				Set<Link> links = HtmlCleaner.extractLinks(getFeed(), content);
 				currentEntry.addAllLinks(links);
 				return;
 			}

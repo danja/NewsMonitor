@@ -46,6 +46,7 @@
          	   <${url}> nm:hasLink [
          	   		a nm:Link ;
          	   		nm:href <${link.href}> ;
+         	   		<#if link.origin??>nm:origin <${link.origin}> ;</#if>
          	   		<#if link.label??>nm:label """${link.label}""" ;</#if>
          	   		<#if link.rel??>nm:rel "${link.rel}" ;</#if>
          	   		<#if link.responseCode??>nm:responseCode "${link.responseCode}" ;</#if>
@@ -121,6 +122,7 @@
          	   <${entry.url}> nm:hasLink [
          	   		a nm:Link ;
          	   		nm:href <${link.href}> ;
+         	   		<#if link.origin??>nm:origin <${link.origin}> ;</#if>
          	   		<#if link.label??>nm:label """${link.label}""" ;</#if>
          	   		<#if link.rel??>nm:rel """${link.rel}""" ;</#if>
          	   		<#if link.responseCode??>nm:responseCode "${link.responseCode}" ;</#if>

@@ -83,7 +83,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 	}
 	
     public void addLink(Link link) {
-        link.setAssociatedFeedUrl(getFeedUrl());
+        link.setOrigin(getFeedUrl());
         super.addLink(link);
     }
     
@@ -91,7 +91,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 		Iterator<Link> iterator = links.iterator();
 		while(iterator.hasNext()) {
 			Link link = iterator.next();
-			link.setAssociatedFeedUrl(getFeedUrl());
+			link.setOrigin(getFeedUrl());
 		}
 		super.addAllLinks(links);
 	}
