@@ -80,7 +80,7 @@ public class Poller implements Runnable {
 	@Override
 	public void run() {
 		running = true;
-		feedList.setFirstCall(true);
+		// feedList.setFirstCall(true);
 		// System.out.println("FEEDLIST = " + feedList);
 		while (running) {
 			if(feedList.size() == 0) {
@@ -91,7 +91,7 @@ public class Poller implements Runnable {
 			System.out.println("\n*** Starting loop #" + (++loopCount) +" ***");
 			System.out.println("Refreshing " + feedList.size() + " feeds...");
 
-			feedList.setFirstCall(false);
+			// feedList.setFirstCall(false);
 			feedList.refreshAll();
 			// displayFeeds();
 			pushFeeds();

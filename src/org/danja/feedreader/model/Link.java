@@ -69,5 +69,9 @@ public interface Link {
 	
 	public void setResponseCode(int responseCode);
 
+	public void setOrigin(String url);
+	
+	public String getOrigin();
+
 	// public void setType(char type); too confusing, do it longhand in the callers
 }

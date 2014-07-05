@@ -7,17 +7,17 @@ PREFIX nm: <http://purl.org/stuff/newsmonitor/>
 WITH <${feedUrl}> DELETE { 
 ?link ?p ?o 
 } WHERE { 
-GRAPH <${associatedFeed}> {
+GRAPH <${origin}> {
        	     ?link a nm:Link ;
          	   		nm:href <${href}> ;
          	   		?p ?o .
          	   		}
   } ;
 INSERT DATA {
-GRAPH <${associatedFeed}> {
+GRAPH <${origin}> {
          	   	[	a nm:Link ;
          	   		nm:href <${href}> ;
-         	   		nm:feedUrl <${associatedFeed}> ;
+         	   		nm:feedUrl <${origin}> ;
          	   		<#if label??>nm:label """${label}""" ;</#if>
          	   		<#if rel??>nm:rel """${rel}""" ;</#if>
          	   		<#if format??>nm:format """${format}""" ;</#if>

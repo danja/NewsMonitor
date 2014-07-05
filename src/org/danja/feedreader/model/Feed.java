@@ -24,6 +24,11 @@ import org.danja.feedreader.interpreters.Interpreter;
  */
 public interface Feed extends FeedEntity, Page {
 	
+	public void setLives(int lives);
+	// public void setFirstCall(boolean firstCall);
+	public int getLives();
+	public void setDead(boolean dead);
+	public boolean isDead();
 	/**
 	 * @param subtitle
 	 */
@@ -64,11 +69,7 @@ public interface Feed extends FeedEntity, Page {
     
     public void setInterpreter(Interpreter interpreter);
     
-    public void setDead(boolean dead);
-    
-    public void setLives(int lives);
-    
-    public int getLives();
+  
     
     public void setVolatile(boolean v);
     
@@ -86,7 +87,6 @@ public interface Feed extends FeedEntity, Page {
      */
   //  public String toTurtle();
 	public EntryList getEntries();
-	public void setFirstCall(boolean firstCall);
 
 	public Map<String, Object> getTemplateDataMap();
 

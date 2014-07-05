@@ -1,14 +1,5 @@
-# http://johngoodwin225.wordpress.com/feed/rdf/
-http://people.w3.org/~djweitzner/blog/?cat=8&feed=rdf
-http://journal.dajobe.org/journal/comments.rdf
-http://tomheath.com/blog/comments/feed/rdf/
-http://norman.walsh.name/index.rss
-http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
-http://apassant.net/taxonomy/term/3/feed
-http://blog.3kbo.com/feed/rdf
-http://blogs.talis.com/nodalities/index.rdf
-http://planetrdf.com/guide/rss.rdf
-http://times.usefulinc.com/rss
+http://www.jenitennison.com/blog/atom/feed
+
 
 #http://danbri.org/words/category/technology/rdf
 # RSS 1.0

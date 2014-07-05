@@ -35,7 +35,7 @@ public class FeedListImpl implements FeedList {
 
 	private ConcurrentLinkedQueue<Feed> feedQueue;
 	// private EntryList entries;
-	private boolean firstCall;
+	// private boolean firstCall;
 
 	public FeedListImpl() {
 		feedQueue = new ConcurrentLinkedQueue<Feed>();
@@ -106,10 +106,10 @@ public class FeedListImpl implements FeedList {
 			if(feed.getLives() < Config.MAX_LIVES) {
 				// System.out.println("LESS THAN MAX LIVES");
 				feed.init();
-				firstCall = true;
+				// feed.setFirstCall(true);
 			}
 			System.out.println("\nRefreshing : " + feed.getUrl());
-			feed.setFirstCall(firstCall);
+			// feed.setFirstCall(firstCall);
 			feed.refresh();
 			if (feed.shouldExpire()) {
 				expiring.add(feed);
@@ -162,10 +162,6 @@ public class FeedListImpl implements FeedList {
 	// return entries;
 	// }
 
-	@Override
-	public void setFirstCall(boolean b) {
-		this.firstCall = b;
-	}
 
 	@Override
 	public Set<Link> getAllLinks() {

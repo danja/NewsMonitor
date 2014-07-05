@@ -54,5 +54,5 @@ public interface FeedList
 
 // public EntryList getEntries();
 
-public void setFirstCall(boolean b);
+// public void setFirstCall(boolean b);
 }

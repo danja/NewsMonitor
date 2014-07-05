@@ -14,6 +14,14 @@ package org.danja.feedreader.main;
  */
 public class Config {
 
+	public static final String FEED_USER_AGENT_HEADER = "NewsMonitor/1.0.0 Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.97 Safari/537.36";
+
+	public static final String HTML_USER_AGENT_HEADER = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.97 Safari/537.36 NewsMonitor/1.0.0";
+	
+	public static final String FEED_ACCEPT_HEADER = "application/rdf+xml, application/atom+xml, application/rss+xml, application/xml, text/xml";
+
+	public static final String HTML_ACCEPT_HEADER = "text/html, application/xhtml+xml, application/xml";
+	
 	// buggy-list.txt rdf-bloggers-feedlist.txt; input/short-list.txt
 	public static final String SEED_FEEDLIST = "input/short-list.txt";
 	// public static String QUERY_ENDPOINT =

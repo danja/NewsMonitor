@@ -21,7 +21,7 @@ import org.danja.feedreader.model.Templatable;
  */
 public class LinkImpl implements Link, Templatable {
 
-	private String associatedFeedUrl = null;
+	private String originUrl = null;
 	private String rel = null;
 	private String label = null;
 	private String href = null;
@@ -31,18 +31,19 @@ public class LinkImpl implements Link, Templatable {
 	private String format = null;
 	private String contentType = null;
 	private int responseCode = 1000;
+	private String origin = null;
 	
 	/**
-	 * @return the associatedFeedUrl
+	 * @return the originUrl
 	 */
 	public String getAssociatedFeedUrl() {
-		return associatedFeedUrl;
+		return originUrl;
 	}
 	/**
-	 * @param associatedFeedUrl the associatedFeedUrl to set
+	 * @param originUrl the originUrl to set
 	 */
-	public void setAssociatedFeedUrl(String associatedFeedUrl) {
-		this.associatedFeedUrl = associatedFeedUrl;
+	public void setAssociatedFeedUrl(String originUrl) {
+		this.originUrl = originUrl;
 	}
 	
 	/**
@@ -147,7 +148,7 @@ public class LinkImpl implements Link, Templatable {
 		map.put("responseCode", this.responseCode);
 		map.put("explored", this.explored);
 		map.put("relevance", this.relevance);
-		map.put("associatedFeed", this.associatedFeedUrl);
+		map.put("origin", this.originUrl);
 		return map;
 	}
 	
@@ -174,6 +175,15 @@ public class LinkImpl implements Link, Templatable {
 	@Override
 	public String getFormat() {
 		return format;
+	}
+	@Override
+	public void setOrigin(String url) {
+		this.origin = url;
+	}
+	
+	@Override
+	public String getOrigin() {
+		return origin ;
 	}
 	
 //	too confusing, do it longhand in the callers

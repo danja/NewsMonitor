@@ -10,9 +10,6 @@
  */
 package org.danja.feedreader.model.impl;
 
-import java.io.InputStream;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -38,7 +35,12 @@ import org.danja.feedreader.templating.Templater;
  */
 public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
+	private int lives = Config.MAX_LIVES;
+	private boolean dead = false;
+
 	private EntryList entryList = new EntryListImpl();
+
+	private Interpreter interpreter = null;
 
 	private String subtitle = null;
 
@@ -46,10 +48,35 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private float relevanceFactor = 0;
 
+	private boolean isNew = false;
+
+	private boolean firstCall = true;
+
+	private long lastRefresh = 0;
+
+	// private getHttpConnector() getHttpConnector();
+
 	public FeedImpl() {
 	}
 
+	@Override
+	public void setLives(int lives) {
+		this.lives = lives;
+	}
 
+	@Override
+	public int getLives() {
+		return lives;
+	}
+
+//	@Override
+//	public void setFirstCall(boolean firstCall) {
+//		this.firstCall = firstCall;
+//	}
+
+	public long getLastRefresh() {
+		return lastRefresh;
+	}
 
 	public String toString() {
 		String string = "* Feed *\n" + getUrl() + "\nFormat = "
@@ -60,7 +87,6 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		return string + super.toString();
 	}
 
-	
 	@Override
 	public void addEntry(Entry entry) {
 		entryList.addEntry(entry);
@@ -123,6 +149,147 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	}
 
 	@Override
+	public void init() {
+		firstCall = true;
+		String url = getUrl();
+		FormatSniffer sniffer = new FormatSniffer();
+		char format = ContentType.UNKNOWN;
+
+		setHttpConnector(new HttpConnector());
+		getHttpConnector().setUrl(url);
+		getHttpConnector().setConditional(false);
+		getHttpConnector().setAcceptHeader(Config.FEED_ACCEPT_HEADER);
+		getHttpConnector().setUserAgentHeader(Config.FEED_USER_AGENT_HEADER);
+		System.out.println("\nInitializing : " + url);
+
+		boolean streamAvailable = getHttpConnector().load();
+		if (streamAvailable) {
+			System.out.println("Sniffing...");
+			// System.out.println("CONTENT TYPE = " +
+			// connector.getContentType());
+			setContentType(getHttpConnector().getContentType());
+			format = sniffer.sniff(getHttpConnector().getInputStream());
+			setFormat(ContentType.formatName(format));
+			// System.out.println("===Headers ===\n"+connector.getHeadersString()+"------\n");
+		} else {
+			System.out.println("Stream unavailable.");
+			format = ContentType.UNKNOWN;
+			setLives(getLives() - 1);
+			// setDead(true);
+			return;
+		}
+
+		// System.out.println("getFormat" + getFormat() + " "
+		// + getFormat().startsWith("text/html"));
+
+		if (format == ContentType.UNKNOWN || format == ContentType.RSS_SOUP) {
+			if (getContentType() != null
+					&& getContentType().startsWith("text/html")) {
+				System.out.println("Appears to be HTML, taking life : " + url);
+				format = ContentType.HTML;
+				setLives(getLives() - 1);
+				setLives(0);
+				return;
+			}
+		}
+
+		System.out
+				.println("Format matches : " + ContentType.formatName(format));
+		// setFormatName(ContentType.formatName(format));
+		// System.out.println("Creating interpreter for feed : " + url);
+		setFormatHint(format); // TODO remove duplication with
+								// setInterpreter
+
+		interpreter = InterpreterFactory.createInterpreter(this);
+		setInterpreter(interpreter);		
+	}
+
+	public boolean refresh() {
+
+		// System.out.println("FIRSTCALL = "+firstCall);
+		if (getHttpConnector() == null) {
+			setHttpConnector(new HttpConnector());
+
+			
+			String url = getUrl(); // ?? refactor?
+			getHttpConnector().setUrl(url);
+		}
+		
+		getHttpConnector().setConditional(!firstCall); // first GET is
+		// unconditional
+		
+		isNew = getHttpConnector().load();
+		setResponseCode(getHttpConnector().getResponseCode());
+		// System.out.println("IS NEW = " + isNew);
+		// System.out.println("STATUS =\n"+getHttpConnector().getHeadersString());
+
+		if (isNew) {
+			System.out.println("Connected, interpreting...");
+			System.out.println("interpreter =" + interpreter);
+			interpreter.interpret(this);
+			// System.out.println("INTERPRETED =" + this);
+			// lives = Config.MAX_LIVES;
+			isNew = true;
+		} else {
+			if (getHttpConnector().isDead()) {
+				System.out.println("Error, feed life lost.");
+				lives--;
+				// refreshPeriod = refreshPeriod * 2;
+			} else {
+				System.out.println("Nothing new, skipping...");
+			}
+			isNew = false;
+		}
+		if (getHttpConnector().getHeaders().containsKey("Content-Type")) {
+			List<String> contentTypeList = getHttpConnector().getHeaders().get(
+					"Content-Type");
+			setFormat(contentTypeList.get(0));
+		}
+		setResponseCode(getHttpConnector().getResponseCode());
+		lastRefresh = now();
+		// System.out.println("isNew = " + isNew);
+		firstCall = false;
+		return isNew;
+	}
+
+	public boolean shouldExpire() {
+		return lives < 1;
+	}
+
+	public boolean isNew() {
+		return isNew;
+	}
+
+	@Override
+	public void setDead(boolean dead) {
+		this.dead = dead;
+	}
+
+	public boolean isDead() {
+		return dead;
+	}
+
+	public void addLink(Link link) {
+		super.addLink(link);
+		link.setAssociatedFeedUrl(getUrl());
+	}
+
+	public void addAllLinks(Set<Link> links) {
+		Iterator<Link> iterator = links.iterator();
+		while (iterator.hasNext()) {
+			Link link = iterator.next();
+			link.setAssociatedFeedUrl(getUrl());
+		}
+		super.addAllLinks(links);
+	}
+
+	@Override
+	public void clean() {
+		entryList = new EntryListImpl();
+		super.clearLinks();
+	}
+
+	@Override
 	public Map<String, Object> getTemplateDataMap() {
 		Map<String, Object> map = super.getTemplateDataMap();
 		map.put("feedUrl", getUrl()); // less confusing in templates/sparql
@@ -136,85 +303,4 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		map.put("relevanceFactor", getRelevanceFactor());
 		return map;
 	}
-
-	@Override
-	public void init() {
-		String url = getUrl();
-		FormatSniffer sniffer = new FormatSniffer();
-		char format = ContentType.UNKNOWN;
-
-		HttpConnector connector = new HttpConnector();
-		connector.setUrl(url);
-		connector.setConditional(false);
-		System.out.println("\nInitializing : " + url);
-
-		boolean streamAvailable = connector.load();
-		if (streamAvailable) {
-			System.out.println("Sniffing...");
-		//	System.out.println("CONTENT TYPE = " + connector.getContentType());
-			setContentType(connector.getContentType());
-			format = sniffer.sniff(connector.getInputStream());
-			setFormat(ContentType.formatName(format));
-			// System.out.println("===Headers ===\n"+connector.getHeadersString()+"------\n");
-		} else {
-			System.out.println("Stream unavailable.");
-			format = ContentType.UNKNOWN;
-			setLives(getLives() - 1);
-			// setDead(true);
-			return;
-		}
-
-//		System.out.println("getFormat" + getFormat() + " "
-//				+ getFormat().startsWith("text/html"));
-
-		if (format == ContentType.UNKNOWN || format == ContentType.RSS_SOUP) {
-			if (getContentType() != null
-					&& getContentType().startsWith("text/html")) {
-				System.out.println("Appears to be HTML, taking life : " + url);
-				format = ContentType.HTML;
-				setLives(getLives() - 1);
-				setLives(0);
-				return;
-			}
-		}
-
-		System.out.println("Format matches : "
-				+ ContentType.formatName(format));
-		//setFormatName(ContentType.formatName(format));
-		// System.out.println("Creating interpreter for feed : " + url);
-		setFormatHint(format); // TODO remove duplication with
-								// setInterpreter
-		// feed.setRefreshPeriod(Config.getPollerPeriod());
-
-		// interpreter = RDFInterpreterFactory.createInterpreter(format);
-		// feed.setInterpreter(interpreter);
-
-		Interpreter interpreter = InterpreterFactory.createInterpreter(this);
-
-//		System.out.println("Setting interpreter " + interpreter + " to feed "
-//				+ url);
-		setInterpreter(interpreter);
-		// return feed;
-	}
-
-    public void addLink(Link link) {
-        super.addLink(link);
-        link.setAssociatedFeedUrl(getUrl());
-    }
-    
-	public void addAllLinks(Set<Link> links) {
-		Iterator<Link> iterator = links.iterator();
-		while(iterator.hasNext()) {
-			Link link = iterator.next();
-			link.setAssociatedFeedUrl(getUrl());
-		}
-		super.addAllLinks(links);
-	}
-
-	@Override
-	public void clean() {
-		entryList = new EntryListImpl();
-		super.clearLinks();
-	}
-	
 }

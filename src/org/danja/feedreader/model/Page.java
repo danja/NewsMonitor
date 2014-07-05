@@ -8,12 +8,15 @@
  */
 package org.danja.feedreader.model;
 
+import org.danja.feedreader.io.HttpConnector;
+
 /**
  *
  */
 public interface Page {
 	public void setUrl(String url);
 	public String getUrl();
+	public HttpConnector getHttpConnector();
 	public void setFormat(String format);
 	public String getFormat();
 	public void setContentType(String contentType);
@@ -24,11 +27,7 @@ public interface Page {
 	public void setContent(String content);
 	public String getContent();
 	// public void load();
-	public void setLives(int lives);
-	public void setFirstCall(boolean firstCall);
-	public int getLives();
-	public void setDead(boolean dead);
-	public boolean isDead();
+
 	
     /**
      * Values can be ContentType.RSS2 etc.

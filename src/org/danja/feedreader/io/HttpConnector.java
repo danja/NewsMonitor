@@ -62,6 +62,9 @@ public class HttpConnector {
 
 	private Map<String, List<String>> headers = null;
 
+	private String userAgentHeader = null;
+	private String acceptHeader = null;
+
 	static {
 		HttpURLConnection.setFollowRedirects(true);
 	}
@@ -143,6 +146,12 @@ public class HttpConnector {
 		connection.setConnectTimeout(Config.CONNECT_TIMEOUT);
 
 		connection.setRequestProperty("Accept-Encoding", "gzip, deflate");
+		if(userAgentHeader  != null) {
+		connection.setRequestProperty("User-Agent", userAgentHeader);
+		}
+		if(acceptHeader  != null) {
+		connection.setRequestProperty("Accept", acceptHeader);
+		}
 
 		if (conditional) {
 			if (previousETag != null) {
@@ -321,5 +330,19 @@ public class HttpConnector {
 			connector.downloadToFile("C:/test.xml");
 		}
 		System.out.println(connector.getStatus());
+	}
+
+	/**
+	 * @param userAgentHeader the userAgentHeader to set
+	 */
+	public void setUserAgentHeader(String userAgentHeader) {
+		this.userAgentHeader = userAgentHeader;
+	}
+
+	/**
+	 * @param acceptHeader the acceptHeader to set
+	 */
+	public void setAcceptHeader(String acceptHeader) {
+		this.acceptHeader = acceptHeader;
 	}
 }
