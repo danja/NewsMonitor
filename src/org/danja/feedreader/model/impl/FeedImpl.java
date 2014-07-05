@@ -297,9 +297,14 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		map.put("entries", this.entryList.getTemplateList());
 		map.put("entryCount", this.entryList.getEntries().size());
 		map.put("subtitle", getSubtitle());
+		
+		map.put("format", ContentType.formatName(getFormatHint()));
+		map.put("responseCode", getResponseCode());
+		
 		map.put("dead", isDead());
 		map.put("lives", getLives());
 		map.put("volatile", isVolatile());
+		map.put("relevance", getRelevance());
 		map.put("relevanceFactor", getRelevanceFactor());
 		return map;
 	}

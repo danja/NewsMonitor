@@ -13,11 +13,7 @@
         <script src="/js/ui/jquery-ui.js"></script>
         
         <script src="/js/jquery-migrate-1.2.1.js"></script>
-          <script src="/js/colResizable-1.3.min.js"></script>
-      
-    <!--  link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" -->
- <!--  link rel="stylesheet" href="css/themes/ui-lightness/jquery.ui.all.css" -->
-  
+   
    <script type="text/javascript" language="javascript">
    
 var sparqlQueryEndpoint = "http://localhost:3030/feedreader/query?query=";
@@ -28,11 +24,11 @@ var getLinksSparql = "PREFIX rss: <http://purl.org/rss/1.0/> \n\
 		PREFIX schema:<http://schema.org/> \n\
 		PREFIX nm: <http://purl.org/stuff/newsmonitor/> \n\
 \n\
-		SELECT DISTINCT ?label ?href ?associatedFeed ?contentType ?rel ?type ?explored ?relevance WHERE { \n\
+		SELECT DISTINCT * WHERE { \n\
 \n\
 		   GRAPH ?g { \n\
 		      ?link a nm:Link . \n\
-		      OPTIONAL { ?link nm:associatedFeed ?associatedFeed . } \n\
+		      OPTIONAL { ?link nm:origin ?origin . } \n\
 			  OPTIONAL { ?link nm:label ?label . } \n\
 		      OPTIONAL { ?link nm:href ?href . } \n\
 		      OPTIONAL { ?link nm:responseCode ?responseCode . } \n\
@@ -62,19 +58,7 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
     		});
     	
       getLinks();
-      
-      $("#linksTable").colResizable({
-			liveDrag:true, 
-			gripInnerHtml:"<div class='grip'></div>", 
-			draggingClass:"dragging"
-		});
-
     });
-    
-    $(function(){
-    	  $("table").colResizable();
-    	});
-    	
     	
     	function getLinks() {
     	//	$.get(url, function(xml) {
@@ -107,7 +91,7 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
     					$(this).find("binding[name='href']").each(function() {
     						href = $(this).text().trim();
     					});
-    					$(this).find("binding[name='associatedFeed']").each(function() {
+    					$(this).find("binding[name='origin']").each(function() {
     						associatedFeed = $(this).text().trim();
     					});
     					$(this).find("binding[name='label']").each(function() {
@@ -234,7 +218,7 @@ var getLinksUrl = sparqlQueryEndpoint + encodeURIComponent(getLinksSparql) + "&o
 <tr><th colspan="9" class="center"><a href="/index.html">NewsMonitor</a> Links</th></tr>
 <tr>
   <th class="center">URL</th>
-  <th class="center">Associated Feed</th>
+  <th class="center">Origin Feed</th>
   <th class="center">Label</th> 
   <th class="center">Response Code</th> 
   <th class="center">Rel</th> 

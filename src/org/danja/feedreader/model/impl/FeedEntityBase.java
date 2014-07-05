@@ -191,7 +191,7 @@ public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Te
 	}
 
 	@Override
-	public boolean getFavourite() {
+	public boolean isFavourite() {
 		return favourite;
 	}
 
@@ -211,7 +211,7 @@ public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Te
 	    	data.put("links", getLinks());
 	    	data.put("relevance", getRelevance());
 	    	data.put("tags", getTags());
-	    	data.put("favourite", getFavourite());
+	    	data.put("favourite", isFavourite());
 			return data;
 	    }
 }

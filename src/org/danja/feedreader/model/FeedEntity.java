@@ -35,7 +35,7 @@ public interface FeedEntity {
 	
 	public void setFavourite(boolean favourite);
 	
-	public boolean getFavourite();
+	public boolean isFavourite();
     /**
      * @param content set the Entry content, typically HTML
      */

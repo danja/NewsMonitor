@@ -8,9 +8,8 @@
    <link rel="stylesheet" href="css/admin.css">
    <script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
    
-    <!--  link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" -->
     <link rel="stylesheet" href="css/themes/base/jquery.ui.all.css">
- <!--  link rel="stylesheet" href="css/themes/ui-lightness/jquery.ui.all.css" -->
+    
   <script src="/js/ui/jquery-ui.js"></script>
   
    <script type="text/javascript" language="javascript">
@@ -193,11 +192,6 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     		} else {
     			row += "<td class=\"center\">-</td>";
     		}
-    		if(relevanceFactor != null) {
-    			row += "<td class=\"center\">"+relevanceFactor+"</td>\n";
-    		} else {
-    			row += "<td class=\"center\">-</td>";
-    		}
     		row += "</tr>\n";
     		return row;
     	}
@@ -342,10 +336,10 @@ $(function() {
 </p>
 
 <table>
-<tr><th colspan="11" class="center">Feeds</th></tr>
+<tr><th colspan="10" class="center">Feeds</th></tr>
 <tr>
   <th>Source</th>
-  <th>Feed URL</th> 
+  <th>Feed</th> 
   <th>Format</th> 
   <th>Content Type</th> 
   <th>Response Code</th> 
@@ -354,7 +348,6 @@ $(function() {
   <th>Lives</th> 
   <th>Volatile</th> 
   <th>Relevance</th> 
-  <th>Relevance Factor</th> 
 </tr>
 <tr id="feeds"></tr>
   </table>
