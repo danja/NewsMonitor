@@ -23,7 +23,7 @@ public class Config {
 	public static final String HTML_ACCEPT_HEADER = "text/html, application/xhtml+xml, application/xml";
 	
 	// buggy-list.txt rdf-bloggers-feedlist.txt; input/short-list.txt
-	public static final String SEED_FEEDLIST = "input/short-list.txt";
+	public static final String SEED_FEEDLIST = "input/rdf-bloggers-feedlist.txt";
 	// public static String QUERY_ENDPOINT =
 	// "http://localhost:3030/feedreader/query";
 

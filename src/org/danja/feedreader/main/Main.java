@@ -37,7 +37,7 @@ public class Main implements Runnable {
 
 		
 		SystemStatus status = new SystemStatus();
-		System.out.println("POLLER RUNNING = "+status.getPollerRunning());
+	//	System.out.println("POLLER RUNNING = "+status.getPollerRunning());
 		// Config.load();
 
 		status.initializeFeedListFromFile(Config.SEED_FEEDLIST);

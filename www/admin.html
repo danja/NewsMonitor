@@ -182,11 +182,6 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     		} else {
     			row += "<td class=\"center\">-</td>";
     		}
-    		if(wolatile != null) {
-    			row += "<td class=\"center\">"+wolatile+"</td>\n";
-    		} else {
-    			row += "<td class=\"center\">-</td>";
-    		}
     		if(relevance != null) {
     			row += "<td class=\"center\">"+relevance+"</td>\n";
     		} else {
@@ -346,7 +341,6 @@ $(function() {
   <th>Favourite</th> 
   <th>Dead</th> 
   <th>Lives</th> 
-  <th>Volatile</th> 
   <th>Relevance</th> 
 </tr>
 <tr id="feeds"></tr>

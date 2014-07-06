@@ -19,7 +19,6 @@ import java.util.regex.Pattern;
 import org.danja.feedreader.io.TextFileReader;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.utils.ContentProcessor;
-import org.danja.feedreader.utils.HtmlCleaner;
 
 /**
  *
@@ -52,7 +51,7 @@ public class RelevanceCalculator {
 	public float calculateRelevance(Topic topic, String content) {
 
 		content = pruneContent(content);
-		System.out.println("PRUNED = "+content);
+		// System.out.println("PRUNED = "+content);
 
 		int words = getCount("(\\w+)", content);
 
@@ -69,14 +68,14 @@ public class RelevanceCalculator {
 			String keyword = iterator.next();
 		//	System.out.println("K = "+keyword);
 			int keywordCount = getCount("(" + keyword.toLowerCase() + ")", content);
-			System.out.println(keyword + " : "+keywordCount+" occurences");
+		//	System.out.println(keyword + " : "+keywordCount+" occurences");
 			float keywordRelevance = keywords.get(keyword);
-			System.out.println("keyword relevance = : "+keywordCount);
+		//	System.out.println("keyword relevance = : "+keywordCount);
 		//	System.out.println("keywordCount = "+keywordCount);
 			relevance += keywordCount * keywordRelevance;
 		}
 		
-	System.out.println("RELEVANCE = "+relevance);
+	// System.out.println("RELEVANCE = "+relevance);
 		
 	 relevance = relevance/words;
 		return relevance;
@@ -96,12 +95,7 @@ public class RelevanceCalculator {
 		content = ContentProcessor.unescape(content);
 		content = ContentProcessor.stripTags(content);
 		content = content.toLowerCase();
-//		content.replaceAll("\"", " ");
-//		content.replaceAll(".", " ");
-//		content.replaceAll(",", " ");
-		
 		content = content.replaceAll("\\p{P}", " "); // [^a-zA-Z]or \\p{P}
-
 		return content;
 	}
 	

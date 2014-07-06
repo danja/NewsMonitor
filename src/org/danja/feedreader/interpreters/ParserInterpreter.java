@@ -16,11 +16,9 @@ import org.xml.sax.ContentHandler;
 /**
  *  
  */
-public class ParserInterpreter implements Interpreter {
+public class ParserInterpreter extends InterpreterBase implements Interpreter {
 
 	private FeedParser feedParser;
-
-//	private ContentHandler contentHandler;
 
 	public ParserInterpreter(Feed feed, FeedParser feedParser) {
 		super();
@@ -28,11 +26,8 @@ public class ParserInterpreter implements Interpreter {
 		feedParser.setFeed(feed);
 	}
 
-	public void interpret(Page page) { // why ??
-		// System.out.println("parsing "+feed.getUrl());
-		// feedParser.setFeed(feed);
+	public void interpret(Page page) {  
 		feedParser.parse();
-		// System.out.println("parsed");
 	}
 
 	public String toString() {

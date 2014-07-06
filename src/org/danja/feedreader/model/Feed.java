@@ -22,7 +22,7 @@ import org.danja.feedreader.interpreters.Interpreter;
  * syndication-oriented access to HTTP operations
  *  
  */
-public interface Feed extends FeedEntity, Page {
+public interface Feed extends FeedEntity, Page, Templatable {
 	
 	public void setLives(int lives);
 	// public void setFirstCall(boolean firstCall);
@@ -69,8 +69,6 @@ public interface Feed extends FeedEntity, Page {
     
     public void setInterpreter(Interpreter interpreter);
     
-  
-    
     public void setVolatile(boolean v);
     
     public boolean isVolatile();
@@ -79,16 +77,9 @@ public interface Feed extends FeedEntity, Page {
 	
 	public float getRelevanceFactor();
     
-    
-    /**
-     * Gets an RDF/Turtle representation of the EntryList (sans prefixes)
-     * 
-     * @return the Turtle
-     */
-  //  public String toTurtle();
+	public String getAllText();
+	
 	public EntryList getEntries();
-
-	public Map<String, Object> getTemplateDataMap();
 
 	public Set<Link> getRemoteLinks();
 

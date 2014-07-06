@@ -78,10 +78,10 @@ public class LinkExplorer implements Runnable {
 			Iterator<Link> linkIterator = links.iterator();
 			while (linkIterator.hasNext()) {
 				Link link = linkIterator.next();
-				if (link.isExplored() || link.getResponseCode() >= 400) {
+				if (link.isExplored()) {
 					continue;
 				}
-				System.out.println("LINK : " + link);
+			//	System.out.println("LINK : " + link);
 				explore(link);
 				link.setExplored(true);
 				
@@ -99,6 +99,9 @@ public class LinkExplorer implements Runnable {
 	
 
 	private void explore(Link link) {
+		if (link.getResponseCode() >= 400) {
+			return;
+		}
 		if(!link.getHref().startsWith("http://") && !link.getHref().startsWith("https://")) return;
 		System.out.println("Exploring " + link.getHref() + "...");
 		this.link = link;
@@ -106,9 +109,7 @@ public class LinkExplorer implements Runnable {
 		connector.setUrl(url);
 
 		// as "+ContentType.formatName(link.))
-		String data = connector.downloadAsString(url);
-		
-		
+		String data = connector.downloadAsString(url);	
 		
 		int responseCode = connector.getResponseCode();
 		link.setResponseCode(responseCode);
@@ -116,6 +117,7 @@ public class LinkExplorer implements Runnable {
 		//System.out.println("DATA = \n"+data);
 		if (data != null && responseCode == 200) {
 			String contentType = connector.getContentType();
+			link.setContentType(contentType);
 			char format = ContentType.identifyFormat(contentType);
 			System.out.println("Link " + link.getHref() + " recognised as "
 					+ ContentType.formatName(format));
@@ -136,14 +138,12 @@ public class LinkExplorer implements Runnable {
 			float relevance = relevanceCalculator.calculateRelevance(
 					PresetTopics.SEMWEB_TOPIC, data);
 			link.setRelevance(relevance);
-			System.out.println("EXPLORED " + link);
+		//	System.out.println("EXPLORED " + link);
 		} else {
 			link.setContentType(null);
 			link.setFormat(ContentType.formatName(ContentType.UNKNOWN));
-			link.setRelevance(0);
 			link.setRelevance(0F);
 		}
-
 	}
 
 //	private char identifyType() {

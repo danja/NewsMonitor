@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.danja.feedreader.discovery.PresetTopics;
+import org.danja.feedreader.discovery.RelevanceCalculator;
 import org.danja.feedreader.interpreters.FormatSniffer;
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.interpreters.InterpreterFactory;
@@ -209,10 +211,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		// System.out.println("FIRSTCALL = "+firstCall);
 		if (getHttpConnector() == null) {
 			setHttpConnector(new HttpConnector());
-
-			
-			String url = getUrl(); // ?? refactor?
-			getHttpConnector().setUrl(url);
+			getHttpConnector().setUrl(getUrl());
 		}
 		
 		getHttpConnector().setConditional(!firstCall); // first GET is
@@ -229,6 +228,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			interpreter.interpret(this);
 			// System.out.println("INTERPRETED =" + this);
 			// lives = Config.MAX_LIVES;
+			updateRelevance();
 			isNew = true;
 		} else {
 			if (getHttpConnector().isDead()) {
@@ -249,7 +249,16 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		lastRefresh = now();
 		// System.out.println("isNew = " + isNew);
 		firstCall = false;
+		
 		return isNew;
+	}
+
+	private void updateRelevance() {
+		RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
+		float relevance = relevanceCalculator.calculateRelevance(
+				PresetTopics.SEMWEB_TOPIC, getAllText());
+		// System.out.println("TEXT "+getAllText());
+		setRelevance(relevance);
 	}
 
 	public boolean shouldExpire() {
@@ -287,6 +296,18 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	public void clean() {
 		entryList = new EntryListImpl();
 		super.clearLinks();
+	}
+	
+	@Override
+	public String getAllText() {
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(getContent());
+		List<Entry> entries = entryList.getEntries();
+		for(int i=0;i<entries.size();i++){
+			buffer.append(entries.get(i).getTitle()+"\n");
+			buffer.append(entries.get(i).getContent()+"\n");
+		}
+		return buffer.toString();
 	}
 
 	@Override
