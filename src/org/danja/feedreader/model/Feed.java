@@ -95,4 +95,5 @@ public interface Feed extends FeedEntity, Page {
 	public void init();
 
 	public void clean();
+	public void addAllLinks(Set<Link> contentLinks);
 }

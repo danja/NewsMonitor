@@ -99,6 +99,7 @@ public class LinkExplorer implements Runnable {
 	
 
 	private void explore(Link link) {
+		if(!link.getHref().startsWith("http://") && !link.getHref().startsWith("https://")) return;
 		System.out.println("Exploring " + link.getHref() + "...");
 		this.link = link;
 		this.url = link.getHref();

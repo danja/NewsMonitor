@@ -1,7 +1,7 @@
 /**
  * feedreader-prototype
  *
- * ContentCleaner.java
+ * ContentProcessor.java
  * @author danja
  * @date May 26, 2014
  *
@@ -24,7 +24,7 @@ import org.danja.feedreader.model.impl.LinkImpl;
 /**
  *
  */
-public class ContentCleaner {
+public class ContentProcessor {
 
 	private static final String[] excludeAttrs = { "font", "class", "style" };
 
@@ -54,8 +54,12 @@ public class ContentCleaner {
 	}
 
 	public static String unescape(String raw) {
-		if (raw == null || "".equals(raw))
+		if (raw == null || "".equals(raw)) {
 			return "";
+		}
+		if(raw.startsWith("<![CDATA[")) {
+			return raw.substring(9, raw.length() -3);
+		}
 		return StringEscapeUtils.unescapeHtml4(raw);
 	}
 

@@ -276,10 +276,10 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	public void addAllLinks(Set<Link> links) {
 		Iterator<Link> iterator = links.iterator();
-		while (iterator.hasNext()) {
-			Link link = iterator.next();
-			link.setOrigin(getUrl());
-		}
+//		while (iterator.hasNext()) {
+//			Link link = iterator.next();
+//			link.setOrigin(getUrl());
+//		}
 		super.addAllLinks(links);
 	}
 

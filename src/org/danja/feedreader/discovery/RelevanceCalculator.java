@@ -18,6 +18,7 @@ import java.util.regex.Pattern;
 
 import org.danja.feedreader.io.TextFileReader;
 import org.danja.feedreader.main.Config;
+import org.danja.feedreader.utils.ContentProcessor;
 import org.danja.feedreader.utils.HtmlCleaner;
 
 /**
@@ -92,14 +93,14 @@ public class RelevanceCalculator {
 	}
 
 	private String pruneContent(String content) {
-		content = HtmlCleaner.unescape(content);
-		content = HtmlCleaner.stripTags(content);
+		content = ContentProcessor.unescape(content);
+		content = ContentProcessor.stripTags(content);
 		content = content.toLowerCase();
 //		content.replaceAll("\"", " ");
 //		content.replaceAll(".", " ");
 //		content.replaceAll(",", " ");
 		
-		content = content.replaceAll("[^a-zA-Z]", " "); // or \\p{P}
+		content = content.replaceAll("\\p{P}", " "); // [^a-zA-Z]or \\p{P}
 
 		return content;
 	}

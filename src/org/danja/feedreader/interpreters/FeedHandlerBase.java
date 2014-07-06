@@ -27,6 +27,7 @@ import org.danja.feedreader.model.Person;
 import org.danja.feedreader.model.impl.DateStampImpl;
 import org.danja.feedreader.model.impl.PersonImpl;
 import org.danja.feedreader.utils.CharsetDetector;
+import org.danja.feedreader.utils.ContentProcessor;
 import org.danja.feedreader.utils.DateConverters;
 import org.danja.feedreader.utils.HtmlCleaner;
 import org.xml.sax.Attributes;
@@ -147,6 +148,11 @@ public abstract class FeedHandlerBase implements FeedHandler {
 			}
 			entries.get(i).setContent(
 					CharsetDetector.fixEncoding(entries.get(i).getContent()));
+			entries.get(i).setContent(
+					ContentProcessor.unescape(entries.get(i).getContent()));
+			Set<Link> contentLinks = 
+					ContentProcessor.extractLinks(getFeed(), entries.get(i).getContent());
+			feed.addAllLinks(contentLinks);
 		}
 	}
 
