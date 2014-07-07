@@ -1,24 +1,27 @@
-http://www.jenitennison.com/blog/atom/feed
-
 
 #http://danbri.org/words/category/technology/rdf
 # RSS 1.0
-#http://aabs.wordpress.com/feed/
+http://aabs.wordpress.com/feed/
 # /category/semanticweb/rdf
 
 # RSS2.0
 #http://mortenhf.dk/blog/feed/
-# http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
+http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
 
 # RSS 2.0
-#http://www.w3.org/community/rww/feed/
+http://www.w3.org/community/rww/feed/
 
 # Atom
-#http://intertwingly.net/blog/index.atom
+http://intertwingly.net/blog/index.atom
 
 # Atom
-#http://markwatson.com/blog/atom.xml
+http://markwatson.com/blog/atom.xml
 
 # http://localhost:8080/atom-real-1.xml
 
-#http://tomheath.com/blog/comments/feed/rdf/
+http://tomheath.com/blog/comments/feed/rdf/
+
+http://www.jenitennison.com/blog/atom/feed
+http://blog.schema.org/feeds/posts/default?alt=rss
+http://www.phildawes.net/blog/category/semantic-web/rdf
+http://dig.csail.mit.edu/breadcrumbs/blog/feed/4

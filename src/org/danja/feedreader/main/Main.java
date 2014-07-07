@@ -22,7 +22,7 @@ import org.danja.feedreader.templating.Templater;
 public class Main implements Runnable {
 
 	public static final boolean POLLER_NO_LOOP = false; // for debugging
-	private static LinkExplorer linkManager;
+	private static LinkExplorer linkExplorer;
 
 	/**
 	 * @param args
@@ -69,11 +69,11 @@ public class Main implements Runnable {
 		System.out.println("==== Initialising Feeds ====");
 		poller.initFeeds();
 		
-		linkManager = new LinkExplorer(poller.getFeedList());
+		linkExplorer = new LinkExplorer(poller.getFeedList());
 
 		System.out.println("==== Starting Poller ====");
 		poller.start();
-		linkManager.start();
+		linkExplorer.start();
 		
 		if(Config.TEST_RUN > 0) {
 		try {
@@ -82,10 +82,10 @@ public class Main implements Runnable {
 			e.printStackTrace();
 		}
 		 poller.stop();
-		 linkManager.stop();
+		 linkExplorer.stop();
 		 poller.displayFeeds();
 		 System.out.println("\n==== Stopped Poller ====");
-		 while(!poller.isStopped() || !linkManager.isStopped()) {
+		 while(!poller.isStopped() || !linkExplorer.isStopped()) {
 				try {
 					Thread.sleep(1000); // wait a bit
 				} catch (InterruptedException e) {

@@ -57,6 +57,8 @@ public class ContentType {
 	// Maps don't work with primitives - must be a neater approach...
 	public static Map<String, Character> TYPE_MAP = new HashMap<String, Character>();
 	public static Map<String, Character> EXTENSION_MAP = new HashMap<String, Character>();
+	public static Map<String, Character> KEYWORD_MAP = new HashMap<String, Character>();
+	
 	static {
 		// TYPE_MAP.put("*", UNKNOWN);
 		TYPE_MAP.put("application/rdf+xml", RDF_OTHER_CHARACTER);
@@ -79,6 +81,12 @@ public class ContentType {
 		EXTENSION_MAP.put("txt", TEXT_CHARACTER);
 		EXTENSION_MAP.put("ttl", TURTLE_CHARACTER);
 		EXTENSION_MAP.put("turtle", TURTLE_CHARACTER);
+		
+		KEYWORD_MAP.put("http://purl.org/rss/1.0/", RSS1_CHARACTER);
+		KEYWORD_MAP.put("<rss", RSS2_CHARACTER);
+		KEYWORD_MAP.put("<feed", ATOM_CHARACTER);
+		KEYWORD_MAP.put("<html", HTML_CHARACTER);
+		KEYWORD_MAP.put("<RDF:rdf", RDF_OTHER_CHARACTER); // may be overlap, but it's only a guess
 	}
 
 	public static char identifyExtension(String name) {
@@ -94,6 +102,20 @@ public class ContentType {
 		return 0;
 	}
 
+	public static char identifyFormat(String contentType, String data) {
+		if(contentType != null) {
+			return identifyFormat(contentType);
+		}
+		Iterator<String> iterator = KEYWORD_MAP.keySet().iterator();
+		while(iterator.hasNext()){
+			String keyword = iterator.next();
+			if(data.indexOf(keyword) < 500) {
+				return KEYWORD_MAP.get(keyword).charValue();
+			}
+		}
+		return UNKNOWN;
+	}
+	
 	public static char identifyFormat(String contentType) {
 		if(contentType == null) {
 			return UNKNOWN;
@@ -114,5 +136,4 @@ public class ContentType {
 	public static String getTypeName(String type) {
 		return formatName(identifyFormat(type));
 	}
-
 }

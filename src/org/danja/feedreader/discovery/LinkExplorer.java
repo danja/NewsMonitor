@@ -35,6 +35,7 @@ import org.danja.feedreader.sparql.SparqlResults.Binding;
 import org.danja.feedreader.sparql.SparqlResultsParser;
 import org.danja.feedreader.sparql.SparqlResults.Result;
 import org.danja.feedreader.templating.Templater;
+import org.danja.feedreader.utils.ContentProcessor;
 import org.danja.feedreader.utils.HtmlCleaner;
 
 /**
@@ -86,19 +87,20 @@ public class LinkExplorer implements Runnable {
 				link.setExplored(true);
 				
 				updateStore(link);
+				try {
+					Thread.sleep(Config.LINK_EXPLORER_SLEEP_PERIOD);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
-			try {
-				Thread.sleep(Config.LINK_EXPLORER_SLEEP_PERIOD);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+
 		}
 		stopped = true;
 	}
 
 	
 
-	private void explore(Link link) {
+	private void explore(Link link) { // TODO maybe merge this with FormatSniffer
 		if (link.getResponseCode() >= 400) {
 			return;
 		}
@@ -118,7 +120,7 @@ public class LinkExplorer implements Runnable {
 		if (data != null && responseCode == 200) {
 			String contentType = connector.getContentType();
 			link.setContentType(contentType);
-			char format = ContentType.identifyFormat(contentType);
+			char format = ContentType.identifyFormat(contentType, data);
 			System.out.println("Link " + link.getHref() + " recognised as "
 					+ ContentType.formatName(format));
 			link.setFormat(ContentType.formatName(format));
@@ -138,6 +140,9 @@ public class LinkExplorer implements Runnable {
 			float relevance = relevanceCalculator.calculateRelevance(
 					PresetTopics.SEMWEB_TOPIC, data);
 			link.setRelevance(relevance);
+			if(relevance > Config.SUBSCRIBE_RELEVANCE_THRESHOLD) {
+				trySubscribe(link);
+			}
 		//	System.out.println("EXPLORED " + link);
 		} else {
 			link.setContentType(null);
@@ -153,6 +158,21 @@ public class LinkExplorer implements Runnable {
 //		}
 //		return ContentType.identifyContentType(connector.getContentType());
 //	}
+
+	private void trySubscribe(Link pageLink) { // quick and dirty feed link autodiscovery
+		HttpConnector connector = new HttpConnector();
+		String content = connector.downloadAsString(pageLink.getHref());
+		Set<Link> links = ContentProcessor.extractLinks(pageLink.getOrigin(), content);
+		Iterator<Link> iterator = links.iterator();
+		while(iterator.hasNext()) {
+			Link link = iterator.next();
+			if(link.getRel() != null && link.getRel().equals("alternate")) {
+				Feed newFeed = feedList.createFeed(link.getHref());
+				newFeed.init();
+				feedList.addFeed(newFeed);
+			}
+		}
+	}
 
 	public boolean isStopped() {
 		return stopped;

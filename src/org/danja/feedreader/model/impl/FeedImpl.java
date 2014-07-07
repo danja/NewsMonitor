@@ -225,7 +225,12 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		if (isNew) {
 			System.out.println("Connected, interpreting...");
 			System.out.println("interpreter =" + interpreter);
+			if(interpreter == null) { // temp bug workaround
+				System.out.println("Error, feed life lost.");
+				lives--;
+			} else {
 			interpreter.interpret(this);
+			}
 			// System.out.println("INTERPRETED =" + this);
 			// lives = Config.MAX_LIVES;
 			updateRelevance();

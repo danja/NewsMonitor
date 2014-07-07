@@ -46,9 +46,11 @@ GRAPH ?g { \n\
    }\n\
 } \n\
 ORDER BY DESC(?date) \n\
-LIMIT 100 \n\
+LIMIT 30 \n\
 OFFSET 0 \n\
 ";
+
+console.log(sparql);
 
 var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 	

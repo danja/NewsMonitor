@@ -87,12 +87,25 @@ public class FeedListImpl implements FeedList {
 			feed = iterator.next();
 //			System.out.println("feed.getLives() = "+feed.getLives());
 //			System.out.println("feed.isDead() = "+feed.isDead());
-			if(feed.getFormatHint() == ContentType.HTML) {
+			if(!feed.isDead() && feed.getLives() < Config.MAX_LIVES) {
+				System.out.println("Less than max lives, re-initializing...");
+				feed.init();
+				// feed.setFirstCall(true);
+			}
+			System.out.println("\nRefreshing : " + feed.getUrl());
+			// feed.setFirstCall(firstCall);
+			feed.refresh();
+			
+			if(feed.getFormatHint() == ContentType.HTML) { // shouldn't be needed
 				feed.setDead(true);
 				System.out.println("Is HTML...");
 			}
 			if(feed.getLives() < 1) {
 				System.out.println("Lives gone...");
+				feed.setDead(true);
+			}
+			if(feed.getRelevance() < Config.UNSUBSCRIBE_RELEVANCE_THRESHOLD) {
+				System.out.println("Now below relevance threshold...");
 				feed.setDead(true);
 			}
 			if(feed.isDead()) {
@@ -103,14 +116,7 @@ public class FeedListImpl implements FeedList {
 				feedQueue.remove(feed);
 				continue;
 			};
-			if(feed.getLives() < Config.MAX_LIVES) {
-				// System.out.println("LESS THAN MAX LIVES");
-				feed.init();
-				// feed.setFirstCall(true);
-			}
-			System.out.println("\nRefreshing : " + feed.getUrl());
-			// feed.setFirstCall(firstCall);
-			feed.refresh();
+
 			if (feed.shouldExpire()) {
 				expiring.add(feed);
 			}

@@ -72,8 +72,12 @@ public class ContentProcessor {
 		A_PATTERN = Pattern.compile(HTML_A_TAG_PATTERN);
 		HREF_PATTERN = Pattern.compile(HTML_A_HREF_TAG_PATTERN);
 	}
-
+	
 	public static Set<Link> extractLinks(Feed feed, String content) {
+		return extractLinks(feed.getUrl(), content);
+	}
+
+	public static Set<Link> extractLinks(String origin, String content) {
 		Set<Link> links = new HashSet<Link>();
 		Matcher matcherTag = A_PATTERN.matcher(content);
 		while (matcherTag.find()) {
@@ -96,7 +100,7 @@ public class ContentProcessor {
 					continue;
 				}
 				Link link = new LinkImpl();
-				link.setOrigin(feed.getUrl());
+				link.setOrigin(origin);
 				link.setHref(href);
 				link.setLabel(linkText);
 				links.add(link);
@@ -143,4 +147,6 @@ public class ContentProcessor {
 	public static String collapseSpaces(String content) {
 		return content.replaceAll("\\s+", " ").trim(); 
 	}
+
+
 }

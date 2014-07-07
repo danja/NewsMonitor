@@ -218,7 +218,7 @@ public abstract class FeedHandlerBase implements FeedHandler {
 	}
 
 	protected void resolveLinks() {
-		System.out.println("RESOLVE LINKS "+feed.getLinks().size());
+		// System.out.println("Links "+feed.getLinks().size());
 		Iterator<Link> iterator = feed.getAllLinks().iterator();
 		// String feedUrl = feed.getUrl();
 		// String[] split = feedUrl.split()

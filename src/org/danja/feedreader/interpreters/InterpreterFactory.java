@@ -60,19 +60,18 @@ public class InterpreterFactory {
 			interpreter = new ParserInterpreter(feed, feedParser);
 			return interpreter;
 
-		case ContentType.RDF_OTHER:
+		// case ContentType.RDF_OTHER:
 
-		case ContentType.RSS_SOUP:
-		case ContentType.UNKNOWN:
-			System.out.println("RSS_SOUP: Using SoupParser, Rss2Handler");
+		// case ContentType.RSS_SOUP:
+		// case ContentType.UNKNOWN:
+		default:
+			
+			System.out.println("unknown: trying SoupParser, Rss2Handler");
 			feedParser = new SoupParser();
 			FeedHandlerBase handler = new Rss2Handler();
 			feedParser.setHandler(handler);
 			interpreter = new ParserInterpreter(feed, feedParser);
 			return interpreter;
-
-		default:
-			return null;
 		}
 
 	}

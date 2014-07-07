@@ -14,7 +14,7 @@ package org.danja.feedreader.main;
  */
 public class Config {
 
-	public static final String FEED_USER_AGENT_HEADER = "NewsMonitor/1.0.0 Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.97 Safari/537.36";
+	public static final String FEED_USER_AGENT_HEADER = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.97 Safari/537.36 NewsMonitor/1.0.0";
 
 	public static final String HTML_USER_AGENT_HEADER = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.97 Safari/537.36 NewsMonitor/1.0.0";
 	
@@ -23,7 +23,7 @@ public class Config {
 	public static final String HTML_ACCEPT_HEADER = "text/html, application/xhtml+xml, application/xml";
 	
 	// buggy-list.txt rdf-bloggers-feedlist.txt; input/short-list.txt
-	public static final String SEED_FEEDLIST = "input/rdf-bloggers-feedlist.txt";
+	public static final String SEED_FEEDLIST = "input/short-list.txt";
 	// public static String QUERY_ENDPOINT =
 	// "http://localhost:3030/feedreader/query";
 
@@ -52,11 +52,15 @@ public class Config {
 
 	public static final String STOPWORDS_FILENAME = "input/stopwords.txt";
 
-	public static final int LINK_EXPLORER_SLEEP_PERIOD = 1000;
+	public static final int LINK_EXPLORER_SLEEP_PERIOD = 500; // per-link
 
 	public static final String SPARQL_GET_STATUS = "sparql/get-system-status.sparql";
 
 	public static final String GET_LINKS_SPARQL = "sparql/get-new-links.sparql";
+
+	public static final float SUBSCRIBE_RELEVANCE_THRESHOLD = 0.05F;
+	
+	public static final float UNSUBSCRIBE_RELEVANCE_THRESHOLD = 0.001F;
 
 	/**
 	 * Pause between polling runs

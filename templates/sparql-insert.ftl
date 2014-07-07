@@ -1,4 +1,5 @@
 ${prefixes} 
+
 WITH <${graph}> DELETE { 
 ?entry ?p ?o 
 } WHERE { 
