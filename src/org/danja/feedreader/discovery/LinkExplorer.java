@@ -101,6 +101,9 @@ public class LinkExplorer implements Runnable {
 	
 
 	private void explore(Link link) { // TODO maybe merge this with FormatSniffer
+		if(link.isExplored()) { // TODO shouldn't be needed
+			return;
+		}
 		if (link.getResponseCode() >= 400) {
 			return;
 		}
@@ -150,6 +153,7 @@ public class LinkExplorer implements Runnable {
 			link.setFormat(ContentType.formatName(ContentType.UNKNOWN));
 			link.setRelevance(0F);
 		}
+		link.setExplored(true);
 	}
 
 //	private char identifyType() {
@@ -168,10 +172,11 @@ public class LinkExplorer implements Runnable {
 		Iterator<Link> iterator = links.iterator();
 		while(iterator.hasNext()) {
 			Link link = iterator.next();
-			System.out.println("LINK = "+link);
+			// System.out.println("LINK = "+link);
 			if(link.getRel() != null && link.getRel().equals("alternate")) {
 				Feed newFeed = feedList.createFeed(link.getHref());
 				newFeed.init();
+				newFeed.setRelevance(link.getRelevance());
 				System.out.println("* Subscribing to new feed : "+newFeed.getUrl());
 				feedList.addFeed(newFeed);
 			}
