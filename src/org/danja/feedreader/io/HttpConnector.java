@@ -92,7 +92,7 @@ public class HttpConnector {
 		connection = connect();
 		try {
 			responseCode = connection.getResponseCode();
-			System.out.println("Response Code : " + responseCode); // TODO
+			System.out.println(url+" response Code : " + responseCode); // TODO
 																	// handle
 																	// response
 																	// code here

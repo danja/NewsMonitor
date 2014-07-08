@@ -9,8 +9,7 @@ WITH <${origin}> DELETE {
 } WHERE { 
 GRAPH <${origin}> {
        	     ?link a nm:Link ;
-         	   		nm:href <${href}> ;
-         	   		?p ?o .
+         	   		nm:href <${href}>  .
          	   		}
   } ;
 INSERT DATA {
@@ -28,7 +27,3 @@ GRAPH <${origin}> {
          	   		]
          	   		}
  }
-
-
-		         
-         

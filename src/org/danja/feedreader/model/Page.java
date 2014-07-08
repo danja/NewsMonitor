@@ -8,6 +8,8 @@
  */
 package org.danja.feedreader.model;
 
+import java.util.Set;
+
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
 
@@ -37,4 +39,10 @@ public interface Page {
 
     public char getFormatHint();
 	public void setInterpreter(Interpreter interpreter);
+	void addAllLinks(Set<Link> links);
+	void addLink(Link link);
+	Set<Link> getLinks();
+	void clearLinks();
+	void addTag(Tag tag);
+	Set<Tag> getTags();
 }

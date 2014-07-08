@@ -1,24 +1,72 @@
 package org.danja.feedreader.model.impl;
 
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
 import org.danja.feedreader.main.Config;
 import org.danja.feedreader.model.ContentType;
+import org.danja.feedreader.model.Link;
+import org.danja.feedreader.model.LinkSet;
 import org.danja.feedreader.model.Page;
+import org.danja.feedreader.model.Tag;
 
 public abstract class PageBase implements Page {
 
 	private HttpConnector httpConnector = null;
 
 	private Interpreter interpreter = null;
-	
+
 	private String contentType = null;
+
+	// private Set<Link> links = Collections
+	// .newSetFromMap(new ConcurrentHashMap<Link, Boolean>());
+	//
+	// private Set<String> hrefs = Collections
+	// .newSetFromMap(new ConcurrentHashMap<String, Boolean>());
+
+	private LinkSet links = new LinkSetImpl();
+
+	private Set<Tag> tags = Collections
+			.newSetFromMap(new ConcurrentHashMap<Tag, Boolean>());
+
+	@Override
+	public void addLink(Link link) {
+		links.add(link);
+	}
+
+	@Override
+	public void addAllLinks(Set<Link> links) { // TODO can refactor?
+		links.addAll(links);
+	}
+
+	@Override
+	public synchronized Set<Link> getLinks() { // TODO check sync
+		return links.getLinks();
+	}
+
+	@Override
+	public void clearLinks() {
+		links.clear();
+	}
+
+	@Override
+	public void addTag(Tag tag) {
+		tags.add(tag);
+	}
+
+	@Override
+	public Set<Tag> getTags() {
+		return tags;
+	}
 
 	/**
 	 * @return the contentType
@@ -28,15 +76,15 @@ public abstract class PageBase implements Page {
 	}
 
 	/**
-	 * @param contentType the contentType to set
+	 * @param contentType
+	 *            the contentType to set
 	 */
 	public void setContentType(String contentType) {
 		this.contentType = contentType;
 	}
 
-
 	private String url = null;
-	
+
 	private char formatHint = ContentType.UNKNOWN;
 
 	private String title = null;
@@ -44,12 +92,8 @@ public abstract class PageBase implements Page {
 	private String content = null;
 
 	private String format = null;
-	
-	
 
 	private int responseCode = 0;
-	
-	
 
 	public PageBase(String url) {
 		this.url = url;
@@ -89,33 +133,30 @@ public abstract class PageBase implements Page {
 		return content;
 	}
 
-//	@Override
-//	public void load() { // used by LinkExplorer
-//		HttpConnector connector = new HttpConnector();
-//		connector.setUrl(url);
-//		connector.setConditional(false);
-//		System.out.println("\n\nGetting content for : " + url);
-//
-//		boolean streamAvailable = connector.load();
-//		if (streamAvailable) {
-//			FormatSniffer sniffer = new FormatSniffer();
-//			 setFormatHint(sniffer.sniff(connector.getInputStream()));
-//			 
-////			System.out.println("streamAvailable ===Headers ===\n"
-////					+ connector.getHeadersString() + "------\n");
-//		} else {
-//			System.out.println("Stream unavailable.");
-//			// format = format.UNKNOWN;
-//		}
-//		// System.out.println("Format matches : "
-//		// + format.formatName(format));
-//	//	System.out.println("\nCreating object for Page : " + url);
-//		// connector.
-//	}
+	// @Override
+	// public void load() { // used by LinkExplorer
+	// HttpConnector connector = new HttpConnector();
+	// connector.setUrl(url);
+	// connector.setConditional(false);
+	// System.out.println("\n\nGetting content for : " + url);
+	//
+	// boolean streamAvailable = connector.load();
+	// if (streamAvailable) {
+	// FormatSniffer sniffer = new FormatSniffer();
+	// setFormatHint(sniffer.sniff(connector.getInputStream()));
+	//
+	// // System.out.println("streamAvailable ===Headers ===\n"
+	// // + connector.getHeadersString() + "------\n");
+	// } else {
+	// System.out.println("Stream unavailable.");
+	// // format = format.UNKNOWN;
+	// }
+	// // System.out.println("Format matches : "
+	// // + format.formatName(format));
+	// // System.out.println("\nCreating object for Page : " + url);
+	// // connector.
+	// }
 
-
-
-	
 	public Interpreter getInterpreter() {
 		return interpreter;
 	}
@@ -131,13 +172,12 @@ public abstract class PageBase implements Page {
 	public String getContentEncoding() {
 		return httpConnector.getContentEncoding();
 	}
-	
-	
+
 	@Override
 	public void setFormat(String format) {
 		this.format = format;
 	}
-	
+
 	public String getFormat() {
 		return format;
 	}
@@ -162,17 +202,17 @@ public abstract class PageBase implements Page {
 	protected long now() {
 		return (new Date()).getTime();
 	}
-	
+
 	@Override
 	public void setResponseCode(int responseCode) {
-		this.responseCode  = responseCode;
+		this.responseCode = responseCode;
 	}
 
 	@Override
 	public int getResponseCode() {
 		return responseCode;
 	}
-	
+
 	@Override
 	public void setFormatHint(char hint) {
 		this.formatHint = hint;
@@ -201,7 +241,8 @@ public abstract class PageBase implements Page {
 	}
 
 	/**
-	 * @param httpConnector the httpConnector to set
+	 * @param httpConnector
+	 *            the httpConnector to set
 	 */
 	public void setHttpConnector(HttpConnector httpConnector) {
 		this.httpConnector = httpConnector;
