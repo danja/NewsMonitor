@@ -410,7 +410,7 @@ public class AtomHandler extends FeedHandlerBase {
 
 				for (int i = 0; i < attributes.getLength(); i++) {
 					String name = attributes.getLocalName(i);
-
+// System.out.println("NAME = "+name);
 					if ("href".equals(name)) {
 						Link link = new LinkImpl();
 						link.setOrigin(getFeed().getUrl());

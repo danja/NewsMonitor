@@ -21,7 +21,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestAtomParser {
+public class TestAtomSniffer {
 
 	private final String url = "http://localhost:8080/test-data/atom-sample.xml";
 	private final static String rootDir = "www";
@@ -40,19 +40,21 @@ public class TestAtomParser {
 
 		feed = new FeedImpl();
 		feed.setUrl(url);
-		feed.setFormatHint(ContentType.ATOM);
-		// feed.setRefreshPeriod(Config.getPollerPeriod());
-
-		// interpreter = RDFInterpreterFactory.createInterpreter(format);
-		// feed.setInterpreter(interpreter);
-
-		interpreter = InterpreterFactory.createInterpreter(feed);
-		System.out.println("INTERPRETER = "+interpreter);
-
-		feed.setInterpreter(interpreter);
+		feed.init();
 		feed.refresh();
-		
-		EntryList entries = feed.getEntries();
+//		feed.setFormatHint(ContentType.ATOM);
+//		// feed.setRefreshPeriod(Config.getPollerPeriod());
+//
+//		// interpreter = RDFInterpreterFactory.createInterpreter(format);
+//		// feed.setInterpreter(interpreter);
+//
+//		interpreter = InterpreterFactory.createInterpreter(feed);
+//		System.out.println("INTERPRETER = "+interpreter);
+//
+//		feed.setInterpreter(interpreter);
+//		feed.refresh();
+//		
+//		EntryList entries = feed.getEntries();
 		
 		// System.out.println(entries.getEntry(0).toTurtle());
 		// System.out.println(feed.toTurtle());

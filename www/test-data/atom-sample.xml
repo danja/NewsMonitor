@@ -41,10 +41,24 @@
 		<updated>2014-05-08T18:30:02Z</updated>
 		 <content type="xhtml">
          <div xmlns="http://www.w3.org/1999/xhtml">
-           <p>Entry 2 content <a href="http://blog.schema.org/">with a link</a></p>
+           <p>Entry 2 content <a href="http://example.org/">with a link</a></p>
          </div>
        </content>
 		<summary>Entry 2 summary</summary>
+	</entry>
+		<entry>
+		<title>Entry 3</title>
+		<link href="/entry3.html"/>
+		<link rel="edit" href="http://example.org/entry2/edit"/>
+		<id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6c</id>
+		<updated>2014-05-08T18:30:02Z</updated>
+		 <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+           <p>Entry 3 content <a href="autodiscovery-test.html">with an link</a> for autodiscovery test 
+           and lots of keywords rdf rdf semantic linked data data web web</p>
+         </div>
+       </content>
+		<summary>Entry 3 summary</summary>
 	</entry>
  
 </feed>

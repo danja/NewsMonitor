@@ -105,7 +105,7 @@ public class LinkExplorer implements Runnable {
 			return;
 		}
 		if(!link.getHref().startsWith("http://") && !link.getHref().startsWith("https://")) return;
-		System.out.println("Exploring " + link.getHref() + "...");
+		System.out.println("* Exploring " + link.getHref() + "...");
 		this.link = link;
 		this.url = link.getHref();
 		connector.setUrl(url);
@@ -139,6 +139,7 @@ public class LinkExplorer implements Runnable {
 			RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
 			float relevance = relevanceCalculator.calculateRelevance(
 					PresetTopics.SEMWEB_TOPIC, data);
+			System.out.println("* Link relevance = "+relevance);
 			link.setRelevance(relevance);
 			if(relevance > Config.SUBSCRIBE_RELEVANCE_THRESHOLD) {
 				trySubscribe(link);
@@ -160,15 +161,18 @@ public class LinkExplorer implements Runnable {
 //	}
 
 	private void trySubscribe(Link pageLink) { // quick and dirty feed link autodiscovery
+		System.out.println("* Looking for a feed linked from : "+pageLink.getHref());
 		HttpConnector connector = new HttpConnector();
 		String content = connector.downloadAsString(pageLink.getHref());
-		Set<Link> links = ContentProcessor.extractLinks(pageLink.getOrigin(), content);
+		Set<Link> links = ContentProcessor.extractHeadLinks(pageLink.getOrigin(), content);
 		Iterator<Link> iterator = links.iterator();
 		while(iterator.hasNext()) {
 			Link link = iterator.next();
+			System.out.println("LINK = "+link);
 			if(link.getRel() != null && link.getRel().equals("alternate")) {
 				Feed newFeed = feedList.createFeed(link.getHref());
 				newFeed.init();
+				System.out.println("* Subscribing to new feed : "+newFeed.getUrl());
 				feedList.addFeed(newFeed);
 			}
 		}
@@ -179,18 +183,18 @@ public class LinkExplorer implements Runnable {
 	}
 
 	private void updateStore(Link link) {
-		System.out.println("Updating link " + link.getHref() + " to store...");
+		System.out.println("* Updating link " + link.getHref() + " to store...");
 		String sparql = Templater.apply("update-links",
 				link.getTemplateDataMap());
-		System.out.println("\n\n----------------\n"+sparql+"\n\n---------------------");
+		// System.out.println("\n\n----------------\n"+sparql+"\n\n---------------------");
 		HttpMessage message = SparqlConnector.update(Config.UPDATE_ENDPOINT,
 				sparql);
 		message.setRequestBody(sparql);
-		System.out.println("updated link status : " + message.getStatusCode()
+		System.out.println("* link update status : " + message.getStatusCode()
 				+ " " + message.getStatusMessage());
 		if (message.getStatusCode() >= 400) {
-			System.out.println(message);
-			System.out.println("SPARQL = \n" + message.getRequestBody());
+			System.out.println("* "+message);
+			System.out.println("* SPARQL = \n" + message.getRequestBody());
 		}
 	}
 
@@ -249,7 +253,7 @@ public class LinkExplorer implements Runnable {
 			link.setFormat(value);
 		}
 		if ("explored".equals(name)) {
-			System.out.println("EXPLORED = "+value);
+			System.out.println("* Explored"+value);
 			link.setExplored("true".equals(value));
 		}
 		if ("remote".equals(name)) {

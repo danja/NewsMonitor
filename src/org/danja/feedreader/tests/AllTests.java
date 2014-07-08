@@ -19,7 +19,15 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ TestAtomParser.class, TestRss1Parser.class, TestRss2Parser.class })
+@SuiteClasses({ 
+	TestAtomParser.class, 
+	TestAtomSniffer.class,
+	TestRss1Parser.class, 
+	TestRss1Sniffer.class,
+	TestRss2Parser.class, 
+	TestRss2Sniffer.class,
+	TestContentProcessor.class
+	})
 public class AllTests {
 	
 	// TODO HTTP server causes problems

@@ -74,9 +74,10 @@ public class RelevanceCalculator {
 		//	System.out.println("keywordCount = "+keywordCount);
 			relevance += keywordCount * keywordRelevance;
 		}
-		relevance = relevance/words;
+		relevance = relevance/(words+1);
 		
 		relevance = relevance*100; // scale - is easier to play with
+		// System.out.println("* Relevance = "+relevance);
 		return relevance;
 	}
 

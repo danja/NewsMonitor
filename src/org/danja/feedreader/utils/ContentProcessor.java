@@ -63,14 +63,23 @@ public class ContentProcessor {
 		return StringEscapeUtils.unescapeHtml4(raw);
 	}
 
-	private static final String HTML_A_TAG_PATTERN = "(?i)<a([^>]+)>(.+?)</a>";
-	private static final String HTML_A_HREF_TAG_PATTERN = "\\s*(?i)href\\s*=\\s*(\"([^\"]*\")|'[^']*'|([^'\">\\s]+))";
+	private static final String A_REGEX = "(?i)<a([^>]+)>(.+?)</a>";
+	private static final String HREF_REGEX = "\\s*(?i)href\\s*=\\s*(\"([^\"]*\")|'[^']*'|([^'\">\\s]+))";
+	
+	// <link rel="alternate" type="application/rss+xml" title="RSS" href="rss2-sample.xml">
+	private static final String LINK_REGEX = "(?i)<link([^>]+)>";
+	private static final String REL_REGEX = "\\s*(?i)rel\\s*=\\s*(\"([^\"]*\")|'[^']*'|([^'\">\\s]+))";
+	// private static final String TYPE_ATTR_PATTERN = "\\s*(?i)type\\s*=\\s*(\"([^\"]*\")|'[^']*'|([^'\">\\s]+))";
 
 	public static final Pattern A_PATTERN;
+	public static final Pattern LINK_PATTERN;
 	public static final Pattern HREF_PATTERN;
+	public static final Pattern REL_PATTERN;
 	static {
-		A_PATTERN = Pattern.compile(HTML_A_TAG_PATTERN);
-		HREF_PATTERN = Pattern.compile(HTML_A_HREF_TAG_PATTERN);
+		A_PATTERN = Pattern.compile(A_REGEX);
+		LINK_PATTERN = Pattern.compile(LINK_REGEX);
+		HREF_PATTERN = Pattern.compile(HREF_REGEX);
+		REL_PATTERN = Pattern.compile(REL_REGEX);
 	}
 	
 	public static Set<Link> extractLinks(Feed feed, String content) {
@@ -94,15 +103,67 @@ public class ContentProcessor {
 					href = href.substring(1, href.length() - 1);
 				}
 				href = href.trim();
+//				try {
+//					URI uri = new URI(href); // ????
+//				} catch (URISyntaxException e) {
+//					continue;
+//				}
 				try {
-					URI uri = new URI(href);
+					href = resolveUrl(origin, href);
 				} catch (URISyntaxException e) {
-					continue;
+					e.printStackTrace();
 				}
 				Link link = new LinkImpl();
 				link.setOrigin(origin);
 				link.setHref(href);
 				link.setLabel(linkText);
+				links.add(link);
+			}
+		}
+		return links;
+	}
+	
+	public static Set<Link> extractHeadLinks(String origin, String content) {
+		Set<Link> links = new HashSet<Link>();
+		Matcher matcherTag = LINK_PATTERN.matcher(content);
+		while (matcherTag.find()) {
+
+			String attributesChunk = matcherTag.group(1); // href
+	//		String linkText = matcherTag.group(2); // link text
+
+			Matcher hrefMatcher = HREF_PATTERN.matcher(attributesChunk);
+			Matcher relMatcher = REL_PATTERN.matcher(attributesChunk);
+
+			if (hrefMatcher.find()) {
+
+				String href = hrefMatcher.group(1);
+				if (href.startsWith("\"") || href.startsWith("'")) {
+					href = href.substring(1, href.length() - 1);
+				}
+				href = href.trim();
+//				try {
+//					URI uri = new URI(href);
+//				} catch (URISyntaxException e) {
+//					continue;
+//				}
+				try {
+					href = resolveUrl(origin, href);
+				} catch (URISyntaxException e) {
+					e.printStackTrace();
+				}
+				Link link = new LinkImpl();
+				link.setOrigin(origin);
+				link.setHref(href);
+			//	link.setLabel(linkText);
+				if (relMatcher.find()) {
+					String rel = relMatcher.group(1);
+					if (rel.startsWith("\"") || rel.startsWith("'")) {
+						rel = rel.substring(1, rel.length() - 1);
+					}
+					rel = rel.trim();
+					System.out.println("REL = "+rel);
+					link.setRel(rel);
+				}
 				links.add(link);
 			}
 		}
@@ -118,16 +179,11 @@ public class ContentProcessor {
 																			// absolute
 			return href;
 		}
-		URI uri = null;
-		// System.out.println("URL = "+url);
-
-		uri = new URI(url);
+		URI uri = new URI(url);
 
 		// System.out.println("URI = "+uri);
 		// System.out.println("HREF = "+href);
-		URI hrefUri = null;
-
-		hrefUri = new URI(href);
+		URI hrefUri = new URI(href);
 
 		return uri.resolve(hrefUri).toString();
 	}

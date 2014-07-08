@@ -8,6 +8,7 @@
  */
 package org.danja.feedreader.model;
 
+import org.danja.feedreader.interpreters.Interpreter;
 import org.danja.feedreader.io.HttpConnector;
 
 /**
@@ -35,4 +36,5 @@ public interface Page {
     public void setFormatHint(char hint);
 
     public char getFormatHint();
+	public void setInterpreter(Interpreter interpreter);
 }

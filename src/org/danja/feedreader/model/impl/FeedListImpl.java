@@ -87,11 +87,11 @@ public class FeedListImpl implements FeedList {
 			feed = iterator.next();
 //			System.out.println("feed.getLives() = "+feed.getLives());
 //			System.out.println("feed.isDead() = "+feed.isDead());
-			if(!feed.isDead() && feed.getLives() < Config.MAX_LIVES) {
-				System.out.println("Less than max lives, re-initializing...");
-				feed.init();
-				// feed.setFirstCall(true);
-			}
+//			if(!feed.isDead() && feed.getLives() < Config.MAX_LIVES) {
+//				System.out.println("Less than max lives, re-initializing...");
+//				feed.init();
+//				// feed.setFirstCall(true);
+//			}
 			System.out.println("\nRefreshing : " + feed.getUrl());
 			// feed.setFirstCall(firstCall);
 			feed.refresh();

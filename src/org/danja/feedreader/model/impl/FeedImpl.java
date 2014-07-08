@@ -34,6 +34,7 @@ import org.danja.feedreader.templating.Templater;
 /**
  * Models a feed, wrapped around HttpConnection
  * 
+ * 
  */
 public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
@@ -42,7 +43,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private EntryList entryList = new EntryListImpl();
 
-	private Interpreter interpreter = null;
+	//private Interpreter interpreter = null;
 
 	private String subtitle = null;
 
@@ -181,8 +182,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			return;
 		}
 
-		// System.out.println("getFormat" + getFormat() + " "
-		// + getFormat().startsWith("text/html"));
+		System.out.println("FORMAT " + ContentType.formatName(format));
 
 		if (format == ContentType.UNKNOWN || format == ContentType.RSS_SOUP) {
 			if (getContentType() != null
@@ -202,8 +202,9 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		setFormatHint(format); // TODO remove duplication with
 								// setInterpreter
 
-		interpreter = InterpreterFactory.createInterpreter(this);
-		setInterpreter(interpreter);		
+		// interpreter = InterpreterFactory.createInterpreter(this);
+		setInterpreter(InterpreterFactory.createInterpreter(this));		
+		System.out.println("interpreter = " + getInterpreter());
 	}
 
 	public boolean refresh() {
@@ -224,13 +225,13 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 		if (isNew) {
 			System.out.println("Connected, interpreting...");
-			System.out.println("interpreter =" + interpreter);
-			if(interpreter == null) { // temp bug workaround
-				System.out.println("Error, feed life lost.");
-				lives--;
-			} else {
-			interpreter.interpret(this);
-			}
+			System.out.println("interpreter = " + getInterpreter());
+//			if(getInterpreter() == null) { 
+//				System.out.println("Error, feed life lost.");
+//				lives--;
+//			} else {
+				getInterpreter().interpret(this);
+//			}
 			// System.out.println("INTERPRETED =" + this);
 			// lives = Config.MAX_LIVES;
 			updateRelevance();
@@ -262,7 +263,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
 		float relevance = relevanceCalculator.calculateRelevance(
 				PresetTopics.SEMWEB_TOPIC, getAllText());
-		// System.out.println("TEXT "+getAllText());
+		System.out.println("Feed relevance = "+relevance);
 		setRelevance(relevance);
 	}
 

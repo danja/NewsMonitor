@@ -58,9 +58,9 @@ public class Config {
 
 	public static final String GET_LINKS_SPARQL = "sparql/get-new-links.sparql";
 
-	public static final float SUBSCRIBE_RELEVANCE_THRESHOLD = 0.05F;
+	public static final float SUBSCRIBE_RELEVANCE_THRESHOLD = 1F;
 	
-	public static final float UNSUBSCRIBE_RELEVANCE_THRESHOLD = 0.001F;
+	public static final float UNSUBSCRIBE_RELEVANCE_THRESHOLD = 0.1F;
 
 	/**
 	 * Pause between polling runs

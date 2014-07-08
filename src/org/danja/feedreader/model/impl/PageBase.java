@@ -154,15 +154,10 @@ public abstract class PageBase implements Page {
 		httpConnector.downloadToFile(filename);
 	}
 
+	@Override
 	public void setInterpreter(Interpreter interpreter) {
 		this.interpreter = interpreter;
 	}
-
-
-
-
-
-
 
 	protected long now() {
 		return (new Date()).getTime();

@@ -69,6 +69,7 @@ public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Te
 	/**
 	 * @param id the id to set
 	 */
+	@Override
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -78,6 +79,7 @@ public abstract  class FeedEntityBase extends PageBase implements FeedEntity, Te
     /**
 	 * @return the author
 	 */
+	@Override
 	public Person getAuthor() {
 		return author;
 	}
