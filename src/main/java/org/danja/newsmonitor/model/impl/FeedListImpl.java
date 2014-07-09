@@ -34,8 +34,6 @@ import org.danja.newsmonitor.utils.ContentType;
 public class FeedListImpl implements FeedList {
 
 	private ConcurrentLinkedQueue<Feed> feedQueue;
-	// private EntryList entries;
-	// private boolean firstCall;
 
 	public FeedListImpl() {
 		feedQueue = new ConcurrentLinkedQueue<Feed>();
@@ -60,6 +58,16 @@ public class FeedListImpl implements FeedList {
 		Feed feed = createFeed(uriString);
 		feed.setFormatHint(formatHint);
 		addFeed(feed);
+	}
+	
+	public boolean containsFeed(String url) { // TODO refactor
+		Iterator<Feed> it = feedQueue.iterator();
+		while(it.hasNext()){
+			if(url.equals(it.next().getUrl())) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void addFeeds(FeedList feeds) {

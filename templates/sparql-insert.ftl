@@ -1,12 +1,12 @@
 ${prefixes} 
-
-WITH <${graph}> DELETE { 
+  
+WITH <${feedUrl}> DELETE { 
 ?entry ?p ?o 
 } WHERE { 
-GRAPH <${graph}>{
+GRAPH <${feedUrl}>{
      ?entry a schema:article ;
      dcterms:source <${feedUrl}> ;
      ?p ?o 
      }
   } ;
-INSERT DATA { GRAPH <${graph}>{ ${body} }}
+INSERT DATA { GRAPH <${feedUrl}>{ ${body} }}

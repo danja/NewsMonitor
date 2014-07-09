@@ -56,6 +56,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	private boolean firstCall = true;
 
 	private long lastRefresh = 0;
+	private boolean pending = false;
 
 	// private getHttpConnector() getHttpConnector();
 
@@ -182,11 +183,12 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			System.out.println("Stream unavailable.");
 			format = ContentType.UNAVAILABLE;
 			setLives(getLives() - 1);
+			pending  = true;
 			// setDead(true);
 			return;
 		}
 
-		System.out.println("FORMAT " + ContentType.formatName(format));
+	//	System.out.println("FORMAT " + ContentType.formatName(format));
 
 		if (format == ContentType.UNKNOWN || format == ContentType.RSS_SOUP) {
 			if (getContentType() != null
@@ -208,15 +210,21 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 		// interpreter = InterpreterFactory.createInterpreter(this);
 		setInterpreter(InterpreterFactory.createInterpreter(this));		
-		System.out.println("interpreter = " + getInterpreter());
+		// System.out.println("interpreter = " + getInterpreter());
 	}
 
 	public boolean refresh() {
 
 		// System.out.println("FIRSTCALL = "+firstCall);
-		if (getHttpConnector() == null) {
+		if (getHttpConnector() == null) { // is needed?
 			setHttpConnector(new HttpConnector());
 			getHttpConnector().setUrl(getUrl());
+		}
+		
+		if(pending) {
+			pending = false;
+			System.out.println("IS PENDING, RE-INIT");
+			init();
 		}
 		
 		getHttpConnector().setConditional(!firstCall); // first GET is
@@ -229,7 +237,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 		if (isNew) {
 			System.out.println("Connected, interpreting...");
-			System.out.println("interpreter = " + getInterpreter());
+			// System.out.println("interpreter = " + getInterpreter());
 //			if(getInterpreter() == null) { 
 //				System.out.println("Error, feed life lost.");
 //				lives--;
@@ -266,7 +274,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	private void updateRelevance() {
 		RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
 		float relevance = relevanceCalculator.calculateRelevance(
-				PresetTopics.SEMWEB_TOPIC, getAllText());
+				Config.TOPIC, getAllText());
 		System.out.println("Feed relevance = "+relevance);
 		setRelevance(relevance);
 	}

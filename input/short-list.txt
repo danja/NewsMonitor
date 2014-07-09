@@ -1,34 +1,36 @@
 
-#http://danbri.org/words/category/technology/rdf
+http://danbri.org/words/category/technology/rdf
 # RSS 1.0
-#http://aabs.wordpress.com/feed/
+http://aabs.wordpress.com/feed/
 # /category/semanticweb/rdf
 
 # RSS2.0
 #http://mortenhf.dk/blog/feed/
-#http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
+http://www.wasab.dk/morten/blog/archives/category/semweb/feed/
 
 # RSS 2.0
 #http://www.w3.org/community/rww/feed/
 
 # Atom
-#http://intertwingly.net/blog/index.atom
+http://intertwingly.net/blog/index.atom
 
 # Atom
 #http://markwatson.com/blog/atom.xml
 
 # http://localhost:8080/atom-real-1.xml
 
-http://localhost:8080/test-data/atom-sample.xml
+# http://localhost:8080/test-data/atom-sample.xml
 
-#http://tomheath.com/blog/comments/feed/rdf/
+http://tomheath.com/blog/comments/feed/rdf/
 
 # problematic
-http://www.jenitennison.com/blog/atom/feed
-http://www.w3.org/blog/powder?tempskin=_rdf
-http://markwatson.com/blog/atom.xml
+# http://www.jenitennison.com/blog/atom/feed
+# http://www.w3.org/blog/powder?tempskin=_rdf
+# http://markwatson.com/blog/atom.xml
 
 # crashy
 http://blog.seevl.net/category/technology/feed/
 http://clarkparsia.com/weblog/feed/rdf
+http://www.andzol.com/?feed=rdf
+http://taylorgarage.com/feed/
 

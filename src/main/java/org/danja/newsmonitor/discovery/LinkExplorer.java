@@ -79,13 +79,17 @@ public class LinkExplorer implements Runnable {
 			Iterator<Link> linkIterator = links.iterator();
 			while (linkIterator.hasNext()) {
 				Link link = linkIterator.next();
+				if (feedList.containsFeed(link.getHref())) {
+					link.setExplored(true);
+					continue;
+				}
 				if (link.isExplored()) {
 					continue;
 				}
-			//	System.out.println("LINK : " + link);
+				// System.out.println("LINK : " + link);
 				explore(link);
 				link.setExplored(true);
-				
+
 				updateStore(link);
 				try {
 					Thread.sleep(Config.LINK_EXPLORER_SLEEP_PERIOD);
@@ -98,28 +102,29 @@ public class LinkExplorer implements Runnable {
 		stopped = true;
 	}
 
-	
-
-	private void explore(Link link) { // TODO maybe merge this with FormatSniffer
-		if(link.isExplored()) { // TODO shouldn't be needed
+	private void explore(Link link) { // TODO maybe merge this with
+										// FormatSniffer
+		if (link.isExplored()) { // TODO shouldn't be needed
 			return;
 		}
 		if (link.getResponseCode() >= 400) {
 			return;
 		}
-		if(!link.getHref().startsWith("http://") && !link.getHref().startsWith("https://")) return;
+		if (!link.getHref().startsWith("http://")
+				&& !link.getHref().startsWith("https://"))
+			return;
 		System.out.println("* Exploring " + link.getHref() + "...");
 		this.link = link;
 		this.url = link.getHref();
 		connector.setUrl(url);
 
 		// as "+ContentType.formatName(link.))
-		String data = connector.downloadAsString(url);	
-		
+		String data = connector.downloadAsString(url);
+
 		int responseCode = connector.getResponseCode();
 		link.setResponseCode(responseCode);
 
-		//System.out.println("DATA = \n"+data);
+		// System.out.println("DATA = \n"+data);
 		if (data != null && responseCode == 200) {
 			String contentType = connector.getContentType();
 			link.setContentType(contentType);
@@ -127,27 +132,27 @@ public class LinkExplorer implements Runnable {
 			System.out.println("Link " + link.getHref() + " recognised as "
 					+ ContentType.formatName(format));
 			link.setFormat(ContentType.formatName(format));
-			
-//			System.out.println("Link " + link.getHref() + " recognised as "
-//					+ ContentType.formatName(type));
-			
+
+			// System.out.println("Link " + link.getHref() + " recognised as "
+			// + ContentType.formatName(type));
+
 			if (format == ContentType.UNKNOWN) { // no use
 				link.setRelevance(0F);
 				return;
 			}
-//			String contentType = connector.getContentType();
-//			link.setContentType(contentType);
-//			link.setFormat(ContentType.formatName(ContentType.identifyContentType(contentType)));
-			
+			// String contentType = connector.getContentType();
+			// link.setContentType(contentType);
+			// link.setFormat(ContentType.formatName(ContentType.identifyContentType(contentType)));
+
 			RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
 			float relevance = relevanceCalculator.calculateRelevance(
-					PresetTopics.SEMWEB_TOPIC, data);
-			System.out.println("* Link relevance = "+relevance);
+					Config.TOPIC, data);
+			System.out.println("* Link relevance = " + relevance);
 			link.setRelevance(relevance);
-			if(relevance > Config.SUBSCRIBE_RELEVANCE_THRESHOLD) {
+			if (relevance > Config.SUBSCRIBE_RELEVANCE_THRESHOLD) {
 				trySubscribe(link);
 			}
-		//	System.out.println("EXPLORED " + link);
+			// System.out.println("EXPLORED " + link);
 		} else {
 			link.setContentType(null);
 			link.setFormat(ContentType.formatName(ContentType.UNKNOWN));
@@ -156,28 +161,32 @@ public class LinkExplorer implements Runnable {
 		link.setExplored(true);
 	}
 
-//	private char identifyType() {
-//		char type = ContentType.identifyExtension(url);
-//		if (type != 0F) {
-//			return type;
-//		}
-//		return ContentType.identifyContentType(connector.getContentType());
-//	}
+	// private char identifyType() {
+	// char type = ContentType.identifyExtension(url);
+	// if (type != 0F) {
+	// return type;
+	// }
+	// return ContentType.identifyContentType(connector.getContentType());
+	// }
 
-	private void trySubscribe(Link pageLink) { // quick and dirty feed link autodiscovery
-		System.out.println("* Looking for a feed linked from : "+pageLink.getHref());
+	private void trySubscribe(Link pageLink) { // quick and dirty feed link
+												// autodiscovery
+		System.out.println("* Looking for a feed linked from : "
+				+ pageLink.getHref());
 		HttpConnector connector = new HttpConnector();
 		String content = connector.downloadAsString(pageLink.getHref());
-		Set<Link> links = ContentProcessor.extractHeadLinks(pageLink.getOrigin(), content);
+		Set<Link> links = ContentProcessor.extractHeadLinks(
+				pageLink.getOrigin(), content);
 		Iterator<Link> iterator = links.iterator();
-		while(iterator.hasNext()) {
+		while (iterator.hasNext()) {
 			Link link = iterator.next();
 			// System.out.println("LINK = "+link);
-			if(link.getRel() != null && link.getRel().equals("alternate")) {
+			if (link.getRel() != null && link.getRel().equals("alternate")) {
 				Feed newFeed = feedList.createFeed(link.getHref());
 				newFeed.init();
 				newFeed.setRelevance(link.getRelevance());
-				System.out.println("* Subscribing to new feed : "+newFeed.getUrl());
+				System.out.println("* Subscribing to new feed : "
+						+ newFeed.getUrl());
 				feedList.addFeed(newFeed);
 			}
 		}
@@ -188,7 +197,8 @@ public class LinkExplorer implements Runnable {
 	}
 
 	private void updateStore(Link link) {
-		System.out.println("* Updating link " + link.getHref() + " to store...");
+		System.out
+				.println("* Updating link " + link.getHref() + " to store...");
 		String sparql = Templater.apply("update-links",
 				link.getTemplateDataMap());
 		// System.out.println("\n\n----------------\n"+sparql+"\n\n---------------------");
@@ -198,7 +208,7 @@ public class LinkExplorer implements Runnable {
 		System.out.println("* link update status : " + message.getStatusCode()
 				+ " " + message.getStatusMessage());
 		if (message.getStatusCode() >= 400) {
-			System.out.println("* "+message);
+			System.out.println("* " + message);
 			System.out.println("* SPARQL = \n" + message.getRequestBody());
 		}
 	}
@@ -258,7 +268,7 @@ public class LinkExplorer implements Runnable {
 			link.setFormat(value);
 		}
 		if ("explored".equals(name)) {
-			System.out.println("* Explored"+value);
+			System.out.println("* Explored" + value);
 			link.setExplored("true".equals(value));
 		}
 		if ("remote".equals(name)) {
@@ -268,5 +278,5 @@ public class LinkExplorer implements Runnable {
 			link.setRelevance(value.charAt(0));
 		}
 	}
-	
+
 }

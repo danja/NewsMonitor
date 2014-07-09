@@ -38,7 +38,7 @@ public class SparqlTemplater {
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("prefixes", PREFIXES);
-		map.put("graph", feed.getUrl());
+		// map.put("graph", feed.getUrl());
 		map.put("feedUrl", feed.getUrl());
 		map.put("body", feedBody);
 		

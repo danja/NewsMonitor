@@ -34,6 +34,8 @@ public interface FeedList
    public void addFeed(Feed feed);
 
    public void addFeeds(FeedList feeds);
+   
+   public boolean containsFeed(String url);
 
    /**
     * @return all feeds
