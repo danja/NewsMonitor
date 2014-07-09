@@ -7,10 +7,11 @@ PREFIX nm: <http://purl.org/stuff/newsmonitor/>
 WITH <${origin}> DELETE { 
 ?link ?p ?o 
 } WHERE { 
-GRAPH <${origin}> {
+# GRAPH <${origin}> {
        	     ?link a nm:Link ;
-         	   		nm:href <${href}>  .
-         	   		}
+         	   		nm:href <${href}> ;
+         	   		?p ?o .
+  #       	   		}
   } ;
 INSERT DATA {
 GRAPH <${origin}> {

@@ -23,6 +23,12 @@ http://localhost:8080/test-data/atom-sample.xml
 
 #http://tomheath.com/blog/comments/feed/rdf/
 
-#http://www.jenitennison.com/blog/atom/feed
-#http://www.w3.org/blog/powder?tempskin=_rdf
+# problematic
+http://www.jenitennison.com/blog/atom/feed
+http://www.w3.org/blog/powder?tempskin=_rdf
+http://markwatson.com/blog/atom.xml
+
+# crashy
+http://blog.seevl.net/category/technology/feed/
+http://clarkparsia.com/weblog/feed/rdf
 
