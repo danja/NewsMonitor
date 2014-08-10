@@ -46,13 +46,15 @@ public interface FeedList
 
    public Feed getNext();
 
-   public void refreshAll();
+   // public void refreshAll();
    
    public int size();
    
    public Set<Link> getAllLinks();
    
    public Set<Link> getRemoteLinks();
+
+public void remove(Feed feed);
 
 // public EntryList getEntries();
 

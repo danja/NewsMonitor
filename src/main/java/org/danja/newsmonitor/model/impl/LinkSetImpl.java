@@ -19,7 +19,7 @@ import org.danja.newsmonitor.model.LinkSet;
 
 /**
  * A set of links, aware that those with matching hrefs may be treated as equivalent
- * TODO could just create an equals() method on Link ??
+ * TODO the equals()/hashCode() in LinkImpl should be taking care of this, why isn't it?
  */
 public class LinkSetImpl implements LinkSet  {
 	

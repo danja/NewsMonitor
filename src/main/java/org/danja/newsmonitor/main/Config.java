@@ -20,13 +20,13 @@ public class Config {
 	// infinite
 	
 	// buggy-list.txt rdf-bloggers-feedlist.txt; input/short-list.txt woodcarvers.txt
-	public static final String SEED_FEEDLIST = "input/short-list.txt";
+	public static final String SEED_FEEDLIST = "input/woodcarvers.txt";
 	
 	public static final Topic TOPIC = PresetTopics.WOODCARVING;
 
-	public static final float SUBSCRIBE_RELEVANCE_THRESHOLD = 7F;
+	public static final float SUBSCRIBE_RELEVANCE_THRESHOLD = 2F;
 	
-	public static final float UNSUBSCRIBE_RELEVANCE_THRESHOLD = 1F;
+	public static final float UNSUBSCRIBE_RELEVANCE_THRESHOLD = 0.5F;
 	
 	/**
 	 * Pause between polling runs

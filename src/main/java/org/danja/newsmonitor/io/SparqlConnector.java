@@ -116,7 +116,11 @@ public class SparqlConnector {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
-		
+		try {
+			inputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return content.toString();
 	}
 	
@@ -145,6 +149,11 @@ public class SparqlConnector {
 			statusCode = response.getStatusLine().getStatusCode();
 			statusMessage = response.getStatusLine().getReasonPhrase();
 		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			httpclient.close();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		HttpMessage message = new HttpMessage(statusCode, statusMessage);

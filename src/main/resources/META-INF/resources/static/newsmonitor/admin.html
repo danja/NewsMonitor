@@ -180,6 +180,36 @@ var getFeedsUrl = sparqlQueryEndpoint + encodeURIComponent(getFeedsSparql) + "&o
     	
 $(function() {
 	
+	$( "#dialog-done-add-feed" ).dialog({
+		autoOpen: false,
+	modal: true,
+	buttons: {
+			Ok: function() {
+		$( this ).dialog( "close" );
+			}
+	}
+	});
+    	
+		$("#addFeedButton").on("click", function() {
+			var feedUrl = $("#addFeedUrl").val();
+			console.log("add feed : "+feedUrl);
+    		var sparqlUpdateEndpoint = "http://localhost:3030/feedreader/update";
+			
+    		var addFeedSparql = "update=PREFIX rss: <http://purl.org/rss/1.0/> \n\
+    			\n\
+    			INSERT DATA { \n<"+feedUrl+"> a rss:channel .\n}\n";
+    			
+    		$.ajax({
+  			  type: "POST",
+  			  url: sparqlUpdateEndpoint,
+  			  data: addFeedSparql
+  			})
+  			  .done(function( msg ) {
+  				$("#addFeedButton").reset();
+  				  $("#dialog-done-add-feed").dialog("open");
+  			  });
+		});
+		
     	$("#deleteEntriesButton").on("click", function() {
 			$("#dialog-confirm-delete-entries").dialog("open");
 		});
@@ -243,7 +273,6 @@ $(function() {
 			      }
 			    });
 		  });
-    	
     	
     	function deleteAllEntries() {
     		// console.log("delete all");
@@ -310,9 +339,15 @@ $(function() {
 <h1><a href="/index.html">NewsMonitor</a> Admin</h1>
 
 <p>
-<input type="button" id="deleteEntriesButton" value="Delete all Entries" />
-<input type="button" id="deleteAllButton" value="Delete all Data" />
+   <input type="button" id="deleteEntriesButton" value="Delete all Entries" />
+   <input type="button" id="deleteAllButton" value="Delete all Data" />
 </p>
+<p>
+   <input type="button" id="addFeedButton" value="Add Feed" />
+   <input type="text" id="addFeedUrl" value="http://" size="60"/>
+</p>
+
+
 
 <table>
 <tr><th colspan="7" class="center">Feeds</th></tr>
@@ -338,6 +373,11 @@ $(function() {
 <div id="dialog-done-delete-entries" title="Done">
     <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
     All entries deleted.
+</div>
+
+<div id="dialog-done-add-feed" title="Done">
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    Feed added.
 </div>
 
 <div id="dialog-confirm-delete-all" title="Delete all data?">

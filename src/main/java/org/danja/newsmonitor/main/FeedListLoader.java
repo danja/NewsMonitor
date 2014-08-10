@@ -33,6 +33,7 @@ public class FeedListLoader {
 			+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n"
 			+ "INSERT DATA {\n ${channels} \n}";
 
+	// TODO move to Config
 	public static String CHANNEL_TEMPLATE = "<${url}> rdf:type rss:channel ; \n"
 			+ "foaf:topic <http://www.w3.org/2001/sw/>, <http://www.w3.org/RDF/> . \n\n";
 

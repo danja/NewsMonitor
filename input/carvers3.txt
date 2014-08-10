@@ -1,0 +1,33 @@
+------------------------------------------------------------------------
+| channel                                                              |
+========================================================================
+| <http://norsecarvingdesigns.blogspot.com/feeds/posts/default>        |
+| <http://woodchuckthewoodcarver.blogspot.com/feeds/posts/default>     |
+| <http://norsecelticmedievalgallery.blogspot.com/feeds/posts/default> |
+| <http://www.agrellcarving.co.uk/blog.xml>                            |
+| <http://norsedesigns.blogspot.com/feeds/posts/default>               |
+| <http://feeds.feedburner.com/OzarkWalkingSticks>                     |
+| <http://woodbeecarver.com/feed>                                      |
+| <http://whittlebears.blogspot.com/feeds/posts/default>               |
+| <http://beginnerscarvingcorner.blogspot.com/feeds/posts/default>     |
+| <http://www.marymaycarving.com/blog/feed/>                           |
+| <http://www.modernwoodworkersassociation.com/feeds/posts/default>    |
+| <http://hocktools.wordpress.com/feed/>                               |
+| <http://simonhillgreenwoodwork.blogspot.com/feeds/posts/default>     |
+| <http://woodwosecarving.blogspot.com/feeds/posts/default>            |
+| <http://jarofwood.com/newsfeed/>                                     |
+| <http://carvingswithstories.blogspot.com/feeds/posts/default>        |
+| <http://sundaywoodcarver.blogspot.com/feeds/posts/default>           |
+| <http://jojospoons.blogspot.com/feeds/posts/default>                 |
+| <http://www.spooncarvingfirststeps.com/feeds/posts/default>          |
+| <http://davidknight5.wordpress.com/feed/>                            |
+| <http://nickhunterwoodcarver.wordpress.com/feed/>                    |
+| <http://penultimatewoodshop.blogspot.com/feeds/posts/default>        |
+| <http://www.sarahgoss.co.uk/blog?format=RSS>                         |
+| <http://outwestwoodcarving.blogspot.com/feeds/posts/default>         |
+| <http://thomasguild.blogspot.com/feeds/posts/default>                |
+| <http://roughwood.kennethwoodruff.com/feed/>                         |
+| <http://treewright.blogspot.com/feeds/posts/default>                 |
+| <http://taylorgarage.com/feed/>                                      |
+| <http://seanhellman.blogspot.com/feeds/posts/default>                |
+------------------------------------------------------------------------
