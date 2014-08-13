@@ -118,49 +118,81 @@
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
+      <version>1.7</version>
     </dependency>
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
     </dependency>
     <dependency>
       <groupId>commons-logging</groupId>
       <artifactId>commons-logging</artifactId>
+      <version>1.1.1</version>
     </dependency>
     <dependency>
-      <groupId>httpclient-osgi</groupId> 
+      <groupId>org.apache.httpcomponents</groupId> 
       <artifactId>httpclient-osgi</artifactId>
+      <version>4.3.1</version>
+    </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore-osgi</artifactId>
+        <version>4.3</version>
+      </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.0.1</version>
     </dependency>
     <dependency>
-      <groupId>commons-httpclient</groupId> 
-      <artifactId>commons-httpclient</artifactId>
+	<groupId>org.apache.httpcomponents</groupId>
+	<artifactId>httpclient-cache</artifactId>
+	<version>4.3.5</version>
     </dependency>
     <dependency>
-      <groupId>httpclient-cache</groupId> 
-      <artifactId>httpclient-cache</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>fluent-hc</groupId> 
-      <artifactId>fluent-hc</artifactId>
+		<groupId>org.apache.httpcomponents</groupId>
+		<artifactId>fluent-hc</artifactId>
+		<version>4.3.5</version>
     </dependency>
     <dependency>
       <groupId>org.freemarker</groupId> 
       <artifactId>freemarker</artifactId>
+	  <version>2.3.20</version>
     </dependency>
     <dependency>
-      <groupId>httpcore-nio</groupId> 
-      <artifactId>httpcore-nio</artifactId>
+ 		<groupId>org.apache.httpcomponents</groupId>
+		<artifactId>httpcore-nio</artifactId>
+		<version>4.3.2</version>
     </dependency>
-    <dependency>
-      <groupId>httpmime</groupId> 
-      <artifactId>httpmime</artifactId>
-    </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpmime</artifactId>
+        <version>4.3.1</version>
+      </dependency>
 
-    <!-- Servlet API for handling ServletContext -->
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-    </dependency>
+<!-- Stanbol -->
+        <dependency>
+            <groupId>org.apache.stanbol</groupId>
+            <artifactId>org.apache.stanbol.commons.web.base</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.webconsole</artifactId>
+            <version>3.1.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.clerezza</groupId>
+            <artifactId>platform.config</artifactId>
+            <version>0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.stanbol</groupId>
+            <artifactId>org.apache.stanbol.commons.web.viewable</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency> 
+
     
     <!-- OSGi tax -->
     <dependency>
@@ -181,14 +213,49 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.osgi.core</artifactId>
-            <!-- version>1.4.0</version -->
+            <version>1.4.0</version>
         </dependency>
 
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.scr</artifactId>
+        <version>1.6.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.scr.annotations</artifactId>
+        <version>1.9.8</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.configadmin</artifactId>
+        <version>1.2.8</version>
+      </dependency>      
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.osgi.compendium</artifactId>
+        <version>1.4.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.http.jetty</artifactId>
+        <version>2.3.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.http.api</artifactId>
+        <version>2.3.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.http.servlet-api</artifactId>
+        <version>1.0.0</version>
+      </dependency>
 
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <!-- version>3.8.1</version -->
+      <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
