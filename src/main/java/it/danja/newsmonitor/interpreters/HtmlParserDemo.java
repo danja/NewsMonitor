@@ -10,7 +10,7 @@
 package it.danja.newsmonitor.interpreters;
 
 import it.danja.newsmonitor.io.HttpConnector;
-import it.danja.newsmonitor.main.DemoConstants;
+// import it.danja.newsmonitor.main.DemoConstants;
 import it.danja.newsmonitor.model.Link;
 
 import java.io.InputStream;

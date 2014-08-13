@@ -1,3 +1,8 @@
+http://carvingswithstories.blogspot.com/feeds/posts/default
+http://blog.lostartpress.com/feed/
+http://beginnerscarvingcorner.blogspot.com/feeds/posts/default
+
+# dodgy dates http://thomasguild.blogspot.com/feeds/posts/default
 
 # http://danbri.org/words/category/technology/rdf
 # RSS 1.0
@@ -34,10 +39,3 @@
 # http://www.andzol.com/?feed=rdf
 # http://taylorgarage.com/feed/
 
-
-# http://thomasguild.blogspot.com/feeds/posts/default
-http://www.marymaycarving.com/blog/feed/
-# http://woodbeecarver.com/feed
-# http://beginnerscarvingcorner.blogspot.com/feeds/posts/default
-# http://whittlebears.blogspot.com/feeds/posts/default
-# http://feeds.feedburner.com/OzarkWalkingSticks

@@ -50,10 +50,66 @@
           </instructions>
         </configuration>
       </plugin>
-      <plugin>
+     <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-scr-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>generate-scr-scrdescriptor</id>
+            <goals>
+              <goal>scr</goal>
+            </goals>
+          </execution>
+        </executions>
+        <version>1.7.4</version>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Import-Package>
+                            org.apache.stanbol.commons.web.base; provide:=true,
+                            org.apache.felix.webconsole; provide:=true,
+                            *
+                        </Import-Package>
+                        <Export-Package>
+                            it.danja.newsmonitor; version=${project.version}
+                        </Export-Package>
+                        <Private-Package>
+                            it.danja.newsmonitor.resource; version=${project.version},
+                            it.danja.newsmonitor.webfragment; version=${project.version}
+                        </Private-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.rat</groupId>
+                <artifactId>apache-rat-plugin</artifactId>
+                <configuration>
+                    <excludeSubProjects>false</excludeSubProjects>
+                    <excludes>
+                        <!-- exclude>src/main/resources/org/apache/stanbol/commons/usermanagement/test.txt</exclude -->
+                    </excludes>
+                </configuration>
+            </plugin>
     </plugins>
   </build>
 
@@ -100,6 +156,36 @@
       <artifactId>httpmime</artifactId>
     </dependency>
 
+<!-- Stanbol -->
+        <dependency>
+            <groupId>org.apache.stanbol</groupId>
+            <artifactId>org.apache.stanbol.commons.web.base</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.clerezza</groupId>
+            <artifactId>rdf.ontologies</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.clerezza</groupId>
+            <artifactId>rdf.utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.webconsole</artifactId>
+            <version>3.1.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.clerezza</groupId>
+            <artifactId>platform.config</artifactId>
+            <version>0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.stanbol</groupId>
+            <artifactId>org.apache.stanbol.commons.web.viewable</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency> 
+
     <!-- Servlet API for handling ServletContext -->
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -121,6 +207,13 @@
       <groupId>org.apache.felix</groupId>
       <artifactId>org.apache.felix.scr.annotations</artifactId>
     </dependency>
+
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <!-- version>1.4.0</version -->
+        </dependency>
+
 
     <dependency>
       <groupId>junit</groupId>
