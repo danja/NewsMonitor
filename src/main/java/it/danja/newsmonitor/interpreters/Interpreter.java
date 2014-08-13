@@ -1,5 +1,5 @@
 /**
- * feedreader-prototype
+ * NewsMonitor
  *
  * Interpreter.java
  * 

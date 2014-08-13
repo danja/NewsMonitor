@@ -1,5 +1,5 @@
 /**
- * feedreader-prototype
+ * NewsMonitor
  *
  * Rss1Interpreter.java
  * @author danja

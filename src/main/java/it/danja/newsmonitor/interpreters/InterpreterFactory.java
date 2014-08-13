@@ -1,5 +1,5 @@
 /**
- * feedreader-prototype
+ * NewsMonitor
  *
  * RDFInterpreterFactory.java
  * 

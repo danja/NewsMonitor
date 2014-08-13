@@ -1,7 +1,7 @@
 /**
  * TODO revisit
  * 
- * feedreader-prototype
+ * NewsMonitor
  *
  * FeedListImpl.java
  * 

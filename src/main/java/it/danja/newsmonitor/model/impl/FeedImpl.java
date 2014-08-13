@@ -1,6 +1,6 @@
 /**
  * TODO rename
- * feedreader-prototype
+ * NewsMonitor
  *
  * FeedImpl.java
  * 

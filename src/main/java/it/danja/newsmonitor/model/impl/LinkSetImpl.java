@@ -1,5 +1,5 @@
 /**
- * feedreader-prototype
+ * NewsMonitor
  *
  * LinkSetImpl.java
  * @author danja

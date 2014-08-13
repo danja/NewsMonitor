@@ -1,5 +1,5 @@
 /**
- * feedreader-prototype
+ * NewsMonitor
  *
  * ContentProcessor.java
  * @author danja
@@ -162,7 +162,7 @@ public class ContentProcessor {
 						rel = rel.substring(1, rel.length() - 1);
 					}
 					rel = rel.trim();
-					System.out.println("REL = "+rel);
+				//	System.out.println("REL = "+rel);
 					link.setRel(rel);
 				}
 				links.add(link);

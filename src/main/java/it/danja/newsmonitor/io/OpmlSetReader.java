@@ -1,6 +1,6 @@
 /**
  * TODO reintegrate
- * feedreader-prototype
+ * NewsMonitor
  *
  * OpmlSetReader.java
  * 

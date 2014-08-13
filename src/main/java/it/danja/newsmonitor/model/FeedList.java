@@ -1,6 +1,6 @@
 /**
  * TODO RETIRE
- * feedreader-prototype
+ * NewsMonitor
  *
  * FeedList.java
  * 

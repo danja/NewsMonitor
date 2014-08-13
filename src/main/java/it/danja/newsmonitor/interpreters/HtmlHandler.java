@@ -1,7 +1,7 @@
 /**
  * NOT USED
  * 
- * feedreader-prototype
+ * NewsMonitor
  *
  * HtmlHandler.java
  * 
