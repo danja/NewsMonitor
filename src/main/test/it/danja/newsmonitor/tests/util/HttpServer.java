@@ -29,6 +29,9 @@
 
 package it.danja.newsmonitor.tests.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InterruptedIOException;
@@ -82,6 +85,8 @@ import javax.net.ssl.SSLServerSocketFactory;
  * Basic, yet fully functional and spec compliant, HTTP/1.1 file server.
  */
 public class HttpServer {
+	
+	private static Logger log = LoggerFactory.getLogger(HttpServer.class);
 
 	private String docRoot;
 	private int port;
@@ -137,7 +142,7 @@ public class HttpServer {
             ClassLoader cl = HttpServer.class.getClassLoader();
             URL url = cl.getResource("my.keystore");
             if (url == null) {
-                System.out.println("HttpServer : Keystore not found");
+                log.info("HttpServer : Keystore not found");
                 System.exit(1);
             }
             KeyStore keystore = null;
@@ -213,7 +218,7 @@ public class HttpServer {
     }
     
     public void stop(){ // TODO can't get this to work... yucky workaround in start()
-    	//System.out.println("STOP server");
+    	//log.info("STOP server");
     	running = false;
 //    	try {
 //			Thread.sleep(1000);
@@ -256,7 +261,7 @@ public class HttpServer {
             if (request instanceof HttpEntityEnclosingRequest) {
                 HttpEntity entity = ((HttpEntityEnclosingRequest) request).getEntity();
                 byte[] entityContent = EntityUtils.toByteArray(entity);
-                System.out.println("HttpServer : Incoming entity content (bytes): " + entityContent.length);
+                log.info("HttpServer : Incoming entity content (bytes): " + entityContent.length);
             }
 
             final File file = new File(this.docRoot, URLDecoder.decode(target, "UTF-8"));
@@ -269,7 +274,7 @@ public class HttpServer {
                         " not found</h1></body></html>",
                         ContentType.create("text/html", "UTF-8"));
                 response.setEntity(entity);
-                System.out.println("HttpServer : File " + file.getPath() + " not found");
+                log.info("HttpServer : File " + file.getPath() + " not found");
 
             } else if (!file.canRead() || file.isDirectory()) {
 
@@ -278,7 +283,7 @@ public class HttpServer {
                         "<html><body><h1>Access denied</h1></body></html>",
                         ContentType.create("text/html", "UTF-8"));
                 response.setEntity(entity);
-                System.out.println("HttpServer : Cannot read file " + file.getPath());
+                log.info("HttpServer : Cannot read file " + file.getPath());
 
             } else {
 
@@ -296,7 +301,7 @@ public class HttpServer {
                 if(target.endsWith(".gif")){
                 	mime = "image/gif";
                 }
-                // System.out.println("CONTENT_ENCODING");
+                // log.info("CONTENT_ENCODING");
                 FileEntity body = new FileEntity(file, ContentType.create(mime, (Charset) null));
             
                 // simulate latency
@@ -310,7 +315,7 @@ public class HttpServer {
                 if(target.endsWith(".html")){
                 	response.addHeader("Content-Type", "text/html; charset=UTF-8");
                 }
-                System.out.println("HttpServer : Serving file " + file.getPath());
+                log.info("HttpServer : Serving file " + file.getPath());
             }
         }
 
@@ -333,12 +338,12 @@ public class HttpServer {
 
         @Override
         public void run() {
-            System.out.println("HttpServer : Listening on port " + this.serversocket.getLocalPort());
+            log.info("HttpServer : Listening on port " + this.serversocket.getLocalPort());
             while (running) {
                 try {
                     // Set up HTTP connection
                     socket = this.serversocket.accept();
-                    System.out.println("HttpServer : Incoming connection from " + socket.getInetAddress());
+                    log.info("HttpServer : Incoming connection from " + socket.getInetAddress());
                     conn = this.connFactory.createConnection(socket);
 
                     // Start worker thread
@@ -371,7 +376,7 @@ public class HttpServer {
 
         @Override
         public void run() {
-            System.out.println("HttpServer : New connection thread");
+            log.info("HttpServer : New connection thread");
             HttpContext context = new BasicHttpContext(null);
             try {
                 while (running && !Thread.interrupted() && this.conn.isOpen()) {

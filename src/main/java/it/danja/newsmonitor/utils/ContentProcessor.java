@@ -45,12 +45,12 @@ public class ContentProcessor {
 	}
 
 	public static String stripTags(String raw) {
-		// System.out.println("BEFORE "+raw);
+		// log.info("BEFORE "+raw);
 		if (raw == null || "".equals(raw))
 			return "";
 		String stripped = raw.replaceAll("<[^>]*>", " ");
 
-		// System.out.println("AFTER "+stripped);
+		// log.info("AFTER "+stripped);
 		return stripped;
 	}
 
@@ -162,7 +162,7 @@ public class ContentProcessor {
 						rel = rel.substring(1, rel.length() - 1);
 					}
 					rel = rel.trim();
-				//	System.out.println("REL = "+rel);
+				//	log.info("REL = "+rel);
 					link.setRel(rel);
 				}
 				links.add(link);
@@ -182,8 +182,8 @@ public class ContentProcessor {
 		}
 		URI uri = new URI(url);
 
-		// System.out.println("URI = "+uri);
-		// System.out.println("HREF = "+href);
+		// log.info("URI = "+uri);
+		// log.info("HREF = "+href);
 		URI hrefUri = new URI(href);
 
 		return uri.resolve(hrefUri).toString();

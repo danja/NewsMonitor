@@ -9,6 +9,9 @@
  */
 package it.danja.newsmonitor.templating;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.main.Config;
 
 import java.io.File;
@@ -27,6 +30,8 @@ import freemarker.template.TemplateException;
  * Utility for caching/applying Freemarker templates
  */
 public class Templater {
+	
+	private static Logger log = LoggerFactory.getLogger(Templater.class);
 
 	private static Configuration configuration = new Configuration();
 	private static Map<String, Template> templates = new HashMap<String, Template>();
@@ -40,17 +45,17 @@ public class Templater {
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("place", "Mozzanella");
 
-		System.out.println(apply("sample", data));
+		log.info(apply("sample", data));
 	}
 
 	public static String apply(String templateName, Object dataModel) {
-		//System.out.println("templateName = " + templateName);
+		//log.info("templateName = " + templateName);
 
 		Writer writer = new StringWriter();
 		try {
 			Template template = templates.get(templateName);
-		//	System.out.println("template = " + template);
-		//	System.out.println("dataModel = " + dataModel);
+		//	log.info("template = " + template);
+		//	log.info("dataModel = " + dataModel);
 			template.process(dataModel, writer);
 			writer.close();
 		} catch (TemplateException e) {
@@ -91,12 +96,12 @@ public class Templater {
 		try {
 			Template template = configuration.getTemplate(Config.TEMPLATES_DIR
 					+ "/" + filename);
-			// System.out.println(filename);
+			// log.info(filename);
 			// String[] split = filename.split(".");
 
 			String name = filename.substring(0, filename.indexOf(".")); // remove
 																		// extension
-			// System.out.println(name);
+			// log.info(name);
 			templates.put(name, template);
 		} catch (IOException e) {
 			e.printStackTrace();

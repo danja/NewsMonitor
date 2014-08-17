@@ -97,7 +97,7 @@ public class ContentType {
 			return 0;
 		}
 		String extension = split[split.length - 1].toLowerCase();
-		// System.out.println("EXT = "+extension);
+		// log.info("EXT = "+extension);
 		if (EXTENSION_MAP.containsKey(extension)) {
 			return EXTENSION_MAP.get(extension).charValue();
 		}
@@ -129,7 +129,7 @@ public class ContentType {
 		contentType = contentType.trim();
 		
 		if (TYPE_MAP.containsKey(contentType)) {
-			// System.out.println("CONTAINS "+ContentType.formatName(TYPE_MAP.get(contentType).charValue()));
+			// log.info("CONTAINS "+ContentType.formatName(TYPE_MAP.get(contentType).charValue()));
 			return TYPE_MAP.get(contentType).charValue();
 		}
 		return 0;

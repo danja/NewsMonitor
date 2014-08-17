@@ -56,7 +56,7 @@ public abstract class FeedParserBase implements FeedParser {
 	}
 
 	public void parse() {
-		// System.out.println("parse() called");
+		// log.info("parse() called");
 		InputStream stream = feed.getInputStream();
 		parse(stream);
 	}

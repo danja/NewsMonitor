@@ -78,7 +78,7 @@ public class EntryListImpl implements EntryList {
 //		}
 //		Map<String, Object> data = new HashMap<String, Object>();
 //		data.put("body", bodyBuffer.toString());
-//		System.out.println(Templater.dataMapToString(data));
+//		log.info(Templater.dataMapToString(data));
 //		return Templater.apply("turtle-prefixes", data);
 //	}
 	

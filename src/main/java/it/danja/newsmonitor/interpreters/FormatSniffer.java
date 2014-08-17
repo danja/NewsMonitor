@@ -51,7 +51,7 @@ public class FormatSniffer extends DefaultHandler {
 		} catch (IOException e2) {
 			return ContentType.UNAVAILABLE;
 		}
-		// System.out.println(data);
+		// log.info(data);
 		// if(data.indexOf("<!DOCTYPE html") != -1) {
 		// return ContentType.HTML;
 		// }
@@ -64,9 +64,9 @@ public class FormatSniffer extends DefaultHandler {
 		// break;
 		// }
 		// }
-		// System.out.println("MATCH = "+matched);
+		// log.info("MATCH = "+matched);
 		// if(!match) {
-		// // System.out.println("NO MATCH");
+		// // log.info("NO MATCH");
 		// return ContentType.UNKNOWN;
 		// }
 		// try {
@@ -109,8 +109,8 @@ public class FormatSniffer extends DefaultHandler {
 
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes attributes) {
-		// System.out.println("namespaceURI = "+namespaceURI);
-		// System.out.println("localName = "+localName);
+		// log.info("namespaceURI = "+namespaceURI);
+		// log.info("localName = "+localName);
 		if (namespaceURI.equals(NamespaceConstants.RDF_NS)
 				&& localName.equals("RDF")) {
 			format = ContentType.RDF_OTHER;

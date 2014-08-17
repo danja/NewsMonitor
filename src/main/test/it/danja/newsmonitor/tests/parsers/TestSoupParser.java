@@ -1,5 +1,8 @@
 package it.danja.newsmonitor.tests.parsers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import it.danja.newsmonitor.interpreters.Interpreter;
@@ -24,6 +27,8 @@ import org.junit.Test;
 // FIXME
 
 public class TestSoupParser {
+	
+	private static Logger log = LoggerFactory.getLogger(TestSoupParser.class);
 
 	private final String url = "http://localhost:8080/test-data/rss2-sample.xml";
 	private final static String rootDir = "www";
@@ -47,7 +52,7 @@ public class TestSoupParser {
 		feed.setInterpreter(interpreter);
 		feed.refresh();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
-		System.out.println("# Feed Turtle\n"+feedTurtle);
+		log.info("# Feed Turtle\n"+feedTurtle);
 	}
 
 	@Test
@@ -81,7 +86,7 @@ public class TestSoupParser {
 		assertEquals("checking entry url", "http://example.org/entry1",
 				entry0.getUrl());
 		String published = entry0.getDateStamp().getPublished();
-		// System.out.println(published);
+		// log.info(published);
 		assertEquals("checking entry pubDate",
 				"2009-09-07T16:20Z", published); 
 		Entry entry1 = feed.getEntries().getEntry(1);
@@ -96,11 +101,11 @@ public class TestSoupParser {
 		Iterator<Link> i = links.iterator();
 		while (i.hasNext()) {
 			Link link = i.next();
-			// System.out.println("link: " + link);
+			// log.info("link: " + link);
 			if ("http://example.com".equals(link.getHref())
 					&& "with a link".equals(link.getLabel())) {
 				found = true;
-			//	System.out.println("TRUE: " + link);
+			//	log.info("TRUE: " + link);
 			}
 		}
 		assertTrue("checking link in content", found);

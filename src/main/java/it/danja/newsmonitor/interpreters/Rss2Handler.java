@@ -86,8 +86,8 @@ public class Rss2Handler extends FeedHandlerBase {
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes attrs) {
 
-		// System.out.println("start = "+localName);
-		// System.out.println("startQ = "+qName);
+		// log.info("start = "+localName);
+		// log.info("startQ = "+qName);
 
 		if (textElements.contains(localName)) {
 			textBuffer = new StringBuffer();
@@ -133,8 +133,8 @@ public class Rss2Handler extends FeedHandlerBase {
 
 	public void endElement(String namespaceURI, String localName, String qName) {
 
-		// System.out.println("END localName = " + localName);
-		// System.out.println("state = " + states[state]);
+		// log.info("END localName = " + localName);
+		// log.info("state = " + states[state]);
 
 		String text = "";
 		if (textElements.contains(localName)) {
@@ -150,8 +150,8 @@ public class Rss2Handler extends FeedHandlerBase {
 			return;
 
 		case IN_CHANNEL:
-			// System.out.println("state = "+states[state]);
-			// System.out.println("END localName = " + localName);
+			// log.info("state = "+states[state]);
+			// log.info("END localName = " + localName);
 
 			// switch down
 			if ("channel".equals(localName)) {
@@ -202,10 +202,10 @@ public class Rss2Handler extends FeedHandlerBase {
 
 		case IN_ITEM:
 			if ("item".equals(localName)) {
-				// System.out.println("out of Entry");
+				// log.info("out of Entry");
 				state = IN_CHANNEL;
 				getFeed().addEntry(currentEntry);
-				// System.out.println("DONE ENTRY = "+currentEntry);
+				// log.info("DONE ENTRY = "+currentEntry);
 				return;
 			}
 			if ("guid".equals(localName)) {

@@ -11,6 +11,9 @@
  */
 package it.danja.newsmonitor.model.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.main.Main;
 import it.danja.newsmonitor.model.EntryList;
@@ -32,6 +35,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * 
  */
 public class FeedListImpl implements FeedList {
+	
+	private static Logger log = LoggerFactory.getLogger(FeedListImpl.class);
 
 	private ConcurrentLinkedQueue<Feed> feedQueue;
 
@@ -88,7 +93,7 @@ public class FeedListImpl implements FeedList {
 	
 
 	public String toString() {
-		System.out.println("FEEDLIST size() = " + feedQueue.size());
+		log.info("FEEDLIST size() = " + feedQueue.size());
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("===Feed List===\n");
 

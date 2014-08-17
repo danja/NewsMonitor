@@ -10,6 +10,9 @@
  */
 package it.danja.newsmonitor.model.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.discovery.PresetTopics;
 import it.danja.newsmonitor.discovery.RelevanceCalculator;
 import it.danja.newsmonitor.interpreters.FormatSniffer;
@@ -38,6 +41,8 @@ import java.util.Set;
  */
 public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
+	private static Logger log = LoggerFactory.getLogger(FeedImpl.class);
+	
 	private int lives = Config.MAX_LIVES;
 	private boolean dead = false;
 
@@ -164,12 +169,12 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		getHttpConnector().setConditional(false);
 		getHttpConnector().setAcceptHeader(Config.FEED_ACCEPT_HEADER);
 		getHttpConnector().setUserAgentHeader(Config.FEED_USER_AGENT_HEADER);
-		System.out.println("\nInitializing : " + url);
+		log.info("\nInitializing : " + url);
 
 		boolean streamAvailable = getHttpConnector().load();
 		if (streamAvailable) {
-			System.out.println("Sniffing...");
-			// System.out.println("CONTENT TYPE = " +
+			log.info("Sniffing...");
+			// log.info("CONTENT TYPE = " +
 			// connector.getContentType());
 			setContentType(getHttpConnector().getContentType());
 			format = sniffer.sniff(getHttpConnector());
@@ -178,9 +183,9 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 				setLives(getLives() - 1);
 				return;
 			}
-			// System.out.println("===Headers ===\n"+connector.getHeadersString()+"------\n");
+			// log.info("===Headers ===\n"+connector.getHeadersString()+"------\n");
 		} else {
-			System.out.println("Stream unavailable.");
+			log.info("Stream unavailable.");
 			format = ContentType.UNAVAILABLE;
 			setLives(getLives() - 1);
 			pending  = true;
@@ -188,12 +193,12 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			return;
 		}
 
-	//	System.out.println("FORMAT " + ContentType.formatName(format));
+	//	log.info("FORMAT " + ContentType.formatName(format));
 
 		if (format == ContentType.UNKNOWN || format == ContentType.RSS_SOUP) {
 			if (getContentType() != null
 					&& getContentType().startsWith("text/html")) {
-				System.out.println("Appears to be HTML, taking life : " + url);
+				log.info("Appears to be HTML, taking life : " + url);
 				format = ContentType.HTML;
 				setLives(getLives() - 1);
 				setLives(0);
@@ -204,18 +209,18 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		System.out
 				.println("Format matches : " + ContentType.formatName(format));
 		// setFormatName(ContentType.formatName(format));
-		// System.out.println("Creating interpreter for feed : " + url);
+		// log.info("Creating interpreter for feed : " + url);
 		setFormatHint(format); // TODO remove duplication with
 								// setInterpreter
 
 		// interpreter = InterpreterFactory.createInterpreter(this);
 		setInterpreter(InterpreterFactory.createInterpreter(this));		
-		// System.out.println("interpreter = " + getInterpreter());
+		// log.info("interpreter = " + getInterpreter());
 	}
 
 	public boolean refresh() {
 
-		// System.out.println("FIRSTCALL = "+firstCall);
+		// log.info("FIRSTCALL = "+firstCall);
 		if (getHttpConnector() == null) { // is needed?
 			setHttpConnector(new HttpConnector());
 			getHttpConnector().setUrl(getUrl());
@@ -223,7 +228,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		
 		if(pending) {
 			pending = false;
-			System.out.println("IS PENDING, RE-INIT");
+			log.info("IS PENDING, RE-INIT");
 			init();
 		}
 		
@@ -232,29 +237,29 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		
 		isNew = getHttpConnector().load();
 		setResponseCode(getHttpConnector().getResponseCode());
-		// System.out.println("IS NEW = " + isNew);
-		// System.out.println("STATUS =\n"+getHttpConnector().getHeadersString());
+		// log.info("IS NEW = " + isNew);
+		// log.info("STATUS =\n"+getHttpConnector().getHeadersString());
 
 		if (isNew) {
-			System.out.println("Connected, interpreting...");
-			// System.out.println("interpreter = " + getInterpreter());
+			log.info("Connected, interpreting...");
+			// log.info("interpreter = " + getInterpreter());
 //			if(getInterpreter() == null) { 
-//				System.out.println("Error, feed life lost.");
+//				log.info("Error, feed life lost.");
 //				lives--;
 //			} else {
 				getInterpreter().interpret(this);
 //			}
-			// System.out.println("INTERPRETED =" + this);
+			// log.info("INTERPRETED =" + this);
 			// lives = Config.MAX_LIVES;
 			updateRelevance();
 			isNew = true;
 		} else {
 			if (getHttpConnector().isDead()) {
-				System.out.println("Error, feed life lost.");
+				log.info("Error, feed life lost.");
 				lives--;
 				// refreshPeriod = refreshPeriod * 2;
 			} else {
-				System.out.println("Nothing new, skipping...");
+				log.info("Nothing new, skipping...");
 			}
 			isNew = false;
 		}
@@ -265,7 +270,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		}
 		setResponseCode(getHttpConnector().getResponseCode());
 		lastRefresh = now();
-		// System.out.println("isNew = " + isNew);
+		// log.info("isNew = " + isNew);
 		firstCall = false;
 		
 		return isNew;
@@ -275,7 +280,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
 		float relevance = relevanceCalculator.calculateRelevance(
 				Config.TOPIC, getAllText());
-		System.out.println("Feed relevance = "+relevance);
+		log.info("Feed relevance = "+relevance);
 		setRelevance(relevance);
 	}
 

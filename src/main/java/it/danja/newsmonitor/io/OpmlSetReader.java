@@ -10,6 +10,9 @@
  */
 package it.danja.newsmonitor.io;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -25,6 +28,8 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class OpmlSetReader extends DefaultHandler {
+	
+	private static Logger log = LoggerFactory.getLogger(OpmlSetReader.class);
 
     private Set feedURIs;
 
@@ -57,11 +62,11 @@ public class OpmlSetReader extends DefaultHandler {
             String qName, Attributes attributes) {
         
     /*
-        System.out.println("\nnamespaceURI:" + namespaceURI);
-        System.out.println("localName:" + localName);
-        System.out.println("qName:" + qName);
+        log.info("\nnamespaceURI:" + namespaceURI);
+        log.info("localName:" + localName);
+        log.info("qName:" + qName);
         for(int i=0;i<attributes.getLength();i++){
-           System.out.println("   attribute "+attributes.getLocalName(i)+" = "+attributes.getValue(i));
+           log.info("   attribute "+attributes.getLocalName(i)+" = "+attributes.getValue(i));
         }
         */
         
@@ -76,7 +81,7 @@ public class OpmlSetReader extends DefaultHandler {
         Set channelSet = reader.load(args[0]);
         Iterator channelIterator = channelSet.iterator();
         while (channelIterator.hasNext()) {
-            System.out.println(channelIterator.next());
+            log.info(channelIterator.next().toString());
         }
     }
 

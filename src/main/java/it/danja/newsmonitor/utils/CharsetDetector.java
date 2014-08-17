@@ -10,7 +10,7 @@ public static String fixEncoding(String latin1) {
 	   if (!validUTF8(bytes)) {
 	    return latin1;   
 	    } 
-	 //  System.out.println("ALREADY UTF-8");
+	 //  log.info("ALREADY UTF-8");
 	   return new String(bytes, "UTF-8");  
 	  } catch (UnsupportedEncodingException e) {
 	   // Impossible, throw unchecked
@@ -91,9 +91,9 @@ public static String fixEncoding(String latin1) {
 //	 
 //		  private static void doEncode(Charset cs, String input) {
 //		    ByteBuffer bb = cs.encode(input);
-//		//    System.out.println("Charset: " + cs.name());
-//		//    System.out.println("  Input: " + input);
-//		//    System.out.println("Encoded: ");
+//		//    log.info("Charset: " + cs.name());
+//		//    log.info("  Input: " + input);
+//		//    log.info("Encoded: ");
 //
 //		    for (int i = 0; bb.hasRemaining(); i++) {
 //		      int b = bb.get();
@@ -103,7 +103,7 @@ public static String fixEncoding(String latin1) {
 //		      System.out.print("  " + i + ": ");
 //		      // print the hex value of the byte
 //		      System.out.print(Integer.toHexString(ival));
-//		      System.out.println(" (" + c + ")");
+//		      log.info(" (" + c + ")");
 //		    }
 //		  }
 }

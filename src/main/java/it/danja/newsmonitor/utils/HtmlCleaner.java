@@ -110,12 +110,12 @@ public class HtmlCleaner {
 			return href;
 		}
 		URI uri = null;
-		//System.out.println("URL = "+url);
+		//log.info("URL = "+url);
 
 		 uri = new URI(url);
 		
-		//System.out.println("URI = "+uri);
-		//System.out.println("HREF = "+href);
+		//log.info("URI = "+uri);
+		//log.info("HREF = "+href);
 		URI hrefUri = null;
 
 			hrefUri = new URI(href);

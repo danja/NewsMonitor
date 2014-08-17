@@ -91,7 +91,7 @@ public abstract class FeedHandlerBase implements FeedHandler {
 
 	@Override
 	public void startDocument() throws SAXException {
-		// System.out.println("FeedHandlerBase.startDocument()");
+		// log.info("FeedHandlerBase.startDocument()");
 	}
 
 	// @Override
@@ -179,7 +179,7 @@ public abstract class FeedHandlerBase implements FeedHandler {
 		if (dateStamp.getSortDate() == null) { // FALLBACK
 			dateStamp.setToFallback();
 		}
-		// System.out.println("DATESTAMP = "+dateStamp);
+		// log.info("DATESTAMP = "+dateStamp);
 	}
 
 	/**
@@ -212,14 +212,14 @@ public abstract class FeedHandlerBase implements FeedHandler {
 		}
 		for (int i = 0; i < entries.size(); i++) {
 			if (entries.get(i).getAuthor() == null) {
-				// System.out.println("AUTHor = "+feedAuthor);
+				// log.info("AUTHor = "+feedAuthor);
 				entries.get(i).setAuthor(feedAuthor);
 			}
 		}
 	}
 
 	protected void resolveLinks() {
-		// System.out.println("Links "+feed.getLinks().size());
+		// log.info("Links "+feed.getLinks().size());
 		Iterator<Link> iterator = feed.getAllLinks().iterator();
 		// String feedUrl = feed.getUrl();
 		// String[] split = feedUrl.split()
@@ -232,14 +232,14 @@ public abstract class FeedHandlerBase implements FeedHandler {
 			try {
 				resolved = HtmlCleaner
 						.resolveUrl(feed.getUrl(), link.getHref());
-				// System.out.println("RESOLVED = "+resolved);
+				// log.info("RESOLVED = "+resolved);
 			} catch (URISyntaxException e) {
 				broken.add(link);
 				continue;
 			}
 			link.setHref(resolved);
 			link.setOrigin(getFeed().getUrl());
-		//	System.out.println("LINK = " + link);
+		//	log.info("LINK = " + link);
 			if (link.getLabel() != null) {
 				String raw = link.getLabel();
 				String cleaned = HtmlCleaner.stripTags(raw).trim();

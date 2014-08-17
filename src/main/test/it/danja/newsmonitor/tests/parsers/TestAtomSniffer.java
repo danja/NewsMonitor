@@ -1,5 +1,8 @@
 package it.danja.newsmonitor.tests.parsers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import static org.junit.Assert.*;
 import it.danja.newsmonitor.interpreters.Interpreter;
 import it.danja.newsmonitor.interpreters.InterpreterFactory;
@@ -22,6 +25,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TestAtomSniffer {
+	
+	private static Logger log = LoggerFactory.getLogger(TestAtomSniffer.class);
 
 	private final String url = "http://localhost:8080/test-data/atom-sample.xml";
 	private final static String rootDir = "www";
@@ -49,18 +54,18 @@ public class TestAtomSniffer {
 //		// feed.setInterpreter(interpreter);
 //
 //		interpreter = InterpreterFactory.createInterpreter(feed);
-//		System.out.println("INTERPRETER = "+interpreter);
+//		log.info("INTERPRETER = "+interpreter);
 //
 //		feed.setInterpreter(interpreter);
 //		feed.refresh();
 //		
 //		EntryList entries = feed.getEntries();
 		
-		// System.out.println(entries.getEntry(0).toTurtle());
-		// System.out.println(feed.toTurtle());
+		// log.info(entries.getEntry(0).toTurtle());
+		// log.info(feed.toTurtle());
 		Templater.init();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
-		System.out.println("# Feed Turtle\n"+feedTurtle);
+		log.info("# Feed Turtle\n"+feedTurtle);
 	}
 
 	@Test
@@ -101,7 +106,7 @@ public class TestAtomSniffer {
 		Iterator<Link> i = links.iterator();
 		while (i.hasNext()) {
 			Link link = i.next();
-			// System.out.println("link: "+link);
+			// log.info("link: "+link);
 			if ("http://example.org/".equals(link.getHref())
 					&& "with a link".equals(link.getLabel())) {
 				found = true;
@@ -117,7 +122,7 @@ public class TestAtomSniffer {
 
 	@AfterClass
 	public static void stopServer() {
-		// System.out.println("STOP");
+		// log.info("STOP");
 		server.stop();
 	}
 }

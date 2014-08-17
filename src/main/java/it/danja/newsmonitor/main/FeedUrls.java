@@ -36,7 +36,7 @@ public class FeedUrls  {
 		SparqlResultsParser parser = new SparqlResultsParser();
 		List<Result> results = parser.parse(xmlResults).getResults();
 		for (int i = 0; i < results.size(); i++) {
-			// System.out.println(results.get(i));
+			// log.info(results.get(i));
 			String feed = results.get(i).iterator().next().getValue();
 			feeds.add(feed);
 		}

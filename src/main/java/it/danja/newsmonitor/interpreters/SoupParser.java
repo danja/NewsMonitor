@@ -133,7 +133,7 @@ public class SoupParser extends FeedParserBase {
 	public void comment(String raw) {
 
 		String comment = raw.substring(4, raw.length() - 4);
-		// System.out.println(comment);
+		// log.info(comment);
 //		if (getHandler() instanceof CommentHandler) {
 //			((CommentHandler) getHandler()).comment(comment); // added for
 //																// trackback
@@ -181,9 +181,9 @@ public class SoupParser extends FeedParserBase {
 		Matcher match = commentRe.matcher(this.data.substring(this.charIndex));
 
 		if (match.find()) {
-			// System.out.println("Comment");
+			// log.info("Comment");
 			this.charIndex = this.charIndex + match.end();
-			// System.out.println(match.group());
+			// log.info(match.group());
 			comment(match.group()); // / @@@@ NEEDED FOR COMMENT RECOGNITION
 			return true;
 		}
@@ -220,7 +220,7 @@ public class SoupParser extends FeedParserBase {
 				}
 				cdata = this.isCDATA();
 				if (cdata != null) {
-					// System.out.println("CDATA"+cdata);
+					// log.info("CDATA"+cdata);
 					block = block + cdata;
 					continue;
 				}
@@ -249,7 +249,7 @@ public class SoupParser extends FeedParserBase {
 					this.start(block);
 					openTags.push(this.qname);
 				}
-				// System.out.println("*******");
+				// log.info("*******");
 				if (state == END_TAG) {
 					if (openTags.size() == 0) {
 						continue;

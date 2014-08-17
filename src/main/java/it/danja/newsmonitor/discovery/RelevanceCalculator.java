@@ -8,6 +8,9 @@
  */
 package it.danja.newsmonitor.discovery;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.io.TextFileReader;
 import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.utils.ContentProcessor;
@@ -24,6 +27,8 @@ import java.util.regex.Pattern;
  *
  */
 public class RelevanceCalculator {
+	
+	private static Logger log = LoggerFactory.getLogger(RelevanceCalculator.class);
 
 	public static Set<String> STOPWORDS = new HashSet<String>();
 	/**
@@ -51,11 +56,11 @@ public class RelevanceCalculator {
 	public float calculateRelevance(Topic topic, String content) {
 
 		content = pruneContent(content);
-		// System.out.println("PRUNED = "+content);
+		// log.info("PRUNED = "+content);
 
 		int words = getCount("(\\w+)", content);
 
-		// System.out.println("words = "+words);
+		// log.info("words = "+words);
 		
 		float relevance = 0;
 
@@ -66,18 +71,18 @@ public class RelevanceCalculator {
 
 		while (iterator.hasNext()) {
 			String keyword = iterator.next();
-		//	System.out.println("K = "+keyword);
+		//	log.info("K = "+keyword);
 			int keywordCount = getCount("(" + keyword.toLowerCase() + ")", content);
-		//	System.out.println(keyword + " : "+keywordCount+" occurences");
+		//	log.info(keyword + " : "+keywordCount+" occurences");
 			float keywordRelevance = keywords.get(keyword);
-		//	System.out.println("keyword relevance = : "+keywordCount);
-		//	System.out.println("keywordCount = "+keywordCount);
+		//	log.info("keyword relevance = : "+keywordCount);
+		//	log.info("keywordCount = "+keywordCount);
 			relevance += keywordCount * keywordRelevance;
 		}
 		relevance = relevance/(words+1);
 		
 		relevance = relevance*100; // scale - is easier to play with
-		// System.out.println("* Relevance = "+relevance);
+		// log.info("* Relevance = "+relevance);
 		return relevance;
 	}
 
@@ -101,16 +106,16 @@ public class RelevanceCalculator {
 	
 	public String removeStopwords(String content, Set<String> stopwords) {
 		content = content.replaceAll("[^a-zA-Z]", " ");
-		System.out.println("BEFORE = "+content);
+		log.info("BEFORE = "+content);
 		Iterator<String> iterator = STOPWORDS.iterator();
 		while (iterator.hasNext()) {
 			String stopWord = iterator.next();
-			System.out.println("STOPWORD = \""+stopWord+"\"");
+			log.info("STOPWORD = \""+stopWord+"\"");
 			content = content.replaceAll("\\w+"+stopWord+"\\w+", "");
-			System.out.println("C = "+content);
+			log.info("C = "+content);
 		}
 		content = content.replaceAll("\\s+", " ").trim();
-		System.out.println("AFTER = "+content);
+		log.info("AFTER = "+content);
 		return content;
 	}
 
@@ -127,7 +132,7 @@ public class RelevanceCalculator {
 		topic.addKeyword("RDF", 1);
 		topic.addKeyword("Semantic", 0.5F);
 		topic.addKeyword("Web", 0.1F);
-		System.out.println("relevance = "+calculator.calculateRelevance(topic, content));
+		log.info("relevance = "+calculator.calculateRelevance(topic, content));
 	}
 
 }

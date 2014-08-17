@@ -8,6 +8,9 @@
  */
 package it.danja.newsmonitor.interpreters;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.model.Feed;
 
 /**
@@ -15,6 +18,8 @@ import it.danja.newsmonitor.model.Feed;
  */
 public class Rss1Interpreter extends ParserInterpreter {
 
+	private static Logger log = LoggerFactory.getLogger(ParserInterpreter.class);
+	
 	/**
 	 * @param feed
 	 * @param feedParser
@@ -25,6 +30,6 @@ public class Rss1Interpreter extends ParserInterpreter {
 
 	public void interpret(Feed feed) {
 		super.interpret(feed);
-		System.out.println("RSS 1.0 Interpreter");
+		log.info("RSS 1.0 Interpreter");
 	}
 }

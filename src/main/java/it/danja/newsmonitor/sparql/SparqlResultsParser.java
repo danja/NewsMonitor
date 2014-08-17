@@ -9,6 +9,9 @@
  */
 package it.danja.newsmonitor.sparql;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.sparql.SparqlResults.Binding;
 import it.danja.newsmonitor.sparql.SparqlResults.Result;
 
@@ -35,6 +38,8 @@ import org.xml.sax.helpers.XMLReaderFactory;
  * see @link http://www.w3.org/TR/rdf-sparql-XMLres/ 
  */
 public class SparqlResultsParser implements ContentHandler {
+	
+	private static Logger log = LoggerFactory.getLogger(SparqlResultsParser.class);
 
 	private static final String SPARQL_NS = "http://www.w3.org/2005/sparql-resultsObject#";
 
@@ -59,8 +64,8 @@ public class SparqlResultsParser implements ContentHandler {
 		SparqlResultsParser parser = new SparqlResultsParser();
 		File file = new File("input/sparql-xml-results-sample.xml");
 		SparqlResults sparqlResults = parser.parse(file);
-	//	System.out.println("Size in main = "+sparqlResults.getResults().size());
-		System.out.println(sparqlResults.getResults());
+	//	log.info("Size in main = "+sparqlResults.getResults().size());
+		log.info(sparqlResults.getResults().toString());
 	}
 
 	// Custom type conversion methods - see
@@ -79,20 +84,20 @@ public class SparqlResultsParser implements ContentHandler {
 			e.printStackTrace();
 		}
 		SparqlResults results = parse(reader);
-	//	System.out.println("size in parse3 = "+results.getResults().size());
+	//	log.info("size in parse3 = "+results.getResults().size());
 		try {
 			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	//	System.out.println("size in parse4 = "+results.getResults().size());
+	//	log.info("size in parse4 = "+results.getResults().size());
 		return results;
 	}
 
 	public SparqlResults parse(Reader reader) {
 		
 		SparqlResults results = parse(new InputSource(reader));
-	//	System.out.println("size in parse2 = "+results.getResults().size());
+	//	log.info("size in parse2 = "+results.getResults().size());
 		return results;
 	}
 
@@ -102,7 +107,7 @@ public class SparqlResultsParser implements ContentHandler {
 			XMLReader parser = XMLReaderFactory.createXMLReader();
 			parser.setContentHandler(handler);
 			parser.parse(source);
-		//	System.out.println("size in parse = "+handler.getSparqlResults().getResults().size());
+		//	log.info("size in parse = "+handler.getSparqlResults().getResults().size());
 			return handler.getSparqlResults();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
@@ -132,7 +137,7 @@ public class SparqlResultsParser implements ContentHandler {
 		case binding:
 			currentBinding = resultsObject.createBinding();
 			currentName = atts.getValue("name");
-		//	System.out.println(currentName);
+		//	log.info(currentName);
 			break;
 		case uri:
 			// hasText = true;
@@ -159,7 +164,7 @@ public class SparqlResultsParser implements ContentHandler {
 			throws SAXException {
 
 		String text = textBuffer.toString();
-		// System.out.println("text = "+text +"\n-------------");
+		// log.info("text = "+text +"\n-------------");
 
 		state = State.valueOf(localName);
 
@@ -175,11 +180,11 @@ public class SparqlResultsParser implements ContentHandler {
 			break;
 		case result:
 			resultsObject.add(currentResult);
-		//	System.out.println("adding result "+currentResult);
+		//	log.info("adding result "+currentResult);
 			break;
 		case binding:
 			currentResult.add(currentBinding);
-			// System.out.println("adding binding "+currentBinding);
+			// log.info("adding binding "+currentBinding);
 			break;
 		case uri:
 			currentBinding.setType(SparqlResults.URI_TYPE);

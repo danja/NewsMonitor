@@ -85,8 +85,8 @@ public class Rss1Handler extends FeedHandlerBase {
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes attrs) {
 
-		// System.out.println("start = "+localName);
-		// System.out.println("startQ = "+qName);
+		// log.info("start = "+localName);
+		// log.info("startQ = "+qName);
 
 		if (textElements.contains(localName)) {
 			textBuffer = new StringBuffer();
@@ -106,7 +106,7 @@ public class Rss1Handler extends FeedHandlerBase {
 		case IN_RDF:
 			if ("channel".equals(localName)) {
 				String about = attributes.getValue("rdf:about");
-				// System.out.println("FEED ABOUT = "+about);
+				// log.info("FEED ABOUT = "+about);
 				getFeed().setId(about);
 				
 				// favour <link> for HtmlUrl, fall back on URI
@@ -148,8 +148,8 @@ public class Rss1Handler extends FeedHandlerBase {
 
 	public void endElement(String namespaceURI, String localName, String qName) {
 
-	//	System.out.println("END localName = " + localName);
-	//	System.out.println("state = " + states[state]);
+	//	log.info("END localName = " + localName);
+	//	log.info("state = " + states[state]);
 
 		String text = "";
 		if (textElements.contains(localName)) {
@@ -172,8 +172,8 @@ public class Rss1Handler extends FeedHandlerBase {
 			return;
 
 		case IN_CHANNEL:
-			// System.out.println("state = "+states[state]);
-			// System.out.println("END localName = " + localName);
+			// log.info("state = "+states[state]);
+			// log.info("END localName = " + localName);
 
 			// switch down
 			if ("channel".equals(localName)) {
@@ -214,7 +214,7 @@ public class Rss1Handler extends FeedHandlerBase {
 			if ("item".equals(localName)) {
 				state = IN_RDF;
 				getFeed().addEntry(currentEntry);
-				// System.out.println("DONE ENTRY = "+currentEntry);
+				// log.info("DONE ENTRY = "+currentEntry);
 				return;
 			}
 			if ("title".equals(localName)) {
@@ -231,9 +231,9 @@ public class Rss1Handler extends FeedHandlerBase {
 				return;
 			}
 			if ("encoded".equals(localName)) {
-			//	System.out.println("TEXT = "+text);
+			//	log.info("TEXT = "+text);
 				String content = HtmlCleaner.unescape(text);
-				// System.out.println("CONTNT = "+content);
+				// log.info("CONTNT = "+content);
 				// content = HtmlCleaner.normalise(content);
 				currentEntry.setContent(content);
 				Set<Link> links = HtmlCleaner.extractLinks(getFeed(), content);

@@ -44,9 +44,9 @@ public class SparqlResults {
 	}
 
 	public String toString() {
-	//	System.out.println("SparqlResults to string results.size() = "+results.size());
+	//	log.info("SparqlResults to string results.size() = "+results.size());
 		return results.toString();
-		// System.out.println("SIZE = "+Integer.toString(results.size()));
+		// log.info("SIZE = "+Integer.toString(results.size()));
 		// StringBuffer content = new StringBuffer();
 		// Iterator iterator = results.iterator();
 		// content.append("<results>");
@@ -73,15 +73,15 @@ public class SparqlResults {
 
 	public void add(Result result) {
 		results.add(result);
-		// System.out.println("size = "+results.size());
+		// log.info("size = "+results.size());
 	}
 
 	public class Results extends ArrayList {
 		public String toString() {
-		//	System.out.println("Results toString size = "+size());
+		//	log.info("Results toString size = "+size());
 			StringBuffer content = new StringBuffer();
 			for (int i = 0; i < size(); i++) {
-		//		System.out.println("a" + get(i));
+		//		log.info("a" + get(i));
 				content.append(get(i));
 			}
 			return content.toString();
@@ -91,7 +91,7 @@ public class SparqlResults {
 	public class Result extends HashSet<Binding> {
 
 		public String toString() {
-		//	System.out.println("Result toString size = "+size());
+		//	log.info("Result toString size = "+size());
 			Iterator iterator = iterator();
 			StringBuffer content = new StringBuffer();
 			while (iterator.hasNext()) {
@@ -159,7 +159,7 @@ public class SparqlResults {
 		 */
 
 		public String toString() {
-		//	System.out.println("Binding toString");
+		//	log.info("Binding toString");
 			return "\n      <binding name=\"" + getName() + "\">"
 					+ "\n         <" + types[getType()] + ">" + getValue()
 					+ "<" + types[getType()] + ">\n      </binding>";

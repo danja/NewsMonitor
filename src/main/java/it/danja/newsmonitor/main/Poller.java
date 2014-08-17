@@ -9,6 +9,9 @@
  */
 package it.danja.newsmonitor.main;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.interpreters.FormatSniffer;
 import it.danja.newsmonitor.interpreters.Interpreter;
 import it.danja.newsmonitor.interpreters.InterpreterFactory;
@@ -30,6 +33,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Poller implements Runnable {
+	
+	private static Logger log = LoggerFactory.getLogger(Poller.class);
 
 	// private EntryList entries = new EntryListImpl();
 
@@ -83,23 +88,23 @@ public class Poller implements Runnable {
 	public void run() {
 		running = true;
 		// feedList.setFirstCall(true);
-		// System.out.println("FEEDLIST = " + feedList);
+		// log.info("FEEDLIST = " + feedList);
 		while (running) {
 			if (feedList.size() == 0) {
-				System.out.println("No valid feeds, stopping poller...");
+				log.info("No valid feeds, stopping poller...");
 				running = false;
 				break;
 			}
 			System.out
 					.println("\n*** Starting loop #" + (++loopCount) + " ***");
-			System.out.println("Refreshing " + feedList.size() + " feeds...");
+			log.info("Refreshing " + feedList.size() + " feeds...");
 
 			// feedList.setFirstCall(false);
 			refreshFeeds();
 			// displayFeeds();
 			// pushFeeds();
 		}
-		System.out.println("Poller stopped.");
+		log.info("Poller stopped.");
 		stopped = true;
 	}
 
@@ -111,35 +116,35 @@ public class Poller implements Runnable {
 
 		while (iterator.hasNext()) {
 			feed = iterator.next();
-			// System.out.println("feed.getLives() = "+feed.getLives());
-			// System.out.println("feed.isDead() = "+feed.isDead());
+			// log.info("feed.getLives() = "+feed.getLives());
+			// log.info("feed.isDead() = "+feed.isDead());
 			// if(!feed.isDead() && feed.getLives() < Config.MAX_LIVES) {
-			// System.out.println("Less than max lives, re-initializing...");
+			// log.info("Less than max lives, re-initializing...");
 			// feed.init();
 			// // feed.setFirstCall(true);
 			// }
-			System.out.println("\nRefreshing : " + feed.getUrl());
+			log.info("\nRefreshing : " + feed.getUrl());
 			// feed.setFirstCall(firstCall);
 			feed.refresh();
 
 			if (feed.getFormatHint() == ContentType.HTML) { // shouldn't be
 															// needed
 				feed.setDead(true);
-				System.out.println("Is HTML...");
+				log.info("Is HTML...");
 			}
 			if (feed.getLives() < 1) {
-				System.out.println("Lives gone...");
+				log.info("Lives gone...");
 				feed.setDead(true);
 			}
 			if (feed.getRelevance() < Config.UNSUBSCRIBE_RELEVANCE_THRESHOLD) {
-				System.out.println("Now below relevance threshold...");
+				log.info("Now below relevance threshold...");
 				feed.setDead(true);
 			}
 			if (feed.isDead()) {
-				System.out.println("Flagging as dead, skipping.");
+				log.info("Flagging as dead, skipping.");
 
 				// TODO is duplicated below
-				System.out.println("Unsubscribing from " + feed.getUrl());
+				log.info("Unsubscribing from " + feed.getUrl());
 				feedList.remove(feed);
 				continue;
 			}
@@ -157,7 +162,7 @@ public class Poller implements Runnable {
 			if (feed.isNew()) {
 				pushFeed(feed);
 			} else {
-				System.out.println("No changes to : " + feed.getUrl());
+				log.info("No changes to : " + feed.getUrl());
 			}
 		}
 
@@ -168,7 +173,7 @@ public class Poller implements Runnable {
 		iterator = expiring.iterator();
 		while (iterator.hasNext()) {
 			feed = iterator.next();
-			System.out.println("Unsubscribing from " + feed.getUrl());
+			log.info("Unsubscribing from " + feed.getUrl());
 			feedList.remove(feed);
 		}
 
@@ -181,13 +186,13 @@ public class Poller implements Runnable {
 
 	private void pushFeed(Feed feed) {
 
-		System.out.println("Uploading SPARQL for : " + feed.getUrl());
+		log.info("Uploading SPARQL for : " + feed.getUrl());
 		HttpMessage message = SparqlTemplater.uploadFeed(feed);
 		feed.clean();
-		System.out.println("SPARQL response = " + message.getStatusCode() + " "
+		log.info("SPARQL response = " + message.getStatusCode() + " "
 				+ message.getStatusMessage());
 		if (message.getStatusCode() >= 400) {
-			System.out.println("\n" + message + "\n");
+			log.info("\n" + message + "\n");
 		}
 
 	}
@@ -200,16 +205,16 @@ public class Poller implements Runnable {
 	// while(iterator.hasNext()) {
 	// Feed feed = iterator.next();
 	// if (feed.isNew()) {
-	// System.out.println("Uploading SPARQL for : " + feed.getUrl());
+	// log.info("Uploading SPARQL for : " + feed.getUrl());
 	// HttpMessage message = SparqlTemplater.uploadFeed(feed);
 	// feed.clean();
-	// System.out.println("SPARQL response = " + message.getStatusCode()+ " "
+	// log.info("SPARQL response = " + message.getStatusCode()+ " "
 	// +message.getStatusMessage());
 	// if(message.getStatusCode() >= 400) {
-	// System.out.println("\n"+message+"\n");
+	// log.info("\n"+message+"\n");
 	// }
 	// } else {
-	// System.out.println("No changes to : " + feed.getUrl());
+	// log.info("No changes to : " + feed.getUrl());
 	// }
 	// }
 	// }
@@ -217,11 +222,11 @@ public class Poller implements Runnable {
 	public void displayFeeds() {
 		Iterator<Feed> feedIterator = feedList.getList().iterator();
 		while (feedIterator.hasNext()) {
-			System.out.println(feedIterator.next());
+			log.info(feedIterator.next().toString());
 		}
-		System.out.println("---------------");
+		log.info("---------------");
 		// for (int i = 0; i < entries.size(); i++) {
-		// System.out.println(entries.getEntry(i));
+		// log.info(entries.getEntry(i));
 		// }
 	}
 

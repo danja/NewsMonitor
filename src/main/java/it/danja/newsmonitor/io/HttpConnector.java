@@ -9,6 +9,9 @@
  */
 package it.danja.newsmonitor.io;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.utils.XmlEncodingSniffer;
 
@@ -38,6 +41,8 @@ import java.util.zip.InflaterInputStream;
  */
 public class HttpConnector {
 
+	private static Logger log = LoggerFactory.getLogger(HttpConnector.class);
+	
 	private boolean conditional = true;
 
 	private URL url = null;
@@ -92,13 +97,13 @@ public class HttpConnector {
 		connection = connect();
 		try {
 			responseCode = connection.getResponseCode();
-			System.out.println(url+" response Code : " + responseCode); // TODO
+			log.info(url+" response Code : " + responseCode); // TODO
 																	// handle
 																	// response
 																	// code here
 		char codeBlock = Integer.toString(responseCode).charAt(0);
 		if(codeBlock == 4 || codeBlock == 5) {
-			System.out.println("four or FIVE");
+			log.info("four or FIVE");
 			return false;
 		}
 			
@@ -135,7 +140,7 @@ public class HttpConnector {
 
 		HttpURLConnection connection = null;
 		try {
-			// System.out.println("URL in HttpConnector = "+url);
+			// log.info("URL in HttpConnector = "+url);
 			connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod(method);
 		} catch (IOException e) {
@@ -167,7 +172,7 @@ public class HttpConnector {
 			connection.connect();
 		} catch (IOException e) {
 			// e.printStackTrace();
-			System.out.println(e.getMessage());
+			log.info(e.getMessage());
 		}
 		headers = connection.getHeaderFields();
 		return connection;
@@ -329,7 +334,7 @@ public class HttpConnector {
 		if (isOk) {
 			connector.downloadToFile("C:/test.xml");
 		}
-		System.out.println(connector.getStatus());
+		log.info(connector.getStatus());
 	}
 
 	/**

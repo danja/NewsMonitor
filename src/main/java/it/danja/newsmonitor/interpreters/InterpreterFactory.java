@@ -9,8 +9,11 @@
  */
 package it.danja.newsmonitor.interpreters;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import it.danja.newsmonitor.model.Feed;
 import it.danja.newsmonitor.utils.ContentType;
+
 
 /**
  * Looks after the creation of interpreters (gluing parsers together)
@@ -19,6 +22,8 @@ import it.danja.newsmonitor.utils.ContentType;
  * 
  */
 public class InterpreterFactory {
+	
+	private static Logger log = LoggerFactory.getLogger(InterpreterFactory.class);
 
 	private static AtomHandler atomHandler;
 
@@ -32,7 +37,7 @@ public class InterpreterFactory {
 
 		switch (formatHint) {
 		case ContentType.RSS1:
-			System.out.println("RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser");
+			log.info("RSS1: Using Rss1Interpreter, Rss1Handler, XMLReaderParser");
 			feedParser = new XMLReaderParser();
 			FeedHandlerBase rss1handler = new Rss1Handler();
 			feedParser.setHandler(rss1handler);
@@ -40,7 +45,7 @@ public class InterpreterFactory {
 			return interpreter;
 
 		case ContentType.ATOM:
-			System.out.println("Atom: Using AtomHandler, XMLReaderParser");
+			log.info("Atom: Using AtomHandler, XMLReaderParser");
 			feedParser = new XMLReaderParser();
 			atomHandler = new AtomHandler();
 			feedParser.setHandler(atomHandler);
@@ -53,7 +58,7 @@ public class InterpreterFactory {
 			return interpreter;
 
 		case ContentType.RSS2:
-			System.out.println("RSS2: Using Rss2Handler, XMLReaderParser");
+			log.info("RSS2: Using Rss2Handler, XMLReaderParser");
 			feedParser = new XMLReaderParser();
 			FeedHandlerBase rss2handler = new Rss2Handler();
 			feedParser.setHandler(rss2handler);
@@ -66,7 +71,7 @@ public class InterpreterFactory {
 		// case ContentType.UNKNOWN:
 		default:
 			
-			System.out.println("unknown: trying SoupParser, Rss2Handler");
+			log.info("unknown: trying SoupParser, Rss2Handler");
 			feedParser = new SoupParser();
 			FeedHandlerBase handler = new Rss2Handler();
 			feedParser.setHandler(handler);

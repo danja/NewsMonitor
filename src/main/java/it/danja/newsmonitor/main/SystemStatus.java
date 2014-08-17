@@ -8,6 +8,9 @@
  */
 package it.danja.newsmonitor.main;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.io.SparqlConnector;
 import it.danja.newsmonitor.io.TextFileReader;
 import it.danja.newsmonitor.main.FeedListLoader.LineHandler;
@@ -23,6 +26,8 @@ import java.util.Map;
  *
  */
 public class SystemStatus {
+	
+	private static Logger log = LoggerFactory.getLogger(SystemStatus.class);
 
 	private boolean pollerRunning = true;
 	private boolean discoveryRunning = true;
@@ -63,17 +68,17 @@ public boolean getDiscoveryRunning() {
 }
 
 public void initializeFeedListFromFile(String filename) {
-	System.out.println("Loading feed list from file "+filename+" into store...");
+	log.info("Loading feed list from file "+filename+" into store...");
 	FeedListLoader loader = new FeedListLoader();
 	LineHandler handler = loader.new LineHandler();
 
 	String turtleBody = loader.readFile(filename, handler);
 	String sparql = FeedListLoader.insertValue(
 			FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
-	// System.out.println("Query = \n" + sparql);
+	// log.info("Query = \n" + sparql);
 	int responseCode = SparqlConnector.update(
 			Config.UPDATE_ENDPOINT, sparql).getStatusCode();
-	System.out.println("SPARQL response : "+responseCode);
+	log.info("SPARQL response : "+responseCode);
 }
 
 private void pushStatusToStore(){
@@ -86,14 +91,14 @@ private void pushStatusToStore(){
 	  }
 
 private void pullStatusFromStore(){
-	// System.out.println("A");
+	// log.info("A");
 	String results = SparqlConnector.query(Config.QUERY_ENDPOINT, sparqlGetStatus);
-	// System.out.println("B");
+	// log.info("B");
 	SparqlResultsParser parser = new SparqlResultsParser();
-	// System.out.println("C");
+	// log.info("C");
 	SparqlResults sparqlResults = parser.parse(results);
-	// System.out.println("D");
-//	System.out.println("Size in main = "+sparqlResults.getResults().size());
-	System.out.println(sparqlResults.getResults());
+	// log.info("D");
+//	log.info("Size in main = "+sparqlResults.getResults().size());
+	log.info(sparqlResults.getResults().toString());
 }
 }

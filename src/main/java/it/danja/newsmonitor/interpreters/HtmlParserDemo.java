@@ -9,6 +9,9 @@
  */
 package it.danja.newsmonitor.interpreters;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.io.HttpConnector;
 // import it.danja.newsmonitor.main.DemoConstants;
 import it.danja.newsmonitor.model.Link;
@@ -18,6 +21,8 @@ import java.util.List;
 
  
 public class HtmlParserDemo {
+	private static Logger log = LoggerFactory.getLogger(HtmlParserDemo.class);
+	
     private List links;
 
     private List comments;
@@ -59,19 +64,19 @@ public class HtmlParserDemo {
         if(args.length > 0) {
         	url = args[0];
         }
-        System.out.println("Reading "+url);
+        log.info("Reading "+url);
         reader.parseHTML(url);
         List links = reader.getLinks();
 
         for (int i = 0; i < links.size(); i++) {
             Link link = (Link) links.get(i);
 //            if (link.isHtmlAlternate()) {
-//                System.out.println(link);
+//                log.info(link);
 //            }
         }
         List comments = reader.getComments();
         for (int i = 0; i < comments.size(); i++) {
-            System.out.println(comments.get(i));
+            log.info(comments.get(i).toString());
         }
     }
 }

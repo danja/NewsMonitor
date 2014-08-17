@@ -115,8 +115,8 @@ public class AtomHandler extends FeedHandlerBase {
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes attrs) {
 
-		// System.out.println("start = "+localName);
-		// System.out.println("startQ = "+qName);
+		// log.info("start = "+localName);
+		// log.info("startQ = "+qName);
 
 		if (textElements.contains(localName)) {
 			textBuffer = new StringBuffer();
@@ -156,12 +156,12 @@ public class AtomHandler extends FeedHandlerBase {
 				return;
 			}
 			if ("content".equals(localName)) {
-				// System.out.println("into Content");
+				// log.info("into Content");
 				state = IN_CONTENT;
 				return;
 			}
 			if ("summary".equals(localName)) {
-				// System.out.println("into Content");
+				// log.info("into Content");
 				state = IN_SUMMARY;
 				return;
 			}
@@ -169,7 +169,7 @@ public class AtomHandler extends FeedHandlerBase {
 
 		case IN_CONTENT:
 			String elementName = HtmlCleaner.normaliseElement(localName);
-			// System.out.println("elementName = "+elementName);
+			// log.info("elementName = "+elementName);
 			StringBuffer attrBuffer = new StringBuffer();
 			for (int i = 0; i < attributes.getLength(); i++) {
 				String name = attributes.getLocalName(i);
@@ -183,7 +183,7 @@ public class AtomHandler extends FeedHandlerBase {
 			
 		case IN_SUMMARY:
 			String eName = HtmlCleaner.normaliseElement(localName);
-			// System.out.println("elementName = "+elementName);
+			// log.info("elementName = "+elementName);
 			StringBuffer attrBuff = new StringBuffer();
 			for (int i = 0; i < attributes.getLength(); i++) {
 				String name = attributes.getLocalName(i);
@@ -211,8 +211,8 @@ public class AtomHandler extends FeedHandlerBase {
 
 	public void endElement(String namespaceURI, String localName, String qName) {
 
-		// System.out.println("END localName = " + localName);
-		// System.out.println("state = " + states[state]);
+		// log.info("END localName = " + localName);
+		// log.info("state = " + states[state]);
 
 		String text = "";
 		if (textElements.contains(localName)) {
@@ -228,8 +228,8 @@ public class AtomHandler extends FeedHandlerBase {
 			return;
 
 		case IN_FEED:
-			// System.out.println("state = "+states[state]);
-			// System.out.println("END localName = " + localName);
+			// log.info("state = "+states[state]);
+			// log.info("END localName = " + localName);
 
 			// switch down
 			if ("feed".equals(localName)) {
@@ -308,7 +308,7 @@ public class AtomHandler extends FeedHandlerBase {
 			}
 			if ("uri".equals(localName)) {
 				initAuthor(getFeed());
-			//	System.out.println("URI = "+text);
+			//	log.info("URI = "+text);
 				getFeed().getAuthor().setHomepage(text);
 				return;
 			}
@@ -321,10 +321,10 @@ public class AtomHandler extends FeedHandlerBase {
 
 		case IN_ENTRY:
 			if ("entry".equals(localName)) {
-				// System.out.println("out of Entry");
+				// log.info("out of Entry");
 				state = IN_FEED;
 				getFeed().addEntry(currentEntry);
-				// System.out.println("DONE ENTRY = "+currentEntry);
+				// log.info("DONE ENTRY = "+currentEntry);
 				return;
 			}
 			if ("id".equals(localName)) {
@@ -387,7 +387,7 @@ public class AtomHandler extends FeedHandlerBase {
 				// ok
 				if (currentEntry.getUrl() == null && rel == null
 						&& type == null) {
-				//	System.out.println("SETTING URL TO "+href);
+				//	log.info("SETTING URL TO "+href);
 					currentEntry.setUrl(href);
 				}
 
@@ -396,10 +396,10 @@ public class AtomHandler extends FeedHandlerBase {
 			return;
 
 		case IN_CONTENT:
-			// System.out.println("element = "+localName);
+			// log.info("element = "+localName);
 			if ("content".equals(localName)
 					&& "http://www.w3.org/2005/Atom".equals(namespaceURI)) {
-				// System.out.println("content text = " + text);
+				// log.info("content text = " + text);
 				currentEntry.setContent(text);
 				state = IN_ENTRY;
 				return;
@@ -411,7 +411,7 @@ public class AtomHandler extends FeedHandlerBase {
 
 				for (int i = 0; i < attributes.getLength(); i++) {
 					String name = attributes.getLocalName(i);
-// System.out.println("NAME = "+name);
+// log.info("NAME = "+name);
 					if ("href".equals(name)) {
 						Link link = new LinkImpl();
 						link.setOrigin(getFeed().getUrl());
@@ -427,13 +427,13 @@ public class AtomHandler extends FeedHandlerBase {
 			return;
 
 		case IN_SUMMARY:
-			// System.out.println("element = "+localName);
+			// log.info("element = "+localName);
 			if ("summary".equals(localName)
 					&& "http://www.w3.org/2005/Atom".equals(namespaceURI)) {
-				// System.out.println("content text = " + text);
+				// log.info("content text = " + text);
 				currentEntry.setSummary(text);
-				// System.out.println("SUMMARY = "+text);
-				// System.out.println("currentEntry.getSummary() = "+currentEntry.getSummary());
+				// log.info("SUMMARY = "+text);
+				// log.info("currentEntry.getSummary() = "+currentEntry.getSummary());
 				state = IN_ENTRY;
 				return;
 			}

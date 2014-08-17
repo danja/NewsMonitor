@@ -55,7 +55,7 @@ public class SparqlConnector {
 		String queryURL = null;
 		try {
 			queryURL = queryEndpoint+"?query="+ URLEncoder.encode(sparql, "UTF-8");
-		//	System.out.println("\n\n"+queryURL);
+		//	log.info("\n\n"+queryURL);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
@@ -74,7 +74,7 @@ public class SparqlConnector {
 		
 //		Header[] headers = response.getAllHeaders();
 //		for(int i =0;i<headers.length; i++){
-//			System.out.println("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
+//			log.info("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
 //		}
 		
 		// Get the response

@@ -8,6 +8,9 @@
  */
 package it.danja.newsmonitor.sparql;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.io.HttpMessage;
 import it.danja.newsmonitor.io.SparqlConnector;
 import it.danja.newsmonitor.io.TextFileReader;
@@ -22,6 +25,8 @@ import java.util.Map;
  *
  */
 public class SparqlTemplater {
+	
+	private static Logger log = LoggerFactory.getLogger(SparqlTemplater.class);
 
 	private static final String PREFIXES;
 	
@@ -30,7 +35,7 @@ public class SparqlTemplater {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(PREFIXES);
+		log.info(PREFIXES);
 	}
 	
 	public static HttpMessage uploadFeed(Feed feed) {
@@ -42,7 +47,7 @@ public class SparqlTemplater {
 		map.put("body", feedBody);
 		
 		String sparql = Templater.apply("sparql-insert", map);
-		// System.out.println("\n\n----------------\n"+sparql+"\n\n---------------------");
+		// log.info("\n\n----------------\n"+sparql+"\n\n---------------------");
 		HttpMessage message = SparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
 		message.setRequestBody(sparql);
 		return message;

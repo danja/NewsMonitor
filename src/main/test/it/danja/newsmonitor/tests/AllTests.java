@@ -8,6 +8,8 @@
  */
 package it.danja.newsmonitor.tests;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import it.danja.newsmonitor.tests.parsers.*;
 
 import java.util.List;
@@ -18,6 +20,7 @@ import org.junit.runner.RunWith;
 import org.junit.runner.notification.Failure;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
@@ -31,15 +34,17 @@ import org.junit.runners.Suite.SuiteClasses;
 	})
 public class AllTests {
 	
+	private static Logger log = LoggerFactory.getLogger(AllTests.class);
+	
 	// TODO HTTP server causes problems
 	  public static void main(String[] args) {
 		    Result result = JUnitCore.runClasses(AllTests.class);
 		    List<Failure> failures = result.getFailures();
 		    if(failures.size() == 0) {
-		    	System.out.println("All tests pass.");
+		    	log.info("All tests pass.");
 		    }
 		    for (Failure failure : failures) {
-		      System.out.println("FAIL : "+failure.toString());
+		      log.info("FAIL : "+failure.toString());
 		    }
 		  }
 } 

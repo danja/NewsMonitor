@@ -138,22 +138,22 @@ public abstract class PageBase implements Page {
 	// HttpConnector connector = new HttpConnector();
 	// connector.setUrl(url);
 	// connector.setConditional(false);
-	// System.out.println("\n\nGetting content for : " + url);
+	// log.info("\n\nGetting content for : " + url);
 	//
 	// boolean streamAvailable = connector.load();
 	// if (streamAvailable) {
 	// FormatSniffer sniffer = new FormatSniffer();
 	// setFormatHint(sniffer.sniff(connector.getInputStream()));
 	//
-	// // System.out.println("streamAvailable ===Headers ===\n"
+	// // log.info("streamAvailable ===Headers ===\n"
 	// // + connector.getHeadersString() + "------\n");
 	// } else {
-	// System.out.println("Stream unavailable.");
+	// log.info("Stream unavailable.");
 	// // format = format.UNKNOWN;
 	// }
-	// // System.out.println("Format matches : "
+	// // log.info("Format matches : "
 	// // + format.formatName(format));
-	// // System.out.println("\nCreating object for Page : " + url);
+	// // log.info("\nCreating object for Page : " + url);
 	// // connector.
 	// }
 

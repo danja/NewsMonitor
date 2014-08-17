@@ -9,6 +9,9 @@
  */
 package it.danja.newsmonitor.main;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.io.OpmlSetReader;
 import it.danja.newsmonitor.io.SparqlConnector;
 
@@ -22,6 +25,8 @@ import java.io.IOException;
  * Read text list from disk, wrap with SPARQL template, push into store
  */
 public class FeedListLoader {
+	
+	private static Logger log = LoggerFactory.getLogger(FeedListLoader.class);
 
 	// OpmlSetReader reader = new OpmlSetReader();
 	// return reader.load(filename);
@@ -45,10 +50,10 @@ public class FeedListLoader {
 				handler);
 		String sparql = FeedListLoader.insertValue(SPARQL_TEMPLATE, "channels",
 				turtleBody);
-		// System.out.println("Query = \n" + sparql);
+		// log.info("Query = \n" + sparql);
 		int responseCode = SparqlConnector.update(
 				"http://localhost:3030/feedreader/update", sparql).getStatusCode();
-		// System.out.println(responseCode);
+		// log.info(responseCode);
 	}
 
 	/**
@@ -76,7 +81,7 @@ public class FeedListLoader {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println(urlCount+" URLs loaded from file");
+		log.info(urlCount+" URLs loaded from file");
 		
 		return handler.getTurtleBody();
 	}

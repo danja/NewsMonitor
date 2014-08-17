@@ -8,6 +8,9 @@
  */
 package it.danja.newsmonitor.main;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.discovery.LinkExplorer;
 import it.danja.newsmonitor.io.SparqlConnector;
 import it.danja.newsmonitor.io.TextFileReader;
@@ -21,6 +24,8 @@ import java.util.List;
  */
 public class Main implements Runnable {
 
+	private static Logger log = LoggerFactory.getLogger(Main.class);
+	
 	public static final boolean POLLER_NO_LOOP = false; // for debugging
 	private static LinkExplorer linkExplorer;
 
@@ -37,13 +42,13 @@ public class Main implements Runnable {
 
 		
 		SystemStatus status = new SystemStatus();
-	//	System.out.println("POLLER RUNNING = "+status.getPollerRunning());
+	//	log.info("POLLER RUNNING = "+status.getPollerRunning());
 		// Config.load();
 
 		status.initializeFeedListFromFile(Config.SEED_FEEDLIST);
 		
 		if(args.length > 1) {
-			System.out.println("args[0] = "+args[0]);
+			log.info("args[0] = "+args[0]);
 			if("-C".equals(args[0])) {
 				status.initializeFeedListFromFile(Config.SEED_FEEDLIST);
 			} 
@@ -59,19 +64,19 @@ public class Main implements Runnable {
 		Poller poller = new Poller();
 
 		// load feed list from store into memory, pass to Poller
-		System.out.println("Loading feed list from store...");
+		log.info("Loading feed list from store...");
 		poller.setFeedUrls(main.getFeeds());
 
 		// Set channelURIs = planet.loadChannelList("input/bloggers.rdf");
 		// Set channelURIs = planet.loadChannelList("input/feedlist.opml");
 
 		// FeedList feedSet =
-		System.out.println("==== Initialising Feeds ====");
+		log.info("==== Initialising Feeds ====");
 		poller.initFeeds();
 		
 		linkExplorer = new LinkExplorer(poller.getFeedList());
 
-		System.out.println("==== Starting Poller ====");
+		log.info("==== Starting Poller ====");
 		poller.start();
 		linkExplorer.start();
 		
@@ -84,7 +89,7 @@ public class Main implements Runnable {
 		 poller.stop();
 		 linkExplorer.stop();
 		 poller.displayFeeds();
-		 System.out.println("\n==== Stopped Poller ====");
+		 log.info("\n==== Stopped Poller ====");
 		 while(!poller.isStopped() || !linkExplorer.isStopped()) {
 				try {
 					Thread.sleep(1000); // wait a bit
