@@ -58,6 +58,13 @@
                 -->
 
                 <!-- org.apache.felix:org.apache.felix.gogo.shell:0.6.1 useless from Maven since stdin is swallowed -->
+
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-log4j12</artifactId>
+  <version>1.7.7</version>
+</dependency>
+
    <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>

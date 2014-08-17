@@ -58,6 +58,12 @@
                 -->
 
                 <!-- org.apache.felix:org.apache.felix.gogo.shell:0.6.1 useless from Maven since stdin is swallowed -->
+<dependency> 
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-log4j12</artifactId>
+  <version>1.7.7</version>
+</dependency>
+
    <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
@@ -198,6 +204,13 @@
         <artifactId>org.apache.felix.http.servlet-api</artifactId>
         <version>1.0.0</version>
       </dependency>
+
+   <dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.webconsole</artifactId>
+    <version>4.0.0</version>
+    <type>jar</type>
+   </dependency>
 
     <dependency>
       <groupId>junit</groupId>
