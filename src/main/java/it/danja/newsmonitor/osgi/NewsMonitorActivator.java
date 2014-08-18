@@ -19,16 +19,16 @@ import it.danja.newsmonitor.main.*;
  */
 public class NewsMonitorActivator implements BundleActivator {
     private ServiceRegistration registration;
-    private Main newsmonitor = new Main();
+    private NewsMonitor newsmonitor = new NewsMonitor();
 
     @Override
     public void start(BundleContext bundleContext) throws Exception {
     	
         registration = bundleContext.registerService(
-                Main.class.getName(),
+                NewsMonitor.class.getName(),
                 newsmonitor,
                 null);
-        newsmonitor.main(null); // TODO do it properly
+        newsmonitor.start(null); // TODO do it properly
     }
 
     @Override

@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import it.danja.newsmonitor.main.Config;
-import it.danja.newsmonitor.main.Main;
+import it.danja.newsmonitor.main.NewsMonitor;
 import it.danja.newsmonitor.model.EntryList;
 import it.danja.newsmonitor.model.Feed;
 import it.danja.newsmonitor.model.FeedList;
