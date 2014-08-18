@@ -23,8 +23,8 @@ public class NewsMonitor {
 
 	private static Logger log = LoggerFactory.getLogger(NewsMonitor.class);
 
-	public static final boolean POLLER_NO_LOOP = false; // for debugging
-	private static LinkExplorer linkExplorer;
+	private LinkExplorer linkExplorer;
+	private Poller poller;
 
 	/**
 	 * @param args
@@ -46,7 +46,7 @@ public class NewsMonitor {
 
 		// load seed list from file into store
 
-		Poller poller = new Poller();
+		poller = new Poller();
 
 		// load feed list from store into memory, pass to Poller
 		log.info("Loading feed list from store...");
@@ -68,8 +68,7 @@ public class NewsMonitor {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			poller.stop();
-			linkExplorer.stop();
+			stop();
 			poller.displayFeeds();
 			log.info("\n==== Stopped Poller ====");
 			while (!poller.isStopped() || !linkExplorer.isStopped()) {
@@ -80,6 +79,11 @@ public class NewsMonitor {
 				}
 			}
 		}
+	}
+	
+	public void stop() {
+		poller.stop();
+		linkExplorer.stop();
 	}
 
 	private List<String> getFeeds() {

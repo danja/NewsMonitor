@@ -67,7 +67,7 @@ public class LinkExplorer implements Runnable {
 		running = false;
 	}
 
-	@Override
+
 	public void run() {
 		while (running) {
 			// Set<Link> links = feedList.getAllLinks();

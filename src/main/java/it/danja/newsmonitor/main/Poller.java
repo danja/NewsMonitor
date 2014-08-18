@@ -166,7 +166,7 @@ public class Poller implements Runnable {
 			}
 		}
 
-		if (NewsMonitor.POLLER_NO_LOOP) {
+		if (Config.POLLER_NO_LOOP) {
 			System.exit(1);
 		}
 

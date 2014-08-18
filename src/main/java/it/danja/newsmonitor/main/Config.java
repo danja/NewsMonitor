@@ -71,6 +71,7 @@ public class Config {
 	public static final String FEED_ACCEPT_HEADER = "application/rdf+xml, application/atom+xml, application/rss+xml, application/xml, text/xml";
 
 	public static final String HTML_ACCEPT_HEADER = "text/html, application/xhtml+xml, application/xml";
+	public static final boolean POLLER_NO_LOOP = false; // for debugging
 
 
 }
