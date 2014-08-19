@@ -10,7 +10,7 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
+		<!-- buildCommand>
 			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
 			<triggers>full,incremental,</triggers>
 			<arguments>
@@ -20,7 +20,7 @@
 				</dictionary>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
+		<!-- buildCommand 
 			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
 			<triggers>full,incremental,</triggers>
 			<arguments>
@@ -29,7 +29,7 @@
 					<value>&lt;project&gt;/.externalToolBuilders/org.eclipse.pde.SchemaBuilder.launch</value>
 				</dictionary>
 			</arguments>
-		</buildCommand>
+		</buildCommand -->
 		<buildCommand>
 			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>

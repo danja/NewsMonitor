@@ -141,19 +141,27 @@ public abstract class FeedHandlerBase implements FeedHandler {
 	}
 
 	protected void resolveContent() {
+		System.out.println("RESOLVE CONTENT");
 		List<Entry> entries = feed.getEntries().getEntries();
+		System.out.println("RESOLVE CONTENT for "+entries.size()+" entries");
 		for (int i = 0; i < entries.size(); i++) {
 			if (entries.get(i).getContent() == null
 					&& entries.get(i).getSummary() != null) {
 				entries.get(i).setContent(entries.get(i).getSummary());
 			}
+			
 			entries.get(i).setContent(
 					CharsetDetector.fixEncoding(entries.get(i).getContent()));
+		//	System.out.println("pre unescape "+entries.get(i).getContent());
 			entries.get(i).setContent(
 					ContentProcessor.unescape(entries.get(i).getContent()));
+	//		System.out.println("post unescape "+entries.get(i).getContent());
 			Set<Link> contentLinks = 
 					ContentProcessor.extractLinks(getFeed(), entries.get(i).getContent());
-			feed.addAllLinks(contentLinks);
+			System.out.println("contentLinks.size "+contentLinks.size());
+			// feed.addAllLinks(contentLinks); // TODO is ok?
+			entries.get(i).addAllLinks(contentLinks);
+			System.out.println("entries.get(i) "+entries.get(i));
 		}
 	}
 

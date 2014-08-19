@@ -194,8 +194,7 @@ public class LinkExplorer implements Runnable {
 	}
 
 	private void updateStore(Link link) {
-		System.out
-				.println("*** Updating link " + link.getHref() + " to store...");
+		log.info("*** Updating link " + link.getHref() + " to store...");
 		String sparql = Templater.apply("update-links",
 				link.getTemplateDataMap());
 		// log.info("\n\n----------------\n"+sparql+"\n\n---------------------");

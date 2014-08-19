@@ -1,7 +1,7 @@
 package it.danja.newsmonitor.tests.parsers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -12,8 +12,8 @@ import it.danja.newsmonitor.model.Entry;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.FeedImpl;
 import it.danja.newsmonitor.templating.Templater;
-import it.danja.newsmonitor.tests.util.HttpServer;
 import it.danja.newsmonitor.utils.ContentType;
+import it.danja.newsmonitor.utils.HttpServer;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -26,13 +26,13 @@ import org.junit.Test;
 
 public class TestRss1Sniffer {
 	
-	private static Logger log = LoggerFactory.getLogger(TestRss1Sniffer.class);
+//	private static Logger log = LoggerFactory.getLogger(TestRss1Sniffer.class);
 
-	private final String url = "http://localhost:8080/test-data/rss1-sample.xml";
-	private final static String rootDir = "www";
+	private final String url = "http://localhost:8088/test-data/rss1-sample.xml";
+	private final static String rootDir = "src/main/resources/META-INF/resources/static/newsmonitor";
 	private FeedImpl feed;
 	private Interpreter interpreter;
-	private static HttpServer server = new HttpServer(rootDir, 8080);
+	private static HttpServer server = new HttpServer(rootDir, 8088);
 
 	@BeforeClass
 	public static void startServer() {
@@ -50,7 +50,7 @@ public class TestRss1Sniffer {
 		
 		Templater.init();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
-		log.info("# Feed Turtle\n"+feedTurtle);
+//		log.info("# Feed Turtle\n"+feedTurtle);
 	}
 
 	@Test

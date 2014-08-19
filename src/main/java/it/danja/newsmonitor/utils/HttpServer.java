@@ -27,7 +27,7 @@
  *
  */
 
-package it.danja.newsmonitor.tests.util;
+package it.danja.newsmonitor.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -376,7 +376,7 @@ public class HttpServer {
 
         @Override
         public void run() {
-            log.info("HttpServer : New connection thread");
+            HttpServer.log.info("HttpServer : New connection thread");
             HttpContext context = new BasicHttpContext(null);
             try {
                 while (running && !Thread.interrupted() && this.conn.isOpen()) {

@@ -95,8 +95,7 @@ public class Poller implements Runnable {
 				running = false;
 				break;
 			}
-			System.out
-					.println("\n*** Starting loop #" + (++loopCount) + " ***");
+			log.info("\n*** Starting loop #" + (++loopCount) + " ***");
 			log.info("Refreshing " + feedList.size() + " feeds...");
 
 			// feedList.setFirstCall(false);

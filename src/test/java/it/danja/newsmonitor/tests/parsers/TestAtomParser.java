@@ -1,19 +1,19 @@
 package it.danja.newsmonitor.tests.parsers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+// import org.slf4j.Logger;
+// import org.slf4j.LoggerFactory;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import it.danja.newsmonitor.interpreters.Interpreter;
 import it.danja.newsmonitor.interpreters.InterpreterFactory;
-import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.model.Entry;
 import it.danja.newsmonitor.model.EntryList;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.FeedImpl;
 import it.danja.newsmonitor.templating.Templater;
-import it.danja.newsmonitor.tests.util.HttpServer;
 import it.danja.newsmonitor.utils.ContentType;
+import it.danja.newsmonitor.utils.HttpServer;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -26,13 +26,13 @@ import org.junit.Test;
 
 public class TestAtomParser {
 	
-	private static Logger log = LoggerFactory.getLogger(TestAtomParser.class);
+//	private static Logger log = LoggerFactory.getLogger(TestAtomParser.class);
 
-	private final String url = "http://localhost:8080/test-data/atom-sample.xml";
-	private final static String rootDir = "www";
+	private final String url = "http://localhost:8088/test-data/atom-sample.xml";
+	private final static String rootDir = "src/main/resources/META-INF/resources/static/newsmonitor";
 	private FeedImpl feed;
 	private Interpreter interpreter;
-	private static HttpServer server = new HttpServer(rootDir, 8080);
+	private static HttpServer server = new HttpServer(rootDir, 8088);
 
 	@BeforeClass
 	public static void startServer() {
@@ -46,24 +46,17 @@ public class TestAtomParser {
 		feed = new FeedImpl();
 		feed.setUrl(url);
 		feed.setFormatHint(ContentType.ATOM);
-		// feed.setRefreshPeriod(Config.getPollerPeriod());
-
-		// interpreter = RDFInterpreterFactory.createInterpreter(format);
-		// feed.setInterpreter(interpreter);
-
 		interpreter = InterpreterFactory.createInterpreter(feed);
-		log.info("INTERPRETER = "+interpreter);
-
 		feed.setInterpreter(interpreter);
 		feed.refresh();
 		
-		EntryList entries = feed.getEntries();
+		// EntryList entries = feed.getEntries();
 		
 		// log.info(entries.getEntry(0).toTurtle());
 		// log.info(feed.toTurtle());
 		Templater.init();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
-		log.info("# Feed Turtle\n"+feedTurtle);
+	//	log.info("# Feed Turtle\n"+feedTurtle);
 	}
 
 	@Test
@@ -95,7 +88,8 @@ public class TestAtomParser {
 		
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Entry entry1 = feed.getEntries().getEntry(1);
-		assertEquals("checking entry2 URL", "http://localhost:8080/entry2.html", entry1.getUrl());
+		
+		assertEquals("checking entry2 URL", "http://localhost:8088/entry2.html", entry1.getUrl());
 		assertEquals("checking entry2 source date", "2014-05-08T18:30:02Z", entry1.getDateStamp().getSortDate());
 		String normalSpaces1 = entry1.getContent().replaceAll("\\s+", " ");
 		assertEquals("checking entry 2 content", "<div> <p>Entry 2 content <a href=\"http://example.org/\">with a link</a></p> </div>", normalSpaces1);

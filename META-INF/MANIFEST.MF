@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Main-Class: it.danja.newsmonitor.main.Main.class
+Bundle-ManifestVersion: 2
+Bundle-Name: NewsMonitor
+Bundle-SymbolicName: newsmonitor
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: it.danja.newsmonitor.osgi.NewsMonitorActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy

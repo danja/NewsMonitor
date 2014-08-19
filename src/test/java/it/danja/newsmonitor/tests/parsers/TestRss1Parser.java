@@ -12,8 +12,8 @@ import it.danja.newsmonitor.model.Entry;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.FeedImpl;
 import it.danja.newsmonitor.templating.Templater;
-import it.danja.newsmonitor.tests.util.HttpServer;
 import it.danja.newsmonitor.utils.ContentType;
+import it.danja.newsmonitor.utils.HttpServer;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -28,11 +28,11 @@ public class TestRss1Parser {
 	
 	private static Logger log = LoggerFactory.getLogger(TestRss1Parser.class);
 
-	private final String url = "http://localhost:8080/test-data/rss1-sample.xml";
-	private final static String rootDir = "www";
+	private final String url = "http://localhost:8088/test-data/rss1-sample.xml";
+	private final static String rootDir = "src/main/resources/META-INF/resources/static/newsmonitor";
 	private FeedImpl feed;
 	private Interpreter interpreter;
-	private static HttpServer server = new HttpServer(rootDir, 8080);
+	private static HttpServer server = new HttpServer(rootDir, 8088);
 
 	@BeforeClass
 	public static void startServer() {
@@ -51,7 +51,7 @@ public class TestRss1Parser {
 		feed.refresh();
 		Templater.init();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
-		log.info("# Feed Turtle\n"+feedTurtle);
+	//	log.info("# Feed Turtle\n"+feedTurtle);
 	}
 
 	@Test
@@ -90,19 +90,23 @@ public class TestRss1Parser {
 				"2014-05-27T09:30:55Z", updated);
 		
 		Entry entry1 = feed.getEntries().getEntry(1);
+	//	System.out.println("Entry1 = "+entry1);
 		assertEquals("checking entry2 URL", "http://example.org/entry2", entry1.getUrl());
 		assertEquals("checking entry2 date", "2014-05-27T07:10:43Z", entry1.getDateStamp().getSortDate());
 		// <p>Entry 2 content <a href="http://example.com">with a link</a></p>
 		Set<Link> links = entry1.getLinks();
+//		System.out.println("ENTRY1 : "+entry1);
+//		System.out.println("ENTRY1 content : "+entry1.getContent());
+//		System.out.println("LINKS "+links.size());
 		boolean found = false;
 		Iterator<Link> i = links.iterator();
 		while (i.hasNext()) {
 			Link link = i.next();
-			// log.info("link: " + link);
+		log.info("link: " + link);
 			if ("http://example.com".equals(link.getHref())
 					&& "with a link".equals(link.getLabel())) {
 				found = true;
-			//	log.info("TRUE: " + link);
+				log.info("TRUE: " + link);
 			}
 		}
 		assertTrue("checking link in content", found);

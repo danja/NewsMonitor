@@ -8,9 +8,13 @@
  */
 package it.danja.newsmonitor.tests;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import it.danja.newsmonitor.tests.parsers.*;
+import it.danja.newsmonitor.tests.parsers.TestAtomParser;
+import it.danja.newsmonitor.tests.parsers.TestAtomSniffer;
+import it.danja.newsmonitor.tests.parsers.TestContentProcessor;
+import it.danja.newsmonitor.tests.parsers.TestRss1Parser;
+import it.danja.newsmonitor.tests.parsers.TestRss1Sniffer;
+import it.danja.newsmonitor.tests.parsers.TestRss2Parser;
+import it.danja.newsmonitor.tests.parsers.TestRss2Sniffer;
 
 import java.util.List;
 
@@ -20,6 +24,8 @@ import org.junit.runner.RunWith;
 import org.junit.runner.notification.Failure;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 @RunWith(Suite.class)

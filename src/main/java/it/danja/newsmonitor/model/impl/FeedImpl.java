@@ -206,8 +206,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 			}
 		}
 
-		System.out
-				.println("Format matches : " + ContentType.formatName(format));
+		log.info("Format matches : " + ContentType.formatName(format));
 		// setFormatName(ContentType.formatName(format));
 		// log.info("Creating interpreter for feed : " + url);
 		setFormatHint(format); // TODO remove duplication with

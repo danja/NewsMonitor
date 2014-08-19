@@ -65,7 +65,7 @@ public interface Feed extends FeedEntity, Page, Templatable {
 
     public String getStatus();
 
-    public void downloadToFile(String filename);
+    // public void downloadToFile(String filename);
     
     public void setInterpreter(Interpreter interpreter);
     

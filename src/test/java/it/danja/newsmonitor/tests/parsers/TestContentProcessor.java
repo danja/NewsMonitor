@@ -1,7 +1,7 @@
 package it.danja.newsmonitor.tests.parsers;
 
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import it.danja.newsmonitor.utils.ContentProcessor;
 
 import org.junit.Before;

@@ -41,7 +41,7 @@ public class InterpreterFactory {
 			feedParser = new XMLReaderParser();
 			FeedHandlerBase rss1handler = new Rss1Handler();
 			feedParser.setHandler(rss1handler);
-			interpreter = new Rss1Interpreter(feed, feedParser);
+			interpreter = new ParserInterpreter(feed, feedParser);
 			return interpreter;
 
 		case ContentType.ATOM:

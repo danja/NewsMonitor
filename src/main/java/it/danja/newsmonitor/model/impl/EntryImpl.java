@@ -27,6 +27,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
     /**
 	 * @return the feedUrl
 	 */
+	@Override
 	public String getFeedUrl() {
 		return feedUrl;
 	}
@@ -34,6 +35,7 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 	/**
 	 * @param feedUrl the feedUrl to set
 	 */
+	@Override
 	public void setFeedUrl(String feedUrl) {
 		this.feedUrl = feedUrl;
 	}
@@ -82,11 +84,13 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 		return read;
 	}
 	
+	@Override
     public void addLink(Link link) {
         link.setOrigin(getFeedUrl());
         super.addLink(link);
     }
     
+    @Override
 	public void addAllLinks(Set<Link> links) {
 		Iterator<Link> iterator = links.iterator();
 		while(iterator.hasNext()) {
@@ -94,8 +98,10 @@ public class EntryImpl extends FeedEntityBase implements Entry {
 			link.setOrigin(getFeedUrl());
 		}
 		super.addAllLinks(links);
+		
 	}
 	
+    @Override
 	  public Map<String, Object> getTemplateDataMap(){
 		  Map<String, Object> map = super.getTemplateDataMap();
 		  map.put("feedUrl", getFeedUrl());

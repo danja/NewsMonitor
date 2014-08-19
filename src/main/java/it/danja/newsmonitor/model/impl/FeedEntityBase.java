@@ -55,6 +55,7 @@ public abstract class FeedEntityBase extends PageBase implements FeedEntity,
 	/**
 	 * @return the id
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -80,6 +81,7 @@ public abstract class FeedEntityBase extends PageBase implements FeedEntity,
 	 * @param author
 	 *            the author to set
 	 */
+	@Override
 	public void setAuthor(Person author) {
 		this.author = author;
 	}
@@ -99,12 +101,13 @@ public abstract class FeedEntityBase extends PageBase implements FeedEntity,
 
 
 
-
+	@Override
 	public void setDateStamp(DateStamp date) {
 		this.datestamp = date;
 
 	}
 
+	@Override
 	public DateStamp getDateStamp() {
 		return datestamp;
 	}
@@ -138,6 +141,7 @@ public abstract class FeedEntityBase extends PageBase implements FeedEntity,
 		return this.htmlUrl;
 	}
 
+	@Override
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
 		// buffer.append("Entity : "+getClass().getSimpleName()+"\n");
@@ -179,7 +183,7 @@ public abstract class FeedEntityBase extends PageBase implements FeedEntity,
 	}
 
 
-
+	@Override
 	public Map<String, Object> getTemplateDataMap() {
 		Map<String, Object> data = super.getTemplateDataMap();
 		// data.put("url", getUrl());

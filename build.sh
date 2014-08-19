@@ -1,4 +1,4 @@
-mvn clean   install -Dmaven.test.skip=true 
+mvn clean   install 
 # -Xlint:unchecked
 # -Dmaven.test.skip=true 
 

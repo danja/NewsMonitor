@@ -44,8 +44,9 @@ public abstract class PageBase implements Page {
 	}
 
 	@Override
-	public void addAllLinks(Set<Link> links) { // TODO can refactor?
-		links.addAll(links);
+	public void addAllLinks(Set<Link> linkset) { // TODO can refactor?
+		links.addAll(linkset);
+		// System.out.println("links ="+links);
 	}
 
 	@Override
@@ -71,6 +72,7 @@ public abstract class PageBase implements Page {
 	/**
 	 * @return the contentType
 	 */
+	@Override
 	public String getContentType() {
 		return contentType;
 	}
@@ -79,6 +81,7 @@ public abstract class PageBase implements Page {
 	 * @param contentType
 	 *            the contentType to set
 	 */
+	@Override
 	public void setContentType(String contentType) {
 		this.contentType = contentType;
 	}
@@ -102,22 +105,27 @@ public abstract class PageBase implements Page {
 	public PageBase() {
 	}
 
+	@Override
 	public void setUrl(String uriString) {
 		this.url = uriString;
 	}
 
+	@Override
 	public String getUrl() {
 		return url;
 	}
 
+//	@Override
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
+//	@Override
 	public String getTitle() {
 		return title;
 	}
 
+	@Override
 	public String getDomain() {
 		String[] split = getUrl().split("/");
 		return split[3];
@@ -157,18 +165,22 @@ public abstract class PageBase implements Page {
 	// // connector.
 	// }
 
+//	@Override
 	public Interpreter getInterpreter() {
 		return interpreter;
 	}
 
+//	@Override
 	public String getETag() {
 		return httpConnector.getETag();
 	}
 
+//	@Override
 	public String getLastModified() {
 		return httpConnector.getLastModified();
 	}
 
+	// @Override
 	public String getContentEncoding() {
 		return httpConnector.getContentEncoding();
 	}
@@ -178,21 +190,25 @@ public abstract class PageBase implements Page {
 		this.format = format;
 	}
 
+	@Override
 	public String getFormat() {
 		return format;
 	}
 
+	// @Override
 	public InputStream getInputStream() {
 		return httpConnector.getInputStream();
 	}
 
+//	@Override
 	public String getStatus() {
 		return httpConnector.getStatus();
 	}
 
-	public void downloadToFile(String filename) {
-		httpConnector.downloadToFile(filename);
-	}
+//	@Override
+//	public void downloadToFile(String filename) {
+//		httpConnector.downloadToFile(filename);
+//	}
 
 	@Override
 	public void setInterpreter(Interpreter interpreter) {
@@ -223,6 +239,7 @@ public abstract class PageBase implements Page {
 		return formatHint;
 	}
 
+	
 	public Map<String, Object> getTemplateDataMap() {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("url", getUrl());
