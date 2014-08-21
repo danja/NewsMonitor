@@ -19,6 +19,7 @@ public class NewsMonitorActivator implements BundleActivator {
 
 		registration = bundleContext.registerService(
 				NewsMonitor.class.getName(), newsmonitor, null);
+                newsmonitor.setBundleContext(bundleContext);
 		newsmonitor.start(); // TODO do it properly
 	}
 

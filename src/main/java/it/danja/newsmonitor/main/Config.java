@@ -16,6 +16,12 @@ import it.danja.newsmonitor.discovery.Topic;
  *
  */
 public class Config {
+    
+        public static final char STANDALONE_BUILD = 0;
+        public static final char OSGI_BUILD = 1;
+        
+        public static char BUILD_TYPE = OSGI_BUILD;
+        
 	public static final long TEST_RUN = 0; // stop after this no. minutes, 0 =
 	// infinite
 	public static final Topic TOPIC = PresetTopics.WOODCARVING;
@@ -28,7 +34,10 @@ public class Config {
 
 	public static final String SPARQL_FEEDLIST_FILENAME = "src/main/resources/sparql/get-feedlist.sparql";
 
-	public static final String TEMPLATES_DIR = "src/main/resources/templates";
+	public static final String TEMPLATES_DIR = "src/main/resources/templates/html/it/danja/newsmonitor/resource";
+        
+       // public static final String TEMPLATES_LOCATION = "templates/html/it/danja/newsmonitor/resource";
+        public static final String TEMPLATES_LOCATION = "templates/html/it/danja/newsmonitor/resource";
 
 	public static final String STOPWORDS_FILENAME = "src/main/resources/misc/stopwords.txt";
 

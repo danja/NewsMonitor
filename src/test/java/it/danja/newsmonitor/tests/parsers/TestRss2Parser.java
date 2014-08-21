@@ -42,14 +42,15 @@ public class TestRss2Parser {
 
 	@Before
 	public void setUp() throws Exception {
-
+Config.BUILD_TYPE = Config.STANDALONE_BUILD;
 		feed = new FeedImpl();
 		feed.setUrl(url);
 		feed.setFormatHint(ContentType.RSS2);
 		interpreter = InterpreterFactory.createInterpreter(feed);
 		feed.setInterpreter(interpreter);
 		feed.refresh();
-		Templater.init();
+		Templater templater = new Templater();
+        templater.init();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes",
 				feed.getTemplateDataMap());
 //		log.info("# Feed Turtle\n" + feedTurtle);

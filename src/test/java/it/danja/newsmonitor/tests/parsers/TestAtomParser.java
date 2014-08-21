@@ -54,7 +54,9 @@ public class TestAtomParser {
 		
 		// log.info(entries.getEntry(0).toTurtle());
 		// log.info(feed.toTurtle());
-		Templater.init();
+		        Templater templater = new Templater();
+
+        templater.init();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
 	//	log.info("# Feed Turtle\n"+feedTurtle);
 	}

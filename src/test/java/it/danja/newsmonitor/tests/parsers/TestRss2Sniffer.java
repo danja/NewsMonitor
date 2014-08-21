@@ -6,6 +6,7 @@ package it.danja.newsmonitor.tests.parsers;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import it.danja.newsmonitor.interpreters.Interpreter;
+import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.model.Entry;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.FeedImpl;
@@ -33,18 +34,20 @@ public class TestRss2Sniffer {
 
 	@BeforeClass
 	public static void startServer() {
+            
 		server.init();
 		server.start();
 	}
 
 	@Before
 	public void setUp() throws Exception {
-
+Config.BUILD_TYPE = Config.STANDALONE_BUILD;
 		feed = new FeedImpl();
 		feed.setUrl(url);
 		feed.init();
 		feed.refresh();
-		Templater.init();
+		Templater templater = new Templater();
+        templater.init();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes",
 				feed.getTemplateDataMap());
 //		log.info("# Feed Turtle\n" + feedTurtle);

@@ -42,13 +42,14 @@ public class TestRss1Sniffer {
 
 	@Before
 	public void setUp() throws Exception {
-
+Config.BUILD_TYPE = Config.STANDALONE_BUILD;
 		feed = new FeedImpl();
 		feed.setUrl(url);
 		feed.init();
 		feed.refresh();
 		
-		Templater.init();
+		Templater templater = new Templater();
+        templater.init();
 		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
 //		log.info("# Feed Turtle\n"+feedTurtle);
 	}
