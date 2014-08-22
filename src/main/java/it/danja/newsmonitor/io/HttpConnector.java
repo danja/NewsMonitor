@@ -82,7 +82,7 @@ public class HttpConnector {
 		try {
 			url = new URL(urlString);
 		} catch (MalformedURLException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	}
 
@@ -171,7 +171,7 @@ public class HttpConnector {
 		try {
 			connection.connect();
 		} catch (IOException e) {
-			// e.printStackTrace();
+			// log.error(e.getMessage());
 			log.error(e.getMessage());
 		}
 		headers = connection.getHeaderFields();
@@ -238,7 +238,7 @@ public class HttpConnector {
 			in.close();
 			out.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	}
 

@@ -81,14 +81,14 @@ public class SparqlResultsParser implements ContentHandler {
 		try {
 			reader = new FileReader(file);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		SparqlResults results = parse(reader);
 	//	log.info("size in parse3 = "+results.getResults().size());
 		try {
 			reader.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	//	log.info("size in parse4 = "+results.getResults().size());
 		return results;
@@ -126,6 +126,8 @@ public class SparqlResultsParser implements ContentHandler {
 	public void startElement(String uri, String localName, String qName,
 			Attributes atts) throws SAXException {
 
+		throw new RuntimeException("Local Name = "+localName);
+		/*
 		state = State.valueOf(localName);
 
 		switch (state) {
@@ -151,6 +153,7 @@ public class SparqlResultsParser implements ContentHandler {
 		default:
 			break;
 		}
+		*/
 	}
 
 	@Override

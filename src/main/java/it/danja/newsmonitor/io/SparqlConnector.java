@@ -9,19 +9,15 @@
  */
 package it.danja.newsmonitor.io;
 
-import it.danja.newsmonitor.utils.XmlEncodingSniffer;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -34,6 +30,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Utility for interacting with SPARQL store over HTTP
@@ -45,6 +43,8 @@ import org.apache.http.message.BasicNameValuePair;
  */
 public class SparqlConnector {
 
+	private static Logger log = LoggerFactory.getLogger(SparqlConnector.class);
+
 	/**
 	 * @param queryEndpoint
 	 * @param sparql
@@ -54,10 +54,11 @@ public class SparqlConnector {
 		int statusCode = -1;
 		String queryURL = null;
 		try {
-			queryURL = queryEndpoint+"?query="+ URLEncoder.encode(sparql, "UTF-8");
-		//	log.info("\n\n"+queryURL);
+			queryURL = queryEndpoint + "?query="
+					+ URLEncoder.encode(sparql, "UTF-8");
+			// log.info("\n\n"+queryURL);
 		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 
 		HttpClient client = new DefaultHttpClient();
@@ -67,16 +68,16 @@ public class SparqlConnector {
 		try {
 			response = client.execute(request);
 		} catch (ClientProtocolException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
-		
-//		Header[] headers = response.getAllHeaders();
-//		for(int i =0;i<headers.length; i++){
-//			log.info("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
-//		}
-		
+
+		// Header[] headers = response.getAllHeaders();
+		// for(int i =0;i<headers.length; i++){
+		// log.info("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
+		// }
+
 		// Get the response
 		InputStream inputStream = null;
 		BufferedReader reader = null;
@@ -89,42 +90,41 @@ public class SparqlConnector {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-//		XmlEncodingSniffer sniffer;
-//		try {
-//			sniffer = new XmlEncodingSniffer(inputStream, "UTF-8");
-//			inputStream = sniffer.getStream();
-//		} catch (UnsupportedEncodingException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		} catch (IOException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
-		
+		// XmlEncodingSniffer sniffer;
+		// try {
+		// sniffer = new XmlEncodingSniffer(inputStream, "UTF-8");
+		// inputStream = sniffer.getStream();
+		// } catch (UnsupportedEncodingException e1) {
+		// // TODO Auto-generated catch block
+		// e1.printStackTrace();
+		// } catch (IOException e1) {
+		// // TODO Auto-generated catch block
+		// e1.printStackTrace();
+		// }
+
 		try {
-			reader = new BufferedReader
-			  (new InputStreamReader(inputStream)); // response.getEntity().getContent()
+			reader = new BufferedReader(new InputStreamReader(inputStream)); // response.getEntity().getContent()
 		} catch (IllegalStateException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
-		    
-		StringBuffer content = new StringBuffer(); 
+
+		StringBuffer content = new StringBuffer();
 		String line = "";
 		try {
 			while ((line = reader.readLine()) != null) {
 				content.append(line);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
-		} 
+			log.error(e.getMessage());
+		}
 		try {
 			inputStream.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		return content.toString();
 	}
-	
+
 	/**
 	 * @param updateEndpoint
 	 * @param sparql
@@ -141,7 +141,7 @@ public class SparqlConnector {
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(parameters));
 		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		CloseableHttpResponse response = null;
 		String statusMessage = "";
@@ -150,12 +150,12 @@ public class SparqlConnector {
 			statusCode = response.getStatusLine().getStatusCode();
 			statusMessage = response.getStatusLine().getReasonPhrase();
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		try {
 			httpclient.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		HttpMessage message = new HttpMessage(statusCode, statusMessage);
 		return message;

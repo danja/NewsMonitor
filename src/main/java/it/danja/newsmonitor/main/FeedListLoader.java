@@ -85,7 +85,7 @@ public class FeedListLoader {
 			try {
 				reader = new BufferedReader(new FileReader(file));
 			} catch (FileNotFoundException e) {
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
 		} else {
 			
@@ -119,7 +119,7 @@ public class FeedListLoader {
 			}
 			reader.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		log.info(urlCount+" URLs loaded from file");
 		

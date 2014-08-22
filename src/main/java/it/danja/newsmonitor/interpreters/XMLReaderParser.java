@@ -9,6 +9,9 @@
  */
 package it.danja.newsmonitor.interpreters;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.model.Feed;
 
 import java.io.IOException;
@@ -27,6 +30,8 @@ import org.xml.sax.XMLReader;
  */
 public class XMLReaderParser extends FeedParserBase implements FeedParser {
 
+	private static Logger log = LoggerFactory.getLogger(FeedParserBase.class);
+	
     private XMLReader reader = null;
 
     //private Feed feed;
@@ -43,7 +48,7 @@ public class XMLReaderParser extends FeedParserBase implements FeedParser {
         //   reader.setFeature("http://xml.org/sax/features/validation", true);
             reader.setFeature("http://xml.org/sax/features/namespaces", true);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
     }
 
@@ -59,15 +64,15 @@ public class XMLReaderParser extends FeedParserBase implements FeedParser {
         try {
             reader.parse(inputSource);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         } catch (SAXException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         
         try {
 			inputStream.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		} 
     //    log.info("after parse");
     }

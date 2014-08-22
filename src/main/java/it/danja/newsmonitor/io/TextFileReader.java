@@ -48,7 +48,7 @@ public class TextFileReader {
 	       content = new String(chars);
 	       reader.close();
 	   } catch (IOException e) {
-	       e.printStackTrace();
+	       log.error(e.getMessage());
 	   }
 	   return content;
 	}

@@ -169,7 +169,7 @@ public class Poller implements Runnable {
 			try {
 				Thread.sleep(Config.PER_FEED_SLEEP_PERIOD);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
 
 			if (feed.isNew()) {
@@ -193,7 +193,7 @@ public class Poller implements Runnable {
 		try {
 			Thread.sleep(Config.REFRESH_PERIOD);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	}
 

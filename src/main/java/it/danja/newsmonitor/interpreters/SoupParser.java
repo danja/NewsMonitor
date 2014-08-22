@@ -9,6 +9,9 @@
  */
 package it.danja.newsmonitor.interpreters;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -36,6 +39,9 @@ import org.xml.sax.helpers.AttributesImpl;
  * 
  */
 public class SoupParser extends FeedParserBase {
+
+	private static Logger log = LoggerFactory.getLogger(SoupParser.class);
+
 
 	private static char NOT_TAG = 0;
 	private static char START_TAG = 1;
@@ -76,7 +82,7 @@ public class SoupParser extends FeedParserBase {
 		try {
 			getHandler().endElement(namePair[0], namePair[1], qname);
 		} catch (SAXException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	}
 
@@ -105,7 +111,7 @@ public class SoupParser extends FeedParserBase {
 			this.getHandler().startElement(namePair[0], namePair[1], qname,
 					attributes);
 		} catch (SAXException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	}
 
@@ -123,7 +129,7 @@ public class SoupParser extends FeedParserBase {
 			try {
 				this.getHandler().processingInstruction(target, data);
 			} catch (SAXException e) {
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
 			return true;
 		}
@@ -231,7 +237,7 @@ public class SoupParser extends FeedParserBase {
 						getHandler().characters(dataChars,
 								charIndex - block.length(), block.length());
 					} catch (SAXException e) {
-						e.printStackTrace();
+						log.error(e.getMessage());
 					}
 				}
 				block = "";
@@ -304,7 +310,7 @@ public class SoupParser extends FeedParserBase {
 				buffer.append((char) character);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		parseData(buffer.toString());
 	}

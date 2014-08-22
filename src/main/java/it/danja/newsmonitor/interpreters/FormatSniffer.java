@@ -9,7 +9,11 @@
  */
 package it.danja.newsmonitor.interpreters;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.io.HttpConnector;
+import it.danja.newsmonitor.io.ResourceLister;
 import it.danja.newsmonitor.utils.ContentType;
 
 import java.io.BufferedReader;
@@ -27,6 +31,8 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class FormatSniffer extends DefaultHandler {
+	
+	private static Logger log = LoggerFactory.getLogger(FormatSniffer.class);
 
 	char format = ContentType.UNKNOWN;
 
@@ -84,7 +90,7 @@ public class FormatSniffer extends DefaultHandler {
 		try {
 			reader = parserFactory.newSAXParser().getXMLReader();
 		} catch (Exception e) { // bad
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		reader.setContentHandler(this);
 
@@ -99,7 +105,7 @@ public class FormatSniffer extends DefaultHandler {
 		try {
 			inputStream.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		if (format != ContentType.UNKNOWN) {
 			return format;

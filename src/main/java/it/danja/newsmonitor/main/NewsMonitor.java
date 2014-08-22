@@ -96,7 +96,7 @@ public class NewsMonitor {
             try {
                 Thread.sleep(Config.TEST_RUN * 60000); // wait a bit
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                log.error(e.getMessage());
             }
             stop();
             poller.displayFeeds();
@@ -105,7 +105,7 @@ public class NewsMonitor {
                 try {
                     Thread.sleep(1000); // wait a bit
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    log.error(e.getMessage());
                 }
             }
         }

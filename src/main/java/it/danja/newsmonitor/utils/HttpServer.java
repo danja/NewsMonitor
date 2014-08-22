@@ -150,19 +150,19 @@ public class HttpServer {
 				keystore = KeyStore.getInstance("jks");
 			} catch (KeyStoreException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
             try {
 				keystore.load(url.openStream(), "secret".toCharArray());
 			} catch (NoSuchAlgorithmException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			} catch (CertificateException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			} catch (IOException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
             KeyManagerFactory kmfactory = null;
 			try {
@@ -170,19 +170,19 @@ public class HttpServer {
 				        KeyManagerFactory.getDefaultAlgorithm());
 			} catch (NoSuchAlgorithmException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
             try {
 				kmfactory.init(keystore, "secret".toCharArray());
 			} catch (UnrecoverableKeyException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			} catch (KeyStoreException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			} catch (NoSuchAlgorithmException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
             KeyManager[] keymanagers = kmfactory.getKeyManagers();
             SSLContext sslcontext = null;
@@ -190,13 +190,13 @@ public class HttpServer {
 				sslcontext = SSLContext.getInstance("TLS");
 			} catch (NoSuchAlgorithmException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
             try {
 				sslcontext.init(keymanagers, null, null);
 			} catch (KeyManagementException e) {
 
-				e.printStackTrace();
+				log.error(e.getMessage());
 			}
             this.sf = sslcontext.getServerSocketFactory();
         }
@@ -209,7 +209,7 @@ public class HttpServer {
 		try {
 			this.serverThread = new RequestListenerThread(this.port, this.httpService, this.sf);
 		} catch (IOException e) {
-		//	e.printStackTrace();
+		//	log.error(e.getMessage());
 			return;
 		}
         this.serverThread.setDaemon(false);
@@ -223,7 +223,7 @@ public class HttpServer {
 //    	try {
 //			Thread.sleep(1000);
 //		} catch (InterruptedException e) {
-//			e.printStackTrace();
+//			log.error(e.getMessage());
 //		}
 //    	try {
 //			socket.close();
@@ -308,7 +308,7 @@ public class HttpServer {
 //                try {
 //					Thread.sleep(2000);
 //				} catch (InterruptedException e) {
-//					e.printStackTrace();
+//					log.error(e.getMessage());
 //				}
                 
                 response.setEntity(body);

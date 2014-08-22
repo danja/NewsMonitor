@@ -53,7 +53,7 @@ public class OpmlSetReader extends DefaultHandler {
              * reader.parse(inputSource);
              */
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         return feedURIs;
     }

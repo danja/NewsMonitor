@@ -99,7 +99,7 @@ public class LinkExplorer implements Runnable {
 				try {
 					Thread.sleep(Config.LINK_EXPLORER_SLEEP_PERIOD);
 				} catch (InterruptedException e) {
-					e.printStackTrace();
+					log.error(e.getMessage());
 				}
 			}
 

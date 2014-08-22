@@ -8,6 +8,10 @@
  */
 package it.danja.newsmonitor.utils;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import it.danja.newsmonitor.interpreters.FeedParserBase;
 import it.danja.newsmonitor.model.Feed;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.LinkImpl;
@@ -27,6 +31,8 @@ import org.apache.commons.lang3.StringEscapeUtils;
  */
 public class ContentProcessor {
 
+	private static Logger log = LoggerFactory.getLogger(ContentProcessor.class);
+	
 	private static final String[] excludeAttrs = { "font", "class", "style" };
 
 	public static final Set<String> excludeAttributes = new HashSet<String>();
@@ -112,7 +118,7 @@ public class ContentProcessor {
 				try {
 					href = resolveUrl(origin, href);
 				} catch (URISyntaxException e) {
-					e.printStackTrace();
+					log.error(e.getMessage());
 				}
 				Link link = new LinkImpl();
 				link.setOrigin(origin);
@@ -150,7 +156,7 @@ public class ContentProcessor {
 				try {
 					href = resolveUrl(origin, href);
 				} catch (URISyntaxException e) {
-					e.printStackTrace();
+					log.error(e.getMessage());
 				}
 				Link link = new LinkImpl();
 				link.setOrigin(origin);

@@ -85,9 +85,9 @@ public class Templater {
 			template.process(dataModel, writer);
 			writer.close();
 		} catch (TemplateException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 
 		return writer.toString();
@@ -210,7 +210,7 @@ public class Templater {
 		 * try { FileReader reader = new FileReader(file); char[] chars = new
 		 * char[(int) file.length()]; reader.read(chars); content = new
 		 * String(chars); reader.close(); } catch (IOException e) {
-		 * e.printStackTrace(); }
+		 * log.error(e.getMessage()); }
 		 */
 		// throw new RuntimeException(file.toString()+"\n - CONTENTS : "+s);
 		// bundle://298.0:0/templates/html/it/danja/newsmonitor/resource/sample.ftl
@@ -270,7 +270,7 @@ public class Templater {
 	// // log.info(name);
 	// templates.put(name, template);
 	// } catch (IOException e) {
-	// e.printStackTrace();
+	// log.error(e.getMessage());
 	// }
 	// }
 

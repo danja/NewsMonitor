@@ -11,8 +11,13 @@ import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ResourceLister {
 
+	private static Logger log = LoggerFactory.getLogger(ResourceLister.class);
+	
 	public static void main(String[] args){
 		ResourceLister lister = new ResourceLister();
 		String[] list = null;
@@ -20,10 +25,10 @@ public class ResourceLister {
 			list = lister.getResourceListing(ResourceLister.class, "./");
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.getMessage());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		for(int i=0;i<list.length;i++){
 			System.out.println(list[i]);

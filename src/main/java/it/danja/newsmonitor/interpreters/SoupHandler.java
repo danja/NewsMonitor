@@ -59,7 +59,7 @@ public class SoupHandler extends Rss2Handler { // was extends FeedParserBase imp
 //            in.close();
 //
 //        } catch (Exception e) {
-//            e.printStackTrace();
+//            log.error(e.getMessage());
 //        }
 //    }
 }
