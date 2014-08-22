@@ -10,7 +10,7 @@ package it.danja.newsmonitor.tests;
 
 import it.danja.newsmonitor.tests.parsers.TestAtomParser;
 import it.danja.newsmonitor.tests.parsers.TestAtomSniffer;
-import it.danja.newsmonitor.tests.parsers.TestContentProcessor;
+import it.danja.newsmonitor.tests.utils.TestContentProcessor;
 import it.danja.newsmonitor.tests.parsers.TestRss1Parser;
 import it.danja.newsmonitor.tests.parsers.TestRss1Sniffer;
 import it.danja.newsmonitor.tests.parsers.TestRss2Parser;

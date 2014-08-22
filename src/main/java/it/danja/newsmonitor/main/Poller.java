@@ -9,6 +9,7 @@
  */
 package it.danja.newsmonitor.main;
 
+import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -56,6 +57,19 @@ public class Poller implements Runnable {
 	private int loopCount = 0;
 
 	private boolean stopped = false;
+	
+	SparqlTemplater sparqlTemplater = null;
+	
+// private BundleContext bundleContext;
+	
+//	public void setBundleContext(BundleContext bundleContext) {
+//		this.bundleContext = bundleContext;
+//	}
+	
+	public Poller(BundleContext bundleContext) {
+		sparqlTemplater = new SparqlTemplater(bundleContext);
+		// sparqlTemplater.setBundleContext(bundleContext);
+	}
 
 	/**
 	 * Takes each feed URL on the list and using @see FormatSniffer checks the
@@ -186,7 +200,7 @@ public class Poller implements Runnable {
 	private void pushFeed(Feed feed) {
 
 		log.info("Uploading SPARQL for : " + feed.getUrl());
-		HttpMessage message = SparqlTemplater.uploadFeed(feed);
+		HttpMessage message = sparqlTemplater.uploadFeed(feed);
 		feed.clean();
 		log.info("SPARQL response = " + message.getStatusCode() + " "
 				+ message.getStatusMessage());

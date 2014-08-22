@@ -8,6 +8,7 @@
  */
 package it.danja.newsmonitor.sparql;
 
+import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,17 +29,28 @@ public class SparqlTemplater {
 	
 	private static Logger log = LoggerFactory.getLogger(SparqlTemplater.class);
 
-	private static final String PREFIXES;
+	private String PREFIXES;
 	
-	static {
-		PREFIXES = TextFileReader.read(Config.SPARQL_PREFIXES_FILENAME);
+	public SparqlTemplater(BundleContext bundleContext) {
+		// PREFIXES = TextFileReader.read(Config.SPARQL_PREFIXES_FILENAME);
+		if(Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
+			PREFIXES = TextFileReader.readFromFilesystem(Config.SPARQL_PREFIXES_FILENAME);
+			} else {
+				PREFIXES = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.SPARQL_PREFIXES_FILENAME);
+			}
 	}
 	
-	public static void main(String[] args) {
-		log.info(PREFIXES);
-	}
+//private BundleContext bundleContext;
+//	
+//	public void setBundleContext(BundleContext bundleContext) {
+//		this.bundleContext = bundleContext;
+//	}
 	
-	public static HttpMessage uploadFeed(Feed feed) {
+//	public static void main(String[] args) {
+//		log.info(PREFIXES);
+//	}
+	
+	public  HttpMessage uploadFeed(Feed feed) {
 		String feedBody = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
 		
 		Map<String, Object> map = new HashMap<String, Object>();

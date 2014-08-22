@@ -20,6 +20,7 @@ public class Config {
         public static final char STANDALONE_BUILD = 0;
         public static final char OSGI_BUILD = 1;
         
+        // this is flipped to STANDALONE_BUILD if NewsMonitor is run via Main.main
         public static char BUILD_TYPE = OSGI_BUILD;
         
 	public static final long TEST_RUN = 0; // stop after this no. minutes, 0 =
@@ -41,8 +42,9 @@ public class Config {
 
 	public static final String STOPWORDS_FILENAME = "src/main/resources/misc/stopwords.txt";
 
-	public static final String SPARQL_GET_STATUS = "src/main/resources/sparql/get-system-status.sparql";
-
+	public static final String SPARQL_GET_STATUS_FILE = "src/main/resources/sparql/get-system-status.sparql";
+	public static final String SPARQL_GET_STATUS_IN_BUNDLE = "sparql/get-system-status.sparql";
+	
 	public static final String GET_LINKS_SPARQL = "src/main/resources/sparql/get-new-links.sparql";
 	public static final String SPARQL_PREFIXES_FILENAME = "src/main/resources/sparql/prefixes.sparql";
 	

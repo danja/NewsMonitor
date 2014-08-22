@@ -34,18 +34,18 @@ public class RelevanceCalculator {
 	/**
 	 * 
 	 */
-	static {
-		String wordString = TextFileReader.read(Config.STOPWORDS_FILENAME);
-		String[] split = wordString.toLowerCase().split("\\s+");
-		STOPWORDS.addAll(Arrays.asList(split));
-		Iterator<String> iterator = STOPWORDS.iterator();
-		while (iterator.hasNext()) {
-			String stopWord = iterator.next();
-			if(stopWord == null || stopWord.trim().equals("")) {
-				STOPWORDS.remove(stopWord);
-			}
-		}
-	}
+//	static {
+//		String wordString = TextFileReader.read(Config.STOPWORDS_FILENAME);
+//		String[] split = wordString.toLowerCase().split("\\s+");
+//		STOPWORDS.addAll(Arrays.asList(split));
+//		Iterator<String> iterator = STOPWORDS.iterator();
+//		while (iterator.hasNext()) {
+//			String stopWord = iterator.next();
+//			if(stopWord == null || stopWord.trim().equals("")) {
+//				STOPWORDS.remove(stopWord);
+//			}
+//		}
+//	}
 
 	/**
 	 * 
@@ -120,19 +120,19 @@ public class RelevanceCalculator {
 	}
 
 	public static void main(String[] args) {
-		Iterator<String> iterator = STOPWORDS.iterator();
-		while (iterator.hasNext()) {
-			String stopWord = iterator.next();
-
-		}
-		RelevanceCalculator calculator = new RelevanceCalculator();
-		String content = TextFileReader.read("input/html-sample.html");
-		//String clean = calculator.cleanContent(content);
-		Topic topic = new Topic();
-		topic.addKeyword("RDF", 1);
-		topic.addKeyword("Semantic", 0.5F);
-		topic.addKeyword("Web", 0.1F);
-		log.info("relevance = "+calculator.calculateRelevance(topic, content));
+//		Iterator<String> iterator = STOPWORDS.iterator();
+//		while (iterator.hasNext()) {
+//			String stopWord = iterator.next();
+//
+//		}
+//		RelevanceCalculator calculator = new RelevanceCalculator();
+//		String content = TextFileReader.read("input/html-sample.html");
+//		//String clean = calculator.cleanContent(content);
+//		Topic topic = new Topic();
+//		topic.addKeyword("RDF", 1);
+//		topic.addKeyword("Semantic", 0.5F);
+//		topic.addKeyword("Web", 0.1F);
+//		log.info("relevance = "+calculator.calculateRelevance(topic, content));
 	}
 
 }

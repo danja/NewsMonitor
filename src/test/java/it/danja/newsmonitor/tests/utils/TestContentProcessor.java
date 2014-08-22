@@ -28,6 +28,13 @@ public class TestContentProcessor {
 	static final String HTML = "<p>Entry content <a href=\"http://example.com\">one</a> or <a href=\"http://example.com/2\">two</a> link</a></p>";
 	static final String ORIGIN = "http://origin";
 	
+	// TODO for some reason I wrote this test twice...these are bits from other version, check if there's anything useful
+//	ContentProcessor processor = null;
+//	String html = "<em>text</em>";
+//	String cdata = "<![CDATA[<em>text</em>]]>";
+//	String plain = "text";
+//	String escaped = "&lt;em&gt;text&lt;/em&gt;";
+	
 	/**
 	 * Test method for {@link it.danja.newsmonitor.utils.ContentProcessor#normaliseElement(java.lang.String)}.
 	 */
@@ -51,6 +58,11 @@ public class TestContentProcessor {
 	public final void testUnescape() {
 		assertEquals("checking escaped HTML", HTML, ContentProcessor.unescape(ESCAPED_HTML));
 		assertEquals("checking CDATA", HTML, ContentProcessor.unescape(CDATA_HTML));
+		
+//		assertEquals("HTML input", html, ContentProcessor.unescape(html));
+//		assertEquals("CDATA input", html, ContentProcessor.unescape(cdata));
+//		assertEquals("plain input", plain, ContentProcessor.unescape(plain));
+//		assertEquals("escaped input", html, ContentProcessor.unescape(escaped));
 	}
 
 

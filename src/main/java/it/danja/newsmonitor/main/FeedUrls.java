@@ -16,6 +16,8 @@ import it.danja.newsmonitor.sparql.SparqlResults.Result;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.osgi.framework.BundleContext;
+
 /**
  *
  */
@@ -23,8 +25,24 @@ public class FeedUrls  {
 
 	private List<String> feeds = new ArrayList<String>();
 
+	private BundleContext bundleContext;
+	
+	public void setBundleContext(BundleContext bundleContext) {
+		this.bundleContext = bundleContext;
+	}
+
 	public void load() {
-		String sparql = TextFileReader.read(Config.SPARQL_FEEDLIST_FILENAME);
+		String sparql = null;
+		if(Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
+			sparql = TextFileReader.readFromFilesystem(Config.SPARQL_FEEDLIST_FILENAME);
+			} else {
+				sparql = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.SPARQL_FEEDLIST_FILENAME);
+			}
+		//	updateStatusTemplate = TextFileReader.read(Config.UPDATE_STATUS_TEMPLATE);
+		
+		
+		
+		
 		String xmlResults = SparqlConnector.query(Config.QUERY_ENDPOINT, sparql);
 
 		/*

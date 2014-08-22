@@ -10,8 +10,10 @@
  */
 package it.danja.newsmonitor.discovery;
 
+import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import it.danja.newsmonitor.io.HttpConnector;
 import it.danja.newsmonitor.io.HttpMessage;
 import it.danja.newsmonitor.io.SparqlConnector;
@@ -40,6 +42,8 @@ public class LinkExplorer implements Runnable {
 
 	private static Logger log = LoggerFactory.getLogger(LinkExplorer.class);
 	
+	private BundleContext bundleContext;
+	
 	private FeedList feedList = null;
 	private boolean running = false;
 	private Thread thread = null;
@@ -53,6 +57,10 @@ public class LinkExplorer implements Runnable {
 	 */
 	public LinkExplorer(FeedList feedList) {
 		this.feedList = feedList;
+	}
+	
+	public void setBundleContext(BundleContext bundleContext) {
+		this.bundleContext = bundleContext;
 	}
 
 	public void start() {
@@ -208,9 +216,15 @@ public class LinkExplorer implements Runnable {
 			log.info("*** SPARQL = \n" + message.getRequestBody());
 		}
 	}
-
+	
 	private Set<Link> getLinksFromStore() {
-		String sparql = TextFileReader.read(Config.GET_LINKS_SPARQL);
+		String sparql = null;
+		if(Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
+			sparql= TextFileReader.readFromFilesystem(Config.GET_LINKS_SPARQL);
+			} else {
+				sparql = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.GET_LINKS_SPARQL);
+			}
+		
 		String xmlResults = SparqlConnector
 				.query(Config.QUERY_ENDPOINT, sparql);
 

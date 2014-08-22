@@ -12,15 +12,15 @@ import org.osgi.framework.ServiceRegistration;
  */
 public class NewsMonitorActivator implements BundleActivator {
 	private ServiceRegistration registration;
-	private NewsMonitor newsmonitor = new NewsMonitor();
+	private NewsMonitor newsmonitor;
 
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
-
+		newsmonitor = new NewsMonitor(bundleContext);
 		registration = bundleContext.registerService(
 				NewsMonitor.class.getName(), newsmonitor, null);
-                newsmonitor.setBundleContext(bundleContext);
-		newsmonitor.start(); // TODO do it properly
+		// newsmonitor.setBundleContext(bundleContext);
+		newsmonitor.start();
 	}
 
 	@Override

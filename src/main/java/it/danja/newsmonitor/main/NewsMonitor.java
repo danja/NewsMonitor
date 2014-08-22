@@ -28,15 +28,30 @@ public class NewsMonitor {
     private LinkExplorer linkExplorer;
     private Poller poller;
 
-    private BundleContext bundleContext;
-
-    public void setBundleContext(BundleContext bundleContext) {
-        this.bundleContext = bundleContext;
+	private BundleContext bundleContext = null;
+    
+	/**
+	 * Constructor for standalone build
+	 */
+    public NewsMonitor(){
+    }
+    
+	/**
+	 * When created within OSGi, the BundleContext is passed along
+	 */
+    public NewsMonitor(BundleContext bundleContext){
+    	this.bundleContext = bundleContext;
     }
 
-    public BundleContext getBundleContext() {
-        return bundleContext;
-    }
+  //  private BundleContext bundleContext;
+
+//    public void setBundleContext(BundleContext bundleContext) {
+//        this.bundleContext = bundleContext;
+//    }
+//
+//    public BundleContext getBundleContext() {
+//        return bundleContext;
+//    }
 
     /**
      * @param args
@@ -49,28 +64,29 @@ public class NewsMonitor {
      * @param args
      */
     public void start(String feedlistFilename) {
-        NewsMonitor main = new NewsMonitor();
-        Templater templater = new Templater();
-        templater.setBundleContext(bundleContext);
+
+        Templater templater = new Templater(bundleContext);
         templater.init();
 
-        SystemStatus status = new SystemStatus();
+        SystemStatus status = new SystemStatus(bundleContext);
+
 
         status.initializeFeedListFromFile(feedlistFilename);
 
 		// load seed list from file into store
-        poller = new Poller();
+        poller = new Poller(bundleContext);
 
         // load feed list from store into memory, pass to Poller
         log.info("Loading feed list from store...");
-        poller.setFeedUrls(main.getFeeds());
+        poller.setFeedUrls(getFeeds());
 
         // FeedList feedSet =
         log.info("==== Initialising Feeds ====");
         poller.initFeeds();
 
         linkExplorer = new LinkExplorer(poller.getFeedList());
-
+        linkExplorer.setBundleContext(bundleContext);
+        
         log.info("==== Starting Poller ====");
         poller.start();
         linkExplorer.start();
@@ -101,6 +117,7 @@ public class NewsMonitor {
 
     private List<String> getFeeds() {
         FeedUrls feedUrlList = new FeedUrls();
+        feedUrlList.setBundleContext(bundleContext);
         feedUrlList.load();
         return feedUrlList.getFeeds();
     }
