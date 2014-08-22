@@ -40,6 +40,8 @@ public class SystemStatus {
 	// private static final String updateStatusTemplate;
 
 	public SystemStatus(BundleContext bundleContext) {
+		this.bundleContext = bundleContext;
+		// log.debug(bundleContext.toString());
 		if (Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
 			sparqlGetStatus = TextFileReader
 					.readFromFilesystem(Config.SPARQL_GET_STATUS_FILE);
@@ -75,12 +77,12 @@ public class SystemStatus {
 		return discoveryRunning;
 	}
 
-	public void initializeFeedListFromFile(String filename) {
-		log.info("Loading feed list from file " + filename + " into store...");
-		FeedListLoader loader = new FeedListLoader();
-		LineHandler handler = loader.new LineHandler();
+	public void initializeFeedListFromFile() {
+		// log.info("Loading feed list from file " + filename + " into store...");
+		FeedListLoader loader = new FeedListLoader(bundleContext);
+		
 
-		String turtleBody = loader.readFile(filename, handler);
+		String turtleBody = loader.readFile();
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
 		// log.info("Query = \n" + sparql);

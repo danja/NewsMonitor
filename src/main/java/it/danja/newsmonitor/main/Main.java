@@ -26,12 +26,12 @@ public class Main {
 		NewsMonitor nm = new NewsMonitor();
 		if(args.length > 1) {
 			log.info("args[0] = "+args[0]);
-			if("-C".equals(args[0])) {
-				nm.start(Config.SEED_FEEDLIST);
-			} 
-			if("-f".equals(args[0])) {
-				nm.start(args[1]);
-			} 
+//			if("-C".equals(args[0])) {
+//				nm.start(Config.SEED_FEEDLIST_FILE);
+//			} 
+//			if("-f".equals(args[0])) {
+//				nm.start(args[1]);
+//			} 
 		} else {
 			nm.start();
 		}

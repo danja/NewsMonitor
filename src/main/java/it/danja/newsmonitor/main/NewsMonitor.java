@@ -13,8 +13,8 @@ import it.danja.newsmonitor.discovery.LinkExplorer;
 import it.danja.newsmonitor.templating.Templater;
 
 import java.util.List;
-import org.osgi.framework.BundleContext;
 
+import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -56,22 +56,23 @@ public class NewsMonitor {
     /**
      * @param args
      */
-    public void start() {
-        start(Config.SEED_FEEDLIST);
-    }
+//    public void start() {
+//    	
+//        
+//    }
 
     /**
      * @param args
      */
-    public void start(String feedlistFilename) {
+    public void start() {
 
         Templater templater = new Templater(bundleContext);
         templater.init();
-
+        // log.debug(bundleContext.toString());
         SystemStatus status = new SystemStatus(bundleContext);
 
 
-        status.initializeFeedListFromFile(feedlistFilename);
+        status.initializeFeedListFromFile();
 
 		// load seed list from file into store
         poller = new Poller(bundleContext);

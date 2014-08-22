@@ -117,7 +117,7 @@ public class Templater {
 		String[] dir = null;
 		try {
 			dir = lister.getResourceListing(Templater.class,
-					Config.TEMPLATES_LOCATION);
+					Config.TEMPLATES_DIR_IN_BUNDLE);
 		} catch (URISyntaxException e) {
 			log.error(e.getMessage());
 		} catch (IOException e) {
@@ -230,7 +230,7 @@ public class Templater {
 		 */
 		/*
 		 * // URL test =
-		 * bundle.getResource(Config.TEMPLATES_LOCATION+"sample.ftl"); URL test
+		 * bundle.getResource(Config.TEMPLATES_DIR_IN_BUNDLE+"sample.ftl"); URL test
 		 * = null; try { test = findTemplateSource("sample"); } catch
 		 * (IOException ex) {
 		 * java.util.logging.Logger.getLogger(Templater.class.
@@ -241,7 +241,7 @@ public class Templater {
 		 */
 		/*
 		 * Enumeration<URL> urls = null; try { urls =
-		 * bundle.getResources(Config.TEMPLATES_LOCATION);
+		 * bundle.getResources(Config.TEMPLATES_DIR_IN_BUNDLE);
 		 * 
 		 * while (urls.hasMoreElements()) { URL url = urls.nextElement();
 		 * log.error("loading URL : "+url); loadTemplateFromUrl(url); } } catch
@@ -252,7 +252,7 @@ public class Templater {
 	}
 
 	private boolean containsTemplates(Bundle bundle) {
-		return bundle.getResource(Config.TEMPLATES_LOCATION) != null;
+		return bundle.getResource(Config.TEMPLATES_DIR_IN_BUNDLE) != null;
 	}
 
 	// public synchronized void loadTemplateFromUrl(URL url) {

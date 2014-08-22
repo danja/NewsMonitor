@@ -32,11 +32,11 @@ public class SparqlTemplater {
 	private String PREFIXES;
 	
 	public SparqlTemplater(BundleContext bundleContext) {
-		// PREFIXES = TextFileReader.read(Config.SPARQL_PREFIXES_FILENAME);
+		// PREFIXES = TextFileReader.read(Config.SPARQL_PREFIXES_FILE);
 		if(Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
-			PREFIXES = TextFileReader.readFromFilesystem(Config.SPARQL_PREFIXES_FILENAME);
+			PREFIXES = TextFileReader.readFromFilesystem(Config.SPARQL_PREFIXES_FILE);
 			} else {
-				PREFIXES = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.SPARQL_PREFIXES_FILENAME);
+				PREFIXES = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.SPARQL_PREFIXES_IN_BUNDLE);
 			}
 	}
 	

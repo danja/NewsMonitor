@@ -34,9 +34,9 @@ public class FeedUrls  {
 	public void load() {
 		String sparql = null;
 		if(Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
-			sparql = TextFileReader.readFromFilesystem(Config.SPARQL_FEEDLIST_FILENAME);
+			sparql = TextFileReader.readFromFilesystem(Config.SPARQL_FEEDLIST_FILE);
 			} else {
-				sparql = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.SPARQL_FEEDLIST_FILENAME);
+				sparql = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.SPARQL_FEEDLIST_IN_BUNDLE);
 			}
 		//	updateStatusTemplate = TextFileReader.read(Config.UPDATE_STATUS_TEMPLATE);
 		

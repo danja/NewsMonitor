@@ -9,6 +9,8 @@
  */
 package it.danja.newsmonitor.main;
 
+import org.osgi.framework.Bundle;
+import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +22,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
 
 /**
  * Read text list from disk, wrap with SPARQL template, push into store
@@ -42,17 +47,24 @@ public class FeedListLoader {
 	public static String CHANNEL_TEMPLATE = "<${url}> rdf:type rss:channel ; \n"
 			+ "foaf:topic <http://www.w3.org/2001/sw/>, <http://www.w3.org/RDF/> . \n\n";
 
+	private BundleContext bundleContext;
+	
+	public FeedListLoader(BundleContext bundleContext) {
+		this.bundleContext = bundleContext;
+		// log.debug(bundleContext.toString());
+	}
+
 	public static void main(String[] args) {
 
-		FeedListLoader loader = new FeedListLoader();
-		LineHandler handler = loader.new LineHandler();
-		String turtleBody = loader.readFile("input/rdf-bloggers-feedlist.txt",
-				handler);
-		String sparql = FeedListLoader.insertValue(SPARQL_TEMPLATE, "channels",
-				turtleBody);
-		// log.info("Query = \n" + sparql);
-		int responseCode = SparqlConnector.update(
-				"http://localhost:3030/feedreader/update", sparql).getStatusCode();
+//		FeedListLoader loader = new FeedListLoader();
+//		LineHandler handler = loader.new LineHandler();
+//		String turtleBody = loader.readFile("input/rdf-bloggers-feedlist.txt",
+//				handler);
+//		String sparql = FeedListLoader.insertValue(SPARQL_TEMPLATE, "channels",
+//				turtleBody);
+//		// log.info("Query = \n" + sparql);
+//		int responseCode = SparqlConnector.update(
+//				"http://localhost:3030/feedreader/update", sparql).getStatusCode();
 		// log.info(responseCode);
 	}
 
@@ -63,14 +75,42 @@ public class FeedListLoader {
 	 *            name of target file
 	 * @return String containing text content
 	 */
-	public static String readFile(String filename, LineHandler handler) {
-		File file = new File(filename);
+	public String readFile() {
+		log.debug(bundleContext.toString());
+		LineHandler handler = new LineHandler();
+		File file = null;
 		BufferedReader reader = null;
-		try {
-			reader = new BufferedReader(new FileReader(file));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+		if (Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
+			file = new File(Config.SEED_FEEDLIST_FILE);
+			try {
+				reader = new BufferedReader(new FileReader(file));
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		} else {
+			
+			Bundle bundle = bundleContext.getBundle();
+			URL url = bundle.getEntry(Config.SEED_FEEDLIST_IN_BUNDLE);
+			StringBuffer buffer = null;
+			// if (url != null) {
+			//InputStream inputStream = null;
+			if(url == null) {
+				throw new RuntimeException("Null URL from path  "+Config.SEED_FEEDLIST_IN_BUNDLE);
+			}
+			try {
+				InputStream  inputStream = url.openStream();
+
+			//	String string = "";
+			//	buffer = new StringBuffer();
+
+				reader = new BufferedReader(
+						new InputStreamReader(inputStream));
+			} catch (IOException ex) {
+				log.error(ex.getMessage());
+			}
 		}
+		
+		
 
 		String line = null;
 		try {
@@ -88,7 +128,7 @@ public class FeedListLoader {
 
 	/**
 	 * Ultra-crude templating
-	 * 
+	 * s
 	 * @param template
 	 * @param url
 	 * @return

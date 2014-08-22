@@ -144,7 +144,7 @@ public class HttpConnector {
 			connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod(method);
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 
 		connection.setReadTimeout(Config.READ_TIMEOUT);
@@ -172,7 +172,7 @@ public class HttpConnector {
 			connection.connect();
 		} catch (IOException e) {
 			// e.printStackTrace();
-			log.info(e.getMessage());
+			log.error(e.getMessage());
 		}
 		headers = connection.getHeaderFields();
 		return connection;

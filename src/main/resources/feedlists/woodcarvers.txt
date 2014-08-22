@@ -1,5 +1,6 @@
 # http://blog.lostartpress.com/feed/
 http://thomasguild.blogspot.com/feeds/posts/default
+http://www.wkfinetools.com/wkFineTools.xml
 http://sundaywoodcarver.blogspot.com/feeds/posts/default
 http://outwestwoodcarving.blogspot.com/feeds/posts/default
 http://carvintom.blogspot.com/feeds/posts/default
