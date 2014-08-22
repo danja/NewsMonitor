@@ -103,11 +103,11 @@ Config.BUILD_TYPE = Config.STANDALONE_BUILD;
 		Iterator<Link> i = links.iterator();
 		while (i.hasNext()) {
 			Link link = i.next();
-		log.info("link: " + link);
+	//	log.info("link: " + link);
 			if ("http://example.com".equals(link.getHref())
 					&& "with a link".equals(link.getLabel())) {
 				found = true;
-				log.info("TRUE: " + link);
+				// log.info("TRUE: " + link);
 			}
 		}
 		assertTrue("checking link in content", found);

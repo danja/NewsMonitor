@@ -12,12 +12,18 @@ package it.danja.newsmonitor.templating;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import it.danja.newsmonitor.io.ResourceLister;
 import it.danja.newsmonitor.main.Config;
+
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Collection;
 import java.util.Enumeration;
@@ -26,6 +32,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.logging.Level;
+
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.ComponentContext;
@@ -42,8 +49,8 @@ public class Templater {
     private static Configuration configuration = new Configuration();
     private static Map<String, Template> templates = new HashMap<String, Template>();
 
-    private     Collection<Bundle> bundles = new HashSet<Bundle>();
-    
+    private Collection<Bundle> bundles = new HashSet<Bundle>();
+
     private BundleContext bundleContext;
 
     public void setBundleContext(BundleContext bundleContext) {
@@ -92,11 +99,30 @@ public class Templater {
         if (Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
             loadTemplatesFromFilesystem();
         } else {
-            loadTemplatesFromBundle();
+           loadTemplatesFromBundle();
+          //  loadTemplatesFromFilesystem();
         }
     }
 
     public synchronized void loadTemplatesFromFilesystem() {
+    	ResourceLister lister = new ResourceLister();
+    	String[] dir = null;
+    	try {
+			dir = lister.getResourceListing(Templater.class, Config.TEMPLATES_LOCATION);
+		} catch (URISyntaxException e) {
+			log.error(e.getMessage());
+		} catch (IOException e) {
+			log.error(e.getMessage());
+		}
+    	for (int i = 0; i < dir.length; i++) {
+
+
+                if (dir[i].toLowerCase().endsWith(".ftl")) {
+                    loadTemplateFromFilesystem(dir[i]);
+                }
+            
+        }
+    	/*
         // get template files by [path]/[name].ftl
         File folder = new File(Config.TEMPLATES_DIR);
         File[] listOfFiles = folder.listFiles();
@@ -110,6 +136,7 @@ public class Templater {
                 }
             }
         }
+        */
     }
 
     public synchronized void loadTemplateFromFilesystem(String filename) {
@@ -130,81 +157,131 @@ public class Templater {
 
     public synchronized void loadTemplatesFromBundle() {
         Bundle bundle = bundleContext.getBundle();
-       // URL test = bundle.getResource(Config.TEMPLATES_LOCATION+"sample.ftl");
-        URL test = null;
-        try {
-            test = findTemplateSource("sample");
-        } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(Templater.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        System.err.println("A URL : "+test.toString());
-        log.error("B URL : "+test.toString());
-        throw new RuntimeException("C URL : "+test.toString());
-        /*
-        Enumeration<URL> urls = null;
-        try {
-            urls = bundle.getResources(Config.TEMPLATES_LOCATION);
+        
+       
+        Enumeration entries = bundle.findEntries("/", "*.ftl", true);
+        String s = "";
+    //    while(entries.hasMoreElements()) {
+        	URL url = (URL)entries.nextElement();
+        //	throw new RuntimeException("URL.GETPATH : "+url.getPath());
+      //  	s += url.toString()+"\n";
+       // }
+        	
+        	
+        	
+        	//  File file =  bundleContext.getDataFile(url.getPath().substring(1, url.getPath().length() ));
+        	 
+        	  String content = null;
+        	  if (url  != null) {
+        	        InputStream inputStream = null;
+					try {
+						inputStream = url.openStream();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+        	        String str = "";
+        	        StringBuffer buf = new StringBuffer();
 
-            while (urls.hasMoreElements()) {
-                URL url = urls.nextElement();
-                 log.error("loading URL : "+url);
-                loadTemplateFromUrl(url);
+        	        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+        	        if (inputStream != null) {
+        	            try {
+        	                while ((str = reader.readLine()) != null) {
+        	                    buf.append(str + "\n");
+        	                }
+        	            } catch (IOException ex) {
+        	                log.error(ex.getMessage());
+        	            }
+        	        }
+        	        throw new RuntimeException("TEXT : " + buf.toString());
+        	    }
+        	   
+        	  // File file=new File(url.toURI());
+        	  
+        	  /*
+       	   try {
+       	       FileReader reader = new FileReader(file);
+       	       char[] chars = new char[(int) file.length()];
+       	       reader.read(chars);
+       	       content = new String(chars);
+       	       reader.close();
+       	   } catch (IOException e) {
+       	       e.printStackTrace();
+       	   }*/
+      // throw new RuntimeException(file.toString()+"\n - CONTENTS : "+s);
+        // bundle://298.0:0/templates/html/it/danja/newsmonitor/resource/sample.ftl
+        
+    	/*
+        String name = "/templates/html/it/danja/newsmonitor/resource/sample.ftl";
+        InputStream inputStream = getClass().getResourceAsStream(name);
+
+        String str = "";
+        StringBuffer buf = new StringBuffer();
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+        if (inputStream != null) {
+            try {
+                while ((str = reader.readLine()) != null) {
+                    buf.append(str + "\n");
+                }
+            } catch (IOException ex) {
+                log.error(ex.getMessage());
             }
-        } catch (IOException ex) {
+        }
+        throw new RuntimeException("TEXT : " + buf.toString());
+*/
+        /*
+         // URL test = bundle.getResource(Config.TEMPLATES_LOCATION+"sample.ftl");
+         URL test = null;
+         try {
+         test = findTemplateSource("sample");
+         } catch (IOException ex) {
+         java.util.logging.Logger.getLogger(Templater.class.getName()).log(Level.SEVERE, null, ex);
+         }
+         System.err.println("A URL : "+test.toString());
+         log.error("B URL : "+test.toString());
+         throw new RuntimeException("C URL : "+test.toString());
+         */
+        /*
+         Enumeration<URL> urls = null;
+         try {
+         urls = bundle.getResources(Config.TEMPLATES_LOCATION);
+
+         while (urls.hasMoreElements()) {
+         URL url = urls.nextElement();
+         log.error("loading URL : "+url);
+         loadTemplateFromUrl(url);
+         }
+         } catch (IOException ex) {
             
-            log.error(ex.getMessage());
-        }
-                */
+         log.error(ex.getMessage());
+         }
+         */
     }
-    
-   private void loadBundles(BundleContext bundleContext) {
-		final Bundle[] registeredBundles = bundleContext.getBundles();
-		for (int i = 0; i < registeredBundles.length; i++) {
-			if ((registeredBundles[i].getState() == Bundle.ACTIVE) 
-					&& containsTemplates(registeredBundles[i])) {
-				bundles.add(registeredBundles[i]);
-			}
-		}	
-		
-	}
-   
-   	private boolean containsTemplates(Bundle bundle) {
-		return bundle.getResource(Config.TEMPLATES_LOCATION) != null;
-	}
-    
-    public URL findTemplateSource(String name) throws IOException {
-    
-		if (!name.endsWith(".ftl")) {
-			name = name +".ftl";
-		}
-		final String path = Config.TEMPLATES_LOCATION+name;
-		for (Bundle bundle : bundles) {
-			URL res = bundle.getResource(path);
-			if (res != null) {
-				return res;
-			}
-		}
-		log.warn("Template "+name+" not known");
-		return null;
-	}
 
-    public synchronized void loadTemplateFromUrl(URL url) {
-        try {
-            //  InputStreamReader isr = new InputStreamReader(url.openStream(), "UTF-8");
-            configuration.setTemplateLoader(new BundleURLTemplateLoader());
-            String urlString = url.toString();
-            Template template = configuration.getTemplate(urlString);
-            // log.info(filename);
-            // String[] split = filename.split(".");
-
-            String name = urlString.substring(0, urlString.indexOf(".")); // remove
-            // extension
-            // log.info(name);
-            templates.put(name, template);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private boolean containsTemplates(Bundle bundle) {
+        return bundle.getResource(Config.TEMPLATES_LOCATION) != null;
     }
+
+
+
+//    public synchronized void loadTemplateFromUrl(URL url) {
+//        try {
+//            //  InputStreamReader isr = new InputStreamReader(url.openStream(), "UTF-8");
+//            configuration.setTemplateLoader(new BundleURLTemplateLoader());
+//            String urlString = url.toString();
+//            Template template = configuration.getTemplate(urlString);
+//            // log.info(filename);
+//            // String[] split = filename.split(".");
+//
+//            String name = urlString.substring(0, urlString.indexOf(".")); // remove
+//            // extension
+//            // log.info(name);
+//            templates.put(name, template);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static String dataMapToString(Map<String, Object> data) {
         StringBuffer buffer = new StringBuffer();

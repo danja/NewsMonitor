@@ -22,6 +22,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		Config.BUILD_TYPE = Config.STANDALONE_BUILD;
 		NewsMonitor nm = new NewsMonitor();
 		if(args.length > 1) {
 			log.info("args[0] = "+args[0]);
