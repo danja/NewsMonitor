@@ -92,10 +92,10 @@ public class Config {
 	public static final String SPARQL_PREFIXES_IN_BUNDLE = "sparql/prefixes.sparql";
 
 	/* URLs */
-	// public static final String QUERY_ENDPOINT = "http://localhost:8080/sparql";
-	// public static final String UPDATE_ENDPOINT = "http://localhost:8080/update";
+	public static final String QUERY_ENDPOINT = "http://localhost:8080/sparql";
+	public static final String UPDATE_ENDPOINT = "http://localhost:8080/update";
 		
-	public static final String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
-	public static final String UPDATE_ENDPOINT = "http://localhost:3030/feedreader/update";
+	// public static final String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
+	// public static final String UPDATE_ENDPOINT = "http://localhost:3030/feedreader/update";
 
 }
