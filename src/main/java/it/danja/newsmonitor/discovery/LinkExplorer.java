@@ -222,7 +222,7 @@ public class LinkExplorer implements Runnable {
 		if(Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
 			sparql= TextFileReader.readFromFilesystem(Config.GET_LINKS_SPARQL_FILE);
 			} else {
-				sparql = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.GET_LINKS_SPARQL_FILE);
+				sparql = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.GET_LINKS_SPARQL_IN_BUNDLE);
 			}
 		
 		String xmlResults = SparqlConnector

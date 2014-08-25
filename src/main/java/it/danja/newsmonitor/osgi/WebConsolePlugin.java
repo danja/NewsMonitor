@@ -40,9 +40,9 @@ public class WebConsolePlugin extends
 		org.apache.felix.webconsole.AbstractWebConsolePlugin {
 
 
-    private static final long serialVersionUID = -7624898299851954672L;
+  //  private static final long serialVersionUID = -7624898299851954672L;
 
-    private static final String STATIC_PREFIX = "/newsmonitor/res/";
+    private static final String STATIC_PREFIX = "/newsmonitor/";
 
 //	@Reference
 //	private UserResource userManager;

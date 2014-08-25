@@ -126,8 +126,8 @@ public class SparqlResultsParser implements ContentHandler {
 	public void startElement(String uri, String localName, String qName,
 			Attributes atts) throws SAXException {
 
-		throw new RuntimeException("Local Name = "+localName);
-		/*
+		// throw new RuntimeException("Local Name = "+localName);
+		
 		state = State.valueOf(localName);
 
 		switch (state) {
@@ -153,7 +153,7 @@ public class SparqlResultsParser implements ContentHandler {
 		default:
 			break;
 		}
-		*/
+		
 	}
 
 	@Override
