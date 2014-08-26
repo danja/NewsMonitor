@@ -12,22 +12,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/commons-codec-1.6.jar"/>
-	<classpathentry kind="lib" path="lib/commons-logging-1.1.3.jar"/>
-	<classpathentry kind="lib" path="lib/fluent-hc-4.3.3.jar"/>
-	<classpathentry kind="lib" path="lib/httpclient-4.3.3.jar"/>
-	<classpathentry kind="lib" path="lib/httpclient-cache-4.3.3.jar"/>
-	<classpathentry kind="lib" path="lib/httpcore-4.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/httpmime-4.3.3.jar"/>
-	<classpathentry kind="lib" path="lib/freemarker.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="lib/commons-lang3-3.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/junit-4.11.jar"/>
-	<classpathentry kind="lib" path="lib/felix.jar"/>
-	<classpathentry kind="lib" path="lib/org.apache.felix.http.servlet-api-1.0.0.jar"/>
-	<classpathentry kind="lib" path="lib/org.apache.felix.scr.annotations-1.9.8.jar"/>
-	<classpathentry kind="lib" path="lib/org.apache.felix.webconsole-4.2.2-all.jar"/>
-	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.7.jar"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -43,5 +28,21 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="non-maven/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/felix.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/fluent-hc-4.3.3.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/freemarker.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/httpclient-4.3.3.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/httpclient-cache-4.3.3.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/httpcore-4.3.2.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/httpmime-4.3.3.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/org.apache.felix.http.servlet-api-1.0.0.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/org.apache.felix.scr.annotations-1.9.8.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/org.apache.felix.webconsole-4.2.2-all.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="non-maven/lib/slf4j-simple-1.7.7.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

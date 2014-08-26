@@ -9,6 +9,8 @@
  */
 package it.danja.newsmonitor.io;
 
+import it.danja.newsmonitor.main.Config;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,16 +20,27 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.Header;
+import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.AuthCache;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.impl.auth.BasicScheme;
+import org.apache.http.impl.client.BasicAuthCache;
+import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.slf4j.Logger;
@@ -53,15 +66,45 @@ public class SparqlConnector {
 	public static String query(String queryEndpoint, String sparql) {
 		int statusCode = -1;
 		String queryURL = null;
+		String encoded = null;
 		try {
-			queryURL = queryEndpoint + "?query="
-					+ URLEncoder.encode(sparql, "UTF-8");
-			// log.info("\n\n"+queryURL);
+			encoded = URLEncoder.encode(sparql, "UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			log.error(e.getMessage());
 		}
+		encoded = encoded.replace("{", "%7B"); // {} are special to Jersey
+		encoded = encoded.replace("}", "%7D");
 
-		HttpClient client = new DefaultHttpClient();
+		queryURL = queryEndpoint + "?query=" + encoded;
+		// log.info("\n\n"+queryURL);
+
+		// Eclipse warns about client not being closed, but it doesn't have a
+		// close() method, hopefully release does the trick
+	//	HttpClient client = new DefaultHttpClient();
+//		HttpClient client = HttpClientBuilder.create().build();
+//	    client.
+	    // getCredentialsProvider().setCredentials(new AuthScope(host, AuthScope.ANY_PORT), new UsernamePasswordCredentials(USERNAME, PASSWORD));
+	       
+		CloseableHttpClient client = HttpClientBuilder.create().build();
+
+		HttpHost targetHost = new HttpHost(Config.SPARQL_HOST, Config.SPARQL_PORT, Config.SPARQL_SCHEME);
+		CredentialsProvider credsProvider = new BasicCredentialsProvider();
+		credsProvider.setCredentials(
+		        new AuthScope(targetHost.getHostName(), targetHost.getPort()),
+		        new UsernamePasswordCredentials(Config.USERNAME, Config.PASSWORD));
+
+		// Create AuthCache instance
+		AuthCache authCache = new BasicAuthCache();
+		// Generate BASIC scheme object and add it to the local auth cache
+		BasicScheme basicAuth = new BasicScheme();
+		authCache.put(targetHost, basicAuth);
+
+		// Add AuthCache to the execution context
+		HttpClientContext context = HttpClientContext.create();
+		context.setCredentialsProvider(credsProvider);
+		context.setAuthCache(authCache);
+		
+		//
 		HttpGet request = new HttpGet(queryURL);
 		request.addHeader("Accept", "sparql-results+xml");
 		HttpResponse response = null;
@@ -72,11 +115,12 @@ public class SparqlConnector {
 		} catch (IOException e) {
 			log.error(e.getMessage());
 		}
+		request.releaseConnection();
 
-		// Header[] headers = response.getAllHeaders();
-		// for(int i =0;i<headers.length; i++){
-		// log.info("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
-		// }
+		 Header[] headers = response.getAllHeaders();
+		 for(int i =0;i<headers.length; i++){
+		 log.debug("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
+		 }
 
 		// Get the response
 		InputStream inputStream = null;

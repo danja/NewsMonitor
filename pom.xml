@@ -1,385 +1,347 @@
-<!--
-	Ultimately want 4 profiles (in decreasing priority) :
-		OSGi for Fusepool/Stanbol
-		Standalone, external SPARQL store
-		OSGi for Felix without Fusepool/Stanbol (with bundled Fuseki? TBD)
-		Standalone, built in SPARQL store
-
--->
+<!-- Ultimately want 4 profiles (in decreasing priority) : OSGi for Fusepool/Stanbol 
+	Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol 
+	(with bundled Fuseki? TBD) Standalone, built in SPARQL store -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>it.danja</groupId>
-    <artifactId>NewsMonitor</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>bundle</packaging>
+	<groupId>it.danja</groupId>
+	<artifactId>NewsMonitor</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>bundle</packaging>
 
-    <name>NewsMonitor</name>
+	<name>NewsMonitor</name>
 	<description>
 		Feed aggregator/reader
 	</description>
-    <inceptionYear>2014</inceptionYear>
-    <licenses>
-        <license>
-            <name>Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
-        </license>
-    </licenses> 
+	<inceptionYear>2014</inceptionYear>
+	<licenses>
+		<license>
+			<name>Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-   
-    <!-- build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.3.7</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Bundle-Activator>it.danja.newsmonitor.Activator</Bundle-Activator>
-                        <Export-Package/>
-                    </instructions>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-    <profiles>
-        <profile>
-            <id>build-for-felix</id>
+	<!-- build> <plugins> <plugin> <groupId>org.apache.felix</groupId> <artifactId>maven-bundle-plugin</artifactId> 
+		<version>2.3.7</version> <extensions>true</extensions> <configuration> <instructions> 
+		<Bundle-Activator>it.danja.newsmonitor.Activator</Bundle-Activator> <Export-Package/> 
+		</instructions> </configuration> </plugin> </plugins> </build -->
 
-        <activation>
-            <activeByDefault>true</activeByDefault>
-        </activation>
- 
-            <build>
-                <plugins>
-                    <!--   plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <version>1.7</version>
-                        <executions>
-                            <execution>
-                                <id>compile</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>run</goal>
-                                </goals>
-                                <configuration>
-                                    <target>
-                                        <pathconvert property="plugins.jars" pathsep="${path.separator}">
-                                            <path refid="maven.runtime.classpath"/>
-                                            <map from="${project.build.directory}${file.separator}classes" to=""/>
-                                        </pathconvert>
-                                        <pathconvert pathsep=" " property="bundles">
-                                            <path path="${plugins.jars}"/>
-                                            <mapper>
-                                                <chainedmapper>
-                                                    <flattenmapper/>
-                                                    <globmapper from="*" to="file:modules/*" casesensitive="no"/>
-                                                </chainedmapper>
-                                            </mapper>
-                                        </pathconvert>
-                                        <propertyfile file="${project.build.directory}/config.properties">
-                                            <entry key="felix.auto.start" value="${bundles} file:modules/${project.build.finalName}.jar"/>
-                                            <entry key="org.osgi.framework.bootdelegation" value="*"/>
-                                        </propertyfile>
-                                        <copy file="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}" tofile="${project.build.directory}/felix.jar"/>
-                                    </target>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin -->
-                    <!--  plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <version>2.3</version>
-                        <executions>
-                            <execution>
-                                <id>create-executable-jar</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
-                                </goals>
-                                <configuration>
-                                    <descriptors>
-                                        <descriptor>${basedir}/src/main/assembly/felix.xml</descriptor>
-                                    </descriptors>
-                                    <finalName>${project.build.finalName}</finalName>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin -->
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.3.7</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Bundle-Activator>it.danja.newsmonitor.osgi.NewsMonitorActivator</Bundle-Activator>
-                        <Bundle-Category>Fusepool Application</Bundle-Category>
-                        <Export-Package/>
-                    </instructions>
-                </configuration>
-            </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>run-on-felix</id>
-            <dependencies>
-                
-            </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <version>1.7</version>
-                        <configuration>
-                            <target>
-                                <property name="vm.args" value=""/>
-                                <pathconvert property="plugins.jars" pathsep="${path.separator}">
-                                    <path refid="maven.runtime.classpath"/>
-                                    <map from="${project.build.directory}${file.separator}classes" to=""/>
-                                </pathconvert>
-                                <makeurl property="urls" separator=" ">
-                                    <path path="${plugins.jars}"/>
-                                    <path location="${project.build.directory}/${project.build.finalName}.jar"/>
-                                </makeurl>
-                                <propertyfile file="${project.build.directory}/run.properties">
-                                    <entry key="felix.auto.start" value="${urls}"/>
-                                    <entry key="felix.auto.deploy.action" value="uninstall,install,update,start"/>
-                                    <entry key="org.osgi.framework.storage" value="${project.build.directory}${file.separator}felix-cache"/>
-                                    <entry key="org.osgi.framework.bootdelegation" value="*"/>
-                                </propertyfile>
-                                <makeurl property="run.properties.url" file="${project.build.directory}/run.properties"/>
-                                <java fork="true" jar="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}">
-                                    <sysproperty key="felix.config.properties" value="${run.properties.url}"/>
-                                    <jvmarg line="${vm.args}"/>
-                                </java>
-                            </target>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+	<profiles>
+		<profile>
+			<id>build-for-stanbol</id>
 
- <dependencies>
-        <!-- dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.core</artifactId>
-            <version>4.3.0</version>
-            <scope>provided</scope>
-        </dependency -->
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.main</artifactId>
-            <version>4.0.3</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- To include a shell:
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.gogo.shell</artifactId>
-            <version>0.10.0</version>
-        </dependency>
-        -->
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 
-        <!-- org.apache.felix:org.apache.felix.gogo.shell:0.6.1 useless from Maven since stdin is swallowed -->
+			<build>
+				<plugins>
+					<!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-antrun-plugin</artifactId> 
+						<version>1.7</version> <executions> <execution> <id>compile</id> <phase>package</phase> 
+						<goals> <goal>run</goal> </goals> <configuration> <target> <pathconvert property="plugins.jars" 
+						pathsep="${path.separator}"> <path refid="maven.runtime.classpath"/> <map 
+						from="${project.build.directory}${file.separator}classes" to=""/> </pathconvert> 
+						<pathconvert pathsep=" " property="bundles"> <path path="${plugins.jars}"/> 
+						<mapper> <chainedmapper> <flattenmapper/> <globmapper from="*" to="file:modules/*" 
+						casesensitive="no"/> </chainedmapper> </mapper> </pathconvert> <propertyfile 
+						file="${project.build.directory}/config.properties"> <entry key="felix.auto.start" 
+						value="${bundles} file:modules/${project.build.finalName}.jar"/> <entry key="org.osgi.framework.bootdelegation" 
+						value="*"/> </propertyfile> <copy file="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}" 
+						tofile="${project.build.directory}/felix.jar"/> </target> </configuration> 
+						</execution> </executions> </plugin -->
+					<!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+						<version>2.3</version> <executions> <execution> <id>create-executable-jar</id> 
+						<phase>package</phase> <goals> <goal>single</goal> </goals> <configuration> 
+						<descriptors> <descriptor>${basedir}/src/main/assembly/felix.xml</descriptor> 
+						</descriptors> <finalName>${project.build.finalName}</finalName> </configuration> 
+						</execution> </executions> </plugin -->
+					<plugin>
+						<groupId>org.apache.felix</groupId>
+						<artifactId>maven-scr-plugin</artifactId>
+						<version>1.16.0</version>
+						<executions>
+							<execution>
+								<id>generate-scr-scrdescriptor</id>
+								<goals>
+									<goal>scr</goal>
+								</goals>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>org.slf4j</groupId>
+								<artifactId>slf4j-api</artifactId>
+								<version>1.6.6</version>
+							</dependency>
 
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.6.6</version>
-            </dependency>
+							<dependency>
+								<groupId>org.slf4j</groupId>
+								<artifactId>slf4j-simple</artifactId>
+								<version>1.6.1</version>
+							</dependency>
+						</dependencies>
+					</plugin>
 
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-simple</artifactId>
-      <version>1.6.1</version>
-      <scope>test</scope>
-    </dependency>
+					<plugin>
+						<groupId>org.apache.felix</groupId>
+						<artifactId>maven-bundle-plugin</artifactId>
+						<version>2.3.7</version>
+						<extensions>true</extensions>
+						<configuration>
+							<instructions>
+								<Bundle-Activator>it.danja.newsmonitor.osgi.NewsMonitorActivator</Bundle-Activator>
+								<Bundle-Category>Fusepool Application</Bundle-Category>
+								<Import-Package>
+									org.apache.stanbol.commons.web.base; provide:=true,
+									org.apache.felix.webconsole; provide:=true,
+									*
+								</Import-Package>
+								<Export-Package>
+									it.danja.newsmonitor; version=${project.version},
+									it.danja.newsmonitor.osgi; version=${project.version}
+								</Export-Package>
+							</instructions>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<!-- profile> <id>run-on-felix</id> <dependencies> </dependencies> <build> 
+			<plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-antrun-plugin</artifactId> 
+			<version>1.7</version> <configuration> <target> <property name="vm.args" 
+			value=""/> <pathconvert property="plugins.jars" pathsep="${path.separator}"> 
+			<path refid="maven.runtime.classpath"/> <map from="${project.build.directory}${file.separator}classes" 
+			to=""/> </pathconvert> <makeurl property="urls" separator=" "> <path path="${plugins.jars}"/> 
+			<path location="${project.build.directory}/${project.build.finalName}.jar"/> 
+			</makeurl> <propertyfile file="${project.build.directory}/run.properties"> 
+			<entry key="felix.auto.start" value="${urls}"/> <entry key="felix.auto.deploy.action" 
+			value="uninstall,install,update,start"/> <entry key="org.osgi.framework.storage" 
+			value="${project.build.directory}${file.separator}felix-cache"/> <entry key="org.osgi.framework.bootdelegation" 
+			value="*"/> </propertyfile> <makeurl property="run.properties.url" file="${project.build.directory}/run.properties"/> 
+			<java fork="true" jar="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}"> 
+			<sysproperty key="felix.config.properties" value="${run.properties.url}"/> 
+			<jvmarg line="${vm.args}"/> </java> </target> </configuration> </plugin> 
+			</plugins> </build> </profile -->
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
+		<profile>
+			<id>build-for-fuseki</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
+						<configuration>
+							<archive>
+								<manifest>
+									<mainClass>it.danja.newsmonitor.main.Main</mainClass>
+								</manifest>
+							</archive>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
 
-			<!-- version>3.8.2</version --> 
-            <scope>test</scope>
-        </dependency>
-        <!-- dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency -->
+			<dependencies>
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+					<version>1.6.6</version>
+				</dependency>
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-simple</artifactId>
+					<version>1.6.1</version>
+				</dependency>
+			</dependencies>
 
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>1.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.3.2</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId> 
-            <artifactId>httpclient-osgi</artifactId>
-            <version>4.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore-osgi</artifactId>
-            <version>4.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient-cache</artifactId>
-            <version>4.3.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>fluent-hc</artifactId>
-            <version>4.3.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.freemarker</groupId> 
-            <artifactId>freemarker</artifactId>
-            <version>2.3.20</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore-nio</artifactId>
-            <version>4.3.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpmime</artifactId>
-            <version>4.3.1</version>
-        </dependency>
+		</profile>
+	</profiles>
 
-      <dependency>
-          <groupId>javax.ws.rs</groupId>
-          <artifactId>javax.ws.rs-api</artifactId>
-          <version>2.0</version>
-      </dependency>
+	<dependencies>
+		<!-- dependency> <groupId>org.osgi</groupId> <artifactId>org.osgi.core</artifactId> 
+			<version>4.3.0</version> <scope>provided</scope> </dependency -->
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.main</artifactId>
+			<version>4.0.3</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- To include a shell: <dependency> <groupId>org.apache.felix</groupId> 
+			<artifactId>org.apache.felix.gogo.shell</artifactId> <version>0.10.0</version> 
+			</dependency> -->
 
-        <!-- Stanbol -->
-<dependency>
-	<groupId>org.apache.stanbol</groupId>
-	<artifactId>org.apache.stanbol.commons.freemarker</artifactId>
-	<version>0.12.0</version>
-</dependency>
+		<!-- org.apache.felix:org.apache.felix.gogo.shell:0.6.1 useless from Maven 
+			since stdin is swallowed -->
 
-        <!--
-                <dependency>
-                    <groupId>org.apache.stanbol</groupId>
-                    <artifactId>org.apache.stanbol.commons.web.base</artifactId>
-                    <version>1.0.0-SNAPSHOT</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.felix</groupId>
-                    <artifactId>org.apache.felix.webconsole</artifactId>
-                    <version>3.1.8</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.clerezza</groupId>
-                    <artifactId>platform.config</artifactId>
-                    <version>0.4</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.stanbol</groupId>
-                    <artifactId>org.apache.stanbol.commons.web.viewable</artifactId>
-                    <version>1.0.0-SNAPSHOT</version>
-                </dependency> 
-        -->
-    
-        <!-- OSGi tax -->
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.core</artifactId>
-            <version>4.3.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.compendium</artifactId>
-            <version>4.3.1</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.6</version>
+		</dependency>
 
-        <!-- dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.osgi.core</artifactId>
-            <version>1.4.0</version>
-        </dependency -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.6.1</version>
+			<!-- scope>test</scope -->
+		</dependency>
 
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr.annotations</artifactId>
-            <version>1.9.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.configadmin</artifactId>
-            <version>1.2.8</version>
-        </dependency>      
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.osgi.compendium</artifactId>
-            <version>1.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.http.jetty</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.http.api</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.http.servlet-api</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
 
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.webconsole</artifactId>
-            <version>4.0.0</version>
-            <type>jar</type>
-        </dependency>
+			<!-- version>3.8.2</version -->
+			<scope>test</scope>
+		</dependency>
+		<!-- dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
+			<version>3.8.1</version> <scope>test</scope> </dependency -->
 
-    </dependencies>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-osgi</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore-osgi</artifactId>
+			<version>4.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-cache</artifactId>
+			<version>4.3.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>fluent-hc</artifactId>
+			<version>4.3.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.20</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore-nio</artifactId>
+			<version>4.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<!-- Stanbol -->
+		<dependency>
+			<groupId>org.apache.stanbol</groupId>
+			<artifactId>org.apache.stanbol.commons.freemarker</artifactId>
+			<version>0.12.0</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>org.apache.stanbol</groupId> <artifactId>org.apache.stanbol.commons.web.base</artifactId> 
+			<version>1.0.0-SNAPSHOT</version> </dependency> <dependency> <groupId>org.apache.felix</groupId> 
+			<artifactId>org.apache.felix.webconsole</artifactId> <version>3.1.8</version> 
+			</dependency> <dependency> <groupId>org.apache.clerezza</groupId> <artifactId>platform.config</artifactId> 
+			<version>0.4</version> </dependency> <dependency> <groupId>org.apache.stanbol</groupId> 
+			<artifactId>org.apache.stanbol.commons.web.viewable</artifactId> <version>1.0.0-SNAPSHOT</version> 
+			</dependency> -->
+
+		<!-- OSGi tax -->
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>4.3.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>4.3.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- dependency> <groupId>org.apache.felix</groupId> <artifactId>org.osgi.core</artifactId> 
+			<version>1.4.0</version> </dependency -->
+
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.scr</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.scr.annotations</artifactId>
+			<version>1.9.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.configadmin</artifactId>
+			<version>1.2.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.jetty</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.api</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.servlet-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.webconsole</artifactId>
+			<version>4.0.0</version>
+			<type>jar</type>
+		</dependency>
+
+	</dependencies>
 
 </project>

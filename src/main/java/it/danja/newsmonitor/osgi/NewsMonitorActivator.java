@@ -12,13 +12,18 @@ import org.osgi.framework.ServiceRegistration;
  */
 public class NewsMonitorActivator implements BundleActivator {
 	private ServiceRegistration registration;
+        private ServiceRegistration webUIRegistration;
 	private NewsMonitor newsmonitor;
+        private WebUI webUI;
 
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
 		newsmonitor = new NewsMonitor(bundleContext);
 		registration = bundleContext.registerService(
 				NewsMonitor.class.getName(), newsmonitor, null);
+                webUI = new WebUI();
+                webUIRegistration = bundleContext.registerService(
+				WebUI.class.getName(), webUI, null);
 		// newsmonitor.setBundleContext(bundleContext);
 		newsmonitor.start();
 	}
@@ -27,6 +32,7 @@ public class NewsMonitorActivator implements BundleActivator {
 	public void stop(BundleContext bundleContext) throws Exception {
 
 		registration.unregister();
-		newsmonitor.stop(); // TODO do it properly
+                webUIRegistration.unregister();
+		newsmonitor.stop(); 
 	}
 }

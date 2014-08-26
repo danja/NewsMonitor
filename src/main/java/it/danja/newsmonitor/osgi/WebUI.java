@@ -26,20 +26,17 @@ import org.apache.felix.scr.annotations.Service;
 //import org.apache.stanbol.commons.viewable.Viewable;
 //import org.apache.stanbol.commons.web.base.resource.BaseStanbolResource;
 
-/**
- * Root JAX-RS resource. The HTML view is implicitly rendered by a freemarker
- * template to be found in the META-INF/templates folder.
- */
 @Component
-@Service(Object.class)
+@Service(WebUI.class) //{Object.class, 
 @Property(name = "javax.ws.rs", boolValue = true)
-@Path("/newsmonitor")
+@Path("newsmonitor")
 public class WebUI {
 
      private static final String STATIC_RESOURCE_PATH = "/it/danja/newsmonitor/static";
      
     @GET
     @Produces(TEXT_HTML)
+    @Path("views")
     public Response get() {
         return Response.ok("A TEST STRING", TEXT_HTML).build();
     }

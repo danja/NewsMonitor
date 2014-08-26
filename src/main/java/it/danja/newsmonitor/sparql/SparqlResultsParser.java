@@ -127,6 +127,7 @@ public class SparqlResultsParser implements ContentHandler {
 			Attributes atts) throws SAXException {
 
 		// throw new RuntimeException("Local Name = "+localName);
+		log.debug("START ELEMENT = "+localName);
 		
 		state = State.valueOf(localName);
 

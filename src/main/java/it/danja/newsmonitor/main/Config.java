@@ -16,6 +16,9 @@ import it.danja.newsmonitor.discovery.Topic;
  * TODO move this to an external declarative file (RDF, properties or similar)
  */
 public class Config {
+	
+	public static final String USERNAME = "admin"; // Stanbol defaults
+	public static final String PASSWORD = "admin";
 
 	public static final char STANDALONE_BUILD = 0;
 	public static final char OSGI_BUILD = 1;
@@ -46,18 +49,18 @@ public class Config {
 	/**
 	 * Pause between polling runs
 	 */
-	public static int REFRESH_PERIOD = 1 * 60 * 1000; // milliseconds
+	public static int REFRESH_PERIOD = 60 * 60 * 1000; // milliseconds
 
 	/**
 	 * Pause between reading each feed
 	 */
-	public static int PER_FEED_SLEEP_PERIOD = 1000;
-	
-	
-	public static final int CONNECT_TIMEOUT = 1000; // milliseconds
-	public static final int READ_TIMEOUT = 2000; // milliseconds
-	public static final int LINK_EXPLORER_SLEEP_PERIOD = 1000; // per-link
+	public static int PER_FEED_SLEEP_PERIOD = 1000; // milliseconds
+        
+	public static final int LINK_EXPLORER_SLEEP_PERIOD = 60 * 60 * 1000; // per-link
 
+        	public static final int CONNECT_TIMEOUT = 1000; // milliseconds
+	public static final int READ_TIMEOUT = 2000; // milliseconds
+        
 	/**
 	 * Number of attempts to read a feed which is failing before flagging it as
 	 * dead
@@ -92,8 +95,15 @@ public class Config {
 	public static final String SPARQL_PREFIXES_IN_BUNDLE = "sparql/prefixes.sparql";
 
 	/* URLs */
-	public static final String QUERY_ENDPOINT = "http://localhost:8080/sparql";
-	public static final String UPDATE_ENDPOINT = "http://localhost:8080/update";
+	public static final String SPARQL_SCHEME = "http";
+	public static final String SPARQL_HOST = "localhost";
+	public static final int SPARQL_PORT = 8080;
+	public static final String SPARQL_QUERY_PATH = "/sparql";
+	public static final String SPARQL_UPDATE_PATH = "/update";
+	public static final String SPARQL_URL_BASE = SPARQL_SCHEME+"://"+SPARQL_HOST+":"+SPARQL_PORT;
+	// "http://localhost:8080/sparql"; , "http://localhost:8080/update";
+	public static final String QUERY_ENDPOINT = SPARQL_URL_BASE+SPARQL_QUERY_PATH;
+	public static final String UPDATE_ENDPOINT = SPARQL_URL_BASE+SPARQL_UPDATE_PATH;
 		
 	// public static final String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
 	// public static final String UPDATE_ENDPOINT = "http://localhost:3030/feedreader/update";
