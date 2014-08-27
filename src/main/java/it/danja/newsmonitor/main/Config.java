@@ -101,6 +101,7 @@ public class Config {
 	public static final String SPARQL_QUERY_PATH = "/sparql";
 	public static final String SPARQL_UPDATE_PATH = "/update";
 	public static final String SPARQL_URL_BASE = SPARQL_SCHEME+"://"+SPARQL_HOST+":"+SPARQL_PORT;
+	
 	// "http://localhost:8080/sparql"; , "http://localhost:8080/update";
 	public static final String QUERY_ENDPOINT = SPARQL_URL_BASE+SPARQL_QUERY_PATH;
 	public static final String UPDATE_ENDPOINT = SPARQL_URL_BASE+SPARQL_UPDATE_PATH;

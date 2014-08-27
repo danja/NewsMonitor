@@ -30,6 +30,8 @@ public class SparqlTemplater {
 	private static Logger log = LoggerFactory.getLogger(SparqlTemplater.class);
 
 	private String PREFIXES;
+        
+            private SparqlConnector sparqlConnector = new SparqlConnector();
 	
 	public SparqlTemplater(BundleContext bundleContext) {
 		// PREFIXES = TextFileReader.read(Config.SPARQL_PREFIXES_FILE);
@@ -60,7 +62,7 @@ public class SparqlTemplater {
 		
 		String sparql = Templater.apply("sparql-insert", map);
 		// log.info("\n\n----------------\n"+sparql+"\n\n---------------------");
-		HttpMessage message = SparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
+		HttpMessage message = sparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
 		message.setRequestBody(sparql);
 		return message;
 	}

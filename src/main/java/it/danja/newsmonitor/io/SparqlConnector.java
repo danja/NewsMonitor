@@ -63,7 +63,7 @@ public class SparqlConnector {
 	 * @param sparql
 	 * @return
 	 */
-	public static String query(String queryEndpoint, String sparql) {
+	public synchronized String query(String queryEndpoint, String sparql) {
 		int statusCode = -1;
 		String queryURL = null;
 		String encoded = null;
@@ -87,6 +87,7 @@ public class SparqlConnector {
 	       
 		CloseableHttpClient client = HttpClientBuilder.create().build();
 
+		/*
 		HttpHost targetHost = new HttpHost(Config.SPARQL_HOST, Config.SPARQL_PORT, Config.SPARQL_SCHEME);
 		CredentialsProvider credsProvider = new BasicCredentialsProvider();
 		credsProvider.setCredentials(
@@ -95,6 +96,7 @@ public class SparqlConnector {
 
 		// Create AuthCache instance
 		AuthCache authCache = new BasicAuthCache();
+		
 		// Generate BASIC scheme object and add it to the local auth cache
 		BasicScheme basicAuth = new BasicScheme();
 		authCache.put(targetHost, basicAuth);
@@ -104,11 +106,13 @@ public class SparqlConnector {
 		context.setCredentialsProvider(credsProvider);
 		context.setAuthCache(authCache);
 		
+		*/
 		//
 		HttpGet request = new HttpGet(queryURL);
 		request.addHeader("Accept", "sparql-results+xml");
 		HttpResponse response = null;
 		try {
+		//	response = client.execute(targetHost, request, context);
 			response = client.execute(request);
 		} catch (ClientProtocolException e) {
 			log.error(e.getMessage());
@@ -117,10 +121,54 @@ public class SparqlConnector {
 		}
 		request.releaseConnection();
 
+		 statusCode = response.getStatusLine().getStatusCode();
+		 
+	//	 throw new RuntimeException("\nCONTENT = "+statusCode+"\n");
+		 
+		 if(statusCode == 401) {
+			 request.addHeader("Authorization", "Basic YWRtaW46YWRtaW4=");
+			 request.addHeader("Cache-Control", "no-cache");
+			 request.addHeader("Pragma", "no-cache");
+			 request.addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+			 request.addHeader("Accept-Encoding", "gzip,deflate,sdch");
+			 request.addHeader("Accept-Language", "en-US,en;q=0.8");
+			 request.addHeader("Connection", "keep-alive");
+		
+			 HttpHost targetHost = new HttpHost(Config.SPARQL_HOST, Config.SPARQL_PORT, Config.SPARQL_SCHEME);
+			 
+			 CredentialsProvider credsProvider = new BasicCredentialsProvider();
+				credsProvider.setCredentials(
+				        new AuthScope(targetHost.getHostName(), targetHost.getPort()),
+				        new UsernamePasswordCredentials(Config.USERNAME, Config.PASSWORD)
+				        );
+				HttpClientContext context = HttpClientContext.create();
+				context.setCredentialsProvider(credsProvider);
+				try {
+					response = client.execute(targetHost, request, context);
+					response = client.execute(request);
+				} catch (ClientProtocolException e) {
+					log.error(e.getMessage());
+				} catch (IOException e) {
+					log.error(e.getMessage());
+				}
+				request.releaseConnection();
+		 }
+		
+		String headersString = new String();
 		 Header[] headers = response.getAllHeaders();
 		 for(int i =0;i<headers.length; i++){
-		 log.debug("HEADER "+headers[i].getName()+" : "+headers[i].getValue());
+		 headersString += "HEADER "+headers[i].getName()+" : "+headers[i].getValue()+"\n";
 		 }
+// throw new RuntimeException("\n"+Integer.toString(statusCode)+"\n"+headersString+"\n");
+
+ // /*
+//401
+//HEADER Date : Tue, 26 Aug 2014 09:49:06 GMT
+//HEADER WWW-Authenticate : Basic realm="Apache Stanbol authentication needed"
+//HEADER Content-Length : 38
+//HEADER Server : Jetty(8.1.14.v20131031)
+		 
+		 // Authorization:Basic YWRtaW46YWRtaW4=
 
 		// Get the response
 		InputStream inputStream = null;
@@ -166,7 +214,10 @@ public class SparqlConnector {
 		} catch (IOException e) {
 			log.error(e.getMessage());
 		}
-		return content.toString();
+	//	
+		 
+		 return content.toString();
+	// */
 	}
 
 	/**
@@ -174,7 +225,7 @@ public class SparqlConnector {
 	 * @param sparql
 	 * @return
 	 */
-	public static HttpMessage update(String updateEndpoint, String sparql) {
+	public synchronized HttpMessage update(String updateEndpoint, String sparql) {
 
 		int statusCode = -1;
 

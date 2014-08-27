@@ -26,6 +26,8 @@ public class FeedUrls  {
 	private List<String> feeds = new ArrayList<String>();
 
 	private BundleContext bundleContext;
+        
+        
 	
 	public void setBundleContext(BundleContext bundleContext) {
 		this.bundleContext = bundleContext;
@@ -41,9 +43,9 @@ public class FeedUrls  {
 		//	updateStatusTemplate = TextFileReader.read(Config.UPDATE_STATUS_TEMPLATE);
 		
 		
+		   SparqlConnector sparqlConnector = new SparqlConnector();
 		
-		
-		String xmlResults = SparqlConnector.query(Config.QUERY_ENDPOINT, sparql);
+		String xmlResults = sparqlConnector.query(Config.QUERY_ENDPOINT, sparql);
 
 		/*
 		 * is no doubt less efficient than using 
@@ -52,6 +54,7 @@ public class FeedUrls  {
 		 * and doesn't have to run very often
 		 */
 		SparqlResultsParser parser = new SparqlResultsParser();
+               // parser.setSparql(sparql); // for debugging
 		List<Result> results = parser.parse(xmlResults).getResults();
 		for (int i = 0; i < results.size(); i++) {
 			// log.info(results.get(i));

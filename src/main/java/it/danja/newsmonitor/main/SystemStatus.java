@@ -30,6 +30,8 @@ public class SystemStatus {
 
 	private static Logger log = LoggerFactory.getLogger(SystemStatus.class);
 
+            private SparqlConnector sparqlConnector = new SparqlConnector();
+            
 	private boolean pollerRunning = true;
 	private boolean discoveryRunning = true;
 
@@ -86,7 +88,7 @@ public class SystemStatus {
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
 		// log.info("Query = \n" + sparql);
-		int responseCode = SparqlConnector.update(Config.UPDATE_ENDPOINT,
+		int responseCode = sparqlConnector.update(Config.UPDATE_ENDPOINT,
 				sparql).getStatusCode();
 		log.info("SPARQL response : " + responseCode);
 	}
@@ -97,12 +99,12 @@ public class SystemStatus {
 		map.put("discoveryRunning", discoveryRunning);
 
 		String sparql = Templater.apply("update-status", map);
-		SparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
+		sparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
 	}
 
 	private void pullStatusFromStore() {
 		// log.info("A");
-		String results = SparqlConnector.query(Config.QUERY_ENDPOINT,
+		String results = sparqlConnector.query(Config.QUERY_ENDPOINT,
 				sparqlGetStatus);
 		// log.info("B");
 		SparqlResultsParser parser = new SparqlResultsParser();
