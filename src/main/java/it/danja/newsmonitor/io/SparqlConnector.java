@@ -19,6 +19,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.http.Header;
 import org.apache.http.HttpHost;
@@ -57,7 +58,12 @@ import org.slf4j.LoggerFactory;
 public class SparqlConnector {
 
 	private static Logger log = LoggerFactory.getLogger(SparqlConnector.class);
+	
+	private Properties config = null;
 
+	public SparqlConnector(Properties config) {
+		this.config  = config;
+	}
 	/**
 	 * @param queryEndpoint
 	 * @param sparql
@@ -134,12 +140,12 @@ public class SparqlConnector {
 			 request.addHeader("Accept-Language", "en-US,en;q=0.8");
 			 request.addHeader("Connection", "keep-alive");
 		
-			 HttpHost targetHost = new HttpHost(Config.SPARQL_HOST, Config.SPARQL_PORT, Config.SPARQL_SCHEME);
+			 HttpHost targetHost = new HttpHost(config.getProperty("SPARQL_HOST"), Integer.parseInt(config.getProperty("SPARQL_PORT")), config.getProperty("SPARQL_SCHEME"));
 			 
 			 CredentialsProvider credsProvider = new BasicCredentialsProvider();
 				credsProvider.setCredentials(
 				        new AuthScope(targetHost.getHostName(), targetHost.getPort()),
-				        new UsernamePasswordCredentials(Config.USERNAME, Config.PASSWORD)
+				        new UsernamePasswordCredentials(config.getProperty("USERNAME"), config.getProperty("PASSWORD"))
 				        );
 				HttpClientContext context = HttpClientContext.create();
 				context.setCredentialsProvider(credsProvider);

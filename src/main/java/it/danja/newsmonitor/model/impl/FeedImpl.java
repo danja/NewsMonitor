@@ -32,6 +32,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 /**
@@ -43,7 +44,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 	private static Logger log = LoggerFactory.getLogger(FeedImpl.class);
 	
-	private int lives = Config.MAX_LIVES;
+	private int lives = 3;
 	private boolean dead = false;
 
 	private EntryList entryList = new EntryListImpl();
@@ -63,9 +64,13 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 	private long lastRefresh = 0;
 	private boolean pending = false;
 
+	private Properties config;
+
 	// private getHttpConnector() getHttpConnector();
 
-	public FeedImpl() {
+	public FeedImpl(Properties config) {
+		this.config = config;
+		lives = Integer.parseInt(config.getProperty("MAX_LIVES"));
 	}
 
 	@Override
@@ -164,11 +169,11 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 		FormatSniffer sniffer = new FormatSniffer();
 		char format = ContentType.UNKNOWN;
 
-		setHttpConnector(new HttpConnector());
+		setHttpConnector(new HttpConnector(config));
 		getHttpConnector().setUrl(url);
 		getHttpConnector().setConditional(false);
-		getHttpConnector().setAcceptHeader(Config.FEED_ACCEPT_HEADER);
-		getHttpConnector().setUserAgentHeader(Config.FEED_USER_AGENT_HEADER);
+		getHttpConnector().setAcceptHeader(config.getProperty("FEED_ACCEPT_HEADER"));
+		getHttpConnector().setUserAgentHeader(config.getProperty("FEED_USER_AGENT_HEADER"));
 		log.info("\nInitializing : " + url);
 
 		boolean streamAvailable = getHttpConnector().load();
@@ -221,7 +226,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
 		// log.info("FIRSTCALL = "+firstCall);
 		if (getHttpConnector() == null) { // is needed?
-			setHttpConnector(new HttpConnector());
+			setHttpConnector(new HttpConnector(config));
 			getHttpConnector().setUrl(getUrl());
 		}
 		

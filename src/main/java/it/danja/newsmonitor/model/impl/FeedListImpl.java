@@ -26,6 +26,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -40,12 +41,15 @@ public class FeedListImpl implements FeedList {
 
 	private ConcurrentLinkedQueue<Feed> feedQueue;
 
-	public FeedListImpl() {
+	private Properties config = null;
+
+	public FeedListImpl(Properties config) {
+		this.config  = config;
 		feedQueue = new ConcurrentLinkedQueue<Feed>();
 	}
 
 	public Feed createFeed(String url) {
-		Feed feed = new FeedImpl();
+		Feed feed = new FeedImpl(config);
 		feed.setUrl(url);
 		return feed;
 	}

@@ -33,7 +33,7 @@ public class SystemStatus {
 
 	private static Logger log = LoggerFactory.getLogger(SystemStatus.class);
 
-            private SparqlConnector sparqlConnector = new SparqlConnector();
+            private SparqlConnector sparqlConnector = null;
             
 	private boolean pollerRunning = true;
 	private boolean discoveryRunning = true;
@@ -51,6 +51,7 @@ public class SystemStatus {
 		this.templater = templater;
 		this.textFileReader = textFileReader;
 		sparqlGetStatus = textFileReader.read(config.getProperty("GET_STATUS_LOCATION"));
+		sparqlConnector = new SparqlConnector(config);
 	}
 
 	// public void setBundleContext(BundleContext bundleContext) {
@@ -86,7 +87,7 @@ public class SystemStatus {
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
 		// log.info("Query = \n" + sparql);
-		int responseCode = sparqlConnector.update(Config.UPDATE_ENDPOINT,
+		int responseCode = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"),
 				sparql).getStatusCode();
 		log.info("SPARQL response : " + responseCode);
 	}
@@ -97,12 +98,12 @@ public class SystemStatus {
 		map.put("discoveryRunning", discoveryRunning);
 
 		String sparql = templater.apply("update-status", map);
-		sparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
+		sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"), sparql);
 	}
 
 	private void pullStatusFromStore() {
 		// log.info("A");
-		String results = sparqlConnector.query(Config.QUERY_ENDPOINT,
+		String results = sparqlConnector.query(config.getProperty("QUERY_ENDPOINT"),
 				sparqlGetStatus);
 		// log.info("B");
 		SparqlResultsParser parser = new SparqlResultsParser();

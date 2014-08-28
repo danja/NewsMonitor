@@ -119,7 +119,7 @@ public class FsTemplateLoader extends TemplateLoaderBase {
 	 */
 	public synchronized void loadTemplate(String filename) {
 		try {
-			Template template = getConfiguration().getTemplate(Config.TEMPLATES_DIR
+			Template template = getConfiguration().getTemplate(config.getProperty("TEMPLATES_LOCATION")
 					+ "/" + filename);
 			// log.info(filename);
 			// String[] split = filename.split(".");

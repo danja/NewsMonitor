@@ -53,8 +53,8 @@ public class LinkExplorer implements Runnable {
 	private Thread thread = null;
 	private boolean stopped = false;
 	private Link link;
-	private HttpConnector httpConnector = new HttpConnector();
-	private SparqlConnector sparqlConnector = new SparqlConnector();
+	private HttpConnector httpConnector = null;
+	private SparqlConnector sparqlConnector = null;
 	private String url = null;
 	private TextFileReader textFileReader = null;
 
@@ -70,6 +70,8 @@ public class LinkExplorer implements Runnable {
 		this.config = config;
 		this.feedList = feedList;
 		this.templater = templater;
+		sparqlConnector = new SparqlConnector(config);
+		httpConnector = new HttpConnector(config);
 	}
 
 	public void setBundleContext(BundleContext bundleContext) {
@@ -109,7 +111,7 @@ public class LinkExplorer implements Runnable {
 
 				updateStore(link);
 				try {
-					Thread.sleep(Config.LINK_EXPLORER_SLEEP_PERIOD);
+					Thread.sleep(Integer.parseInt(config.getProperty("LINK_EXPLORER_SLEEP_PERIOD")));
 				} catch (InterruptedException e) {
 					log.error(e.getMessage());
 				}
@@ -166,7 +168,7 @@ public class LinkExplorer implements Runnable {
 					Config.TOPIC, data);
 			log.info("*** Link relevance = " + relevance);
 			link.setRelevance(relevance);
-			if (relevance > Config.SUBSCRIBE_RELEVANCE_THRESHOLD) {
+			if (relevance > Float.parseFloat(config.getProperty("SUBSCRIBE_RELEVANCE_THRESHOLD"))) {
 				trySubscribe(link);
 			}
 			// log.info("EXPLORED " + link);
@@ -188,7 +190,7 @@ public class LinkExplorer implements Runnable {
 	private void trySubscribe(Link pageLink) { // quick and dirty feed link
 		// autodiscovery
 		log.info("*** Looking for a feed linked from : " + pageLink.getHref());
-		HttpConnector connector = new HttpConnector();
+		HttpConnector connector = new HttpConnector(config);
 		String content = connector.downloadAsString(pageLink.getHref());
 		Set<Link> links = ContentProcessor.extractHeadLinks(
 				pageLink.getOrigin(), content);
@@ -215,7 +217,7 @@ public class LinkExplorer implements Runnable {
 		String sparql = templater.apply("update-links",
 				link.getTemplateDataMap());
 		// log.info("\n\n----------------\n"+sparql+"\n\n---------------------");
-		HttpMessage message = sparqlConnector.update(Config.UPDATE_ENDPOINT,
+		HttpMessage message = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"),
 				sparql);
 		message.setRequestBody(sparql);
 		log.info("*** link update status : " + message.getStatusCode() + " "
@@ -237,7 +239,7 @@ public class LinkExplorer implements Runnable {
 		// RuntimeException("sparql = "+sparql+" getSparql() = "+parser.getSparql());
 		// /*
 		String xmlResults = sparqlConnector
-				.query(Config.QUERY_ENDPOINT, sparql);
+				.query(config.getProperty("QUERY_ENDPOINT"), sparql);
 
 		// log.info("XMLRESULTS = "+xmlResults);
 

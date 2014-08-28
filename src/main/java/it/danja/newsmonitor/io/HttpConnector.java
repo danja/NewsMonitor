@@ -28,6 +28,7 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
@@ -70,12 +71,14 @@ public class HttpConnector {
 	private String userAgentHeader = null;
 	private String acceptHeader = null;
 
+	private Properties config = null;
+
 	static {
 		HttpURLConnection.setFollowRedirects(true);
 	}
 
-	public HttpConnector() {
-
+	public HttpConnector(Properties config) {
+this.config  = config;
 	}
 
 	public void setUrl(String urlString) {
@@ -147,8 +150,8 @@ public class HttpConnector {
 			log.error(e.getMessage());
 		}
 
-		connection.setReadTimeout(Config.READ_TIMEOUT);
-		connection.setConnectTimeout(Config.CONNECT_TIMEOUT);
+		connection.setReadTimeout(Integer.parseInt(config.getProperty("READ_TIMEOUT")));
+		connection.setConnectTimeout(Integer.parseInt(config.getProperty("CONNECT_TIMEOUT")));
 
 		connection.setRequestProperty("Accept-Encoding", "gzip, deflate");
 		if(userAgentHeader  != null) {
@@ -327,15 +330,15 @@ public class HttpConnector {
 		return buffer.toString();
 	}
 
-	public static void main(String[] args) {
-		HttpConnector connector = new HttpConnector();
-		connector.setUrl(args[0]);
-		boolean isOk = connector.load();
-		if (isOk) {
-			connector.downloadToFile("C:/test.xml");
-		}
-		log.info(connector.getStatus());
-	}
+//	public static void main(String[] args) {
+//		HttpConnector connector = new HttpConnector(null);
+//		connector.setUrl(args[0]);
+//		boolean isOk = connector.load();
+//		if (isOk) {
+//			connector.downloadToFile("C:/test.xml");
+//		}
+//		log.info(connector.getStatus());
+//	}
 
 	/**
 	 * @param userAgentHeader the userAgentHeader to set

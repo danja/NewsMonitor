@@ -81,9 +81,9 @@ public class NewsMonitor {
         poller.start();
         linkExplorer.start();
 
-        if (Config.TEST_RUN > 0) {
+        if (Integer.parseInt(config.getProperty("TEST_RUN")) > 0) {
             try {
-                Thread.sleep(Config.TEST_RUN * 60000); // wait a bit
+                Thread.sleep(Integer.parseInt(config.getProperty("TEST_RUN"))); // wait a bit
             } catch (InterruptedException e) {
                 log.error(e.getMessage());
             }
@@ -106,7 +106,7 @@ public class NewsMonitor {
     }
 
     private List<String> getFeeds() {
-        FeedUrls feedUrlList = new FeedUrls();
+        FeedUrls feedUrlList = new FeedUrls(config, textFileReader);
         feedUrlList.load(config.getProperty("SPARQL_FEEDLIST_LOCATION"));
         return feedUrlList.getFeeds();
     }

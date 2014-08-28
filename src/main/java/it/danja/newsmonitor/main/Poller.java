@@ -42,7 +42,7 @@ public class Poller implements Runnable {
 
 	private List<String> feedUrls = null;
 
-	private FeedList feedList = new FeedListImpl();
+	private FeedList feedList = null;
 
 	/**
 	 * @return the feedList
@@ -60,6 +60,8 @@ public class Poller implements Runnable {
 	private boolean stopped = false;
 	
 	SparqlTemplater sparqlTemplater = null;
+
+	private Properties config = null;
 	
 // private BundleContext bundleContext;
 	
@@ -69,6 +71,8 @@ public class Poller implements Runnable {
 	
 	public Poller(Properties config, SparqlTemplater sparqlTemplater) {
 		this.sparqlTemplater = sparqlTemplater;
+		this.config  = config;
+		feedList = new FeedListImpl(config);
 		// sparqlTemplater.setBundleContext(bundleContext);
 	}
 
@@ -81,7 +85,7 @@ public class Poller implements Runnable {
 	 */
 	public FeedList initFeeds() {
 		for (int i = 0; i < feedUrls.size(); i++) {
-			Feed feed = new FeedImpl();
+			Feed feed = new FeedImpl(config);
 			feed.setUrl(feedUrls.get(i));
 			feed.init();
 			feedList.addFeed(feed);
@@ -150,7 +154,7 @@ public class Poller implements Runnable {
 				log.info("Lives gone...");
 				feed.setDead(true);
 			}
-			if (feed.getRelevance() < Config.UNSUBSCRIBE_RELEVANCE_THRESHOLD) {
+			if (feed.getRelevance() < Float.parseFloat(config.getProperty("UNSUBSCRIBE_RELEVANCE_THRESHOLD"))) {
 				log.info("Now below relevance threshold...");
 				feed.setDead(true);
 			}
@@ -168,7 +172,7 @@ public class Poller implements Runnable {
 				expiring.add(feed);
 			}
 			try {
-				Thread.sleep(Config.PER_FEED_SLEEP_PERIOD);
+				Thread.sleep(Integer.parseInt(config.getProperty("PER_FEED_SLEEP_PERIOD")));
 			} catch (InterruptedException e) {
 				log.error(e.getMessage());
 			}
@@ -180,7 +184,7 @@ public class Poller implements Runnable {
 			}
 		}
 
-		if (Config.POLLER_NO_LOOP) {
+		if ("true".equals(config.getProperty("POLLER_NO_LOOP"))) {
 			System.exit(1);
 		}
 
@@ -192,7 +196,7 @@ public class Poller implements Runnable {
 		}
 
 		try {
-			Thread.sleep(Config.REFRESH_PERIOD);
+			Thread.sleep(Integer.parseInt(config.getProperty("REFRESH_PERIOD")));
 		} catch (InterruptedException e) {
 			log.error(e.getMessage());
 		}

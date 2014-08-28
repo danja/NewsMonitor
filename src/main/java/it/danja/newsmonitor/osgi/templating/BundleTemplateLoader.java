@@ -159,7 +159,7 @@ public class BundleTemplateLoader extends TemplateLoaderBase {
 	}
 
 	private boolean containsTemplates(Bundle bundle) {
-		return bundle.getResource(Config.TEMPLATES_DIR_IN_BUNDLE) != null;
+		return bundle.getResource(config.getProperty("TEMPLATES_DIR_LOCATION")) != null;
 	}
 
 	// public synchronized void loadTemplateFromUrl(URL url) {

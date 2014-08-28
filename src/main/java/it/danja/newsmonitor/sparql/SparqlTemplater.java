@@ -35,14 +35,18 @@ public class SparqlTemplater {
 
 	private String PREFIXES;
         
-            private SparqlConnector sparqlConnector = new SparqlConnector();
+            private SparqlConnector sparqlConnector = null;
 
 			private Templater templater = null;
+
+			private Properties config = null;
 	
 	public SparqlTemplater(Properties config, TextFileReader textFileReader, Templater templater) {
 		this.templater  = templater;
+		this.config  = config;
 		// PREFIXES = TextFileReader.read(Config.SPARQL_PREFIXES_FILE);
 			PREFIXES = textFileReader.read("SPARQL_PREFIXES_LOCATION");
+			sparqlConnector = new SparqlConnector(config);
 	}
 	
 //private BundleContext bundleContext;
@@ -65,7 +69,7 @@ public class SparqlTemplater {
 		
 		String sparql = templater.apply("sparql-insert", map);
 		// log.info("\n\n----------------\n"+sparql+"\n\n---------------------");
-		HttpMessage message = sparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
+		HttpMessage message = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"), sparql);
 		message.setRequestBody(sparql);
 		return message;
 	}

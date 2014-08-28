@@ -16,6 +16,7 @@ import it.danja.newsmonitor.standalone.FsTextFileReader;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import org.osgi.framework.BundleContext;
 
@@ -27,18 +28,21 @@ public class FeedUrls  {
 	private List<String> feeds = new ArrayList<String>();
 
 	private TextFileReader textFileReader = null;
+
+	private Properties config = null;
         
-	public void setTextFileReader(TextFileReader textFileReader) {
+	public FeedUrls(Properties config, TextFileReader textFileReader) {
 		this.textFileReader = textFileReader;
+		this.config  = config;
 	}
 
 	public void load(String location) {
 		String sparql = textFileReader.read(location); // SPARQL_FEEDLIST_LOCATION
 		
 		
-		   SparqlConnector sparqlConnector = new SparqlConnector();
+		   SparqlConnector sparqlConnector = new SparqlConnector(config);
 		
-		String xmlResults = sparqlConnector.query(Config.QUERY_ENDPOINT, sparql);
+		String xmlResults = sparqlConnector.query(config.getProperty("QUERY_ENDPOINT"), sparql);
 
 		/*
 		 * is no doubt less efficient than using 
