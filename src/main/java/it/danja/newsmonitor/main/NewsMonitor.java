@@ -13,6 +13,7 @@ import it.danja.newsmonitor.discovery.LinkExplorer;
 import it.danja.newsmonitor.templating.Templater;
 
 import java.util.List;
+import java.util.Properties;
 
 import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
@@ -29,11 +30,14 @@ public class NewsMonitor {
     private Poller poller;
 
 	private BundleContext bundleContext = null;
+
+	private Properties config;
     
 	/**
 	 * Constructor for standalone build
 	 */
-    public NewsMonitor(){
+    public NewsMonitor(Properties config){
+    	this.config = config;
     }
     
 	/**
