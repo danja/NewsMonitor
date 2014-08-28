@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package it.danja.newsmonitor.templating;
+package it.danja.newsmonitor.osgi.templating;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -14,7 +14,7 @@ package it.danja.newsmonitor.model.impl;
 import it.danja.newsmonitor.model.Entry;
 import it.danja.newsmonitor.model.EntryList;
 import it.danja.newsmonitor.model.Link;
-import it.danja.newsmonitor.templating.Templater;
+import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
 
 import java.util.ArrayList;
 import java.util.HashMap;

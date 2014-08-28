@@ -12,6 +12,7 @@ import it.danja.newsmonitor.io.SparqlConnector;
 import it.danja.newsmonitor.io.TextFileReader;
 import it.danja.newsmonitor.sparql.SparqlResultsParser;
 import it.danja.newsmonitor.sparql.SparqlResults.Result;
+import it.danja.newsmonitor.standalone.FsTextFileReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,22 +26,14 @@ public class FeedUrls  {
 
 	private List<String> feeds = new ArrayList<String>();
 
-	private BundleContext bundleContext;
+	private TextFileReader textFileReader = null;
         
-        
-	
-	public void setBundleContext(BundleContext bundleContext) {
-		this.bundleContext = bundleContext;
+	public void setTextFileReader(TextFileReader textFileReader) {
+		this.textFileReader = textFileReader;
 	}
 
-	public void load() {
-		String sparql = null;
-		if(Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
-			sparql = TextFileReader.readFromFilesystem(Config.SPARQL_FEEDLIST_FILE);
-			} else {
-				sparql = TextFileReader.readFromBundle(bundleContext.getBundle(), Config.SPARQL_FEEDLIST_IN_BUNDLE);
-			}
-		//	updateStatusTemplate = TextFileReader.read(Config.UPDATE_STATUS_TEMPLATE);
+	public void load(String location) {
+		String sparql = textFileReader.read(location); // SPARQL_FEEDLIST_LOCATION
 		
 		
 		   SparqlConnector sparqlConnector = new SparqlConnector();

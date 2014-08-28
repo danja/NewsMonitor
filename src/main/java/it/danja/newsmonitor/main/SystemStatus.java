@@ -17,11 +17,14 @@ import it.danja.newsmonitor.io.TextFileReader;
 import it.danja.newsmonitor.main.FeedListLoader.LineHandler;
 import it.danja.newsmonitor.sparql.SparqlResults;
 import it.danja.newsmonitor.sparql.SparqlResultsParser;
+import it.danja.newsmonitor.standalone.FsTextFileReader;
+import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
 import it.danja.newsmonitor.templating.Templater;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  *
@@ -35,24 +38,19 @@ public class SystemStatus {
 	private boolean pollerRunning = true;
 	private boolean discoveryRunning = true;
 
-	private BundleContext bundleContext;
-
 	private final String sparqlGetStatus;
+	
+	private TextFileReader textFileReader = null;
 
-	// private static final String updateStatusTemplate;
+	private Properties config = null;
 
-	public SystemStatus(BundleContext bundleContext) {
-		this.bundleContext = bundleContext;
-		// log.debug(bundleContext.toString());
-		if (Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
-			sparqlGetStatus = TextFileReader
-					.readFromFilesystem(Config.SPARQL_GET_STATUS_FILE);
-		} else {
-			sparqlGetStatus = TextFileReader.readFromBundle(
-					bundleContext.getBundle(), Config.SPARQL_GET_STATUS_IN_BUNDLE);
-		}
-		// updateStatusTemplate =
-		// TextFileReader.read(Config.UPDATE_STATUS_TEMPLATE);
+	private Templater templater = null;
+
+	public SystemStatus(Properties config, TextFileReader textFileReader, Templater templater) {
+		this.config  = config;
+		this.templater = templater;
+		this.textFileReader = textFileReader;
+		sparqlGetStatus = textFileReader.read(config.getProperty("GET_STATUS_LOCATION"));
 	}
 
 	// public void setBundleContext(BundleContext bundleContext) {
@@ -81,10 +79,10 @@ public class SystemStatus {
 
 	public void initializeFeedListFromFile() {
 		// log.info("Loading feed list from file " + filename + " into store...");
-		FeedListLoader loader = new FeedListLoader(bundleContext);
+		FeedListLoader loader = new FeedListLoader(config);
 		
 
-		String turtleBody = loader.readFile();
+		String turtleBody = loader.readFile(config.getProperty("SEED_FEEDLIST_LOCATION"));
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
 		// log.info("Query = \n" + sparql);
@@ -98,7 +96,7 @@ public class SystemStatus {
 		map.put("pollerRunning", pollerRunning);
 		map.put("discoveryRunning", discoveryRunning);
 
-		String sparql = Templater.apply("update-status", map);
+		String sparql = templater.apply("update-status", map);
 		sparqlConnector.update(Config.UPDATE_ENDPOINT, sparql);
 	}
 

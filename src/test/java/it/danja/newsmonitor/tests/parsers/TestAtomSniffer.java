@@ -7,7 +7,8 @@ import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.model.Entry;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.FeedImpl;
-import it.danja.newsmonitor.templating.Templater;
+import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
+import it.danja.newsmonitor.templating.TemplateLoader;
 import it.danja.newsmonitor.utils.HttpServer;
 
 import java.util.Iterator;
@@ -60,7 +61,7 @@ Config.BUILD_TYPE = Config.STANDALONE_BUILD;
 		
 		// log.info(entries.getEntry(0).toTurtle());
 		// log.info(feed.toTurtle());
-		        Templater templater = new Templater();
+		        TemplateLoader templater = new FsTemplateLoader();
         templater.init();
 	//	String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
 	//	log.info("# Feed Turtle\n"+feedTurtle);

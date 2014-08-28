@@ -25,7 +25,7 @@ import it.danja.newsmonitor.model.EntryList;
 import it.danja.newsmonitor.model.Feed;
 import it.danja.newsmonitor.model.FeedEntity;
 import it.danja.newsmonitor.model.Link;
-import it.danja.newsmonitor.templating.Templater;
+import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
 import it.danja.newsmonitor.utils.ContentType;
 
 import java.util.HashSet;

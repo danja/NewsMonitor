@@ -30,6 +30,7 @@ import it.danja.newsmonitor.utils.ContentType;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -66,8 +67,8 @@ public class Poller implements Runnable {
 //		this.bundleContext = bundleContext;
 //	}
 	
-	public Poller(BundleContext bundleContext) {
-		sparqlTemplater = new SparqlTemplater(bundleContext);
+	public Poller(Properties config, SparqlTemplater sparqlTemplater) {
+		this.sparqlTemplater = sparqlTemplater;
 		// sparqlTemplater.setBundleContext(bundleContext);
 	}
 

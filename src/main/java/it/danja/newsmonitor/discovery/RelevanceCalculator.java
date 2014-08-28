@@ -11,8 +11,8 @@ package it.danja.newsmonitor.discovery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import it.danja.newsmonitor.io.TextFileReader;
 import it.danja.newsmonitor.main.Config;
+import it.danja.newsmonitor.standalone.FsTextFileReader;
 import it.danja.newsmonitor.utils.ContentProcessor;
 
 import java.util.Arrays;

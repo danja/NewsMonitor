@@ -1,7 +1,16 @@
 package it.danja.newsmonitor.osgi;
 
-import it.danja.newsmonitor.main.NewsMonitor;
+import java.util.Properties;
 
+import it.danja.newsmonitor.io.TextFileReader;
+import it.danja.newsmonitor.main.Config;
+import it.danja.newsmonitor.main.ConfigReader;
+import it.danja.newsmonitor.main.NewsMonitor;
+import it.danja.newsmonitor.osgi.templating.BundleTemplateLoader;
+import it.danja.newsmonitor.templating.TemplateLoader;
+import it.danja.newsmonitor.templating.Templater;
+
+import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
@@ -18,7 +27,19 @@ public class NewsMonitorActivator implements BundleActivator {
 
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
-		newsmonitor = new NewsMonitor(bundleContext);
+		Bundle bundle = bundleContext.getBundle();
+		
+		ConfigReader configReader = new ConfigReader();
+		configReader.loadPropertiesFile(Config.CONFIG_PROPERTIES_BUNDLE_LOCATION);
+		Properties config = configReader.getProperties();
+		
+		TextFileReader textFileReader = new BundleTextFileReader(bundle);
+		
+		TemplateLoader templateLoader = new BundleTemplateLoader(bundle, config);
+		templateLoader.init();
+		Templater templater = new Templater();
+templater.setTemplateMap(templateLoader.getTemplateMap());
+		newsmonitor = new NewsMonitor(config, textFileReader, templater);
 		registration = bundleContext.registerService(
 				NewsMonitor.class.getName(), newsmonitor, null);
                 webUI = new WebUI();

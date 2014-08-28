@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 
 import it.danja.newsmonitor.io.OpmlSetReader;
 import it.danja.newsmonitor.io.SparqlConnector;
+import it.danja.newsmonitor.io.TextFileReader;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -24,7 +25,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
 import java.net.URL;
+import java.util.Properties;
 
 /**
  * Read text list from disk, wrap with SPARQL template, push into store
@@ -47,70 +50,31 @@ public class FeedListLoader {
 	public static String CHANNEL_TEMPLATE = "<${url}> rdf:type rss:channel ; \n"
 			+ "foaf:topic <http://www.w3.org/2001/sw/>, <http://www.w3.org/RDF/> . \n\n";
 
-	private BundleContext bundleContext;
+	private Properties config = null;
+
+	private TextFileReader textFileReader = null;
 	
-	public FeedListLoader(BundleContext bundleContext) {
-		this.bundleContext = bundleContext;
-		// log.debug(bundleContext.toString());
+	public FeedListLoader(Properties config) {
+		this.config = config;
 	}
-
-	public static void main(String[] args) {
-
-//		FeedListLoader loader = new FeedListLoader();
-//		LineHandler handler = loader.new LineHandler();
-//		String turtleBody = loader.readFile("input/rdf-bloggers-feedlist.txt",
-//				handler);
-//		String sparql = FeedListLoader.insertValue(SPARQL_TEMPLATE, "channels",
-//				turtleBody);
-//		// log.info("Query = \n" + sparql);
-//		int responseCode = SparqlConnector.update(
-//				"http://localhost:3030/feedreader/update", sparql).getStatusCode();
-		// log.info(responseCode);
+	
+	public void setTextFileReader(TextFileReader textFileReader) {
+		this.textFileReader  = textFileReader;
 	}
 
 	/**
 	 * Reads text file from disk line by line
 	 * 
+	 * TODO switch add hoc templating to freemarker
+	 * 
 	 * @param filename
 	 *            name of target file
 	 * @return String containing text content
 	 */
-	public String readFile() {
-		log.debug(bundleContext.toString());
+	public String readFile(String location) {
+		
+		BufferedReader reader = new BufferedReader(textFileReader.getReader(location));
 		LineHandler handler = new LineHandler();
-		File file = null;
-		BufferedReader reader = null;
-		if (Config.BUILD_TYPE == Config.STANDALONE_BUILD) {
-			file = new File(Config.SEED_FEEDLIST_FILE);
-			try {
-				reader = new BufferedReader(new FileReader(file));
-			} catch (FileNotFoundException e) {
-				log.error(e.getMessage());
-			}
-		} else {
-			
-			Bundle bundle = bundleContext.getBundle();
-			URL url = bundle.getEntry(Config.SEED_FEEDLIST_IN_BUNDLE);
-			StringBuffer buffer = null;
-			// if (url != null) {
-			//InputStream inputStream = null;
-			if(url == null) {
-				throw new RuntimeException("Null URL from path  "+Config.SEED_FEEDLIST_IN_BUNDLE);
-			}
-			try {
-				InputStream  inputStream = url.openStream();
-
-			//	String string = "";
-			//	buffer = new StringBuffer();
-
-				reader = new BufferedReader(
-						new InputStreamReader(inputStream));
-			} catch (IOException ex) {
-				log.error(ex.getMessage());
-			}
-		}
-		
-		
 
 		String line = null;
 		try {
@@ -127,14 +91,29 @@ public class FeedListLoader {
 	}
 
 	/**
+	 * TODO ready to remove (using freemarker instead)
 	 * Ultra-crude templating
-	 * s
+	 * 
 	 * @param template
 	 * @param url
 	 * @return
 	 */
 	public static String insertValue(String template, String name, String value) {
 		return template.replace("${" + name + "}", value);
+	}
+	
+	public static void main(String[] args) {
+
+//		FeedListLoader loader = new FeedListLoader();
+//		LineHandler handler = loader.new LineHandler();
+//		String turtleBody = loader.readFile("input/rdf-bloggers-feedlist.txt",
+//				handler);
+//		String sparql = FeedListLoader.insertValue(SPARQL_TEMPLATE, "channels",
+//				turtleBody);
+//		// log.info("Query = \n" + sparql);
+//		int responseCode = SparqlConnector.update(
+//				"http://localhost:3030/feedreader/update", sparql).getStatusCode();
+		// log.info(responseCode);
 	}
 
 	class LineHandler {

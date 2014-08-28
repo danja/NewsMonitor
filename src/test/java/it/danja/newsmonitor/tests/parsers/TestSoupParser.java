@@ -12,7 +12,7 @@ import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.model.Entry;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.FeedImpl;
-import it.danja.newsmonitor.templating.Templater;
+import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
 import it.danja.newsmonitor.utils.ContentType;
 import it.danja.newsmonitor.utils.HttpServer;
 
@@ -52,7 +52,7 @@ public class TestSoupParser {
 		interpreter = InterpreterFactory.createInterpreter(feed);
 		feed.setInterpreter(interpreter);
 		feed.refresh();
-		String feedTurtle = Templater.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
+		String feedTurtle = FsTemplateLoader.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
 //		log.info("# Feed Turtle\n"+feedTurtle);
 	}
 

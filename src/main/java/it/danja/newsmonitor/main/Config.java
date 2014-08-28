@@ -105,7 +105,9 @@ public class Config {
 	// "http://localhost:8080/sparql"; , "http://localhost:8080/update";
 	public static final String QUERY_ENDPOINT = SPARQL_URL_BASE+SPARQL_QUERY_PATH;
 	public static final String UPDATE_ENDPOINT = SPARQL_URL_BASE+SPARQL_UPDATE_PATH;
-		
+
+	public static final String CONFIG_PROPERTIES_BUNDLE_LOCATION = "bundle-config.properties";
+	public static final String CONFIG_PROPERTIES_STANDALONE_LOCATION = "standalone-config.properties";	
 	// public static final String QUERY_ENDPOINT = "http://localhost:3030/feedreader/query";
 	// public static final String UPDATE_ENDPOINT = "http://localhost:3030/feedreader/update";
 

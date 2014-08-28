@@ -10,6 +10,10 @@
 package it.danja.newsmonitor.main;
 
 import it.danja.newsmonitor.discovery.LinkExplorer;
+import it.danja.newsmonitor.io.TextFileReader;
+import it.danja.newsmonitor.sparql.SparqlTemplater;
+import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
+import it.danja.newsmonitor.templating.TemplateLoader;
 import it.danja.newsmonitor.templating.Templater;
 
 import java.util.List;
@@ -31,55 +35,36 @@ public class NewsMonitor {
 
 	private BundleContext bundleContext = null;
 
-	private Properties config;
+	private Properties config = null;
+
+	private Templater templater = null;
+
+	private TextFileReader textFileReader = null;
     
 	/**
-	 * Constructor for standalone build
+	 * Constructor 
 	 */
-    public NewsMonitor(Properties config){
+    public NewsMonitor(Properties config, TextFileReader textFileReader, Templater templater){
+    	this.templater = templater;
     	this.config = config;
+    	this.textFileReader  = textFileReader;
     }
-    
-	/**
-	 * When created within OSGi, the BundleContext is passed along
-	 */
-    public NewsMonitor(BundleContext bundleContext){
-    	this.bundleContext = bundleContext;
-    }
-
-  //  private BundleContext bundleContext;
-
-//    public void setBundleContext(BundleContext bundleContext) {
-//        this.bundleContext = bundleContext;
-//    }
-//
-//    public BundleContext getBundleContext() {
-//        return bundleContext;
-//    }
 
     /**
      * @param args
      */
-//    public void start() {
-//    	
-//        
-//    }
+    @SuppressWarnings("unused")
+	public void start() {
 
-    /**
-     * @param args
-     */
-    public void start() {
-
-        Templater templater = new Templater(bundleContext);
-        templater.init();
         // log.debug(bundleContext.toString());
-        SystemStatus status = new SystemStatus(bundleContext);
+        SystemStatus status = new SystemStatus(config, textFileReader, templater);
 
 
         status.initializeFeedListFromFile();
 
+        SparqlTemplater sparqlTemplater = new SparqlTemplater(config, textFileReader, templater);
 		// load seed list from file into store
-        poller = new Poller(bundleContext);
+        poller = new Poller(config, sparqlTemplater);
 
         // load feed list from store into memory, pass to Poller
         log.info("Loading feed list from store...");
@@ -89,7 +74,7 @@ public class NewsMonitor {
         log.info("==== Initialising Feeds ====");
         poller.initFeeds();
 
-        linkExplorer = new LinkExplorer(poller.getFeedList());
+        linkExplorer = new LinkExplorer(config, poller.getFeedList(), templater);
         linkExplorer.setBundleContext(bundleContext);
         
         log.info("==== Starting Poller ====");
@@ -122,8 +107,7 @@ public class NewsMonitor {
 
     private List<String> getFeeds() {
         FeedUrls feedUrlList = new FeedUrls();
-        feedUrlList.setBundleContext(bundleContext);
-        feedUrlList.load();
+        feedUrlList.load(config.getProperty("SPARQL_FEEDLIST_LOCATION"));
         return feedUrlList.getFeeds();
     }
 }
