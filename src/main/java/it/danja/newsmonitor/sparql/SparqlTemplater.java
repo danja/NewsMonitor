@@ -45,7 +45,8 @@ public class SparqlTemplater {
 		this.templater  = templater;
 		this.config  = config;
 		// PREFIXES = TextFileReader.read(Config.SPARQL_PREFIXES_FILE);
-			PREFIXES = textFileReader.read("SPARQL_PREFIXES_LOCATION");
+			PREFIXES = textFileReader.read(config.getProperty("SPARQL_PREFIXES_LOCATION"));
+			System.out.println("PREFIXES = "+PREFIXES);
 			sparqlConnector = new SparqlConnector(config);
 	}
 	

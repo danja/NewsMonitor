@@ -9,11 +9,7 @@
  */
 package it.danja.newsmonitor.interpreters;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import it.danja.newsmonitor.io.HttpConnector;
-import it.danja.newsmonitor.io.ResourceLister;
 import it.danja.newsmonitor.utils.ContentType;
 
 import java.io.BufferedReader;
@@ -25,6 +21,8 @@ import java.io.StringReader;
 
 import javax.xml.parsers.SAXParserFactory;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;

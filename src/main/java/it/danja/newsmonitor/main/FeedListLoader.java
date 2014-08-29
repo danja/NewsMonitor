@@ -54,13 +54,11 @@ public class FeedListLoader {
 
 	private TextFileReader textFileReader = null;
 	
-	public FeedListLoader(Properties config) {
+	public FeedListLoader(Properties config, TextFileReader textFileReader) {
 		this.config = config;
-	}
-	
-	public void setTextFileReader(TextFileReader textFileReader) {
 		this.textFileReader  = textFileReader;
 	}
+
 
 	/**
 	 * Reads text file from disk line by line

@@ -74,8 +74,7 @@ public class NewsMonitor {
         log.info("==== Initialising Feeds ====");
         poller.initFeeds();
 
-        linkExplorer = new LinkExplorer(config, poller.getFeedList(), templater);
-        linkExplorer.setBundleContext(bundleContext);
+        linkExplorer = new LinkExplorer(config, poller.getFeedList(), textFileReader, templater);
         
         log.info("==== Starting Poller ====");
         poller.start();
@@ -107,7 +106,9 @@ public class NewsMonitor {
 
     private List<String> getFeeds() {
         FeedUrls feedUrlList = new FeedUrls(config, textFileReader);
-        feedUrlList.load(config.getProperty("SPARQL_FEEDLIST_LOCATION"));
+        String feedlistLocation = config.getProperty("SPARQL_FEEDLIST_LOCATION");
+       // System.out.println("feedlistLocation = "+feedlistLocation);
+        feedUrlList.load(feedlistLocation);
         return feedUrlList.getFeeds();
     }
 }

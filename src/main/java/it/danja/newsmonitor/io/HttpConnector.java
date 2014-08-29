@@ -181,7 +181,7 @@ this.config  = config;
 		return connection;
 	}
 	
-	public String downloadAsString(String urlString) {
+	public synchronized String downloadAsString(String urlString) {
 		setUrl(urlString);
 		setConditional(false);
 		if(!load()) {

@@ -18,6 +18,7 @@ import it.danja.newsmonitor.main.FeedListLoader.LineHandler;
 import it.danja.newsmonitor.sparql.SparqlResults;
 import it.danja.newsmonitor.sparql.SparqlResultsParser;
 import it.danja.newsmonitor.standalone.FsTextFileReader;
+import it.danja.newsmonitor.standalone.Main;
 import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
 import it.danja.newsmonitor.templating.Templater;
 
@@ -50,7 +51,7 @@ public class SystemStatus {
 		this.config  = config;
 		this.templater = templater;
 		this.textFileReader = textFileReader;
-		sparqlGetStatus = textFileReader.read(config.getProperty("GET_STATUS_LOCATION"));
+		sparqlGetStatus = textFileReader.read(config.getProperty("SPARQL_GET_STATUS_LOCATION"));
 		sparqlConnector = new SparqlConnector(config);
 	}
 
@@ -80,13 +81,16 @@ public class SystemStatus {
 
 	public void initializeFeedListFromFile() {
 		// log.info("Loading feed list from file " + filename + " into store...");
-		FeedListLoader loader = new FeedListLoader(config);
+		FeedListLoader loader = new FeedListLoader(config, textFileReader);
+		// Main.listProperties(config);
+		System.out.println("SEED_FEEDLIST_LOCATION = "+config.getProperty("SEED_FEEDLIST_LOCATION"));
+		String feedlistLocation = config.getProperty("SEED_FEEDLIST_LOCATION");
+		String turtleBody = loader.readFile(feedlistLocation);
 		
-
-		String turtleBody = loader.readFile(config.getProperty("SEED_FEEDLIST_LOCATION"));
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
 		// log.info("Query = \n" + sparql);
+		
 		int responseCode = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"),
 				sparql).getStatusCode();
 		log.info("SPARQL response : " + responseCode);

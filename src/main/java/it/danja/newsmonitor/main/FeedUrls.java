@@ -36,10 +36,10 @@ public class FeedUrls  {
 		this.config  = config;
 	}
 
-	public void load(String location) {
+	public synchronized void load(String location) {
 		String sparql = textFileReader.read(location); // SPARQL_FEEDLIST_LOCATION
 		
-		
+		System.out.println("SPARQL = "+sparql);
 		   SparqlConnector sparqlConnector = new SparqlConnector(config);
 		
 		String xmlResults = sparqlConnector.query(config.getProperty("QUERY_ENDPOINT"), sparql);

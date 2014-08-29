@@ -9,6 +9,7 @@
 package it.danja.newsmonitor.standalone;
 
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.Properties;
 
 import it.danja.newsmonitor.io.TextFileReader;
@@ -59,7 +60,19 @@ public class Main {
 		} else {
 			nm.start();
 		}
-
 	}
 
+	/**
+	 * for debugging
+	 * @param properties
+	 */
+	public static void listProperties(Properties properties) {
+		System.out.println("=== Properties ===");
+		Enumeration<Object> keys = properties.keys();
+		while(keys.hasMoreElements()) {
+			String key = (String)keys.nextElement();
+			System.out.println(key + " = "+ properties.getProperty(key));
+			
+		}
+	}
 }

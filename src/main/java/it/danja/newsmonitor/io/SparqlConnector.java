@@ -182,10 +182,8 @@ public class SparqlConnector {
 		try {
 			inputStream = response.getEntity().getContent();
 		} catch (IllegalStateException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		// XmlEncodingSniffer sniffer;
@@ -200,6 +198,7 @@ public class SparqlConnector {
 		// e1.printStackTrace();
 		// }
 
+		
 		try {
 			reader = new BufferedReader(new InputStreamReader(inputStream)); // response.getEntity().getContent()
 		} catch (IllegalStateException e) {
@@ -217,11 +216,13 @@ public class SparqlConnector {
 		}
 		try {
 			inputStream.close();
+		//	reader.close();	
+			// inputStream.close();
 		} catch (IOException e) {
 			log.error(e.getMessage());
 		}
 	//	
-		 
+		 System.out.println("CONTENT = "+content.toString());
 		 return content.toString();
 	// */
 	}

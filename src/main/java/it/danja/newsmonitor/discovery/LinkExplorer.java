@@ -12,10 +12,6 @@
  */
 package it.danja.newsmonitor.discovery;
 
-import org.osgi.framework.BundleContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import it.danja.newsmonitor.io.HttpConnector;
 import it.danja.newsmonitor.io.HttpMessage;
 import it.danja.newsmonitor.io.SparqlConnector;
@@ -28,7 +24,6 @@ import it.danja.newsmonitor.model.impl.LinkImpl;
 import it.danja.newsmonitor.sparql.SparqlResults.Binding;
 import it.danja.newsmonitor.sparql.SparqlResults.Result;
 import it.danja.newsmonitor.sparql.SparqlResultsParser;
-import it.danja.newsmonitor.standalone.FsTextFileReader;
 import it.danja.newsmonitor.templating.Templater;
 import it.danja.newsmonitor.utils.ContentProcessor;
 import it.danja.newsmonitor.utils.ContentType;
@@ -39,6 +34,9 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  *
  */
@@ -46,7 +44,6 @@ public class LinkExplorer implements Runnable {
 
 	private static Logger log = LoggerFactory.getLogger(LinkExplorer.class);
 
-	private BundleContext bundleContext;
 
 	private FeedList feedList = null;
 	private boolean running = false;
@@ -65,20 +62,18 @@ public class LinkExplorer implements Runnable {
 	/**
      *
      */
-	public LinkExplorer(Properties config, FeedList feedList,
+	public LinkExplorer(Properties config, FeedList feedList, TextFileReader textFileReader,
 			Templater templater) {
 		this.config = config;
 		this.feedList = feedList;
 		this.templater = templater;
+		this.textFileReader = textFileReader;
 		sparqlConnector = new SparqlConnector(config);
 		httpConnector = new HttpConnector(config);
 	}
 
-	public void setBundleContext(BundleContext bundleContext) {
-		this.bundleContext = bundleContext;
-	}
-
 	public void start() {
+		System.out.println("LINKEXPLORER START");
 		running = true;
 		stopped = false;
 		thread = new Thread(this);
@@ -229,9 +224,12 @@ public class LinkExplorer implements Runnable {
 	}
 
 	private Set<Link> getLinksFromStore() {
-		String sparql = textFileReader.read(config
-				.getProperty("GET_LINKS_SPARQL_LOCATION"));
-
+		
+		String sparqlLocation = config.getProperty("GET_LINKS_SPARQL_LOCATION");
+		System.out.println("textFileReader = "+textFileReader);
+	
+		String sparql = textFileReader.read(sparqlLocation);
+		System.out.println("sparql = "+sparql);
 		SparqlResultsParser parser = new SparqlResultsParser();
 		parser.setSparql(sparql); // for debugging
 

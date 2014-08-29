@@ -82,7 +82,7 @@ public class SparqlResultsParser implements ContentHandler {
 
 	// Custom type conversion methods - see
     // http://www.ibm.com/developerworks/library/x-tipsaxis/
-    public SparqlResults parse(String string) {
+    public synchronized SparqlResults parse(String string) {
         Reader reader = new StringReader(string);
         InputSource source = new InputSource(reader);
         SparqlResults results = parse(source);
@@ -149,7 +149,7 @@ public class SparqlResultsParser implements ContentHandler {
 
         // throw new RuntimeException("Local Name = "+localName);
         log.debug("START ELEMENT = " + localName);
-
+//System.out.println("START ELEMENT = " + localName);
         try {
             state = State.valueOf(localName);
         } catch (IllegalArgumentException e) {
@@ -196,6 +196,7 @@ public class SparqlResultsParser implements ContentHandler {
 
         String text = textBuffer.toString();
         // log.info("text = "+text +"\n-------------");
+      //  System.out.println("END ELEMENT = " + localName);
 
         state = State.valueOf(localName);
 

@@ -9,7 +9,7 @@
  */
 package it.danja.newsmonitor.osgi.templating;
 
-import it.danja.newsmonitor.io.ResourceLister;
+
 import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.templating.TemplateLoader;
 import it.danja.newsmonitor.templating.TemplateLoaderBase;
