@@ -125,7 +125,7 @@ public class SparqlConnector {
 		} catch (IOException e) {
 			log.error(e.getMessage());
 		}
-		request.releaseConnection();
+
 
 		 statusCode = response.getStatusLine().getStatusCode();
 		 
@@ -157,7 +157,7 @@ public class SparqlConnector {
 				} catch (IOException e) {
 					log.error(e.getMessage());
 				}
-				request.releaseConnection();
+				
 		 }
 		
 		String headersString = new String();
@@ -223,6 +223,7 @@ public class SparqlConnector {
 		}
 	//	
 		 System.out.println("CONTENT = "+content.toString());
+		 request.releaseConnection();
 		 return content.toString();
 	// */
 	}
