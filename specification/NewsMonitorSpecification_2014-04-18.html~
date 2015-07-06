@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>NewsMonitor Specification</title>
+    <link title="Default" type="text/css" href="css/spec.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <h1> NewsMonitor Module Specification<br>
+    </h1>
+    <div id="subtitle"> Fusepool module for discovering and monitoring news
+      articles and/or RSS/Atom feeds for issues on predetermined topics</div>
+    <br>
+    <div id="sig">Danny Ayers 2014-04-18 <br>
+      <a href="mailto:danny.ayers@gmail.com">danny.ayers@gmail.com</a></div>
+    <h2> Overview</h2>
+    <p>discover blogs (and certain social networks) containing posts in the
+      medical domain<br>
+      aggregate content<br>
+      identify and extract key information<br>
+      express the results as linked data using established vocabularies<br>
+      display results via Web UI</p>
+    <h3>Developer</h3>
+    <p>The NewsMonitor module will be developed by Danny Ayers as a lone coder
+      (aided by the Fusepool group), devoting as much time as necessary to the
+      project.</p>
+    <p></p>
+    <h2>Motivation</h2>
+    <p>Why blogs/social?<br>
+      more human-digestible than typical medical material<br>
+      generated in real time, without the latency found in formal research<br>
+      not constrained by national borders, open, free<br>
+      Drawbacks?<br>
+      informal language, more ambiguity<br>
+      less rigorous than conventional medical research<br>
+      potential legal/copyright complications</p>
+    <p>Data Sources<br>
+      change of domain - instead of medical, change to material related to
+      European Parliament<br>
+      starting point : MEPs<br>
+      initial data/vocabs already available<br>
+      should be easier to bootstrap the system as the&nbsp; domain is more
+      constrained<br>
+      can also experiment with medical domain to check requirements for
+      redeployment</p>
+    <p>Potential Users<br>
+      domain professionals<br>
+      lay users<br>
+      journalists<br>
+      <br>
+      Use Cases<br>
+      general user (patient) reference<br>
+      medical news aggregation<br>
+      indication of potential drug side effects<br>
+      unanticipated reuse...&nbsp;</p>
+    <p>Legacy for Fusepool<br>
+      Showcase App<br>
+      Application reusable for different domains<br>
+      Poller/Aggregator component(s)<br>
+      Intelligent Discovery Engine component</p>
+    <h2> System Architecture</h2>
+    <img style="width: 640px; height: 385px;" alt="architecture" title="architecture"
+      src="images/architecture-overview.png"><br>
+    <br>
+    The main components of the system are the <a href="#DataContent_Store">Data/Content
+      Store</a> <span style="font-style: italic;">Fusepool ECS</span> (shown in
+    the diagram as the three blue cylinders), the <a href="#Poller">Poller</a>
+    <span style="font-style: italic;">NewsMonitor component</span>, a set of
+    data <a href="#Extractors">Extractors</a> <span style="font-style: italic;">NewsMonitor
+      RDFizers and existing Fusepool components</span> and the <a href="#Discovery_Engine">Discovery
+      Engine</a> <span style="font-style: italic;">NewsMonitor component</span>.<br>
+    <br>
+    <a name="DataContent_Store"></a>
+    <h3>Data/Content Store</h3>
+    Three sets of data will be contained in the store:<br>
+    <ul>
+      <li>Dictionaries/Ontologies will used to guide data extraction and help
+        determine page relevance within the Discovery Engine</li>
+      <li>Discovery Rules will be applied against entities extracted from
+        candidate page content (and page metadata) to determine page relevance</li>
+      <li>Page Metadata &amp; Content will be the feedlist and material derived
+        from subscribed feeds. This is the primary output of the system</li>
+    </ul>
+    <a name="Poller"></a>
+    <h3>Poller</h3>
+    The role of the Poller is to periodically step through the URLs in the
+    feedlist and to obtain any new material found in those feeds.<br>
+    <br>
+    <a name="Extractors"></a>
+    <h3>Extractors</h3>
+    The role of the extractors is to :<br>
+    <ul>
+      <li>convert feed content to RDF</li>
+      <li>extract entities from entry content</li>
+      <li>extract linked URLs as potential sources of further relevant feeds<br>
+      </li>
+    </ul>
+    <br>
+    <a name="Discovery_Engine"></a>
+    <h3>Discovery Engine</h3>
+    The role of the Discovery Engine is to take the URLs and entities from a a
+    given entry and by means of a series of heuristics determine the relevance
+    of the target page. Part of the heuristics will be rule-driven, with the
+    rules contained in the data store.<br>
+    Simple heuristics will also be applied to find feeds linked from the target
+    page (Feed Autodiscovery and scraping).<br>
+    <h2> Program Flow</h2>
+    The system will be initialized by loading the feedlist into working memory
+    (the seed feedlist will previously have been loaded from file).<br>
+    <br>
+    There will then be two main threads running concurrently. The Poller thread
+    will loop through feed URLs getting new content/data and passing it into the
+    store. The Discovery thread will take any new pieces of content and extract
+    any URLs, and for each URL determine a relevance score. If the score is
+    above the given threshold, feed autodiscovery <br>
+    <br>
+    <span style="font-weight: bold;">Poller Thread</span><br>
+    <br>
+    for each URL :<br>
+    <ul>
+      <li>Conditional GET to retrieve feed content</li>
+      <li>feed content translated to RDF</li>
+      <li>(on first run only) feed top-level metadata passed to store</li>
+      <li>new content and post-level metadata passed to store</li>
+      <li>entity extraction applied to </li>
+    </ul>
+    <span style="font-weight: bold;">Discovery Engine Thread</span><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2> User Interface</h2>
+    Output<br>
+    aggregated posts, keyword searchable<br>
+    linked data (using established vocabs)<br>
+    SPARQL Endpoint<br>
+    RESTful interfaces to system components as appropriate<br>
+    <h3> Administration Page</h3>
+    <h3>Feed View Pages</h3>
+    <ul>
+      <li><span style="font-weight: bold;">1-Pane</span> : “River of News” -
+        recent posts sorted by individual post date and/or most recently updated
+        blog (<a href="RiverofNews-mockup.html">mockup</a>)</li>
+      <li><span style="font-weight: bold;">3-Pane</span> :&nbsp; feedlist, entry
+        titles, individual entry content (<a href="3-Pane-mockup.html">mockup</a>)</li>
+    </ul>
+    <h2> Format Support</h2>
+    <ul>
+      <li><a href="http://web.resource.org/rss/1.0/">RSS 1.0</a> (for input)</li>
+      <li><a href="http://cyber.law.harvard.edu/rss/rss.html">RSS 2.0</a> (for
+        input)</li>
+      <li><a href="https://tools.ietf.org/html/rfc4287">Atom</a> (for input and
+        output)</li>
+      <li><a href="http://dev.opml.org/spec2.html">OPML</a> (is de facto
+        standard for feedlist import/export)</li>
+      <li><a href="http://www.w3.org/RDF/">RDF</a> formats (provided via
+        existing components)</li>
+    </ul>
+    <h2> Vocabularies</h2>
+    <ul>
+      <li><a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a></li>
+      <li><a href="http://xmlns.com/foaf/spec/">FOAF</a></li>
+      <li><a href="http://schema.org/">Schema.org</a></li>
+      <li><a href="http://www.w3.org/TR/HTTP-in-RDF10/">W3C HTTP Vocabulary</a></li>
+      <li>Fusepool dictionary vocabularies</li>
+      <li>Custom terms where necessary for internal operations</li>
+    </ul>
+    <h2> Protocol Support</h2>
+    <h3>Feed Reading</h3>
+    <ul>
+      <li>HTTP/1.1 (targeting <a href="https://tools.ietf.org/wg/httpbis/">HTTPbis</a>)</li>
+      <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-p4-conditional-26">Conditional
+          GET</a> :</li>
+      <ul>
+        <li>Last-Modified/If-Modified-Since</li>
+      </ul>
+      <ul>
+        <li>ETag/If-None-Match</li>
+      </ul>
+    </ul>
+    <table style="width: 739px; height: 1495px;" cellpadding="1" cellspacing="0">
+      <colgroup><col width="103"> <col width="206"> <col width="263"> </colgroup>
+      <tbody>
+        <tr>
+          <td colspan="3" valign="TOP" width="575" height="15"> <b>Syndication
+              Client Actions on HTTP Status Codes</b> </td>
+        </tr>
+        <tr valign="TOP">
+          <td width="103" height="15">
+            Status Code </td>
+          <td width="206">
+            Reason Phrase </td>
+          <td width="263">
+            Appropriate Action </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">100 </td>
+          <td valign="BOTTOM" width="206">Continue </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">101 </td>
+          <td valign="BOTTOM" width="206">Switching Protocols </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">200 </td>
+          <td valign="BOTTOM" width="206">OK </td>
+          <td valign="TOP" width="263">* Read data </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">201 </td>
+          <td valign="BOTTOM" width="206">Created </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">202 </td>
+          <td valign="BOTTOM" width="206">Accepted </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">203 </td>
+          <td valign="BOTTOM" width="206">Non-Authoritative Information </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">204 </td>
+          <td valign="BOTTOM" width="206">No Content </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">205 </td>
+          <td valign="BOTTOM" width="206">Reset Content </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">206 </td>
+          <td valign="BOTTOM" width="206">Partial Content </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">300 </td>
+          <td valign="BOTTOM" width="206">Multiple Choices </td>
+          <td valign="TOP" width="263">* Follow redirection (keep current URI) </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">301 </td>
+          <td valign="BOTTOM" width="206">Moved Permanently </td>
+          <td valign="TOP" width="263">* Follow redirection, replace URI </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">302 </td>
+          <td valign="BOTTOM" width="206">Found (Temporary Redirect) </td>
+          <td valign="TOP" width="263">* Follow redirection (keep current URI) </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">303 </td>
+          <td valign="BOTTOM" width="206">See Other </td>
+          <td valign="TOP" width="263">* Follow redirection (keep current URI) </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">304 </td>
+          <td valign="BOTTOM" width="206">Not Modified </td>
+          <td valign="TOP" width="263">* Use current cache </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">305 </td>
+          <td valign="BOTTOM" width="206">Use Proxy </td>
+          <td valign="TOP" width="263">* Follow redirection (keep current URI) </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">307 </td>
+          <td valign="BOTTOM" width="206">Temporary Redirect </td>
+          <td valign="TOP" width="263">* Follow redirection (keep current URI) </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">400 </td>
+          <td valign="BOTTOM" width="206">Bad Request </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">401 </td>
+          <td valign="BOTTOM" width="206">Unauthorized </td>
+          <td valign="TOP" width="263">* Unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">402 </td>
+          <td valign="BOTTOM" width="206">Payment Required </td>
+          <td valign="TOP" width="263">* Unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">403 </td>
+          <td valign="BOTTOM" width="206">Forbidden </td>
+          <td valign="TOP" width="263">* Unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">404 </td>
+          <td valign="BOTTOM" width="206">Not Found </td>
+          <td valign="TOP" width="263">* Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">405 </td>
+          <td valign="BOTTOM" width="206">Method Not Allowed </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">406 </td>
+          <td valign="BOTTOM" width="206">Not Acceptable </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">407 </td>
+          <td valign="BOTTOM" width="206">Proxy Authentication Required </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">408 </td>
+          <td valign="BOTTOM" width="206">Request Time-out </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">409 </td>
+          <td valign="BOTTOM" width="206"> Conflict </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">410 </td>
+          <td valign="BOTTOM" width="206">Gone </td>
+          <td valign="TOP" width="263">* Unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">411 </td>
+          <td valign="BOTTOM" width="206">Length Required </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">412 </td>
+          <td valign="BOTTOM" width="206">Precondition Failed </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">413 </td>
+          <td valign="BOTTOM" width="206">Request Entity Too Large </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">414 </td>
+          <td valign="BOTTOM" width="206">Request-URI Too Large </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">415 </td>
+          <td valign="BOTTOM" width="206">Unsupported Media Type </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">416 </td>
+          <td valign="BOTTOM" width="206">Requested range not satisfiable </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">417 </td>
+          <td valign="BOTTOM" width="206">Expectation Failed </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">500 </td>
+          <td valign="BOTTOM" width="206">Internal Server Error </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">501 </td>
+          <td valign="BOTTOM" width="206">Not Implemented </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">502 </td>
+          <td valign="BOTTOM" width="206">Bad Gateway </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">503 </td>
+          <td valign="BOTTOM" width="206">Service Unavailable </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15">504 </td>
+          <td valign="BOTTOM" width="206">Gateway Time-out </td>
+          <td valign="TOP" width="263">Record - if persistent, unsubscribe </td>
+        </tr>
+        <tr>
+          <td valign="BOTTOM" width="103" height="15"> 505 </td>
+          <td valign="BOTTOM" width="206"> HTTP Version not supported </td>
+          <td valign="TOP" width="263"> Record - if persistent, unsubscribe </td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <ul>
+      </ul>
+    </ul>
+    <h3> Admin</h3>
+    <ul>
+      <li>HTTP 1.0/1.1</li>
+      <ul>
+        <li>GET to examine status</li>
+      </ul>
+      <ul>
+        <li>POST to add feed sources</li>
+      </ul>
+      <li>SPARQL (via existing Fusepool components)</li>
+    </ul>
+    <br>
+    <br>
+    Roadmap<br>
+    identify existing Fusepool/Stanbol components that fulfil parts of the
+    requirements<br>
+    hack prototypes of missing components, virtually standalone<br>
+    minimum viable product... (i.e. get it working!)<br>
+    replace/refactor prototypes components into OSGi and integrate with Fusepool<br>
+    custom UI (if necessary)<br>
+    Live demo deployment<br>
+    <br>
+    Milestones<br>
+    Week 1 : identify usable Fusepool/Stanbol components, clarify requirements
+    &amp; design<br>
+    Week 2 : prototype poller<br>
+    Week 3 : prototype crawler<br>
+    Week 4 : prototype system integration<br>
+    Week 7 : completed components<br>
+    Week 8 : live demo <br>
+    <br>
+    Open Questions<br>
+    time, cost, scope..?<br>
+    existing components?<br>
+    custom UI?<br>
+    discovery rules engine : use RDFS/OWL reasoning? SPARQL? Drools?<br>
+    copyright issues?<br>
+    subproject name(s)..?<br>
+    <br>
+    <br>
+    Future Enhancements<br>
+    real-time actions triggered in response to search queries<br>
+    user interaction, voting up/down sources<br>
+    per-user customization<br>
+    UI integration with more of LOD cloud<br>
+    enrichment with schema.org, RDFa annotation of human-oriented views<br>
+    <br>
+    <br>
+    <br>
+    <h3> Chapter 20: Modeling Feed Data.</h3>
+    <br>
+    Chapter 21: Storing Feed Data.<br>
+    <br>
+    Chapter 22: Consuming Feeds.<br>
+    <br>
+    Chapter 23: Parsing Feeds.<br>
+    <br>
+    Chapter 24: Producing Feeds.<br>
+    <br>
+    Chapter 25: Queries and Transformations.<br>
+    <br>
+    Chapter 26: The Blogging Client.<br>
+    <br>
+    Chapter 27: Building Your Own Planet.<br>
+    <br>
+    Chapter 28: Building a Desktop Aggregator.<br>
+    <br>
+    Chapter 29: Social Syndication.<br>
+    <br>
+    Chapter 30: Additional Content.<br>
+    <br>
+    Chapter 31: Loose Ends, Loosely Coupled.<br>
+    <br>
+    Chapter 32: What Lies Ahead in Information Management.<br>
+    <br>
+    <br>
+  </body>
+</html>

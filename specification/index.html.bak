@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>NewsMonitor</title>
+    <link title="Default" type="text/css" href="css/spec.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <h1>NewsMonitor</h1>
+    <div id="subtitle">Fusepool module for discovering and monitoring RSS/Atom
+      feeds on predetermined topics</div>
+    <br>
+    <ul>
+      <li> <a href="https://github.com/danja/feedreader-prototype">Prototype
+          Code</a><span style="font-weight: bold;"></span></li>
+    </ul>
+    <h2>Documentation</h2>
+    <ul>
+      <li><a href="NewsMonitorSpecification_2014-04-18.html">NewsMonitor
+          Specification</a></li>
+      <li><a href="javadoc/">API Javadoc</a></li>
+    </ul>
+  </body>
+</html>
