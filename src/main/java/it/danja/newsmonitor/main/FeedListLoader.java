@@ -9,24 +9,13 @@
  */
 package it.danja.newsmonitor.main;
 
-import org.osgi.framework.Bundle;
-import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import it.danja.newsmonitor.io.OpmlSetReader;
-import it.danja.newsmonitor.io.SparqlConnector;
 import it.danja.newsmonitor.io.TextFileReader;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URL;
 import java.util.Properties;
 
 /**
@@ -48,7 +37,7 @@ public class FeedListLoader {
 
 	// TODO move to Config
 	public static String CHANNEL_TEMPLATE = "<${url}> rdf:type rss:channel ; \n"
-			+ "foaf:topic <http://www.w3.org/2001/sw/>, <http://www.w3.org/RDF/> . \n\n";
+			+ "foaf:topic <https://en.wikipedia.org/wiki/Deep_learning> . \n\n";
 
 	private Properties config = null;
 
@@ -84,7 +73,7 @@ public class FeedListLoader {
 			log.error(e.getMessage());
 		}
 		log.info(urlCount+" URLs loaded from file");
-		
+		// System.out.println("handler.getTurtleBody() "+handler.getTurtleBody());
 		return handler.getTurtleBody();
 	}
 
@@ -98,20 +87,6 @@ public class FeedListLoader {
 	 */
 	public static String insertValue(String template, String name, String value) {
 		return template.replace("${" + name + "}", value);
-	}
-	
-	public static void main(String[] args) {
-
-//		FeedListLoader loader = new FeedListLoader();
-//		LineHandler handler = loader.new LineHandler();
-//		String turtleBody = loader.readFile("input/rdf-bloggers-feedlist.txt",
-//				handler);
-//		String sparql = FeedListLoader.insertValue(SPARQL_TEMPLATE, "channels",
-//				turtleBody);
-//		// log.info("Query = \n" + sparql);
-//		int responseCode = SparqlConnector.update(
-//				"http://localhost:3030/feedreader/update", sparql).getStatusCode();
-		// log.info(responseCode);
 	}
 
 	class LineHandler {

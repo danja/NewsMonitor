@@ -39,7 +39,7 @@ public class FeedUrls  {
 	public synchronized void load(String location) {
 		String sparql = textFileReader.read(location); // SPARQL_FEEDLIST_LOCATION
 		
-		System.out.println("SPARQL = "+sparql);
+		System.out.println("SPARQL_FEEDLIST_LOCATION");
 		   SparqlConnector sparqlConnector = new SparqlConnector(config);
 		
 		String xmlResults = sparqlConnector.query(config.getProperty("QUERY_ENDPOINT"), sparql);

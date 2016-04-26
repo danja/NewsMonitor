@@ -229,7 +229,7 @@ public class LinkExplorer implements Runnable {
 		System.out.println("textFileReader = "+textFileReader);
 	
 		String sparql = textFileReader.read(sparqlLocation);
-		System.out.println("sparql = "+sparql);
+		System.out.println("GET_LINKS_SPARQL_LOCATION");
 		SparqlResultsParser parser = new SparqlResultsParser();
 		parser.setSparql(sparql); // for debugging
 

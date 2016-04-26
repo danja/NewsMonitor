@@ -72,6 +72,7 @@ public class Poller implements Runnable {
 	public Poller(Properties config, SparqlTemplater sparqlTemplater) {
 		this.sparqlTemplater = sparqlTemplater;
 		this.config  = config;
+                System.out.println(config);
 		feedList = new FeedListImpl(config);
 		// sparqlTemplater.setBundleContext(bundleContext);
 	}
@@ -90,6 +91,8 @@ public class Poller implements Runnable {
 			feed.init();
 			feedList.addFeed(feed);
 		}
+                 log.info("==== FeedList ====");
+                 log.info(feedList.toString());
 		return feedList;
 	}
 
@@ -110,7 +113,7 @@ public class Poller implements Runnable {
 		// log.info("FEEDLIST = " + feedList);
 		while (running) {
 			if (feedList.size() == 0) {
-				log.info("No valid feeds, stopping poller...");
+				log.warn("No valid feeds, stopping poller...");
 				running = false;
 				break;
 			}

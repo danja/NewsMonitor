@@ -89,11 +89,11 @@ public class SystemStatus {
 		
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
-		// log.info("Query = \n" + sparql);
+		log.info("insert feeds = \n" + sparql);
 		
 		int responseCode = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"),
 				sparql).getStatusCode();
-		log.info("SPARQL response : " + responseCode);
+		log.info("insert feeds SPARQL response : " + responseCode);
 	}
 
 	private void pushStatusToStore() {

@@ -1,0 +1,15 @@
+https://jeremykarnowski.wordpress.com/feed/
+http://nikhilbuduma.com/feed.xml
+http://www.wildml.com/feed/
+http://www.kdnuggets.com/feed
+http://blog.explainmydata.com/feeds/posts/default
+http://www.wildml.com/feed/
+http://www.creativeai.net/feed.xml
+http://karpathy.github.io/feed.xml
+http://colah.github.io/rss.xml
+https://databricks.com/feed
+http://blog.shakirm.com/feed/
+http://blog.keras.io/
+http://feeds2.feedburner.com/MachineLearningtheory
+http://feeds.feedburner.com/miriblog
+http://www.gabrieleangeletti.com/feed.xml

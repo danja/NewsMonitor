@@ -13,10 +13,8 @@ package it.danja.newsmonitor.model.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import it.danja.newsmonitor.discovery.PresetTopics;
 import it.danja.newsmonitor.discovery.RelevanceCalculator;
 import it.danja.newsmonitor.interpreters.FormatSniffer;
-import it.danja.newsmonitor.interpreters.Interpreter;
 import it.danja.newsmonitor.interpreters.InterpreterFactory;
 import it.danja.newsmonitor.io.HttpConnector;
 import it.danja.newsmonitor.main.Config;
@@ -25,7 +23,6 @@ import it.danja.newsmonitor.model.EntryList;
 import it.danja.newsmonitor.model.Feed;
 import it.danja.newsmonitor.model.FeedEntity;
 import it.danja.newsmonitor.model.Link;
-import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
 import it.danja.newsmonitor.utils.ContentType;
 
 import java.util.HashSet;
