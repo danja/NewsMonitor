@@ -11,7 +11,6 @@ package it.danja.newsmonitor.utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import it.danja.newsmonitor.interpreters.FeedParserBase;
 import it.danja.newsmonitor.model.Feed;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.LinkImpl;

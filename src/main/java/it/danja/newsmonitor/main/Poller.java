@@ -9,19 +9,12 @@
  */
 package it.danja.newsmonitor.main;
 
-import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import it.danja.newsmonitor.interpreters.FormatSniffer;
-import it.danja.newsmonitor.interpreters.Interpreter;
-import it.danja.newsmonitor.interpreters.InterpreterFactory;
-import it.danja.newsmonitor.io.HttpConnector;
 import it.danja.newsmonitor.io.HttpMessage;
-import it.danja.newsmonitor.model.EntryList;
 import it.danja.newsmonitor.model.Feed;
 import it.danja.newsmonitor.model.FeedList;
-import it.danja.newsmonitor.model.impl.EntryListImpl;
 import it.danja.newsmonitor.model.impl.FeedImpl;
 import it.danja.newsmonitor.model.impl.FeedListImpl;
 import it.danja.newsmonitor.sparql.SparqlTemplater;
@@ -32,13 +25,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Poller implements Runnable {
 	
 	private static Logger log = LoggerFactory.getLogger(Poller.class);
-
-	// private EntryList entries = new EntryListImpl();
 
 	private List<String> feedUrls = null;
 

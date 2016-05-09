@@ -1,8 +1,5 @@
 /**
- * TODO rename
  * NewsMonitor
- *
- * xxx.java
  * 
  * @author danja
  * @date Apr 25, 2014
@@ -13,9 +10,6 @@ package it.danja.newsmonitor.model;
 import it.danja.newsmonitor.interpreters.Interpreter;
 
 import java.io.InputStream;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**

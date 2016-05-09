@@ -8,21 +8,15 @@
  */
 package it.danja.newsmonitor.main;
 
-import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import it.danja.newsmonitor.io.SparqlConnector;
 import it.danja.newsmonitor.io.TextFileReader;
-import it.danja.newsmonitor.main.FeedListLoader.LineHandler;
 import it.danja.newsmonitor.sparql.SparqlResults;
 import it.danja.newsmonitor.sparql.SparqlResultsParser;
-import it.danja.newsmonitor.standalone.FsTextFileReader;
-import it.danja.newsmonitor.standalone.Main;
-import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
 import it.danja.newsmonitor.templating.Templater;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -89,11 +83,11 @@ public class SystemStatus {
 		
 		String sparql = FeedListLoader.insertValue(
 				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
-		log.info("insert feeds = \n" + sparql);
+		// log.info("insert feeds = \n" + sparql);
 		
 		int responseCode = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"),
 				sparql).getStatusCode();
-		log.info("insert feeds SPARQL response : " + responseCode);
+		// log.info("insert feeds SPARQL response : " + responseCode);
 	}
 
 	private void pushStatusToStore() {

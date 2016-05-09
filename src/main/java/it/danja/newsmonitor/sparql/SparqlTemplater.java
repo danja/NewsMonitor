@@ -8,18 +8,13 @@
  */
 package it.danja.newsmonitor.sparql;
 
-import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import it.danja.newsmonitor.io.HttpMessage;
 import it.danja.newsmonitor.io.SparqlConnector;
 import it.danja.newsmonitor.io.TextFileReader;
-import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.model.Feed;
-import it.danja.newsmonitor.standalone.FsTextFileReader;
-import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
-import it.danja.newsmonitor.templating.TemplateLoader;
 import it.danja.newsmonitor.templating.Templater;
 
 import java.util.HashMap;
@@ -46,7 +41,7 @@ public class SparqlTemplater {
 		this.config  = config;
 		// PREFIXES = TextFileReader.read(Config.SPARQL_PREFIXES_FILE);
 			PREFIXES = textFileReader.read(config.getProperty("SPARQL_PREFIXES_LOCATION"));
-			System.out.println("PREFIXES = "+PREFIXES);
+			// System.out.println("PREFIXES = "+PREFIXES);
 			sparqlConnector = new SparqlConnector(config);
 	}
 	
@@ -69,7 +64,7 @@ public class SparqlTemplater {
 		map.put("body", feedBody);
 		
 		String sparql = templater.apply("sparql-insert", map);
-		// log.info("\n\n----------------\n"+sparql+"\n\n---------------------");
+	// log.info("\n\n-------------\n"+sparql+"\n\n---------------------");
 		HttpMessage message = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"), sparql);
 		message.setRequestBody(sparql);
 		return message;

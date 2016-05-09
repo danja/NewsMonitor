@@ -1,8 +1,5 @@
 package it.danja.newsmonitor.model.impl;
 
-import it.danja.newsmonitor.io.HttpConnector;
-import it.danja.newsmonitor.model.Page;
-
 public class PageImpl extends PageBase {
 
 	private String url = null;

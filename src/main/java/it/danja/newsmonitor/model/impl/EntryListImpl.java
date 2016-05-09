@@ -14,10 +14,8 @@ package it.danja.newsmonitor.model.impl;
 import it.danja.newsmonitor.model.Entry;
 import it.danja.newsmonitor.model.EntryList;
 import it.danja.newsmonitor.model.Link;
-import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -66,21 +64,6 @@ public class EntryListImpl implements EntryList {
             entryIDs.add(id);
         }
     }
-
-//	@Override
-//	public String toTurtle() {
-//		if(entries.size() == 0) {
-//			return "# No entries.";
-//		}
-//		StringBuffer bodyBuffer = new StringBuffer();
-//		for(int i=0;i<entries.size();i++){
-//			bodyBuffer.append(entries.get(i).toString()+"\n\n");
-//		}
-//		Map<String, Object> data = new HashMap<String, Object>();
-//		data.put("body", bodyBuffer.toString());
-//		log.info(Templater.dataMapToString(data));
-//		return Templater.apply("turtle-prefixes", data);
-//	}
 	
     public String toString() {
 		StringBuffer bodyBuffer = new StringBuffer();

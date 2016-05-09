@@ -35,5 +35,8 @@ public class Topic {
 		return keywords;
 	}
 	
-	
+	public Topic merge(Topic topic){
+            keywords.putAll(topic.getKeywords());
+            return this;
+        }
 }

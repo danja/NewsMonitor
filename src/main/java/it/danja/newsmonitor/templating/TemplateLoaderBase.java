@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package it.danja.newsmonitor.templating;
 
@@ -15,27 +15,27 @@ import freemarker.template.Template;
  */
 public abstract class TemplateLoaderBase implements TemplateLoader {
 
+    private Configuration configuration = new Configuration();
+    private Map<String, Template> templateMap = new HashMap<String, Template>();
 
-	private Configuration configuration = new Configuration();
-	private  Map<String, Template> templateMap = new HashMap<String, Template>();
-	
-	public Configuration getConfiguration(){
-		return configuration;
-	}
-	/* (non-Javadoc)
+    public Configuration getConfiguration() {
+        return configuration;
+    }
+
+    /* (non-Javadoc)
 	 * @see it.danja.newsmonitor.standalone.templating.TemplateLoader#init()
-	 */
-	@Override
-	public void init() {
-		configuration.setDefaultEncoding("UTF-8");
-			loadTemplates();
-	}
+     */
+    @Override
+    public void init() {
+        configuration.setDefaultEncoding("UTF-8");
+        loadTemplates();
+    }
 
-	public Map<String, Template> getTemplateMap() {
-		return templateMap;
-	}
-	
-	public Template getTemplate(String name) {
-		return templateMap.get(name);
-	}
+    public Map<String, Template> getTemplateMap() {
+        return templateMap;
+    }
+
+    public Template getTemplate(String name) {
+        return templateMap.get(name);
+    }
 }

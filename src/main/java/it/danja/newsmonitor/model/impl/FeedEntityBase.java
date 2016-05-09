@@ -13,17 +13,11 @@ import it.danja.newsmonitor.model.DateStamp;
 import it.danja.newsmonitor.model.FeedEntity;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.Person;
-import it.danja.newsmonitor.model.Tag;
 import it.danja.newsmonitor.model.Templatable;
 import it.danja.newsmonitor.utils.HtmlCleaner;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Characteristics common to components of a feed

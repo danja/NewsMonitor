@@ -31,7 +31,7 @@ public class Templater {
 	}
 
 	// TODO refactor, move to another class?
-	public String apply(String templateName, Object dataModel) {
+	public String apply(String templateName, Object dataModel) { // 
 		// log.info("templateName = " + templateName);
 
 		Writer writer = new StringWriter();

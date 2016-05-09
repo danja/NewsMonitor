@@ -7,17 +7,19 @@
          <#if format??><${feedUrl}> nm:format "${format}" .</#if>
          <#if contentType??><${feedUrl}> nm:contentType "${contentType}" .</#if>
          <#if lives??><${feedUrl}> nm:lives "${lives?c}" .</#if>
-         <#if dead??><${feedUrl}> nm:dead "${dead?c}" .</#if> 
          <#if entryCount??><${feedUrl}> nm:entryCount "${entryCount?c}" .</#if> 
-         <#if volatile??><${feedUrl}> nm:volatile "${volatile?c}" .</#if>
          <#if relevance??><${feedUrl}> nm:relevance "${relevance?c}" .</#if>
-         <#if favourite??><${feedUrl}> nm:favourite "${favourite?c}" .</#if>
          <#if relevanceFactor??><${feedUrl}> nm:relevanceFactor "${relevanceFactor?c}" .</#if>                  
          <#if id??><${feedUrl}> dcterms:identifier "${id}" .</#if>
          <#if htmlUrl??><${feedUrl}> nm:htmlUrl <${htmlUrl}> .</#if>
          <#if title??><${feedUrl}> dcterms:title """${title}""" .</#if>
          <#if content??><${feedUrl}> schema:description """${content}""" .</#if> 
          
+            #booleans
+         <#if dead??><${feedUrl}> nm:dead "true" .</#if> 
+         <#if volatile??><${feedUrl}> nm:volatile "true" .</#if>
+         <#if favourite??><${feedUrl}> nm:favourite "true" .</#if>
+
          # feed/author
          <#if author??>
          <${feedUrl}> 
@@ -52,9 +54,11 @@
          	   		<#if link.responseCode??>nm:responseCode "${link.responseCode}" ;</#if>
          	   		<#if link.contentType??>nm:contentType "${link.contentType}" ;</#if>
          	   		<#if link.format??>nm:format "${link.format}" ;</#if>   		
-         	   		<#if link.explored??>nm:explored "${link.explored?c}" ;</#if>
          	   		<#if link.relevance??>nm:relevance "${link.relevance?c}" ;</#if>
-         	   		<#if link.remote??>nm:remote "${link.remote?c}" ;</#if>
+                                
+                                # boolean
+         	   		<#if link.explored??>nm:explored "true" ;</#if>
+         	   		<#if link.remote??>nm:remote "true" ;</#if>
          	   ] .
          	</#if>
          </#list>     
@@ -99,9 +103,10 @@
          </#if>
          
              # entry/admin
-         	 <#if entry.read??><${entry.url}> nm:read "${entry.read?c}" .</#if>
          	 <#if entry.relevance??><${entry.url}> nm:relevance "${entry.relevance?c}" .</#if>
-         	 <#if entry.favourite??><${entry.url}> nm:favourite "${entry.favourite?c}" .</#if> 
+                    #boolean
+         	 <#if entry.favourite??><${entry.url}> nm:favourite "true" .</#if> 
+         	 <#if entry.read??><${entry.url}> nm:read "true" .</#if>
          	 
          	 # entry/tags
          	 <#list entry.tags as tag>
@@ -128,9 +133,10 @@
          	   		<#if link.responseCode??>nm:responseCode "${link.responseCode}" ;</#if>
          	   		<#if link.contentType??>nm:contentType "${link.contentType}" ;</#if>
          	   		<#if link.format??>nm:format "${link.format}" ;</#if>
-         	   		<#if link.explored??>nm:explored "${link.explored?c}" ;</#if>
          	   		<#if link.relevance??>nm:relevance "${link.relevance?c}" ;</#if>
-         	   		<#if link.remote??>nm:remote "${link.remote?c}" ;</#if>
+                                    # boolean
+         	   		<#if link.explored??>nm:explored "true" ;</#if>
+         	   		<#if link.remote??>nm:remote "true" ;</#if>
          	   ] .
          	</#if>
         </#list>   

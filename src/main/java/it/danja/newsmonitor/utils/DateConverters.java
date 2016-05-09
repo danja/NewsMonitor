@@ -29,15 +29,14 @@ import java.util.Map;
 import java.util.TimeZone;
 
 /**
- * The <code>DateConverters</code> utility class provides helper methods
- * to deal with date/time formatting using a specific DateConverters-compliant
- * format (see <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a>).
+ * The <code>DateConverters</code> utility class provides helper methods to deal
+ * with date/time formatting using a specific DateConverters-compliant format
+ * (see <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a>).
  * <p/>
  * The currently supported format is:
  * <pre>
  *   &plusmn;YYYY-MM-DDThh:mm:ss.SSSTZD
- * </pre>
- * where:
+ * </pre> where:
  * <pre>
  *   &plusmn;YYYY = four-digit year with optional sign where values <= 0 are
  *           denoting years BCE and values > 0 are denoting years CE,
@@ -58,8 +57,8 @@ public final class DateConverters {
     /**
      * Flyweight instances of known time zones.
      */
-    private static final Map<String, TimeZone> TZS =
-            new HashMap<String, TimeZone>();
+    private static final Map<String, TimeZone> TZS
+            = new HashMap<String, TimeZone>();
 
     static {
         TimeZone gmt = TimeZone.getTimeZone("GMT");
@@ -69,46 +68,47 @@ public final class DateConverters {
 
         // http://en.wikipedia.org/wiki/List_of_UTC_time_offsets
         String[] tzs = {
-                "-12:00", "-11:00", "-10:00", "-09:30", "-09:00", "-08:00",
-                "-07:00", "-06:00", "-05:00", "-04:30", "-04:00", "-03:30",
-                "-03:00", "-02:00", "-01:00", "+01:00", "+02:00", "+03:00",
-                "+03:30", "+04:00", "+04:30", "+05:00", "+05:30", "+05:45",
-                "+06:00", "+06:30", "+07:00", "+08:00", "+08:45", "+09:00",
-                "+09:30", "+10:00", "+10:30", "+11:00", "+11:30", "+12:00",
-                "+12:45", "+13:00", "+14:00" };
+            "-12:00", "-11:00", "-10:00", "-09:30", "-09:00", "-08:00",
+            "-07:00", "-06:00", "-05:00", "-04:30", "-04:00", "-03:30",
+            "-03:00", "-02:00", "-01:00", "+01:00", "+02:00", "+03:00",
+            "+03:30", "+04:00", "+04:30", "+05:00", "+05:30", "+05:45",
+            "+06:00", "+06:30", "+07:00", "+08:00", "+08:45", "+09:00",
+            "+09:30", "+10:00", "+10:30", "+11:00", "+11:30", "+12:00",
+            "+12:45", "+13:00", "+14:00"};
         for (String tz : tzs) {
             TZS.put(tz, TimeZone.getTimeZone("GMT" + tz));
         }
     }
-    
 
     private static final SimpleDateFormat RFC822 = new SimpleDateFormat(
             "EEE, d MMM yyyy HH:mm:ss z");
-    
-    public static Date dateFromRFC822(String text){
-    	try {
-			return RFC822.parse(text);
-		} catch (ParseException e) {
-			return null;
-		}
+
+    public static Date dateFromRFC822(String text) {
+        try {
+            text = text.replace("UTC", "+0000"); // yucky TODO fixme
+            return RFC822.parse(text);
+        } catch (ParseException e) {
+            return new Date(System.currentTimeMillis() - (7 * 1000 * 60 * 60 * 24)); // a week ago
+        }
     }
-    
+
     private static TimeZone tz = TimeZone.getTimeZone("UTC");
     private static DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
+
     static {
-    df.setTimeZone(tz);
+        df.setTimeZone(tz);
     }
-    
-    public static String dateAsISO8601(Date date){
-    	return df.format(date);
+
+    public static String dateAsISO8601(Date date) {
+        return df.format(date);
     }
-    
-    public static Date dateFromISO8601(String text){
-    	return parse(text).getTime();
+
+    public static Date dateFromISO8601(String text) {
+        return parse(text).getTime();
     }
-    
+
     public static String ISO8601FromRFC822(String text) {
-    	return dateAsISO8601(dateFromRFC822(text));
+        return dateAsISO8601(dateFromRFC822(text));
     }
 
     /**
@@ -116,8 +116,9 @@ public final class DateConverters {
      *
      * @param text the date/time string to be parsed
      * @return a <code>Calendar</code>, or <code>null</code> if the input could
-     *         not be parsed
-     * @throws IllegalArgumentException if a <code>null</code> argument is passed
+     * not be parsed
+     * @throws IllegalArgumentException if a <code>null</code> argument is
+     * passed
      */
     public static Calendar parse(String text) {
         if (text == null) {
@@ -142,10 +143,9 @@ public final class DateConverters {
          * the expected format of the remainder of the string is:
          * YYYY-MM-DDThh:mm:ss.SSSTZD
          *
-         * note that we cannot use java.text.SimpleDateFormat for
-         * parsing because it can't handle years <= 0 and TZD's
+         * note that we cannot use java.text.SimpleDateFormat for parsing
+         * because it can't handle years <= 0 and TZD's
          */
-
         int year, month, day, hour, min, sec, ms;
         TimeZone tz;
         try {
@@ -246,8 +246,8 @@ public final class DateConverters {
 
         try {
             /**
-             * the following call will trigger an IllegalArgumentException
-             * if any of the set values are illegal or out of range
+             * the following call will trigger an IllegalArgumentException if
+             * any of the set values are illegal or out of range
              */
             cal.getTime();
             /**
@@ -267,9 +267,9 @@ public final class DateConverters {
      *
      * @param cal the time value to be formatted into a date/time string.
      * @return the formatted date/time string.
-     * @throws IllegalArgumentException if a <code>null</code> argument is passed
-     * or the calendar cannot be represented as defined by ISO 8601 (i.e. year
-     * with more than four digits).
+     * @throws IllegalArgumentException if a <code>null</code> argument is
+     * passed or the calendar cannot be represented as defined by ISO 8601 (i.e.
+     * year with more than four digits).
      */
     public static String format(Calendar cal) throws IllegalArgumentException {
         if (cal == null) {
@@ -277,11 +277,10 @@ public final class DateConverters {
         }
 
         /**
-         * the format of the date/time string is:
-         * YYYY-MM-DDThh:mm:ss.SSSTZD
+         * the format of the date/time string is: YYYY-MM-DDThh:mm:ss.SSSTZD
          *
-         * note that we cannot use java.text.SimpleDateFormat for
-         * formatting because it can't handle years <= 0 and TZD's
+         * note that we cannot use java.text.SimpleDateFormat for formatting
+         * because it can't handle years <= 0 and TZD's
          */
         StringBuilder buf = new StringBuilder();
         // year ([-]YYYY)
@@ -327,8 +326,7 @@ public final class DateConverters {
      * @param cal a calendar instance.
      * @return the astronomical year.
      * @throws IllegalArgumentException if calendar cannot be represented as
-     *                                  defined by ISO 8601 (i.e. year with more
-     *                                  than four digits).
+     * defined by ISO 8601 (i.e. year with more than four digits).
      */
     public static int getYear(Calendar cal) throws IllegalArgumentException {
         // determine era and adjust year if necessary
@@ -336,15 +334,15 @@ public final class DateConverters {
         if (cal.isSet(Calendar.ERA)
                 && cal.get(Calendar.ERA) == GregorianCalendar.BC) {
             /**
-             * calculate year using astronomical system:
-             * year n BCE => astronomical year -n + 1
+             * calculate year using astronomical system: year n BCE =>
+             * astronomical year -n + 1
              */
             year = 0 - year + 1;
         }
 
         if (year > 9999 || year < -9999) {
-            throw new IllegalArgumentException("Calendar has more than four " +
-                    "year digits, cannot be formatted as DateConverters: " + year);
+            throw new IllegalArgumentException("Calendar has more than four "
+                    + "year digits, cannot be formatted as DateConverters: " + year);
         }
         return year;
     }
@@ -352,8 +350,8 @@ public final class DateConverters {
     /**
      * Appends a zero-padded number to the given string buffer.
      * <p/>
-     * This is an internal helper method which doesn't perform any
-     * validation on the given arguments.
+     * This is an internal helper method which doesn't perform any validation on
+     * the given arguments.
      *
      * @param buf String buffer to append to
      * @param n number to append

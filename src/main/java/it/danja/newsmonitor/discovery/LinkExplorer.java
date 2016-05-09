@@ -226,10 +226,10 @@ public class LinkExplorer implements Runnable {
 	private Set<Link> getLinksFromStore() {
 		
 		String sparqlLocation = config.getProperty("GET_LINKS_SPARQL_LOCATION");
-		System.out.println("textFileReader = "+textFileReader);
+		// System.out.println("textFileReader = "+textFileReader);
 	
 		String sparql = textFileReader.read(sparqlLocation);
-		System.out.println("GET_LINKS_SPARQL_LOCATION");
+		// System.out.println("GET_LINKS_SPARQL_LOCATION");
 		SparqlResultsParser parser = new SparqlResultsParser();
 		parser.setSparql(sparql); // for debugging
 

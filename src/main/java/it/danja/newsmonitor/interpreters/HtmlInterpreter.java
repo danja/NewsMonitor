@@ -8,7 +8,6 @@
  */
 package it.danja.newsmonitor.interpreters;
 
-import it.danja.newsmonitor.model.Feed;
 import it.danja.newsmonitor.model.Page;
 
 /**

@@ -2,6 +2,7 @@
  * NewsMonitor
  *
  * Main.java
+ *
  * @author danja
  * @date Aug 18, 2014
  *
@@ -28,51 +29,52 @@ import org.slf4j.LoggerFactory;
  */
 public class Main {
 
-	private static Logger log = LoggerFactory.getLogger(Main.class);
-	
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		ConfigReader configReader = new ConfigReader();
-		try {
-			configReader.loadPropertiesFile(Config.CONFIG_PROPERTIES_STANDALONE_LOCATION);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		Properties config = configReader.getProperties();
+    private static Logger log = LoggerFactory.getLogger(Main.class);
 
-		 TemplateLoader templateLoader = new FsTemplateLoader(config);
-		 templateLoader.loadTemplates();
-		 Templater templater = new Templater();
-		 templater.setTemplateMap(templateLoader.getTemplateMap());
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        ConfigReader configReader = new ConfigReader();
+        try {
+            configReader.loadPropertiesFile(Config.CONFIG_PROPERTIES_STANDALONE_LOCATION);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Properties config = configReader.getProperties();
 
-		 TextFileReader textFileReader = new FsTextFileReader();
-		NewsMonitor nm = new NewsMonitor(config, textFileReader, templater);
-		if(args.length > 1) {
-			log.info("args[0] = "+args[0]);
+        TemplateLoader templateLoader = new FsTemplateLoader(config);
+        templateLoader.loadTemplates();
+        Templater templater = new Templater();
+        templater.setTemplateMap(templateLoader.getTemplateMap());
+
+        TextFileReader textFileReader = new FsTextFileReader();
+        NewsMonitor nm = new NewsMonitor(config, textFileReader, templater);
+        if (args.length > 1) {
+            log.info("args[0] = " + args[0]);
 //			if("-C".equals(args[0])) {
 //				nm.start(Config.SEED_FEEDLIST_FILE);
 //			} 
 //			if("-f".equals(args[0])) {
 //				nm.start(args[1]);
 //			} 
-		} else {
-			nm.start();
-		}
-	}
+        } else {
+            nm.start();
+        }
+    }
 
-	/**
-	 * for debugging
-	 * @param properties
-	 */
-	public static void listProperties(Properties properties) {
-		System.out.println("=== Properties ===");
-		Enumeration<Object> keys = properties.keys();
-		while(keys.hasMoreElements()) {
-			String key = (String)keys.nextElement();
-			System.out.println(key + " = "+ properties.getProperty(key));
-			
-		}
-	}
+    /**
+     * for debugging
+     *
+     * @param properties
+     */
+    public static void listProperties(Properties properties) {
+        System.out.println("=== Properties ===");
+        Enumeration<Object> keys = properties.keys();
+        while (keys.hasMoreElements()) {
+            String key = (String) keys.nextElement();
+            System.out.println(key + " = " + properties.getProperty(key));
+
+        }
+    }
 }

@@ -2,7 +2,6 @@ package it.danja.newsmonitor.model.impl;
 
 import it.danja.newsmonitor.interpreters.Interpreter;
 import it.danja.newsmonitor.io.HttpConnector;
-import it.danja.newsmonitor.main.Config;
 import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.LinkSet;
 import it.danja.newsmonitor.model.Page;
@@ -13,8 +12,6 @@ import java.io.InputStream;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;

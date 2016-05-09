@@ -49,7 +49,8 @@ public class HtmlCleaner {
 	public static String stripTags(String raw) {
 		if (raw == null || "".equals(raw))
 			return "";
-		String stripped = raw.replaceAll("<[^>]*>", " ");
+                String stripped = raw.replaceAll("\n", " "); // not sure 
+		stripped = stripped.replaceAll("<[^>]*>", " ");
 		stripped = stripped.replaceAll("\\s+", " ").trim(); // collapse spaces
 		return stripped;
 	}

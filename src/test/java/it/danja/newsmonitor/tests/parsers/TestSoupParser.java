@@ -3,21 +3,14 @@ package it.danja.newsmonitor.tests.parsers;
 
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import it.danja.newsmonitor.interpreters.Interpreter;
 import it.danja.newsmonitor.interpreters.InterpreterFactory;
-import it.danja.newsmonitor.main.Config;
-import it.danja.newsmonitor.model.Entry;
-import it.danja.newsmonitor.model.Link;
 import it.danja.newsmonitor.model.impl.FeedImpl;
 import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
+import it.danja.newsmonitor.tests.utils.ConfigLoader;
 import it.danja.newsmonitor.utils.ContentType;
 import it.danja.newsmonitor.utils.HttpServer;
-
-import java.util.Iterator;
-import java.util.Set;
+import java.util.Properties;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -26,39 +19,37 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 // FIXME
-
 public class TestSoupParser {
-	
+
 //	private static Logger log = LoggerFactory.getLogger(TestSoupParser.class);
+    private final String url = "http://localhost:8088/test-data/rss2-sample.xml";
+    private final static String rootDir = "src/main/resources/META-INF/resources/static/newsmonitor";
+    private FeedImpl feed;
+    private Interpreter interpreter;
+    private static HttpServer server = new HttpServer(rootDir, 8088);
 
-	private final String url = "http://localhost:8088/test-data/rss2-sample.xml";
-	private final static String rootDir = "src/main/resources/META-INF/resources/static/newsmonitor";
-	private FeedImpl feed;
-	private Interpreter interpreter;
-	private static HttpServer server = new HttpServer(rootDir, 8088);
+    @BeforeClass
+    public static void startServer() {
+        server.init();
+        server.start();
+    }
 
-	@BeforeClass
-	public static void startServer() {
-		server.init();
-		server.start();
-	}
-
-	@Before
-	public void setUp() throws Exception {
-
-		feed = new FeedImpl();
-		feed.setUrl(url);
-		feed.setFormatHint(ContentType.RSS_SOUP);
-		interpreter = InterpreterFactory.createInterpreter(feed);
-		feed.setInterpreter(interpreter);
-		feed.refresh();
-		String feedTurtle = FsTemplateLoader.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
+    @Before
+    public void setUp() throws Exception {
+        Properties config = ConfigLoader.getConfig();
+        feed = new FeedImpl(config);
+        feed.setUrl(url);
+        feed.setFormatHint(ContentType.RSS_SOUP);
+        interpreter = InterpreterFactory.createInterpreter(feed);
+        feed.setInterpreter(interpreter);
+        feed.refresh();
+        //	String feedTurtle = FsTemplateLoader.apply("feed-turtle-no-prefixes", feed.getTemplateDataMap());
 //		log.info("# Feed Turtle\n"+feedTurtle);
-	}
+    }
 
-	@Test
-	public void testFeedLevel() {
-		/*
+    @Test
+    public void testFeedLevel() {
+        /*
 		assertEquals("checking feed title", "Feed Title", feed.getTitle());
 		assertEquals("checking feed url", url, feed.getUrl());
 		assertEquals("checking entry count", 2, feed.getEntries().size());
@@ -68,17 +59,16 @@ public class TestSoupParser {
 				.getEmail());
 		assertEquals("checking pubDate", "Sun, 06 Sep 2009 16:20:00 +0000",
 				feed.getDateStamp().getPublished());
-				*/
-		// TODO implement -note, canhave multiple links
-		// assertEquals("checking feed link", , feed.getLink());
-	}
+         */
+        // TODO implement -note, canhave multiple links
+        // assertEquals("checking feed link", , feed.getLink());
+    }
 
-	// webMaster, author, creator, guid, title,
-	// "pubDate", , "link", "description"
-
-	@Test
-	public void testEntryLevel() {
-		/*
+    // webMaster, author, creator, guid, title,
+    // "pubDate", , "link", "description"
+    @Test
+    public void testEntryLevel() {
+        /*
 		Entry entry0 = feed.getEntries().getEntry(0);
 		assertEquals("checking entry title", "Entry 1", entry0.getTitle());
 		assertEquals("checking entry author", "john@doe.com", entry0
@@ -113,16 +103,16 @@ public class TestSoupParser {
 			}
 		}
 		assertTrue("checking link in content", found);
-		*/
-	}
+         */
+    }
 
-	@After
-	public void tearDown() {
+    @After
+    public void tearDown() {
 
-	}
+    }
 
-	@AfterClass
-	public static void stopServer() {
-		server.stop();
-	}
+    @AfterClass
+    public static void stopServer() {
+        server.stop();
+    }
 }

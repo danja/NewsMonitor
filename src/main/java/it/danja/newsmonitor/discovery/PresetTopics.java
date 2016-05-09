@@ -125,4 +125,12 @@ public class PresetTopics {
         DEEP_LEARNING.addKeyword("tanh", 0.7F);
         DEEP_LEARNING.addKeyword("sigmoid", 0.7F);
     }
+
+    public static Topic ALL = new Topic();
+
+    static {
+        ALL.setLongName("All Presets");
+        ALL.setName("all");
+        ALL.merge(SEMWEB).merge(WOODCARVING).merge(DEEP_LEARNING);
+    }
 }
