@@ -50,7 +50,8 @@ public class FsTemplateLoader extends TemplateLoaderBase {
     public synchronized void loadTemplates() {
 
         String dir = config.getProperty("TEMPLATES_LOCATION");
-        File folder = new File(config.getProperty("TEMPLATES_LOCATION"));
+        System.out.println("TEMPLATES_LOCATION = "+dir);
+        File folder = new File(dir);
         File[] listOfFiles = folder.listFiles();
 
         for (int i = 0; i < listOfFiles.length; i++) {
