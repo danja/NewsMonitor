@@ -1,0 +1,12 @@
+TEMPLATES_LOCATION = src/main/resources/templates/html/it/danja/newsmonitor/resource/
+filename =entry-turtle-no-prefixes.ftl
+filename =turtle-prefixes.ftl
+filename =update-links.ftl
+filename =feed-turtle-no-prefixes.ftl
+filename =update-links_dud.ftl
+filename =sample.ftl
+filename =update-status.ftl
+filename =sparql-insert.ftl
+SEED_FEEDLIST_LOCATION = src/main/resources/feedlists/all.txt
+{GET_LINKS_SPARQL_LOCATION=src/main/resources/sparql/get-new-links.sparql, SPARQL_PREFIXES_LOCATION=src/main/resources/sparql/prefixes.sparql, FEED_ACCEPT_HEADER=application/rdf+xml, application/atom+xml, application/rss+xml, application/xml, text/xml, UPDATE_ENDPOINT=http://server:3030/newsmonitor/update, TEST_RUN=0, SPARQL_FEEDLIST_LOCATION=src/main/resources/sparql/get-feedlist.sparql, POLLER_NO_LOOP=false, QUERY_ENDPOINT=http://server:3030/newsmonitor/query, UNSUBSCRIBE_RELEVANCE_THRESHOLD=0.1, SPARQL_UPDATE_PATH=/update, USERNAME=admin, TOPIC=PresetTopics.ALL;, CONNECT_TIMEOUT=1000, SPARQL_SCHEME=http, SUBSCRIBE_RELEVANCE_THRESHOLD=2, SPARQL_PORT=3030, MAX_LIVES=3, FEED_USER_AGENT_HEADER=Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.97 Safari/537.36 NewsMonitor/1.0.0, SPARQL_HOST=localhost, READ_TIMEOUT=2000, TEMPLATES_LOCATION=src/main/resources/templates/html/it/danja/newsmonitor/resource/, PASSWORD=admin, HTML_ACCEPT_HEADER=text/html, application/xhtml+xml, application/xml, SPARQL_GET_STATUS_LOCATION=src/main/resources/sparql/get-system-status.sparql, SPARQL_QUERY_PATH=/query, REFRESH_PERIOD=1000, PER_FEED_SLEEP_PERIOD=1000, HTML_USER_AGENT_HEADER=Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.97 Safari/537.36 NewsMonitor/1.0.0, SEED_FEEDLIST_LOCATION=src/main/resources/feedlists/all.txt, LINK_EXPLORER_SLEEP_PERIOD=1000}
+SPARQL_FEEDLIST_LOCATION

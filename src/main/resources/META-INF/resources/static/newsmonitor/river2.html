@@ -5,12 +5,12 @@
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Latest Entries</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="css/common.css">
    <link rel="stylesheet" href="css/river.css">
 <link rel="stylesheet" href="css/jquery-mobile/jquery.mobile-1.4.2.min.css" />
 
-<script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 
 
    <script src="js/jquery.mobile-1.4.2.min.js"></script>
@@ -23,7 +23,8 @@
 
 <script type="text/javascript" language="javascript">
 
-	var sparqlEndpoint = "http://localhost:3030/feedreader/query?query=";
+//	var sparqlQueryEndpoint = "http://localhost:3030/feedreader/query?query=";
+           var sparqlQueryEndpoint = "http://server:3030/newsmonitor/query?query=";
 	
 	var sparql = "PREFIX rss: <http://purl.org/rss/1.0/> \n\
 PREFIX dcterms: <http://purl.org/dc/terms/> \n\
@@ -60,7 +61,7 @@ LIMIT 100 \n\
 OFFSET 0 \n\
 ";
 
-var url = sparqlEndpoint+ encodeURIComponent(sparql) + "&output=xml";
+var url = sparqlQueryEndpoint+ encodeURIComponent(sparql) + "&output=xml";
 	
 $(function() {
 	var $loading = $('#spinner').hide();
