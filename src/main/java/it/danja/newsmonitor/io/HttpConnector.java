@@ -2,7 +2,7 @@
  * NewsMonitor
  *
  * HttpConnector.java
- * 
+ *
  * @author danja
  * @date Apr 25, 2014
  *
@@ -35,300 +35,325 @@ import java.util.zip.InflaterInputStream;
 
 /**
  * HTTP connection handler
- * 
+ *
  * supports Conditional GET and gzip encoding
- * 
+ *
  * Note: uses java.net libs, not Apache
  */
 public class HttpConnector {
 
-	private static Logger log = LoggerFactory.getLogger(HttpConnector.class);
-	
-	private boolean conditional = true;
+    private static Logger log = LoggerFactory.getLogger(HttpConnector.class);
 
-	private URL url = null;
+    private boolean conditional = true;
 
-	private int responseCode = -1;
+    private URL url = null;
+    
+    private String location ="";
 
-	private String eTag = null;
+    private int responseCode = -1;
 
-	private String previousETag = null;
+    private String eTag = null;
 
-	private String lastModified = null;
+    private String previousETag = null;
 
-	private String previousLastModified = null;
+    private String lastModified = null;
 
-	private String contentType = null;
+    private String previousLastModified = null;
 
-	private String encoding = null;
+    private String contentType = null;
 
-	private InputStream inputStream = null;
+    private String encoding = null;
 
-	private boolean dead = false;
+    private InputStream inputStream = null;
 
-	private Map<String, List<String>> headers = null;
+    private boolean dead = false;
 
-	private String userAgentHeader = null;
-	private String acceptHeader = null;
+    private Map<String, List<String>> headers = null;
 
-	private Properties config = null;
+    private String userAgentHeader = null;
+    private String acceptHeader = null;
 
-	static {
-		HttpURLConnection.setFollowRedirects(true);
-	}
+    private Properties config = null;
 
-	public HttpConnector(Properties config) {
-this.config  = config;
-	}
+    static {
+        HttpURLConnection.setFollowRedirects(true);
+    }
 
-	public void setUrl(String urlString) {
-		try {
-			url = new URL(urlString);
-		} catch (MalformedURLException e) {
-			log.error(e.getMessage());
-		}
-	}
+    public HttpConnector(Properties config) {
+        this.config = config;
+    }
 
-	/**
-	 * Carries out everything needed to obtain an input stream for the feed. Returns true on success Any problems, or the feed is already
-	 * up-to-date returns false.
-	 */
-	public boolean load() {
-		HttpURLConnection connection = null;
-		responseCode = -1;
-		dead = true;
-		connection = connect();
-		try {
-			responseCode = connection.getResponseCode();
-			log.info(url+" response Code : " + responseCode); // TODO
-																	// handle
-																	// response
-																	// code here
-		char codeBlock = Integer.toString(responseCode).charAt(0);
-		if(codeBlock == 4 || codeBlock == 5) {
-			log.info("four or FIVE");
-			return false;
-		}
-			
-		} catch (IOException e1) {
-			e1.printStackTrace(); // TODO log error
-			dead = false;
-			return false;
-		}
-		
-		if (responseCode == HttpURLConnection.HTTP_NOT_MODIFIED) {
-			connection.disconnect();
-			dead = false;
-			return false;
-		}
+    public void setUrl(String urlString) {
+        try {
+            url = new URL(urlString);
+        } catch (MalformedURLException e) {
+            log.error(e.getMessage());
+        }
+    }
 
-		InputStream inputStream = null;
-		try {
-			inputStream = getInputStream(connection);
-		} catch (IOException e2) {
-			dead = true;
-			// e2.printStackTrace(); // TODO log error
-			return false;
-		}
+    /**
+     * Carries out everything needed to obtain an input stream for the feed.
+     * Returns true on success Any problems, or the feed is already up-to-date
+     * returns false.
+     */
+    public boolean load() {
+        HttpURLConnection connection = null;
+        responseCode = -1;
+        dead = true;
+        connection = connect();
+        try {
+            responseCode = connection.getResponseCode();
+            log.info(url + " response Code : " + responseCode); // TODO
+            // handle
+            // response
+            // code below
+            char codeBlock = Integer.toString(responseCode).charAt(0);
+            if (codeBlock == 4 || codeBlock == 5) {
+                log.info("four or FIVE");
+                return false;
+            }
 
-		dead = false;
-		return true;
-	}
+        } catch (IOException e1) {
+            e1.printStackTrace(); // TODO log error
+            dead = false;
+            return false;
+        }
 
-	public HttpURLConnection connect() {
-		return connect("GET");
-	}
-	
-	public HttpURLConnection connect(String method) {
+        if (responseCode == HttpURLConnection.HTTP_NOT_MODIFIED) {
+            connection.disconnect();
+            dead = false;
+            return false;
+        }
 
-		HttpURLConnection connection = null;
-		try {
-			// log.info("URL in HttpConnector = "+url);
-			connection = (HttpURLConnection) url.openConnection();
-			connection.setRequestMethod(method);
-		} catch (IOException e) {
-			log.error(e.getMessage());
-		}
+        if (responseCode == HttpURLConnection.HTTP_MOVED_PERM) {
+            this.location = connection.getHeaderField("Location");
+ // log.info("HttpConnector.load, HTTP_MOVED_PERM target = '" + target + "'");
+            connection.disconnect();
+            dead = true;
+            return false;
+        }
 
-		connection.setReadTimeout(Integer.parseInt(config.getProperty("READ_TIMEOUT")));
-		connection.setConnectTimeout(Integer.parseInt(config.getProperty("CONNECT_TIMEOUT")));
+        if (responseCode == HttpURLConnection.HTTP_MOVED_TEMP) {
+            this.location = connection.getHeaderField("Location");
+ // log.info("HttpConnector.load, HTTP_MOVED_PERM target = '" + target + "'");
+            connection.disconnect();
+            dead = false;
+            return false;
+        }
 
-		connection.setRequestProperty("Accept-Encoding", "gzip, deflate");
-		if(userAgentHeader  != null) {
-		connection.setRequestProperty("User-Agent", userAgentHeader);
-		}
-		if(acceptHeader  != null) {
-		connection.setRequestProperty("Accept", acceptHeader);
-		}
+        InputStream inputStream = null;
+        try {
+            inputStream = getInputStream(connection);
+        } catch (IOException e2) {
+            dead = true;
+            // e2.printStackTrace(); // TODO log error
+            return false;
+        }
 
-		if (conditional) {
-			if (previousETag != null) {
-				connection.addRequestProperty("If-None-Match", previousETag);
-			}
+        dead = false;
+        return true;
+    }
+    
+    // clunky but will do for now
+    public String getLocation(){
+        return this.location;
+    }
 
-			if (previousLastModified != null) {
-				connection.addRequestProperty("If-Modified-Since",
-						previousLastModified);
-			}
-		}
-		try {
-			connection.connect();
-		} catch (IOException e) {
-			// log.error(e.getMessage());
-			log.error(e.getMessage());
-		}
-		headers = connection.getHeaderFields();
-		return connection;
-	}
-	
-	public synchronized String downloadAsString(String urlString) {
-		setUrl(urlString);
-		setConditional(false);
-		if(!load()) {
-			return null;
-		}
-		Reader inputStreamReader = new InputStreamReader(inputStream);
-    	BufferedReader in = new BufferedReader(inputStreamReader);
-    	StringBuffer buffer = new StringBuffer();
-    	String readLine;
-    	try {
-			while ((readLine = in.readLine()) != null) {
-			    buffer.append(readLine);
-			}
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-    	String data = buffer.toString();
-    	try {
-			in.close();
-		} catch (IOException e2) {
-			return null;
-		}
-    	return data;
-	}
+    public HttpURLConnection connect() {
+        return connect("GET");
+    }
 
-	public InputStream getInputStream(HttpURLConnection connection)
-			throws IOException {
+    public HttpURLConnection connect(String method) {
 
-		lastModified = connection.getHeaderField("Last-Modified");
-		previousLastModified = lastModified;
-		eTag = connection.getHeaderField("ETag");
-		previousETag = eTag;
+        HttpURLConnection connection = null;
+        try {
+            // log.info("URL in HttpConnector = "+url);
+            connection = (HttpURLConnection) url.openConnection();
+            connection .setFollowRedirects(true);
+            connection.setRequestMethod(method);
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
 
-		encoding = connection.getContentEncoding();
-		contentType = connection.getContentType();
+        connection.setReadTimeout(Integer.parseInt(config.getProperty("READ_TIMEOUT")));
+        connection.setConnectTimeout(Integer.parseInt(config.getProperty("CONNECT_TIMEOUT")));
 
-		if (encoding != null && encoding.equalsIgnoreCase("gzip")) {
-			inputStream = new GZIPInputStream(connection.getInputStream());
-		} else if (encoding != null && encoding.equalsIgnoreCase("deflate")) {
-			inputStream = new InflaterInputStream(connection.getInputStream(),
-					new Inflater(true));
-		} else {
-			inputStream = connection.getInputStream();
-		}
-		return inputStream;
-	}
+        connection.setRequestProperty("Accept-Encoding", "gzip, deflate");
+        if (userAgentHeader != null) {
+            connection.setRequestProperty("User-Agent", userAgentHeader);
+        }
+        if (acceptHeader != null) {
+            connection.setRequestProperty("Accept", acceptHeader);
+        }
 
-	public void downloadToFile(String filename) {
-		InputStream in = getInputStream();
-		FileWriter out;
-		int character;
-		try {
-			out = new FileWriter(new File(filename));
-			while ((character = in.read()) != -1) {
-				out.write(character);
-			}
-			in.close();
-			out.close();
-		} catch (IOException e) {
-			log.error(e.getMessage());
-		}
-	}
+        if (conditional) {
+            if (previousETag != null) {
+                connection.addRequestProperty("If-None-Match", previousETag);
+            }
 
-	public boolean isConditional() {
-		return conditional;
-	}
+            if (previousLastModified != null) {
+                connection.addRequestProperty("If-Modified-Since",
+                        previousLastModified);
+            }
+        }
+        try {
+            connection.connect();
+        } catch (IOException e) {
+            // log.error(e.getMessage());
+            log.error(e.getMessage());
+        }
+        headers = connection.getHeaderFields();
+        return connection;
+    }
 
-	public void setConditional(boolean conditional) {
-		this.conditional = conditional;
-	}
+    public synchronized String downloadAsString(String urlString) {
+        setUrl(urlString);
+        setConditional(false);
+        if (!load()) {
+            return null;
+        }
+        Reader inputStreamReader = new InputStreamReader(inputStream);
+        BufferedReader in = new BufferedReader(inputStreamReader);
+        StringBuffer buffer = new StringBuffer();
+        String readLine;
+        try {
+            while ((readLine = in.readLine()) != null) {
+                buffer.append(readLine);
+            }
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        String data = buffer.toString();
+        try {
+            in.close();
+        } catch (IOException e2) {
+            return null;
+        }
+        return data;
+    }
 
-	public String getStatus() {
-		StringBuffer buffer = new StringBuffer();
-		buffer.append("\n\nFeed:" + url);
-		buffer.append("\nresponse code:" + getResponseCode());
-		buffer.append("\nencoding:" + getContentEncoding());
-		buffer.append("\ncontent-type:" + getContentType());
-		buffer.append("\nlast-modified:" + getLastModified());
-		buffer.append("\nisDead:" + isDead());
-		return buffer.toString();
-	}
+    public InputStream getInputStream(HttpURLConnection connection)
+            throws IOException {
 
-	public void setPreviousETag(String previousETag) {
-		this.previousETag = previousETag;
-	}
+        lastModified = connection.getHeaderField("Last-Modified");
+        previousLastModified = lastModified;
+        eTag = connection.getHeaderField("ETag");
+        previousETag = eTag;
 
-	public void setPreviousLastModified(String previousLastModified) {
-		this.previousLastModified = previousLastModified;
-	}
+        encoding = connection.getContentEncoding();
+        contentType = connection.getContentType();
 
-	public String getETag() {
-		return eTag;
-	}
+        if (encoding != null && encoding.equalsIgnoreCase("gzip")) {
+            inputStream = new GZIPInputStream(connection.getInputStream());
+        } else if (encoding != null && encoding.equalsIgnoreCase("deflate")) {
+            inputStream = new InflaterInputStream(connection.getInputStream(),
+                    new Inflater(true));
+        } else {
+            inputStream = connection.getInputStream();
+        }
+        return inputStream;
+    }
 
-	public String getLastModified() {
-		return lastModified;
-	}
+    public void downloadToFile(String filename) {
+        InputStream in = getInputStream();
+        FileWriter out;
+        int character;
+        try {
+            out = new FileWriter(new File(filename));
+            while ((character = in.read()) != -1) {
+                out.write(character);
+            }
+            in.close();
+            out.close();
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
+    }
 
-	public String getContentEncoding() {
-		return encoding;
-	}
+    public boolean isConditional() {
+        return conditional;
+    }
 
-	public String getContentType() {
-		if(contentType == null) {
-			doHeadRequest();
-		}
-		List<String> list = getHeaders().get("Content-Type");
-		if(list == null || list.size() == 0) {
-			return null;
-		}
-		contentType = getHeaders().get("Content-Type").get(0);
-		return contentType;
-	}
+    public void setConditional(boolean conditional) {
+        this.conditional = conditional;
+    }
 
-	private void doHeadRequest() {
-		connect("HEAD");
-	}
+    public String getStatus() {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("\n\nFeed:" + url);
+        buffer.append("\nresponse code:" + getResponseCode());
+        buffer.append("\nencoding:" + getContentEncoding());
+        buffer.append("\ncontent-type:" + getContentType());
+        buffer.append("\nlast-modified:" + getLastModified());
+        buffer.append("\nisDead:" + isDead());
+        return buffer.toString();
+    }
 
-	public InputStream getInputStream() {
-		return inputStream;
-	}
+    public void setPreviousETag(String previousETag) {
+        this.previousETag = previousETag;
+    }
 
-	public boolean isDead() {
-		return dead;
-	}
+    public void setPreviousLastModified(String previousLastModified) {
+        this.previousLastModified = previousLastModified;
+    }
 
-	public int getResponseCode() {
-		return responseCode;
-	}
+    public String getETag() {
+        return eTag;
+    }
 
-	public Map<String, List<String>> getHeaders() {
-		return headers;
-	}
+    public String getLastModified() {
+        return lastModified;
+    }
 
-	public String getHeadersString() {
-		StringBuffer buffer = new StringBuffer();
+    public String getContentEncoding() {
+        return encoding;
+    }
 
-		Iterator<String> keyIterator = headers.keySet().iterator();
-		while (keyIterator.hasNext()) {
-			String key = keyIterator.next();
-			List<String> values = headers.get(key);
-			for (int i = 0; i < values.size(); i++) {
-				buffer.append(key + ":" + values.get(i) + "\n");
-			}
-		}
-		return buffer.toString();
-	}
+    public String getContentType() {
+        if (contentType == null) {
+            doHeadRequest();
+        }
+        List<String> list = getHeaders().get("Content-Type");
+        if (list == null || list.size() == 0) {
+            return null;
+        }
+        contentType = getHeaders().get("Content-Type").get(0);
+        return contentType;
+    }
+
+    private void doHeadRequest() {
+        connect("HEAD");
+    }
+
+    public InputStream getInputStream() {
+        return inputStream;
+    }
+
+    public boolean isDead() {
+        return dead;
+    }
+
+    public int getResponseCode() {
+        return responseCode;
+    }
+
+    public Map<String, List<String>> getHeaders() {
+        return headers;
+    }
+
+    public String getHeadersString() {
+        StringBuffer buffer = new StringBuffer();
+
+        Iterator<String> keyIterator = headers.keySet().iterator();
+        while (keyIterator.hasNext()) {
+            String key = keyIterator.next();
+            List<String> values = headers.get(key);
+            for (int i = 0; i < values.size(); i++) {
+                buffer.append(key + ":" + values.get(i) + "\n");
+            }
+        }
+        return buffer.toString();
+    }
 
 //	public static void main(String[] args) {
 //		HttpConnector connector = new HttpConnector(null);
@@ -339,18 +364,17 @@ this.config  = config;
 //		}
 //		log.info(connector.getStatus());
 //	}
+    /**
+     * @param userAgentHeader the userAgentHeader to set
+     */
+    public void setUserAgentHeader(String userAgentHeader) {
+        this.userAgentHeader = userAgentHeader;
+    }
 
-	/**
-	 * @param userAgentHeader the userAgentHeader to set
-	 */
-	public void setUserAgentHeader(String userAgentHeader) {
-		this.userAgentHeader = userAgentHeader;
-	}
-
-	/**
-	 * @param acceptHeader the acceptHeader to set
-	 */
-	public void setAcceptHeader(String acceptHeader) {
-		this.acceptHeader = acceptHeader;
-	}
+    /**
+     * @param acceptHeader the acceptHeader to set
+     */
+    public void setAcceptHeader(String acceptHeader) {
+        this.acceptHeader = acceptHeader;
+    }
 }

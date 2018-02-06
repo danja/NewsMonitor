@@ -19,6 +19,7 @@ import it.danja.newsmonitor.model.impl.FeedImpl;
 import it.danja.newsmonitor.model.impl.FeedListImpl;
 import it.danja.newsmonitor.sparql.SparqlTemplater;
 import it.danja.newsmonitor.utils.ContentType;
+import java.util.ArrayList;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -78,7 +79,13 @@ public class Poller implements Runnable {
 		for (int i = 0; i < feedUrls.size(); i++) {
 			Feed feed = new FeedImpl(config);
 			feed.setUrl(feedUrls.get(i));
-			feed.init();
+			boolean redirect = feed.init();
+                        if(redirect){
+                            String location = feed.getLocation();
+                            feed = new FeedImpl(config);
+                            feed.setUrl(location);
+                            feed.init();
+                        }
 			feedList.addFeed(feed);
 		}
                  log.info("==== FeedList ====");
@@ -140,7 +147,7 @@ public class Poller implements Runnable {
 
 			if (feed.getFormatHint() == ContentType.HTML) { // shouldn't be
 															// needed
-				feed.setDead(true);
+			// feed.setDead(true);
 				log.info("Is HTML...");
 			}
 			if (feed.getLives() < 1) {
@@ -243,6 +250,17 @@ public class Poller implements Runnable {
 
 	public void setFeedUrls(List<String> feedUrls) {
 		this.feedUrls = feedUrls;
+                
+                List<String> tweakedUrls = new ArrayList<String>(); // little temp workaround for some old feeds
+                for(int i=0;i<feedUrls.size();i++){
+                    String url = feedUrls.get(i);
+                    if(url.startsWith("http:")){
+                        String tweaked = "https:" +url.substring(5);
+                        log.info("tweaked = "+tweaked);
+                        tweakedUrls.add(tweaked);
+                    }
+                }
+                this.feedUrls.addAll(tweakedUrls);
 	}
 
 	public boolean isStopped() {

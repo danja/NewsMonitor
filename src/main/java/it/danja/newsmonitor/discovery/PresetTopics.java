@@ -94,6 +94,10 @@ public class PresetTopics {
     static {
         DEEP_LEARNING.setLongName("Deep Learning");
         DEEP_LEARNING.setName("deeps");
+        DEEP_LEARNING.addKeyword("reinforcement", 0.7F);
+        DEEP_LEARNING.addKeyword("deep", 0.5F);
+        DEEP_LEARNING.addKeyword("learning", 0.5F);
+        DEEP_LEARNING.addKeyword("classifier", 0.7F);
         DEEP_LEARNING.addKeyword("torch", 0.7F);
         DEEP_LEARNING.addKeyword("theano", 0.7F);
         DEEP_LEARNING.addKeyword("tensorflow", 0.7F);

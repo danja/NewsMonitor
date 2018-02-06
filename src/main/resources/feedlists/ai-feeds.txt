@@ -14,6 +14,8 @@ http://feeds2.feedburner.com/MachineLearningtheory
 http://feeds.feedburner.com/miriblog
 http://www.gabrieleangeletti.com/feed.xml
 http://feeds.feedburner.com/robinsloan
+
+# from awesome-site-list (all HTML pages)
 http://aaroncourville.wordpress.com
 http://www.cs.toronto.edu/~asamir/
 http://cs.stanford.edu/~acoates/

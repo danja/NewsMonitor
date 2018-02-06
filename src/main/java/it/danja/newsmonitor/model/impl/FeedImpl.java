@@ -61,10 +61,17 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
     private boolean pending = false;
 
     private Properties config = null;
+    
+    private String location = "";
+   
 
     public FeedImpl(Properties config) {
         this.config = config;
         this.lives = Integer.parseInt(config.getProperty("MAX_LIVES"));
+    }
+    
+    public String getLocation(){
+        return this.location;
     }
 
     @Override
@@ -155,8 +162,10 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
         return relevanceFactor;
     }
 
+    
+    // returns true if is redirect, target is this.location
     @Override
-    public void init() {
+    public boolean init() {
         firstCall = true;
         String url = getUrl();
         FormatSniffer sniffer = new FormatSniffer();
@@ -179,16 +188,24 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
             setFormat(ContentType.formatName(format));
             if (format == ContentType.UNAVAILABLE) {
                 setLives(getLives() - 1);
-                return;
+                return false;
             }
             // log.info("===Headers ===\n"+connector.getHeadersString()+"------\n");
         } else {
             log.info("Stream unavailable.");
+
+            pending = true;
+            this.location = getHttpConnector().getLocation();
+            if (!location.equals("")) {
+                log.info("Is redirect : " + location);
+             //               format = ContentType.UNAVAILABLE;
+           // setLives(getLives() - 1);
+                return true;
+            } else {
             format = ContentType.UNAVAILABLE;
             setLives(getLives() - 1);
-            pending = true;
-            // setDead(true);
-            return;
+            }
+            return false;
         }
 
         //	log.info("FORMAT " + ContentType.formatName(format));
@@ -199,7 +216,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
                 format = ContentType.HTML;
                 setLives(getLives() - 1);
                 setLives(0);
-                return;
+                return false;
             }
         }
 
@@ -212,6 +229,7 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
         // interpreter = InterpreterFactory.createInterpreter(this);
         setInterpreter(InterpreterFactory.createInterpreter(this));
         // log.info("interpreter = " + getInterpreter());
+        return false;
     }
 
     public boolean refresh() {
