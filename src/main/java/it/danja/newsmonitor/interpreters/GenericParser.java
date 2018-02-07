@@ -33,10 +33,10 @@ import org.xml.sax.SAXException;
  */
 public class GenericParser extends FeedParserBase {
 
-     private static Logger log = LoggerFactory.getLogger(InterpreterFactory.class); 
-     
+    private static Logger log = LoggerFactory.getLogger(GenericParser.class);
+
     public void parse(InputStream inputStream) {
-        
+
         try {
 
             InputStreamReader in = new InputStreamReader(inputStream);
@@ -50,18 +50,17 @@ public class GenericParser extends FeedParserBase {
 
             // search for all occurrences of pattern
             String patternString = "\\s+href\\s*=\\s*(\"[^\"]*\"|[^\\s>]*)\\s*";
-            
+
             Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(input);
 
             // < href="https://aaroncourville.wordpress.com/author/aaroncourville/" >
-            
             while (matcher.find()) {
                 int start = matcher.start();
                 int end = matcher.end();
                 String match = input.substring(start, end);
-
-                log.info("in GenericParser, match = "+match);
+                match = cleanup(match);
+                log.info("in GenericParser, match = " + match);
                 try {
                     getHandler().startElement(match, null, null, null);
                 } catch (SAXException ex) {
@@ -84,4 +83,14 @@ public class GenericParser extends FeedParserBase {
                 .lines().collect(Collectors.joining("\n"));
     }
      */
+    // < href="https://aaroncourville.wordpress.com/author/aaroncourville/" >
+    private String cleanup(String match) {
+        match = match.trim();
+        try {
+            match = match.substring(6, match.length() - 1);
+        } catch (Exception e) {
+            // ignore
+        }
+        return match;
+    }
 }

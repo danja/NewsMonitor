@@ -30,7 +30,7 @@ public class Config {
 	// infinite
 	
 	// TODO move this to a map
-public static final Topic TOPIC = PresetTopics.WOODCARVING;
+public static final Topic TOPIC = PresetTopics.ALL; 
 
 	/* File Resources */
 	// buggy-list.txt rdf-bloggers-feedlist.txt; short-list.txt woodcarvers.txt

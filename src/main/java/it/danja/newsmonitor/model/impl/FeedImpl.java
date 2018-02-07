@@ -61,16 +61,15 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
     private boolean pending = false;
 
     private Properties config = null;
-    
+
     private String location = "";
-   
 
     public FeedImpl(Properties config) {
         this.config = config;
         this.lives = Integer.parseInt(config.getProperty("MAX_LIVES"));
     }
-    
-    public String getLocation(){
+
+    public String getLocation() {
         return this.location;
     }
 
@@ -162,11 +161,11 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
         return relevanceFactor;
     }
 
-    
     // returns true if is redirect, target is this.location
     @Override
     public boolean init() {
         firstCall = true;
+        // isNew = true;
         String url = getUrl();
         FormatSniffer sniffer = new FormatSniffer();
         char format = ContentType.UNKNOWN;
@@ -198,12 +197,12 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
             this.location = getHttpConnector().getLocation();
             if (!location.equals("")) {
                 log.info("Is redirect : " + location);
-             //               format = ContentType.UNAVAILABLE;
-           // setLives(getLives() - 1);
+                //               format = ContentType.UNAVAILABLE;
+                // setLives(getLives() - 1);
                 return true;
             } else {
-            format = ContentType.UNAVAILABLE;
-            setLives(getLives() - 1);
+                format = ContentType.UNAVAILABLE;
+                setLives(getLives() - 1);
             }
             return false;
         }
@@ -304,6 +303,10 @@ public class FeedImpl extends FeedEntityBase implements Feed, FeedEntity {
 
     public boolean isNew() {
         return isNew;
+    }
+
+    public void setNew() {
+        isNew = true;
     }
 
     @Override

@@ -49,7 +49,7 @@ public class FeedListImpl implements FeedList {
 		return feed;
 	}
 
-	public void addFeed(String uriString) {
+	public void addFeed(String uriString) { // not used!?
 		addFeed(uriString, ContentType.UNKNOWN);
 	}
 
@@ -58,7 +58,7 @@ public class FeedListImpl implements FeedList {
 		feedQueue.add(feed);
 	}
 
-	public void addFeed(String uriString, char formatHint) {
+	public void addFeed(String uriString, char formatHint) { // not used!?
 		Feed feed = createFeed(uriString);
 		feed.setFormatHint(formatHint);
 		addFeed(feed);
