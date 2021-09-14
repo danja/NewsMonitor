@@ -28,13 +28,13 @@ public class SystemStatus {
 
 	private static Logger log = LoggerFactory.getLogger(SystemStatus.class);
 
-            private SparqlConnector sparqlConnector = null;
-            
+	private SparqlConnector sparqlConnector = null;
+
 	private boolean pollerRunning = true;
 	private boolean discoveryRunning = true;
 
 	private final String sparqlGetStatus;
-	
+
 	private TextFileReader textFileReader = null;
 
 	private Properties config = null;
@@ -42,7 +42,7 @@ public class SystemStatus {
 	private Templater templater = null;
 
 	public SystemStatus(Properties config, TextFileReader textFileReader, Templater templater) {
-		this.config  = config;
+		this.config = config;
 		this.templater = templater;
 		this.textFileReader = textFileReader;
 		sparqlGetStatus = textFileReader.read(config.getProperty("SPARQL_GET_STATUS_LOCATION"));
@@ -77,17 +77,18 @@ public class SystemStatus {
 		// log.info("Loading feed list from file " + filename + " into store...");
 		FeedListLoader loader = new FeedListLoader(config, textFileReader);
 		// Main.listProperties(config);
-		System.out.println("SEED_FEEDLIST_LOCATION = "+config.getProperty("SEED_FEEDLIST_LOCATION"));
+		System.out.println("SEED_FEEDLIST_LOCATION = " + config.getProperty("SEED_FEEDLIST_LOCATION"));
 		String feedlistLocation = config.getProperty("SEED_FEEDLIST_LOCATION");
+
 		String turtleBody = loader.readFile(feedlistLocation);
-		
-		String sparql = FeedListLoader.insertValue(
-				FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
-		// log.info("insert feeds = \n" + sparql);
-		
-		int responseCode = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"),
-				sparql).getStatusCode();
+
+		String sparql = FeedListLoader.insertValue(FeedListLoader.SPARQL_TEMPLATE, "channels", turtleBody);
+		log.info("insert feeds = \n" + sparql);
+		System.out.println("insert feeds = \n" + sparql);
+		int responseCode = sparqlConnector.update(config.getProperty("UPDATE_ENDPOINT"), sparql).getStatusCode();
+
 		// log.info("insert feeds SPARQL response : " + responseCode);
+		System.out.println("insert feeds SPARQL response : " + responseCode);
 	}
 
 	private void pushStatusToStore() {
@@ -101,8 +102,7 @@ public class SystemStatus {
 
 	private void pullStatusFromStore() {
 		// log.info("A");
-		String results = sparqlConnector.query(config.getProperty("QUERY_ENDPOINT"),
-				sparqlGetStatus);
+		String results = sparqlConnector.query(config.getProperty("QUERY_ENDPOINT"), sparqlGetStatus);
 		// log.info("B");
 		SparqlResultsParser parser = new SparqlResultsParser();
 		// log.info("C");

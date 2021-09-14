@@ -23,44 +23,46 @@ import org.osgi.framework.BundleContext;
 /**
  *
  */
-public class FeedUrls  {
+public class FeedUrls {
 
 	private List<String> feeds = new ArrayList<String>();
 
 	private TextFileReader textFileReader = null;
 
 	private Properties config = null;
-        
+
 	public FeedUrls(Properties config, TextFileReader textFileReader) {
 		this.textFileReader = textFileReader;
-		this.config  = config;
+		this.config = config;
 	}
 
 	public synchronized void load(String location) {
 		String sparql = textFileReader.read(location); // SPARQL_FEEDLIST_LOCATION
-		
-		System.out.println("SPARQL_FEEDLIST_LOCATION");
-		   SparqlConnector sparqlConnector = new SparqlConnector(config);
-		
+
+		System.out.println("SPARQL_FEEDLIST_LOCATION = " + sparql);
+		SparqlConnector sparqlConnector = new SparqlConnector(config);
+
 		String xmlResults = sparqlConnector.query(config.getProperty("QUERY_ENDPOINT"), sparql);
 
 		/*
-		 * is no doubt less efficient than using 
-		 * source = new InputSource(url.openStream())
-		 * but it does get the media types right
-		 * and doesn't have to run very often
+		 * is no doubt less efficient than using source = new
+		 * InputSource(url.openStream()) but it does get the media types right and
+		 * doesn't have to run very often
 		 */
 		SparqlResultsParser parser = new SparqlResultsParser();
-               // parser.setSparql(sparql); // for debugging
+		// parser.setSparql(sparql); // for debugging
 		List<Result> results = parser.parse(xmlResults).getResults();
 		for (int i = 0; i < results.size(); i++) {
 			// log.info(results.get(i));
+
+			// System.out.println("RESULT = " + results.get(i).);
 			String feed = results.get(i).iterator().next().getValue();
+			System.out.println("FEED = " + feed);
 			feeds.add(feed);
 		}
 	}
-	
-	public List<String> getFeeds(){
+
+	public List<String> getFeeds() {
 		return feeds;
 	}
 

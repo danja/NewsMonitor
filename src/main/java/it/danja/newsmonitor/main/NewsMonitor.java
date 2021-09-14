@@ -33,37 +33,38 @@ public class NewsMonitor {
     private LinkExplorer linkExplorer;
     private Poller poller;
 
-	private BundleContext bundleContext = null;
+    private BundleContext bundleContext = null;
 
-	private Properties config = null;
+    private Properties config = null;
 
-	private Templater templater = null;
+    private Templater templater = null;
 
-	private TextFileReader textFileReader = null;
-    
-	/**
-	 * Constructor 
-	 */
-    public NewsMonitor(Properties config, TextFileReader textFileReader, Templater templater){
-    	this.templater = templater;
-    	this.config = config;
-    	this.textFileReader  = textFileReader;
+    private TextFileReader textFileReader = null;
+
+    /**
+     * Constructor
+     */
+    public NewsMonitor(Properties config, TextFileReader textFileReader, Templater templater) {
+        this.templater = templater;
+        this.config = config;
+        this.textFileReader = textFileReader;
     }
 
     /**
      * @param args
      */
     @SuppressWarnings("unused")
-	public void start() {
+    public void start() {
+
+        System.out.println("START()");
 
         // log.debug(bundleContext.toString());
         SystemStatus status = new SystemStatus(config, textFileReader, templater);
 
-
         status.initializeFeedListFromFile();
 
         SparqlTemplater sparqlTemplater = new SparqlTemplater(config, textFileReader, templater);
-		// load seed list from file into store
+        // load seed list from file into store
         poller = new Poller(config, sparqlTemplater);
 
         // load feed list from store into memory, pass to Poller
@@ -75,7 +76,7 @@ public class NewsMonitor {
         poller.initFeeds();
 
         linkExplorer = new LinkExplorer(config, poller.getFeedList(), textFileReader, templater);
-        
+
         log.info("==== Starting Poller ====");
         poller.start();
         linkExplorer.start();
@@ -106,8 +107,9 @@ public class NewsMonitor {
 
     private List<String> getFeeds() {
         FeedUrls feedUrlList = new FeedUrls(config, textFileReader);
+
         String feedlistLocation = config.getProperty("SPARQL_FEEDLIST_LOCATION");
-       // System.out.println("feedlistLocation = "+feedlistLocation);
+        System.out.println("feedlistLocation = " + feedlistLocation);
         feedUrlList.load(feedlistLocation);
         return feedUrlList.getFeeds();
     }

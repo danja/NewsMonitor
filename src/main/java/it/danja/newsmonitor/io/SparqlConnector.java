@@ -9,7 +9,6 @@
  */
 package it.danja.newsmonitor.io;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,6 +18,8 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+
+import java.util.concurrent.TimeUnit;
 
 import org.apache.http.Header;
 import org.apache.http.HttpHost;
@@ -52,16 +53,18 @@ import org.slf4j.LoggerFactory;
 public class SparqlConnector {
 
 	private static Logger log = LoggerFactory.getLogger(SparqlConnector.class);
-	
+
 	private Properties config = null;
 
 	public SparqlConnector(Properties config) {
-		this.config  = config;
+		this.config = config;
 	}
+
 	/**
 	 * @param queryEndpoint
 	 * @param sparql
 	 * @return
+	 * @throws InterruptedException
 	 */
 	public synchronized String query(String queryEndpoint, String sparql) {
 		int statusCode = -1;
@@ -80,39 +83,41 @@ public class SparqlConnector {
 
 		// Eclipse warns about client not being closed, but it doesn't have a
 		// close() method, hopefully release does the trick
-	//	HttpClient client = new DefaultHttpClient();
-//		HttpClient client = HttpClientBuilder.create().build();
-//	    client.
-	    // getCredentialsProvider().setCredentials(new AuthScope(host, AuthScope.ANY_PORT), new UsernamePasswordCredentials(USERNAME, PASSWORD));
-	       
+		// HttpClient client = new DefaultHttpClient();
+		// HttpClient client = HttpClientBuilder.create().build();
+		// client.
+		// getCredentialsProvider().setCredentials(new AuthScope(host,
+		// AuthScope.ANY_PORT), new UsernamePasswordCredentials(USERNAME, PASSWORD));
+
 		CloseableHttpClient client = HttpClientBuilder.create().build();
 
 		/*
-		HttpHost targetHost = new HttpHost(Config.SPARQL_HOST, Config.SPARQL_PORT, Config.SPARQL_SCHEME);
-		CredentialsProvider credsProvider = new BasicCredentialsProvider();
-		credsProvider.setCredentials(
-		        new AuthScope(targetHost.getHostName(), targetHost.getPort()),
-		        new UsernamePasswordCredentials(Config.USERNAME, Config.PASSWORD));
-
-		// Create AuthCache instance
-		AuthCache authCache = new BasicAuthCache();
-		
-		// Generate BASIC scheme object and add it to the local auth cache
-		BasicScheme basicAuth = new BasicScheme();
-		authCache.put(targetHost, basicAuth);
-
-		// Add AuthCache to the execution context
-		HttpClientContext context = HttpClientContext.create();
-		context.setCredentialsProvider(credsProvider);
-		context.setAuthCache(authCache);
-		
-		*/
+		 * HttpHost targetHost = new HttpHost(Config.SPARQL_HOST, Config.SPARQL_PORT,
+		 * Config.SPARQL_SCHEME); CredentialsProvider credsProvider = new
+		 * BasicCredentialsProvider(); credsProvider.setCredentials( new
+		 * AuthScope(targetHost.getHostName(), targetHost.getPort()), new
+		 * UsernamePasswordCredentials(Config.USERNAME, Config.PASSWORD));
+		 * 
+		 * // Create AuthCache instance AuthCache authCache = new BasicAuthCache();
+		 * 
+		 * // Generate BASIC scheme object and add it to the local auth cache
+		 * BasicScheme basicAuth = new BasicScheme(); authCache.put(targetHost,
+		 * basicAuth);
+		 * 
+		 * // Add AuthCache to the execution context HttpClientContext context =
+		 * HttpClientContext.create(); context.setCredentialsProvider(credsProvider);
+		 * context.setAuthCache(authCache);
+		 * 
+		 */
 		//
 		HttpGet request = new HttpGet(queryURL);
+
+		// System.out.println("queryURL = " + queryURL);
+
 		request.addHeader("Accept", "sparql-results+xml");
 		HttpResponse response = null;
 		try {
-		//	response = client.execute(targetHost, request, context);
+			// response = client.execute(targetHost, request, context);
 			response = client.execute(request);
 		} catch (ClientProtocolException e) {
 			log.error(e.getMessage());
@@ -120,55 +125,62 @@ public class SparqlConnector {
 			log.error(e.getMessage());
 		}
 
+		try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
+		System.out.println("RESPONSE = " + response);
 
-		 statusCode = response.getStatusLine().getStatusCode();
-		 
-	//	 throw new RuntimeException("\nCONTENT = "+statusCode+"\n");
-		 
-		 if(statusCode == 401) {
-			 request.addHeader("Authorization", "Basic YWRtaW46YWRtaW4=");
-			 request.addHeader("Cache-Control", "no-cache");
-			 request.addHeader("Pragma", "no-cache");
-			 request.addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
-			 request.addHeader("Accept-Encoding", "gzip,deflate,sdch");
-			 request.addHeader("Accept-Language", "en-US,en;q=0.8");
-			 request.addHeader("Connection", "keep-alive");
-		
-			 HttpHost targetHost = new HttpHost(config.getProperty("SPARQL_HOST"), Integer.parseInt(config.getProperty("SPARQL_PORT")), config.getProperty("SPARQL_SCHEME"));
-			 
-			 CredentialsProvider credsProvider = new BasicCredentialsProvider();
-				credsProvider.setCredentials(
-				        new AuthScope(targetHost.getHostName(), targetHost.getPort()),
-				        new UsernamePasswordCredentials(config.getProperty("USERNAME"), config.getProperty("PASSWORD"))
-				        );
-				HttpClientContext context = HttpClientContext.create();
-				context.setCredentialsProvider(credsProvider);
-				try {
-					response = client.execute(targetHost, request, context);
-					response = client.execute(request);
-				} catch (ClientProtocolException e) {
-					log.error(e.getMessage());
-				} catch (IOException e) {
-					log.error(e.getMessage());
-				}
-				
-		 }
-		
+		statusCode = response.getStatusLine().getStatusCode();
+
+		// throw new RuntimeException("\nCONTENT = "+statusCode+"\n");
+
+		if (statusCode == 401) {
+			request.addHeader("Authorization", "Basic YWRtaW46YWRtaW4=");
+			request.addHeader("Cache-Control", "no-cache");
+			request.addHeader("Pragma", "no-cache");
+			request.addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+			request.addHeader("Accept-Encoding", "gzip,deflate,sdch");
+			request.addHeader("Accept-Language", "en-US,en;q=0.8");
+			request.addHeader("Connection", "keep-alive");
+
+			HttpHost targetHost = new HttpHost(config.getProperty("SPARQL_HOST"),
+					Integer.parseInt(config.getProperty("SPARQL_PORT")), config.getProperty("SPARQL_SCHEME"));
+
+			CredentialsProvider credsProvider = new BasicCredentialsProvider();
+			credsProvider.setCredentials(new AuthScope(targetHost.getHostName(), targetHost.getPort()),
+					new UsernamePasswordCredentials(config.getProperty("USERNAME"), config.getProperty("PASSWORD")));
+			HttpClientContext context = HttpClientContext.create();
+			context.setCredentialsProvider(credsProvider);
+			try {
+				response = client.execute(targetHost, request, context);
+				response = client.execute(request);
+			} catch (ClientProtocolException e) {
+				log.error(e.getMessage());
+			} catch (IOException e) {
+				log.error(e.getMessage());
+			}
+
+		}
+
 		String headersString = new String();
-		 Header[] headers = response.getAllHeaders();
-		 for(int i =0;i<headers.length; i++){
-		 headersString += "HEADER "+headers[i].getName()+" : "+headers[i].getValue()+"\n";
-		 }
-// throw new RuntimeException("\n"+Integer.toString(statusCode)+"\n"+headersString+"\n");
+		Header[] headers = response.getAllHeaders();
+		for (int i = 0; i < headers.length; i++) {
+			headersString += "HEADER " + headers[i].getName() + " : " + headers[i].getValue() + "\n";
+		}
+		// throw new
+		// RuntimeException("\n"+Integer.toString(statusCode)+"\n"+headersString+"\n");
 
- // /*
-//401
-//HEADER Date : Tue, 26 Aug 2014 09:49:06 GMT
-//HEADER WWW-Authenticate : Basic realm="Apache Stanbol authentication needed"
-//HEADER Content-Length : 38
-//HEADER Server : Jetty(8.1.14.v20131031)
-		 
-		 // Authorization:Basic YWRtaW46YWRtaW4=
+		// /*
+		// 401
+		// HEADER Date : Tue, 26 Aug 2014 09:49:06 GMT
+		// HEADER WWW-Authenticate : Basic realm="Apache Stanbol authentication needed"
+		// HEADER Content-Length : 38
+		// HEADER Server : Jetty(8.1.14.v20131031)
+
+		// Authorization:Basic YWRtaW46YWRtaW4=
 
 		// Get the response
 		InputStream inputStream = null;
@@ -192,7 +204,6 @@ public class SparqlConnector {
 		// e1.printStackTrace();
 		// }
 
-		
 		try {
 			reader = new BufferedReader(new InputStreamReader(inputStream)); // response.getEntity().getContent()
 		} catch (IllegalStateException e) {
@@ -210,16 +221,16 @@ public class SparqlConnector {
 		}
 		try {
 			inputStream.close();
-		//	reader.close();	
+			// reader.close();
 			// inputStream.close();
 		} catch (IOException e) {
 			log.error(e.getMessage());
 		}
-	//	
-	//	 System.out.println("CONTENT = "+content.toString());
-		 request.releaseConnection();
-		 return content.toString();
-	// */
+		//
+		// System.out.println("CONTENT = "+content.toString());
+		request.releaseConnection();
+		return content.toString();
+		// */
 	}
 
 	/**
@@ -233,6 +244,7 @@ public class SparqlConnector {
 
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost(updateEndpoint);
+		System.out.println("updateEndpoint = " + updateEndpoint);
 		List<NameValuePair> parameters = new ArrayList<NameValuePair>();
 		parameters.add(new BasicNameValuePair("update", sparql));
 		try {

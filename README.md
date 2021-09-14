@@ -1,9 +1,10 @@
-NewsMonitor
-===========
+# NewsMonitor
+
+Revisiting 2021... not yet working again, see [devlog.md](devlog.md)
 
 A feed aggregator/reader with topic-focussed discovery.
 
-NewsMonitor may be run standalone with a SPARQL 1.1 store or as an OSGi module within the Fusepool (/Stanbol) system. 
+NewsMonitor may be run standalone with a SPARQL 1.1 store or as an OSGi module within the Fusepool (/Stanbol) system.
 
 ### Standalone, with external Fuseki SPARQL server
 
@@ -21,8 +22,9 @@ mvn clean install -P build-for-fuseki
 
 java -jar target/NewsMonitor-1.0.0-SNAPSHOT.jar it.danja.newsmonitor.standalone.Main
 
-----
-*The following might not currently work*
+---
+
+_The following might not currently work_
 
 ## Integrated with Fusepool/Stanbol
 
@@ -35,5 +37,3 @@ mvn clean install
 or, skipping tests :
 
 mvn clean install -Dmaven.test.skip=true
-
-
