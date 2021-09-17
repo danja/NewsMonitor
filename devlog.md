@@ -1,5 +1,9 @@
 # devlog 2021
 
+**2021-09-17**
+
+sudo ln -s /home/danny/HKMS/NewsMonitor/src/main/resources/META-INF/resources/static/newsmonitor /opt/lampp/htdocs/newsmonitor
+
 **2021-09-14**
 
 _Having a look after a very long time, hoping to deploy on hyperdata.it_
