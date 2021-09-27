@@ -27,13 +27,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class Poller implements Runnable {
-    
+
     private static Logger log = LoggerFactory.getLogger(Poller.class);
-    
+
     private List<String> feedUrls = null;
-    
+
     private FeedList feedList = null;
 
     /**
@@ -42,23 +43,19 @@ public class Poller implements Runnable {
     public FeedList getFeedList() {
         return feedList;
     }
-    
+
     private boolean running = false;
-    
+
     private Thread thread;
-    
+
     private int loopCount = 0;
-    
+
     private boolean stopped = false;
-    
+
     SparqlTemplater sparqlTemplater = null;
-    
+
     private Properties config = null;
 
-// private BundleContext bundleContext;
-//	public void setBundleContext(BundleContext bundleContext) {
-//		this.bundleContext = bundleContext;
-//	}
     public Poller(Properties config, SparqlTemplater sparqlTemplater) {
         this.sparqlTemplater = sparqlTemplater;
         this.config = config;
@@ -83,7 +80,7 @@ public class Poller implements Runnable {
                 String location = feed.getLocation();
                 feed = new FeedImpl(config);
                 feed.setUrl(location);
-                
+
                 feed.init();
             }
             feedList.addFeed(feed);
@@ -92,17 +89,17 @@ public class Poller implements Runnable {
         log.info(feedList.toString());
         return feedList;
     }
-    
+
     public void start() {
         stopped = false;
         thread = new Thread(this);
         thread.start();
     }
-    
+
     public void stop() {
         running = false;
     }
-    
+
     @Override
     public void run() {
         running = true;
@@ -125,14 +122,20 @@ public class Poller implements Runnable {
         log.info("Poller stopped.");
         stopped = true;
     }
-    
+
     public synchronized void refreshFeeds() {
         Set<Feed> expiring = new HashSet<Feed>();
         Iterator<Feed> iterator = feedList.getList().iterator();
         // feedQueue.iterator();
         Feed feed = null;
-        
+
         while (iterator.hasNext()) {
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e2) {
+                // TODO Auto-generated catch block
+                e2.printStackTrace();
+            }
             feed = iterator.next();
             // log.info("feed.getLives() = "+feed.getLives());
             // log.info("feed.isDead() = "+feed.isDead());
@@ -144,15 +147,15 @@ public class Poller implements Runnable {
             log.info("\nRefreshing : " + feed.getUrl());
             // feed.setFirstCall(firstCall);
             feed.refresh();
-            
-           // log.info("\nin poller feed.getLinks() : " + feed.getLinks());
-            
+
+            // log.info("\nin poller feed.getLinks() : " + feed.getLinks());
+
             Set<Link> links = feed.getLinks();
-            
+
             for (Link link : links) {
                 feedList.addFeed(link.getHref());
             }
-            
+
             if (feed.getFormatHint() == ContentType.HTML) { // shouldn't be
                 // needed
                 // feed.setDead(true);
@@ -175,7 +178,7 @@ public class Poller implements Runnable {
                 continue;
             }
             ;
-            
+
             if (feed.shouldExpire()) {
                 expiring.add(feed);
             }
@@ -184,43 +187,42 @@ public class Poller implements Runnable {
             } catch (InterruptedException e) {
                 log.error(e.getMessage());
             }
-            
+
             if (feed.isNew()) {
                 pushFeed(feed);
             } else {
                 log.info("No changes to : " + feed.getUrl());
             }
         }
-        
+
         if ("true".equals(config.getProperty("POLLER_NO_LOOP"))) {
             System.exit(1);
         }
-        
+
         iterator = expiring.iterator();
         while (iterator.hasNext()) {
             feed = iterator.next();
             log.info("Unsubscribing from " + feed.getUrl());
             feedList.remove(feed);
         }
-        
+
         try {
             Thread.sleep(Integer.parseInt(config.getProperty("REFRESH_PERIOD")));
         } catch (InterruptedException e) {
             log.error(e.getMessage());
         }
     }
-    
+
     private void pushFeed(Feed feed) {
-        
+        System.out.println("Uploading SPARQL for : " + feed.getUrl());
         log.info("Uploading SPARQL for : " + feed.getUrl());
         HttpMessage message = sparqlTemplater.uploadFeed(feed);
         feed.clean();
-        log.info("SPARQL response = " + message.getStatusCode() + " "
-                + message.getStatusMessage());
+        log.info("SPARQL response = " + message.getStatusCode() + " " + message.getStatusMessage());
         if (message.getStatusCode() >= 400) {
             log.info("\n" + message + "\n");
         }
-        
+
     }
 
     // private void pushFeeds() {
@@ -254,10 +256,10 @@ public class Poller implements Runnable {
         // log.info(entries.getEntry(i));
         // }
     }
-    
+
     public void setFeedUrls(List<String> feedUrls) {
         this.feedUrls = feedUrls;
-        
+
         List<String> tweakedUrls = new ArrayList<String>(); // little temp workaround for some old feeds
         for (int i = 0; i < feedUrls.size(); i++) {
             String url = feedUrls.get(i);
@@ -269,7 +271,7 @@ public class Poller implements Runnable {
         }
         this.feedUrls.addAll(tweakedUrls);
     }
-    
+
     public boolean isStopped() {
         return stopped;
     }

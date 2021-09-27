@@ -1,0 +1,11 @@
+it/danja/newsmonitor/tests/parsers/TestRss2Sniffer.class
+it/danja/newsmonitor/tests/parsers/TestRss1Sniffer.class
+it/danja/newsmonitor/tests/utils/TestContentProcessor.class
+it/danja/newsmonitor/tests/parsers/TestAtomSniffer.class
+it/danja/newsmonitor/tests/parsers/TestSoupParser.class
+it/danja/newsmonitor/tests/parsers/TestAtomParser.class
+it/danja/newsmonitor/tests/parsers/TestRss2Parser.class
+it/danja/newsmonitor/tests/utils/ServerRunner.class
+it/danja/newsmonitor/tests/AllTests.class
+it/danja/newsmonitor/tests/utils/ConfigLoader.class
+it/danja/newsmonitor/tests/parsers/TestRss1Parser.class
