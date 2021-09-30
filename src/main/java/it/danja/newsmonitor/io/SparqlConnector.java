@@ -112,7 +112,7 @@ public class SparqlConnector {
 		//
 		HttpGet request = new HttpGet(queryURL);
 
-		// System.out.println("queryURL = " + queryURL);
+		System.out.println("queryURL = " + queryURL);
 
 		request.addHeader("Accept", "sparql-results+xml");
 		HttpResponse response = null;

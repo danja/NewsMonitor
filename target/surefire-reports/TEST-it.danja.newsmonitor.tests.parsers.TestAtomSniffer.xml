@@ -54,6 +54,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="it.danja.newsmonitor.tests.parsers.TestAtomSniffer" name="testFeedLevel" time="0.027"/>
-  <testcase classname="it.danja.newsmonitor.tests.parsers.TestAtomSniffer" name="testEntryLevel" time="0.026"/>
+  <testcase classname="it.danja.newsmonitor.tests.parsers.TestAtomSniffer" name="testFeedLevel" time="0.026"/>
+  <testcase classname="it.danja.newsmonitor.tests.parsers.TestAtomSniffer" name="testEntryLevel" time="0.027"/>
 </testsuite>

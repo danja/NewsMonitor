@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: it.danja.newsmonitor.tests.parsers.TestRss1Parser
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.364 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.358 sec
