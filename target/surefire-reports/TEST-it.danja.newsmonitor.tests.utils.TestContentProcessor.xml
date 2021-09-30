@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="0" name="it.danja.newsmonitor.tests.utils.TestContentProcessor" time="0.022" errors="0" skipped="0">
+<testsuite tests="9" failures="0" name="it.danja.newsmonitor.tests.utils.TestContentProcessor" time="0.032" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17-ea+19-Ubuntu-1ubuntu1"/>
@@ -54,13 +54,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testEscapeQuotes" time="0.002"/>
+  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testEscapeQuotes" time="0.003"/>
   <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testExtractHeadLinks" time="0"/>
-  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testUnescape" time="0.017"/>
+  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testUnescape" time="0.026"/>
   <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testCollapseSpaces" time="0"/>
-  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testStripTags" time="0"/>
-  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testNormaliseElement" time="0.001"/>
-  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testExtractLinks" time="0.001"/>
+  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testStripTags" time="0.001"/>
+  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testNormaliseElement" time="0"/>
+  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testExtractLinks" time="0.002"/>
   <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testStripPunctuation" time="0"/>
-  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testResolveUrl" time="0.001"/>
+  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testResolveUrl" time="0"/>
 </testsuite>
