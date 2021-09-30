@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="it.danja.newsmonitor.tests.parsers.TestSoupParser" time="0.008" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="it.danja.newsmonitor.tests.parsers.TestSoupParser" time="0.009" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17-ea+19-Ubuntu-1ubuntu1"/>
@@ -54,6 +54,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="it.danja.newsmonitor.tests.parsers.TestSoupParser" name="testFeedLevel" time="0.005"/>
+  <testcase classname="it.danja.newsmonitor.tests.parsers.TestSoupParser" name="testFeedLevel" time="0.006"/>
   <testcase classname="it.danja.newsmonitor.tests.parsers.TestSoupParser" name="testEntryLevel" time="0.003"/>
 </testsuite>
