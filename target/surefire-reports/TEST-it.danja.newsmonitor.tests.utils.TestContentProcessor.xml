@@ -60,7 +60,7 @@
   <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testCollapseSpaces" time="0"/>
   <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testStripTags" time="0"/>
   <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testNormaliseElement" time="0.001"/>
-  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testExtractLinks" time="0.002"/>
+  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testExtractLinks" time="0.001"/>
   <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testStripPunctuation" time="0"/>
-  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testResolveUrl" time="0"/>
+  <testcase classname="it.danja.newsmonitor.tests.utils.TestContentProcessor" name="testResolveUrl" time="0.001"/>
 </testsuite>
