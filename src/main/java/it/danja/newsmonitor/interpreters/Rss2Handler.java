@@ -160,7 +160,8 @@ public class Rss2Handler extends FeedHandlerBase {
 			}
 			if ("guid".equals(localName)) {
 				getFeed().setId(text);
-				if ("".equals(getFeed().getUrl()) && text.startsWith("http://")) { // id
+				// 2023 added https
+				if ("".equals(getFeed().getUrl()) && (text.startsWith("http://") || text.startsWith("https://"))) { // id
 																					// might
 																					// be
 																					// url,
@@ -211,7 +212,8 @@ public class Rss2Handler extends FeedHandlerBase {
 			if ("guid".equals(localName)) {
 				currentEntry.setId(text);
 				if ("".equals(currentEntry.getUrl())
-						&& text.startsWith("http://")) {// id might be url, but
+				// 2023 https
+						&& (text.startsWith("http://") || text.startsWith("https://")) {// id might be url, but
 														// favour alternate link
 					currentEntry.setUrl(text);
 				}
