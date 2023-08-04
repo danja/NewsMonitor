@@ -111,7 +111,7 @@ public class SparqlConnector {
 		 */
 		//
 		HttpGet request = new HttpGet(queryURL);
-
+System.out.println("\n\n"); // 2023
 		System.out.println("queryURL = " + queryURL);
 
 		request.addHeader("Accept", "sparql-results+xml");
@@ -131,9 +131,12 @@ public class SparqlConnector {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
-		System.out.println("RESPONSE = " + response);
+		// System.out.println("RESPONSE = " + response); // 2023
 
 		statusCode = response.getStatusLine().getStatusCode();
+
+System.out.println("\n"); 
+ System.out.println("statusCode = " + statusCode);
 
 		// throw new RuntimeException("\nCONTENT = "+statusCode+"\n");
 
