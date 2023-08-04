@@ -213,7 +213,7 @@ public class Rss2Handler extends FeedHandlerBase {
 				currentEntry.setId(text);
 				if ("".equals(currentEntry.getUrl())
 				// 2023 https
-						&& (text.startsWith("http://") || text.startsWith("https://")) {// id might be url, but
+						&& (text.startsWith("http://") || text.startsWith("https://"))) {// id might be url, but
 														// favour alternate link
 					currentEntry.setUrl(text);
 				}

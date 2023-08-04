@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="it.danja.newsmonitor.tests.parsers.TestRss2Parser" time="0.035" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="it.danja.newsmonitor.tests.parsers.TestRss2Parser" time="0.038" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="17-ea+19-Ubuntu-1ubuntu1"/>
+    <property name="java.vm.version" value="17.0.8+7-Ubuntu-123.04"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
     <property name="maven.multiModuleProjectDirectory" value="/home/danny/HKMS/NewsMonitor"/>
     <property name="java.vm.vendor" value="Private Build"/>
     <property name="java.vendor.url" value="Unknown"/>
-    <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/danny/HKMS/NewsMonitor"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="17-ea+19-Ubuntu-1ubuntu1"/>
+    <property name="java.runtime.version" value="17.0.8+7-Ubuntu-123.04"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="
@@ -30,7 +30,7 @@
     <property name="java.class.version" value="61.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="5.11.0-37-generic"/>
+    <property name="os.version" value="6.2.0-26-generic"/>
     <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
     <property name="user.home" value="/home/danny"/>
     <property name="user.timezone" value="Europe/Rome"/>
@@ -40,20 +40,23 @@
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install -f /home/danny/HKMS/NewsMonitor/pom.xml"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -P build-for-fuseki"/>
     <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="17-ea"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="native.encoding" value="UTF-8"/>
     <property name="java.vendor" value="Private Build"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
     <property name="maven.home" value="/usr/share/maven"/>
     <property name="file.separator" value="/"/>
-    <property name="java.version.date" value="2021-09-14"/>
+    <property name="java.version.date" value="2023-07-18"/>
     <property name="java.vendor.url.bug" value="Unknown"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
   </properties>
-  <testcase classname="it.danja.newsmonitor.tests.parsers.TestRss2Parser" name="testFeedLevel" time="0.017"/>
-  <testcase classname="it.danja.newsmonitor.tests.parsers.TestRss2Parser" name="testEntryLevel" time="0.018"/>
+  <testcase classname="it.danja.newsmonitor.tests.parsers.TestRss2Parser" name="testFeedLevel" time="0.025"/>
+  <testcase classname="it.danja.newsmonitor.tests.parsers.TestRss2Parser" name="testEntryLevel" time="0.013"/>
 </testsuite>
