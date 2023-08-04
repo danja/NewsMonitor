@@ -141,7 +141,7 @@ System.out.println("\n");
 		// throw new RuntimeException("\nCONTENT = "+statusCode+"\n");
 
 		if (statusCode == 401) {
-			request.addHeader("Authorization", "Basic YWRtaW46YWRtaW4=");
+			request.addHeader("Authorization", "Basic YWRtaW46c2FzaGE="); // YWRtaW46c2FzaGE=  was  YWRtaW46YWRtaW4=
 			request.addHeader("Cache-Control", "no-cache");
 			request.addHeader("Pragma", "no-cache");
 			request.addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
