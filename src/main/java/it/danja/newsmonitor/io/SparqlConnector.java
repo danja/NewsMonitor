@@ -270,6 +270,7 @@ System.out.println("\n");
 			statusCode = response.getStatusLine().getStatusCode();
 			statusMessage = response.getStatusLine().getReasonPhrase();
 			System.out.println("\nPOST response : "+statusCode+" "+statusMessage); // 2023
+				TimeUnit.SECONDS.sleep(5); // 2023 
 		} catch (Exception e) {
 			log.error(e.getMessage());
 		}
