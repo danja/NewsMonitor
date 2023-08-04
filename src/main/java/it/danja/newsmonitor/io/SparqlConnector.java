@@ -253,7 +253,9 @@ System.out.println("\n");
 
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost(updateEndpoint);
-		System.out.println("updateEndpoint = " + updateEndpoint);
+				System.out.println("\n\n-----------------------------------------------------------");
+		System.out.println("\n\nUpdateEndpoint = " + updateEndpoint);
+		System.out.println("\nSPARQL = " + sparql);
 		List<NameValuePair> parameters = new ArrayList<NameValuePair>();
 		parameters.add(new BasicNameValuePair("update", sparql));
 		try {
@@ -267,7 +269,7 @@ System.out.println("\n");
 			response = httpclient.execute(httpPost);
 			statusCode = response.getStatusLine().getStatusCode();
 			statusMessage = response.getStatusLine().getReasonPhrase();
-			System.out.println("POST response : "+statusCode+" "+statusMessage); // 2023
+			System.out.println("\nPOST response : "+statusCode+" "+statusMessage); // 2023
 		} catch (Exception e) {
 			log.error(e.getMessage());
 		}
