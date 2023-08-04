@@ -330,7 +330,7 @@ public class AtomHandler extends FeedHandlerBase {
 			if ("id".equals(localName)) {
 				currentEntry.setId(text);
 				// id might be url, but favour alternate link
-				if (currentEntry.getUrl() == null && text.startsWith("http://")) {							
+				if (currentEntry.getUrl() == null && (text.startsWith("http://") || text.startsWith("https://")) {							
 					currentEntry.setUrl(text);
 				}
 				return;
