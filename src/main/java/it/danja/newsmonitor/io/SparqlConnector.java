@@ -154,9 +154,15 @@ public class SparqlConnector {
 					new UsernamePasswordCredentials(config.getProperty("USERNAME"), config.getProperty("PASSWORD")));
 			HttpClientContext context = HttpClientContext.create();
 			context.setCredentialsProvider(credsProvider);
+			
+			// 2023
+			System.out.println("request : "+request);
+			System.out.println("User : "+config.getProperty("USERNAME"));
+			System.out.println("Pass : "+config.getProperty("PASSWORD"));
+
 			try {
 				response = client.execute(targetHost, request, context);
-				response = client.execute(request);
+				// response = client.execute(request);
 			} catch (ClientProtocolException e) {
 				log.error(e.getMessage());
 			} catch (IOException e) {
