@@ -112,7 +112,7 @@ public class SparqlConnector {
 		//
 		HttpGet request = new HttpGet(queryURL);
 System.out.println("\n\n"); // 2023
-		System.out.println("queryURL = " + queryURL);
+		// System.out.println("queryURL = " + queryURL);
 
 		request.addHeader("Accept", "sparql-results+xml");
 		HttpResponse response = null;
@@ -126,7 +126,7 @@ System.out.println("\n\n"); // 2023
 		}
 
 		try {
-			TimeUnit.SECONDS.sleep(1);
+			TimeUnit.SECONDS.sleep(1); // 2023 ????
 		} catch (InterruptedException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
