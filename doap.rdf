@@ -1,0 +1,29 @@
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns="http://usefulinc.com/ns/doap#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:admin="http://webns.net/mvcb/"
+  rdf:about="http://hyperdata.org/newsmonitor">
+  <name>NewsMonitor</name>
+  <shortname>newsmonitor</shortname>
+  <shortdesc>NewsMonitor is a feed reader and discovery agent</shortdesc>
+  <description>NewsMonitor is a service which polls RSS/Atom feeds and posts their content to a
+    SPARQL Store over HTTP. This data is then available for eg. browser-based clients for rendering
+    or processing.</description>
+  <homepage rdf:resource="https://hyperdata.it/newsmonitor" />
+  <wiki rdf:resource="https://hyperdata.it/foowiki" />
+  <download-page rdf:resource="https://github.com/danja/newsmonitor" />
+  <programming-language>Java</programming-language>
+  <license rdf:resource="https://www.mit.edu/~amini/LICENSE.md" />
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Danny Ayers</foaf:name>
+      <foaf:homepage rdf:resource="https://danny.ayers.name" />
+      <foaf:email>danny.ayers@gmail.com</foaf:email>
+    </foaf:Person>
+  </maintainer>
+  <repository>
+    <GITRepository>
+      <browse rdf:resource='https://github.com/danja/newsmonitor' />
+    </GITRepository>
+  </repository>
+  <rdfs:seeAlso rdf:resource="https://hyperdata.it" />
+</Project>

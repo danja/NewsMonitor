@@ -1,5 +1,6 @@
 /home/danny/HKMS/NewsMonitor/src/test/java/it/danja/newsmonitor/tests/utils/ServerRunner.java
 /home/danny/HKMS/NewsMonitor/src/test/java/it/danja/newsmonitor/tests/parsers/TestRss1Parser.java
+/home/danny/HKMS/NewsMonitor/src/test/java/it/danja/newsmonitor/tests/http/TestSparqlUpdate.java
 /home/danny/HKMS/NewsMonitor/src/test/java/it/danja/newsmonitor/tests/utils/TestContentProcessor.java
 /home/danny/HKMS/NewsMonitor/src/test/java/it/danja/newsmonitor/tests/parsers/TestAtomSniffer.java
 /home/danny/HKMS/NewsMonitor/src/test/java/it/danja/newsmonitor/tests/parsers/TestRss2Parser.java

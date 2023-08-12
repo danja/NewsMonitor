@@ -12,16 +12,14 @@ package it.danja.newsmonitor.main;
 import it.danja.newsmonitor.discovery.LinkExplorer;
 import it.danja.newsmonitor.io.TextFileReader;
 import it.danja.newsmonitor.sparql.SparqlTemplater;
-import it.danja.newsmonitor.standalone.templating.FsTemplateLoader;
-import it.danja.newsmonitor.templating.TemplateLoader;
 import it.danja.newsmonitor.templating.Templater;
-
 import java.util.List;
 import java.util.Properties;
-
 import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+
 
 /**
  *
@@ -55,6 +53,7 @@ public class NewsMonitor {
      */
     @SuppressWarnings("unused")
     public void start() {
+       // System.setProperty("javax.net.debug", "all"); // 2003
 
         System.out.println("START()");
 

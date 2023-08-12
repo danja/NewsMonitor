@@ -9,7 +9,7 @@
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
-        }, 
+        },
         {
             "type": "java",
             "name": "NewsMonitor",

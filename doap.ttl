@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix admin: <http://webns.net/mvcb/> .
+
+<http://hyperdata.org/seki>
+    :description "NewsMonitor is a service which polls RSS/Atom feeds and posts their content to a SPARQL Store over HTTP. This data is then available for eg. browser-based clients for rendering or processing." ;
+    :download-page <https://github.com/danja/newsmonitor> ;
+    :homepage <https://hyperdata.it/newsmonitor> ;
+    :license <https://www.mit.edu/~amini/LICENSE.md> ;
+    :maintainer [
+        a foaf:Person ;
+        foaf:email "danny.ayers@gmail.com" ;
+        foaf:homepage <https://danny.ayers.name> ;
+        foaf:name "Danny Ayers"
+    ] ;
+    :name "NewsMonitor" ;
+    :programming-language "Java" ;
+    :repository [
+        :browse <https://github.com/danja/newsmonitor> ;
+        a :GITRepository
+    ] ;
+    :shortdesc "NewsMonitor is a feed reader and discovery agent" ;
+    :shortname "newsmonitor" ;
+    :wiki <https://hyperdata.it/foowiki> ;
+    a :Project ;
+    rdfs:seeAlso <https://hyperdata.it> .
+

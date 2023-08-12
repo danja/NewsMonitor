@@ -1,8 +1,9 @@
 <!-- Ultimately want 4 profiles (in decreasing priority) : OSGi for Fusepool/Stanbol 
 Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol 
 (with bundled Fuseki? TBD) Standalone, built in SPARQL store -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>it.danja</groupId>
@@ -32,7 +33,8 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
 
     </properties>
 
-    <!-- build> <plugins> <plugin> <groupId>org.apache.felix</groupId> <artifactId>maven-bundle-plugin</artifactId> 
+    <!-- build> <plugins> <plugin> <groupId>org.apache.felix</groupId>
+    <artifactId>maven-bundle-plugin</artifactId> 
     <version>2.3.7</version> <extensions>true</extensions> <configuration> <instructions> 
     <Bundle-Activator>it.danja.newsmonitor.Activator</Bundle-Activator> <Export-Package/> 
     </instructions> </configuration> </plugin> </plugins> </build -->
@@ -47,7 +49,8 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
 
             <build>
                 <plugins>
-                    <!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-antrun-plugin</artifactId> 
+                    <!-- plugin> <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId> 
                     <version>1.7</version> <executions> <execution> <id>compile</id> <phase>package</phase> 
                     <goals> <goal>run</goal> </goals> <configuration> <target> <pathconvert property="plugins.jars" 
                     pathsep="${path.separator}"> <path refid="maven.runtime.classpath"/> <map 
@@ -56,11 +59,14 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
                     <mapper> <chainedmapper> <flattenmapper/> <globmapper from="*" to="file:modules/*" 
                     casesensitive="no"/> </chainedmapper> </mapper> </pathconvert> <propertyfile 
                     file="${project.build.directory}/config.properties"> <entry key="felix.auto.start" 
-                    value="${bundles} file:modules/${project.build.finalName}.jar"/> <entry key="org.osgi.framework.bootdelegation" 
-                    value="*"/> </propertyfile> <copy file="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}" 
+                    value="${bundles} file:modules/${project.build.finalName}.jar"/> <entry
+                    key="org.osgi.framework.bootdelegation" 
+                    value="*"/> </propertyfile> <copy
+                    file="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}" 
                     tofile="${project.build.directory}/felix.jar"/> </target> </configuration> 
                     </execution> </executions> </plugin -->
-                    <!-- plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+                    <!-- plugin> <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId> 
                     <version>2.3</version> <executions> <execution> <id>create-executable-jar</id> 
                     <phase>package</phase> <goals> <goal>single</goal> </goals> <configuration> 
                     <descriptors> <descriptor>${basedir}/src/main/assembly/felix.xml</descriptor> 
@@ -118,17 +124,21 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
             </build>
         </profile>
         <!-- profile> <id>run-on-felix</id> <dependencies> </dependencies> <build> 
-        <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-antrun-plugin</artifactId> 
+        <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId> 
         <version>1.7</version> <configuration> <target> <property name="vm.args" 
         value=""/> <pathconvert property="plugins.jars" pathsep="${path.separator}"> 
-        <path refid="maven.runtime.classpath"/> <map from="${project.build.directory}${file.separator}classes" 
+        <path refid="maven.runtime.classpath"/> <map
+        from="${project.build.directory}${file.separator}classes" 
         to=""/> </pathconvert> <makeurl property="urls" separator=" "> <path path="${plugins.jars}"/> 
         <path location="${project.build.directory}/${project.build.finalName}.jar"/> 
         </makeurl> <propertyfile file="${project.build.directory}/run.properties"> 
         <entry key="felix.auto.start" value="${urls}"/> <entry key="felix.auto.deploy.action" 
         value="uninstall,install,update,start"/> <entry key="org.osgi.framework.storage" 
-        value="${project.build.directory}${file.separator}felix-cache"/> <entry key="org.osgi.framework.bootdelegation" 
-        value="*"/> </propertyfile> <makeurl property="run.properties.url" file="${project.build.directory}/run.properties"/> 
+        value="${project.build.directory}${file.separator}felix-cache"/> <entry
+        key="org.osgi.framework.bootdelegation" 
+        value="*"/> </propertyfile> <makeurl property="run.properties.url"
+        file="${project.build.directory}/run.properties"/> 
         <java fork="true" jar="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}"> 
         <sysproperty key="felix.config.properties" value="${run.properties.url}"/> 
         <jvmarg line="${vm.args}"/> </java> </target> </configuration> </plugin> 
@@ -137,10 +147,10 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
         <profile>
             <id>build-for-fuseki</id>
 
-                 <activation>
+            <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-            
+
             <build>
                 <plugins>
                     <plugin>
@@ -150,31 +160,31 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
                             <archive>
                                 <manifest>
                                     <mainClass>it.danja.newsmonitor.standalone.Main</mainClass>
-                                            <addClasspath>true</addClasspath>
-        <classpathPrefix>lib/</classpathPrefix>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>lib/</classpathPrefix>
                                 </manifest>
                             </archive>
                         </configuration>
                     </plugin>
                     <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-dependency-plugin</artifactId>
-  <executions>
-    <execution>
-      <id>copy-dependencies</id>
-      <phase>prepare-package</phase>
-      <goals>
-        <goal>copy-dependencies</goal>
-      </goals>
-      <configuration>
-        <outputDirectory>${project.build.directory}/lib</outputDirectory>
-        <overWriteReleases>false</overWriteReleases>
-        <overWriteSnapshots>false</overWriteSnapshots>
-        <overWriteIfNewer>true</overWriteIfNewer>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>copy-dependencies</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                                    <overWriteReleases>false</overWriteReleases>
+                                    <overWriteSnapshots>false</overWriteSnapshots>
+                                    <overWriteIfNewer>true</overWriteIfNewer>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
                 </plugins>
             </build>
 
@@ -195,6 +205,13 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
     </profiles>
 
     <dependencies>
+
+        <dependency> <!-- 2023 -->
+            <groupId>com.vladsch.flexmark</groupId>
+            <artifactId>flexmark-all</artifactId>
+            <version>0.64.8</version>
+        </dependency>
+
         <!-- dependency> <groupId>org.osgi</groupId> <artifactId>org.osgi.core</artifactId> 
         <version>4.3.0</version> <scope>provided</scope> </dependency -->
         <dependency>
@@ -223,11 +240,11 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
             <!-- scope>test</scope -->
         </dependency>
 
-<dependency>
-  <groupId>junit</groupId>
-  <artifactId>junit</artifactId>
-  <version>[4.13.1,)</version>
-</dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>[4.13.1,)</version>
+        </dependency>
 
         <!-- dependency>
             <groupId>junit</groupId>
@@ -253,7 +270,6 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
         </dependency>
 
 
-
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient-osgi</artifactId>
@@ -271,11 +287,11 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
             <version>4.0.1</version>
         </dependency -->
 
-<dependency>
-  <groupId>org.apache.httpcomponents</groupId>
-  <artifactId>httpclient</artifactId>
-  <version>[4.5.13,)</version>
-</dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>[4.5.13,)</version>
+        </dependency>
 
 
         <dependency>
@@ -318,10 +334,12 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
             <version>0.12.0</version>
         </dependency>
 
-        <!-- <dependency> <groupId>org.apache.stanbol</groupId> <artifactId>org.apache.stanbol.commons.web.base</artifactId> 
+        <!-- <dependency> <groupId>org.apache.stanbol</groupId>
+        <artifactId>org.apache.stanbol.commons.web.base</artifactId> 
         <version>1.0.0-SNAPSHOT</version> </dependency> <dependency> <groupId>org.apache.felix</groupId> 
         <artifactId>org.apache.felix.webconsole</artifactId> <version>3.1.8</version> 
-        </dependency> <dependency> <groupId>org.apache.clerezza</groupId> <artifactId>platform.config</artifactId> 
+        </dependency> <dependency> <groupId>org.apache.clerezza</groupId>
+        <artifactId>platform.config</artifactId> 
         <version>0.4</version> </dependency> <dependency> <groupId>org.apache.stanbol</groupId> 
         <artifactId>org.apache.stanbol.commons.web.viewable</artifactId> <version>1.0.0-SNAPSHOT</version> 
         </dependency> -->

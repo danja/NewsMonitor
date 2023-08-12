@@ -2,7 +2,7 @@
  * NewsMonitor
  *
  * SparqlConnector.java
- * 
+ *
  * @author danja
  * @date Apr 25, 2014
  *
@@ -18,9 +18,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
 import java.util.concurrent.TimeUnit;
-
 import org.apache.http.Header;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
@@ -44,242 +42,246 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Utility for interacting with SPARQL store over HTTP
- * 
+ *
  * Note : uses org.apache.http libs
- * 
+ *
  * @author danja
- * 
+ *
  */
 public class SparqlConnector {
 
-	private static Logger log = LoggerFactory.getLogger(SparqlConnector.class);
+  private static Logger log = LoggerFactory.getLogger(SparqlConnector.class);
 
-	private Properties config = null;
+  private Properties config = null;
 
-	public SparqlConnector(Properties config) {
-		this.config = config;
-	}
+  public SparqlConnector(Properties config) {
+    this.config = config;
+  }
 
-	/**
-	 * @param queryEndpoint
-	 * @param sparql
-	 * @return
-	 * @throws InterruptedException
-	 */
-	public synchronized String query(String queryEndpoint, String sparql) {
-		int statusCode = -1;
-		String queryURL = null;
-		String encoded = null;
-		try {
-			encoded = URLEncoder.encode(sparql, "UTF-8");
-		} catch (UnsupportedEncodingException e) {
-			log.error(e.getMessage());
-		}
-		encoded = encoded.replace("{", "%7B"); // {} are special to Jersey
-		encoded = encoded.replace("}", "%7D");
+  /**
+   * @param queryEndpoint
+   * @param sparql
+   * @return
+   * @throws InterruptedException
+   */
+  public synchronized String query(String queryEndpoint, String sparql) {
+    int statusCode = -1;
+    String queryURL = null;
+    String encoded = null;
+    try {
+      encoded = URLEncoder.encode(sparql, "UTF-8");
+    } catch (UnsupportedEncodingException e) {
+      log.error(e.getMessage());
+    }
+    encoded = encoded.replace("{", "%7B"); // {} are special to Jersey
+    encoded = encoded.replace("}", "%7D");
 
-		queryURL = queryEndpoint + "?query=" + encoded;
-		// log.info("\n\n"+queryURL);
+    queryURL = queryEndpoint + "?query=" + encoded;
 
-		// Eclipse warns about client not being closed, but it doesn't have a
-		// close() method, hopefully release does the trick
-		// HttpClient client = new DefaultHttpClient();
-		// HttpClient client = HttpClientBuilder.create().build();
-		// client.
-		// getCredentialsProvider().setCredentials(new AuthScope(host,
-		// AuthScope.ANY_PORT), new UsernamePasswordCredentials(USERNAME, PASSWORD));
+    // getCredentialsProvider().setCredentials(new AuthScope(host,
+    // AuthScope.ANY_PORT), new UsernamePasswordCredentials(USERNAME, PASSWORD));
 
-		CloseableHttpClient client = HttpClientBuilder.create().build();
+    CloseableHttpClient client = HttpClientBuilder.create().build();
 
-		/*
-		 * HttpHost targetHost = new HttpHost(Config.SPARQL_HOST, Config.SPARQL_PORT,
-		 * Config.SPARQL_SCHEME); CredentialsProvider credsProvider = new
-		 * BasicCredentialsProvider(); credsProvider.setCredentials( new
-		 * AuthScope(targetHost.getHostName(), targetHost.getPort()), new
-		 * UsernamePasswordCredentials(Config.USERNAME, Config.PASSWORD));
-		 * 
-		 * // Create AuthCache instance AuthCache authCache = new BasicAuthCache();
-		 * 
-		 * // Generate BASIC scheme object and add it to the local auth cache
-		 * BasicScheme basicAuth = new BasicScheme(); authCache.put(targetHost,
-		 * basicAuth);
-		 * 
-		 * // Add AuthCache to the execution context HttpClientContext context =
-		 * HttpClientContext.create(); context.setCredentialsProvider(credsProvider);
-		 * context.setAuthCache(authCache);
-		 * 
-		 */
-		//
-		HttpGet request = new HttpGet(queryURL);
-System.out.println("\n\n"); // 2023
-		// System.out.println("queryURL = " + queryURL);
+    // AuthCache authCache = new BasicAuthCache();
 
-		request.addHeader("Accept", "sparql-results+xml");
-		HttpResponse response = null;
-		try {
-			// response = client.execute(targetHost, request, context);
-			response = client.execute(request);
-		} catch (ClientProtocolException e) {
-			log.error(e.getMessage());
-		} catch (IOException e) {
-			log.error(e.getMessage());
-		}
+    HttpGet request = new HttpGet(queryURL);
 
-		try {
-			TimeUnit.SECONDS.sleep(1); // 2023 ????
-		} catch (InterruptedException e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		}
-		// System.out.println("RESPONSE = " + response); // 2023
+    request.addHeader("Accept", "sparql-results+xml");
+    HttpResponse response = null;
+    try {
+      // response = client.execute(targetHost, request, context);
+      response = client.execute(request);
+    } catch (ClientProtocolException e) {
+      log.error(e.getMessage());
+    } catch (IOException e) {
+      log.error(e.getMessage());
+    }
 
-		statusCode = response.getStatusLine().getStatusCode();
+    try {
+      TimeUnit.SECONDS.sleep(1); // 2023 ????
+    } catch (InterruptedException e2) {
+      // TODO Auto-generated catch block
+      e2.printStackTrace();
+    }
+    // System.out.println("RESPONSE = " + response); // 2023
 
-System.out.println("\n"); 
- System.out.println("statusCode = " + statusCode);
+    statusCode = response.getStatusLine().getStatusCode();
 
-		// throw new RuntimeException("\nCONTENT = "+statusCode+"\n");
+    if (statusCode == 401) {
+      request.addHeader("Authorization", "Basic YWRtaW46c2FzaGE="); // YWRtaW46c2FzaGE=  was  YWRtaW46YWRtaW4=
+      request.addHeader("Cache-Control", "no-cache");
+      request.addHeader("Pragma", "no-cache");
+      request.addHeader(
+        "Accept",
+        "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+      );
+      request.addHeader("Accept-Encoding", "gzip,deflate,sdch");
+      request.addHeader("Accept-Language", "en-US,en;q=0.8");
+      request.addHeader("Connection", "keep-alive");
 
-		if (statusCode == 401) {
-			request.addHeader("Authorization", "Basic YWRtaW46c2FzaGE="); // YWRtaW46c2FzaGE=  was  YWRtaW46YWRtaW4=
-			request.addHeader("Cache-Control", "no-cache");
-			request.addHeader("Pragma", "no-cache");
-			request.addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
-			request.addHeader("Accept-Encoding", "gzip,deflate,sdch");
-			request.addHeader("Accept-Language", "en-US,en;q=0.8");
-			request.addHeader("Connection", "keep-alive");
+      HttpHost targetHost = new HttpHost(
+        config.getProperty("SPARQL_HOST"),
+        Integer.parseInt(config.getProperty("SPARQL_PORT")),
+        config.getProperty("SPARQL_SCHEME")
+      );
 
-			HttpHost targetHost = new HttpHost(config.getProperty("SPARQL_HOST"),
-					Integer.parseInt(config.getProperty("SPARQL_PORT")), config.getProperty("SPARQL_SCHEME"));
+      CredentialsProvider credsProvider = new BasicCredentialsProvider();
+      credsProvider.setCredentials(
+        new AuthScope(targetHost.getHostName(), targetHost.getPort()),
+        new UsernamePasswordCredentials(
+          config.getProperty("USERNAME"),
+          config.getProperty("PASSWORD")
+        )
+      );
+      HttpClientContext context = HttpClientContext.create();
+      context.setCredentialsProvider(credsProvider);
 
-			CredentialsProvider credsProvider = new BasicCredentialsProvider();
-			credsProvider.setCredentials(new AuthScope(targetHost.getHostName(), targetHost.getPort()),
-					new UsernamePasswordCredentials(config.getProperty("USERNAME"), config.getProperty("PASSWORD")));
-			HttpClientContext context = HttpClientContext.create();
-			context.setCredentialsProvider(credsProvider);
-			
-			// 2023
-			System.out.println("request : "+request);
-			System.out.println("User : "+config.getProperty("USERNAME"));
-			System.out.println("Pass : "+config.getProperty("PASSWORD"));
+      try {
+        response = client.execute(targetHost, request, context);
+        // response = client.execute(request);
+      } catch (ClientProtocolException e) {
+        log.error(e.getMessage());
+      } catch (IOException e) {
+        log.error(e.getMessage());
+      }
+    }
 
-			try {
-				response = client.execute(targetHost, request, context);
-				// response = client.execute(request);
-			} catch (ClientProtocolException e) {
-				log.error(e.getMessage());
-			} catch (IOException e) {
-				log.error(e.getMessage());
-			}
+    String headersString = new String();
+    Header[] headers = response.getAllHeaders();
+    for (int i = 0; i < headers.length; i++) {
+      headersString +=
+        "HEADER " + headers[i].getName() + " : " + headers[i].getValue() + "\n";
+    }
 
-		}
+    // Get the response
+    InputStream inputStream = null;
+    BufferedReader reader = null;
+    try {
+      inputStream = response.getEntity().getContent();
+    } catch (IllegalStateException e1) {
+      e1.printStackTrace();
+    } catch (IOException e1) {
+      e1.printStackTrace();
+    }
 
-		String headersString = new String();
-		Header[] headers = response.getAllHeaders();
-		for (int i = 0; i < headers.length; i++) {
-			headersString += "HEADER " + headers[i].getName() + " : " + headers[i].getValue() + "\n";
-		}
-		// throw new
-		// RuntimeException("\n"+Integer.toString(statusCode)+"\n"+headersString+"\n");
+    try {
+      reader = new BufferedReader(new InputStreamReader(inputStream)); // response.getEntity().getContent()
+    } catch (IllegalStateException e) {
+      log.error(e.getMessage());
+    }
 
-		// /*
-		// 401
-		// HEADER Date : Tue, 26 Aug 2014 09:49:06 GMT
-		// HEADER WWW-Authenticate : Basic realm="Apache Stanbol authentication needed"
-		// HEADER Content-Length : 38
-		// HEADER Server : Jetty(8.1.14.v20131031)
+    StringBuffer content = new StringBuffer();
+    String line = "";
+    try {
+      while ((line = reader.readLine()) != null) {
+        content.append(line);
+      }
+    } catch (IOException e) {
+      log.error(e.getMessage());
+    }
+    try {
+      inputStream.close();
+      // reader.close();
+      // inputStream.close();
+    } catch (IOException e) {
+      log.error(e.getMessage());
+    }
+    //
+    // System.out.println("CONTENT = "+content.toString());
+    request.releaseConnection();
+    return content.toString();
+    // */
+  }
 
-		// Authorization:Basic YWRtaW46YWRtaW4=
+  /**
+   * @param updateEndpoint
+   * @param sparql
+   * @return
+   */
+  public synchronized HttpMessage update(String updateEndpoint, String sparql) {
+    int statusCode = -1;
 
-		// Get the response
-		InputStream inputStream = null;
-		BufferedReader reader = null;
-		try {
-			inputStream = response.getEntity().getContent();
-		} catch (IllegalStateException e1) {
-			e1.printStackTrace();
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-		// XmlEncodingSniffer sniffer;
-		// try {
-		// sniffer = new XmlEncodingSniffer(inputStream, "UTF-8");
-		// inputStream = sniffer.getStream();
-		// } catch (UnsupportedEncodingException e1) {
-		// // TODO Auto-generated catch block
-		// e1.printStackTrace();
-		// } catch (IOException e1) {
-		// // TODO Auto-generated catch block
-		// e1.printStackTrace();
-		// }
+    CloseableHttpClient httpclient = HttpClients.createDefault();
 
-		try {
-			reader = new BufferedReader(new InputStreamReader(inputStream)); // response.getEntity().getContent()
-		} catch (IllegalStateException e) {
-			log.error(e.getMessage());
-		}
+    HttpPost request = new HttpPost(updateEndpoint);
 
-		StringBuffer content = new StringBuffer();
-		String line = "";
-		try {
-			while ((line = reader.readLine()) != null) {
-				content.append(line);
-			}
-		} catch (IOException e) {
-			log.error(e.getMessage());
-		}
-		try {
-			inputStream.close();
-			// reader.close();
-			// inputStream.close();
-		} catch (IOException e) {
-			log.error(e.getMessage());
-		}
-		//
-		// System.out.println("CONTENT = "+content.toString());
-		request.releaseConnection();
-		return content.toString();
-		// */
-	}
+    request.addHeader("Authorization", "Basic YWRtaW46c2FzaGE="); // YWRtaW46c2FzaGE=  was  YWRtaW46YWRtaW4=
+    request.addHeader("Cache-Control", "no-cache");
+    request.addHeader("Pragma", "no-cache");
+    request.addHeader(
+      "Accept",
+      "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    );
+    request.addHeader("Accept-Encoding", "gzip,deflate,sdch");
+    request.addHeader("Accept-Language", "en-US,en;q=0.8");
+    request.addHeader("Connection", "keep-alive");
 
-	/**
-	 * @param updateEndpoint
-	 * @param sparql
-	 * @return
-	 */
-	public synchronized HttpMessage update(String updateEndpoint, String sparql) {
+    HttpHost targetHost = new HttpHost(
+      config.getProperty("SPARQL_HOST"),
+      Integer.parseInt(config.getProperty("SPARQL_PORT")),
+      config.getProperty("SPARQL_SCHEME")
+    );
 
-		int statusCode = -1;
+    CredentialsProvider credsProvider = new BasicCredentialsProvider();
+    credsProvider.setCredentials(
+      new AuthScope(targetHost.getHostName(), targetHost.getPort()),
+      new UsernamePasswordCredentials(
+        config.getProperty("USERNAME"),
+        config.getProperty("PASSWORD")
+      )
+    );
+    HttpClientContext context = HttpClientContext.create();
+    context.setCredentialsProvider(credsProvider);
 
-		CloseableHttpClient httpclient = HttpClients.createDefault();
-		HttpPost httpPost = new HttpPost(updateEndpoint);
-				System.out.println("\n\n-----------------------------------------------------------");
-		System.out.println("\n\nUpdateEndpoint = " + updateEndpoint);
-		System.out.println("\nSPARQL = " + sparql);
-		List<NameValuePair> parameters = new ArrayList<NameValuePair>();
-		parameters.add(new BasicNameValuePair("update", sparql));
-		try {
-			httpPost.setEntity(new UrlEncodedFormEntity(parameters));
-		} catch (UnsupportedEncodingException e) {
-			log.error(e.getMessage());
-		}
-		CloseableHttpResponse response = null;
-		String statusMessage = "";
-		try {
-			response = httpclient.execute(httpPost);
-			statusCode = response.getStatusLine().getStatusCode();
-			statusMessage = response.getStatusLine().getReasonPhrase();
-			System.out.println("\nPOST response : "+statusCode+" "+statusMessage); // 2023
-				TimeUnit.SECONDS.sleep(5); // 2023 
-		} catch (Exception e) {
-			log.error(e.getMessage());
-		}
-		try {
-			httpclient.close();
-		} catch (IOException e) {
-			log.error(e.getMessage());
-		}
-		HttpMessage message = new HttpMessage(statusCode, statusMessage);
-		return message;
-	}
+    List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+    parameters.add(new BasicNameValuePair("update", sparql));
+    try {
+      request.setEntity(new UrlEncodedFormEntity(parameters));
+    } catch (UnsupportedEncodingException e) {
+      log.error(e.getMessage());
+    }
+
+    CloseableHttpResponse response = null;
+    String statusMessage = "";
+
+    try {
+      response = httpclient.execute(request);
+
+      //	response = httpclient.execute(targetHost, request, context);
+
+      statusCode = response.getStatusLine().getStatusCode();
+      statusMessage = response.getStatusLine().getReasonPhrase();
+
+      // 502 Bad Gateway
+      if ((statusCode < 200) || (statusCode > 299)) {
+        System.out.println(
+          "\nPOST response : " + statusCode + " " + statusMessage
+        ); // 2023
+        System.out.println("\n\nUpdateEndpoint = " + updateEndpoint);
+        //		System.out.println("\nSPARQL = " + sparql);
+        System.out.println("\nhttpPost = " + request.toString());
+        // 2023
+        // System.out.println("request : "+request);
+        // System.out.println("User : "+config.getProperty("USERNAME"));
+        // System.out.println("Pass : "+config.getProperty("PASSWORD"));
+      }
+    } catch (Exception e) {
+      log.error(e.getMessage());
+    }
+    try {
+      httpclient.close();
+    } catch (IOException e) {
+      log.error(e.getMessage());
+    }
+    HttpMessage message = new HttpMessage(statusCode, statusMessage);
+
+    try { // 2023
+      //		TimeUnit.SECONDS.sleep(5);
+    } catch (Exception e) {
+      log.error(e.getMessage());
+    }
+
+    return message;
+  }
 }
