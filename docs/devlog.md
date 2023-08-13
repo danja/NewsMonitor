@@ -8,6 +8,8 @@ logs -
 
 journalctl -u newsmonitor.service
 
+journalctl -u newsmonitor.service |tail -30
+
 ## feedlists
 
 danny@danny-desktop:~/HKMS/NewsMonitor/2023/js$ nodejs feed-grabber.js https://github.com/ChristosChristofidis/awesome-deep-learning
