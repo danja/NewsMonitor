@@ -1,0 +1,11 @@
+PREFIX rss: <http://purl.org/rss/1.0/> 
+PREFIX dcterms: <http://purl.org/dc/terms/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX schema: <http://schema.org/> 
+PREFIX nm: <http://purl.org/stuff/newsmonitor/> 
+
+DELETE { GRAPH ?g {  ?s nm:relevance ?relevance .  }}
+INSERT {GRAPH ?g {  ?s nm:relevance "10" .  }}
+WHERE
+  { GRAPH ?g { ?s nm:relevance ?relevance
+  } }

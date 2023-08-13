@@ -4,19 +4,21 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX schema: <http://schema.org/> 
 PREFIX nm: <http://purl.org/stuff/newsmonitor/> 
 
-SELECT DISTINCT ?feedTitle ?feedHtml ?feedUrl ?entry ?title ?content ?date ?author ?authorHomepage 
+# DROP <https://www.analyticsvidhya.com/comments/feed/>
+# <https://www.analyticsvidhya.com/web-stories/feed/>
+# DROP GRAPH <https://ofemwire.com/feed/>
+# <https://github.com/ChristosChristofidis/awesome-deep-learning/commits/master.atom>
+
+SELECT DISTINCT *
 WHERE { 
 
 GRAPH ?g { 
    ?entry a schema:article . 
-      OPTIONAL { 
-         ?feedUrl dcterms:title ?feedTitle . 
-         ?entry dcterms:source ?feedUrl . 
-      } 
-      OPTIONAL { 
-         ?source nm:htmlUrl ?feedHtml . 
-         ?entry dcterms:source ?feedUrl . 
-      } 
+      OPTIONAL { ?feedUrl dcterms:title ?feedTitle . }
+      OPTIONAL { ?entry dcterms:source ?feedUrl . } 
+      OPTIONAL { ?source nm:htmlUrl ?feedHtml . }
+      OPTIONAL {    ?entry dcterms:source ?feedUrl . }
+      
       OPTIONAL { ?entry dcterms:title ?title . } 
       OPTIONAL { ?entry dcterms:date ?date . } 
       OPTIONAL { ?entry schema:articleBody ?content . } 
