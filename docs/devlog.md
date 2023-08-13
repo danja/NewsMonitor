@@ -1,5 +1,7 @@
 **2023-08**
 
+danny@danny-desktop:~/HKMS/NewsMonitor/2023/js$ nodejs feed-grabber.js https://github.com/ChristosChristofidis/awesome-deep-learning
+
 ## fuseki backups
 
 https://fuseki.hyperdata.it/$/backups-list

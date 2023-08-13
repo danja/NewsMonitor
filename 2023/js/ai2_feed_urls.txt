@@ -1,0 +1,7 @@
+https://distill.pub/rss.xml
+https://bair.berkeley.edu/blog/feed.xml
+http://fastml.com/atom.xml
+https://aws.amazon.com/blogs/machine-learning/feed/
+https://machinelearning.apple.com/rss.xml
+https://trust.tableau.com/history.atom
+https://trust.tableau.com/history.rss

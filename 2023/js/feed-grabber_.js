@@ -78,17 +78,9 @@ async function main() {
             continue;
         }
         try {
-            const response = await axios.get(url, {
-                maxContentLength: 1024 * 1024, // Limit to 1MB
-                timeout: 10000 // Timeout after 10 seconds
-            });
+            const response = await axios.get(url);
             const contentType = response.headers['content-type'];
             let content;
-
-            if (response.headers['content-length'] && response.headers['content-length'] > 1024 * 1024) {
-                console.log(`File size larger than 1MB - skip`);
-                continue;
-            }
 
             if (contentType.includes('text/html')) {
                 content = response.data;
@@ -109,13 +101,7 @@ async function main() {
                 }
             });
         } catch (error) {
-            if (error.code === 'ECONNABORTED') {
-                console.log(`Timeout exceeded for URL ${url}`);
-            } else if (error.response && error.response.status === 413) {
-                console.log(`File size larger than 1MB for URL ${url}`);
-            } else {
-                console.log(`Error processing URL ${url}`);
-            }
+            console.log(`Error processing URL ${url}`);
         }
     }
 
@@ -131,4 +117,3 @@ async function main() {
     }
     saveListToFile(checkedFeedUrls, 'checked_feed_urls.txt');
 }
-
