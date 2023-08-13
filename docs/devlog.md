@@ -4,6 +4,10 @@
 
 added newsmonitor.service
 
+systemctl start newsmonitor
+
+systemctl status newsmonitor
+
 logs -
 
 journalctl -u newsmonitor.service
