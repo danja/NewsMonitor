@@ -1,5 +1,15 @@
 **2023-08**
 
+## systemctl
+
+added newsmonitor.service
+
+logs -
+
+journalctl -u newsmonitor.service
+
+## feedlists
+
 danny@danny-desktop:~/HKMS/NewsMonitor/2023/js$ nodejs feed-grabber.js https://github.com/ChristosChristofidis/awesome-deep-learning
 
 ## fuseki backups

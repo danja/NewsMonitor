@@ -1,7 +1,11 @@
 # NewsMonitor service configuration / unit file for systemd
 #
 # Place this file under /etc/systemd/system/
-# Activate using: sudo systemctl enable webbeep.service
+# Activate using: sudo systemctl enable newsmonitor.service
+
+# logs -
+# journalctl -u newsmonitor.service
+
 
 [Unit]
 Description=NewsMonitor
