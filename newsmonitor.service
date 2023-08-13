@@ -1,15 +1,21 @@
-# Web Beep service configuration / unit file for systemd
+# NewsMonitor service configuration / unit file for systemd
 #
 # Place this file under /etc/systemd/system/
 # Activate using: sudo systemctl enable webbeep.service
 
 [Unit]
-Description=WebBeep
+Description=NewsMonitor
 
 [Service]
 Environment=NEWSMONITOR_HOME=/home/hkms-apps/NewsMonitor
 ExecStart=/home/hkms-apps/NewsMonitor/start.sh
-Restart=on-abort
+# Restart=on-abort
+
+User=root
+
+# danny
+Restart=on-failure
+RestartSec=5s
 
 # Java processes exit with status 143 when terminated by SIGTERM, this
 # should be considered a successful shutdown
