@@ -1,6 +1,0 @@
-# links to a blog which links to a feed
-http://aaroncourville.wordpress.com
-
-
-# links to page that links to a blog which links to a feed
-#http://cs.stanford.edu/~karpathy/

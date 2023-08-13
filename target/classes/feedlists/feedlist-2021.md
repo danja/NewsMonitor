@@ -1,1 +1,0 @@
-https://hyperdata.it/blog/
