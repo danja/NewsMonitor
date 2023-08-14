@@ -5,7 +5,7 @@
  * FeedImpl.java
  *
  * @author danja
- * @date Apr 25, 2014
+ * dc:date Apr 25, 2014
  *
  */
 package it.danja.newsmonitor.model.impl;

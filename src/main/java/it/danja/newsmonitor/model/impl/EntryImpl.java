@@ -4,7 +4,7 @@
  * EntryImpl.java
  * 
  * @author danja
- * @date Apr 24, 2014
+ * dc:date Apr 24, 2014
  *
  */
 package it.danja.newsmonitor.model.impl;

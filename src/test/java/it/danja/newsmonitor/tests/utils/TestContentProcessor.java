@@ -3,7 +3,7 @@
  *
  * TestContentProcessor.java
  * @author danja
- * @date Aug 19, 2014
+ * dc:date Aug 19, 2014
  *
  */
 package it.danja.newsmonitor.tests.utils;

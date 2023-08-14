@@ -3,7 +3,7 @@
  *
  * PersonImpl.java
  * @author danja
- * @date Apr 27, 2014
+ * dc:date Apr 27, 2014
  *
  */
 package it.danja.newsmonitor.model.impl;

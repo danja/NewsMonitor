@@ -4,7 +4,7 @@
  * PresetTopics.java
  *
  * @author danja
- * @date Jun 16, 2014
+ * dc:date Jun 16, 2014
  *
  */
 package it.danja.newsmonitor.discovery;

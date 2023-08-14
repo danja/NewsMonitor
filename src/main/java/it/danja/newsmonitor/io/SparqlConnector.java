@@ -4,7 +4,7 @@
  * SparqlConnector.java
  *
  * @author danja
- * @date Apr 25, 2014
+ * dc:date Apr 25, 2014
  *
  */
 package it.danja.newsmonitor.io;
@@ -62,7 +62,7 @@ public class SparqlConnector {
    * @param queryEndpoint
    * @param sparql
    * @return
-   * @throws InterruptedException
+   * // throws InterruptedException
    */
   public synchronized String query(String queryEndpoint, String sparql) {
     int statusCode = -1;

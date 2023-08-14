@@ -3,7 +3,7 @@
  *
  * HtmlCleaner.java
  * @author danja
- * @date May 26, 2014
+ * dc:date May 26, 2014
  *
  */
 package it.danja.newsmonitor.utils;

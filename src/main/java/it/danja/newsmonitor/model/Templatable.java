@@ -3,7 +3,7 @@
  *
  * Templatable.java
  * @author danja
- * @date May 28, 2014
+ * dc:date May 28, 2014
  *
  */
 package it.danja.newsmonitor.model;

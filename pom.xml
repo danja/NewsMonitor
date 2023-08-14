@@ -8,7 +8,7 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
 
     <groupId>it.danja</groupId>
     <artifactId>NewsMonitor</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.20.23-SNAPSHOT</version>
     <!-- packaging>bundle</packaging -->
 
     <name>NewsMonitor</name>
@@ -27,11 +27,23 @@ Standalone, external SPARQL store OSGi for Felix without Fusepool/Stanbol
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.0</version> <!-- Use the appropriate version -->
+                <configuration>
+                    <outputDirectory>${project.basedir}/docs/javadoc</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
     <!-- build> <plugins> <plugin> <groupId>org.apache.felix</groupId>
     <artifactId>maven-bundle-plugin</artifactId> 

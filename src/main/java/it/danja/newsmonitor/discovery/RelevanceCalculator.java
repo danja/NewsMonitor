@@ -3,7 +3,7 @@
  *
  * RelevanceCalculator.java
  * @author danja
- * @date Jun 12, 2014
+ * dc:date Jun 12, 2014
  *
  */
 package it.danja.newsmonitor.discovery;

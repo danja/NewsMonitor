@@ -3,7 +3,7 @@
  *
  * Tag.java
  * @author danja
- * @date Jun 10, 2014
+ * dc:date Jun 10, 2014
  *
  */
 package it.danja.newsmonitor.model;

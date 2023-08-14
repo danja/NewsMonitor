@@ -1,8 +1,12 @@
 **2023-08**
 
+mvn javadoc:javadoc
+
 ## systemctl
 
 added newsmonitor.service
+
+systemctl stop newsmonitor
 
 systemctl start newsmonitor
 

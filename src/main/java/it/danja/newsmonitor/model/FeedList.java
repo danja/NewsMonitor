@@ -3,9 +3,9 @@
  * NewsMonitor
  *
  * FeedList.java
- * 
+ *
  * @author danja
- * @date Apr 25, 2014
+ * dc:date Apr 25, 2014
  *
  */
 package it.danja.newsmonitor.model;
@@ -16,47 +16,40 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Models a set of feeds/connections
- * 
+ *
  * @version $Revision$
- *  
+ *
  */
-public interface FeedList
-{
+public interface FeedList {
+  public void addFeed(String uriString);
 
-   /**
-    * @param uri
-    *           URI of feed to add
-    */
-   public void addFeed(String uriString);
+  public void addFeed(String uriString, char formatHint);
 
-   public void addFeed(String uriString, char formatHint);
+  public void addFeed(Feed feed);
 
-   public void addFeed(Feed feed);
+  public void addFeeds(FeedList feeds);
 
-   public void addFeeds(FeedList feeds);
-   
-   public boolean containsFeed(String url);
+  public boolean containsFeed(String url);
 
-   /**
-    * @return all feeds
-    */
-   public ConcurrentLinkedQueue<Feed> getList();
+  /**
+   * @return all feeds
+   */
+  public ConcurrentLinkedQueue<Feed> getList();
 
-   public Feed createFeed(String uri);
+  public Feed createFeed(String uri);
 
-   public Feed getNext();
+  public Feed getNext();
 
-   // public void refreshAll();
-   
-   public int size();
-   
-   public Set<Link> getAllLinks();
-   
-   public Set<Link> getRemoteLinks();
+  // public void refreshAll();
 
-public void remove(Feed feed);
+  public int size();
 
-// public EntryList getEntries();
+  public Set<Link> getAllLinks();
 
-// public void setFirstCall(boolean b);
+  public Set<Link> getRemoteLinks();
+
+  public void remove(Feed feed);
+  // public EntryList getEntries();
+
+  // public void setFirstCall(boolean b);
 }

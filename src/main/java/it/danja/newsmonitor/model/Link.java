@@ -3,71 +3,67 @@ package it.danja.newsmonitor.model;
 import java.util.Map;
 
 public interface Link {
-	
-	public boolean isExplored();
-	
-	public void setExplored(boolean explored);
-	/**
-	 * @return the href
-	 */
-	public  String getHref();
+  public boolean isExplored();
 
-	/**
-	 * @param href the href to set
-	 */
-	public  void setHref(String href);
+  public void setExplored(boolean explored);
 
-	/**
-	 * @return the type
-	 */
-	public  String getContentType();
+  /**
+   * @return the href
+   */
+  public String getHref();
 
-	/**
-	 * @param type the type to set
-	 */
-	public  void setContentType(String contentType);
+  /**
+   * @param href the href to set
+   */
+  public void setHref(String href);
 
-	/**
-	 * @return the rel
-	 */
-	public  String getRel();
+  /**
+   * @return the type
+   */
+  public String getContentType();
 
-	/**
-	 * @param rel the rel to set
-	 */
-	public  void setRel(String rel);
+  public void setContentType(String contentType);
 
-	/**
-	 * @return the label
-	 */
-	public  String getLabel();
+  /**
+   * @return the rel
+   */
+  public String getRel();
 
-	/**
-	 * @param label the label to set
-	 */
-	public  void setLabel(String label);
+  /**
+   * @param rel the rel to set
+   */
+  public void setRel(String rel);
 
-	public boolean setRemote(boolean remote);
-	
-	public boolean isRemote();
+  /**
+   * @return the label
+   */
+  public String getLabel();
 
-	public void setRelevance(float f);
-	
-	public float getRelevance();
+  /**
+   * @param label the label to set
+   */
+  public void setLabel(String label);
 
-	public void setFormat(String format);
-	
-	public String getFormat();
+  public boolean setRemote(boolean remote);
 
-	public Map<String, Object> getTemplateDataMap();
+  public boolean isRemote();
 
-	public int getResponseCode();
-	
-	public void setResponseCode(int responseCode);
+  public void setRelevance(float f);
 
-	public void setOrigin(String url);
-	
-	public String getOrigin();
+  public float getRelevance();
 
-	// public void setType(char type); too confusing, do it longhand in the callers
+  public void setFormat(String format);
+
+  public String getFormat();
+
+  public Map<String, Object> getTemplateDataMap();
+
+  public int getResponseCode();
+
+  public void setResponseCode(int responseCode);
+
+  public void setOrigin(String url);
+
+  public String getOrigin();
+  // public void setType(char type); too confusing, do it longhand in the callers
 }

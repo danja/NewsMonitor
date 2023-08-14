@@ -3,7 +3,7 @@
  *
  * HttpMessage.java
  * @author danja
- * @date May 29, 2014
+ * dc:date May 29, 2014
  *
  */
 package it.danja.newsmonitor.io;

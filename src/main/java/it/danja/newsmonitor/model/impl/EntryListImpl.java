@@ -4,7 +4,7 @@
  * EntryListImpl.java
  * 
  * @author danja
- * @date Apr 25, 2014
+ * dc:date Apr 25, 2014
  * 
  * TODO there's cruft here from pre-triplestore version
  *

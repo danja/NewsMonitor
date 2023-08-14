@@ -3,9 +3,13 @@
  *
  * Poller.java
  *
- * @author danja
- * @date Apr 25, 2014
+ * This class is responsible for managing and refreshing a list of feed URLs.
+ * It provides functionality to start, stop, and run the polling process,
+ * and handle feeds according to their content and relevance.
  *
+ * @author danja
+ * @version 1.20.23
+ * dc:date 2023-08-14
  */
 package it.danja.newsmonitor.main;
 
@@ -30,12 +34,12 @@ import org.slf4j.LoggerFactory;
 public class Poller implements Runnable {
 
   private static Logger log = LoggerFactory.getLogger(Poller.class);
-
   private List<String> feedUrls = null;
-
   private FeedList feedList = null;
 
   /**
+   * Returns the feed list managed by the Poller.
+   *
    * @return the feedList
    */
   public FeedList getFeedList() {
@@ -43,31 +47,28 @@ public class Poller implements Runnable {
   }
 
   private boolean running = false;
-
   private Thread thread;
-
   private int loopCount = 0;
-
   private boolean stopped = false;
-
-  SparqlTemplater sparqlTemplater = null;
-
+  private SparqlTemplater sparqlTemplater = null;
   private Properties config = null;
 
+  /**
+   * Constructor to initialize the Poller with configuration properties and SPARQL templater.
+   *
+   * @param config           Configuration properties for the Poller
+   * @param sparqlTemplater  SPARQL templater for handling feed data
+   */
   public Poller(Properties config, SparqlTemplater sparqlTemplater) {
     this.sparqlTemplater = sparqlTemplater;
     this.config = config;
-    System.out.println(config);
     feedList = new FeedListImpl(config);
-    // sparqlTemplater.setBundleContext(bundleContext);
   }
 
   /**
-   * Takes each feed URL on the list and using @see FormatSniffer checks the
-   * target type, then creates @see Feed objects according to what it finds,
-   * adding these to the @see FeedList
+   * Initializes feeds by creating Feed objects for each URL and adding them to the FeedList.
    *
-   * @return
+   * @return the initialized FeedList
    */
   public FeedList initFeeds() {
     for (int i = 0; i < feedUrls.size(); i++) {
@@ -78,7 +79,6 @@ public class Poller implements Runnable {
         String location = feed.getLocation();
         feed = new FeedImpl(config);
         feed.setUrl(location);
-
         feed.init();
       }
       feedList.addFeed(feed);
@@ -88,21 +88,28 @@ public class Poller implements Runnable {
     return feedList;
   }
 
+  /**
+   * Starts the polling process by creating a new thread.
+   */
   public void start() {
     stopped = false;
     thread = new Thread(this);
     thread.start();
   }
 
+  /**
+   * Stops the polling process.
+   */
   public void stop() {
     running = false;
   }
 
+  /**
+   * Main run method for the polling process. Continuously refreshes the feeds until stopped.
+   */
   @Override
   public void run() {
     running = true;
-    // feedList.setFirstCall(true);
-    // log.info("FEEDLIST = " + feedList);
     while (running) {
       if (feedList.size() == 0) {
         log.warn("No valid feeds, stopping poller...");
@@ -111,16 +118,15 @@ public class Poller implements Runnable {
       }
       log.info("\n*** Starting loop #" + (++loopCount) + " ***");
       log.info("Refreshing " + feedList.size() + " feeds...");
-
-      // feedList.setFirstCall(false);
       refreshFeeds();
-      // displayFeeds();
-      // pushFeeds();
     }
     log.info("Poller stopped.");
     stopped = true;
   }
 
+  /**
+   * Refreshes the feeds, handling expirations, relevancy, and other conditions.
+   */
   public synchronized void refreshFeeds() {
     Set<Feed> expiring = new HashSet<Feed>();
     Iterator<Feed> iterator = feedList.getList().iterator();
@@ -214,6 +220,11 @@ public class Poller implements Runnable {
     }
   }
 
+  /**
+   * Pushes a feed to the server using SPARQL.
+   *
+   * @param feed the Feed object to be pushed
+   */
   private void pushFeed(Feed feed) {
     System.out.println(
       "<\n\n--------------------------------POST-------------------------->"
@@ -233,27 +244,9 @@ public class Poller implements Runnable {
     }
   }
 
-  // private void pushFeeds() {
-  // ConcurrentLinkedQueue<Feed> feeds = feedList.getList();
-  // //for (int i = 0; i < feeds.size(); i++) {
-  // // Feed feed = feeds.get(i);Listterator
-  // Iterator<Feed> iterator = feeds.iterator();
-  // while(iterator.hasNext()) {
-  // Feed feed = iterator.next();
-  // if (feed.isNew()) {
-  // log.info("Uploading SPARQL for : " + feed.getUrl());
-  // HttpMessage message = SparqlTemplater.uploadFeed(feed);
-  // feed.clean();
-  // log.info("SPARQL response = " + message.getStatusCode()+ " "
-  // +message.getStatusMessage());
-  // if(message.getStatusCode() >= 400) {
-  // log.info("\n"+message+"\n");
-  // }
-  // } else {
-  // log.info("No changes to : " + feed.getUrl());
-  // }
-  // }
-  // }
+  /**
+   * Displays the list of feeds to the logger.
+   */
   public void displayFeeds() {
     Iterator<Feed> feedIterator = feedList.getList().iterator();
     while (feedIterator.hasNext()) {
@@ -265,6 +258,11 @@ public class Poller implements Runnable {
     // }
   }
 
+  /**
+   * Sets the feed URLs to be managed by the Poller.
+   *
+   * @param feedUrls the list of feed URLs
+   */
   public void setFeedUrls(List<String> feedUrls) {
     this.feedUrls = feedUrls;
 
@@ -280,6 +278,11 @@ public class Poller implements Runnable {
     this.feedUrls.addAll(tweakedUrls);
   }
 
+  /**
+   * Checks if the Poller has stopped.
+   *
+   * @return true if the Poller has stopped, false otherwise
+   */
   public boolean isStopped() {
     return stopped;
   }

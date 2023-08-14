@@ -3,7 +3,7 @@
  *
  * SystemStatus.java
  * @author danja
- * @date Jun 13, 2014
+ * dc:date Jun 13, 2014
  *
  */
 package it.danja.newsmonitor.main;

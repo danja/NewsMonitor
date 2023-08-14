@@ -4,7 +4,7 @@
  * Templater.java
  *
  * @author danja
- * @date Apr 26, 2014
+ * dc:date Apr 26, 2014
  *
  */
 package it.danja.newsmonitor.standalone.templating;

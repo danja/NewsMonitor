@@ -1,0 +1,13 @@
+it.danja.newsmonitor.utils
+it.danja.newsmonitor.standalone
+it.danja.newsmonitor.standalone.templating
+it.danja.newsmonitor.io
+it.danja.newsmonitor.osgi
+it.danja.newsmonitor.osgi.templating
+it.danja.newsmonitor.sparql
+it.danja.newsmonitor.model
+it.danja.newsmonitor.model.impl
+it.danja.newsmonitor.discovery
+it.danja.newsmonitor.main
+it.danja.newsmonitor.interpreters
+it.danja.newsmonitor.templating

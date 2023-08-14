@@ -4,7 +4,7 @@
  * Main.java
  *
  * @author danja
- * @date Aug 18, 2014
+ * dc:date Aug 18, 2014
  *
  */
 package it.danja.newsmonitor.standalone;

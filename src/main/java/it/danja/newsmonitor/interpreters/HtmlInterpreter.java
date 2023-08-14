@@ -3,7 +3,7 @@
  *
  * HtmlInterpreter.java
  * @author danja
- * @date Jun 11, 2014
+ * dc:date Jun 11, 2014
  *
  */
 package it.danja.newsmonitor.interpreters;

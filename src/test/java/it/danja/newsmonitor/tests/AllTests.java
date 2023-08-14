@@ -3,7 +3,7 @@
  *
  * AllTests.java
  * @author danja
- * @date May 27, 2014
+ * dc:date May 27, 2014
  *
  */
 package it.danja.newsmonitor.tests;
