@@ -1,3 +1,5 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "terminal.integrated.fastScrollSensitivity": 1,
+  "terminal.integrated.scrollback": 5001
 }

@@ -1,22 +1,28 @@
 /**
- * NewsMonitor
+ * NewsMonitor application.
  *
- * PresetTopics.java
+ * Contains preset topics for discovery.
  *
  * @author danja
- * dc:date Jun 16, 2014
- *
+ * @version 1.0
+ * @since 2014-06-16
  */
+
 package it.danja.newsmonitor.discovery;
 
 /**
- * TODO load these in from Turtle
+ * Predefined topic models.
  */
 public class PresetTopics {
 
+  /**
+   * Topic model for Semantic Web.
+   */
   public static Topic SEMWEB = new Topic();
 
   static {
+    // Populate SEMWEB topic
+
     SEMWEB.setLongName("Semantic Web");
     SEMWEB.setName("semweb");
     SEMWEB.addKeyword("rdf", 0.9F);
@@ -33,9 +39,14 @@ public class PresetTopics {
     SEMWEB.addKeyword("SPARQL", 0.9F);
   }
 
+  /**
+   * Topic model for Wood Carving.
+   */
   public static Topic WOODCARVING = new Topic();
 
   static {
+    // Populate WOODCARVING topic
+
     WOODCARVING.setLongName("Wood Carving");
     WOODCARVING.setName("woodcarving");
     WOODCARVING.addKeyword("woodcarving", 1F);
@@ -89,9 +100,14 @@ public class PresetTopics {
     WOODCARVING.addKeyword("design", 0.1F);
   }
 
+  /**
+   * Topic model for Deep Learning.
+   */
   public static Topic DEEP_LEARNING = new Topic();
 
   static {
+    // Populate DEEP_LEARNING topic
+
     DEEP_LEARNING.setLongName("Deep Learning");
     DEEP_LEARNING.setName("deeps");
     DEEP_LEARNING.addKeyword("gpt", 0.9F);
@@ -134,9 +150,14 @@ public class PresetTopics {
     DEEP_LEARNING.addKeyword("sigmoid", 0.8F);
   }
 
+  /**
+   * Aggregate topic containing all presets.
+   */
   public static Topic ALL = new Topic();
 
   static {
+    // Populate with all preset topics
+
     ALL.setLongName("All Presets");
     ALL.setName("all");
     ALL.merge(SEMWEB).merge(WOODCARVING).merge(DEEP_LEARNING);

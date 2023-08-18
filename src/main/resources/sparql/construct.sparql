@@ -1,0 +1,25 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rss: <http://purl.org/rss/1.0/> 
+PREFIX dcterms: <http://purl.org/dc/terms/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX schema: <http://schema.org/> 
+PREFIX nm: <http://purl.org/stuff/newsmonitor/> 
+
+CONSTRUCT { 
+   ?g rdfs:label "graph" .
+ ?entry ?p ?o .
+    ?o ?p2 ?o2 .
+    ?o2 ?p3 ?o3 .
+   ?s0 ?p0 ?entry . 
+   }
+WHERE
+{
+  GRAPH ?g { 
+ {
+      ?entry ?p ?o .
+   ?o ?p2 ?o2 .
+      ?o2 ?p3 ?o3 .
+    ?s0 ?p0 ?entry . 
+ }
+  }}
+LIMIT 5

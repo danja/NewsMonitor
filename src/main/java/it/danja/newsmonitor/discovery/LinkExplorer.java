@@ -1,14 +1,12 @@
 /**
  * NewsMonitor
  *
- * LinkExplorer.java
+ * LinkExplorer class is responsible for exploring links pulled from a SPARQL store.
+ * It checks each link for relevance and, where appropriate, applies feed autodiscovery.
  *
  * @author danja
- * dc:date Jun 11, 2014
- *
- * Pulls discovered links from SPARQL store, checks each for relevance where
- * appropriate applying feed autodiscovery
- *
+ * @version 1.20.23
+ * @since 2023-08-14
  */
 package it.danja.newsmonitor.discovery;
 
@@ -35,9 +33,6 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- *
- */
 public class LinkExplorer implements Runnable {
 
   private static Logger log = LoggerFactory.getLogger(LinkExplorer.class);
@@ -51,13 +46,16 @@ public class LinkExplorer implements Runnable {
   private SparqlConnector sparqlConnector = null;
   private String url = null;
   private TextFileReader textFileReader = null;
-
   private Templater templater = null;
-
   private Properties config;
 
   /**
+   * Constructor for LinkExplorer class.
    *
+   * @param config Configuration properties.
+   * @param feedList List of feeds to be explored.
+   * @param textFileReader Text file reader for SPARQL queries.
+   * @param templater Templater for SPARQL queries.
    */
   public LinkExplorer(
     Properties config,
@@ -73,22 +71,30 @@ public class LinkExplorer implements Runnable {
     httpConnector = new HttpConnector(config);
   }
 
+  /**
+   * Starts the link explorer.
+   */
   public void start() {
-    System.out.println("LINKEXPLORER START");
+    log.info("LINKEXPLORER START");
     running = true;
     stopped = false;
     thread = new Thread(this);
     thread.start();
   }
 
+  /**
+   * Stops the link explorer.
+   */
   public void stop() {
     running = false;
   }
 
+  /**
+   * Core method for exploring links.
+   */
   public void run() {
     while (running) {
       Set<Link> links = getLinksFromStore();
-
       Iterator<Link> linkIterator = links.iterator();
       while (linkIterator.hasNext()) {
         Link link = linkIterator.next();
@@ -99,10 +105,9 @@ public class LinkExplorer implements Runnable {
         if (link.isExplored()) {
           continue;
         }
-        // log.info("LINK : " + link);
+        log.info("LINK : " + link);
         explore(link);
         link.setExplored(true);
-
         updateStore(link);
         try {
           Thread.sleep(
@@ -116,9 +121,13 @@ public class LinkExplorer implements Runnable {
     stopped = true;
   }
 
-  private void explore(Link link) { // TODO maybe merge this with
-    // FormatSniffer
-    if (link.isExplored()) { // TODO shouldn't be needed
+  /**
+   * Explores the provided link for relevant content.
+   *
+   * @param link Link to be explored.
+   */
+  private void explore(Link link) {
+    if (link.isExplored()) {
       return;
     }
     if (link.getResponseCode() >= 400) {
@@ -134,42 +143,23 @@ public class LinkExplorer implements Runnable {
     this.link = link;
     this.url = link.getHref();
     httpConnector.setUrl(url);
-
-    // as "+ContentType.formatName(link.))
     String data = httpConnector.downloadAsString(url);
-
     int responseCode = httpConnector.getResponseCode();
     link.setResponseCode(responseCode);
-
-    // log.info("DATA = \n"+data);
     if (data != null && responseCode == 200) {
       String contentType = httpConnector.getContentType();
       link.setContentType(contentType);
       char format = ContentType.identifyFormat(contentType, data);
-      log.info(
-        "Link " +
-        link.getHref() +
-        " recognised as " +
-        ContentType.formatName(format)
-      );
       link.setFormat(ContentType.formatName(format));
-
-      // log.info("Link " + link.getHref() + " recognised as "
-      // + ContentType.formatName(type));
-      if (format == ContentType.UNKNOWN) { // no use
+      if (format == ContentType.UNKNOWN) {
         link.setRelevance(0F);
         return;
       }
-      // String contentType = connector.getContentType();
-      // link.setContentType(contentType);
-      // link.setFormat(ContentType.formatName(ContentType.identifyContentType(contentType)));
-
       RelevanceCalculator relevanceCalculator = new RelevanceCalculator();
       float relevance = relevanceCalculator.calculateRelevance(
         Config.TOPIC,
         data
       );
-      log.info("*** Link relevance = " + relevance);
       link.setRelevance(relevance);
       if (
         relevance >
@@ -177,7 +167,6 @@ public class LinkExplorer implements Runnable {
       ) {
         trySubscribe(link);
       }
-      // log.info("EXPLORED " + link);
     } else {
       link.setContentType(null);
       link.setFormat(ContentType.formatName(ContentType.UNKNOWN));
@@ -186,15 +175,12 @@ public class LinkExplorer implements Runnable {
     link.setExplored(true);
   }
 
-  // private char identifyType() {
-  // char type = ContentType.identifyExtension(url);
-  // if (type != 0F) {
-  // return type;
-  // }
-  // return ContentType.identifyContentType(connector.getContentType());
-  // }
-  private void trySubscribe(Link pageLink) { // quick and dirty feed link
-    // autodiscovery
+  /**
+   * Tries to subscribe to the link if it's relevant.
+   *
+   * @param pageLink Link to be checked for subscription.
+   */
+  private void trySubscribe(Link pageLink) {
     log.info("*** Looking for a feed linked from : " + pageLink.getHref());
     HttpConnector connector = new HttpConnector(config);
     String content = connector.downloadAsString(pageLink.getHref());
@@ -205,86 +191,74 @@ public class LinkExplorer implements Runnable {
     Iterator<Link> iterator = links.iterator();
     while (iterator.hasNext()) {
       Link link = iterator.next();
-      // log.info("LINK = "+link);
       if (link.getRel() != null && link.getRel().equals("alternate")) {
         Feed newFeed = feedList.createFeed(link.getHref());
         newFeed.init();
         newFeed.setRelevance(link.getRelevance());
-        log.info("*** Subscribing to new feed : " + newFeed.getUrl());
         feedList.addFeed(newFeed);
       }
     }
   }
 
+  /**
+   * Checks if the link explorer has stopped.
+   *
+   * @return true if stopped, false otherwise.
+   */
   public boolean isStopped() {
     return stopped;
   }
 
+  /**
+   * Updates the link details in the SPARQL store.
+   *
+   * @param link Link to be updated.
+   */
   private void updateStore(Link link) {
     log.info("*** Updating link " + link.getHref() + " to store...");
     String sparql = templater.apply("update-links", link.getTemplateDataMap());
-    // log.info("\n\n----------------\n"+sparql+"\n\n---------------------");
     HttpMessage message = sparqlConnector.update(
       config.getProperty("UPDATE_ENDPOINT"),
       sparql
     );
     message.setRequestBody(sparql);
-    log.info(
-      "*** link update status : " +
-      message.getStatusCode() +
-      " " +
-      message.getStatusMessage()
-    );
-    if (message.getStatusCode() >= 400) {
-      log.info("*** " + message);
-      log.info("*** SPARQL = \n" + message.getRequestBody());
-    }
   }
 
+  /**
+   * Retrieves links from the SPARQL store.
+   *
+   * @return Set of links retrieved from the store.
+   */
   private Set<Link> getLinksFromStore() {
     String sparqlLocation = config.getProperty("GET_LINKS_SPARQL_LOCATION");
-    // System.out.println("textFileReader = "+textFileReader);
-
     String sparql = textFileReader.read(sparqlLocation);
-    // System.out.println("GET_LINKS_SPARQL_LOCATION");
     SparqlResultsParser parser = new SparqlResultsParser();
-    parser.setSparql(sparql); // for debugging
-
-    // throw new
-    // RuntimeException("sparql = "+sparql+" getSparql() = "+parser.getSparql());
-    // /*
+    parser.setSparql(sparql);
     String xmlResults = sparqlConnector.query(
       config.getProperty("QUERY_ENDPOINT"),
       sparql
     );
-
-    // log.info("XMLRESULTS = "+xmlResults);
-
     List<Result> results = parser.parse(xmlResults).getResults();
     Set<Link> links = new HashSet<Link>();
-    for (int i = 0; i < results.size(); i++) {
-      // log.info(results.get(i));
-
-      Result result = results.get(i);
-      // .iterator().next().getName();
-
+    for (Result result : results) {
       Link link = new LinkImpl();
       Iterator<Binding> iterator = result.iterator();
-
       while (iterator.hasNext()) {
         Binding binding = iterator.next();
-        String name = binding.getName();
-        String value = binding.getValue();
-        setValue(link, name, value);
-        // log.info("\n"+name+" = "+value);
-
+        setValue(link, binding.getName(), binding.getValue());
       }
       links.add(link);
     }
     return links;
-    // */
   }
 
+  /**
+   * Sets the value of a specific property of the link.
+   *
+   * @param link Link object to be updated.
+   * @param name Name of the property.
+   * @param value Value of the property.
+   */
   private void setValue(Link link, String name, String value) {
     if ("origin".equals(name)) {
       link.setOrigin(value);
@@ -308,7 +282,6 @@ public class LinkExplorer implements Runnable {
       link.setFormat(value);
     }
     if ("explored".equals(name)) {
-      log.info("*** Explored" + value);
       link.setExplored("true".equals(value));
     }
     if ("remote".equals(name)) {
